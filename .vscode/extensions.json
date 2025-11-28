@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    // 🎯 Essential Formatters & Linters
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+
+    // ⚛️ React & Next.js
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+
+    // 🎨 Syntax & UI
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+
+    // 🔧 Productivity
+    "usernamehw.errorlens",
+    "wix.vscode-import-cost",
+    "ms-vscode.vscode-json"
+  ]
+}
