@@ -14,7 +14,7 @@ const HomeBanner = () => {
   }, []);
 
   return (
-    <div className='min-h-screen flex items-center justify-center relative overflow-hidden pt-[122px]'>
+<div className="pt-[50px] md:pt-[50px] lg:pt-10">
 
       {/* Background Video */}
       <div className='absolute inset-0 w-full h-full z-0'>
@@ -55,7 +55,7 @@ const HomeBanner = () => {
             </h1>
 
             <p className='text-[16px] sm:text-[18px] font-normal text-[#737373] max-w-2xl mx-auto lg:mx-0 mt-4 sm:mt-6'>
-              Agentic AI solutions that transform your business processes with measurable ROI and rapid deployment.
+              Agentic AI solutions that transform your business <br></br>processes with measurable ROI and rapid deployment.
             </p>
 
             <div className='flex justify-center lg:justify-start'>

@@ -13,7 +13,8 @@ const PlatformFeatures = () => {
     {
       icon: '/images/Database.svg',
       title: 'Seamless integration with DOMO datasets',
-      subtitle: 'Connect directly to your existing data infrastructure with zero configuration hassle',
+      subtitle:
+        'Connect directly to your existing data infrastructure with zero configuration hassle',
     },
     {
       icon: '/images/Execution.svg',
@@ -42,11 +43,12 @@ const PlatformFeatures = () => {
       className="w-full mt-[-150px] sm:mt-[-250px] lg:mt-[-300px]"
       style={{
         background:
-          'linear-gradient(135deg, #7030B14D 0%, #CAB9F64D 25%, #E6F2F64D 50%, #DDA16C4D 65%, #FFA5814D 80%, #E5AA664D 100%)',
+          'linear-gradient(135deg, #7030B14D 0%, #CAB9F64D 25%, #E6F2F64D 50%, #DDA16C4D 65%, #FFA5814D 80%, #E5AA664D 100%), #F9EAE1',
         padding: '300px 20px 100px 20px',
       }}
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header with Spark & CTA */}
         <div className="relative flex flex-col sm:flex-row items-center justify-between gap-6 mb-12 lg:mb-16">
           <div className="z-10">
             <div
@@ -61,23 +63,16 @@ const PlatformFeatures = () => {
 
           <div className="z-10">
             <button
-              className="flex items-center gap-3 font-semibold transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg justify-center"
-              style={{
-                border: '2px solid #8c49bf',
-                borderRadius: '30px',
-                color: '#8c49bf',
-                backgroundColor: 'transparent',
-                width: '250px',
-                height: '48px',
-                fontSize: '16px',
-              }}
+              className="group flex items-center gap-3 font-semibold transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg justify-center border-2 border-[#8c49bf] rounded-full px-8 py-3 text-[#8c49bf] hover:bg-[#8c49bf] hover:text-white"
+              style={{ width: '250px', height: '48px', fontSize: '16px' }}
             >
               Talk to our experts
-              <FiArrowRight className="text-xl" />
+              <FiArrowRight className="text-xl transition-transform duration-300 group-hover:translate-x-1" />
             </button>
           </div>
         </div>
 
+        {/* Title & Description */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-12 mb-16 lg:mb-20 items-start">
           <div className="text-center lg:text-left">
             <h1
@@ -94,12 +89,12 @@ const PlatformFeatures = () => {
 
           <div className="flex justify-center lg:justify-end">
             <p
-              className="max-w-xl text-center lg:text-left font-medium leading-relaxed"
+              className="max-w-xl text-center lg:text-right font-medium leading-relaxed"
               style={{
                 color: '#737373',
                 fontSize: '14px',
                 lineHeight: '1.6',
-                fontWeight: '500',
+                fontWeight: 500,
               }}
             >
               Everything you need to build, deploy, and scale AI agents.
@@ -107,27 +102,27 @@ const PlatformFeatures = () => {
           </div>
         </div>
 
+        {/* Feature Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full justify-items-center">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center justify-start w-full"
+              className="group relative text-center bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-400 hover:-translate-y-3 flex flex-col items-center justify-start overflow-hidden"
               style={{
-                backgroundColor: '#ffffff',
-                borderRadius: '24px',
                 padding: '36px 24px',
-                width: '100%',
-                maxWidth: '100%',
-                minHeight: '260px',
+                width: '375px',
+                height: '274px',
               }}
             >
+              {/* Subtle background glow on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#8c49bf22] to-[#FFA58122] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
               <div
-                className="mb-4 flex items-center justify-center shadow-md"
+                className="relative mb-4 flex items-center justify-center shadow-md bg-[#fafafa] rounded-xl transition-transform duration-300 group-hover:scale-110"
                 style={{
-                  backgroundColor: '#fafafa',
-                  borderRadius: '12px',
                   width: '72px',
                   height: '72px',
+                  padding: '13.41px 12.8px 12.79px 12.8px',
                 }}
               >
                 <Image
@@ -143,18 +138,20 @@ const PlatformFeatures = () => {
               </div>
 
               <h3
-                className="font-semibold mb-2 leading-tight"
+                className="relative font-semibold mb-2 mt-4 leading-tight transition-colors duration-300 group-hover:text-[#8c49bf]"
                 style={{
                   color: '#D97706',
                   fontSize: '16px',
                   fontWeight: 600,
+                  paddingLeft: '50px',
+                  paddingRight: '50px',
                 }}
               >
                 {card.title}
               </h3>
 
               <p
-                className="leading-relaxed text-center"
+                className="relative leading-relaxed text-center transition-colors duration-300 group-hover:text-[#333333]"
                 style={{
                   color: '#525252',
                   fontSize: '14px',

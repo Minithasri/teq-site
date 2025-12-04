@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Footer from '../components/ui/Footer';
 import Header from '../components/ui/Header/Header';
 import TopHeader from '../components/ui/Header/TopHeader';
@@ -10,17 +11,33 @@ import './globals.css';
 
 export default function RootLayout({ children }) {
   const [showSplash, setShowSplash] = useState(true);
+  const [isBannerClosed, setIsBannerClosed] = useState(false); // true = hidden
 
-  const handleSplashFinish = () => {
-    setShowSplash(false);
-  };
+  const pathname = usePathname();
 
-  // useSmoothScroll has been removed entirely
+  // Define on which paths the banner should appear
+  const bannerVisiblePaths = ['/']; // add more if needed, e.g. ['/', '/about']
+
+  const shouldShowBannerInitially = bannerVisiblePaths.some(
+    (page) => pathname === page || pathname.startsWith(page + '/')
+  );
+
+  // Reset banner closed state when navigating to a page where banner should appear
+  useEffect(() => {
+    if (shouldShowBannerInitially) {
+      setIsBannerClosed(false);
+    }
+  }, [pathname, shouldShowBannerInitially]);
+
+  const handleSplashFinish = () => setShowSplash(false);
+  const handleBannerClose = () => setIsBannerClosed(true);
+
+  const isBannerVisible = shouldShowBannerInitially && !isBannerClosed;
 
   if (showSplash) {
     return (
       <html lang="en">
-        <body cz-shortcut-listen="true">
+        <body>
           <SplashScreen onComplete={handleSplashFinish} />
         </body>
       </html>
@@ -29,11 +46,16 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body cz-shortcut-listen="true">
+      <body>
         <Providers>
-          <TopHeader />
-          <Header />
-          <div className="mt-0">{children}</div>
+          <TopHeader
+            isVisible={isBannerVisible}
+            onClose={handleBannerClose}
+          />
+          <Header isBannerVisible={isBannerVisible} />
+          <main className={isBannerVisible ? 'pt-20' : ''}>
+            {children}
+          </main>
           <Footer />
         </Providers>
       </body>

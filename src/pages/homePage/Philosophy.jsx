@@ -131,7 +131,7 @@ const Philosophy = () => {
       style={{
         transform: 'translateY(-200px)',
         position: 'relative',
-        zIndex: 1
+        zIndex: -1
       }}
     >
       {/* Background layer */}
@@ -143,7 +143,7 @@ const Philosophy = () => {
             typeof window !== 'undefined' && window.innerWidth >= 1024
               ? 'ellipse(150% 100% at 50% 100%)'
               : 'none',
-          zIndex: 0
+          zIndex: 1
         }}
       />
 

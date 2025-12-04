@@ -12,24 +12,24 @@ const ROI = () => {
 
   const cards = [
     {
-      title: 'From Insight to Action',
-      subtitle: "Our AI Agents don't stop at analysis — they act.",
-      icon: '/images/idea.svg'
-    },
-    {
       title: 'Solve First, Then Build',
-      subtitle: 'We start with your business challenge — not the code.',
-      icon: '/images/plan.svg'
+      subtitle: 'We start with your business challenge, not the code.',
+      icon: '/images/idea.svg',
     },
     {
-      title: 'Ready in Weeks, Not Months',
-      subtitle: 'Our proven frameworks speed up deployment effortlessly.',
-      icon: '/images/Grow.svg'
+      title: 'From Insight to Action',
+      subtitle: 'Our AI Agents don’t stop at analysis, they act.',
+      icon: '/images/plan.svg',
     },
     {
       title: 'Always On, Always Scalable',
       subtitle: 'Agentic AI runs nonstop, managing complex tasks day and night.',
-      icon: '/images/deploy.svg'
+      icon: '/images/Grow.svg',
+    },
+    {
+      title: 'Ready in Weeks, Not Months',
+      subtitle: 'Our proven frameworks speed up deployment effortlessly.',
+      icon: '/images/deploy.svg',
     },
   ];
 
@@ -39,12 +39,11 @@ const ROI = () => {
       style={{
         backgroundColor: '#ffffff',
         paddingTop: '100px',
-        paddingBottom: '100px'
+        paddingBottom: '100px',
       }}
     >
       {/* EXACT SAME CONTAINER STRUCTURE AS HOMEBANNER */}
       <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-
         {/* Title */}
         <div className='max-w-4xl mx-auto text-center mb-8 md:mb-12'>
           <h1
@@ -52,13 +51,13 @@ const ROI = () => {
             style={{
               fontSize: 'clamp(24px, 5vw, 32px)',
               color: '#333333',
-              lineHeight: '55px'
+              lineHeight: '55px',
             }}
           >
             Increase your ROI with <span style={{ color: '#914ec2' }}>Agentic AI</span> that
             <img
-              src="/images/Spark.svg"
-              alt="Spark"
+              src='/images/Spark.svg'
+              alt='Spark'
               className='inline-block align-middle mx-2'
               style={{
                 width: 'clamp(32px, 8vw, 40px)',
@@ -72,7 +71,6 @@ const ROI = () => {
 
         {/* GRID — perfectly aligned start/end like HomeBanner */}
         <div className='grid grid-cols-1 lg:grid-cols-[1.07fr_0.93fr] gap-8 md:gap-12 items-start'>
-
           {/* LEFT COLUMN */}
           <div
             className='p-4 md:p-6 rounded-[20px] md:rounded-[25px] w-full'
@@ -81,7 +79,6 @@ const ROI = () => {
             <div className='flex flex-col gap-4 md:gap-6'>
               {cards.map((card, index) => (
                 <div key={index} className='flex gap-3 md:gap-4 items-center'>
-
                   <div
                     className='flex-shrink-0 rounded-full p-3 md:p-4 flex items-center justify-center'
                     style={{ backgroundColor: '#eee4f5' }}
@@ -103,7 +100,7 @@ const ROI = () => {
                           color: '#404040',
                           fontSize: '16px',
                           fontWeight: 600,
-                          marginBottom: '4px'
+                          marginBottom: '4px',
                         }}
                       >
                         {card.title}
@@ -113,14 +110,13 @@ const ROI = () => {
                         style={{
                           color: '#737373',
                           fontSize: '14px',
-                          fontWeight: 400
+                          fontWeight: 400,
                         }}
                       >
                         {card.subtitle}
                       </p>
                     </div>
                   </div>
-
                 </div>
               ))}
             </div>
@@ -129,7 +125,6 @@ const ROI = () => {
           {/* RIGHT COLUMN — aligned perfectly */}
           <div className='flex flex-col justify-center h-full w-full lg:pl-8'>
             <div className='w-full'>
-
               {features.map((feature, index) => (
                 <div
                   key={index}
@@ -137,7 +132,7 @@ const ROI = () => {
                   style={{
                     borderBottomColor: '#d2d2d6',
                     borderBottomWidth: '1px',
-                    height: '95px'
+                    height: '95px',
                   }}
                 >
                   <div className='py-6 w-full flex items-center'>
@@ -145,7 +140,7 @@ const ROI = () => {
                       style={{
                         color: feature.color,
                         fontSize: '30px',
-                        fontWeight: 500
+                        fontWeight: 500,
                       }}
                     >
                       {feature.number}
@@ -156,7 +151,7 @@ const ROI = () => {
                       style={{
                         color: '#737373',
                         fontSize: '16px',
-                        fontWeight: 400
+                        fontWeight: 400,
                       }}
                     >
                       {feature.text}
@@ -164,7 +159,6 @@ const ROI = () => {
                   </div>
                 </div>
               ))}
-
             </div>
 
             <div className='mt-8 lg:mt-12 flex justify-center lg:justify-start'>
@@ -176,14 +170,13 @@ const ROI = () => {
                   width: '150px',
                   height: '45px',
                   fontSize: '14px',
-                  fontWeight: 400
+                  fontWeight: 400,
                 }}
               >
                 Contact Us
                 <FiArrowRight className='text-lg' />
               </button>
             </div>
-
           </div>
         </div>
       </div>

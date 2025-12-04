@@ -21,7 +21,7 @@ const DomoMatter = () => {
     {
       title: "Always-On, Always-Adaptive",
       desc: "Respond continuously to live data conditions with zero downtime.",
-      icon: "/images/Lighting.svg",
+      icon: "/images/Mind.svg",
     },
   ];
 
