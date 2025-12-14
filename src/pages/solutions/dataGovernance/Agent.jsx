@@ -149,7 +149,7 @@ const Agent = () => {
           <div className='hidden lg:flex flex-1 relative h-auto'>
             <div className='absolute -right-15 top-0 w-[650px]'>
               <Image
-                src='/images/AgentCatalyst.svg'
+                src='/images/solutions/BG.SVG'
                 alt='Ellipse'
                 width={800}
                 height={800}
