@@ -7,12 +7,13 @@ import Cards from '../../../../pages/solutions/dataGovernance/Cards';
 import DataGovernanceSection from '../../../../pages/solutions/dataGovernance/DataGovernanceSection';
 import SectionGwc from '../../../../pages/solutions/dataGovernance/SectionGwc';
 import Technology from '../../../../pages/solutions/dataGovernance/Technology';
-
+import Dummy from '../../../../pages/solutions/dataGovernance/dummy';
 function Solutionpage() {
   return (
     <div>
       <BannerSection />
       <SectionGwc />
+      <Dummy />
       <DataGovernanceSection />
       <Technology />
       <Cards />

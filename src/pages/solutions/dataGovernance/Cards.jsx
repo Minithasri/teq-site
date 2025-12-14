@@ -8,28 +8,55 @@ import img2 from '../../../../public/images/solutions/Frame 1566662964.jpg';
 import img3 from '../../../../public/images/solutions/Frame 1566662965.jpg';
 import img4 from '../../../../public/images/solutions/Frame 1566662966.jpg';
 
-// JSON-driven content
+// JSON-driven content + layout config
 const cardsData = [
   {
     id: 1,
     title: 'From to',
     image: img1,
     content: [{ from: 'Data Deluge', to: 'Data Delight' }],
+    layout: {
+      width: '282.6px',
+      height: '238.37px',
+      radius: '29.49px',
+      padding: '20px',
+      rounded: 'rounded-tl-[29.49px] rounded-tr-[29.49px] rounded-bl-[0]',
+    },
   },
   {
     id: 2,
     title: 'Data Based Decision Confidence',
     image: img2,
+    layout: {
+      width: '175.7px',
+      height: '175.7px',
+      padding: '36.86px',
+      rounded: 'rounded-tl-[29.49px] rounded-tr-[29.49px] rounded-bl-[29.49px]',
+      position: 'translate-y-14',
+    },
   },
   {
     id: 3,
     title: 'Frictionless Collaboration with Business Data',
     image: img3,
+    layout: {
+      width: '175.7px',
+      height: '175.7px',
+      padding: '20px',
+      rounded: 'rounded-tl-[29.49px] rounded-bl-[29.49px] rounded-br-[29.49px]',
+      position: 'justify-self-end',
+    },
   },
   {
     id: 4,
     title: 'Compliance Management',
     image: img4,
+    layout: {
+      width: '232.23px',
+      height: '181.85px',
+      padding: '20px',
+      rounded: 'rounded-tr-[29.49px] rounded-br-[29.49px] rounded-bl-[29.49px]',
+    },
   },
 ];
 
@@ -38,12 +65,25 @@ export default function Cards() {
     <section className='w-full py-20 bg-white'>
       <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center px-6'>
         {/* LEFT – IMAGE CARDS */}
-        <div className='grid grid-cols-2 gap-6'>
+        <div className='grid grid-cols-2 gap-3 relative'>
           {cardsData.map(card => (
-            <div key={card.id} className='relative rounded-2xl overflow-hidden h-[180px]'>
+            <div
+              key={card.id}
+              style={{
+                width: card.layout.width,
+                height: card.layout.height,
+                borderRadius: card.layout.radius,
+              }}
+              className={`relative overflow-hidden ${
+                card.layout.rounded || ''
+              } ${card.layout.position || ''}`}
+            >
               <Image src={card.image} alt={card.title} fill className='object-cover' />
 
-              <div className='absolute inset-0 p-5 flex flex-col justify-center text-white'>
+              <div
+                className='absolute inset-0 flex flex-col justify-center text-white'
+                style={{ padding: card.layout.padding }}
+              >
                 <h3 className='text-lg font-semibold mb-3 leading-snug'>{card.title}</h3>
 
                 {card.content && (
