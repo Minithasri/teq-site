@@ -1,16 +1,19 @@
 'use client';
 
 import Image from 'next/image';
-// governanceContent.ts
+
+// NEW CONTENT ACCORDING TO THE UI
 const governanceContent = {
-  title: 'The GWC Approach to Data Governance Excellence',
-  subtitle: 'Enhanced data fabric architecture empowers you to build robust data governance.',
+  title: 'Forge Business Triumph with Data Insights',
+  subtitle:
+    'Build a future-ready, scalable data foundation that adapts as your business grows—keeping your organization fast, agile, and insight-driven.',
+
   cards: [
     {
       id: 'left',
-      title: 'Smarter Compliance Management',
+      title: 'Scalable Data Infrastructure',
       description:
-        'Effortlessly navigate regulations with an audit-ready data fabric that ensures ethical, responsible, and transparent data handling.',
+        'Create a robust data backbone designed to manage increasing data volumes without slowing down performance.',
       icon: '/images/solutions/icon.png',
     },
     {
@@ -19,12 +22,13 @@ const governanceContent = {
     },
     {
       id: 'right',
-      title: 'Strengthened Customer Trust',
+      title: 'Stay Responsive, Always',
       description:
-        'Enhance customer confidence by prioritizing data privacy and responsible usage through strong, secure governance practices.',
+        'Leverage flexible architectures that evolve with your business needs, ensuring quick decision-making and operational efficiency.',
       icon: '/images/solutions/icon.png',
     },
   ],
+
   background: '/images/solutions/Second section BG.jpg',
 };
 
@@ -47,30 +51,33 @@ export default function SectionGwc() {
           {governanceContent.title}
         </h2>
 
-        <p className='mt-4 text-sm md:text-base text-purple-200 max-w-2xl mx-auto'>
+        {/* SUBTITLE */}
+        <p className='mt-4 text-sm md:text-base text-purple-200 max-w-2xl mx-auto leading-relaxed'>
           {governanceContent.subtitle}
         </p>
 
-        {/* CARDS */}
+        {/* CARDS GRID */}
         <div className='mt-14 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center'>
           {/* LEFT CARD */}
           <div className='bg-purple-800/60 backdrop-blur-md rounded-2xl p-8 text-left h-full'>
             <div className='flex items-center gap-3 mb-4'>
               <Image src={governanceContent.cards[0].icon} alt='Icon' width={24} height={24} />
             </div>
+
             <h3 className='text-lg font-semibold text-white'>{governanceContent.cards[0].title}</h3>
+
             <p className='mt-3 text-sm text-purple-200 leading-relaxed'>
               {governanceContent.cards[0].description}
             </p>
           </div>
 
-          {/* CENTER IMAGE */}
+          {/* CENTER IMAGE CARD */}
           <div className='relative h-[260px] md:h-[320px] lg:h-[360px]'>
             <Image
               src={governanceContent.cards[1].image}
-              alt='Governance Illustration'
+              alt='Center Illustration'
               fill
-              className='object-contain'
+              className='object-contain rounded-2xl'
               priority
             />
           </div>
@@ -80,7 +87,9 @@ export default function SectionGwc() {
             <div className='flex items-center gap-3 mb-4'>
               <Image src={governanceContent.cards[2].icon} alt='Icon' width={24} height={24} />
             </div>
+
             <h3 className='text-lg font-semibold text-white'>{governanceContent.cards[2].title}</h3>
+
             <p className='mt-3 text-sm text-purple-200 leading-relaxed'>
               {governanceContent.cards[2].description}
             </p>
