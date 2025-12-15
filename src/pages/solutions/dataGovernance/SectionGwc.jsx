@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-// governanceContent.ts
+
 const governanceContent = {
   title: 'The GWC Approach to Data Governance Excellence',
   subtitle: 'Enhanced data fabric architecture empowers you to build robust data governance.',
@@ -30,7 +30,7 @@ const governanceContent = {
 
 export default function SectionGwc() {
   return (
-    <section className='relative w-full px-4 py-16'>
+    <section className='relative w-full px-4 py-20'>
       {/* BACKGROUND */}
       <div className='absolute inset-0 -z-10'>
         <Image
@@ -43,45 +43,58 @@ export default function SectionGwc() {
 
       <div className='max-w-7xl mx-auto text-center'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold text-white'>
-          {governanceContent.title}
-        </h2>
+        <h2 className='text-2xl md:text-4xl font-semibold text-white'>{governanceContent.title}</h2>
 
-        <p className='mt-4 text-sm md:text-base text-purple-200 max-w-2xl mx-auto'>
+        <p className='mt-3 text-purple-200 text-sm md:text-base max-w-2xl mx-auto'>
           {governanceContent.subtitle}
         </p>
 
-        {/* CARDS */}
-        <div className='mt-14 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center'>
+        {/* MAIN CONTENT */}
+        <div className='mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch'>
           {/* LEFT CARD */}
-          <div className='bg-purple-800/60 backdrop-blur-md rounded-2xl p-8 text-left h-full'>
-            <div className='flex items-center gap-3 mb-4'>
-              <Image src={governanceContent.cards[0].icon} alt='Icon' width={24} height={24} />
+          <div className='bg-purple-900/40 backdrop-blur-md rounded-3xl p-8 flex flex-col justify-center min-h-[280px]'>
+            <div className='mb-6'>
+              <Image
+                src={governanceContent.cards[0].icon}
+                alt='Icon'
+                width={28}
+                height={28}
+                className='opacity-90'
+              />
             </div>
-            <h3 className='text-lg font-semibold text-white'>{governanceContent.cards[0].title}</h3>
-            <p className='mt-3 text-sm text-purple-200 leading-relaxed'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              {governanceContent.cards[0].title}
+            </h3>
+            <p className='text-white/90 text-sm md:text-base leading-relaxed'>
               {governanceContent.cards[0].description}
             </p>
           </div>
 
           {/* CENTER IMAGE */}
-          <div className='relative h-[260px] md:h-[320px] lg:h-[360px]'>
+          <div className='relative h-[280px] md:h-[340px] lg:h-[380px] flex items-center justify-center'>
             <Image
               src={governanceContent.cards[1].image}
               alt='Governance Illustration'
               fill
-              className='object-contain'
-              priority
+              className='object-contain drop-shadow-2xl'
             />
           </div>
 
           {/* RIGHT CARD */}
-          <div className='bg-purple-800/60 backdrop-blur-md rounded-2xl p-8 text-left h-full'>
-            <div className='flex items-center gap-3 mb-4'>
-              <Image src={governanceContent.cards[2].icon} alt='Icon' width={24} height={24} />
+          <div className='bg-purple-900/40 backdrop-blur-md rounded-3xl p-8 flex flex-col justify-center min-h-[280px]'>
+            <div className='mb-6'>
+              <Image
+                src={governanceContent.cards[2].icon}
+                alt='Icon'
+                width={28}
+                height={28}
+                className='opacity-90'
+              />
             </div>
-            <h3 className='text-lg font-semibold text-white'>{governanceContent.cards[2].title}</h3>
-            <p className='mt-3 text-sm text-purple-200 leading-relaxed'>
+            <h3 className='text-xl font-bold text-white mb-4'>
+              {governanceContent.cards[2].title}
+            </h3>
+            <p className='text-white/90 text-sm md:text-base leading-relaxed'>
               {governanceContent.cards[2].description}
             </p>
           </div>

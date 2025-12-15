@@ -4,6 +4,12 @@ import Image from 'next/image';
 
 // bannerContent.ts
 const bannerContent = {
+  breadcrumb: {
+    items: [
+      { label: 'Home', href: '/' },
+      { label: 'Data Governance', href: '/solutions/data-governance' },
+    ],
+  },
   title: 'Governed Data Foundation for Acceleration',
   description:
     'Strengthen your business with a unified, well-governed data foundation built for speed and accuracy.',
@@ -16,44 +22,52 @@ const bannerContent = {
 
 export default function BannerSection() {
   return (
-    <section className='relative w-full overflow-hidden'>
-      {/* Background */}
-      <Image
-        src={bannerContent.images.background}
-        alt='Background'
-        fill
-        priority
-        className='object-cover -z-10'
-      />
+    <section className='relative w-full overflow-hidden min-h-[500px]'>
+      {/* Gradient Background */}
+      <div className='absolute inset-0 bg-gradient-to-r from-purple-50 via-purple-50/50 to-blue-50 -z-10' />
 
-      <div className='max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 items-center gap-12'>
-        {/* LEFT CONTENT */}
-        <div>
-          <p className='text-sm text-purple-700 mb-4 font-medium'>{bannerContent.breadcrumb}</p>
+      {/* Optional: Background Image Overlay */}
+      <div className='absolute inset-0 -z-10 opacity-30'>
+        <Image
+          src={bannerContent.images.background}
+          alt='Background'
+          fill
+          priority
+          className='object-cover'
+        />
+      </div>
 
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight'>
-            {bannerContent.title}
-          </h1>
+      <div className='max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-20'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16'>
+          {/* LEFT CONTENT */}
+          <div className='space-y-6'>
+            {/* Title */}
+            <h1 className='text-2xl md:text-3xl lg:text-[36px] font-bold text-gray-900 leading-tight lg:leading-[1.1]'>
+              {bannerContent.title}
+            </h1>
 
-          <p className='mt-4 text-gray-600 text-base md:text-lg max-w-xl'>
-            {bannerContent.description}
-          </p>
+            {/* Description */}
+            <p className='text-gray-500 text-base md:text-lg leading-relaxed max-w-lg'>
+              {bannerContent.description}
+            </p>
 
-          <button className='mt-8 inline-flex items-center gap-2 rounded-full bg-purple-600 px-6 py-3 text-white font-semibold hover:bg-purple-700 transition'>
-            {bannerContent.ctaText}
-            <span>→</span>
-          </button>
-        </div>
+            {/* CTA Button */}
+            <button className='mt-2 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-purple-900 px-8 py-3.5 text-white font-semibold hover:from-purple-700 hover:to-purple-600 transition-all duration-200 shadow-md hover:shadow-lg'>
+              {bannerContent.ctaText}
+              <span className='text-lg'>→</span>
+            </button>
+          </div>
 
-        {/* RIGHT ILLUSTRATION */}
-        <div className='relative w-full h-[280px] sm:h-[340px] md:h-[420px] lg:h-[480px]'>
-          <Image
-            src={bannerContent.images.illustration}
-            alt='Data Governance Illustration'
-            fill
-            className='object-contain'
-            priority
-          />
+          {/* RIGHT ILLUSTRATION */}
+          <div className='relative w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[480px]'>
+            <Image
+              src={bannerContent.images.illustration}
+              alt='Data Governance Illustration'
+              fill
+              className='object-contain'
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>

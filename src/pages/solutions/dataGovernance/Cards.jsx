@@ -13,7 +13,7 @@ const cardsData = [
   {
     id: 1,
     title: 'From to',
-    image: img1,
+    image: img4,
     content: [{ from: 'Data Deluge', to: 'Data Delight' }],
     layout: {
       width: '282.6px',
@@ -26,7 +26,7 @@ const cardsData = [
   {
     id: 2,
     title: 'Data Based Decision Confidence',
-    image: img2,
+    image: img1,
     layout: {
       width: '175.7px',
       height: '175.7px',
@@ -38,7 +38,7 @@ const cardsData = [
   {
     id: 3,
     title: 'Frictionless Collaboration with Business Data',
-    image: img3,
+    image: img2,
     layout: {
       width: '175.7px',
       height: '175.7px',
@@ -50,7 +50,7 @@ const cardsData = [
   {
     id: 4,
     title: 'Compliance Management',
-    image: img4,
+    image: img3,
     layout: {
       width: '232.23px',
       height: '181.85px',
@@ -106,7 +106,7 @@ export default function Cards() {
 
         {/* RIGHT – CONTENT */}
         <div className='max-w-lg'>
-          <h2 className='text-4xl font-bold text-purple-700 mb-6'>
+          <h2 className='text-4xl font-bold text-purple-800 mb-6'>
             Why This Works Better with GWC
           </h2>
 
@@ -116,7 +116,7 @@ export default function Cards() {
             control, lineage tracking, quality assurance, and reporting.
           </p>
 
-          <button className='inline-flex items-center gap-3 px-7 py-3 bg-purple-600 text-white rounded-full shadow-md hover:bg-purple-700 transition'>
+          <button className='inline-flex items-center gap-3 px-7 py-3 bg-gradient-to-r from-purple-500 to-purple-900 text-white rounded-full shadow-md hover:bg-purple-700 transition'>
             Contact Us
             <span className='text-lg'>→</span>
           </button>

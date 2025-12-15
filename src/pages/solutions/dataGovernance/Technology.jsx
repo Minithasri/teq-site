@@ -44,17 +44,14 @@ const Technology = () => {
         className='bg-[linear-gradient(135deg,_#7030B14D_0%,_#CAB9F64D_25%,_#E6F2F64D_50%,_#DDA16C4D_65%,_#FFA5814D_80%,_#E5AA664D_100%)]'
         style={{
           backgroundColor: '#F9EAE1',
-          clipPath:
-            typeof window !== 'undefined' && window.innerWidth >= 1024
-              ? 'ellipse(150% 100% at 50% 0%)'
-              : 'none',
+          clipPath: 'none',
         }}
       >
         <div className='relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-32'>
           {/* Header */}
           <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-14 gap-6'>
             <div>
-              <div className='w-12 h-12 rounded-xl bg-white shadow flex items-center justify-center mb-4'>
+              <div className='w-12 h-12 rounded-xl bg-white shadow flex items-center justify-center mb-12'>
                 ✨
               </div>
               <h2 className='text-3xl md:text-4xl font-semibold text-gray-800'>
@@ -63,12 +60,12 @@ const Technology = () => {
             </div>
 
             <div className='flex flex-col items-end gap-3'>
-              <p className='text-sm text-gray-500'>
-                Everything you need to build, deploy, and scale AI agents
-              </p>
-              <button className='px-6 py-3 rounded-full border border-purple-400 text-purple-700 font-medium hover:bg-purple-50 transition'>
+              <button className='px-6 mb-12 py-3 rounded-full border border-purple-400 text-purple-700 font-medium hover:bg-purple-50 transition'>
                 Talk to Our Experts →
               </button>
+              <p className='text-sm mb-4 text-gray-500'>
+                Everything you need to build, deploy, and scale AI agents
+              </p>
             </div>
           </div>
 

@@ -1,6 +1,5 @@
 /* eslint-disable indent */
 'use client';
-
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
@@ -25,11 +24,11 @@ const tabs = [
 
 const cards = [
   {
-    badge: 'Customized Data Roadmaps',
+    badge: 'Data Classification & Sensitivity',
     title: 'Craft Your Customized Data Roadmap With GWC',
     points: [
-      'Our customized data roadmap ensures strategic alignment with your business objectives.',
-      'Crafted with scalability in mind, the roadmap evolves alongside your business.',
+      'Secure your business and comply with regulations by implementing a robust data classification and sensitivity approach.',
+      'Protect confidential information, prevent data breaches, and build trust with customers and stakeholders.',
     ],
     image: Sensitivity,
   },
@@ -37,23 +36,26 @@ const cards = [
     badge: 'Data Quality Management',
     title: 'Ensure Reliable & Trusted Data',
     points: [
-      'Detect and eliminate data inconsistencies early.',
-      'Enable analytics-ready datasets for decision-making.',
+      'Ensure trusted data fuels informed decisions.',
+      'Turn data chaos into clarity to empower your business.',
     ],
     image: Sensitivity,
   },
   {
     badge: 'Data Lineage',
     title: 'Gain End-to-End Data Visibility',
-    points: ['Track data from source to consumption.', 'Improve governance and impact analysis.'],
+    points: [
+      'Identifies potential downstream effects of data changes.',
+      'Provides transparency into data origins and processing.',
+    ],
     image: Sensitivity,
   },
   {
     badge: 'Data Access & Authorization',
     title: 'Secure Role-Based Data Access',
     points: [
-      'Protect sensitive data with fine-grained controls.',
-      'Ensure authorized access across platforms.',
+      'Protects sensitive information from unauthorized access and misuse.',
+      'Sets clear data classification levels based on sensitivity.',
     ],
     image: Sensitivity,
   },
@@ -61,122 +63,233 @@ const cards = [
     badge: 'Data Privacy Compliance',
     title: 'Meet Global Privacy Standards',
     points: [
-      'Support GDPR, HIPAA, and regional regulations.',
-      'Embed privacy into data workflows.',
+      'Robust security measures in place to protect customer data from unauthorized access, disclosure, alteration, or destruction.',
+      'Includes encryption, access controls, and incident response plans.',
     ],
     image: Sensitivity,
   },
   {
     badge: 'Data Governance Policies',
     title: 'Define Governance Standards',
-    points: ['Create unified governance frameworks.', 'Maintain consistency enterprise-wide.'],
+    points: [
+      'Boosts operational efficiency with a framework for efficient data management processes.',
+      'Proactive measures to reduce potential data breach issues and financial costs.',
+    ],
     image: Sensitivity,
   },
   {
     badge: 'Metadata Management',
     title: 'Improve Data Discoverability',
-    points: ['Add business context to data assets.', 'Empower self-service analytics.'],
+    points: [
+      'Standards to establish consistent ways to describe and categorize your data.',
+      'Integrates with your existing data infrastructure by making metadata easily accessible across your systems.',
+      'Empower self-service analytics.',
+    ],
     image: Sensitivity,
   },
   {
     badge: 'Training & Awareness',
     title: 'Build a Data-Driven Culture',
-    points: ['Educate teams on governance best practices.', 'Increase adoption across teams.'],
+    points: [
+      'Utilizes online training platforms and knowledge management systems for easy access and continuous learning.',
+      'Certified professionals to develop and implement effective training programs.',
+    ],
     image: Sensitivity,
   },
   {
     badge: 'Data Risk Management',
     title: 'Identify & Mitigate Risks',
-    points: ['Detect vulnerabilities early.', 'Protect enterprise data assets.'],
+    points: [
+      'Demonstrates commitment to protecting valuable data, fostering trust and confidence.',
+      'Ensures adherence to data privacy laws and reduces the risk of costly fines.',
+    ],
     image: Sensitivity,
   },
   {
     badge: 'Audit & Monitoring',
     title: 'Continuous Governance Monitoring',
-    points: ['Track policy adherence.', 'Ensure ongoing compliance.'],
+    points: [
+      'Identifies areas of non-compliance and potential risks and focus on Data quality and consistency across the organization.',
+      'Expertise on early detection and response to data issues before they cause significant harm to the business.',
+    ],
     image: Sensitivity,
   },
+];
+
+// Border colors for each card
+const borderColors = [
+  'border-purple-400',
+  'border-blue-400',
+  'border-indigo-400',
+  'border-violet-400',
+  'border-fuchsia-400',
+  'border-pink-400',
+  'border-rose-400',
+  'border-orange-400',
+  'border-amber-400',
+  'border-emerald-400',
 ];
 
 // ---------------- COMPONENT ----------------
 export default function DataGovernanceSection() {
   const sectionRef = useRef(null);
+  const cardsContainerRef = useRef(null);
+  const cardRefs = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
+    // Ensure refs are available before creating animations
+    if (!sectionRef.current) return;
+
     const ctx = gsap.context(() => {
+      // Pin the section
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: 'top top',
-        end: `+=${cards.length * 100}%`,
+        end: `+=${cards.length * 100}vh`,
         pin: true,
-        scrub: 1,
-        onUpdate: self => {
-          const index = Math.min(cards.length - 1, Math.floor(self.progress * cards.length));
-          setActiveIndex(index);
-        },
+        scrub: true,
+        invalidateOnRefresh: true,
+      });
+
+      // Animate each card with stacking effect
+      cardRefs.current.forEach((card, index) => {
+        if (!card) return;
+
+        ScrollTrigger.create({
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: `+=${cards.length * 100}vh`,
+          scrub: 1,
+          invalidateOnRefresh: true,
+          onUpdate: self => {
+            if (!card) return; // Safety check during animation
+
+            const progress = self.progress;
+            const cardStart = index / cards.length;
+            const cardEnd = (index + 1) / cards.length;
+
+            // Update active index
+            const newIndex = Math.min(cards.length - 1, Math.floor(progress * cards.length));
+            setActiveIndex(newIndex);
+
+            if (progress < cardStart) {
+              // Card hasn't appeared yet - hide it below
+              gsap.set(card, {
+                y: 100,
+                scale: 0.95,
+                opacity: 0,
+                zIndex: index,
+              });
+            } else if (progress >= cardStart && progress < cardEnd) {
+              // Card is entering - animate it into position
+              const cardProgress = (progress - cardStart) / (cardEnd - cardStart);
+              const easeProgress =
+                cardProgress < 0.5
+                  ? 2 * cardProgress * cardProgress
+                  : 1 - Math.pow(-2 * cardProgress + 2, 2) / 2;
+
+              gsap.set(card, {
+                y: index * 20 + (100 - 100 * easeProgress),
+                scale: 0.95 + 0.05 * easeProgress,
+                opacity: easeProgress,
+                zIndex: index,
+              });
+            } else {
+              // Card has settled into stack - keep it visible
+              gsap.set(card, {
+                y: index * 20,
+                scale: 1,
+                opacity: 1,
+                zIndex: index,
+              });
+            }
+          },
+        });
       });
     }, sectionRef);
 
-    return () => ctx.revert();
+    return () => {
+      // Proper cleanup: kill all ScrollTriggers first, then revert context
+      const triggers = ScrollTrigger.getAll();
+      triggers.forEach(trigger => {
+        if (trigger) trigger.kill();
+      });
+      ctx.revert();
+    };
   }, []);
 
-  const card = cards[activeIndex];
-
   return (
-    <section ref={sectionRef} className='w-full bg-white py-24'>
-      <div className='max-w-7xl mx-auto px-4'>
-        {/* TABS */}
-        <div className='flex flex-wrap justify-center gap-3 mb-16'>
+    <div ref={sectionRef} className='relative min-h-screen bg-white py-20'>
+      {/* TABS */}
+      <div className='container mx-auto px-4 mb-12'>
+        <div className='flex flex-wrap gap-3 justify-center'>
           {tabs.map((tab, idx) => (
             <button
-              key={tab}
-              className={`px-5 py-2 rounded-full border text-sm transition
-                ${
-                  idx === activeIndex
-                    ? 'border-purple-600 text-purple-700 font-medium'
-                    : 'border-gray-300 text-gray-600'
-                }`}
+              key={idx}
+              className={`px-6 py-2.5 rounded-full border text-sm font-medium transition-all duration-300 ${
+                idx === activeIndex
+                  ? 'bg-purple-100 border-purple-400 text-purple-700'
+                  : 'bg-white border-gray-300 text-gray-700 hover:border-purple-300'
+              }`}
             >
               {tab}
             </button>
           ))}
         </div>
+      </div>
 
-        {/* MAIN CONTAINER (EXACT SCREENSHOT STYLE) */}
-        <div className='border-2 border-yellow-400 rounded-3xl p-8 md:p-12'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
-            {/* LEFT */}
-            <div>
-              <span className='inline-flex items-center gap-2 mb-4 px-4 py-1 rounded-full border border-purple-400 text-purple-700 text-sm font-medium'>
-                ✦ {card.badge}
-              </span>
+      {/* CARDS CONTAINER */}
+      <div ref={cardsContainerRef} className='container mx-auto px-4'>
+        <div className='relative' style={{ minHeight: '600px' }}>
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              ref={el => (cardRefs.current[index] = el)}
+              className='absolute inset-0 w-full'
+              style={{
+                transformOrigin: 'center center',
+              }}
+            >
+              <div
+                className={`bg-white rounded-3xl border-2 ${borderColors[index]} shadow-xl p-12 min-h-[500px]`}
+              >
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full'>
+                  {/* LEFT */}
+                  <div className='space-y-6'>
+                    <div className='inline-flex items-center gap-2 px-4 py-2 bg-purple-50 rounded-full border border-purple-200'>
+                      <span className='text-purple-600 text-lg'>✦</span>
+                      <span className='text-sm font-medium text-purple-700'>{card.badge}</span>
+                    </div>
 
-              <h2 className='text-2xl md:text-3xl font-semibold text-gray-900'>{card.title}</h2>
+                    <h2 className='text-4xl font-bold text-gray-900 leading-tight'>{card.title}</h2>
 
-              <ul className='mt-6 space-y-4 text-gray-700'>
-                {card.points.map((point, i) => (
-                  <li key={i} className='flex gap-3'>
-                    <span className='text-purple-600 mt-1'>•</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
+                    <ul className='space-y-4'>
+                      {card.points.map((point, i) => (
+                        <li key={i} className='flex items-start gap-3'>
+                          <span className='text-purple-600 mt-1 flex-shrink-0'>•</span>
+                          <span className='text-gray-700 text-lg leading-relaxed'>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* RIGHT IMAGE */}
+                  <div className='relative h-[400px] lg:h-full'>
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      className='object-contain rounded-2xl'
+                      priority={index === 0}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-
-            {/* RIGHT IMAGE */}
-            <div className='relative w-full h-[240px] sm:h-[300px] md:h-[360px]'>
-              <Image
-                src={card.image}
-                alt={card.title}
-                fill
-                className='object-cover rounded-2xl'
-                priority
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
