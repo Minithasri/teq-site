@@ -1,10 +1,13 @@
 'use client';
+
+import Image from 'next/image';
 import {
   RiBookOpenLine,
   RiDatabase2Line,
   RiGitBranchLine,
   RiShieldCheckLine,
 } from 'react-icons/ri';
+import img1 from '../../../../public/images/solutions/Icons.png';
 
 const cards = [
   {
@@ -52,7 +55,7 @@ const Technology = () => {
           <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-14 gap-6'>
             <div>
               <div className='w-12 h-12 rounded-xl bg-white shadow flex items-center justify-center mb-12'>
-                ✨
+                <Image src={img1} alt='Data Governance Expertise' width={30} height={30} />
               </div>
               <h2 className='text-3xl md:text-4xl font-semibold text-gray-800'>
                 Data Governance Expertise

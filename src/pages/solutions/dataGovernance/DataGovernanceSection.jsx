@@ -4,7 +4,16 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import Sensitivity from '../../../../public/images/solutions/datagoverance/Data Classification.png';
+import img1 from '../../../../public/images/solutions/datagoverance/imgi_4_Audit.png';
+import img2 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Access.png';
+import img3 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Classification.png';
+import img4 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Lifecycle.png';
+import img5 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Governance_Training.png';
+import img6 from '../../../../public/images/solutions/datagoverance/imgi_4_Governance.png';
+import img7 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Privacy.png';
+import img8 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Risk.png';
+import img9 from '../../../../public/images/solutions/datagoverance/imgi_4_Metadata.png';
+import img10 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Quality.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,7 +39,7 @@ const cards = [
       'Secure your business and comply with regulations by implementing a robust data classification and sensitivity approach.',
       'Protect confidential information, prevent data breaches, and build trust with customers and stakeholders.',
     ],
-    image: Sensitivity,
+    image: img3,
   },
   {
     badge: 'Data Quality Management',
@@ -39,7 +48,7 @@ const cards = [
       'Ensure trusted data fuels informed decisions.',
       'Turn data chaos into clarity to empower your business.',
     ],
-    image: Sensitivity,
+    image: img10,
   },
   {
     badge: 'Data Lineage',
@@ -48,7 +57,7 @@ const cards = [
       'Identifies potential downstream effects of data changes.',
       'Provides transparency into data origins and processing.',
     ],
-    image: Sensitivity,
+    image: img4,
   },
   {
     badge: 'Data Access & Authorization',
@@ -57,7 +66,7 @@ const cards = [
       'Protects sensitive information from unauthorized access and misuse.',
       'Sets clear data classification levels based on sensitivity.',
     ],
-    image: Sensitivity,
+    image: img2,
   },
   {
     badge: 'Data Privacy Compliance',
@@ -66,7 +75,7 @@ const cards = [
       'Robust security measures in place to protect customer data from unauthorized access, disclosure, alteration, or destruction.',
       'Includes encryption, access controls, and incident response plans.',
     ],
-    image: Sensitivity,
+    image: img7,
   },
   {
     badge: 'Data Governance Policies',
@@ -75,7 +84,7 @@ const cards = [
       'Boosts operational efficiency with a framework for efficient data management processes.',
       'Proactive measures to reduce potential data breach issues and financial costs.',
     ],
-    image: Sensitivity,
+    image: img6,
   },
   {
     badge: 'Metadata Management',
@@ -85,7 +94,7 @@ const cards = [
       'Integrates with your existing data infrastructure by making metadata easily accessible across your systems.',
       'Empower self-service analytics.',
     ],
-    image: Sensitivity,
+    image: img9,
   },
   {
     badge: 'Training & Awareness',
@@ -94,7 +103,7 @@ const cards = [
       'Utilizes online training platforms and knowledge management systems for easy access and continuous learning.',
       'Certified professionals to develop and implement effective training programs.',
     ],
-    image: Sensitivity,
+    image: img5,
   },
   {
     badge: 'Data Risk Management',
@@ -103,7 +112,7 @@ const cards = [
       'Demonstrates commitment to protecting valuable data, fostering trust and confidence.',
       'Ensures adherence to data privacy laws and reduces the risk of costly fines.',
     ],
-    image: Sensitivity,
+    image: img8,
   },
   {
     badge: 'Audit & Monitoring',
@@ -112,7 +121,7 @@ const cards = [
       'Identifies areas of non-compliance and potential risks and focus on Data quality and consistency across the organization.',
       'Expertise on early detection and response to data issues before they cause significant harm to the business.',
     ],
-    image: Sensitivity,
+    image: img1,
   },
 ];
 
