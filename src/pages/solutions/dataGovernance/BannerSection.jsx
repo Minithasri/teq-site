@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { FiArrowRight } from 'react-icons/fi';
 
 // bannerContent.ts
 const bannerContent = {
@@ -42,19 +43,19 @@ export default function BannerSection() {
           {/* LEFT CONTENT */}
           <div className='space-y-6'>
             {/* Title */}
-            <h1 className='text-2xl md:text-3xl lg:text-[36px] font-bold text-gray-900 leading-tight lg:leading-[1.1]'>
+            <h1 className='text-[32px] md:text-[40px] lg:text-[34px] font-extrabold text-[#3F3F3F] leading-[1.15]'>
               {bannerContent.title}
             </h1>
 
             {/* Description */}
-            <p className='text-gray-500 text-base md:text-lg leading-relaxed max-w-lg'>
+            <p className='text-[#7A7A7A] text-[15px] md:text-[16px] leading-relaxed max-w-xl font-normal'>
               {bannerContent.description}
             </p>
 
             {/* CTA Button */}
-            <button className='bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[150px] h-[45px] rounded-full font-medium text-base flex p-3 items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg'>
+            <button className='mt-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[170px] h-[45px] rounded-full font-medium text-[15px] flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg'>
               {bannerContent.ctaText}
-              <span>→</span>
+              <FiArrowRight className='w-5 h-5' />
             </button>
           </div>
 

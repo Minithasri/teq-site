@@ -30,71 +30,66 @@ const governanceContent = {
 
 export default function SectionGwc() {
   return (
-    <section className='relative w-full px-4 py-20'>
+    <section className='relative w-full mx-2 px-4 py-24'>
       {/* BACKGROUND */}
       <div className='absolute inset-0 -z-10'>
         <Image
           src={governanceContent.background}
           alt='Background'
           fill
-          className='object-cover  rounded-3xl'
+          className='object-cover rounded-[32px]'
         />
       </div>
 
       <div className='max-w-7xl mx-auto text-center'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-4xl font-semibold text-white'>{governanceContent.title}</h2>
+        <h2 className='text-2xl md:text-4xl text-white'>{governanceContent.title}</h2>
 
-        <p className='mt-3 text-purple-200 text-sm md:text-base max-w-2xl mx-auto'>
+        <p className='mt-4 text-purple-200 text-sm md:text-base max-w-2xl mx-auto leading-relaxed'>
           {governanceContent.subtitle}
         </p>
 
-        {/* MAIN CONTENT */}
-        <div className='mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch'>
+        {/* CARDS */}
+        <div className='mt-20 grid grid-cols-1 lg:grid-cols-3 gap-10 items-stretch'>
           {/* LEFT CARD */}
-          <div className='bg-[#583A65] backdrop-blur-md rounded-3xl p-8 flex flex-col justify-center min-h-[280px]'>
+          <div className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
             <div className='mb-6'>
-              <Image
-                src={governanceContent.cards[0].icon}
-                alt='Icon'
-                width={28}
-                height={28}
-                className='opacity-90'
-              />
+              <Image src={governanceContent.cards[0].icon} alt='Icon' width={26} height={26} />
             </div>
-            <h3 className='text-[20px] font-normal text-left  text-white mb-4'>
+
+            <h3 className='text-[20px] font-medium text-white mb-4'>
               {governanceContent.cards[0].title}
             </h3>
-            <p className='text-white/90 text-[14px] text-left'>
+
+            <p className='text-white/80 text-[14px] leading-relaxed'>
               {governanceContent.cards[0].description}
             </p>
           </div>
 
-          {/* CENTER IMAGE */}
-          <div className='relative min-h-[280px] flex items-center justify-center'>
-            <Image
-              src={governanceContent.cards[1].image}
-              alt='Governance Illustration'
-              fill
-              className='object-contain drop-shadow-2xl'
-            />
+          {/* CENTER IMAGE CARD – FIXED */}
+          <div className='relative min-h-[340px] flex items-center justify-center'>
+            <div className='relative w-full h-full'>
+              <Image
+                src={governanceContent.cards[1].image}
+                alt='Governance Illustration'
+                fill
+                className='object-cover rounded-3xl'
+                priority
+              />
+            </div>
           </div>
 
           {/* RIGHT CARD */}
-          <div className='bg-[#583A65] backdrop-blur-md rounded-3xl p-8 flex flex-col justify-center min-h-[280px]'>
+          <div className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
             <div className='mb-6'>
-              <Image
-                src={governanceContent.cards[2].icon}
-                alt='Icon'
-                width={28}
-                height={28}
-                className='opacity-90'
-              />
+              <Image src={governanceContent.cards[2].icon} alt='Icon' width={26} height={26} />
             </div>
-            <h3 className='text-[20px] font-normal text-left  text-white mb-4'>
+
+            <h3 className='text-[20px] font-semibold text-white mb-4'>
               {governanceContent.cards[2].title}
             </h3>
-            <p className='text-white/90 text-[14px] text-left'>
+
+            <p className='text-white/80 text-[14px] leading-relaxed'>
               {governanceContent.cards[2].description}
             </p>
           </div>

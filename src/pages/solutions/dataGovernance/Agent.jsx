@@ -5,6 +5,11 @@ export default function Agent() {
   return (
     <div className='px-4 sm:px-6 md:px-8 lg:px-10 flex justify-center my-12 lg:my-20'>
       <div className='w-full max-w-[1200px] rounded-3xl border border-purple-200 relative overflow-hidden bg-white'>
+        {/* BACKGROUND IMAGE with low opacity */}
+        <div className='absolute inset-0 opacity-60'>
+          <Image src='/images/AIMatters.jpg' alt='Background' fill className='object-cover' />
+        </div>
+
         {/* BACKGROUND LEFT SIDE (soft dots gradient) */}
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(160,132,255,0.25),rgba(255,255,255,0)_60%)]'></div>
 
@@ -15,7 +20,7 @@ export default function Agent() {
             {/* ICON */}
             <div className='w-12 h-12 rounded-xl bg-[#FF8A47] flex items-center justify-center'>
               <Image
-                src='/images/solutions/atlanicon-white.svg'
+                src='/images/solutions/Frame 1566663015.png'
                 alt='Icon'
                 width={28}
                 height={28}
@@ -37,7 +42,6 @@ export default function Agent() {
             {/* BUTTON */}
             <button className='mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full border border-purple-500 text-purple-600 font-medium hover:bg-purple-50 transition w-fit'>
               Know more about Atlan
-              <span className='text-lg'>→</span>
             </button>
           </div>
 
