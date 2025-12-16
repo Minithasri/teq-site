@@ -49,5 +49,8 @@
   // 🔍 Search
   "search.exclude": {
     "**/node_modules": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   }
 }

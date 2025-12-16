@@ -7,13 +7,13 @@ import { useEffect, useRef, useState } from 'react';
 import img1 from '../../../../public/images/solutions/datagoverance/imgi_4_Audit.png';
 import img2 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Access.png';
 import img3 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Classification.png';
-import img4 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Lifecycle.png';
 import img5 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Governance_Training.png';
-import img6 from '../../../../public/images/solutions/datagoverance/imgi_4_Governance.png';
+import img4 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Lifecycle.png';
 import img7 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Privacy.png';
-import img8 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Risk.png';
-import img9 from '../../../../public/images/solutions/datagoverance/imgi_4_Metadata.png';
 import img10 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Quality.png';
+import img8 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Risk.png';
+import img6 from '../../../../public/images/solutions/datagoverance/imgi_4_Governance.png';
+import img9 from '../../../../public/images/solutions/datagoverance/imgi_4_Metadata.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -146,86 +146,147 @@ export default function DataGovernanceSection() {
   const cardRefs = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // useEffect(() => {
+  //   // Ensure refs are available before creating animations
+  //   if (!sectionRef.current) return;
+
+  //   const ctx = gsap.context(() => {
+  //     // Pin the section
+  //     ScrollTrigger.create({
+  //       trigger: sectionRef.current,
+  //       start: 'top top',
+  //       end: `+=${cards.length * 100}vh`,
+  //       pin: true,
+  //       scrub: true,
+  //       invalidateOnRefresh: true,
+  //     });
+
+  //     // Animate each card with stacking effect
+  //     cardRefs.current.forEach((card, index) => {
+  //       if (!card) return;
+
+  //       ScrollTrigger.create({
+  //         trigger: sectionRef.current,
+  //         start: 'top top',
+  //         end: `+=${cards.length * 100}vh`,
+  //         scrub: 1,
+  //         invalidateOnRefresh: true,
+  //         onUpdate: self => {
+  //           if (!card) return; // Safety check during animation
+
+  //           const progress = self.progress;
+  //           const cardStart = index / cards.length;
+  //           const cardEnd = (index + 1) / cards.length;
+
+  //           // Update active index
+  //           const newIndex = Math.min(cards.length - 1, Math.floor(progress * cards.length));
+  //           setActiveIndex(newIndex);
+
+  //           if (progress < cardStart) {
+  //             // Card hasn't appeared yet - hide it below
+  //             gsap.set(card, {
+  //               y: 100,
+  //               scale: 0.95,
+  //               opacity: 0,
+  //               zIndex: index,
+  //             });
+  //           } else if (progress >= cardStart && progress < cardEnd) {
+  //             // Card is entering - animate it into position
+  //             const cardProgress = (progress - cardStart) / (cardEnd - cardStart);
+  //             const easeProgress =
+  //               cardProgress < 0.5
+  //                 ? 2 * cardProgress * cardProgress
+  //                 : 1 - Math.pow(-2 * cardProgress + 2, 2) / 2;
+
+  //             gsap.set(card, {
+  //               y: index * 20 + (100 - 100 * easeProgress),
+  //               scale: 0.95 + 0.05 * easeProgress,
+  //               opacity: easeProgress,
+  //               zIndex: index,
+  //             });
+  //           } else {
+  //             // Card has settled into stack - keep it visible
+  //             gsap.set(card, {
+  //               y: index * 20,
+  //               scale: 1,
+  //               opacity: 1,
+  //               zIndex: index,
+  //             });
+  //           }
+  //         },
+  //       });
+  //     });
+  //   }, sectionRef);
+
+  //   return () => {
+  //     // Proper cleanup: kill all ScrollTriggers first, then revert context
+  //     const triggers = ScrollTrigger.getAll();
+  //     triggers.forEach(trigger => {
+  //       if (trigger) trigger.kill();
+  //     });
+  //     ctx.revert();
+  //   };
+  // }, []);
+
   useEffect(() => {
-    // Ensure refs are available before creating animations
     if (!sectionRef.current) return;
 
+    let currentIndex = 0;
+
     const ctx = gsap.context(() => {
-      // Pin the section
+      // Initial state
+      cardRefs.current.forEach((card, i) => {
+        gsap.set(card, {
+          opacity: i === 0 ? 1 : 0,
+          scale: i === 0 ? 1 : 0.96,
+          pointerEvents: i === 0 ? 'auto' : 'none',
+        });
+      });
+
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: 'top top',
-        end: `+=${cards.length * 100}vh`,
+        end: `+=${cards.length * 120}vh`,
         pin: true,
-        scrub: true,
-        invalidateOnRefresh: true,
-      });
+        scrub: false, // IMPORTANT
+        onUpdate: self => {
+          const nextIndex = Math.min(cards.length - 1, Math.floor(self.progress * cards.length));
 
-      // Animate each card with stacking effect
-      cardRefs.current.forEach((card, index) => {
-        if (!card) return;
+          if (nextIndex === currentIndex) return;
 
-        ScrollTrigger.create({
-          trigger: sectionRef.current,
-          start: 'top top',
-          end: `+=${cards.length * 100}vh`,
-          scrub: 1,
-          invalidateOnRefresh: true,
-          onUpdate: self => {
-            if (!card) return; // Safety check during animation
+          const prevCard = cardRefs.current[currentIndex];
+          const nextCard = cardRefs.current[nextIndex];
 
-            const progress = self.progress;
-            const cardStart = index / cards.length;
-            const cardEnd = (index + 1) / cards.length;
+          setActiveIndex(nextIndex);
 
-            // Update active index
-            const newIndex = Math.min(cards.length - 1, Math.floor(progress * cards.length));
-            setActiveIndex(newIndex);
+          // 🔹 OUT — disappear INSIDE
+          gsap.to(prevCard, {
+            opacity: 0,
+            scale: 0.96,
+            duration: 0.6,
+            ease: 'power2.inOut',
+            pointerEvents: 'none',
+          });
 
-            if (progress < cardStart) {
-              // Card hasn't appeared yet - hide it below
-              gsap.set(card, {
-                y: 100,
-                scale: 0.95,
-                opacity: 0,
-                zIndex: index,
-              });
-            } else if (progress >= cardStart && progress < cardEnd) {
-              // Card is entering - animate it into position
-              const cardProgress = (progress - cardStart) / (cardEnd - cardStart);
-              const easeProgress =
-                cardProgress < 0.5
-                  ? 2 * cardProgress * cardProgress
-                  : 1 - Math.pow(-2 * cardProgress + 2, 2) / 2;
-
-              gsap.set(card, {
-                y: index * 20 + (100 - 100 * easeProgress),
-                scale: 0.95 + 0.05 * easeProgress,
-                opacity: easeProgress,
-                zIndex: index,
-              });
-            } else {
-              // Card has settled into stack - keep it visible
-              gsap.set(card, {
-                y: index * 20,
-                scale: 1,
-                opacity: 1,
-                zIndex: index,
-              });
+          // 🔹 IN — appear INSIDE
+          gsap.fromTo(
+            nextCard,
+            { opacity: 0, scale: 0.96 },
+            {
+              opacity: 1,
+              scale: 1,
+              duration: 1, // user sees it clearly
+              ease: 'power3.out',
+              pointerEvents: 'auto',
             }
-          },
-        });
+          );
+
+          currentIndex = nextIndex;
+        },
       });
     }, sectionRef);
 
-    return () => {
-      // Proper cleanup: kill all ScrollTriggers first, then revert context
-      const triggers = ScrollTrigger.getAll();
-      triggers.forEach(trigger => {
-        if (trigger) trigger.kill();
-      });
-      ctx.revert();
-    };
+    return () => ctx.revert();
   }, []);
 
   return (

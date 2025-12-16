@@ -51,7 +51,7 @@ const Technology = () => {
           clipPath: 'none',
         }}
       >
-        <div className='relative z-10 max-w-7xl ml-2 px-6 pt-20 pb-32'>
+        <div className=' max-w-7xl ml-24 px-6 pt-20 pb-32'>
           {/* Header */}
           <div className='flex items-center mb-16 gap-6'>
             {/* LEFT ICON */}
