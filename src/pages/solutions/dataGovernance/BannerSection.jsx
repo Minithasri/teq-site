@@ -28,7 +28,7 @@ export default function BannerSection() {
       <div className='absolute inset-0 bg-gradient-to-r from-purple-50 via-purple-50/50 to-blue-50 -z-10' />
 
       {/* Optional: Background Image Overlay */}
-      <div className='absolute inset-0 -z-10 opacity-30'>
+      <div className='absolute inset-0  h-full -z-10 opacity-30'>
         <Image
           src={bannerContent.images.background}
           alt='Background'

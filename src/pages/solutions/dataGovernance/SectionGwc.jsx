@@ -30,7 +30,7 @@ const governanceContent = {
 
 export default function SectionGwc() {
   return (
-    <section className='relative w-full mx-2 px-4 py-24'>
+    <section className='relative m-10 py-20 -mt-10'>
       {/* BACKGROUND */}
       <div className='absolute inset-0 -z-10'>
         <Image
@@ -50,9 +50,9 @@ export default function SectionGwc() {
         </p>
 
         {/* CARDS */}
-        <div className='mt-20 grid grid-cols-1 lg:grid-cols-3 gap-10 items-stretch'>
+        <div className='mt-20 grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch'>
           {/* LEFT CARD */}
-          <div className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
+          <div className='bg-[#5B3B6E] backdrop-blur-md  rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
             <div className='mb-6'>
               <Image src={governanceContent.cards[0].icon} alt='Icon' width={26} height={26} />
             </div>
@@ -67,13 +67,13 @@ export default function SectionGwc() {
           </div>
 
           {/* CENTER IMAGE CARD – FIXED */}
-          <div className='relative min-h-[340px] flex items-center justify-center'>
-            <div className='relative w-full h-full'>
+          <div className='relative min-h-[340px] rounded-xl flex items-center justify-center'>
+            <div className='relative w-full rounded-xl h-full'>
               <Image
                 src={governanceContent.cards[1].image}
                 alt='Governance Illustration'
                 fill
-                className='object-cover rounded-3xl'
+                className='rounded-xl h-[600px]'
                 priority
               />
             </div>
