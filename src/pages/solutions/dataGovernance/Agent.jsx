@@ -6,7 +6,7 @@ export default function Agent() {
     <div className='px-4 sm:px-6 md:px-8 lg:px-10 flex justify-center my-12 lg:my-20'>
       <div className='w-full max-w-[1200px] rounded-3xl border border-purple-200 relative overflow-hidden bg-white'>
         {/* BACKGROUND IMAGE with low opacity */}
-        <div className='absolute inset-0 opacity-20'>
+        <div className='absolute inset-0 opacity-60'>
           <Image src='/images/AIMatters.jpg' alt='Background' fill className='object-cover' />
         </div>
 
