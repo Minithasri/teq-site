@@ -23,7 +23,7 @@ const bannerContent = {
 
 export default function BannerSection() {
   return (
-    <section className='relative w-full overflow-hidden min-h-[500px]'>
+    <section className='relative w-full overflow-hidden min-h-[800px]'>
       {/* Gradient Background */}
       <div className='absolute inset-0 bg-gradient-to-r from-purple-50 via-purple-50/50 to-blue-50 -z-10' />
 
@@ -42,8 +42,29 @@ export default function BannerSection() {
         <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16'>
           {/* LEFT CONTENT */}
           <div className='space-y-6'>
+            {/* Breadcrumb */}
+            <nav aria-label='Breadcrumb'>
+              <ol className='flex items-center gap-2 text-sm'>
+                {bannerContent.breadcrumb.items.map((item, index) => (
+                  <li key={index} className='flex items-center gap-2'>
+                    {index > 0 && <span className='text-gray-400'>›</span>}
+                    <a
+                      href={item.href}
+                      className={`${
+                        index === bannerContent.breadcrumb.items.length - 1
+                          ? 'text-purple-600 font-medium'
+                          : 'text-gray-600 hover:text-purple-600'
+                      } transition-colors`}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+
             {/* Title */}
-            <h1 className='text-[32px] md:text-[40px] lg:text-[34px] font-extrabold text-[#3F3F3F] leading-[1.15]'>
+            <h1 className='text-[32px] md:text-[40px] lg:text-[34px] font-semibold text-[#3F3F3F] leading-[1.15]'>
               {bannerContent.title}
             </h1>
 

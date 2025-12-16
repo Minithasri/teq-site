@@ -30,8 +30,8 @@ const governanceContent = {
 
 export default function SectionGwc() {
   return (
-    <section className='relative w-full px-4'>
-      <div className='relative w-full max-w-[calc(100%-2rem)] mx-auto rounded-[32px] overflow-hidden py-16'>
+    <section className='relative w-full px-4 -mt-32'>
+      <div className='relative w-full max-w-[calc(100%-2rem)] mx-auto rounded-[32px] overflow-hidden py-16 z-10'>
         {/* BACKGROUND */}
         <div className='absolute inset-0 -z-10'>
           <Image
@@ -51,7 +51,7 @@ export default function SectionGwc() {
           </p>
 
           {/* CARDS */}
-          <div className='mt-20 mb-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch'>
+          <div className='mt-20 -mb-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch'>
             {/* LEFT CARD */}
             <div className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
               <div className='mb-6'>
@@ -73,7 +73,7 @@ export default function SectionGwc() {
                 src={governanceContent.cards[1].image}
                 alt='Governance Illustration'
                 fill
-                className='object-cover'
+                className='object-cover rounded-2xl'
                 priority
               />
             </div>

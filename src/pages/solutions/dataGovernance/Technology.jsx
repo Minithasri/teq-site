@@ -43,7 +43,7 @@ const cards = [
 
 const Technology = () => {
   return (
-    <div className='mt-8 relative overflow-hidden'>
+    <div className='relative overflow-hidden w-full'>
       <div
         className='bg-[linear-gradient(135deg,_#7030B14D_0%,_#CAB9F64D_25%,_#E6F2F64D_50%,_#DDA16C4D_65%,_#FFA5814D_80%,_#E5AA664D_100%)]'
         style={{
@@ -51,7 +51,7 @@ const Technology = () => {
           clipPath: 'none',
         }}
       >
-        <div className=' max-w-7xl ml-2 px-6 pt-20 pb-32'>
+        <div className='w-full px-4 md:px-6 lg:px-12 xl:px-24 pt-20 pb-16'>
           {/* Header */}
           <div className='flex items-center mb-16 gap-6'>
             {/* LEFT ICON */}
@@ -101,7 +101,7 @@ const Technology = () => {
                   <div className='w-full h-[1px] my-4 bg-[linear-gradient(to_right,#E5E7EB_35%,rgba(0,0,0,0)_0%)] bg-[length:14px_2px] bg-repeat-x rounded-full' />
 
                   {/* Description */}
-                  <p className='text-gray-600 text-sm leading-relaxed max-w-sm'>
+                  <p className='text-gray-600 text-sm leading-relaxed max-w-2xl'>
                     {card.description}
                   </p>
                 </div>

@@ -6,7 +6,7 @@ import { FiArrowRight } from 'react-icons/fi';
 export default function Cards() {
   return (
     <section className='w-full py-20 bg-white'>
-      <div className='max-w-7xl mx-8 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center px-6'>
+      <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center px-4 md:px-6 lg:px-12 xl:px-24'>
         {/* LEFT – SINGLE IMAGE */}
         <div className='relative w-full h-[400px] rounded-3xl overflow-hidden'>
           <Image
