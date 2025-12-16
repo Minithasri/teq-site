@@ -492,19 +492,37 @@ export default function DataGovernanceSection() {
   return (
     <div ref={sectionRef} className='relative min-h-screen bg-white py-20'>
       {/* TABS */}
+      {/* <div className="container mx-auto px-4 mb-12">
+  <div className="grid grid-cols-5 gap-4 max-w-6xl mx-auto">
+    {tabs.map((tab, i) => (
+      <button
+        key={i}
+        onClick={() => onTabClick(i)}
+        className={`flex items-center justify-center h-16 px-3 rounded-full border text-sm font-medium transition text-center text-ellipsis overflow-hidden whitespace-nowrap ${
+          i === activeIndex
+            ? 'bg-purple-100 border-purple-400 text-purple-700'
+            : 'bg-white border-gray-300 text-gray-700 hover:border-purple-300'
+        }`}
+      >
+        {tab}
+      </button>
+    ))}
+  </div>
+</div> */}
       <div className='container mx-auto px-4 mb-12'>
-        <div className='grid grid-cols-5 gap-4 max-w-9xl mx-auto'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 ma  '>
           {tabs.map((tab, i) => (
             <button
               key={i}
               onClick={() => onTabClick(i)}
-              className={`px-3 py-3 rounded-full border text-sm font-medium transition text-center leading-tight break-words ${
-                i === activeIndex
-                  ? 'bg-purple-100 border-purple-400 text-purple-700'
-                  : 'bg-white border-gray-300 text-gray-700 hover:border-purple-300'
-              }`}
+              className={`flex items-center justify-center px-6 py-4 rounded-full border text-sm font-medium transition text-center
+          ${
+            i === activeIndex
+              ? 'bg-purple-100 border-purple-400 text-purple-700'
+              : 'bg-white border-gray-300 text-gray-700 hover:border-purple-300'
+          }`}
             >
-              {tab}
+              <span className='block text-center leading-snug break-words'>{tab}</span>
             </button>
           ))}
         </div>
