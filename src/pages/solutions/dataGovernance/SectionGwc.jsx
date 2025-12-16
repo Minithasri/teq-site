@@ -37,7 +37,7 @@ export default function SectionGwc() {
           src={governanceContent.background}
           alt='Background'
           fill
-          className='object-cover rounded-3xl'
+          className='object-cover  rounded-3xl'
         />
       </div>
 
@@ -52,7 +52,7 @@ export default function SectionGwc() {
         {/* MAIN CONTENT */}
         <div className='mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch'>
           {/* LEFT CARD */}
-          <div className='bg-purple-900/40 backdrop-blur-md rounded-3xl p-8 flex flex-col justify-center min-h-[280px]'>
+          <div className='bg-[#583A65] backdrop-blur-md rounded-3xl p-8 flex flex-col justify-center min-h-[280px]'>
             <div className='mb-6'>
               <Image
                 src={governanceContent.cards[0].icon}
@@ -62,16 +62,16 @@ export default function SectionGwc() {
                 className='opacity-90'
               />
             </div>
-            <h3 className='text-xl font-bold text-white mb-4'>
+            <h3 className='text-[20px] font-normal text-left  text-white mb-4'>
               {governanceContent.cards[0].title}
             </h3>
-            <p className='text-white/90 text-sm md:text-base leading-relaxed'>
+            <p className='text-white/90 text-[14px] text-left'>
               {governanceContent.cards[0].description}
             </p>
           </div>
 
           {/* CENTER IMAGE */}
-          <div className='relative h-[280px] md:h-[340px] lg:h-[380px] flex items-center justify-center'>
+          <div className='relative min-h-[280px] flex items-center justify-center'>
             <Image
               src={governanceContent.cards[1].image}
               alt='Governance Illustration'
@@ -81,7 +81,7 @@ export default function SectionGwc() {
           </div>
 
           {/* RIGHT CARD */}
-          <div className='bg-purple-900/40 backdrop-blur-md rounded-3xl p-8 flex flex-col justify-center min-h-[280px]'>
+          <div className='bg-[#583A65] backdrop-blur-md rounded-3xl p-8 flex flex-col justify-center min-h-[280px]'>
             <div className='mb-6'>
               <Image
                 src={governanceContent.cards[2].icon}
@@ -91,10 +91,10 @@ export default function SectionGwc() {
                 className='opacity-90'
               />
             </div>
-            <h3 className='text-xl font-bold text-white mb-4'>
+            <h3 className='text-[20px] font-normal text-left  text-white mb-4'>
               {governanceContent.cards[2].title}
             </h3>
-            <p className='text-white/90 text-sm md:text-base leading-relaxed'>
+            <p className='text-white/90 text-[14px] text-left'>
               {governanceContent.cards[2].description}
             </p>
           </div>

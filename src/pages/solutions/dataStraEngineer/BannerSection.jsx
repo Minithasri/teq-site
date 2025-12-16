@@ -39,7 +39,7 @@ export default function BannerSection() {
             {bannerContent.description}
           </p>
 
-          <button className='mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-purple-900 px-6 py-3 text-white font-semibold hover:bg-purple-700 transition'>
+          <button className='bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[150px] h-[45px] rounded-full font-medium text-base flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg'>
             {bannerContent.ctaText}
             <span>→</span>
           </button>

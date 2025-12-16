@@ -52,9 +52,9 @@ export default function BannerSection() {
             </p>
 
             {/* CTA Button */}
-            <button className='mt-2 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-purple-900 px-8 py-3.5 text-white font-semibold hover:from-purple-700 hover:to-purple-600 transition-all duration-200 shadow-md hover:shadow-lg'>
+            <button className='bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[150px] h-[45px] rounded-full font-medium text-base flex p-3 items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg'>
               {bannerContent.ctaText}
-              <span className='text-lg'>→</span>
+              <span>→</span>
             </button>
           </div>
 
