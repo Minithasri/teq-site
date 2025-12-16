@@ -51,7 +51,7 @@ const Technology = () => {
           clipPath: 'none',
         }}
       >
-        <div className='relative z-10 max-w-7xl mx-12 px-6 pt-20 pb-32'>
+        <div className='relative z-10 max-w-7xl ml-24 px-6 pt-20 pb-32'>
           {/* Header */}
           <div className='flex items-center mb-16 gap-6'>
             {/* LEFT ICON */}
@@ -60,12 +60,7 @@ const Technology = () => {
             </div>
 
             {/* DOTTED CONNECTOR LINE */}
-            <div
-              className='flex-1 h-[2px]
-  bg-[linear-gradient(to_right,rgba(107,114,128,0.45)_12%,rgba(0,0,0,0)_0%)]
-  bg-[length:12px_2px]
-  bg-repeat-x'
-            />
+            <div className='flex-1 h-[2px] bg-[linear-gradient(to_right,rgba(107,114,128,0.45)_12%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x' />
 
             {/* RIGHT CTA */}
             <button className='px-4 py-2 rounded-full border border-purple-400 text-purple-700 font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'>
