@@ -24,11 +24,8 @@ const bannerContent = {
 export default function BannerSection() {
   return (
     <section className='relative w-full overflow-hidden min-h-[800px]'>
-      {/* Gradient Background */}
-      <div className='absolute inset-0 bg-gradient-to-r from-purple-50 via-purple-50/50 to-blue-50 -z-10' />
-
       {/* Optional: Background Image Overlay */}
-      <div className='absolute inset-0  h-full -z-10 opacity-30'>
+      <div className='absolute inset-0  h-full -z-10'>
         <Image
           src={bannerContent.images.background}
           alt='Background'
@@ -39,30 +36,30 @@ export default function BannerSection() {
       </div>
 
       <div className='max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-20'>
+        {/* Breadcrumb - Top Left */}
+        <nav aria-label='Breadcrumb' className='-mb-8 mt-6'>
+          <ol className='flex items-center gap-2 text-sm'>
+            {bannerContent.breadcrumb.items.map((item, index) => (
+              <li key={index} className='flex items-center gap-2'>
+                {index > 0 && <span className='text-gray-400'>›</span>}
+                <a
+                  href={item.href}
+                  className={`${
+                    index === bannerContent.breadcrumb.items.length - 1
+                      ? 'text-purple-700 font-medium'
+                      : 'text-gray-600 hover:text-purple-600'
+                  } transition-colors`}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+
         <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16'>
           {/* LEFT CONTENT */}
           <div className='space-y-6'>
-            {/* Breadcrumb */}
-            <nav aria-label='Breadcrumb'>
-              <ol className='flex items-center gap-2 text-sm'>
-                {bannerContent.breadcrumb.items.map((item, index) => (
-                  <li key={index} className='flex items-center gap-2'>
-                    {index > 0 && <span className='text-gray-400'>›</span>}
-                    <a
-                      href={item.href}
-                      className={`${
-                        index === bannerContent.breadcrumb.items.length - 1
-                          ? 'text-purple-600 font-medium'
-                          : 'text-gray-600 hover:text-purple-600'
-                      } transition-colors`}
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ol>
-            </nav>
-
             {/* Title */}
             <h1 className='text-[32px] md:text-[40px] lg:text-[34px] font-semibold text-[#3F3F3F] leading-[1.15]'>
               {bannerContent.title}
@@ -81,7 +78,7 @@ export default function BannerSection() {
           </div>
 
           {/* RIGHT ILLUSTRATION */}
-          <div className='relative w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[480px]'>
+          <div className='relative w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[440px]'>
             <Image
               src={bannerContent.images.illustration}
               alt='Data Governance Illustration'

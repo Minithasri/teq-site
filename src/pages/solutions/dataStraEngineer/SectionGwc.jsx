@@ -34,65 +34,71 @@ const governanceContent = {
 
 export default function SectionGwc() {
   return (
-    <section className='relative w-full px-4 py-16'>
-      {/* BACKGROUND */}
-      <div className='absolute inset-0 -z-10'>
-        <Image
-          src={governanceContent.background}
-          alt='Background'
-          fill
-          className='object-cover rounded-3xl'
-        />
-      </div>
+    <section className='relative w-full px-4 -mt-32'>
+      <div className='relative w-full max-w-[calc(100%-2rem)] mx-auto rounded-[32px] overflow-hidden py-16 z-10'>
+        {/* BACKGROUND */}
+        <div className='absolute inset-0 -z-10'>
+          <Image
+            src={governanceContent.background}
+            alt='Background'
+            fill
+            className='object-cover'
+          />
+        </div>
 
-      <div className='max-w-7xl mx-auto text-center'>
-        {/* TITLE */}
-        <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold text-white'>
-          {governanceContent.title}
-        </h2>
+        <div className='max-w-7xl mx-auto px-6 text-center'>
+          {/* TITLE */}
+          <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold text-white'>
+            {governanceContent.title}
+          </h2>
 
-        {/* SUBTITLE */}
-        <p className='mt-4 text-sm md:text-base text-purple-200 max-w-2xl mx-auto leading-relaxed'>
-          {governanceContent.subtitle}
-        </p>
+          {/* SUBTITLE */}
+          <p className='mt-4 text-sm md:text-base text-purple-200 max-w-2xl mx-auto leading-relaxed'>
+            {governanceContent.subtitle}
+          </p>
 
-        {/* CARDS GRID */}
-        <div className='mt-14 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center'>
-          {/* LEFT CARD */}
-          <div className='bg-purple-800/60 backdrop-blur-md rounded-2xl p-8 text-left h-full'>
-            <div className='flex items-center gap-3 mb-4'>
-              <Image src={governanceContent.cards[0].icon} alt='Icon' width={24} height={24} />
+          {/* CARDS GRID */}
+          <div className='mt-14 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center'>
+            {/* LEFT CARD */}
+            <div className='bg-purple-800/60 backdrop-blur-md rounded-2xl p-8 text-left h-full'>
+              <div className='flex items-center gap-3 mb-4'>
+                <Image src={governanceContent.cards[0].icon} alt='Icon' width={24} height={24} />
+              </div>
+
+              <h3 className='text-lg font-semibold text-white'>
+                {governanceContent.cards[0].title}
+              </h3>
+
+              <p className='mt-3 text-sm text-purple-200 leading-relaxed'>
+                {governanceContent.cards[0].description}
+              </p>
             </div>
 
-            <h3 className='text-lg font-semibold text-white'>{governanceContent.cards[0].title}</h3>
-
-            <p className='mt-3 text-sm text-purple-200 leading-relaxed'>
-              {governanceContent.cards[0].description}
-            </p>
-          </div>
-
-          {/* CENTER IMAGE CARD */}
-          <div className='relative h-[260px] md:h-[320px] lg:h-[360px]'>
-            <Image
-              src={governanceContent.cards[1].image}
-              alt='Center Illustration'
-              fill
-              className='object-contain rounded-2xl'
-              priority
-            />
-          </div>
-
-          {/* RIGHT CARD */}
-          <div className='bg-purple-800/60 backdrop-blur-md rounded-2xl p-8 text-left h-full'>
-            <div className='flex items-center gap-3 mb-4'>
-              <Image src={governanceContent.cards[2].icon} alt='Icon' width={24} height={24} />
+            {/* CENTER IMAGE CARD */}
+            <div className='relative h-[260px] md:h-[320px] lg:h-[360px]'>
+              <Image
+                src={governanceContent.cards[1].image}
+                alt='Center Illustration'
+                fill
+                className='object-contain rounded-2xl'
+                priority
+              />
             </div>
 
-            <h3 className='text-lg font-semibold text-white'>{governanceContent.cards[2].title}</h3>
+            {/* RIGHT CARD */}
+            <div className='bg-purple-800/60 backdrop-blur-md rounded-2xl p-8 text-left h-full'>
+              <div className='flex items-center gap-3 mb-4'>
+                <Image src={governanceContent.cards[2].icon} alt='Icon' width={24} height={24} />
+              </div>
 
-            <p className='mt-3 text-sm text-purple-200 leading-relaxed'>
-              {governanceContent.cards[2].description}
-            </p>
+              <h3 className='text-lg font-semibold text-white'>
+                {governanceContent.cards[2].title}
+              </h3>
+
+              <p className='mt-3 text-sm text-purple-200 leading-relaxed'>
+                {governanceContent.cards[2].description}
+              </p>
+            </div>
           </div>
         </div>
       </div>
