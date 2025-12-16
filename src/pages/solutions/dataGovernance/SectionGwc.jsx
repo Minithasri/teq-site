@@ -27,10 +27,9 @@ const governanceContent = {
   ],
   background: '/images/solutions/Second section BG.jpg',
 };
-
 export default function SectionGwc() {
   return (
-    <section className='relative m-10 py-20 -mt-10'>
+    <section className='relative w-full mx-4 px-4 py-24'>
       {/* BACKGROUND */}
       <div className='absolute inset-0 -z-10'>
         <Image
@@ -50,9 +49,9 @@ export default function SectionGwc() {
         </p>
 
         {/* CARDS */}
-        <div className='mt-20 grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch'>
+        <div className='mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch'>
           {/* LEFT CARD */}
-          <div className='bg-[#5B3B6E] backdrop-blur-md  rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
+          <div className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
             <div className='mb-6'>
               <Image src={governanceContent.cards[0].icon} alt='Icon' width={26} height={26} />
             </div>
@@ -66,17 +65,15 @@ export default function SectionGwc() {
             </p>
           </div>
 
-          {/* CENTER IMAGE CARD – FIXED */}
-          <div className='relative min-h-[340px] rounded-xl flex items-center justify-center'>
-            <div className='relative w-full rounded-xl h-full'>
-              <Image
-                src={governanceContent.cards[1].image}
-                alt='Governance Illustration'
-                fill
-                className='rounded-xl h-[600px]'
-                priority
-              />
-            </div>
+          {/* CENTER IMAGE CARD */}
+          <div className='relative rounded-xl overflow-hidden min-h-[340px]'>
+            <Image
+              src={governanceContent.cards[1].image}
+              alt='Governance Illustration'
+              fill
+              className='object-cover'
+              priority
+            />
           </div>
 
           {/* RIGHT CARD */}
@@ -85,7 +82,7 @@ export default function SectionGwc() {
               <Image src={governanceContent.cards[2].icon} alt='Icon' width={26} height={26} />
             </div>
 
-            <h3 className='text-[20px] font-semibold text-white mb-4'>
+            <h3 className='text-[20px] font-medium text-white mb-4'>
               {governanceContent.cards[2].title}
             </h3>
 
