@@ -48,54 +48,51 @@ export default function SectionGwc() {
 
         <div className='max-w-7xl mx-auto px-6 text-center'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold text-white'>
-            {governanceContent.title}
-          </h2>
+          <h2 className='text-2xl md:text-4xl text-white'>{governanceContent.title}</h2>
 
-          {/* SUBTITLE */}
-          <p className='mt-4 text-sm md:text-base text-purple-200 max-w-2xl mx-auto leading-relaxed'>
+          <p className='mt-4 text-purple-200 text-sm md:text-base max-w-2xl mx-auto leading-relaxed'>
             {governanceContent.subtitle}
           </p>
 
-          {/* CARDS GRID */}
-          <div className='mt-14 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center'>
+          {/* CARDS */}
+          <div className='mt-20 -mb-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch'>
             {/* LEFT CARD */}
-            <div className='bg-purple-800/60 backdrop-blur-md rounded-2xl p-8 text-left h-full'>
-              <div className='flex items-center gap-3 mb-4'>
-                <Image src={governanceContent.cards[0].icon} alt='Icon' width={24} height={24} />
+            <div className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
+              <div className='mb-6'>
+                <Image src={governanceContent.cards[0].icon} alt='Icon' width={26} height={26} />
               </div>
 
-              <h3 className='text-lg font-semibold text-white'>
+              <h3 className='text-[20px] font-medium text-white mb-4'>
                 {governanceContent.cards[0].title}
               </h3>
 
-              <p className='mt-3 text-sm text-purple-200 leading-relaxed'>
+              <p className='text-white/80 text-[14px] leading-relaxed'>
                 {governanceContent.cards[0].description}
               </p>
             </div>
 
             {/* CENTER IMAGE CARD */}
-            <div className='relative h-[260px] md:h-[320px] lg:h-[360px]'>
+            <div className='relative rounded-xl overflow-hidden min-h-[340px]'>
               <Image
                 src={governanceContent.cards[1].image}
-                alt='Center Illustration'
+                alt='Governance Illustration'
                 fill
-                className='object-contain rounded-2xl'
+                className='object-cover rounded-2xl'
                 priority
               />
             </div>
 
             {/* RIGHT CARD */}
-            <div className='bg-purple-800/60 backdrop-blur-md rounded-2xl p-8 text-left h-full'>
-              <div className='flex items-center gap-3 mb-4'>
-                <Image src={governanceContent.cards[2].icon} alt='Icon' width={24} height={24} />
+            <div className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
+              <div className='mb-6'>
+                <Image src={governanceContent.cards[2].icon} alt='Icon' width={26} height={26} />
               </div>
 
-              <h3 className='text-lg font-semibold text-white'>
+              <h3 className='text-[20px] font-medium text-white mb-4'>
                 {governanceContent.cards[2].title}
               </h3>
 
-              <p className='mt-3 text-sm text-purple-200 leading-relaxed'>
+              <p className='text-white/80 text-[14px] leading-relaxed'>
                 {governanceContent.cards[2].description}
               </p>
             </div>

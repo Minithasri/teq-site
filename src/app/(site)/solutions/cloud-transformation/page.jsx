@@ -1,12 +1,12 @@
 'use client';
 
-import Agent from '../../../../pages/solutions/dataGovernance/Agent';
+import Agent from '../../../../pages/solutions/cloudTrans/Agent';
 /* eslint-disable semi */
-import BannerSection from '../../../../pages/solutions/dataGovernance/BannerSection';
-import Cards from '../../../../pages/solutions/dataGovernance/Cards';
-import DataGovernanceSection from '../../../../pages/solutions/dataGovernance/DataGovernanceSection';
-import SectionGwc from '../../../../pages/solutions/dataGovernance/SectionGwc';
-import Technology from '../../../../pages/solutions/dataGovernance/Technology';
+import BannerSection from '../../../../pages/solutions/cloudTrans/BannerSection';
+import Cards from '../../../../pages/solutions/cloudTrans/Cards';
+import DataGovernanceSection from '../../../../pages/solutions/cloudTrans/DataGovernanceSection';
+import SectionGwc from '../../../../pages/solutions/cloudTrans/SectionGwc';
+import Technology from '../../../../pages/solutions/cloudTrans/Technology';
 
 function Solutionpage() {
   return (

@@ -1,119 +1,211 @@
-/* eslint-disable indent */
 'use client';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import Sensitivity from '../../../../public/images/solutions/datagoverance/Data Classification.png';
+
+import imgApplicationMigration from '../../../../public/images/solutions/cloudtransformation/imgi_4_Application Migration.png';
+import imgCompliance from '../../../../public/images/solutions/cloudtransformation/imgi_4_Compliance Management.png';
+import imgCustomAI from '../../../../public/images/solutions/cloudtransformation/imgi_4_Custom AI Solutions.png';
+import imgDataGovernance from '../../../../public/images/solutions/cloudtransformation/imgi_4_Data Governance.png';
+import imgDataMigration from '../../../../public/images/solutions/cloudtransformation/imgi_4_Data Migration.png';
+import imgDataAnalytics from '../../../../public/images/solutions/cloudtransformation/imgi_4_Data _ Analytics Solutions.png';
+import imgIntegrateHybrid from '../../../../public/images/solutions/cloudtransformation/imgi_4_Integrate Hybrid Solutions.png';
+import imgOperateOptimize from '../../../../public/images/solutions/cloudtransformation/imgi_4_Operate _ Optimize Dev Capabilities.png';
+import imgSetupSecurity from '../../../../public/images/solutions/cloudtransformation/imgi_4_Setup _ Optimize Security Operations.png';
+import imgTransformCloud from '../../../../public/images/solutions/cloudtransformation/imgi_4_Transform Cloud Operations.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// ---------------- CONTENT ----------------
+/* ---------------- DATA ---------------- */
+
 const tabs = [
-  'Data Classification & Sensitivity',
-  'Data Quality Management',
-  'Data Lineage',
-  'Data Access & Authorization',
-  'Data Privacy Compliance',
-  'Data Governance Policies',
-  'Metadata Management',
-  'Training & Awareness',
-  'Data Risk Management',
-  'Audit & Monitoring',
+  'Operate & Optimize Dev Capabilities',
+  'Transform Cloud Operations',
+  'Application Migration',
+  'Integrate Hybrid Solutions',
+  'Setup & Optimize Security Operations',
+  'Compliance Management',
+  'Data Governance',
+  'Data Migration',
+  'Data & Analytics Solutions',
+  'Custom AI Solutions',
 ];
 
 const cards = [
   {
-    badge: 'Customized Data Roadmaps',
-    title: 'Craft Your Customized Data Roadmap With GWC',
+    badge: 'Operate & Optimize Dev Capabilities',
+    title: 'Operate & Optimize Dev Capabilities',
     points: [
-      'Our customized data roadmap ensures strategic alignment with your business objectives.',
-      'Crafted with scalability in mind, the roadmap evolves alongside your business.',
+      'Apply DevOps best practices to custom solutions, integrations, and managed services.',
+      'Leverage cloud-based IDEs and collaboration tools for seamless development across teams and locations.',
     ],
-    image: Sensitivity,
+    image: imgOperateOptimize,
   },
   {
-    badge: 'Data Quality Management',
-    title: 'Ensure Reliable & Trusted Data',
+    badge: 'Transform Cloud Operations',
+    title: 'Transform Cloud Operations',
     points: [
-      'Detect and eliminate data inconsistencies early.',
-      'Enable analytics-ready datasets for decision-making.',
+      'Set up and implement service management, operations monitoring and talent development.',
+      'Regularly review and assess your cloud operations to identify areas for improvement and iterate on your strategy.',
     ],
-    image: Sensitivity,
+    image: imgTransformCloud,
   },
   {
-    badge: 'Data Lineage',
-    title: 'Gain End-to-End Data Visibility',
-    points: ['Track data from source to consumption.', 'Improve governance and impact analysis.'],
-    image: Sensitivity,
-  },
-  {
-    badge: 'Data Access & Authorization',
-    title: 'Secure Role-Based Data Access',
+    badge: 'Application Migration',
+    title: 'Application Migration',
     points: [
-      'Protect sensitive data with fine-grained controls.',
-      'Ensure authorized access across platforms.',
+      'Establish the essentials for cloud-native application development and modernizing legacy applications.',
+      'Utilize cloud platform services like AI/ML, data analytics, and APIs to unlock new functionalities and data-driven insights.',
     ],
-    image: Sensitivity,
+    image: imgApplicationMigration,
   },
   {
-    badge: 'Data Privacy Compliance',
-    title: 'Meet Global Privacy Standards',
+    badge: 'Integrate Hybrid Solutions',
+    title: 'Integrate Hybrid Solutions',
     points: [
-      'Support GDPR, HIPAA, and regional regulations.',
-      'Embed privacy into data workflows.',
+      'Harness the agility and reach of the cloud while preserving the security and control of on-premises systems.',
+      'Implement comprehensive disaster recovery and backup strategies that encompass both on-premises and cloud components.',
     ],
-    image: Sensitivity,
+    image: imgIntegrateHybrid,
   },
   {
-    badge: 'Data Governance Policies',
-    title: 'Define Governance Standards',
-    points: ['Create unified governance frameworks.', 'Maintain consistency enterprise-wide.'],
-    image: Sensitivity,
+    badge: 'Setup & Optimize Security Operations',
+    title: 'Setup & Optimize Security Operations',
+    points: [
+      'Security monitoring, investigations and response coupled with security posture with a zero trust model.',
+      'Integrate security into the DevOps pipeline and foster collaboration between security, development, and operations teams.',
+    ],
+    image: imgSetupSecurity,
   },
   {
-    badge: 'Metadata Management',
-    title: 'Improve Data Discoverability',
-    points: ['Add business context to data assets.', 'Empower self-service analytics.'],
-    image: Sensitivity,
+    badge: 'Compliance Management',
+    title: 'Compliance Management',
+    points: [
+      'Streamline compliance processes and optimize resource allocation with best-in-class tools and expertise.',
+      'Regularly review your compliance posture and adapt your strategies as regulations and cloud environments evolve.',
+    ],
+    image: imgCompliance,
   },
   {
-    badge: 'Training & Awareness',
-    title: 'Build a Data-Driven Culture',
-    points: ['Educate teams on governance best practices.', 'Increase adoption across teams.'],
-    image: Sensitivity,
+    badge: 'Data Governance',
+    title: 'Data Governance',
+    points: [
+      'Optimizing data utilization and aligning with business goals using data governance practices.',
+      'Implement a comprehensive data catalog across all environments to locate, understand, and track data lineage.',
+    ],
+    image: imgDataGovernance,
   },
   {
-    badge: 'Data Risk Management',
-    title: 'Identify & Mitigate Risks',
-    points: ['Detect vulnerabilities early.', 'Protect enterprise data assets.'],
-    image: Sensitivity,
+    badge: 'Data Migration',
+    title: 'Data Migration',
+    points: [
+      'Assess, develop, transform and modernize Enterprise Data Warehouses and Databases.',
+      'Leverage cloud tools for data enrichment and transformation to unlock greater value.',
+    ],
+    image: imgDataMigration,
   },
   {
-    badge: 'Audit & Monitoring',
-    title: 'Continuous Governance Monitoring',
-    points: ['Track policy adherence.', 'Ensure ongoing compliance.'],
-    image: Sensitivity,
+    badge: 'Data & Analytics Solutions',
+    title: 'Data & Analytics Solutions',
+    points: [
+      'Tailored to your needs, our solutions aim to make your organization data-aware and transform it into a data-driven one.',
+      'Implement cloud-based BI platforms for interactive dashboards and data exploration.',
+    ],
+    image: imgDataAnalytics,
+  },
+  {
+    badge: 'Custom AI Solutions',
+    title: 'Custom AI Solutions',
+    points: [
+      'Assess feasibility, build and train the model, and develop Machine Learning solutions.',
+      'Ensure smooth integration of your custom AI solution with existing IT infrastructure and applications.',
+    ],
+    image: imgCustomAI,
   },
 ];
 
-// ---------------- COMPONENT ----------------
+const borderColors = [
+  'border-purple-400',
+  'border-blue-400',
+  'border-indigo-400',
+  'border-violet-400',
+  'border-fuchsia-400',
+  'border-pink-400',
+  'border-rose-400',
+  'border-orange-400',
+  'border-amber-400',
+  'border-emerald-400',
+];
+
+/* ---------------- COMPONENT ---------------- */
+
 export default function DataGovernanceSection() {
   const sectionRef = useRef(null);
+  const cardRefs = useRef([]);
+  const scrollTriggerRef = useRef(null);
+  const currentIndexRef = useRef(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  /* ---------- CARD TRANSITION ---------- */
+  const animateToCard = (nextIndex, direction = 1) => {
+    if (nextIndex === currentIndexRef.current) return;
+
+    const prev = cardRefs.current[currentIndexRef.current];
+    const next = cardRefs.current[nextIndex];
+
+    setActiveIndex(nextIndex);
+
+    gsap.to(prev, {
+      opacity: 0,
+      scale: 0.97,
+      y: direction === 1 ? -20 : 20,
+      duration: 0.5,
+      ease: 'power2.inOut',
+      pointerEvents: 'none',
+    });
+
+    gsap.fromTo(
+      next,
+      { opacity: 0, scale: 0.97, y: direction === 1 ? 50 : -50 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        pointerEvents: 'auto',
+      }
+    );
+
+    currentIndexRef.current = nextIndex;
+  };
+
+  /* ---------- SCROLL ---------- */
   useEffect(() => {
+    if (!sectionRef.current) return;
+
     const ctx = gsap.context(() => {
-      ScrollTrigger.create({
+      cardRefs.current.forEach((card, i) => {
+        gsap.set(card, {
+          opacity: i === 0 ? 1 : 0,
+          scale: i === 0 ? 1 : 0.97,
+          y: 0,
+          pointerEvents: i === 0 ? 'auto' : 'none',
+        });
+      });
+
+      scrollTriggerRef.current = ScrollTrigger.create({
         trigger: sectionRef.current,
         start: 'top top',
-        end: `+=${cards.length * 100}%`,
+        end: `+=${cards.length * 120}vh`,
         pin: true,
-        scrub: 1,
+        scrub: false,
         onUpdate: self => {
-          const index = Math.min(cards.length - 1, Math.floor(self.progress * cards.length));
-          setActiveIndex(index);
+          const next = Math.min(cards.length - 1, Math.floor(self.progress * cards.length));
+          const dir = next > currentIndexRef.current ? 1 : -1;
+          animateToCard(next, dir);
         },
       });
     }, sectionRef);
@@ -121,62 +213,91 @@ export default function DataGovernanceSection() {
     return () => ctx.revert();
   }, []);
 
-  const card = cards[activeIndex];
+  /* ---------- TAB CLICK ---------- */
+  const onTabClick = index => {
+    const trigger = scrollTriggerRef.current;
+    if (!trigger) return;
+
+    const progress = index / cards.length;
+    trigger.scroll(trigger.start + progress * (trigger.end - trigger.start));
+  };
 
   return (
-    <section ref={sectionRef} className='w-full bg-white py-24'>
-      <div className='max-w-7xl mx-auto px-4'>
-        {/* TABS */}
-        <div className='flex flex-wrap justify-center gap-3 mb-16'>
-          {tabs.map((tab, idx) => (
+    <div ref={sectionRef} className='relative min-h-screen bg-white py-20'>
+      {/* TABS */}
+      {/* <div className="container mx-auto px-4 mb-12">
+  <div className="grid grid-cols-5 gap-4 max-w-6xl mx-auto">
+    {tabs.map((tab, i) => (
+      <button
+        key={i}
+        onClick={() => onTabClick(i)}
+        className={`flex items-center justify-center h-16 px-3 rounded-full border text-sm font-medium transition text-center text-ellipsis overflow-hidden whitespace-nowrap ${
+          i === activeIndex
+            ? 'bg-purple-100 border-purple-400 text-purple-700'
+            : 'bg-white border-gray-300 text-gray-700 hover:border-purple-300'
+        }`}
+      >
+        {tab}
+      </button>
+    ))}
+  </div>
+</div> */}
+      <div className='container mx-auto px-4 mb-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 ma  '>
+          {tabs.map((tab, i) => (
             <button
-              key={tab}
-              className={`px-5 py-2 rounded-full border text-sm transition
-                ${
-                  idx === activeIndex
-                    ? 'border-purple-600 text-purple-700 font-medium'
-                    : 'border-gray-300 text-gray-600'
-                }`}
+              key={i}
+              onClick={() => onTabClick(i)}
+              className={`flex items-center justify-center px-6 py-4 rounded-full border text-sm font-medium transition text-center
+          ${
+            i === activeIndex
+              ? 'bg-purple-100 border-purple-400 text-purple-700'
+              : 'bg-white border-gray-300 text-gray-700 hover:border-purple-300'
+          }`}
             >
-              {tab}
+              <span className='block text-center leading-snug break-words'>{tab}</span>
             </button>
           ))}
         </div>
+      </div>
 
-        {/* MAIN CONTAINER (EXACT SCREENSHOT STYLE) */}
-        <div className='border-2 border-yellow-400 rounded-3xl p-8 md:p-12'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
-            {/* LEFT */}
-            <div>
-              <span className='inline-flex items-center gap-2 mb-4 px-4 py-1 rounded-full border border-purple-400 text-purple-700 text-sm font-medium'>
-                ✦ {card.badge}
-              </span>
-
-              <h2 className='text-2xl md:text-3xl font-semibold text-gray-900'>{card.title}</h2>
-
-              <ul className='mt-6 space-y-4 text-gray-700'>
-                {card.points.map((point, i) => (
-                  <li key={i} className='flex gap-3'>
-                    <span className='text-purple-600 mt-1'>•</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
+      {/* CARDS */}
+      <div className='container mx-auto px-4'>
+        <div className='relative min-h-[600px]'>
+          {cards.map((card, i) => (
+            <div key={i} ref={el => (cardRefs.current[i] = el)} className='absolute inset-0 w-full'>
+              <div
+                className={`bg-white rounded-3xl border-2 ${borderColors[i]} shadow-xl p-8 min-h-[500px]`}
+              >
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+                  <div className='space-y-6'>
+                    <span className='inline-flex px-4 py-2 rounded-full border bg-purple-50 text-purple-700'>
+                      ✦ {card.badge}
+                    </span>
+                    <h2 className='text-4xl font-bold'>{card.title}</h2>
+                    <ul className='space-y-3'>
+                      {card.points.map((p, idx) => (
+                        <li key={idx} className='flex gap-2'>
+                          <span className='text-purple-600'>•</span>
+                          {p}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className='relative rounded-xl h-[400px]'>
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      className='object-contain rounded-2xl'
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-
-            {/* RIGHT IMAGE */}
-            <div className='relative w-full h-[240px] sm:h-[300px] md:h-[360px]'>
-              <Image
-                src={card.image}
-                alt={card.title}
-                fill
-                className='object-cover rounded-2xl'
-                priority
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -1,84 +1,73 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable quotes */
-import Image from 'next/image';
+import { FiArrowRight } from 'react-icons/fi';
 
-// Images
-import img1 from '../../../../public/images/solutions/Frame 1566662963.jpg';
-import img2 from '../../../../public/images/solutions/Frame 1566662964.jpg';
-import img3 from '../../../../public/images/solutions/Frame 1566662965.jpg';
-import img4 from '../../../../public/images/solutions/Frame 1566662966.jpg';
-
-// JSON-driven content
 const cardsData = [
   {
     id: 1,
-    title: 'From to',
-    image: img1,
-    content: [{ from: 'Data Deluge', to: 'Data Delight' }],
+    title: 'From',
+    items: ['Data to Insights', 'Insights to Actions'],
+    bgColor: 'bg-purple-700',
   },
   {
     id: 2,
-    title: 'Data Based Decision Confidence',
-    image: img2,
+    title: 'Not Just Graphs & Charts, But Storytelling Dashboards',
+    bgColor: 'bg-teal-700',
+    icon: '📊',
   },
   {
     id: 3,
-    title: 'Frictionless Collaboration with Business Data',
-    image: img3,
+    title: 'Data to Insights, Insights to Actions',
+    bgColor: 'bg-orange-500',
   },
   {
     id: 4,
-    title: 'Compliance Management',
-    image: img4,
+    title: 'Self-Service BI Enablement',
+    bgColor: 'bg-cyan-500',
   },
 ];
 
 export default function Cards() {
   return (
     <section className='w-full py-20 bg-white'>
-      <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center px-6'>
-        {/* LEFT – IMAGE CARDS */}
+      <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center px-4 md:px-6 lg:px-12 xl:px-24'>
+        {/* LEFT – CARD GRID */}
         <div className='grid grid-cols-2 gap-6'>
           {cardsData.map(card => (
-            <div key={card.id} className='relative rounded-2xl overflow-hidden h-[180px]'>
-              <Image src={card.image} alt={card.title} fill className='object-cover' />
-
-              <div className='absolute inset-0 p-5 flex flex-col justify-center text-white'>
-                <h3 className='text-lg font-semibold mb-3 leading-snug'>{card.title}</h3>
-
-                {card.content && (
-                  <div className='space-y-2 text-sm'>
-                    {card.content.map((item, idx) => (
-                      <div key={idx} className='flex items-center gap-2'>
-                        <span className='px-3 py-1 bg-white/20 rounded-full'>{item.from}</span>
-                        <span className='text-lg'>→</span>
-                        <span className='px-3 py-1 bg-white text-purple-700 rounded-full'>
-                          {item.to}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+            <div
+              key={card.id}
+              className={`${card.bgColor} rounded-3xl p-6 flex flex-col justify-center min-h-[180px] text-white`}
+            >
+              {card.icon && <div className='text-4xl mb-3'>{card.icon}</div>}
+              <h3 className='text-lg font-semibold leading-snug'>{card.title}</h3>
+              {card.items && (
+                <div className='mt-4 space-y-2'>
+                  {card.items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className='bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 text-sm'
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
 
         {/* RIGHT – CONTENT */}
         <div className='max-w-lg'>
-          <h2 className='text-4xl font-bold text-purple-700 mb-6'>
-            Why This Works Better with GWC
-          </h2>
+          <h2 className='text-4xl font-semibold text-purple-800 mb-6'>What GWC does?</h2>
 
-          <p className='text-gray-600 leading-relaxed mb-8'>
-            By collaborating with trusted data governance solution providers, our certified experts
-            offer a full spectrum of data governance services, including data classification, access
-            control, lineage tracking, quality assurance, and reporting.
+          <p className='text-gray-600 leading-relaxed text-md mb-8'>
+            Leveraging our end-to-end BI and analytics solutions, we uncover insights into how
+            historical and current data can shape the future of your organization.
           </p>
 
-          <button className='inline-flex items-center gap-3 px-7 py-3 bg-purple-600 text-white rounded-full shadow-md hover:bg-purple-700 transition'>
+          <button className='inline-flex items-center gap-3 px-7 py-3 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white rounded-full shadow-md hover:bg-purple-700 transition'>
             Contact Us
-            <span className='text-lg'>→</span>
+            <FiArrowRight className='w-5 h-5' />
           </button>
         </div>
       </div>

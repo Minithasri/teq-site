@@ -1,119 +1,212 @@
-/* eslint-disable indent */
 'use client';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import Sensitivity from '../../../../public/images/solutions/datagoverance/Data Classification.png';
+
+import imgAssessmentPlanning from '../../../../public/images/solutions/bimigration/Assessment_and_Planning.png';
+import imgDataInventory from '../../../../public/images/solutions/bimigration/Data_Inventry_and_Analysis.png';
+import imgDataMigration from '../../../../public/images/solutions/bimigration/Data_Migration.png';
+import imgDeployment from '../../../../public/images/solutions/bimigration/Deployment.png';
+import imgIntegration from '../../../../public/images/solutions/bimigration/Integration_with_Existing_Systems.png';
+import imgPostMigration from '../../../../public/images/solutions/bimigration/Post-Migration_Optimization.png';
+import imgReportDashboard from '../../../../public/images/solutions/bimigration/Report_and_Dashboard_Migration.png';
+import imgSecurity from '../../../../public/images/solutions/bimigration/Security_and_Access_Control.png';
+import imgTesting from '../../../../public/images/solutions/bimigration/Testing_and_Quality_Assurance.png';
+import imgTraining from '../../../../public/images/solutions/bimigration/Training_and_Change_Management.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// ---------------- CONTENT ----------------
+/* ---------------- DATA ---------------- */
+
 const tabs = [
-  'Data Classification & Sensitivity',
-  'Data Quality Management',
-  'Data Lineage',
-  'Data Access & Authorization',
-  'Data Privacy Compliance',
-  'Data Governance Policies',
-  'Metadata Management',
-  'Training & Awareness',
-  'Data Risk Management',
-  'Audit & Monitoring',
+  'Assessment & Planning',
+  'Data Inventory & Analysis',
+  'Data Migration',
+  'Report & Dashboard Migration',
+  'Integration with Existing Systems',
+  'Security & Access Control',
+  'Training & Change Management',
+  'Testing & Quality Assurance',
+  'Deployment',
+  'Post-Migration Optimization',
 ];
 
 const cards = [
   {
-    badge: 'Customized Data Roadmaps',
-    title: 'Craft Your Customized Data Roadmap With GWC',
+    badge: 'Assessment & Planning',
+    title: 'A Baseline for Understanding Current Challenges and Opportunities',
     points: [
-      'Our customized data roadmap ensures strategic alignment with your business objectives.',
-      'Crafted with scalability in mind, the roadmap evolves alongside your business.',
+      'Conduct a comprehensive assessment of the existing BI infrastructure.',
+      'Align BI migration goals with organizational objectives.',
     ],
-    image: Sensitivity,
+    image: imgAssessmentPlanning,
   },
   {
-    badge: 'Data Quality Management',
-    title: 'Ensure Reliable & Trusted Data',
+    badge: 'Data Inventory & Analysis',
+    title:
+      'Ensure that the Migrated BI Solution is Built on Accurate, Reliable & Consistent Information',
     points: [
-      'Detect and eliminate data inconsistencies early.',
-      'Enable analytics-ready datasets for decision-making.',
+      'Cleanse and transform data as needed.',
+      'Identify dependencies between data sources, reports, and dashboards.',
     ],
-    image: Sensitivity,
+    image: imgDataInventory,
   },
   {
-    badge: 'Data Lineage',
-    title: 'Gain End-to-End Data Visibility',
-    points: ['Track data from source to consumption.', 'Improve governance and impact analysis.'],
-    image: Sensitivity,
-  },
-  {
-    badge: 'Data Access & Authorization',
-    title: 'Secure Role-Based Data Access',
+    badge: 'Data Migration',
+    title: 'Seamless & Efficient Transfer of Data to the New BI Platform',
     points: [
-      'Protect sensitive data with fine-grained controls.',
-      'Ensure authorized access across platforms.',
+      'Implement an incremental migration approach.',
+      'Monitor the data migration process in real-time and validate the integrity of transferred data.',
     ],
-    image: Sensitivity,
+    image: imgDataMigration,
   },
   {
-    badge: 'Data Privacy Compliance',
-    title: 'Meet Global Privacy Standards',
+    badge: 'Report & Dashboard Migration',
+    title: 'Prioritize Migration Efforts',
     points: [
-      'Support GDPR, HIPAA, and regional regulations.',
-      'Embed privacy into data workflows.',
+      'Optimize visualizations, layouts, and interactions.',
+      'Gather feedback from stakeholders.',
     ],
-    image: Sensitivity,
+    image: imgReportDashboard,
   },
   {
-    badge: 'Data Governance Policies',
-    title: 'Define Governance Standards',
-    points: ['Create unified governance frameworks.', 'Maintain consistency enterprise-wide.'],
-    image: Sensitivity,
+    badge: 'Integration with Existing Systems',
+    title: 'Seamless Data Flow & Interoperability',
+    points: [
+      'Integrate the new BI solution with existing systems, databases, and applications.',
+      "Ensure a clean transition and minimize redundancy in the organization's IT landscape.",
+    ],
+    image: imgIntegration,
   },
   {
-    badge: 'Metadata Management',
-    title: 'Improve Data Discoverability',
-    points: ['Add business context to data assets.', 'Empower self-service analytics.'],
-    image: Sensitivity,
+    badge: 'Security & Access Control',
+    title: 'Address Any Aecurity Gaps & Maintain a Robust Security Posture',
+    points: [
+      'Define and manage user access rights based on roles and responsibilities.',
+      'Apply encryption to sensitive data during transmission and storage.',
+    ],
+    image: imgSecurity,
   },
   {
-    badge: 'Training & Awareness',
-    title: 'Build a Data-Driven Culture',
-    points: ['Educate teams on governance best practices.', 'Increase adoption across teams.'],
-    image: Sensitivity,
+    badge: 'Training & Change Management',
+    title: 'Leverage the Full Potential of the Modernized Solution',
+    points: [
+      'Develop and deliver training programs to educate users.',
+      'Implement a communication plan to inform stakeholders about the upcoming changes.',
+    ],
+    image: imgTraining,
   },
   {
-    badge: 'Data Risk Management',
-    title: 'Identify & Mitigate Risks',
-    points: ['Detect vulnerabilities early.', 'Protect enterprise data assets.'],
-    image: Sensitivity,
+    badge: 'Testing & Quality Assurance',
+    title: 'Identify & Address Potential Issues',
+    points: [
+      'Develop a testing strategy that covers data integrity, functionality, performance, and security.',
+      'Optimize performance based on testing results to ensure a seamless user experience.',
+    ],
+    image: imgTesting,
   },
   {
-    badge: 'Audit & Monitoring',
-    title: 'Continuous Governance Monitoring',
-    points: ['Track policy adherence.', 'Ensure ongoing compliance.'],
-    image: Sensitivity,
+    badge: 'Deployment',
+    title: 'Phased Deployment Approach to Minimize Disruptions',
+    points: [
+      'Provide adequate support during the go-live phase.',
+      'Establish a support mechanism to assist users with the transition.',
+    ],
+    image: imgDeployment,
+  },
+  {
+    badge: 'Post-Migration Optimization',
+    title: 'Identify & Address Any Performance Bottlenecks',
+    points: [
+      'Continuously monitor the performance of the new BI platform in the post-migration phase.',
+      'Collect ongoing feedback from users and stakeholders.',
+    ],
+    image: imgPostMigration,
   },
 ];
 
-// ---------------- COMPONENT ----------------
+const borderColors = [
+  'border-purple-400',
+  'border-blue-400',
+  'border-indigo-400',
+  'border-violet-400',
+  'border-fuchsia-400',
+  'border-pink-400',
+  'border-rose-400',
+  'border-orange-400',
+  'border-amber-400',
+  'border-emerald-400',
+];
+
+/* ---------------- COMPONENT ---------------- */
+
 export default function DataGovernanceSection() {
   const sectionRef = useRef(null);
+  const cardRefs = useRef([]);
+  const scrollTriggerRef = useRef(null);
+  const currentIndexRef = useRef(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  /* ---------- CARD TRANSITION ---------- */
+  const animateToCard = (nextIndex, direction = 1) => {
+    if (nextIndex === currentIndexRef.current) return;
+
+    const prev = cardRefs.current[currentIndexRef.current];
+    const next = cardRefs.current[nextIndex];
+
+    setActiveIndex(nextIndex);
+
+    gsap.to(prev, {
+      opacity: 0,
+      scale: 0.97,
+      y: direction === 1 ? -20 : 20,
+      duration: 0.5,
+      ease: 'power2.inOut',
+      pointerEvents: 'none',
+    });
+
+    gsap.fromTo(
+      next,
+      { opacity: 0, scale: 0.97, y: direction === 1 ? 50 : -50 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        pointerEvents: 'auto',
+      }
+    );
+
+    currentIndexRef.current = nextIndex;
+  };
+
+  /* ---------- SCROLL ---------- */
   useEffect(() => {
+    if (!sectionRef.current) return;
+
     const ctx = gsap.context(() => {
-      ScrollTrigger.create({
+      cardRefs.current.forEach((card, i) => {
+        gsap.set(card, {
+          opacity: i === 0 ? 1 : 0,
+          scale: i === 0 ? 1 : 0.97,
+          y: 0,
+          pointerEvents: i === 0 ? 'auto' : 'none',
+        });
+      });
+
+      scrollTriggerRef.current = ScrollTrigger.create({
         trigger: sectionRef.current,
         start: 'top top',
-        end: `+=${cards.length * 100}%`,
+        end: `+=${cards.length * 120}vh`,
         pin: true,
-        scrub: 1,
+        scrub: false,
         onUpdate: self => {
-          const index = Math.min(cards.length - 1, Math.floor(self.progress * cards.length));
-          setActiveIndex(index);
+          const next = Math.min(cards.length - 1, Math.floor(self.progress * cards.length));
+          const dir = next > currentIndexRef.current ? 1 : -1;
+          animateToCard(next, dir);
         },
       });
     }, sectionRef);
@@ -121,62 +214,91 @@ export default function DataGovernanceSection() {
     return () => ctx.revert();
   }, []);
 
-  const card = cards[activeIndex];
+  /* ---------- TAB CLICK ---------- */
+  const onTabClick = index => {
+    const trigger = scrollTriggerRef.current;
+    if (!trigger) return;
+
+    const progress = index / cards.length;
+    trigger.scroll(trigger.start + progress * (trigger.end - trigger.start));
+  };
 
   return (
-    <section ref={sectionRef} className='w-full bg-white py-24'>
-      <div className='max-w-7xl mx-auto px-4'>
-        {/* TABS */}
-        <div className='flex flex-wrap justify-center gap-3 mb-16'>
-          {tabs.map((tab, idx) => (
+    <div ref={sectionRef} className='relative min-h-screen bg-white py-20'>
+      {/* TABS */}
+      {/* <div className="container mx-auto px-4 mb-12">
+  <div className="grid grid-cols-5 gap-4 max-w-6xl mx-auto">
+    {tabs.map((tab, i) => (
+      <button
+        key={i}
+        onClick={() => onTabClick(i)}
+        className={`flex items-center justify-center h-16 px-3 rounded-full border text-sm font-medium transition text-center text-ellipsis overflow-hidden whitespace-nowrap ${
+          i === activeIndex
+            ? 'bg-purple-100 border-purple-400 text-purple-700'
+            : 'bg-white border-gray-300 text-gray-700 hover:border-purple-300'
+        }`}
+      >
+        {tab}
+      </button>
+    ))}
+  </div>
+</div> */}
+      <div className='container mx-auto px-4 mb-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 ma  '>
+          {tabs.map((tab, i) => (
             <button
-              key={tab}
-              className={`px-5 py-2 rounded-full border text-sm transition
-                ${
-                  idx === activeIndex
-                    ? 'border-purple-600 text-purple-700 font-medium'
-                    : 'border-gray-300 text-gray-600'
-                }`}
+              key={i}
+              onClick={() => onTabClick(i)}
+              className={`flex items-center justify-center px-6 py-4 rounded-full border text-sm font-medium transition text-center
+          ${
+            i === activeIndex
+              ? 'bg-purple-100 border-purple-400 text-purple-700'
+              : 'bg-white border-gray-300 text-gray-700 hover:border-purple-300'
+          }`}
             >
-              {tab}
+              <span className='block text-center leading-snug break-words'>{tab}</span>
             </button>
           ))}
         </div>
+      </div>
 
-        {/* MAIN CONTAINER (EXACT SCREENSHOT STYLE) */}
-        <div className='border-2 border-yellow-400 rounded-3xl p-8 md:p-12'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
-            {/* LEFT */}
-            <div>
-              <span className='inline-flex items-center gap-2 mb-4 px-4 py-1 rounded-full border border-purple-400 text-purple-700 text-sm font-medium'>
-                ✦ {card.badge}
-              </span>
-
-              <h2 className='text-2xl md:text-3xl font-semibold text-gray-900'>{card.title}</h2>
-
-              <ul className='mt-6 space-y-4 text-gray-700'>
-                {card.points.map((point, i) => (
-                  <li key={i} className='flex gap-3'>
-                    <span className='text-purple-600 mt-1'>•</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
+      {/* CARDS */}
+      <div className='container mx-auto px-4'>
+        <div className='relative min-h-[600px]'>
+          {cards.map((card, i) => (
+            <div key={i} ref={el => (cardRefs.current[i] = el)} className='absolute inset-0 w-full'>
+              <div
+                className={`bg-white rounded-3xl border-2 ${borderColors[i]} shadow-xl p-8 min-h-[500px]`}
+              >
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+                  <div className='space-y-6'>
+                    <span className='inline-flex px-4 py-2 rounded-full border bg-purple-50 text-purple-700'>
+                      ✦ {card.badge}
+                    </span>
+                    <h2 className='text-4xl font-bold'>{card.title}</h2>
+                    <ul className='space-y-3'>
+                      {card.points.map((p, idx) => (
+                        <li key={idx} className='flex gap-2'>
+                          <span className='text-purple-600'>•</span>
+                          {p}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className='relative rounded-xl h-[400px]'>
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      className='object-contain rounded-2xl'
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-
-            {/* RIGHT IMAGE */}
-            <div className='relative w-full h-[240px] sm:h-[300px] md:h-[360px]'>
-              <Image
-                src={card.image}
-                alt={card.title}
-                fill
-                className='object-cover rounded-2xl'
-                priority
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

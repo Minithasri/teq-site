@@ -1,12 +1,12 @@
 'use client';
 
-import Agent from '../../../../pages/solutions/dataGovernance/Agent';
+import Agent from '../../../../pages/solutions/BIAnalytics/Agent';
 /* eslint-disable semi */
-import BannerSection from '../../../../pages/solutions/dataGovernance/BannerSection';
-import Cards from '../../../../pages/solutions/dataGovernance/Cards';
-import DataGovernanceSection from '../../../../pages/solutions/dataGovernance/DataGovernanceSection';
-import SectionGwc from '../../../../pages/solutions/dataGovernance/SectionGwc';
-import Technology from '../../../../pages/solutions/dataGovernance/Technology';
+import BannerSection from '../../../../pages/solutions/BIAnalytics/BannerSection';
+import Cards from '../../../../pages/solutions/BIAnalytics/Cards';
+import DataGovernanceSection from '../../../../pages/solutions/BIAnalytics/DataGovernanceSection';
+import SectionGwc from '../../../../pages/solutions/BIAnalytics/SectionGwc';
+import Technology from '../../../../pages/solutions/BIAnalytics/Technology';
 
 function Solutionpage() {
   return (

@@ -1,16 +1,17 @@
 'use client';
 
 import Image from 'next/image';
-// governanceContent.ts
+
 const governanceContent = {
-  title: 'The GWC Approach to Data Governance Excellence',
-  subtitle: 'Enhanced data fabric architecture empowers you to build robust data governance.',
+  title: 'Transform Your BI Ecosystem with GWC',
+  subtitle:
+    'GWC seamlessly aligns your business intelligence with your data strategy through a smooth and efficient migration journey.',
   cards: [
     {
       id: 'left',
-      title: 'Smarter Compliance Management',
+      title: 'Seamless BI Migration by GWC',
       description:
-        'Effortlessly navigate regulations with an audit-ready data fabric that ensures ethical, responsible, and transparent data handling.',
+        'GWC expertly manages the end-to-end migration of your BI assets, ensuring a secure, smooth, and fully controlled transition with minimal disruption to your day-to-day business operations.',
       icon: '/images/solutions/icon.png',
     },
     {
@@ -19,9 +20,9 @@ const governanceContent = {
     },
     {
       id: 'right',
-      title: 'Strengthened Customer Trust',
+      title: 'Optimized Performance with GWC',
       description:
-        'Enhance customer confidence by prioritizing data privacy and responsible usage through strong, secure governance practices.',
+        'GWC ensures your new BI environment delivers maximum efficiency, reliability, and speed, empowering your team with actionable insights and a truly high-performing analytics platform.',
       icon: '/images/solutions/icon.png',
     },
   ],
@@ -30,60 +31,68 @@ const governanceContent = {
 
 export default function SectionGwc() {
   return (
-    <section className='relative w-full px-4 py-16'>
-      {/* BACKGROUND */}
-      <div className='absolute inset-0 -z-10'>
-        <Image
-          src={governanceContent.background}
-          alt='Background'
-          fill
-          className='object-cover rounded-3xl'
-        />
-      </div>
+    <section className='relative w-full px-4 -mt-32'>
+      <div className='relative w-full max-w-[calc(100%-2rem)] mx-auto rounded-[32px] overflow-hidden py-16 z-10'>
+        {/* BACKGROUND */}
+        <div className='absolute inset-0 -z-10'>
+          <Image
+            src={governanceContent.background}
+            alt='Background'
+            fill
+            className='object-cover'
+          />
+        </div>
 
-      <div className='max-w-7xl mx-auto text-center'>
-        {/* TITLE */}
-        <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold text-white'>
-          {governanceContent.title}
-        </h2>
+        <div className='max-w-7xl mx-auto px-6 text-center'>
+          {/* TITLE */}
+          <h2 className='text-2xl md:text-4xl text-white'>{governanceContent.title}</h2>
 
-        <p className='mt-4 text-sm md:text-base text-purple-200 max-w-2xl mx-auto'>
-          {governanceContent.subtitle}
-        </p>
+          <p className='mt-4 text-purple-200 text-sm md:text-base max-w-2xl mx-auto leading-relaxed'>
+            {governanceContent.subtitle}
+          </p>
 
-        {/* CARDS */}
-        <div className='mt-14 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center'>
-          {/* LEFT CARD */}
-          <div className='bg-purple-800/60 backdrop-blur-md rounded-2xl p-8 text-left h-full'>
-            <div className='flex items-center gap-3 mb-4'>
-              <Image src={governanceContent.cards[0].icon} alt='Icon' width={24} height={24} />
+          {/* CARDS */}
+          <div className='mt-20 -mb-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch'>
+            {/* LEFT CARD */}
+            <div className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
+              <div className='mb-6'>
+                <Image src={governanceContent.cards[0].icon} alt='Icon' width={26} height={26} />
+              </div>
+
+              <h3 className='text-[20px] font-medium text-white mb-4'>
+                {governanceContent.cards[0].title}
+              </h3>
+
+              <p className='text-white/80 text-[14px] leading-relaxed'>
+                {governanceContent.cards[0].description}
+              </p>
             </div>
-            <h3 className='text-lg font-semibold text-white'>{governanceContent.cards[0].title}</h3>
-            <p className='mt-3 text-sm text-purple-200 leading-relaxed'>
-              {governanceContent.cards[0].description}
-            </p>
-          </div>
 
-          {/* CENTER IMAGE */}
-          <div className='relative h-[260px] md:h-[320px] lg:h-[360px]'>
-            <Image
-              src={governanceContent.cards[1].image}
-              alt='Governance Illustration'
-              fill
-              className='object-contain'
-              priority
-            />
-          </div>
-
-          {/* RIGHT CARD */}
-          <div className='bg-purple-800/60 backdrop-blur-md rounded-2xl p-8 text-left h-full'>
-            <div className='flex items-center gap-3 mb-4'>
-              <Image src={governanceContent.cards[2].icon} alt='Icon' width={24} height={24} />
+            {/* CENTER IMAGE CARD */}
+            <div className='relative rounded-xl overflow-hidden min-h-[340px]'>
+              <Image
+                src={governanceContent.cards[1].image}
+                alt='Governance Illustration'
+                fill
+                className='object-cover rounded-2xl'
+                priority
+              />
             </div>
-            <h3 className='text-lg font-semibold text-white'>{governanceContent.cards[2].title}</h3>
-            <p className='mt-3 text-sm text-purple-200 leading-relaxed'>
-              {governanceContent.cards[2].description}
-            </p>
+
+            {/* RIGHT CARD */}
+            <div className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
+              <div className='mb-6'>
+                <Image src={governanceContent.cards[2].icon} alt='Icon' width={26} height={26} />
+              </div>
+
+              <h3 className='text-[20px] font-medium text-white mb-4'>
+                {governanceContent.cards[2].title}
+              </h3>
+
+              <p className='text-white/80 text-[14px] leading-relaxed'>
+                {governanceContent.cards[2].description}
+              </p>
+            </div>
           </div>
         </div>
       </div>
