@@ -61,7 +61,7 @@ export default function BannerSection() {
           {/* LEFT CONTENT */}
           <div className='space-y-6'>
             {/* Title */}
-            <h1 className='text-[32px] md:text-[40px] lg:text-[34px] font-semibold text-[#3F3F3F] leading-[1.15]'>
+            <h1 className='mt-24 text-[32px] md:text-[40px] lg:text-[34px] font-semibold text-[#3F3F3F] leading-[1.15]'>
               {bannerContent.title}
             </h1>
 

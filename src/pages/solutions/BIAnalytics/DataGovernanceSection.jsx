@@ -223,7 +223,7 @@ export default function DataGovernanceSection() {
   };
 
   return (
-    <div ref={sectionRef} className='relative min-h-screen bg-white py-20'>
+    <div ref={sectionRef} className='relative min-h-screen bg-white pt-20 pb-12'>
       {/* TABS */}
       {/* <div className="container mx-auto px-4 mb-12">
   <div className="grid grid-cols-5 gap-4 max-w-6xl mx-auto">
@@ -242,13 +242,13 @@ export default function DataGovernanceSection() {
     ))}
   </div>
 </div> */}
-      <div className='container mx-auto px-4 mb-12'>
+      <div className='container mx-auto px-4 mb-8'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 ma  '>
           {tabs.map((tab, i) => (
             <button
               key={i}
               onClick={() => onTabClick(i)}
-              className={`flex items-center justify-center px-6 py-4 rounded-full border text-sm font-medium transition text-center
+              className={`flex items-center justify-center px-4 py-2.5 rounded-full border text-xs font-medium transition text-center
           ${
             i === activeIndex
               ? 'bg-purple-100 border-purple-400 text-purple-700'
@@ -263,33 +263,33 @@ export default function DataGovernanceSection() {
 
       {/* CARDS */}
       <div className='container mx-auto px-4'>
-        <div className='relative min-h-[600px]'>
+        <div className='relative min-h-[500px]'>
           {cards.map((card, i) => (
             <div key={i} ref={el => (cardRefs.current[i] = el)} className='absolute inset-0 w-full'>
               <div
-                className={`bg-white rounded-3xl border-2 ${borderColors[i]} shadow-xl p-8 min-h-[500px]`}
+                className={`bg-white rounded-3xl border-2 ${borderColors[i]} shadow-xl p-6 md:p-8`}
               >
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
-                  <div className='space-y-6'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-start'>
+                  <div className='space-y-4'>
                     <span className='inline-flex px-4 py-2 rounded-full border bg-purple-50 text-purple-700'>
                       ✦ {card.badge}
                     </span>
-                    <h2 className='text-4xl font-bold'>{card.title}</h2>
-                    <ul className='space-y-3'>
+                    <h2 className='text-2xl md:text-3xl font-bold'>{card.title}</h2>
+                    <ul className='space-y-2.5'>
                       {card.points.map((p, idx) => (
-                        <li key={idx} className='flex gap-2'>
+                        <li key={idx} className='flex gap-2 text-sm leading-relaxed'>
                           <span className='text-purple-600'>•</span>
-                          {p}
+                          <span>{p}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div className='relative rounded-xl h-[400px]'>
+                  <div className='relative rounded-3xl h-[250px] lg:h-[280px]'>
                     <Image
                       src={card.image}
                       alt={card.title}
                       fill
-                      className='object-contain rounded-2xl'
+                      className='object-contain rounded-3xl'
                     />
                   </div>
                 </div>
