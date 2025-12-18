@@ -1,59 +1,21 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable quotes */
 import { FiArrowRight } from 'react-icons/fi';
-
-const cardsData = [
-  {
-    id: 1,
-    title: 'From to',
-    items: ['Data Chaos', 'Data Clarity'],
-    bgColor: 'bg-purple-700',
-  },
-  {
-    id: 2,
-    title: 'Confident Data Driven Decisions',
-    bgColor: 'bg-teal-700',
-    icon: '📊',
-  },
-  {
-    id: 3,
-    title: 'Seamless Business Data Collaboration',
-    bgColor: 'bg-orange-500',
-  },
-  {
-    id: 4,
-    title: 'Smart Compliance Management',
-    bgColor: 'bg-cyan-500',
-  },
-];
+import Image from 'next/image';
 
 export default function Cards() {
   return (
     <section className='w-full py-20 bg-white'>
       <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center px-4 md:px-6 lg:px-12 xl:px-24'>
-        {/* LEFT – CARD GRID */}
-        <div className='grid grid-cols-2 gap-6'>
-          {cardsData.map(card => (
-            <div
-              key={card.id}
-              className={`${card.bgColor} rounded-3xl p-6 flex flex-col justify-center min-h-[180px] text-white`}
-            >
-              {card.icon && <div className='text-4xl mb-3'>{card.icon}</div>}
-              <h3 className='text-lg font-semibold leading-snug'>{card.title}</h3>
-              {card.items && (
-                <div className='mt-4 space-y-2'>
-                  {card.items.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className='bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 text-sm'
-                    >
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+        {/* LEFT – SINGLE IMAGE */}
+        <div className='relative w-full h-[400px] rounded-3xl overflow-hidden'>
+          <Image
+            src='/images/solutions/cloudtransformation/cloud_transform_image.png'
+            alt='Data Governance'
+            fill
+            className='object-cover'
+            priority
+          />
         </div>
 
         {/* RIGHT – CONTENT */}
