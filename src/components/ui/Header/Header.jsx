@@ -104,6 +104,8 @@ export default function Header({
                         href={link.href}
                         className='block text-[15px] font-medium text-gray-700 hover:opacity-70 transition-opacity'
                         onClick={handleLinkClick}
+                        target='_blank'
+                        rel='noopener noreferrer'
                       >
                         {link.label}
                       </Link>
@@ -277,6 +279,8 @@ export default function Header({
                             href={child.href}
                             className='block py-1.5 text-[13px] font-medium text-gray-700 whitespace-nowrap'
                             onClick={handleLinkClick}
+                            target='_blank'
+                            rel='noopener noreferrer'
                           >
                             {child.label}
                           </Link>

@@ -1,14 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
-import {
-  RiBookOpenLine,
-  RiDatabase2Line,
-  RiGitBranchLine,
-  RiShieldCheckLine,
-} from 'react-icons/ri';
-import img1 from '../../../../public/images/solutions/Icons.png';
+import img1 from '../../../../public/images/solutions/Icon.svg';
 
 const cards = [
   {
@@ -16,107 +11,150 @@ const cards = [
     description:
       'Prevent breaking changes & resolve data issues quickly with end-to-end Data Lineage implementation.',
     footer: 'Accelerate Impact & Root cause Analysis',
-    icon: <RiGitBranchLine className='w-6 h-6 text-orange-500' />,
+    icon: '/images/solutions/datagoverance/logo1.svg',
   },
   {
     title: 'Business Glossary',
     description:
       'We enable regulatory compliance and responsible data management by building transparency and a strong data-driven culture.',
     footer: 'Your Dictionary for Data Assets',
-    icon: <RiBookOpenLine className='w-6 h-6 text-orange-500' />,
+    icon: '/images/solutions/datagoverance/logo2.svg',
   },
   {
     title: 'Active Meta Data',
     description:
       'Our API-driven governance tools seamlessly connect with all data platforms to enable unified discovery, analysis, and collaboration.',
     footer: 'Dynamic map of your data landscape',
-    icon: <RiDatabase2Line className='w-6 h-6 text-orange-500' />,
+    icon: '/images/solutions/datagoverance/logo3.svg',
   },
   {
     title: 'Intelligent Automation',
     description:
       'Stop wasting hours on manual metadata entry. Automate enrichment across your data landscape and reclaim your day.',
     footer: 'Boosting Efficiency and Control',
-    icon: <RiShieldCheckLine className='w-6 h-6 text-orange-500' />,
+    icon: '/images/solutions/datagoverance/logo4.svg',
   },
 ];
 
 const Technology = () => {
   return (
-    <div className='relative overflow-hidden w-full'>
+    <section
+      aria-labelledby='data-governance-expertise'
+      className='relative overflow-hidden w-full'
+    >
       <div
-        className='bg-[linear-gradient(135deg,_#7030B14D_0%,_#CAB9F64D_25%,_#E6F2F64D_50%,_#DDA16C4D_65%,_#FFA5814D_80%,_#E5AA664D_100%)]'
-        style={{
-          backgroundColor: '#F9EAE1',
-          clipPath: 'none',
-        }}
+        className='bg-[linear-gradient(135deg,_#7030B14D_0%,_#CAB9F64D_25%,_#E6F2F64D_50%,_#DDA16C4D_65%,_FFA5814D_80%,_#E5AA664D_100%)]'
+        style={{ backgroundColor: '#F9EAE1', clipPath: 'none' }}
       >
         <div className='w-full px-4 md:px-6 lg:px-12 xl:px-24 pt-20 pb-16'>
           {/* Header */}
-          <div className='flex items-center mb-16 gap-6'>
-            {/* LEFT ICON */}
+          <header className='flex items-center mb-16 gap-2'>
+            {/* Left Icon (decorative) */}
             <div className='w-12 h-12 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
-              <Image src={img1} alt='Data Governance Expertise' width={30} height={30} />
+              <Image src={img1} alt='' aria-hidden width={25} height={25} />
             </div>
 
-            {/* DOTTED CONNECTOR LINE */}
-            <div className='flex-1 h-[2px] bg-[linear-gradient(to_right,rgba(107,114,128,0.45)_12%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x' />
+            {/* Connector */}
+            <div
+              aria-hidden
+              className='flex-1 h-[2px] bg-[linear-gradient(to_right,#9CA3AF_50%,rgba(0,0,0,0)_0%)] bg-[length:6px_2px] bg-repeat-x'
+            />
 
-            {/* RIGHT CTA */}
-            <button className='px-4 py-2 rounded-full border border-purple-400 text-purple-700 font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'>
+            {/* CTA */}
+            <Link
+              href='/contact'
+              className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
+              style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
+            >
               Talk to Our Experts
-              <FiArrowRight className='w-4 h-4' />
-            </button>
-          </div>
+              <FiArrowRight className='w-4 h-4' aria-hidden />
+            </Link>
+          </header>
 
-          {/* Title + Subtitle BELOW */}
-          <div className='flex flex-col mb-8 md:flex-row justify-between items-start md:items-center gap-6'>
-            <h2 className='text-3xl md:text-4xl  font-medium text-gray-800'>
+          {/* Title + Subtitle */}
+          <div className='flex flex-col mb-12 md:flex-row justify-between items-start md:items-center gap-6'>
+            <h2
+              id='data-governance-expertise'
+              className='text-3xl md:text-4xl font-medium text-gray-800'
+            >
               Data Governance Expertise
             </h2>
 
-            <p className='text-sm text-gray-500 mr-2 text-right'>
+            <p className='text-[16px] text-gray-500 mr-2 text-right'>
               Everything you need to build, deploy, and scale AI agents
             </p>
           </div>
 
-          {/* Cards Grid */}
+          {/* Cards */}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {cards.map((card, index) => (
-              <div
+              <article
                 key={index}
-                className='bg-white rounded-2xl shadow-md flex flex-col justify-between min-h-[280px]'
+                className='relative rounded-2xl overflow-hidden shadow-md flex flex-col justify-between min-h-[280px] bg-white'
               >
                 {/* Card Body */}
                 <div className='p-10 flex flex-col items-center text-center'>
-                  {/* Icon */}
-                  <div className='w-14 h-14 rounded-xl bg-gray-50 shadow-xl border border-gray-300 flex items-center justify-center mb-5'>
-                    {card.icon}
+                  <div
+                    className='w-14 h-14 rounded-xl flex items-center justify-center mb-4'
+                    style={{
+                      boxShadow:
+                        '0 8px 10px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                      border: '1px solid #E5E7EB',
+                    }}
+                  >
+                    <Image src={card.icon} alt='' aria-hidden width={24} height={24} />
                   </div>
 
-                  {/* Title */}
                   <h3 className='text-orange-500 font-medium mb-4'>{card.title}</h3>
 
-                  {/* DOTTED DIVIDER */}
-                  <div className='w-full h-[1px] my-4 bg-[linear-gradient(to_right,#E5E7EB_35%,rgba(0,0,0,0)_0%)] bg-[length:14px_2px] bg-repeat-x rounded-full' />
+                  <div
+                    aria-hidden
+                    className='w-full h-[1px] mb-4 bg-[linear-gradient(to_right,#E5E7EB_35%,rgba(0,0,0,0)_0%)] bg-[length:14px_2px] bg-repeat-x rounded-full'
+                  />
 
-                  {/* Description */}
                   <p className='text-gray-600 text-sm leading-relaxed max-w-2xl'>
                     {card.description}
                   </p>
                 </div>
 
-                {/* FOOTER GRADIENT STRIP */}
-                <div className='bg-gradient-to-r from-[#FFE9D6] to-[#F7E6FF] text-gray-700 text-sm font-medium px-6 py-4 flex items-center justify-center gap-2 rounded-b-2xl'>
-                  <span className='text-purple-600'>✦</span>
-                  {card.footer}
-                </div>
-              </div>
+                {/* Footer */}
+                <footer className='relative bg-gradient-to-r from-[#FFE9D6] to-[#F7E6FF] text-gray-700 text-[14px] font-medium px-6 py-4 flex items-center justify-center gap-2 overflow-hidden'>
+                  {/* Glitter effect */}
+                  <div
+                    className='absolute inset-0 w-[200px] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent'
+                    style={{
+                      animation: 'swipe 3s ease-in-out infinite',
+                      pointerEvents: 'none',
+                    }}
+                  />
+                  <Image
+                    src='/images/Sparks.svg'
+                    alt=''
+                    aria-hidden
+                    width={16}
+                    height={16}
+                    className='relative z-10'
+                  />
+                  <span className='relative z-10'>{card.footer}</span>
+                </footer>
+              </article>
             ))}
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Keyframe Animation */}
+      <style jsx>{`
+        @keyframes swipe {
+          0% {
+            transform: translateX(-100%) rotate(-30deg);
+          }
+          100% {
+            transform: translateX(200%) rotate(-30deg);
+          }
+        }
+      `}</style>
+    </section>
   );
 };
 

@@ -271,8 +271,15 @@ export default function DataGovernanceSection() {
               >
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-start'>
                   <div className='space-y-4'>
-                    <span className='inline-flex px-4 py-2 rounded-full border bg-purple-50 text-purple-700'>
-                      ✦ {card.badge}
+                    <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full border bg-purple-50 text-purple-700'>
+                      <Image
+                        src='/images/Spark.svg'
+                        alt='Spark'
+                        width={16}
+                        height={16}
+                        className='w-4 h-4'
+                      />
+                      <span className='text-sm font-medium'>{card.badge}</span>
                     </span>
                     <h2 className='text-2xl md:text-3xl font-bold'>{card.title}</h2>
                     <ul className='space-y-2.5'>
