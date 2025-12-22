@@ -2,12 +2,10 @@
 
 import Image from 'next/image';
 
-// NEW CONTENT ACCORDING TO THE UI
 const governanceContent = {
   title: 'Forge Business Triumph with Data Insights',
   subtitle:
     'Build a future-ready, scalable data foundation that adapts as your business grows—keeping your organization fast, agile, and insight-driven.',
-
   cards: [
     {
       id: 'left',
@@ -18,7 +16,7 @@ const governanceContent = {
     },
     {
       id: 'center',
-      image: '/images/solutions/Rectangle 29.png',
+      image: '/images/solutions/datagoverance/center_img.png',
     },
     {
       id: 'right',
@@ -28,7 +26,6 @@ const governanceContent = {
       icon: '/images/solutions/icon.png',
     },
   ],
-
   background: '/images/solutions/Second section BG.jpg',
 };
 
@@ -40,58 +37,73 @@ export default function SectionGwc() {
         <div className='absolute inset-0 -z-10'>
           <Image
             src={governanceContent.background}
-            alt='Background'
+            alt=''
             fill
             className='object-cover'
+            aria-hidden
           />
         </div>
 
-        <div className='max-w-7xl mx-auto px-6 text-center'>
+        <div className='max-w-7xl mx-auto px-10 lg:px-16 text-center m-4'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-4xl text-white'>{governanceContent.title}</h2>
+          <h2 className='text-2xl md:text-3xl text-white'>{governanceContent.title}</h2>
 
-          <p className='mt-4 text-purple-200 text-sm md:text-base max-w-2xl mx-auto leading-relaxed'>
+          <p className='mt-6 text-purple-200 text-sm md:text-sm max-w-2xl mx-auto leading-relaxed'>
             {governanceContent.subtitle}
           </p>
 
           {/* CARDS */}
-          <div className='mt-20 -mb-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch'>
+          <div className='mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch'>
             {/* LEFT CARD */}
-            <div className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
-              <div className='mb-6'>
-                <Image src={governanceContent.cards[0].icon} alt='Icon' width={26} height={26} />
+            <div
+              className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'
+              style={{
+                boxShadow:
+                  '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)',
+              }}
+            >
+              <div className='mb-4'>
+                <Image src={governanceContent.cards[0].icon} alt='' width={26} height={26} />
               </div>
-
               <h3 className='text-[20px] font-medium text-white mb-4'>
                 {governanceContent.cards[0].title}
               </h3>
-
               <p className='text-white/80 text-[14px] leading-relaxed'>
                 {governanceContent.cards[0].description}
               </p>
             </div>
 
-            {/* CENTER IMAGE CARD */}
-            <div className='relative rounded-xl overflow-hidden min-h-[340px]'>
+            {/* CENTER IMAGE */}
+            <div
+              className='relative min-h-[340px] rounded-xl overflow-hidden'
+              style={{
+                boxShadow:
+                  '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)',
+              }}
+            >
               <Image
                 src={governanceContent.cards[1].image}
-                alt='Governance Illustration'
+                alt='Governance illustration'
                 fill
-                className='object-cover rounded-2xl'
+                className='object-cover'
                 priority
               />
             </div>
 
             {/* RIGHT CARD */}
-            <div className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'>
-              <div className='mb-6'>
-                <Image src={governanceContent.cards[2].icon} alt='Icon' width={26} height={26} />
+            <div
+              className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'
+              style={{
+                boxShadow:
+                  '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)',
+              }}
+            >
+              <div className='mb-4'>
+                <Image src={governanceContent.cards[2].icon} alt='' width={26} height={26} />
               </div>
-
               <h3 className='text-[20px] font-medium text-white mb-4'>
                 {governanceContent.cards[2].title}
               </h3>
-
               <p className='text-white/80 text-[14px] leading-relaxed'>
                 {governanceContent.cards[2].description}
               </p>

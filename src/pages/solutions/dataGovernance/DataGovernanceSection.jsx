@@ -224,7 +224,7 @@ export default function DataGovernanceSection() {
       className='relative min-h-screen bg-white pt-20 pb-12'
     >
       {/* TABS */}
-      <div className='container mx-auto px-4 mb-8'>
+      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24 mb-8'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4'>
           {tabs.map((tab, i) => (
             <button
@@ -244,7 +244,7 @@ export default function DataGovernanceSection() {
       </div>
 
       {/* CARDS */}
-      <div className='container mx-auto px-4'>
+      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24'>
         <div className='relative min-h-[400px]'>
           {cards.map((card, i) => (
             <article

@@ -142,73 +142,67 @@ const borderColors = [
 
 /* ---------------- COMPONENT ---------------- */
 
-export default function DataGovernanceSection() {
+export default function BIMigrationSection() {
   const sectionRef = useRef(null);
   const cardRefs = useRef([]);
-  const scrollTriggerRef = useRef(null);
-  const currentIndexRef = useRef(0);
+  const timelineRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  /* ---------- CARD TRANSITION ---------- */
-  const animateToCard = (nextIndex, direction = 1) => {
-    if (nextIndex === currentIndexRef.current) return;
-
-    const prev = cardRefs.current[currentIndexRef.current];
-    const next = cardRefs.current[nextIndex];
-
-    setActiveIndex(nextIndex);
-
-    gsap.to(prev, {
-      opacity: 0,
-      scale: 0.97,
-      y: direction === 1 ? -20 : 20,
-      duration: 0.5,
-      ease: 'power2.inOut',
-      pointerEvents: 'none',
-    });
-
-    gsap.fromTo(
-      next,
-      { opacity: 0, scale: 0.97, y: direction === 1 ? 50 : -50 },
-      {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-        duration: 0.9,
-        ease: 'power3.out',
-        pointerEvents: 'auto',
-      }
-    );
-
-    currentIndexRef.current = nextIndex;
-  };
-
-  /* ---------- SCROLL ---------- */
+  /* ---------- GSAP TIMELINE (REBUILT) ---------- */
   useEffect(() => {
     if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: `+=${cards.length * 80}%`, // Reduced from 100% to 80% for less scroll
+          pin: true,
+          scrub: 1,
+          anticipatePin: 1,
+          onUpdate: self => {
+            // Sync active tab with scroll progress
+            const index = Math.min(cards.length - 1, Math.floor(self.progress * cards.length));
+            setActiveIndex(index);
+          },
+        },
+      });
+
       cardRefs.current.forEach((card, i) => {
         gsap.set(card, {
           opacity: i === 0 ? 1 : 0,
-          scale: i === 0 ? 1 : 0.97,
-          y: 0,
+          scale: i === 0 ? 1 : 0.96,
+          y: i === 0 ? 0 : 120,
           pointerEvents: i === 0 ? 'auto' : 'none',
         });
+
+        if (i > 0) {
+          tl.to(cardRefs.current[i - 1], {
+            opacity: 0,
+            scale: 0.96,
+            y: -20,
+            pointerEvents: 'none',
+            duration: 1,
+            ease: 'power2.out',
+          });
+
+          tl.to(
+            card,
+            {
+              opacity: 10,
+              scale: 1,
+              y: 0,
+              pointerEvents: 'auto',
+              duration: 1,
+              ease: 'power3.out',
+            },
+            '<'
+          );
+        }
       });
 
-      scrollTriggerRef.current = ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: 'top top',
-        end: `+=${cards.length * 120}vh`,
-        pin: true,
-        scrub: false,
-        onUpdate: self => {
-          const next = Math.min(cards.length - 1, Math.floor(self.progress * cards.length));
-          const dir = next > currentIndexRef.current ? 1 : -1;
-          animateToCard(next, dir);
-        },
-      });
+      timelineRef.current = tl;
     }, sectionRef);
 
     return () => ctx.revert();
@@ -216,96 +210,91 @@ export default function DataGovernanceSection() {
 
   /* ---------- TAB CLICK ---------- */
   const onTabClick = index => {
-    const trigger = scrollTriggerRef.current;
-    if (!trigger) return;
-
-    const progress = index / cards.length;
-    trigger.scroll(trigger.start + progress * (trigger.end - trigger.start));
+    if (!timelineRef.current) return;
+    const tl = timelineRef.current;
+    const progress = index / (cards.length - 1);
+    tl.scrollTrigger.scroll(
+      tl.scrollTrigger.start + progress * (tl.scrollTrigger.end - tl.scrollTrigger.start)
+    );
   };
 
   return (
-    <div ref={sectionRef} className='relative min-h-screen bg-white pt-20 pb-12'>
+    <section
+      ref={sectionRef}
+      aria-labelledby='bi-migration-heading'
+      className='relative min-h-screen bg-white pt-20 pb-12'
+    >
       {/* TABS */}
-      {/* <div className="container mx-auto px-4 mb-12">
-  <div className="grid grid-cols-5 gap-4 max-w-6xl mx-auto">
-    {tabs.map((tab, i) => (
-      <button
-        key={i}
-        onClick={() => onTabClick(i)}
-        className={`flex items-center justify-center h-16 px-3 rounded-full border text-sm font-medium transition text-center text-ellipsis overflow-hidden whitespace-nowrap ${
-          i === activeIndex
-            ? 'bg-purple-100 border-purple-400 text-purple-700'
-            : 'bg-white border-gray-300 text-gray-700 hover:border-purple-300'
-        }`}
-      >
-        {tab}
-      </button>
-    ))}
-  </div>
-</div> */}
-      <div className='container mx-auto px-4 mb-8'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 ma  '>
+      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24 mb-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4'>
           {tabs.map((tab, i) => (
             <button
               key={i}
               onClick={() => onTabClick(i)}
-              className={`flex items-center justify-center px-4 py-2.5 rounded-full border text-xs font-medium transition text-center
-          ${
-            i === activeIndex
-              ? 'bg-purple-100 border-purple-400 text-purple-700'
-              : 'bg-white border-gray-300 text-gray-700 hover:border-purple-300'
-          }`}
+              className={`flex items-center justify-center px-4 py-2.5 rounded-full border text-xs font-medium transition
+                ${
+                  i === activeIndex
+                    ? 'bg-purple-100 border-purple-400 text-purple-700'
+                    : 'bg-white border-gray-300 text-gray-700 hover:border-purple-300'
+                }`}
             >
-              <span className='block text-center leading-snug break-words'>{tab}</span>
+              {tab}
             </button>
           ))}
         </div>
       </div>
 
       {/* CARDS */}
-      <div className='container mx-auto px-4'>
-        <div className='relative min-h-[500px]'>
+      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24'>
+        <div className='relative min-h-[400px]'>
           {cards.map((card, i) => (
-            <div key={i} ref={el => (cardRefs.current[i] = el)} className='absolute inset-0 w-full'>
+            <article
+              key={i}
+              ref={el => (cardRefs.current[i] = el)}
+              className='absolute inset-0 w-full'
+              aria-hidden={i !== activeIndex}
+            >
               <div
                 className={`bg-white rounded-3xl border-2 ${borderColors[i]} shadow-xl p-6 md:p-8`}
               >
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-start'>
                   <div className='space-y-4'>
                     <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full border bg-purple-50 text-purple-700'>
-                      <Image
-                        src='/images/Spark.svg'
-                        alt='Spark'
-                        width={16}
-                        height={16}
-                        className='w-4 h-4'
-                      />
+                      <Image src='/images/Spark.svg' alt='' aria-hidden width={16} height={16} />
                       <span className='text-sm font-medium'>{card.badge}</span>
                     </span>
-                    <h2 className='text-2xl md:text-3xl font-bold'>{card.title}</h2>
+
+                    <h2
+                      id={i === 0 ? 'bi-migration-heading' : undefined}
+                      className='text-2xl md:text-3xl font-bold'
+                    >
+                      {card.title}
+                    </h2>
+
                     <ul className='space-y-2.5'>
                       {card.points.map((p, idx) => (
-                        <li key={idx} className='flex gap-2 text-sm leading-relaxed'>
-                          <span className='text-purple-600'>•</span>
+                        <li key={idx} className='flex gap-2 text-md leading-relaxed'>
+                          <span aria-hidden>•</span>
                           <span>{p}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div className='relative rounded-3xl h-[250px] lg:h-[280px]'>
+
+                  <div className='relative overflow-hidden h-[250px] lg:h-[280px]'>
                     <Image
                       src={card.image}
                       alt={card.title}
                       fill
-                      className='object-contain rounded-3xl'
+                      className='object-contain object-right'
                     />
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

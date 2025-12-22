@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
 
 // bannerContent.ts
@@ -23,72 +24,81 @@ const bannerContent = {
 
 export default function BannerSection() {
   return (
-    <section className='relative w-full overflow-hidden min-h-[800px]'>
-      {/* Optional: Background Image Overlay */}
-      <div className='absolute inset-0  h-full -z-10'>
+    <header className='relative w-full overflow-hidden pt-[60px]'>
+      {/* Background */}
+      <div className='absolute inset-0 -z-10'>
         <Image
           src={bannerContent.images.background}
-          alt='Background'
+          alt=''
           fill
           priority
           className='object-cover'
         />
+        {/* Gradient fade overlay at bottom */}
+        <div className='absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent'></div>
       </div>
 
-      <div className='max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-20'>
-        {/* Breadcrumb - Top Left */}
-        <nav aria-label='Breadcrumb' className='-mb-8 mt-6'>
-          <ol className='flex items-center gap-2 text-sm'>
+      <div className='max-w-7xl mx-auto px-6 lg:px-24 pt-10 lg:pt-14 pb-44'>
+        {/* Breadcrumb */}
+        <nav aria-label='Breadcrumb' className='relative z-10 mb-4'>
+          <ol className='inline-flex items-center gap-2 text-sm py-1'>
             {bannerContent.breadcrumb.items.map((item, index) => (
               <li key={index} className='flex items-center gap-2'>
-                {index > 0 && <span className='text-gray-400'>›</span>}
-                <a
-                  href={item.href}
-                  className={`${
-                    index === bannerContent.breadcrumb.items.length - 1
-                      ? 'text-purple-700 font-medium'
-                      : 'text-gray-600 hover:text-purple-600'
-                  } transition-colors`}
-                >
+                {index > 0 && (
+                  <Image
+                    src='/images/next_arrow.svg'
+                    alt=''
+                    width={4}
+                    height={4}
+                    aria-hidden
+                    className='opacity-80'
+                  />
+                )}
+                <Link href={item.href} className='font-medium text-[#6F2B8B] hover:opacity-80'>
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ol>
         </nav>
 
-        <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16'>
-          {/* LEFT CONTENT */}
-          <div className='space-y-6'>
-            {/* Title */}
-            <h1 className='text-[32px] md:text-[40px] lg:text-[34px] font-semibold text-[#3F3F3F] leading-[1.15]'>
+        {/* Hero Grid */}
+        <div className='grid grid-cols-1 lg:grid-cols-[55%_45%] items-center gap-12 lg:gap-16'>
+          {/* Left */}
+          <div>
+            <h1
+              className='text-[32px] md:text-[36px] font-semibold max-w-[600px] mb-2'
+              style={{ color: '#404040', lineHeight: '52px' }}
+            >
               {bannerContent.title}
             </h1>
 
-            {/* Description */}
-            <p className='text-[#7A7A7A] text-[15px] md:text-[16px] leading-relaxed max-w-xl font-normal'>
+            <p className='text-[#7A7A7A] text-[15px] md:text-[16px] max-w-xl mb-8'>
               {bannerContent.description}
             </p>
 
-            {/* CTA Button */}
-            <button className='mt-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[170px] h-[45px] rounded-full font-medium text-[15px] flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg'>
+            <Link
+              href='/contact'
+              className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[170px] h-[45px] rounded-full font-medium text-[15px] justify-center hover:scale-105 transition-transform shadow-lg'
+            >
               {bannerContent.ctaText}
               <FiArrowRight className='w-5 h-5' />
-            </button>
+            </Link>
           </div>
 
-          {/* RIGHT ILLUSTRATION */}
-          <div className='relative w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[440px]'>
+          {/* Right */}
+          <div className='relative w-full max-w-[400px] mx-auto lg:mx-0'>
             <Image
               src={bannerContent.images.illustration}
-              alt='BI & Analytics Illustration'
-              fill
-              className='object-contain'
+              alt='BI & Analytics platform illustration'
+              width={400}
+              height={340}
               priority
+              className='w-full h-auto object-contain'
             />
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 }
