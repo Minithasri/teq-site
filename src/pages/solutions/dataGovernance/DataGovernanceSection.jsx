@@ -225,7 +225,7 @@ export default function DataGovernanceSection() {
     >
       {/* TABS - VISIBLE ONLY ON LARGE SCREENS */}
       {/* Added 'hidden lg:block' to hide tabs on mobile and tablet */}
-      <div className='hidden lg:block max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24 mb-4'>
+      <div className='hidden lg:block max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24 mb-8'>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3'>
           {tabs.map((tab, i) => (
             <button

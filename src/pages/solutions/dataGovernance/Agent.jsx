@@ -66,7 +66,7 @@ export default function Agent() {
             {/* CTA */}
             <Link
               href='/atlan'
-              className='inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium transition bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white hover:opacity-90'
+              className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[170px] h-[45px] rounded-full font-medium text-[15px] justify-center hover:scale-105 transition-transform shadow-lg'
             >
               Know more
               <svg

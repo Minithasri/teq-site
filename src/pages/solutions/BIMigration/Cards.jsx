@@ -43,7 +43,7 @@ export default function Cards() {
 
           <Link
             href='/contact'
-            className='inline-flex items-center gap-3 px-7 py-3 text-white rounded-full shadow-md hover:opacity-90 transition'
+            className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[170px] h-[45px] rounded-full font-medium text-[15px] justify-center hover:scale-105 transition-transform shadow-lg'
             style={{
               background: 'linear-gradient(135deg, #7030B1 0%, #B56DD3 100%)',
             }}

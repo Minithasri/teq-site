@@ -31,7 +31,7 @@ export default function Agent() {
               >
                 Explore Use Cases
               </button>
-              <button className='px-8 py-3 rounded-full bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white font-medium hover:opacity-90 transition flex items-center gap-2'>
+              <button className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[170px] h-[45px] rounded-full font-medium text-[15px] justify-center hover:scale-105 transition-transform shadow-lg'>
                 <Image src='/images/solutions/phone.svg' alt='Phone' width={18} height={18} />
                 Contact Us
               </button>

@@ -38,7 +38,7 @@ export default function BannerSection() {
         <div className='absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent'></div>
       </div>
 
-      <div className='max-w-7xl mx-auto px-6 lg:px-24 pt-10 lg:pt-14 pb-44'>
+      <div className='max-w-8xl mx-auto px-8 lg:px-28 pt-10 lg:pt-14 pb-44'>
         {/* Breadcrumb */}
         <nav aria-label='Breadcrumb' className='relative z-10 mb-4'>
           <ol className='inline-flex items-center gap-2 text-sm py-1'>
@@ -87,7 +87,7 @@ export default function BannerSection() {
           </div>
 
           {/* Right */}
-          <div className='relative w-full max-w-[400px] mx-auto lg:mx-0'>
+          <div className='relative w-full max-w-[500px] mx-auto lg:mx-0'>
             <Image
               src={bannerContent.images.illustration}
               alt='BI Migration platform illustration'

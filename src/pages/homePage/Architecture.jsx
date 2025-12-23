@@ -13,27 +13,27 @@ const Architecture = () => {
     {
       icon: '/images/Sense.svg',
       title: 'Sense',
-      subtitle: 'Ingest data from APIs, documents, sensors, and systems'
+      subtitle: 'Ingest data from APIs, documents, sensors, and systems',
     },
     {
       icon: '/images/Reason.svg',
       title: 'Reason',
-      subtitle: 'Apply LLMs, rule logic, RAG, or planning modules'
+      subtitle: 'Apply LLMs, rule logic, RAG, or planning modules',
     },
     {
       icon: '/images/Decide.svg',
       title: 'Decide',
-      subtitle: 'Choose actions using scoring, conditions, or models'
+      subtitle: 'Choose actions using scoring, conditions, or models',
     },
     {
       icon: '/images/Action.svg',
       title: 'Act',
-      subtitle: 'Trigger workflows, send alerts, update records, or collaborate'
+      subtitle: 'Trigger workflows, send alerts, update records, or collaborate',
     },
     {
       icon: '/images/Grow.svg',
       title: 'Learn',
-      subtitle: 'Optimize through feedback loops and continuous improvement'
+      subtitle: 'Optimize through feedback loops and continuous improvement',
     },
   ];
 
@@ -111,7 +111,7 @@ const Architecture = () => {
 
     const controlPoint = {
       x: (from.x + to.x) / 2,
-      y: (from.y + to.y) / 2 + offset
+      y: (from.y + to.y) / 2 + offset,
     };
 
     const position = getPointOnQuadraticBezier(from, controlPoint, to, progress);
@@ -124,17 +124,16 @@ const Architecture = () => {
   return (
     <section
       ref={containerRef}
-      className="relative overflow-hidden"
+      className='relative overflow-hidden mx-4 rounded-2xl'
       style={{
         paddingTop: '100px',
         paddingBottom: '100px',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#E8E0F5',
       }}
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
+      <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* UPDATED TITLE BLOCK */}
-        <div className="text-center mb-20 flex justify-center">
+        <div className='text-center mb-20 flex justify-center'>
           <div
             style={{
               fontSize: '32px',
@@ -146,7 +145,7 @@ const Architecture = () => {
           >
             Our Agentic AI{' '}
             <span
-              className="bg-clip-text text-transparent"
+              className='bg-clip-text text-transparent'
               style={{
                 backgroundImage: 'linear-gradient(to right, #7030B1, #B56DD3)',
               }}
@@ -158,17 +157,17 @@ const Architecture = () => {
 
         {/* SVG FLOW */}
         {!isMobile && points.length === 5 && (
-          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
+          <svg className='absolute inset-0 w-full h-full pointer-events-none' style={{ zIndex: 1 }}>
             <defs>
-              <linearGradient id="grad" x1="0%" y1="0%" x2="100%">
-                <stop offset="0%" stopColor="#7030B1" />
-                <stop offset="100%" stopColor="#B56DD3" />
+              <linearGradient id='grad' x1='0%' y1='0%' x2='100%'>
+                <stop offset='0%' stopColor='#7030B1' />
+                <stop offset='100%' stopColor='#B56DD3' />
               </linearGradient>
-              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="1.8" result="blur" />
+              <filter id='glow' x='-50%' y='-50%' width='200%' height='200%'>
+                <feGaussianBlur stdDeviation='1.8' result='blur' />
                 <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
+                  <feMergeNode in='blur' />
+                  <feMergeNode in='SourceGraphic' />
                 </feMerge>
               </filter>
             </defs>
@@ -197,14 +196,14 @@ const Architecture = () => {
 
               return (
                 <g key={i}>
-                  <path d={d} stroke="#e4d4f8" strokeWidth="1.5" fill="none" opacity="0" />
+                  <path d={d} stroke='#e4d4f8' strokeWidth='1.5' fill='none' opacity='0' />
 
                   <path
                     d={d}
-                    stroke="url(#grad)"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
+                    stroke='url(#grad)'
+                    strokeWidth='2'
+                    fill='none'
+                    strokeLinecap='round'
                     strokeDasharray={`${dashArray} ${dashGap}`}
                     strokeDashoffset={dashOffset}
                     style={{ clipPath: `inset(0 ${100 - localProgress * 100}% 0 0)` }}
@@ -214,11 +213,11 @@ const Architecture = () => {
                     <g transform={`translate(${arrowPos.x}, ${arrowPos.y})`}>
                       <g transform={`rotate(${arrowPos.angle})`}>
                         <polygon
-                          points="-6,0 6,0 6,4 12,0 6,-4 6,0"
-                          fill="url(#grad)"
-                          opacity="1"
-                          stroke="#7030B1"
-                          strokeWidth="0.5"
+                          points='-6,0 6,0 6,4 12,0 6,-4 6,0'
+                          fill='url(#grad)'
+                          opacity='1'
+                          stroke='#7030B1'
+                          strokeWidth='0.5'
                         />
                       </g>
                     </g>
@@ -240,11 +239,11 @@ const Architecture = () => {
             <div
               key={i}
               ref={el => (iconsRef.current[i] = el)}
-              className="flex flex-col items-center text-center"
+              className='flex flex-col items-center text-center'
               style={!isMobile ? { marginTop: i % 2 === 1 ? '90px' : '0' } : {}}
             >
               <div
-                className="icon-circle rounded-full mb-6 shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center"
+                className='icon-circle rounded-full mb-6 shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center'
                 style={{
                   background: 'linear-gradient(135deg, #7030B1, #B56DD3)',
                   width: '72px',
@@ -255,17 +254,17 @@ const Architecture = () => {
                 <img
                   src={feature.icon}
                   alt={`${feature.title} icon`}
-                  className="w-7 h-7 filter brightness-0 invert"
+                  className='w-7 h-7 filter brightness-0 invert'
                   style={{ width: '28px', height: '28px' }}
                 />
               </div>
 
               {/* Updated title color to #404040 */}
-              <h3 className="text-xl font-bold mb-2 tracking-tight" style={{ color: '#404040' }}>
+              <h3 className='text-xl font-bold mb-2 tracking-tight' style={{ color: '#404040' }}>
                 {feature.title}
               </h3>
 
-              <p className="text-sm text-gray-600 max-w-[220px] leading-relaxed">
+              <p className='text-sm text-gray-600 max-w-[220px] leading-relaxed'>
                 {feature.subtitle}
               </p>
             </div>
@@ -273,9 +272,9 @@ const Architecture = () => {
         </div>
 
         {/* Button */}
-        <div className="flex justify-center mt-16">
+        <div className='flex justify-center mt-16'>
           <button
-            className="flex items-center justify-center gap-2 text-white transition-all duration-300 hover:scale-105"
+            className='flex items-center justify-center gap-2 text-white transition-all duration-300 hover:scale-105'
             style={{
               background: 'linear-gradient(to right, #7030B1, #B56DD3)',
               borderRadius: '24px',
@@ -286,10 +285,9 @@ const Architecture = () => {
             }}
           >
             Contact Us
-            <FiArrowRight className="text-lg" />
+            <FiArrowRight className='text-lg' />
           </button>
         </div>
-
       </div>
     </section>
   );
