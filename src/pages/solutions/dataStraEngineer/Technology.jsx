@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
-import img1 from '../../../../public/images/solutions/Icons.png';
+import img1 from '../../../../public/images/solutions/Icon.svg';
 
 const cards = [
   {
@@ -38,7 +38,10 @@ const cards = [
 
 const Technology = () => {
   return (
-    <section aria-labelledby='data-strategy-expertise' className='relative overflow-hidden w-full'>
+    <section
+      aria-labelledby='data-strategy-expertise'
+      className='relative overflow-hidden w-full z-20'
+    >
       <div
         className='bg-[linear-gradient(135deg,_#7030B14D_0%,_#CAB9F64D_25%,_#E6F2F64D_50%,_#DDA16C4D_65%,_FFA5814D_80%,_#E5AA664D_100%)]'
         style={{ backgroundColor: '#F9EAE1', clipPath: 'none' }}

@@ -18,7 +18,7 @@ const bannerContent = {
   ctaText: 'Get in touch',
   images: {
     background: '/images/solutions/dataStrategyEngineer/data_hero.png',
-    illustration: '/images/solutions/dataStrategyEngineer/data_strat_image.svg',
+    illustration: '/images/solutions/Data_Strategy_Engineering.png',
   },
 };
 
@@ -38,7 +38,7 @@ export default function BannerSection() {
         <div className='absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent'></div>
       </div>
 
-      <div className='max-w-7xl mx-auto px-6 lg:px-24 pt-10 lg:pt-14 pb-44'>
+      <div className='max-w-7xl mx-auto px-6 lg:px-24 pt-10 lg:pt-14 pb-24'>
         {/* Breadcrumb */}
         <nav aria-label='Breadcrumb' className='relative z-10 mb-4'>
           <ol className='inline-flex items-center gap-2 text-sm py-1'>

@@ -2,112 +2,42 @@
 
 import Image from 'next/image';
 
-const governanceContent = {
-  title: 'Forge Business Triumph with Data Insights',
+const sectionData = {
+  title: 'GWC Turns Your Data Into Business Value',
   subtitle:
-    'Build a future-ready, scalable data foundation that adapts as your business grows—keeping your organization fast, agile, and insight-driven.',
-  cards: [
-    {
-      id: 'left',
-      title: 'Scalable Data Infrastructure',
-      description:
-        'Create a robust data backbone designed to manage increasing data volumes without slowing down performance.',
-      icon: '/images/solutions/icon.png',
-    },
-    {
-      id: 'center',
-      image: '/images/solutions/datagoverance/center_img.png',
-    },
-    {
-      id: 'right',
-      title: 'Stay Responsive, Always',
-      description:
-        'Leverage flexible architectures that evolve with your business needs, ensuring quick decision-making and operational efficiency.',
-      icon: '/images/solutions/icon.png',
-    },
-  ],
-  background: '/images/solutions/Second section BG.jpg',
+    'Our BI and analytics solutions are customized to your business needs, delivering targeted insights that align with your unique challenges and goals.',
+  mainImage: '/images/solutions/dataStrategyEngineer/data_strat_bg.png',
 };
 
 export default function SectionGwc() {
   return (
-    <section className='relative w-full px-4 -mt-32'>
-      <div className='relative w-full max-w-[calc(100%-2rem)] mx-auto rounded-[32px] overflow-hidden py-16 z-10'>
-        {/* BACKGROUND */}
-        <div className='absolute inset-0 -z-10'>
-          <Image
-            src={governanceContent.background}
-            alt=''
-            fill
-            className='object-cover'
-            aria-hidden
-          />
-        </div>
+    // Changed bg-white to bg-transparent so the gradient from the section below is visible
+    <section className='relative w-full bg-transparent overflow-visible z-20'>
+      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24 relative'>
+        {/* Title */}
+        <h2
+          className='text-3xl md:text-3xl font-medium text-center mb-4'
+          style={{ color: '#6F2B8B' }}
+        >
+          {sectionData.title}
+        </h2>
 
-        <div className='max-w-7xl mx-auto px-10 lg:px-16 text-center m-4'>
-          {/* TITLE */}
-          <h2 className='text-2xl md:text-3xl text-white'>{governanceContent.title}</h2>
+        {/* Subtitle */}
+        <p className='text-center text-sm md:text-base text-gray-600 max-w-2xl mx-auto mb-2'>
+          {sectionData.subtitle}
+        </p>
 
-          <p className='mt-6 text-purple-200 text-sm md:text-sm max-w-2xl mx-auto leading-relaxed'>
-            {governanceContent.subtitle}
-          </p>
-
-          {/* CARDS */}
-          <div className='mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch'>
-            {/* LEFT CARD */}
-            <div
-              className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'
-              style={{
-                boxShadow:
-                  '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)',
-              }}
-            >
-              <div className='mb-4'>
-                <Image src={governanceContent.cards[0].icon} alt='' width={26} height={26} />
-              </div>
-              <h3 className='text-[20px] font-medium text-white mb-4'>
-                {governanceContent.cards[0].title}
-              </h3>
-              <p className='text-white/80 text-[14px] leading-relaxed'>
-                {governanceContent.cards[0].description}
-              </p>
-            </div>
-
-            {/* CENTER IMAGE */}
-            <div
-              className='relative min-h-[340px] rounded-xl overflow-hidden'
-              style={{
-                boxShadow:
-                  '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)',
-              }}
-            >
-              <Image
-                src={governanceContent.cards[1].image}
-                alt='Governance illustration'
-                fill
-                className='object-cover'
-                priority
-              />
-            </div>
-
-            {/* RIGHT CARD */}
-            <div
-              className='bg-[#5B3B6E] backdrop-blur-md rounded-xl p-10 flex flex-col justify-end min-h-[340px] text-left'
-              style={{
-                boxShadow:
-                  '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)',
-              }}
-            >
-              <div className='mb-4'>
-                <Image src={governanceContent.cards[2].icon} alt='' width={26} height={26} />
-              </div>
-              <h3 className='text-[20px] font-medium text-white mb-4'>
-                {governanceContent.cards[2].title}
-              </h3>
-              <p className='text-white/80 text-[14px] leading-relaxed'>
-                {governanceContent.cards[2].description}
-              </p>
-            </div>
+        {/* Main Image Container */}
+        <div className='relative w-full lg:w-[620px] max-w-full mx-auto'>
+          {/* Main Image (bg_frame.png) */}
+          <div className='relative' style={{ paddingBottom: '50%' }}>
+            <Image
+              src={sectionData.mainImage}
+              alt='Data Strategy visualization'
+              fill
+              className='object-contain'
+              priority
+            />
           </div>
         </div>
       </div>

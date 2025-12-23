@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
-import img1 from '../../../../public/images/solutions/Icons.png';
+import img1 from '../../../../public/images/solutions/Icon.svg';
 
 const cards = [
   {

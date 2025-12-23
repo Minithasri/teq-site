@@ -28,132 +28,79 @@ const AgenticAI = () => {
   ];
 
   return (
-    <section className='px-4 py-16 md:py-20 lg:py-24' style={{ backgroundColor: '#f3edff' }}>
-      <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        {/* Spark + Button Row */}
-        <div className='relative flex flex-col sm:flex-row items-center justify-between gap-6 mb-12 lg:mb-16'>
-          <div className='z-10'>
-            <div
-              className='flex items-center justify-center rounded-2xl shadow-md'
-              style={{ backgroundColor: '#ffffff', width: '66px', height: '66px' }}
-            >
-              <Image
-                src='/images/Spark.svg'
-                alt='Spark'
-                width={36}
-                height={36}
-                className='object-contain'
-              />
+    <section className='w-full py-16 md:py-20 lg:py-24'>
+      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24'>
+        {/* Header with Spark Icon and CTA Button */}
+        <div className='flex items-center justify-between mb-12 lg:mb-16'>
+          {/* Spark Icon */}
+          <div className='flex-shrink-0'>
+            <div className='w-16 h-16 rounded-2xl bg-white shadow-md flex items-center justify-center'>
+              <Image src='/images/Spark.svg' alt='' aria-hidden width={32} height={32} />
             </div>
           </div>
 
-          <div className='hidden sm:flex border-t-2 border-dashed border-[#1F1F1F] absolute left-[calc(66px+20px)] right-[calc(250px+40px)] top-1/2 transform -translate-y-1/2 opacity-20' />
+          {/* Dashed Line */}
+          <div className='hidden lg:block flex-1 mx-6 h-[2px] bg-[linear-gradient(to_right,rgba(107,114,128,0.3)_40%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x' />
 
-          <div className='z-10'>
-            <button
-              className='flex items-center gap-3 font-semibold transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg justify-center'
-              style={{
-                border: '2px solid #8c49bf',
-                borderRadius: '30px',
-                color: '#8c49bf',
-                backgroundColor: 'transparent',
-                width: '250px',
-                height: '48px',
-                fontSize: '16px',
-              }}
-            >
-              Talk to our experts
-              <FiArrowRight className='text-xl' />
-            </button>
-          </div>
+          {/* CTA Button */}
+          <button
+            className='px-6 py-3 rounded-full border-2 font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2'
+            style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
+          >
+            Talk to Our Experts
+            <FiArrowRight className='w-5 h-5' />
+          </button>
         </div>
 
-        {/* Title + Description */}
-        <div className='grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-12 mb-16 lg:mb-20 items-start'>
-          <div className='text-center lg:text-left'>
-            <h1
-              className='leading-tight'
-              style={{
-                fontSize: '40px',
-                fontWeight: 500,
-                color: '#1f1f1f',
-              }}
-            >
-              What does <br></br>GWC actually solve?
-            </h1>
+        {/* Title + Description Grid */}
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 lg:mb-20'>
+          {/* Left: Title */}
+          <div>
+            <h2 className='text-4xl md:text-5xl font-medium text-[#1F1F1F] leading-tight'>
+              What does
+              <br />
+              GWC actually solve?
+            </h2>
           </div>
 
-          <div className='flex justify-center lg:justify-end'>
-            <p
-              dir='ltr'
-              className='max-w-xl text-center lg:text-left font-medium leading-relaxed'
-              style={{
-                color: '#525252',
-                fontSize: '14px',
-                lineHeight: '1.6',
-                fontWeight: '500',
-              }}
-            >
-              GWC streamlines and automates complex data management, ensuring transparency, compliance, and smarter, faster decision making across the organization.
+          {/* Right: Description */}
+          <div className='flex items-center'>
+            <p className='text-[#525252] text-sm md:text-base leading-relaxed'>
+              GWC streamlines and automates complex data management, ensuring transparency,
+              compliance, and smarter, faster decision making across the organization.
             </p>
           </div>
         </div>
 
         {/* Feature Cards */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 justify-items-center'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
           {cards.map((card, index) => (
             <div
               key={index}
-              className='rounded-[24px] p-[1px]'
-              style={{
-                background: 'linear-gradient(to right, #C4A3E5, #E5E5E5)',
-                width: '275px',
-                height: '235px',
-              }}
+              className='bg-white rounded-3xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 p-8 flex flex-col items-center text-center'
+              style={{ minHeight: '280px' }}
             >
+              {/* Icon Container */}
               <div
-                className='text-center shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center justify-start'
-                style={{
-                  backgroundColor: '#ffffff',
-                  borderRadius: '24px',
-                  padding: '28px',
-                  width: '100%',
-                  height: '100%',
-                }}
+                className='w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-sm'
+                style={{ backgroundColor: '#F3E8FF' }}
               >
-                <div
-                  className='rounded-full p-5 mb-4 flex items-center justify-center shadow-md'
-                  style={{
-                    background: 'linear-gradient(to right, #7030B1, #B56DD3)',
-                    width: '72px',
-                    height: '72px',
-                  }}
-                >
-                  <Image
-                    src={card.icon}
-                    alt={card.title}
-                    width={36}
-                    height={36}
-                    className='object-contain invert brightness-0'
-                  />
-                </div>
-
-                <h3 className='font-semibold mb-2' style={{ color: '#404040', fontSize: '18px' }}>
-                  {card.title}
-                </h3>
-
-                {/* FIXED HERE → 14px + regular */}
-                <p
-                  className='leading-relaxed text-center'
-                  style={{
-                    color: '#525252',
-                    fontSize: '14px',
-                    fontWeight: 400,
-                  }}
-                >
-                  {card.subtitle}
-                </p>
+                <Image
+                  src={card.icon}
+                  alt=''
+                  aria-hidden
+                  width={32}
+                  height={32}
+                  className='object-contain'
+                  style={{ filter: 'invert(29%) sepia(56%) saturate(1847%) hue-rotate(262deg)' }}
+                />
               </div>
+
+              {/* Title */}
+              <h3 className='text-lg font-semibold text-[#404040] mb-3'>{card.title}</h3>
+
+              {/* Subtitle */}
+              <p className='text-sm text-[#525252] leading-relaxed'>{card.subtitle}</p>
             </div>
           ))}
         </div>

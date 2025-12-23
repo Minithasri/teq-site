@@ -7,13 +7,10 @@ export default function Agent() {
       <div className='max-w-[1200px] mx-auto px-4 md:px-6 lg:px-6 xl:px-4'>
         <div className='w-full rounded-3xl relative overflow-hidden bg-gradient-to-r from-purple-50 via-pink-50 to-purple-100'>
           {/* BACKGROUND IMAGE */}
-          <div className='absolute inset-0'>
-            <Image
-              src='/images/solutions/agent_bg.png'
-              alt='Background'
-              fill
-              className='object-cover'
-            />
+          <div className='absolute inset-0' style={{ opacity: 0.22 }}>
+            <video autoPlay loop muted playsInline className='w-full h-full object-cover'>
+              <source src='/images/solutions/agent_video.mp4' type='video/mp4' />
+            </video>
           </div>
 
           {/* CONTENT - Centered */}

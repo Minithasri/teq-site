@@ -155,7 +155,7 @@ export default function DataGovernanceSection() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top top',
+          start: 'top 20px', // Pause when section is 80px from top to show tabs
           end: `+=${cards.length * 80}%`, // Reduced from 100% to 80% for less scroll
           pin: true,
           scrub: 1,
@@ -189,7 +189,7 @@ export default function DataGovernanceSection() {
           tl.to(
             card,
             {
-              opacity: 10,
+              opacity: 50,
               scale: 1,
               y: 0,
               pointerEvents: 'auto',
@@ -223,14 +223,15 @@ export default function DataGovernanceSection() {
       aria-labelledby='data-governance-heading'
       className='relative min-h-screen bg-white pt-20 pb-12'
     >
-      {/* TABS */}
-      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24 mb-8'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4'>
+      {/* TABS - VISIBLE ONLY ON LARGE SCREENS */}
+      {/* Added 'hidden lg:block' to hide tabs on mobile and tablet */}
+      <div className='hidden lg:block max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24 mb-4'>
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3'>
           {tabs.map((tab, i) => (
             <button
               key={i}
               onClick={() => onTabClick(i)}
-              className={`flex items-center justify-center px-4 py-2.5 rounded-full border text-xs font-medium transition
+              className={`flex items-center justify-center px-4 py-4 rounded-full border text-xs font-medium transition text-center leading-tight min-h-[60px]
                 ${
                   i === activeIndex
                     ? 'bg-purple-100 border-purple-400 text-purple-700'
@@ -280,12 +281,14 @@ export default function DataGovernanceSection() {
                     </ul>
                   </div>
 
-                  <div className='relative overflow-hidden h-[250px] lg:h-[280px]'>
+                  <div className='relative overflow-hidden rounded-2xl border-2 border-gray-200 h-[250px] lg:h-[280px]'>
                     <Image
                       src={card.image}
                       alt={card.title}
                       fill
-                      className='object-contain object-right'
+                      // Changed from 'object-contain object-right' to 'object-cover object-center'
+                      // This ensures the image completely fills the rounded-2xl border box.
+                      className='object-cover object-center'
                     />
                   </div>
                 </div>

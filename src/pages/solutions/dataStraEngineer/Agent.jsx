@@ -6,14 +6,11 @@ export default function Agent() {
     <div className='w-full mb-20 mt-6 lg:mt-6'>
       <div className='max-w-[1200px] mx-auto px-4 md:px-6 lg:px-6 xl:px-4'>
         <div className='w-full rounded-3xl relative overflow-hidden bg-gradient-to-r from-purple-50 via-pink-50 to-purple-100'>
-          {/* BACKGROUND IMAGE */}
-          <div className='absolute inset-0'>
-            <Image
-              src='/images/solutions/agent_bg.png'
-              alt='Background'
-              fill
-              className='object-cover'
-            />
+          {/* BACKGROUND VIDEO */}
+          <div className='absolute inset-0' style={{ opacity: 0.22 }}>
+            <video autoPlay loop muted playsInline className='w-full h-full object-cover'>
+              <source src='/images/solutions/agent_video.mp4' type='video/mp4' />
+            </video>
           </div>
 
           {/* CONTENT - Centered */}
@@ -32,7 +29,7 @@ export default function Agent() {
                 className='px-8 py-3 rounded-full border-2 font-medium hover:bg-purple-50 transition'
                 style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
               >
-                Explore Use caes
+                Explore Use Cases
               </button>
               <button className='px-8 py-3 rounded-full bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white font-medium hover:opacity-90 transition flex items-center gap-2'>
                 <Image src='/images/solutions/phone.svg' alt='Phone' width={18} height={18} />

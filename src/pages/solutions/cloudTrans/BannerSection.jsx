@@ -17,7 +17,7 @@ const bannerContent = {
   ctaText: 'Get in touch',
   images: {
     background: '/images/solutions/Hero section BG.jpg',
-    illustration: '/images/solutions/OBJECTS.png',
+    illustration: '/images/solutions/Cloud_Transformation.png',
   },
 };
 
