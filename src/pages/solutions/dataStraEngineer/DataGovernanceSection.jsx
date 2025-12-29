@@ -127,19 +127,6 @@ const cards = [
   },
 ];
 
-const borderColors = [
-  'border-purple-400',
-  'border-blue-400',
-  'border-indigo-400',
-  'border-violet-400',
-  'border-fuchsia-400',
-  'border-pink-400',
-  'border-rose-400',
-  'border-orange-400',
-  'border-amber-400',
-  'border-emerald-400',
-];
-
 // Path to circle image
 const CIRCLE_IMAGE_PATH = '/images/solutions/dataStrategyEngineer/circle_image.png';
 
@@ -261,7 +248,7 @@ export default function DataStrategySection() {
 
       {/* TABS - VISIBLE ONLY ON LARGE SCREENS */}
       {/* Added 'hidden lg:block' to hide tabs on mobile and tablet */}
-      <div className='hidden lg:block max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24 mb-4'>
+      <div className='hidden lg:block max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-16 mb-4'>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3'>
           {tabs.map((tab, i) => (
             <button
@@ -291,7 +278,7 @@ export default function DataStrategySection() {
               aria-hidden={i !== activeIndex}
             >
               <div
-                className={`bg-white/95 backdrop-blur-sm rounded-3xl border-2 ${borderColors[i]} shadow-xl p-6 md:p-8`}
+                className={`bg-white/95 backdrop-blur-sm rounded-3xl border-2 border-purple-400 shadow-xl p-6 md:p-8`}
               >
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-start'>
                   <div className='space-y-4'>

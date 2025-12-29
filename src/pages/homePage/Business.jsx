@@ -1,30 +1,46 @@
-import { FaPhone } from 'react-icons/fa';
+import Image from 'next/image';
 
 const Business = () => {
   return (
-    <div className="bg-white px-4 mb-[100px]">
-      <div className="mx-auto max-w-7xl container-wrapper">
-        <div className="p-8 sm:p-12 md:p-16 lg:p-20 rounded-[20px] sm:rounded-[25px] border-[4px] sm:border-[6px] md:border-[8px] border-[#F2F2F2] bg-white text-center shadow-2xl">
-          <h1 className="text-[32px] leading-[38px] font-semibold mb-4 md:mb-6 break-words">
-            Ready to <span className="text-[#914DC1]">Activate Agentic AI</span>
-          </h1>
+    <div className='w-full max-w-7xl mx-auto px-8 lg:px-12 pt-16 pb-8'>
+      <div className='w-full'>
+        <div
+          className='relative p-8 sm:p-12 md:p-16 lg:p-20 rounded-[20px] sm:rounded-[25px] border-[2px] border-[#F2F2F2] bg-white text-center overflow-hidden'
+          style={{ background: 'linear-gradient(135deg, #FFF7EB 0%, #FAE0FA 100%)' }}
+        >
+          {/* Left dot decoration */}
+          <div className='absolute left-0 top-0 w-[200px] h-full pointer-events-none opacity-100'>
+            <Image src='/images/HomePage/dot_left.svg' alt='' fill className='object-cover' />
+          </div>
 
-          <h2 className="text-[24px] leading-[32px] sm:text-[28px] sm:leading-[38px] md:text-[32px] md:leading-[20px] font-normal mb-10 md:mb-14 break-words">
-            in Your Business?
-          </h2>
+          {/* Right dot decoration */}
+          <div className='absolute right-0 top-0 w-[200px] h-full pointer-events-none opacity-100'>
+            <Image src='/images/HomePage/dot_right.svg' alt='' fill className='object-cover' />
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center items-center max-w-2xl mx-auto">
-            {/* Updated Explore button */}
-            <div className="w-full sm:w-[230px] rounded-full p-[2px] bg-gradient-to-r from-[#7030B1] to-[#B56DD3] shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
-              <button className="w-full h-[50px] px-6 md:px-8 text-[16px] font-semibold rounded-full bg-white text-[#6F2B8B]">
+          {/* Content */}
+          <div className='relative z-10'>
+            <h1 className='text-[32px] text-black leading-[38px] font-semibold mb-4 md:mb-6 break-words'>
+              Ready to <span className='text-[#914DC1]'>Activate Agentic AI</span>
+            </h1>
+
+            <h2 className='text-[24px] text-black leading-[32px] sm:text-[28px] sm:leading-[38px] md:text-[32px] md:leading-[20px] font-semibold mb-10 md:mb-14 break-words'>
+              in Your Business?
+            </h2>
+
+            {/* BUTTONS */}
+            <div className='flex flex-col sm:flex-row gap-4 items-center justify-center'>
+              <button
+                className='w-[200px] h-[48px] rounded-full border-2 font-medium hover:bg-purple-50 transition text-[15px]'
+                style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
+              >
                 Explore Use Cases
               </button>
+              <button className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[200px] h-[48px] rounded-full font-medium text-[15px] justify-center hover:scale-105 transition-transform shadow-lg'>
+                <Image src='/images/solutions/phone.svg' alt='Phone' width={18} height={18} />
+                Contact Us
+              </button>
             </div>
-
-            <button className="w-full sm:w-[230px] h-[50px] px-6 md:px-8 text-[16px] font-semibold rounded-full bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white flex items-center justify-center gap-3 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">
-              <FaPhone className="text-lg" />
-              Contact us
-            </button>
           </div>
         </div>
       </div>

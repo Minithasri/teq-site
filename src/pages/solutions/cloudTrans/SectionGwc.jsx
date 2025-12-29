@@ -16,7 +16,7 @@ const governanceContent = {
     },
     {
       id: 'center',
-      image: '/images/solutions/datagoverance/center_img.png',
+      image: '/images/solutions/section5.png',
     },
     {
       id: 'right',

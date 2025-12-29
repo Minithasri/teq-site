@@ -18,7 +18,7 @@ const bannerContent = {
   ctaText: 'Get in touch',
   images: {
     background: '/images/solutions/dataStrategyEngineer/data_hero.png',
-    illustration: '/images/solutions/Data_Strategy_Engineering.png',
+    illustration: '/images/solutions/heroimages/Data Strategy & Engineering.png',
   },
 };
 
@@ -38,9 +38,9 @@ export default function BannerSection() {
         <div className='absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent'></div>
       </div>
 
-      <div className='max-w-8xl mx-auto px-8 lg:px-28 pt-10 lg:pt-14 pb-24'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-14 pb-12'>
         {/* Breadcrumb */}
-        <nav aria-label='Breadcrumb' className='relative z-10 mb-4'>
+        <nav aria-label='Breadcrumb' className='relative z-10 mb-4 '>
           <ol className='inline-flex items-center gap-2 text-sm py-1'>
             {bannerContent.breadcrumb.items.map((item, index) => (
               <li key={index} className='flex items-center gap-2'>
@@ -67,7 +67,7 @@ export default function BannerSection() {
           {/* Left */}
           <div>
             <h1
-              className='text-[32px] md:text-[36px] font-semibold max-w-[600px] mb-2'
+              className='text-[32px] md:text-[36px] font-semibold max-w-[600px] mb-4 -mt-20'
               style={{ color: '#404040', lineHeight: '52px' }}
             >
               {bannerContent.title}

@@ -43,7 +43,7 @@ const Technology = () => {
         className='bg-[linear-gradient(135deg,_#7030B14D_0%,_#CAB9F64D_25%,_#E6F2F64D_50%,_#DDA16C4D_65%,_#FFA5814D_80%,_#E5AA664D_100%)]'
         style={{ backgroundColor: '#F9EAE1', clipPath: 'none' }}
       >
-        <div className='w-full px-4 md:px-6 lg:px-12 xl:px-24 pt-20 pb-16'>
+        <div className='w-full px-4 md:px-6 lg:px-12 xl:px-36 pt-20 pb-16'>
           {/* Header */}
           <header className='flex items-center mb-16 gap-2'>
             {/* Left Icon (decorative) */}

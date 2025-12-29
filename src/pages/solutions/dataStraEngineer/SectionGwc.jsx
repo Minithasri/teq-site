@@ -13,7 +13,7 @@ export default function SectionGwc() {
   return (
     // Changed bg-white to bg-transparent so the gradient from the section below is visible
     <section className='relative w-full bg-transparent overflow-visible z-20'>
-      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24 relative'>
+      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-36 relative'>
         {/* Title */}
         <h2
           className='text-3xl md:text-3xl font-medium text-center mb-4'

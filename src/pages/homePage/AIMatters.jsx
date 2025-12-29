@@ -58,12 +58,17 @@ const AIMatters = () => {
 
     scrollTriggerRef.current = ScrollTrigger.create({
       trigger: sectionRef.current,
-      start: 'top 10%',
-      end: `+=${features.length * 100}%`,
+      start: 'top 3%',
+      // CHANGED: Reduced from 100% to 60%.
+      // Lower number = less scrolling required. Higher number = more scrolling.
+      end: `+=${features.length * 40}%`,
       pin: true,
-      scrub: 1,
+      scrub: 0.5, // Reduced scrub slightly for snappier response (was 1)
       onUpdate: self => {
-        const newIdx = Math.min(Math.floor(self.progress * features.length), features.length - 1);
+        // We use Math.ceil to make the switch happen slightly earlier in the scroll
+        // or stick to Math.floor but ensure the calculation covers the range
+        const progress = self.progress;
+        const newIdx = Math.min(Math.floor(progress * features.length), features.length - 1);
         setActiveIndex(newIdx);
       },
     });
@@ -122,7 +127,7 @@ const AIMatters = () => {
                 <div
                   className={`bg-white rounded-xl ${
                     isMobile ? 'w-10 h-10' : 'w-14 h-14'
-                  } flex items-center justify-center shadow-lg p-2`}
+                  } flex items-center justify-center shadow-lg p-3`}
                 >
                   <Image src='/images/Spark.svg' alt='Spark' width={40} height={40} />
                 </div>
@@ -212,7 +217,7 @@ const AIMatters = () => {
               {/* right image */}
               <div className={`${isMobile ? 'w-full' : 'flex-[1.2]'} flex justify-end items-start`}>
                 <div
-                  className={`relative z-[10] ${isMobile ? 'w-full h-[250px]' : 'w-full h-[350px]'}`}
+                  className={`relative z-[10] ${isMobile ? 'w-full h-[250px]' : 'w-full h-[325px]'}`}
                 >
                   <Image
                     src={features[activeIndex].image}

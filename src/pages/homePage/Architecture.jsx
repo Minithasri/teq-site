@@ -70,22 +70,33 @@ const Architecture = () => {
     return () => window.removeEventListener('resize', onResize);
   }, [isMobile]);
 
+  // --- MODIFIED ANIMATION LOGIC ---
   useEffect(() => {
+    // Only run if not mobile and points are calculated
     if (isMobile || points.length !== 5) return;
 
     let animationId;
     const startTime = Date.now();
+    const duration = 4000; // 4 seconds total for the full sequence
 
     const animate = () => {
       const elapsed = Date.now() - startTime;
-      const progress = (elapsed % 4000) / 4000;
+
+      // Calculate progress from 0 to 1, clamping it at 1
+      const progress = Math.min(elapsed / duration, 1);
+
       setAnimationProgress(progress);
-      animationId = requestAnimationFrame(animate);
+
+      // Only continue the loop if we haven't reached the end (1)
+      if (progress < 1) {
+        animationId = requestAnimationFrame(animate);
+      }
     };
 
     animationId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(animationId);
   }, [points, isMobile]);
+  // -------------------------------
 
   const generatePath = (from, to, upward = true) => {
     const offset = upward ? -50 : 50;
@@ -128,11 +139,10 @@ const Architecture = () => {
       style={{
         paddingTop: '100px',
         paddingBottom: '100px',
-        backgroundColor: '#E8E0F5',
       }}
     >
       <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        {/* UPDATED TITLE BLOCK */}
+        {/* TITLE BLOCK */}
         <div className='text-center mb-20 flex justify-center'>
           <div
             style={{
@@ -182,14 +192,17 @@ const Architecture = () => {
 
               let localProgress = 0;
               if (animationProgress >= segmentStart && animationProgress <= segmentEnd) {
+                // Determine progress within this specific segment (0 to 1)
                 localProgress = (animationProgress - segmentStart) / segmentDuration;
               } else if (animationProgress > segmentEnd) {
+                // If animation has passed this segment, keep it fully drawn
                 localProgress = 1;
               }
 
               const dashArray = 10;
               const dashGap = 8;
               const totalDash = dashArray + dashGap;
+              // Note: The marching ants effect will freeze when setAnimationProgress stops updating
               const dashOffset = -(Date.now() / 12) % totalDash;
 
               const arrowPos = getMovingArrowPosition(from, to, i % 2 === 0, localProgress);
@@ -209,6 +222,7 @@ const Architecture = () => {
                     style={{ clipPath: `inset(0 ${100 - localProgress * 100}% 0 0)` }}
                   />
 
+                  {/* Arrow logic: Visible while moving, disappears when segment finishes */}
                   {localProgress > 0.05 && localProgress < 0.95 && (
                     <g transform={`translate(${arrowPos.x}, ${arrowPos.y})`}>
                       <g transform={`rotate(${arrowPos.angle})`}>
@@ -259,7 +273,6 @@ const Architecture = () => {
                 />
               </div>
 
-              {/* Updated title color to #404040 */}
               <h3 className='text-xl font-bold mb-2 tracking-tight' style={{ color: '#404040' }}>
                 {feature.title}
               </h3>

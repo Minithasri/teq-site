@@ -1,8 +1,8 @@
 'use client';
 import AIMatters from '@/pages//homePage/AIMatters';
+import AgentBuilding from '@/pages/homePage/AgentBuilding';
 import AgenticAI from '@/pages/homePage/AgenticAI';
 import Architecture from '@/pages/homePage/Architecture';
-import Business from '@/pages/homePage/Business';
 import HomeBanner from '@/pages/homePage/HomeBanner';
 import Philosophy from '@/pages/homePage/Philosophy';
 import ROI from '@/pages/homePage/ROI';
@@ -17,12 +17,12 @@ export default function HomePage() {
         <TechnologyPartner />
         <ROI />
         <AgenticAI />
+        <AgentBuilding />
         <Architecture />
         <TechnologyStack />
         <AIMatters />
-        <Philosophy />
         <UseCases />
-        <Business />
+        <Philosophy />
       </main>
     </div>
   );

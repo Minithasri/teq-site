@@ -25,14 +25,14 @@ export default function Agent() {
             </h2>
 
             {/* BUTTONS */}
-            <div className='flex flex-col sm:flex-row gap-4 items-center'>
+            <div className='flex flex-col sm:flex-row gap-4 items-center justify-center'>
               <button
-                className='px-8 py-3 rounded-full border-2 font-medium hover:bg-purple-50 transition'
+                className='w-[200px] h-[48px] rounded-full border-2 font-medium hover:bg-purple-50 transition text-[15px]'
                 style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
               >
                 Explore Use Cases
               </button>
-              <button className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[170px] h-[45px] rounded-full font-medium text-[15px] justify-center hover:scale-105 transition-transform shadow-lg'>
+              <button className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[200px] h-[48px] rounded-full font-medium text-[15px] justify-center hover:scale-105 transition-transform shadow-lg'>
                 <Image src='/images/solutions/phone.svg' alt='Phone' width={18} height={18} />
                 Contact Us
               </button>

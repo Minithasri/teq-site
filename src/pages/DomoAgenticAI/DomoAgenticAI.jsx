@@ -42,7 +42,7 @@ const DomoAgenticAI = () => {
               {/* Second Row - Title */}
               <div className='text-center lg:text-left mb-6 sm:mb-8'>
                 <h2 className='text-[28px] sm:text-[34px] lg:text-[40px] font-semibold leading-[34px] sm:leading-[42px] lg:leading-[48px]'>
-                  What are
+                  What are{' '}
                   <span
                     className='bg-clip-text text-transparent'
                     style={{

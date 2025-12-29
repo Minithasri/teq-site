@@ -41,10 +41,10 @@ const BuiltAIAgents = () => {
     >
       <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Spark + Button Row */}
-        <div className='relative flex flex-col sm:flex-row items-center justify-between gap-6 mb-12 lg:mb-16 w-full'>
+        <div className='relative flex flex-col sm:flex-row items-center justify-between gap-6 mb-12 lg:mb-16'>
           <div className='z-10'>
             <div
-              className='flex items-center justify-center rounded-full shadow-md'
+              className='flex items-center justify-center rounded-2xl shadow-md'
               style={{ backgroundColor: '#ffffff', width: '66px', height: '66px' }}
             >
               <Image src='/images/Spark.svg' alt='Spark' width={36} height={36} />
@@ -120,12 +120,13 @@ const BuiltAIAgents = () => {
                 backgroundOrigin: 'border-box',
                 backgroundClip: 'padding-box, border-box',
                 backgroundPosition: '0 0, 100% 100%',
-                transition: 'background-position 0.5s ease, transform 0.4s ease, box-shadow 0.4s ease',
+                transition:
+                  'background-position 0.5s ease, transform 0.4s ease, box-shadow 0.4s ease',
               }}
-              onMouseEnter={(e) => {
+              onMouseEnter={e => {
                 e.currentTarget.style.backgroundPosition = '0 0, 0 0';
               }}
-              onMouseLeave={(e) => {
+              onMouseLeave={e => {
                 e.currentTarget.style.backgroundPosition = '0 0, 100% 100%';
               }}
             >

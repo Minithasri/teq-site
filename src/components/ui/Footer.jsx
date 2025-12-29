@@ -1,6 +1,11 @@
-import React from 'react';
+'use client';
+import { usePathname } from 'next/navigation';
+import Business from '../../pages/homePage/Business';
 
 const Footer = () => {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
   const quickLinks = ['Home', 'About Us', 'Contact Us', 'Blogs', 'Case Studies'];
   const partners = ['DOMO', 'Snowflake', 'Boomi', 'Databricks', 'Google Cloud'];
   const solutions = [
@@ -21,6 +26,11 @@ const Footer = () => {
         borderTopRightRadius: '50px',
       }}
     >
+      {isHomePage && (
+        <div className='w-full'>
+          <Business />
+        </div>
+      )}
       <div className='max-w-7xl mx-auto px-8 lg:px-12 py-12'>
         {/* Main Footer Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12'>
