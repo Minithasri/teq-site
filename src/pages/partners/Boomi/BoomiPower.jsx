@@ -53,7 +53,7 @@ const BoomiPower = () => {
     const ctx = gsap.context(() => {
       scrollTriggerRef.current = ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: 'top 10%', // Starts when top of section is 10% from top of viewport
+        start: 'top 2%', // Starts when top of section is 10% from top of viewport
         end: `+=${steps.length * 50}%`, // Scroll distance: 50% viewport height per item
         pin: true, // Pin the container
         scrub: 0.5, // Smooth scrubbing
@@ -148,7 +148,7 @@ const BoomiPower = () => {
           </div>
 
           {/* Right: Image Display */}
-          <div className='w-full lg:w-2/3 relative min-h-[400px] lg:min-h-auto'>
+          <div className='w-full lg:w-2/3 relative min-h-[400px] lg:min-h-auto flex justify-end'>
             <div className='w-full max-w-[530px] h-[350px] bg-gradient-to-br from-[#F3E5F5] to-[#E1BEE7] rounded-[32px] overflow-hidden flex items-center justify-center p-8 shadow-inner'>
               {/* Image Transition Wrapper */}
               <div className='relative w-full h-full max-w-[550px] max-h-[450px]'>

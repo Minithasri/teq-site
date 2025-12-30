@@ -1,6 +1,7 @@
 'use client';
 
 import BoomiPower from '@/pages/partners/Boomi/BoomiPower';
+import BoomiSolutions from '@/pages/partners/Boomi/BoomiSolutions';
 import FeaturesBoomi from '@/pages/partners/Boomi/FeaturesBoomi';
 import HeroSection from '@/pages/partners/Boomi/HeroSection';
 import Platforms from '@/pages/partners/Boomi/Platforms';
@@ -14,6 +15,7 @@ export default function BoomiPage() {
       <FeaturesBoomi />
       <Platforms />
       <BoomiPower />
+      <BoomiSolutions />
     </main>
   );
 }
