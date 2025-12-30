@@ -1,6 +1,6 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 const StepIcon = ({ stepNumber }) => {
   return (
@@ -67,7 +67,7 @@ const SimpleSteps = () => {
       const pathTotalLength = pathRef.current.getTotalLength();
 
       if (pathTotalLength === 0) {
-        console.error("SVG Path Length is 0. Check component visibility or rendering order.");
+        console.error('SVG Path Length is 0. Check component visibility or rendering order.');
         return;
       }
 
@@ -168,7 +168,7 @@ const SimpleSteps = () => {
                   <img
                     src='/images/Data.svg'
                     alt='step icon'
-                    className='w-2 h-2 xl:w-14 xl:h-14 object-contain mb-4'
+                    className='w-12 h-12 xl:w-14 xl:h-14 object-contain mb-4'
                   />
 
                   <h3 className='font-semibold text-base xl:text-lg bg-gradient-to-r from-[#7030B1] to-[#B56DD3] bg-clip-text text-transparent mb-2'>

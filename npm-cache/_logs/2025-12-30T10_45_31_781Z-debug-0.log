@@ -7,8 +7,8 @@
 6 silly config load:file:C:\Users\ahars\AppData\Roaming\npm\etc\npmrc
 7 verbose title npm exec lint-staged
 8 verbose argv "exec" "--" "lint-staged"
-9 verbose logfile logs-max:10 dir:D:\REVAMP\gwc-website-revamp\npm-cache\_logs\2025-12-18T06_58_40_929Z-
-10 verbose logfile D:\REVAMP\gwc-website-revamp\npm-cache\_logs\2025-12-18T06_58_40_929Z-debug-0.log
+9 verbose logfile logs-max:10 dir:D:\REVAMP\gwc-website-revamp\npm-cache\_logs\2025-12-30T10_45_31_781Z-
+10 verbose logfile D:\REVAMP\gwc-website-revamp\npm-cache\_logs\2025-12-30T10_45_31_781Z-debug-0.log
 11 silly logfile start cleaning logs, removing 1 files
 12 silly logfile done cleaning log files
 13 verbose cwd D:\REVAMP\gwc-website-revamp

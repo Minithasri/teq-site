@@ -21,9 +21,9 @@ const DomoBanner = () => {
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* ---------- CENTERED TEXT ---------- */}
         <div className='text-center max-w-7xl mx-auto space-y-6 mb-16 mt-14'>
-          <h1 className='text-[42px] md:text-[42px] lg:text-[42px] font-bold text-[#2D2D2D] '>
+          <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#2D2D2D] leading-tight'>
             Reimagine Enterprise Workflows with
-            <br />
+            <br className='hidden md:block' />
             <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#2BC0E4] to-[#4F72D8] block mt-2'>
               DOMO Agentic AI
             </span>
@@ -48,10 +48,9 @@ const DomoBanner = () => {
           </div>
         </div>
 
-        {/* ---------- IMAGE LAYOUT (70 / 30) ---------- */}
-        {/* ---------- IMAGE LAYOUT (70 / 30) ---------- */}
+        {/* ---------- IMAGE LAYOUT (66 / 33) ---------- */}
         <div className='w-full max-w-7xl mx-auto'>
-          <div className='grid grid-cols-1 lg:grid-cols-[1.0fr_0.6fr] gap-6 lg:gap-[2%]'>
+          <div className='grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 lg:gap-8'>
             {/* LEFT IMAGE – 70% */}
             <div className='relative h-[300px] md:h-[400px] rounded-[24px] overflow-hidden shadow-2xl'>
               <Image

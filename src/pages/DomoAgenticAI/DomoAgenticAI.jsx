@@ -114,7 +114,7 @@ const DomoAgenticAI = () => {
 
           {/* Right Column */}
           <div className='flex justify-center lg:justify-end items-stretch mt-6 lg:mt-0'>
-            <div className='w-full lg:w-[450px] flex items-center justify-center'>
+            <div className='w-full max-w-[450px] flex items-center justify-center'>
               <img
                 src='/images/DomoAgenticAI.svg'
                 alt='Domo Agentic AI'

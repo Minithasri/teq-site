@@ -1,7 +1,6 @@
 'use client';
-import React from 'react';
-import { FiArrowRight } from 'react-icons/fi';
 import Image from 'next/image';
+import { FiArrowRight } from 'react-icons/fi';
 
 const PlatformFeatures = () => {
   const cards = [
@@ -40,43 +39,43 @@ const PlatformFeatures = () => {
 
   return (
     <section
-      className="w-full mt-[-150px] sm:mt-[-250px] lg:mt-[-300px]"
+      className='w-full mt-[-150px] sm:mt-[-250px] lg:mt-[-300px]'
       style={{
         background:
           'linear-gradient(135deg, #7030B14D 0%, #CAB9F64D 25%, #E6F2F64D 50%, #DDA16C4D 65%, #FFA5814D 80%, #E5AA664D 100%), #F9EAE1',
         padding: '300px 20px 100px 20px',
       }}
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header with Spark & CTA */}
-        <div className="relative flex flex-col sm:flex-row items-center justify-between gap-6 mb-12 lg:mb-16">
-          <div className="z-10">
+        <div className='relative flex flex-col sm:flex-row items-center justify-between gap-6 mb-12 lg:mb-16'>
+          <div className='z-10'>
             <div
-              className="flex items-center justify-center rounded-2xl shadow-md"
+              className='flex items-center justify-center rounded-2xl shadow-md'
               style={{ backgroundColor: '#ffffff', width: '66px', height: '66px' }}
             >
-              <Image src="/images/Spark.svg" alt="Spark" width={36} height={36} />
+              <Image src='/images/Spark.svg' alt='Spark' width={36} height={36} />
             </div>
           </div>
 
-          <div className="hidden sm:flex border-t-2 border-dashed border-[#1F1F1F] absolute left-[100px] right-[300px] top-1/2 transform -translate-y-1/2 opacity-20" />
+          <div className='hidden sm:flex border-t-2 border-dashed border-[#1F1F1F] absolute left-[100px] right-[300px] top-1/2 transform -translate-y-1/2 opacity-20' />
 
-          <div className="z-10">
+          <div className='z-10'>
             <button
-              className="group flex items-center gap-3 font-semibold transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg justify-center border-2 border-[#8c49bf] rounded-full px-8 py-3 text-[#8c49bf] hover:bg-[#8c49bf] hover:text-white"
+              className='group flex items-center gap-3 font-semibold transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg justify-center border-2 border-[#8c49bf] rounded-full px-8 py-3 text-[#8c49bf] hover:bg-[#8c49bf] hover:text-white'
               style={{ width: '250px', height: '48px', fontSize: '16px' }}
             >
               Talk to our experts
-              <FiArrowRight className="text-xl transition-transform duration-300 group-hover:translate-x-1" />
+              <FiArrowRight className='text-xl transition-transform duration-300 group-hover:translate-x-1' />
             </button>
           </div>
         </div>
 
         {/* Title & Description */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-12 mb-16 lg:mb-20 items-start">
-          <div className="text-center lg:text-left">
+        <div className='grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-12 mb-16 lg:mb-20 items-start'>
+          <div className='text-center lg:text-left'>
             <h1
-              className="leading-tight"
+              className='leading-tight'
               style={{
                 fontSize: '40px',
                 fontWeight: 500,
@@ -87,9 +86,9 @@ const PlatformFeatures = () => {
             </h1>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
+          <div className='flex justify-center lg:justify-end'>
             <p
-              className="max-w-xl text-center lg:text-right font-medium leading-relaxed"
+              className='max-w-xl text-center lg:text-right font-medium leading-relaxed'
               style={{
                 color: '#737373',
                 fontSize: '14px',
@@ -103,22 +102,20 @@ const PlatformFeatures = () => {
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full justify-items-center">
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full justify-items-center'>
           {cards.map((card, index) => (
             <div
               key={index}
-              className="group relative text-center bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-400 hover:-translate-y-3 flex flex-col items-center justify-start overflow-hidden"
+              className='group relative text-center bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-400 hover:-translate-y-3 flex flex-col items-center justify-start overflow-hidden w-full max-w-[375px] min-h-[274px]'
               style={{
                 padding: '36px 24px',
-                width: '375px',
-                height: '274px',
               }}
             >
               {/* Subtle background glow on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#8c49bf22] to-[#FFA58122] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className='absolute inset-0 bg-gradient-to-br from-[#8c49bf22] to-[#FFA58122] opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
 
               <div
-                className="relative mb-4 flex items-center justify-center shadow-md bg-[#fafafa] rounded-xl transition-transform duration-300 group-hover:scale-110"
+                className='relative mb-4 flex items-center justify-center shadow-md bg-[#fafafa] rounded-xl transition-transform duration-300 group-hover:scale-110'
                 style={{
                   width: '72px',
                   height: '72px',
@@ -138,7 +135,7 @@ const PlatformFeatures = () => {
               </div>
 
               <h3
-                className="relative font-semibold mb-2 mt-4 leading-tight transition-colors duration-300 group-hover:text-[#8c49bf]"
+                className='relative font-semibold mb-2 mt-4 leading-tight transition-colors duration-300 group-hover:text-[#8c49bf]'
                 style={{
                   color: '#D97706',
                   fontSize: '16px',
@@ -151,7 +148,7 @@ const PlatformFeatures = () => {
               </h3>
 
               <p
-                className="relative leading-relaxed text-center transition-colors duration-300 group-hover:text-[#333333]"
+                className='relative leading-relaxed text-center transition-colors duration-300 group-hover:text-[#333333]'
                 style={{
                   color: '#525252',
                   fontSize: '14px',

@@ -27,28 +27,28 @@ const AgenticAI = () => {
   ];
 
   return (
-    <section className='relative w-full py-16 md:py-20 lg:py-24 overflow-hidden bg-white'>
+    <section className='relative w-full py-16 md:py-24 overflow-hidden bg-white'>
       {/* Background Circle - Left Side */}
-      <div className='absolute left-0 top-1/2 -translate-y-1/2 w-[900px] h-[900px] -translate-x-1/3 pointer-events-none opacity-100'>
+      <div className='absolute left-0 top-1/2 -translate-y-1/2 w-[600px] md:w-[900px] h-[600px] md:h-[900px] -translate-x-1/3 pointer-events-none opacity-100'>
         <Image src='/images/HomePage/circle_big.png' alt='' fill className='object-contain' />
       </div>
 
-      <div className='relative z-10 max-w-8xl mx-auto px-4 md:px-6 lg:px-12 xl:px-40'>
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header with Spark Icon and CTA Button */}
-        <div className='flex items-center justify-between mb-12 lg:mb-16'>
+        <div className='flex flex-col sm:flex-row items-center justify-between gap-6 mb-12 lg:mb-20'>
           {/* Spark Icon */}
           <div className='flex-shrink-0'>
-            <div className='w-16 h-16 rounded-2xl bg-white border flex items-center justify-center'>
+            <div className='w-16 h-16 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center'>
               <Image src='/images/Spark.svg' alt='' aria-hidden width={32} height={32} />
             </div>
           </div>
 
-          {/* Dashed Line - Gray and dashed */}
-          <div className='hidden lg:block flex-1 mx-4 h-[2px] bg-[linear-gradient(to_right,#D4D4D4_50%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x' />
+          {/* Dashed Line */}
+          <div className='hidden sm:block flex-1 mx-6 h-[2px] bg-[linear-gradient(to_right,#D4D4D4_50%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x' />
 
           {/* CTA Button */}
           <button
-            className='px-6 py-3 rounded-full border-2 font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2'
+            className='px-6 py-3 rounded-full border-2 font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2 bg-white'
             style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
           >
             Talk to Our Experts
@@ -60,16 +60,15 @@ const AgenticAI = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 lg:mb-20'>
           {/* Left: Title */}
           <div>
-            <h2 className='text-4xl md:text-4xl font-medium text-[#404040] leading-tight'>
+            <h2 className='text-3xl md:text-4xl lg:text-5xl font-medium text-[#404040] leading-tight text-center lg:text-left'>
               What does
-              <br />
-              GWC actually solve?
+              <br className='hidden lg:block' /> GWC actually solve?
             </h2>
           </div>
 
           {/* Right: Description */}
           <div className='flex items-center'>
-            <p className='text-[#525252] text-[15px] md:text-[15px] leading-relaxed'>
+            <p className='text-[#525252] text-base md:text-lg leading-relaxed text-center lg:text-left'>
               GWC streamlines and automates complex data management, ensuring transparency,
               compliance, and smarter, faster decision making across the organization.
             </p>
@@ -77,23 +76,21 @@ const AgenticAI = () => {
         </div>
 
         {/* Feature Cards */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8'>
           {cards.map((card, index) => (
             <div
               key={index}
-              className='rounded-3xl p-[2px] hover:shadow-lg transition-shadow duration-300'
+              className='rounded-3xl p-[2px] hover:shadow-xl transition-shadow duration-300 w-full min-h-[350px] flex'
               style={{
-                width: '275px',
-                height: '374px',
                 background:
                   index % 2 === 0
                     ? 'linear-gradient(135deg, #FAE0FA 0%, #FFF7EB 100%)'
                     : 'linear-gradient(135deg, #FFF7EB 0%, #FAE0FA 100%)',
               }}
             >
-              <div className='bg-white rounded-3xl h-full p-6 flex flex-col items-start text-left'>
+              <div className='bg-white rounded-[22px] h-full w-full p-6 lg:p-8 flex flex-col items-start text-left'>
                 {/* Icon Container */}
-                <div className='w-16 h-16 rounded-full flex items-center justify-center mb-4 border shadow-lg'>
+                <div className='w-16 h-16 rounded-full flex items-center justify-center mb-8 border border-gray-100 shadow-sm'>
                   <Image
                     src={card.icon}
                     alt=''
@@ -108,11 +105,13 @@ const AgenticAI = () => {
                   />
                 </div>
 
-                {/* Title */}
-                <h3 className='text-lg font-semibold text-[#404040] mb-32'>{card.title}</h3>
-
-                {/* Subtitle */}
-                <p className='text-[16px] text-[#525252] leading-relaxed'>{card.subtitle}</p>
+                {/* Content */}
+                <div className='flex-1 flex flex-col'>
+                  <h3 className='text-xl font-semibold text-[#404040] mb-4'>{card.title}</h3>
+                  <p className='text-[15px] md:text-base text-[#525252] leading-relaxed mt-auto'>
+                    {card.subtitle}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

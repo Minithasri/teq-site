@@ -1,18 +1,16 @@
 'use client';
+import { gsap } from 'gsap';
+import { Flip } from 'gsap/Flip';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Flip } from 'gsap/Flip';
 
 gsap.registerPlugin(ScrollTrigger, Flip);
 
 const AIMatters = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRef = useRef(null);
-  const scrollTriggerRef = useRef(null);
   const itemRefs = useRef([]);
   const gradientRef = useRef(null);
   const progressBarRef = useRef(null);
@@ -40,58 +38,52 @@ const AIMatters = () => {
     },
   ];
 
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);
-  };
-
+  /*
+     GSAP Logic for DESKTOP Scroll
+     We wrap this in matchMedia so it only runs on desktop (min-width: 1024px)
+  */
   useEffect(() => {
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    const mm = gsap.matchMedia();
 
-  // Scroll trigger driving activeIndex
-  useEffect(() => {
-    if (!sectionRef.current || isMobile) return;
-
-    if (scrollTriggerRef.current) scrollTriggerRef.current.kill();
-
-    scrollTriggerRef.current = ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: 'top 3%',
-      // CHANGED: Reduced from 100% to 60%.
-      // Lower number = less scrolling required. Higher number = more scrolling.
-      end: `+=${features.length * 40}%`,
-      pin: true,
-      scrub: 0.5, // Reduced scrub slightly for snappier response (was 1)
-      onUpdate: self => {
-        // We use Math.ceil to make the switch happen slightly earlier in the scroll
-        // or stick to Math.floor but ensure the calculation covers the range
-        const progress = self.progress;
-        const newIdx = Math.min(Math.floor(progress * features.length), features.length - 1);
-        setActiveIndex(newIdx);
-      },
+    mm.add('(min-width: 1024px)', () => {
+      // ScrollTrigger for activeIndex
+      const st = ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: 'top 3%',
+        end: `+=${features.length * 40}%`,
+        pin: true,
+        scrub: 0.5,
+        onUpdate: self => {
+          const progress = self.progress;
+          const newIdx = Math.min(Math.floor(progress * features.length), features.length - 1);
+          setActiveIndex(newIdx);
+        },
+      });
+      return () => st.kill();
     });
 
-    return () => scrollTriggerRef.current && scrollTriggerRef.current.kill();
-  }, [features.length, isMobile]);
+    return () => mm.revert();
+  }, [features.length]);
 
-  // GSAP FLIP animation controlling gradient height + sliding movement
+  // FLIP Effect (Desktop Only)
   useEffect(() => {
-    if (!itemRefs.current[activeIndex] || !gradientRef.current) return;
+    // Only run if elements exist (meaning we are on desktop logic)
+    if (!progressBarRef.current || !gradientRef.current || !itemRefs.current[activeIndex]) return;
 
     const state = Flip.getState(gradientRef.current);
-
     const targetEl = itemRefs.current[activeIndex];
     const barRect = progressBarRef.current.getBoundingClientRect();
     const rect = targetEl.getBoundingClientRect();
 
+    // Calculate new position
     const newHeight = rect.height;
     const newY = rect.top - barRect.top;
 
+    // Apply new position immediately before flip
     gradientRef.current.style.height = `${newHeight}px`;
     gradientRef.current.style.transform = `translateY(${newY}px)`;
 
+    // Animate
     Flip.from(state, {
       duration: 0.45,
       ease: 'power2.out',
@@ -101,133 +93,118 @@ const AIMatters = () => {
   return (
     <div
       ref={sectionRef}
-      className='flex items-center justify-center relative w-full'
-      style={{
-        marginTop: isMobile ? '-100px' : '-200px',
-        paddingLeft: isMobile ? '0px' : '40px',
-        paddingRight: isMobile ? '0px' : '40px',
-      }}
+      className='flex items-center justify-center relative w-full mt-[-100px] lg:mt-[-200px] px-0 lg:px-10'
     >
-      <div
-        className={`bg-gradient-to-br from-[#7030B1] to-[#A545CC] relative overflow-hidden w-full ${
-          isMobile ? 'min-h-[500px] rounded-none' : 'min-h-[450px] rounded-[25px]'
-        }`}
-      >
+      <div className='bg-gradient-to-br from-[#7030B1] to-[#A545CC] relative overflow-hidden w-full min-h-[500px] lg:min-h-[450px] rounded-none lg:rounded-[25px]'>
         <div className="absolute inset-0 bg-[url('/images/AIMatters.jpg')] bg-cover bg-center opacity-40" />
 
-        <div className='relative z-20 mx-auto h-full w-full'>
-          <div className={`${isMobile ? 'p-4' : 'p-[100px]'}`}>
-            {/* header + summary unchanged */}
-            <div className='flex flex-col gap-10'>
-              <div
-                className={`flex ${
-                  isMobile ? 'flex-col items-center gap-5' : 'flex-row items-center justify-between'
-                } w-full relative`}
-              >
-                <div
-                  className={`bg-white rounded-xl ${
-                    isMobile ? 'w-10 h-10' : 'w-14 h-14'
-                  } flex items-center justify-center shadow-lg p-3`}
-                >
-                  <Image src='/images/Spark.svg' alt='Spark' width={40} height={40} />
-                </div>
-
-                {!isMobile && (
-                  <div className='flex-1 border-t-2 border-dashed border-white/60 absolute left-[calc(3.5rem+15px)] right-[calc(16rem+15px)] top-1/2 -translate-y-1/2' />
-                )}
-
-                <button className='border-2 border-white/85 rounded-3xl bg-transparent text-white font-medium cursor-pointer flex items-center justify-center gap-2 transition-all duration-300 px-6 h-12 text-base w-64 hover:bg-white hover:text-[#7030B1]'>
-                  Talk to our expert <FiArrowRight size={18} />
-                </button>
+        <div className='relative z-20 mx-auto h-full w-full p-6 sm:p-10 lg:p-[100px]'>
+          {/* HEADER */}
+          <div className='flex flex-col gap-10'>
+            {/* Top Row: Icon ... Button */}
+            <div className='flex flex-col lg:flex-row items-center lg:justify-between w-full relative gap-6 lg:gap-0'>
+              {/* Icon */}
+              <div className='bg-white rounded-xl w-14 h-14 flex items-center justify-center shadow-lg p-3'>
+                <Image src='/images/Spark.svg' alt='Spark' width={40} height={40} />
               </div>
 
-              <div
-                className={`flex ${
-                  isMobile
-                    ? 'flex-col items-center text-center gap-4'
-                    : 'flex-row items-start gap-8'
-                } w-full`}
-              >
-                <h2
-                  className={`text-white font-semibold ${isMobile ? 'text-xl' : 'text-4xl'} flex-1 leading-tight`}
-                >
-                  Why GWC? Your
-                  <br />
-                  enterprise AI advantage.
-                </h2>
-                <p
-                  className={`text-white opacity-95 ${isMobile ? 'text-sm' : 'text-base'} flex-1 max-w-[580px]`}
-                >
-                  Agentic AI is the next evolution of automation — intelligent agents that observe,
-                  reason, and act with minimal human input.
-                </p>
-              </div>
+              {/* Dashed Line (Desktop Only) */}
+              <div className='hidden lg:block flex-1 border-t-2 border-dashed border-white/60 absolute left-[calc(3.5rem+15px)] right-[calc(16rem+15px)] top-1/2 -translate-y-1/2' />
+
+              {/* Button */}
+              <button className='border-2 border-white/85 rounded-3xl bg-transparent text-white font-medium cursor-pointer flex items-center justify-center gap-2 transition-all duration-300 px-6 h-12 text-base w-full sm:w-64 hover:bg-white hover:text-[#7030B1]'>
+                Talk to our expert <FiArrowRight size={18} />
+              </button>
             </div>
 
-            {/* ===== Feature list + GSAP progress bar ===== */}
-            <div className={`flex ${isMobile ? 'flex-col gap-6 mt-6' : 'flex-row gap-8 mt-6'}`}>
-              <div className='flex flex-row gap-6 flex-1'>
-                {/* Vertical bar track (z-index fix added) */}
+            {/* Title Text */}
+            <div className='flex flex-col lg:flex-row items-center text-center lg:items-start lg:text-left gap-6 lg:gap-8'>
+              <h2 className='text-white font-semibold text-2xl lg:text-4xl flex-1 leading-tight'>
+                Why GWC? Your
+                <br className='hidden lg:block' /> enterprise AI advantage.
+              </h2>
+              <p className='text-white opacity-95 text-sm lg:text-base flex-1 max-w-[580px]'>
+                Agentic AI is the next evolution of automation — intelligent agents that observe,
+                reason, and act with minimal human input.
+              </p>
+            </div>
+          </div>
+
+          {/* =======================
+                DESKTOP CONTENT (Tabs/Grid)
+               ======================= */}
+          <div className='hidden lg:flex flex-row gap-8 mt-12'>
+            {/* List */}
+            <div className='flex flex-row gap-6 flex-1'>
+              {/* Progress Bar Track */}
+              <div
+                ref={progressBarRef}
+                className='relative w-[6px] bg-white rounded-full overflow-hidden z-[40]'
+              >
+                {/* Moving Gradient */}
                 <div
-                  ref={progressBarRef}
-                  className='relative w-[6px] bg-white rounded-full overflow-hidden z-[40]'
-                >
-                  {/* Moving gradient block (z-index fix added) */}
+                  ref={gradientRef}
+                  className='absolute left-0 w-full rounded-full z-[50] bg-gradient-to-b from-[#7030B1] to-[#B56DD3]'
+                  style={{ height: '60px' }}
+                />
+              </div>
+              {/* Items */}
+              <div className='flex-1'>
+                {features.map((item, index) => (
                   <div
-                    ref={gradientRef}
-                    className='absolute left-0 w-full rounded-full z-[50]'
-                    style={{
-                      background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                      height: '60px',
-                    }}
-                  />
-                </div>
-
-                {/* Feature list */}
-                <div className='flex-1'>
-                  {features.map((item, index) => (
-                    <div
-                      key={index}
-                      ref={el => (itemRefs.current[index] = el)}
-                      className={`cursor-pointer py-5 transition-all duration-300 ${
-                        index < features.length - 1 ? 'border-b border-white/15' : ''
-                      }`}
-                      onClick={() => setActiveIndex(index)}
+                    key={index}
+                    ref={el => (itemRefs.current[index] = el)}
+                    className={`cursor-pointer py-5 transition-all duration-300 ${index < features.length - 1 ? 'border-b border-white/15' : ''}`}
+                    onClick={() => setActiveIndex(index)}
+                  >
+                    <h3
+                      className={`text-white text-lg transition-all ${activeIndex === index ? 'font-bold opacity-100' : 'font-medium opacity-90'}`}
                     >
-                      <h3
-                        className={`text-white text-lg transition-all ${
-                          activeIndex === index
-                            ? 'font-semibold opacity-100'
-                            : 'font-medium opacity-90'
-                        }`}
-                      >
-                        {item.title}
-                      </h3>
-
-                      {activeIndex === index && (
-                        <p className='text-white/90 mt-4 leading-relaxed animate-fadeIn'>
-                          {item.desc}
-                        </p>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* right image */}
-              <div className={`${isMobile ? 'w-full' : 'flex-[1.2]'} flex justify-end items-start`}>
-                <div
-                  className={`relative z-[10] ${isMobile ? 'w-full h-[250px]' : 'w-full h-[325px]'}`}
-                >
-                  <Image
-                    src={features[activeIndex].image}
-                    alt={features[activeIndex].title}
-                    fill
-                    className='object-contain object-right rounded-2xl'
-                  />
-                </div>
+                      {item.title}
+                    </h3>
+                    {activeIndex === index && (
+                      <p className='text-white/90 mt-4 leading-relaxed animate-fadeIn'>
+                        {item.desc}
+                      </p>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
+            {/* Right Image */}
+            <div className='flex-[1.2] flex justify-end items-start'>
+              <div className='relative z-[10] w-full h-[325px]'>
+                <Image
+                  src={features[activeIndex].image}
+                  alt={features[activeIndex].title}
+                  fill
+                  className='object-contain object-right rounded-2xl'
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* =======================
+                MOBILE CONTENT (Stack)
+               ======================= */}
+          <div className='lg:hidden flex flex-col gap-6 mt-12'>
+            {features.map((item, index) => (
+              <div
+                key={index}
+                className='bg-white/10 border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-colors'
+              >
+                <div className='relative h-[180px] w-full mb-6'>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className='object-contain object-center'
+                  />
+                </div>
+                <h3 className='text-xl font-bold text-white mb-3 leading-tight'>{item.title}</h3>
+                <p className='text-white/90 text-sm leading-relaxed'>{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

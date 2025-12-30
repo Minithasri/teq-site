@@ -46,11 +46,15 @@ const BoomiPower = () => {
   const scrollTriggerRef = useRef(null);
 
   // --- SCROLL TRIGGER LOGIC (Matches AIMatters) ---
+  // --- SCROLL TRIGGER LOGIC (Matches AIMatters) ---
   useEffect(() => {
     // Kill previous trigger if exists (safety for re-renders)
     if (scrollTriggerRef.current) scrollTriggerRef.current.kill();
 
-    const ctx = gsap.context(() => {
+    let mm = gsap.matchMedia();
+
+    // Add matchMedia for Desktop only
+    mm.add('(min-width: 1024px)', () => {
       scrollTriggerRef.current = ScrollTrigger.create({
         trigger: sectionRef.current,
         start: 'top 2%', // Starts when top of section is 10% from top of viewport
@@ -64,9 +68,9 @@ const BoomiPower = () => {
           setActiveStep(newIdx);
         },
       });
-    }, sectionRef);
+    });
 
-    return () => ctx.revert(); // Cleanup GSAP context
+    return () => mm.revert(); // Cleanup GSAP MatchMedia context (kills triggers)
   }, []);
 
   return (
@@ -106,8 +110,8 @@ const BoomiPower = () => {
           </div>
         </div>
 
-        {/* --- Content Area --- */}
-        <div className='flex flex-col lg:flex-row gap-8 lg:gap-20 flex-1'>
+        {/* --- Desktop Content Area (Interactive) --- */}
+        <div className='hidden lg:flex flex-col lg:flex-row gap-8 lg:gap-20 flex-1'>
           {/* Left: Interactive List */}
           <div className='w-full lg:w-1/3 flex flex-col justify-center'>
             {steps.map((step, index) => {
@@ -172,6 +176,33 @@ const BoomiPower = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* --- Mobile Content Area (Stacked) --- */}
+        <div className='flex lg:hidden flex-col gap-8'>
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className='bg-white rounded-[24px] p-6 shadow-md border border-gray-100'
+            >
+              {/* Image */}
+              <div className='w-full h-[240px] bg-gradient-to-br from-[#F3E5F5] to-[#E1BEE7] rounded-xl mb-6 flex items-center justify-center p-4 overflow-hidden'>
+                <Image
+                  src={step.image}
+                  alt={step.title}
+                  width={300}
+                  height={200}
+                  className='object-contain max-h-full'
+                />
+              </div>
+
+              {/* Text */}
+              <div>
+                <h3 className='text-xl font-bold text-[#4A2050] mb-3'>{step.title}</h3>
+                <p className='text-gray-600 text-sm leading-relaxed'>{step.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

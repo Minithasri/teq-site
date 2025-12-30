@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const Philosophy = () => {
-  const [expandedIndex, setExpandedIndex] = useState(0); // First item expanded by default
+  const [expandedIndex, setExpandedIndex] = useState(0);
 
   const items = [
     {
@@ -43,49 +43,51 @@ const Philosophy = () => {
   };
 
   return (
-    <div className='relative w-full bg-white py-16 lg:py-20'>
+    <div className='relative w-full bg-white py-16 lg:py-24'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header */}
-        <div className='text-center mb-12 lg:mb-16'>
-          <h1 className='text-3xl md:text-3xl font-medium mb-6'>
+        <div className='text-center mb-12 sm:mb-16'>
+          <h1 className='text-3xl md:text-5xl font-medium mb-6 tracking-tight'>
             Our{' '}
             <span className='bg-gradient-to-r from-[#7030B1] to-[#B56DD3] bg-clip-text text-transparent'>
               Development Philosophy
             </span>
           </h1>
-          <p className='text-gray-700 text-lg md:text-3xl font-medium max-w-5xl mx-auto'>
+          <p className='text-gray-700 text-lg md:text-2xl font-medium max-w-4xl mx-auto leading-relaxed'>
             We build reliable, scalable AI that delivers real impact.
           </p>
         </div>
 
-        {/* Content Grid */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center'>
+        {/* ==============================
+            DESKTOP LAYOUT (Accordion)
+           ============================== */}
+        <div className='hidden lg:grid grid-cols-2 gap-16 items-start'>
           {/* Left: Image */}
-          <div className='flex items-center justify-center order-2 lg:order-1'>
+          <div className='flex justify-center sticky top-24'>
             <Image
               src='/images/Philosophy.png'
               alt='Development Philosophy'
               width={500}
               height={500}
-              className='w-full max-w-[400px] lg:max-w-[500px] h-auto object-contain'
+              className='w-full max-w-[500px] h-auto object-contain drop-shadow-xl'
             />
           </div>
 
           {/* Right: Accordion Items */}
-          <div className='space-y-4 order-1 lg:order-2'>
+          <div className='space-y-2'>
             {items.map((item, index) => (
-              <div key={index} className=' pb-6'>
+              <div key={index} className='pb-4 border-b border-gray-100 last:border-0'>
                 <button
                   onClick={() => toggleItem(index)}
-                  className='w-full flex items-start gap-3 text-left group'
+                  className='w-full flex items-center gap-5 text-left group py-4 select-none'
                 >
                   {/* Circle with Arrow */}
-                  <div className='flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-[#7030B1] to-[#B56DD3] flex items-center justify-center transition-transform duration-300'>
+                  <div className='flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-[#7030B1] to-[#B56DD3] flex items-center justify-center transition-transform duration-300 shadow-md group-hover:scale-110'>
                     <Image
                       src='/images/HomePage/downarrow.svg'
                       alt=''
-                      width={10}
-                      height={10}
+                      width={12}
+                      height={12}
                       className={`transition-transform duration-300 ${
                         expandedIndex === index ? 'rotate-180' : ''
                       }`}
@@ -96,8 +98,10 @@ const Philosophy = () => {
                   {/* Title */}
                   <div className='flex-1'>
                     <h3
-                      className={`font-semibold text-[18px] transition-colors duration-200 ${
-                        expandedIndex === index ? 'text-black' : 'text-gray-400'
+                      className={`font-semibold text-xl transition-colors duration-200 ${
+                        expandedIndex === index
+                          ? 'text-[#7030B1]'
+                          : 'text-gray-400 group-hover:text-gray-600'
                       }`}
                     >
                       {item.title}
@@ -107,14 +111,46 @@ const Philosophy = () => {
 
                 {/* Expandable Content */}
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    expandedIndex === index ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0'
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    expandedIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <p className='text-gray-600 text-[14px] leading-relaxed pl-11'>
+                  <p className='text-gray-600 text-base leading-relaxed pl-[3.25rem] pb-4'>
                     {item.description}
                   </p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ==============================
+            MOBILE LAYOUT (Stacked Cards)
+           ============================== */}
+        <div className='lg:hidden flex flex-col gap-10'>
+          {/* Top Image */}
+          <div className='flex justify-center'>
+            <Image
+              src='/images/Philosophy.png'
+              alt='Development Philosophy'
+              width={350}
+              height={350}
+              className='w-full max-w-[320px] h-auto object-contain drop-shadow-lg'
+            />
+          </div>
+
+          {/* List of Feature Cards */}
+          <div className='space-y-4'>
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className='bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col gap-2'
+              >
+                <div className='flex items-center gap-3'>
+                  <div className='w-2 h-2 rounded-full bg-[#7030B1]' />
+                  <h3 className='font-semibold text-lg text-[#333]'>{item.title}</h3>
+                </div>
+                <p className='text-gray-600 text-sm leading-relaxed pl-5'>{item.description}</p>
               </div>
             ))}
           </div>

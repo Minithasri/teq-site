@@ -45,6 +45,7 @@ const ServicesGwc = () => {
           className='object-contain opacity-100'
           priority
         />
+        <div className='absolute bottom-0 w-full h-[70%] bg-gradient-to-t from-white via-white/50 to-transparent' />
       </div>
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>

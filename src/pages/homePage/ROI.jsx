@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 
 const ROI = () => {
@@ -34,126 +33,68 @@ const ROI = () => {
   ];
 
   return (
-    <section
-      className='flex items-center justify-center'
-      style={{
-        backgroundColor: '#ffffff',
-        paddingTop: '100px',
-        paddingBottom: '100px',
-      }}
-    >
-      {/* EXACT SAME CONTAINER STRUCTURE AS HOMEBANNER */}
+    <section className='flex items-center justify-center bg-white py-24'>
       <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Title */}
-        <div className='max-w-4xl mx-auto text-center mb-8 md:mb-12'>
-          <h1
-            className='font-medium leading-tight px-4'
-            style={{
-              fontSize: 'clamp(24px, 5vw, 32px)',
-              color: '#333333',
-              lineHeight: '55px',
-            }}
-          >
-            Increase your ROI with <span style={{ color: '#914ec2' }}>Agentic AI</span> that
+        <div className='max-w-4xl mx-auto text-center mb-12 sm:mb-16'>
+          <h1 className='font-medium leading-tight text-3xl sm:text-4xl md:text-[40px] text-[#333333]'>
+            Increase your ROI with <span className='text-[#914ec2]'>Agentic AI</span> that
             <img
               src='/images/Spark.svg'
               alt='Spark'
-              className='inline-block align-middle mx-2'
-              style={{
-                width: 'clamp(32px, 8vw, 40px)',
-                height: 'clamp(32px, 8vw, 40px)',
-              }}
+              className='inline-block align-middle mx-3 w-8 h-8 sm:w-10 sm:h-10'
             />
-            <br />
+            <br className='hidden md:block' />
             turns data into decisions and fuels smarter growth.
           </h1>
         </div>
 
-        {/* GRID — perfectly aligned start/end like HomeBanner */}
-        <div className='grid grid-cols-1 lg:grid-cols-[1.07fr_0.93fr] gap-8 md:gap-12 items-start'>
-          {/* LEFT COLUMN */}
-          <div
-            className='p-4 md:p-6 rounded-[20px] md:rounded-[25px] w-full'
-            style={{ backgroundColor: '#f7f2f6' }}
-          >
+        {/* Grid Layout */}
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start'>
+          {/* Left Column: Cards */}
+          <div className='p-4 md:p-8 rounded-[25px] w-full bg-[#f7f2f6]'>
             <div className='flex flex-col gap-4 md:gap-6'>
               {cards.map((card, index) => (
-                <div key={index} className='flex gap-3 md:gap-4 items-center'>
-                  <div
-                    className='flex-shrink-0 rounded-full p-3 md:p-4 flex items-center justify-center'
-                    style={{ backgroundColor: '#eee4f5' }}
-                  >
+                <div key={index} className='flex gap-4 items-center'>
+                  {/* Icon Circle */}
+                  <div className='flex-shrink-0 rounded-full p-4 flex items-center justify-center bg-[#eee4f5] w-12 h-12 md:w-16 md:h-16'>
                     <img
                       src={card.icon}
                       alt={`${card.title} icon`}
-                      className='w-5 h-5 md:w-6 md:h-6'
+                      className='w-5 h-5 md:w-7 md:h-7'
                     />
                   </div>
 
-                  <div
-                    className='rounded-[12px] md:rounded-[15px] bg-white p-4 md:p-6 flex-1 min-w-0 flex items-center'
-                    style={{ height: '90px' }}
-                  >
-                    <div>
-                      <h3
-                        style={{
-                          color: '#404040',
-                          fontSize: '16px',
-                          fontWeight: 600,
-                          marginBottom: '4px',
-                        }}
-                      >
-                        {card.title}
-                      </h3>
-                      <p
-                        className='leading-relaxed break-words'
-                        style={{
-                          color: '#737373',
-                          fontSize: '14px',
-                          fontWeight: 400,
-                        }}
-                      >
-                        {card.subtitle}
-                      </p>
-                    </div>
+                  {/* Text Card */}
+                  <div className='rounded-[15px] bg-white p-5 md:p-6 flex-1 min-w-0 flex flex-col justify-center min-h-[100px] h-auto'>
+                    <h3 className='text-[#404040] text-base md:text-lg font-semibold mb-1'>
+                      {card.title}
+                    </h3>
+                    <p className='text-[#737373] text-sm md:text-base font-normal leading-relaxed break-words'>
+                      {card.subtitle}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* RIGHT COLUMN — aligned perfectly */}
-          <div className='flex flex-col justify-center h-full w-full lg:pl-8'>
+          {/* Right Column: Features List */}
+          <div className='flex flex-col justify-center h-full w-full lg:pl-4'>
             <div className='w-full'>
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className='border-b flex items-center'
-                  style={{
-                    borderBottomColor: '#d2d2d6',
-                    borderBottomWidth: '1px',
-                    height: '95px',
-                  }}
+                  className='border-b border-[#d2d2d6] flex items-center py-6 sm:py-8'
                 >
-                  <div className='py-6 w-full flex items-center'>
+                  <div className='w-full flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4'>
                     <span
-                      style={{
-                        color: feature.color,
-                        fontSize: '30px',
-                        fontWeight: 500,
-                      }}
+                      className='text-3xl sm:text-4xl font-medium'
+                      style={{ color: feature.color }}
                     >
                       {feature.number}
                     </span>
-
-                    <span
-                      className='ml-3'
-                      style={{
-                        color: '#737373',
-                        fontSize: '16px',
-                        fontWeight: 400,
-                      }}
-                    >
+                    <span className='text-[#737373] text-base sm:text-lg font-normal'>
                       {feature.text}
                     </span>
                   </div>
@@ -161,16 +102,16 @@ const ROI = () => {
               ))}
             </div>
 
-            <div className='mt-8 lg:mt-12 flex justify-center lg:justify-start'>
+            <div className='mt-10 lg:mt-12 flex justify-center lg:justify-start'>
               <button
-                className='flex items-center justify-center gap-2 text-white transition-all duration-300 hover:scale-105'
+                className='flex items-center justify-center gap-2 text-white transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg'
                 style={{
                   background: 'linear-gradient(to right, #7030B1, #B56DD3)',
                   borderRadius: '25px',
-                  width: '150px',
-                  height: '45px',
-                  fontSize: '14px',
-                  fontWeight: 400,
+                  width: '160px',
+                  height: '50px',
+                  fontSize: '15px',
+                  fontWeight: 500,
                 }}
               >
                 Contact Us

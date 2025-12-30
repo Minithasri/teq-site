@@ -61,7 +61,10 @@ const IndustryUseCases = () => {
   useEffect(() => {
     if (scrollTriggerRef.current) scrollTriggerRef.current.kill();
 
-    const ctx = gsap.context(() => {
+    let mm = gsap.matchMedia();
+
+    // Add matchMedia for Desktop only
+    mm.add('(min-width: 1024px)', () => {
       scrollTriggerRef.current = ScrollTrigger.create({
         trigger: sectionRef.current,
         start: 'top -10%',
@@ -74,9 +77,9 @@ const IndustryUseCases = () => {
           setActiveStep(newIdx);
         },
       });
-    }, sectionRef);
+    });
 
-    return () => ctx.revert();
+    return () => mm.revert();
   }, []);
 
   return (
@@ -122,8 +125,8 @@ const IndustryUseCases = () => {
           </div>
         </div>
 
-        {/* --- Content Area --- */}
-        <div className='flex flex-col lg:flex-row gap-8 lg:gap-20 flex-1'>
+        {/* --- Desktop Content Area (Interactive) --- */}
+        <div className='hidden lg:flex flex-col lg:flex-row gap-8 lg:gap-20 flex-1'>
           {/* Left: Interactive List */}
           <div className='w-full lg:w-1/3 flex flex-col justify-center gap-2'>
             {industries.map((item, index) => {
@@ -179,6 +182,27 @@ const IndustryUseCases = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* --- Mobile Content Area (Stacked) --- */}
+        <div className='flex lg:hidden flex-col gap-8'>
+          {industries.map((item, index) => (
+            <div
+              key={index}
+              className='bg-white rounded-[24px] overflow-hidden shadow-lg border border-gray-100'
+            >
+              {/* Image */}
+              <div className='relative w-full h-[240px]'>
+                <Image src={item.image} alt={item.title} fill className='object-cover' />
+              </div>
+
+              {/* Content */}
+              <div className='p-6'>
+                <h3 className='text-lg font-bold text-gray-900 mb-3'>{item.title}</h3>
+                <p className='text-gray-600 text-sm leading-relaxed'>{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

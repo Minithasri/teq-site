@@ -74,68 +74,105 @@ const Offerings = () => {
           Google Service Offerings
         </h2>
 
-        {/* Tabs Container - Single Line Compact */}
-        <div className='flex justify-center mb-10'>
-          <div className='flex flex-wrap md:flex-nowrap gap-2 items-center justify-center px-1'>
-            {googleCloudServices.map((service, index) => {
-              const isActive = activeTab === index;
-              return (
-                <button
-                  key={index}
-                  onClick={() => setActiveTab(index)}
-                  className={`px-3 py-2 md:px-4 md:py-2.5 rounded-full text-[11px] md:text-xs lg:text-sm font-medium transition-all duration-300 border whitespace-nowrap ${
-                    isActive
-                      ? 'text-white border-transparent shadow-md transform scale-105'
-                      : 'text-[#7030B1] border-purple-300 hover:bg-purple-50'
-                  }`}
-                  style={{
-                    background: isActive
-                      ? 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)'
-                      : 'transparent',
-                  }}
-                >
-                  {service.name}
-                </button>
-              );
-            })}
+        {/* Desktop View: Tabs & Interactive Card */}
+        <div className='hidden md:block'>
+          {/* Tabs Container - Single Line Compact */}
+          <div className='flex justify-center mb-10'>
+            <div className='flex flex-wrap md:flex-nowrap gap-2 items-center justify-center px-1'>
+              {googleCloudServices.map((service, index) => {
+                const isActive = activeTab === index;
+                return (
+                  <button
+                    key={index}
+                    onClick={() => setActiveTab(index)}
+                    className={`px-3 py-2 md:px-4 md:py-2.5 rounded-full text-[11px] md:text-xs lg:text-sm font-medium transition-all duration-300 border whitespace-nowrap ${
+                      isActive
+                        ? 'text-white border-transparent shadow-md transform scale-105'
+                        : 'text-[#7030B1] border-purple-300 hover:bg-purple-50'
+                    }`}
+                    style={{
+                      background: isActive
+                        ? 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)'
+                        : 'transparent',
+                    }}
+                  >
+                    {service.name}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Content Card */}
+          <div className='bg-white rounded-[40px] p-2 md:p-4 shadow-xl max-w-6xl mx-auto border '>
+            <div className='flex flex-col md:flex-row gap-8 items-center'>
+              {/* Left Image Area */}
+              <div className='relative w-full md:w-[596px] h-[300px] md:h-[346px] shrink-0 rounded-[32px] overflow-hidden flex items-center justify-center'>
+                <div className='relative w-full h-full'>
+                  <Image
+                    key={activeTab}
+                    src={getImagePath(activeTab)}
+                    alt={`Illustration for ${googleCloudServices[activeTab].name}`}
+                    fill
+                    className='object-cover'
+                    priority={true}
+                  />
+                </div>
+              </div>
+
+              {/* Right Content Area */}
+              <div className='p-6 md:pr-12 flex-1'>
+                {/* Service Tag with Number */}
+                <div className='inline-block px-4 py-1.5 rounded-2xl border border-[#9156AA] text-[#7030B1] font-semibold text-[15px] mb-6 md:mb-8 bg-transparent tracking-wide'>
+                  {activeTab + 1}. {googleCloudServices[activeTab].tag}
+                </div>
+
+                {/* Service Title */}
+                <h3 className='text-2xl font-bold text-gray-800 mb-4'>
+                  {googleCloudServices[activeTab].name}
+                </h3>
+
+                {/* Description derived from sources */}
+                <p className='text-gray-600 leading-relaxed text-[15px] md:text-[16px]'>
+                  {googleCloudServices[activeTab].description}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Content Card */}
-        <div className='bg-white rounded-[40px] p-2 md:p-4 shadow-xl max-w-6xl mx-auto border '>
-          <div className='flex flex-col md:flex-row gap-8 items-center'>
-            {/* Left Image Area */}
-            <div className='relative w-full md:w-[596px] h-[300px] md:h-[346px] shrink-0 rounded-[32px] overflow-hidden flex items-center justify-center'>
-              <div className='relative w-full h-full'>
+        {/* Mobile View: Stacked Services (Scrollable) */}
+        <div className='md:hidden flex flex-col gap-8'>
+          {googleCloudServices.map((service, index) => (
+            <div
+              key={index}
+              className='bg-white rounded-[24px] overflow-hidden shadow-lg border border-gray-100 flex flex-col'
+            >
+              {/* Image */}
+              <div className='relative w-full h-[240px]'>
                 <Image
-                  key={activeTab}
-                  src={getImagePath(activeTab)}
-                  alt={`Illustration for ${googleCloudServices[activeTab].name}`}
+                  src={getImagePath(index)}
+                  alt={`Illustration for ${service.name}`}
                   fill
                   className='object-cover'
-                  priority={true}
                 />
               </div>
-            </div>
 
-            {/* Right Content Area */}
-            <div className='p-6 md:pr-12 flex-1'>
-              {/* Service Tag with Number */}
-              <div className='inline-block px-4 py-1.5 rounded-2xl border border-[#9156AA] text-[#7030B1] font-semibold text-[15px] mb-6 md:mb-8 bg-transparent tracking-wide'>
-                {activeTab + 1}. {googleCloudServices[activeTab].tag}
+              {/* Content */}
+              <div className='p-6 flex flex-col items-start'>
+                {/* Tag */}
+                <div className='inline-block px-4 py-1.5 rounded-2xl border border-[#9156AA] text-[#7030B1] font-semibold text-sm mb-4 bg-transparent'>
+                  {index + 1}. {service.tag}
+                </div>
+
+                {/* Title */}
+                <h3 className='text-xl font-bold text-gray-800 mb-3'>{service.name}</h3>
+
+                {/* Description */}
+                <p className='text-gray-600 text-sm leading-relaxed'>{service.description}</p>
               </div>
-
-              {/* Service Title */}
-              <h3 className='text-2xl font-bold text-gray-800 mb-4'>
-                {googleCloudServices[activeTab].name}
-              </h3>
-
-              {/* Description derived from sources */}
-              <p className='text-gray-600 leading-relaxed text-[15px] md:text-[16px]'>
-                {googleCloudServices[activeTab].description}
-              </p>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
