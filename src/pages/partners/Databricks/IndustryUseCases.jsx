@@ -18,37 +18,37 @@ const industries = [
     title: 'Healthcare & Life Sciences',
     description:
       'Integrate EMR, genomics, imaging, claims data to build predictive models for disease progression, drug response, or patient flow.',
-    image: '/images/partners/databricks/section1_img1.png',
+    image: '/images/partners/databricks/image_11.png',
   },
   {
     title: 'Financial Services (BFSI)',
     description:
       'Real-time fraud detection, risk scoring, integrating transactional, customer, and alternative data for insights.',
-    image: '/images/partners/databricks/section1_img2.png',
+    image: '/images/partners/databricks/image_12.png',
   },
   {
     title: 'Retail & eCommerce',
     description:
       'Real-time recommendation engines, supply chain demand forecasting, personalized marketing campaigns.',
-    image: '/images/partners/databricks/section1_img3.png',
+    image: '/images/partners/databricks/image_13.png',
   },
   {
     title: 'Manufacturing & Industrial',
     description:
       'IoT sensor data analysis for predictive maintenance, quality monitoring, and throughput optimization.',
-    image: '/images/partners/databricks/section1_img4.png',
+    image: '/images/partners/databricks/image_14.png',
   },
   {
     title: 'Telecommunications & Media',
     description:
       'Streaming analytics for network performance, customer usage, and content consumption patterns.',
-    image: '/images/partners/databricks/section1_img5.png',
+    image: '/images/partners/databricks/image_15.png',
   },
   {
     title: 'Energy, Utilities & Infrastructure',
     description:
       'Smart grid analytics, demand forecasting, and asset management to optimize operations.',
-    image: '/images/partners/databricks/section1_img6.png',
+    image: '/images/partners/databricks/image_16.png',
   },
 ];
 
@@ -103,7 +103,16 @@ const IndustryUseCases = () => {
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start'>
             <h2 className='text-3xl md:text-[40px] font-bold text-gray-800 leading-tight'>
-              Industry <span className='text-[#A855F7]'>Use Cases</span>
+              Industry{' '}
+              <span
+                style={{
+                  background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                Use Cases
+              </span>
             </h2>
             <div className='flex justify-start lg:justify-end'>
               <p className='text-gray-600 max-w-lg leading-relaxed lg:text-right'>

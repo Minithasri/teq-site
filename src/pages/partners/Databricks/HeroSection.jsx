@@ -23,7 +23,7 @@ const bannerContent = {
 
 export default function HeroSection() {
   return (
-    <header className='relative w-full overflow-hidden pt-[60px] min-h-[600px] flex items-center'>
+    <header className='relative w-full overflow-hidden pt-[60px] min-h-[700px] flex items-center'>
       {/* Background Image */}
       <div className='absolute inset-0 -z-10 bg-[#1e102e]'>
         <Image
@@ -38,7 +38,7 @@ export default function HeroSection() {
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 lg:py-14'>
         {/* Breadcrumb */}
-        <nav aria-label='Breadcrumb' className='relative z-10 mb-8'>
+        <nav aria-label='Breadcrumb' className='relative z-10 mb-16'>
           <ol className='inline-flex items-center gap-2 text-[15px] py-1'>
             {bannerContent.breadcrumb.items.map((item, index) => (
               <li key={index} className='flex items-center gap-2'>
@@ -72,11 +72,11 @@ export default function HeroSection() {
         <div className='grid grid-cols-1 lg:grid-cols-[55%_45%] items-center gap-12 lg:gap-16'>
           {/* Left Content */}
           <div>
-            <h1 className='text-[36px] md:text-[42px] font-bold text-white leading-tight mb-6'>
+            <h1 className='text-[36px] md:text-[38px] font-bold text-white leading-tight mb-6'>
               {bannerContent.title}
             </h1>
 
-            <p className='text-white/80 text-[18px] md:text-[18px] max-w-2xl mb-12 leading-relaxed'>
+            <p className='text-white/80 text-[16px] md:text-[16px] max-w-2xl mb-12 leading-relaxed'>
               {bannerContent.description}
             </p>
 

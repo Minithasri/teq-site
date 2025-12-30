@@ -1,0 +1,19 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.17.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:D:\REVAMP\gwc-website-revamp\.npmrc
+5 silly config load:file:C:\Users\ahars\.npmrc
+6 silly config load:file:C:\Users\ahars\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm exec lint-staged
+8 verbose argv "exec" "--" "lint-staged"
+9 verbose logfile logs-max:10 dir:D:\REVAMP\gwc-website-revamp\npm-cache\_logs\2025-12-30T07_18_58_291Z-
+10 verbose logfile D:\REVAMP\gwc-website-revamp\npm-cache\_logs\2025-12-30T07_18_58_291Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 verbose cwd D:\REVAMP\gwc-website-revamp
+14 verbose os Windows_NT 10.0.26200
+15 verbose node v22.17.0
+16 verbose npm  v10.9.2
+17 verbose exit 0
+18 info ok

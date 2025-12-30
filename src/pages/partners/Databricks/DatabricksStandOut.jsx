@@ -74,7 +74,7 @@ const DatabricksStandOut = () => {
         </header>
 
         {/* Title & Description */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-20'>
+        <div className='grid grid-cols-1 lg:grid-cols-[55%_45%] gap-12 lg:gap-20 items-start mb-20'>
           <div>
             <h2 className='text-3xl md:text-[40px] font-bold text-gray-900 leading-tight'>
               What Makes
@@ -90,8 +90,8 @@ const DatabricksStandOut = () => {
               </span>
             </h2>
           </div>
-          <div className='flex justify-start lg:justify-end'>
-            <p className='text-gray-600 max-w-lg leading-relaxed lg:text-right text-sm md:text-[15px]'>
+          <div className='flex justify-start'>
+            <p className='text-gray-600 max-w-lg leading-relaxed text-sm md:text-[15px]'>
               Our Databricks solutions accelerate time to value with flexible, secure, and high
               performance architectures supported by continuous innovation and expert guidance.
             </p>
@@ -131,10 +131,10 @@ const DatabricksStandOut = () => {
             {features.map((feature, index) => (
               <div key={index} className='flex flex-col'>
                 <div className='flex items-baseline gap-4'>
-                  <span className='text-[#FF7A00] text-3xl md:text-4xl font-bold'>
+                  <span className='text-[#F97316] text-[25px] md:text-[30px] font-bold'>
                     {feature.statTitle}
                   </span>
-                  <span className='text-gray-400 text-lg md:text-xl font-medium'>
+                  <span className='text-gray-400 text-lg md:text-[15px] font-medium'>
                     {feature.statDesc}
                   </span>
                 </div>

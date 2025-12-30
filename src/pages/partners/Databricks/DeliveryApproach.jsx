@@ -120,7 +120,7 @@ const DeliveryApproach = () => {
     <section className='w-full py-20 bg-[#F2ECFE] relative overflow-hidden'>
       {/* Background Circle */}
       <div className='absolute inset-0 z-0 flex items-center justify-center pointer-events-none'>
-        <div className='w-[1000px] h-[1000px] relative opacity-40'>
+        <div className='w-[1000px] h-[1000px] relative opacity-100'>
           <Image
             src='/images/partners/databricks/circle_big.png'
             alt=''
@@ -134,7 +134,7 @@ const DeliveryApproach = () => {
         {/* Header */}
         <div className='text-center mb-24'>
           <h2
-            className='font-bold text-xl md:text-2xl mb-4'
+            className='font-semibold text-[32px] md:text-[32px] mb-4'
             style={{
               background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
               WebkitBackgroundClip: 'text',
@@ -143,7 +143,7 @@ const DeliveryApproach = () => {
           >
             Our Delivery Approach
           </h2>
-          <h3 className='text-[#333333] font-bold text-2xl md:text-4xl'>
+          <h3 className='text-[#333333] font-medium text-[32px] md:text-[32px]'>
             How GWC ensures success from planning to adoption
           </h3>
         </div>
@@ -159,7 +159,7 @@ const DeliveryApproach = () => {
                 <path
                   key={i}
                   d={d}
-                  stroke='#A78BFA'
+                  stroke='#7030B1'
                   strokeWidth='2'
                   strokeDasharray='8 8'
                   fill='none'

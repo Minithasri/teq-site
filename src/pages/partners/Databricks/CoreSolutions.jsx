@@ -47,10 +47,10 @@ const CoreSolutions = () => {
   return (
     <section className='w-full bg-[#F5F0FE] py-20 relative overflow-hidden'>
       {/* Background Decoration */}
-      <div className='absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] z-0 pointer-events-none'>
-        <div className='relative w-full h-full opacity-60'>
+      <div className='absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 pointer-events-none'>
+        <div className='relative w-full h-full opacity-100'>
           <Image
-            src='/images/partners/databricks/circle_big.png'
+            src='/images/partners/databricks/bg_rounded.png'
             alt=''
             fill
             className='object-contain md:object-cover'
@@ -62,7 +62,7 @@ const CoreSolutions = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Title */}
         <div className='flex items-center justify-center gap-4 mb-12'>
-          <h2 className='text-3xl md:text-4xl font-bold text-[#5C2B8F] text-center'>
+          <h2 className='text-3xl md:text-4xl font-medium text-[#5C2B8F] text-center'>
             Core Solution Scenarios We Deliver
           </h2>
           <Image
@@ -75,27 +75,23 @@ const CoreSolutions = () => {
         </div>
 
         {/* Grid Card Container */}
-        <div className='bg-[#E5E5E5] rounded-[32px] border border-[#E5E5E5] overflow-hidden mb-12 shadow-sm'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px]'>
-            {solutions.map((item, index) => (
-              <div key={index} className='flex flex-col items-start p-8 md:p-10 bg-white h-full'>
-                {/* Icon */}
-                <div className='w-12 h-12 mb-6'>
-                  <Image
-                    src={item.icon}
-                    alt={item.title}
-                    width={48}
-                    height={48}
-                    className='object-contain'
-                  />
+        <div className='bg-white rounded-[32px] p-4 md:p-6 border border-[#E5E5E5] mb-12 shadow-sm'>
+          <div className='bg-[#E5E5E5] rounded-[24px] overflow-hidden border border-[#E5E5E5]'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px]'>
+              {solutions.map((item, index) => (
+                <div key={index} className='flex flex-col items-start p-8 md:p-10 bg-white h-full'>
+                  <div className='w-12 h-12 mb-6'>
+                    <Image src={item.icon} alt={item.title} width={48} height={48} />
+                  </div>
+
+                  <h3 className='text-lg font-bold text-gray-900 mb-3 leading-tight'>
+                    {item.title}
+                  </h3>
+
+                  <p className='text-gray-500 text-sm leading-relaxed'>{item.description}</p>
                 </div>
-                {/* Content */}
-                <h3 className='text-lg font-bold text-gray-900 mb-3 leading-tight min-h-[54px]'>
-                  {item.title}
-                </h3>
-                <p className='text-gray-500 text-sm leading-relaxed'>{item.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
