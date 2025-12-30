@@ -1,0 +1,134 @@
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { FiArrowRight } from 'react-icons/fi';
+// Reusing Spark icon for header
+import img1 from '../../../../public/images/solutions/Icon.svg';
+
+const features = [
+  {
+    title: 'Drag & Drop Interface',
+    description:
+      "Design and deploy integrations effortlessly with Boomi's intuitive interface, no extensive coding required.",
+    image: '/images/partners/boomi/section_img_1.png',
+  },
+  {
+    title: 'Pre built Connectors',
+    description:
+      'Access a vast library of pre built connectors, accelerating integration and reducing time to market.',
+    image: '/images/partners/boomi/section_img_2.png',
+  },
+  {
+    title: 'Real time Monitoring',
+    description:
+      'Monitor your integrations in real-time, ensuring optimal performance and reliability.',
+    image: '/images/partners/boomi/section_img_3.png',
+  },
+];
+
+const FeaturesBoomi = () => {
+  return (
+    <section className='w-full bg-white relative overflow-hidden py-20'>
+      {/* Background Image */}
+      <div className='absolute inset-0 w-full h-full flex items-center justify-start z-0'>
+        <div className='relative w-[800px] h-[800px] -translate-x-1/4'>
+          <Image
+            src='/images/HomePage/circle_big.png'
+            alt='Background Decoration'
+            fill
+            className='object-contain opacity-100'
+            priority
+          />
+        </div>
+      </div>
+
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+        {/* Header (Spark + Dashed Line + CTA) */}
+        <header className='flex items-center mb-16 gap-4'>
+          {/* Left Icon */}
+          <div className='w-12 h-12 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center shrink-0'>
+            <Image src={img1} alt='' aria-hidden width={24} height={24} />
+          </div>
+
+          {/* Connector */}
+          <div
+            aria-hidden
+            className='flex-1 h-[2px] bg-[linear-gradient(to_right,#E5E7EB_50%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x'
+          />
+
+          {/* CTA */}
+          <Link
+            href='/contact'
+            className='px-6 py-2.5 rounded-full border border-[#6F2B8B] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors shrink-0 flex items-center gap-2 text-sm bg-white/80 backdrop-blur-sm'
+          >
+            Talk to Our Experts
+            <FiArrowRight className='w-4 h-4' />
+          </Link>
+        </header>
+
+        {/* Title & Description */}
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-20'>
+          <div>
+            <h2 className='text-[32px] md:text-[40px] font-semibold'>
+              <span className='text-gray-900'>Features of</span>
+              <br />
+              <span
+                style={{
+                  background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                Boomi with GWC
+              </span>
+            </h2>
+          </div>
+          <div className='flex justify-start lg:justify-end'>
+            <p className='text-gray-600 max-w-lg leading-relaxed text-left lg:text-left text-sm md:text-[15px]'>
+              GWC leverages Boomi's cloud native platform to deliver fast, flexible, and scalable
+              integrations. With GWC best practice implementation and Boomi enterprise grade
+              security, your data stays protected and compliant.
+            </p>
+          </div>
+        </div>
+
+        {/* Cards Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center'>
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className='group relative rounded-2xl p-[1px] w-full max-w-[374px]'
+              style={{
+                background: 'linear-gradient(to right, #FFF7EB, #FAE0FA)',
+                boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.02)',
+              }}
+            >
+              <article className='flex flex-col bg-white rounded-2xl h-full w-full overflow-hidden'>
+                {/* Image Container */}
+                <div className='relative w-full p-6'>
+                  <div className='relative w-full h-[296px] rounded-xl overflow-hidden'>
+                    <Image
+                      src={feature.image}
+                      alt={feature.title}
+                      fill
+                      className='object-cover transition-transform duration-500 group-hover:scale-105'
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className='p-6 pt-2 flex-1 flex flex-col'>
+                  <h3 className='text-lg font-bold text-gray-900 mb-3'>{feature.title}</h3>
+                  <p className='text-gray-600 text-[14px] leading-relaxed'>{feature.description}</p>
+                </div>
+              </article>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FeaturesBoomi;
