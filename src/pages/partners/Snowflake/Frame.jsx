@@ -23,7 +23,7 @@ const bannerContent = {
 
 export default function Frame() {
   return (
-    <header className='relative w-full overflow-hidden pt-[60px] min-h-[600px] flex items-center'>
+    <header className='relative w-full overflow-hidden pt-[60px] min-h-[700px] flex items-center'>
       {/* Background Image */}
       <div className='absolute inset-0 -z-10 bg-[#1e102e]'>
         <Image

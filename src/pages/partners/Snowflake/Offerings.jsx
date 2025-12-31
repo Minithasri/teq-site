@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import { FiArrowRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 const offeringsData = [
@@ -68,36 +68,36 @@ export default function Offerings() {
       >
         <div className='max-w-7xl mx-auto'>
           {/* Header */}
-          <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between mb-16 gap-8'>
-            <div className='flex items-center gap-6 flex-1'>
-              {/* Logo 1 */}
-              <div className='w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm shrink-0'>
-                <Image
-                  src='/images/partners/Snowflake/logo1.svg'
-                  alt='Icon'
-                  width={32}
-                  height={32}
-                />
-              </div>
-
-              <div className='h-[1px] flex-1 bg-gray-300 border-t border-dashed border-gray-400 mx-4 hidden md:block' />
+          <header className='flex items-center mb-16 gap-2'>
+            {/* Left Icon (decorative) */}
+            <div className='w-12 h-12 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
+              <Image src='/images/Spark.svg' alt='' aria-hidden width={24} height={24} />
             </div>
 
-            <div className='flex items-center gap-4 shrink-0'>
-              <Link
-                href='/contact'
-                className='inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#7030B1] text-[#7030B1] font-medium hover:bg-[#7030B1] hover:text-white transition-colors duration-300'
-              >
-                Talk to Our Experts
-                <FiArrowRight />
-              </Link>
-            </div>
-          </div>
+            {/* Connector */}
+            <div
+              aria-hidden
+              className='flex-1 h-[2px] bg-[linear-gradient(to_right,#1F1F1F_30%,rgba(0,0,0,0)_0%)] bg-[length:6px_2px] bg-repeat-x'
+            />
+
+            {/* CTA */}
+            <Link
+              href='/contact'
+              className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
+              style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
+            >
+              Talk to Our Experts
+              <FiArrowRight className='w-4 h-4' aria-hidden />
+            </Link>
+          </header>
 
           {/* Title & Description */}
-          <div className='flex flex-col md:flex-row justify-between items-end mb-12 gap-8'>
-            <h2 className='text-4xl md:text-5xl font-bold text-gray-900'>Snowflake Offerings</h2>
-            <p className='text-gray-600 max-w-xl text-left md:text-right leading-relaxed'>
+          <div className='flex flex-col md:flex-row justify-between items-start mb-12 gap-8'>
+            <h2 className='text-[40px] font-bold'>Snowflake Offerings</h2>
+            <p
+              className='text-[15px] max-w-xl text-left leading-relaxed'
+              style={{ color: '#70707B' }}
+            >
               Snowflake, a cloud-based data warehousing platform, provides a range of offerings to
               help organizations manage & analyze their data efficiently. We ensure your cloud
               operations run smoothly & reliably so you can focus on your business goals.
@@ -143,7 +143,7 @@ function Carousel({ items }) {
           className='flex transition-transform duration-500 ease-in-out'
           style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }} // Default to desktop view logic for now, responsive needs media queries or window listener
         >
-          {/* Note: This simple transforms assumes desktop. For mobile support we usually need a resize listener or CSS grid. 
+          {/* Note: This simple transforms assumes desktop. For mobile support we usually need a resize listener or CSS grid.
                         To make it robust without resize listener, we can use flex-basis.
                     */}
           {items.map((item, index) => (
@@ -151,14 +151,18 @@ function Carousel({ items }) {
               <div className='bg-white rounded-2xl p-8 h-full shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col items-start'>
                 <div className='w-14 h-14 rounded-xl border border-orange-100 bg-orange-50/30 flex items-center justify-center mb-6'>
                   <Image
-                    src='/images/partners/Snowflake/logo2.png'
+                    src='/images/partners/snowflake/icon_db.svg'
                     alt='Icon'
-                    width={24}
-                    height={24}
+                    width={28}
+                    height={28}
                   />
                 </div>
-                <h3 className='text-[#FF6A00] text-xl font-bold mb-4'>{item.title}</h3>
-                <p className='text-gray-500 leading-relaxed text-sm'>{item.description}</p>
+                <h3 className='text-xl font-bold mb-4' style={{ color: '#F97316' }}>
+                  {item.title}
+                </h3>
+                <p className='text-[15px] leading-relaxed' style={{ color: '#70707B' }}>
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}
@@ -181,12 +185,12 @@ function Carousel({ items }) {
         </button>
       </div>
 
-      {/* Mobile note: The transform logic `translateX(-${currentIndex * (100 / 3)}%)` works perfectly for 3 items. 
-                For mobile (1 item), `w-full` in item class will make it 100% width, 
-                but container width is 100%. If we want to show 1 item, we need to translate 100%. 
-                This needs a customized hook or CSS media query based variable. 
-                
-                For now I'll hardcode style for larger screens (md) and rely on hidden overflow. 
+      {/* Mobile note: The transform logic `translateX(-${currentIndex * (100 / 3)}%)` works perfectly for 3 items.
+                For mobile (1 item), `w-full` in item class will make it 100% width,
+                but container width is 100%. If we want to show 1 item, we need to translate 100%.
+                This needs a customized hook or CSS media query based variable.
+
+                For now I'll hardcode style for larger screens (md) and rely on hidden overflow.
                 Actually, simpler way: define `--slide-width` variable in CSS.
             */}
       <style jsx>{`

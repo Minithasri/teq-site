@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const industries = [
   'Retail',
@@ -43,52 +43,84 @@ export default function Retail() {
       }}
     >
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-        <h2 className='text-3xl md:text-5xl font-bold text-[#352B42] text-center mb-12'>
+        <h2 className='text-center font-bold text-[#2D1C3C] mb-12 text-[40px]'>
           Snowflake for your industry
         </h2>
 
         {/* Scrollable Tabs */}
-        <div className='flex overflow-x-auto pb-4 mb-10 gap-3 justify-start lg:justify-center no-scrollbar'>
-          {industries.map(industry => (
-            <button
-              key={industry}
-              onClick={() => setActiveTab(industry)}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 border ${
-                activeTab === industry
-                  ? 'bg-[#9D5CFF] text-white border-[#9D5CFF] shadow-lg shadow-purple-200'
-                  : 'bg-white/50 text-[#9D5CFF] border-[#E5D5F2] hover:bg-white hover:border-[#9D5CFF]'
-              }`}
-            >
-              {industry}
-            </button>
-          ))}
+        <div className='flex overflow-x-auto pb-4 mb-10 gap-4 justify-start lg:justify-center no-scrollbar'>
+          {industries.map(industry => {
+            const isActive = activeTab === industry;
+            return (
+              <button
+                key={industry}
+                onClick={() => setActiveTab(industry)}
+                className={`px-6 py-2.5 rounded-full text-[14px] font-medium whitespace-nowrap transition-all duration-300 border ${
+                  isActive
+                    ? 'text-white border-transparent shadow-md'
+                    : 'border-[#EBD4F4] hover:bg-purple-50'
+                }`}
+                style={{
+                  background: isActive
+                    ? 'linear-gradient(270deg, #7030B1 0%, #B56DD3 100%)'
+                    : 'white',
+                }}
+              >
+                <span
+                  style={
+                    !isActive
+                      ? {
+                          background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                        }
+                      : {}
+                  }
+                >
+                  {industry}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
         {/* Content Card */}
-        <div className='bg-white rounded-[30px] p-6 lg:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-white/50'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+        <div className='bg-white rounded-[32px] p-4 shadow-xl w-full max-w-[1240px] h-auto lg:h-[400px] mx-auto'>
+          <div className='flex flex-col lg:flex-row gap-8 items-stretch bg-white rounded-[32px] overflow-hidden h-full'>
             {/* Left: Image */}
-            <div className='relative aspect-[4/3] w-full bg-slate-50 rounded-2xl overflow-hidden border border-slate-100'>
-              <Image
-                src={currentData.image}
-                alt={`${activeTab} Snowflake Solution`}
-                fill
-                className='object-contain p-4'
-                priority
-              />
+            <div className='w-full lg:w-[600px] shrink-0'>
+              <div className='relative w-full h-[300px] lg:h-[385px] rounded-2xl overflow-hidden'>
+                <Image
+                  src={currentData.image}
+                  alt={`${activeTab} Snowflake Solution`}
+                  fill
+                  className='object-cover'
+                  priority
+                />
+              </div>
             </div>
 
             {/* Right: Content */}
-            <div>
-              <div className='inline-flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-[#D6BCFA] text-[#805AD5] font-bold text-lg mb-8'>
-                <span className='text-xl'>{industries.indexOf(activeTab) + 1}.</span>
-                {activeTab}
+            <div className='w-full flex-1 p-4 lg:p-8 flex flex-col justify-start items-start h-full'>
+              {/* Heading Badge */}
+              <div className='inline-flex items-center px-4 py-2 rounded-xl border border-[#9156AA] bg-white mb-6 shadow-sm shrink-0'>
+                <span
+                  className='text-[18px] md:text-[22px] font-bold'
+                  style={{
+                    background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
+                >
+                  {industries.indexOf(activeTab) + 1}. {activeTab}
+                </span>
               </div>
 
+              {/* Description */}
               <ul className='space-y-6'>
                 <li className='flex items-start gap-3'>
                   <span className='mt-2 w-1.5 h-1.5 rounded-full bg-gray-400 shrink-0' />
-                  <p className='text-gray-600 leading-relaxed text-[16px] lg:text-[17px]'>
+                  <p className='text-[#515151] text-[16px] leading-relaxed'>
                     <strong className='text-gray-800 block mb-1'>Unified Data Platform:</strong>
                     Enables retailers to consolidate data from various sources, including POS
                     systems, e-commerce platforms, and supply chain data.
@@ -96,7 +128,7 @@ export default function Retail() {
                 </li>
                 <li className='flex items-start gap-3'>
                   <span className='mt-2 w-1.5 h-1.5 rounded-full bg-gray-400 shrink-0' />
-                  <p className='text-gray-600 leading-relaxed text-[16px] lg:text-[17px]'>
+                  <p className='text-[#515151] text-[16px] leading-relaxed'>
                     <strong className='text-gray-800 block mb-1'>Real-time Analytics:</strong>
                     Supports real-time analytics, helping retailers analyze customer behavior,
                     optimize inventory management, and personalize marketing strategies.

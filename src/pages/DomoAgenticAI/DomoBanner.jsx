@@ -21,10 +21,10 @@ const DomoBanner = () => {
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* ---------- CENTERED TEXT ---------- */}
         <div className='text-center max-w-7xl mx-auto space-y-6 mb-16 mt-14'>
-          <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#2D2D2D] leading-tight'>
+          <h1 className='text-5xl sm:text-5xl md:text-5xl lg:text-5xl font-bold text-[#2D2D2D] leading-normal'>
             Reimagine Enterprise Workflows with
             <br className='hidden md:block' />
-            <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#2BC0E4] to-[#4F72D8] block mt-2'>
+            <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#2BC0E4] to-[#4F72D8] block mt-2 pb-2'>
               DOMO Agentic AI
             </span>
           </h1>

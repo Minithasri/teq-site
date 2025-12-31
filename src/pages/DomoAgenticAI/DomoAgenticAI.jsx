@@ -114,12 +114,42 @@ const DomoAgenticAI = () => {
 
           {/* Right Column */}
           <div className='flex justify-center lg:justify-end items-stretch mt-6 lg:mt-0'>
-            <div className='w-full max-w-[450px] flex items-center justify-center'>
-              <img
-                src='/images/DomoAgenticAI.svg'
-                alt='Domo Agentic AI'
-                className='w-full h-auto object-contain'
-              />
+            <div
+              className='relative w-full rounded-[16px] lg:rounded-[24px] overflow-hidden flex flex-col justify-end p-6 sm:p-8 lg:p-10 min-h-[300px] lg:min-h-[400px]'
+              style={{
+                backgroundImage: 'url(/images/DomoPage/right_side_image.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+              }}
+            >
+              {/* Gradient Overlay for better text readability */}
+              <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-purple-900/40'></div>
+
+              {/* Content */}
+              <div className='relative z-10 space-y-3 sm:space-y-4'>
+                {/* Icon */}
+                <div className='flex justify-start'>
+                  <div className='w-6 h-6'>
+                    <img
+                      src='/images/DomoPage/whitespark.svg'
+                      alt='Efficiency Icon'
+                      className='w-6 h-6'
+                    />
+                  </div>
+                </div>
+
+                {/* Heading */}
+                <h3 className='text-[18px] sm:text-[18px] lg:text-[18px] font-semibold text-white leading-tight'>
+                  Efficiency at Scale
+                </h3>
+
+                {/* Description */}
+                <p className='text-[12px] sm:text-[14px] font-normal leading-[22px] sm:leading-[26px] text-white/90'>
+                  Work seamlessly across tasks and departments with intelligent, scalable automation
+                  that boosts productivity.
+                </p>
+              </div>
             </div>
           </div>
         </div>

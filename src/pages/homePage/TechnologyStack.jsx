@@ -120,7 +120,7 @@ const cardData = [
 ];
 
 const TechnologyStack = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const handlePrev = () => setActiveIndex(prev => (prev === 0 ? 5 : prev - 1));
   const handleNext = () => setActiveIndex(prev => (prev === 5 ? 0 : prev + 1));
@@ -131,9 +131,8 @@ const TechnologyStack = () => {
     const total = cardData.length;
 
     for (let i = 0; i < total; i++) {
+      // Calculate difference - no wrapping, just linear
       let diff = i - activeIndex;
-      if (diff < -2) diff += total;
-      if (diff > 2) diff -= total;
 
       let translateX = 0;
       let scale = 0.85;
@@ -141,7 +140,13 @@ const TechnologyStack = () => {
       let zIndex = 1;
       let height = '420px';
 
-      if (diff === -1) {
+      // Position cards in a linear fashion from left to right
+      if (diff === -2) {
+        translateX = -480;
+        scale = 0.8;
+        opacity = 0;
+        zIndex = 1;
+      } else if (diff === -1) {
         translateX = -240;
         scale = 0.94;
         opacity = 0.5;
@@ -157,11 +162,17 @@ const TechnologyStack = () => {
         scale = 0.94;
         opacity = 0.5;
         zIndex = 2;
-      } else if (Math.abs(diff) === 2) {
-        translateX = diff === -2 ? -480 : 480;
+      } else if (diff === 2) {
+        translateX = 480;
         scale = 0.8;
         opacity = 0;
         zIndex = 1;
+      } else {
+        // Cards outside the visible range - hide them off-screen
+        translateX = diff < 0 ? -1000 : 1000;
+        scale = 0.5;
+        opacity = 0;
+        zIndex = 0;
       }
 
       positions.push({ index: i, translateX, scale, opacity, zIndex, height });
