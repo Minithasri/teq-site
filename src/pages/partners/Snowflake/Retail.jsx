@@ -36,12 +36,25 @@ export default function Retail() {
   const currentData = industryData[activeTab] || industryData.default;
 
   return (
-    <section
-      className='py-20 lg:py-24 relative overflow-hidden'
-      style={{
-        background: 'linear-gradient(180deg, #EBD8F3 0%, rgba(255, 255, 255, 0) 100%)',
-      }}
-    >
+    <section className='py-20 lg:py-24 relative overflow-hidden'>
+      {/* Background Image */}
+      <div className='absolute inset-0 z-0'>
+        <Image
+          src='/images/Careers/bestpath_image.png'
+          alt='Background'
+          fill
+          className='object-cover'
+        />
+        {/* Fadeout gradient overlay */}
+        <div
+          className='absolute inset-0'
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%)',
+          }}
+        />
+      </div>
+
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         <h2 className='text-center font-bold text-[#2D1C3C] mb-12 text-[40px]'>
           Snowflake for your industry

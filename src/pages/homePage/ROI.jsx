@@ -37,7 +37,7 @@ const ROI = () => {
       <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Title */}
         <div className='max-w-4xl mx-auto text-center mb-12 sm:mb-16'>
-          <h1 className='font-medium leading-tight text-3xl sm:text-4xl md:text-[40px] text-[#333333]'>
+          <h2 className='font-medium leading-tight text-[24px] sm:text-[24px] md:text-[32px] text-[#333333]'>
             Increase your ROI with <span className='text-[#914ec2]'>Agentic AI</span> that
             <img
               src='/images/Spark.svg'
@@ -46,7 +46,7 @@ const ROI = () => {
             />
             <br className='hidden md:block' />
             turns data into decisions and fuels smarter growth.
-          </h1>
+          </h2>
         </div>
 
         {/* Grid Layout */}

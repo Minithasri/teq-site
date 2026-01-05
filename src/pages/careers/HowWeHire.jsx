@@ -26,14 +26,22 @@ const HowWeHire = () => {
   ];
 
   return (
-    <section className='w-full py-16 lg:py-24 bg-white relative overflow-hidden'>
-      {/* Semi-circle background - covers from top to bottom */}
-      <div className='absolute top-6 left-0 right-0 w-full h-full z-1'>
+    <section className='w-full py-16 lg:py-16 bg-white relative overflow-hidden'>
+      {/* Semi-circle background - ends before process flow section */}
+      <div className='absolute top-[4%] left-0 right-0 h-[61%] z-1'>
         <Image
-          src='/images/Careers/semi_bg.svg'
+          src='/images/Careers/semi_bgimage.png'
           alt='Background'
           fill
-          className='object-cover object-center'
+          className='object-cover object-top'
+        />
+        {/* Fadeout gradient overlay at the top */}
+        <div
+          className='absolute inset-0'
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 90%)',
+          }}
         />
       </div>
 
@@ -42,7 +50,7 @@ const HowWeHire = () => {
         <div className='mb-12'>
           <header className='flex items-center mb-16 gap-4'>
             <div className='w-14 h-14 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center shrink-0'>
-              <Image src='/images/Spark.svg' alt='' aria-hidden width={28} height={28} />
+              <Image src='/images/Spark.svg' alt='' aria-hidden width={24} height={24} />
             </div>
             <div
               aria-hidden
@@ -98,45 +106,16 @@ const HowWeHire = () => {
           </p>
         </div>
 
-        {/* Process Flow */}
-        <div className='relative'>
-          {/* "How we Hire" label in center */}
-          <div className='flex justify-center -mb-20'>
-            <h3
-              className='font-semibold text-2xl bg-clip-text text-transparent'
-              style={{
-                background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}
-            >
-              How we Hire
-            </h3>
-          </div>
-
-          {/* Steps */}
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-8'>
-            {steps.map(step => (
-              <div key={step.number} className='flex flex-col items-center text-center '>
-                {/* Number Circle with gradient background */}
-                <div
-                  className='w-16 h-16 rounded-xl flex items-center justify-center mb-4 shadow-lg'
-                  style={{
-                    background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                  }}
-                >
-                  <div className='w-12 h-12 rounded-3xl bg-gray-200/40 flex items-center justify-center '>
-                    <span className='text-2xl font-bold' style={{ color: '#7131B2' }}>
-                      {step.number}
-                    </span>
-                  </div>
-                </div>
-                {/* Title */}
-                <p className='text-gray-900 font-medium text-sm whitespace-pre-line'>
-                  {step.title}
-                </p>
-              </div>
-            ))}
+        {/* Process Flow - Using Image */}
+        <div className='flex justify-center'>
+          <div className='relative w-full max-w-5xl'>
+            <Image
+              src='/images/Careers/wehire_bg.png'
+              alt='How We Hire Process'
+              width={1200}
+              height={400}
+              className='w-full h-auto'
+            />
           </div>
         </div>
       </div>
