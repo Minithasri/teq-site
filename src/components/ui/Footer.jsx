@@ -53,7 +53,7 @@ const Footer = () => {
               <img
                 src='/images/GreatPlaceToWork.png'
                 alt='Great Place to Work'
-                class='w-[80px] h-[140px] object-contain p-2'
+                className='w-[80px] h-[140px] object-contain p-2'
               />
               <img src='/images/NASSCOM.png' alt='NASSCOM' className='w-32 object-contain' />
             </div>
