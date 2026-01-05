@@ -8,7 +8,6 @@ import Philosophy from '@/pages/homePage/Philosophy';
 import ROI from '@/pages/homePage/ROI';
 import TechnologyPartner from '@/pages/homePage/TechnologyPartner';
 import TechnologyStack from '@/pages/homePage/TechnologyStack';
-import UseCases from '@/pages/homePage/UseCases';
 export default function HomePage() {
   return (
     <div>
@@ -21,7 +20,6 @@ export default function HomePage() {
         <Architecture />
         <TechnologyStack />
         <AIMatters />
-        <UseCases />
         <Philosophy />
       </main>
     </div>

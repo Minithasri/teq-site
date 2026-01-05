@@ -18,7 +18,7 @@ const AIMatters = () => {
   const features = [
     {
       title: 'Complete Agent Lifecycle Hub',
-      desc: 'A flexible, modular platform that lets you design, run, monitor, and manage agents end-to-end — all in one place, without dealing with complex integrations or scattered tools.',
+      desc: 'A flexible, modular platform that lets you design, run, monitor, and manage agents end-to-end, all in one place, without dealing with complex integrations or scattered tools.',
       image: '/images/LifecycleHub.svg',
     },
     {
@@ -33,7 +33,7 @@ const AIMatters = () => {
     },
     {
       title: 'Designed for Enterprise Scale & Security',
-      desc: 'Deploy in your preferred environment — cloud or on-prem — with full model flexibility. Comes equipped with enterprise safeguards like SSO, RBAC, auditing, and built-in Human-in-the-Loop controls.',
+      desc: 'Deploy in your preferred environment cloud or on-prem with full model flexibility. Comes equipped with enterprise safeguards like SSO, RBAC, auditing, and built-in Human in the Loop controls.',
       image: '/images/ScaleAndSecurity.svg',
     },
   ];
@@ -49,7 +49,7 @@ const AIMatters = () => {
       // ScrollTrigger for activeIndex
       const st = ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: 'top 3%',
+        start: 'top -8%',
         end: `+=${features.length * 40}%`,
         pin: true,
         scrub: 0.5,

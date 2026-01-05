@@ -131,8 +131,10 @@ const TechnologyStack = () => {
     const total = cardData.length;
 
     for (let i = 0; i < total; i++) {
-      // Calculate difference - no wrapping, just linear
-      let diff = i - activeIndex;
+      // Calculate circular difference for 360 wrapping
+      let diff = (i - activeIndex) % total;
+      if (diff < 0) diff += total;
+      if (diff > total / 2) diff -= total;
 
       let translateX = 0;
       let scale = 0.85;
@@ -140,36 +142,51 @@ const TechnologyStack = () => {
       let zIndex = 1;
       let height = '420px';
 
-      // Position cards in a linear fashion from left to right
-      if (diff === -2) {
-        translateX = -480;
-        scale = 0.8;
-        opacity = 0;
-        zIndex = 1;
-      } else if (diff === -1) {
-        translateX = -240;
-        scale = 0.94;
-        opacity = 0.5;
-        zIndex = 2;
-      } else if (diff === 0) {
+      // Position cards based on wrapped difference
+      if (diff === 0) {
         translateX = 0;
         scale = 1;
         opacity = 1;
-        zIndex = 3;
+        zIndex = 10;
         height = '460px'; // Highlighted card taller
-      } else if (diff === 1) {
+      } else if (diff === 1 || diff === -5) {
+        // Right 1
         translateX = 240;
         scale = 0.94;
         opacity = 0.5;
-        zIndex = 2;
-      } else if (diff === 2) {
+        zIndex = 5;
+      } else if (diff === -1 || diff === 5) {
+        // Left 1
+        translateX = -240;
+        scale = 0.94;
+        opacity = 0.5;
+        zIndex = 5;
+      } else if (diff === 2 || diff === -4) {
+        // Right 2
         translateX = 480;
         scale = 0.8;
-        opacity = 0;
-        zIndex = 1;
+        opacity = 0; // Hiding edge cards slightly or fully? User wanted 360.
+        // Original code had opacity 0 for +-2. Let's make them visible but faint?
+        // Original: const cardData = 6 items.
+        // Range: -3, -2, -1, 0, 1, 2. (Total 6).
+        // if total is 6, diffs are: 0, 1, 2, 3 (is -3), -2, -1.
+
+        // Let's refine visibility.
+        // 0: Center.
+        // 1, -1: Visible neighbors.
+        // 2, -2: Far neighbors.
+        // 3: Back.
+        opacity = 0.2; // Show faint edge
+        zIndex = 2;
+      } else if (diff === -2 || diff === 4) {
+        // Left 2
+        translateX = -480;
+        scale = 0.8;
+        opacity = 0.2;
+        zIndex = 2;
       } else {
-        // Cards outside the visible range - hide them off-screen
-        translateX = diff < 0 ? -1000 : 1000;
+        // Back card (diff 3 / -3)
+        translateX = 0;
         scale = 0.5;
         opacity = 0;
         zIndex = 0;
@@ -186,38 +203,43 @@ const TechnologyStack = () => {
     <div className='relative overflow-hidden'>
       {/* Background Gradient */}
       <div
-        className='absolute inset-0 z-0 bg-[linear-gradient(135deg,_#7030B14D_0%,_#CAB9F64D_25%,_#E6F2F64D_50%,_#DDA16C4D_65%,_#FFA5814D_80%,_#E5AA664D_100%)]'
+        className='absolute inset-0 z-0'
         style={{
-          backgroundColor: '#F9EAE1',
+          background: 'linear-gradient(90deg, #E6D4F1 0%, #F5E6DA 100%)',
         }}
-      >
-        {/* Clip Path Overlay for Desktop - Applied via CSS if possible or inline style responsive logic */}
-        <div className='hidden lg:block absolute inset-0 bg-[#F9EAE1] opacity-0 mix-blend-overlay' />
-        {/* Note: Original clip-path logic removed to avoid hydration errors. Standard full bg is safer and cleaner on all devices. */}
-      </div>
-      {/* Use valid clip path via inline style that is safe? Or just a div with border radius?
-           This creates the "curved bottom" look?
-           Let's just use a border-radius bottom on the container itself if needed.
-       */}
+      />
 
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 md:pt-16 lg:pt-24 pb-20 md:pb-32 lg:pb-60'>
+      <div className='relative text-center z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 md:pt-16 lg:pt-24 pb-20 md:pb-32 lg:pb-60'>
         {/* Title Section */}
-        <h1 className='text-3xl md:text-5xl text-gray-700 mb-6 text-center font-semibold leading-tight max-w-4xl mx-auto'>
-          Our Technology <span className='text-purple-600 font-bold'>Stack</span>
-        </h1>
+        {/* Title Section */}
+        <h2 className='text-[28px] md:text-[32px]  text-[#404040] mb-4 font-medium tracking-tight text-center max-w-4xl mx-auto'>
+          Our Technology{' '}
+          <span className='bg-[linear-gradient(180deg,#7030B1_0%,#B56DD3_100%)] bg-clip-text text-transparent'>
+            Stack
+          </span>
+        </h2>
 
-        <p className='text-base md:text-xl text-gray-500 text-center font-normal leading-relaxed mb-8 max-w-3xl mx-auto'>
+        {/* Subtitle */}
+        <p className='text-[28px] md:text-[32px] text-[#404040] font-medium text-center max-w-7xl mb-6 leading-relaxed'>
           Blending cloud, AI, and modern frameworks to drive innovation.
         </p>
 
         {/* Badges */}
-        <div className='flex gap-3 md:gap-4 mt-1 mb-12 flex-wrap justify-center'>
+        <div className='flex gap-4 md:gap-6 mt-1 mb-12 flex-wrap justify-center'>
           {badgeData.map((badge, i) => (
             <span
               key={i}
-              className='px-4 py-2 md:px-5 md:py-3 rounded-full flex items-center gap-2 whitespace-nowrap bg-white border border-[#D4D4D4] text-[#404040] text-sm md:text-base font-normal'
+              className='px-4 py-2 md:px-5 md:py-2 rounded-full flex items-center gap-2 whitespace-nowrap text-[#404040] text-sm md:text-sm font-medium'
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.0)', // Transparent bg
+                border: '1px solid rgba(112, 48, 177, 0.1)', // Subtle border
+                boxShadow: '0 2px 4px rgba(0,0,0,0.02)', // Very subtle shadow
+                background:
+                  'linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%)', // Glass-like effect
+              }}
             >
-              {badge.icon} {badge.label}
+              <span className='text-gray-700'>{badge.icon}</span>
+              {badge.label}
             </span>
           ))}
         </div>
@@ -239,7 +261,7 @@ const TechnologyStack = () => {
             <RiArrowRightSLine size={26} />
           </button>
 
-          <div className='flex justify-center items-center relative h-[560px] w-full overflow-hidden'>
+          <div className='flex justify-center items-center relative h-[500px] w-full overflow-hidden'>
             {cardData.map((card, index) => {
               const pos = cardPositions.find(p => p.index === index);
               if (!pos) return null;

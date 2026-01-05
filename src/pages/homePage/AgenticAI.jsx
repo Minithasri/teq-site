@@ -7,22 +7,26 @@ const AgenticAI = () => {
     {
       icon: '/images/HomePage/eye.svg',
       title: 'Observe',
-      subtitle: 'Real time data monitoring and ingestion from multiple sources',
+      subtitle:
+        'Real time data monitoring and ingestion from multiple sources for continuous insights and faster responses.',
     },
     {
       icon: '/images/HomePage/reason.svg',
       title: 'Reason',
-      subtitle: 'Advanced AI reasoning using LLMs and custom logic engines',
+      subtitle:
+        'Advanced AI reasoning using LLMs and custom logic engines to understand context and drive smarter decisions.',
     },
     {
       icon: '/images/HomePage/plan.svg',
       title: 'Plan & Collaborate',
-      subtitle: 'Multi agent coordination and collaborative task execution',
+      subtitle:
+        'Multi agent coordination and collaborative task execution to plan actions and manage complex workflows efficiently.',
     },
     {
       icon: '/images/HomePage/execute.svg',
       title: 'Execute',
-      subtitle: 'Direct system integration and automated task completion',
+      subtitle:
+        'Direct system integration with automated task completion to minimize manual effort and accelerate operations.',
     },
   ];
 
@@ -60,7 +64,7 @@ const AgenticAI = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 lg:mb-20'>
           {/* Left: Title */}
           <div>
-            <h2 className='text-3xl md:text-4xl lg:text-5xl font-medium text-[#404040] leading-tight text-center lg:text-left'>
+            <h2 className='text-[40px] font-medium text-[#404040] leading-tight text-center lg:text-left'>
               What does
               <br className='hidden lg:block' /> GWC actually solve?
             </h2>
@@ -68,7 +72,7 @@ const AgenticAI = () => {
 
           {/* Right: Description */}
           <div className='flex items-center'>
-            <p className='text-[#525252] text-base md:text-lg leading-relaxed text-center lg:text-left'>
+            <p className='text-[#525252] text-[15px] leading-relaxed text-center lg:text-left'>
               GWC streamlines and automates complex data management, ensuring transparency,
               compliance, and smarter, faster decision making across the organization.
             </p>
@@ -90,7 +94,7 @@ const AgenticAI = () => {
             >
               <div className='bg-white rounded-[22px] h-full w-full p-6 lg:p-8 flex flex-col items-start text-left'>
                 {/* Icon Container */}
-                <div className='w-16 h-16 rounded-full flex items-center justify-center mb-8 border border-gray-100 shadow-sm'>
+                <div className='w-16 h-16 rounded-full flex items-center justify-center mb-8 border border-gray-100 shadow-xl'>
                   <Image
                     src={card.icon}
                     alt=''
@@ -108,7 +112,10 @@ const AgenticAI = () => {
                 {/* Content */}
                 <div className='flex-1 flex flex-col'>
                   <h3 className='text-xl font-semibold text-[#404040] mb-4'>{card.title}</h3>
-                  <p className='text-[15px] md:text-base text-[#525252] leading-relaxed mt-auto'>
+                  <p
+                    className='mt-auto w-full text-[15px] text-[#525252] leading-relaxed text-justify'
+                    style={{ textAlignLast: 'left' }}
+                  >
                     {card.subtitle}
                   </p>
                 </div>

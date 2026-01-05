@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const Business = () => {
   return (
-    <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24'>
+    <div className='w-full  mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-6'>
       <div
-        className='relative p-8 sm:p-12 md:p-16 lg:p-24 rounded-[24px] border border-[#F2F2F2] bg-white text-center overflow-hidden'
+        className='relative p-6 sm:p-8 md:p-10 lg:p-16 rounded-[24px] border border-[#F2F2F2] bg-white text-center overflow-hidden'
         style={{ background: 'linear-gradient(135deg, #FFF7EB 0%, #FAE0FA 100%)' }}
       >
         {/* Decorations - Adjusted for responsiveness */}
@@ -28,8 +28,9 @@ const Business = () => {
 
         {/* Content */}
         <div className='relative z-10 max-w-4xl mx-auto'>
-          <h2 className='text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 leading-tight mb-8 sm:mb-12'>
+          <h2 className='text-[36px] font-medium text-gray-900 leading-tight mb-8 sm:mb-12'>
             Ready to <span className='text-[#914DC1]'>Activate Agentic AI</span>
+            <br />
             <span className='block sm:inline'> in Your Business?</span>
           </h2>
 
@@ -38,7 +39,7 @@ const Business = () => {
             <button className='w-full sm:w-[200px] h-[50px] rounded-full border-2 font-medium hover:bg-purple-50 transition-colors duration-300 text-sm sm:text-base border-[#6F2B8B] text-[#6F2B8B]'>
               Explore Use Cases
             </button>
-            <button className='inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-full sm:w-[200px] h-[50px] rounded-full font-medium text-sm sm:text-base hover:scale-105 transition-transform shadow-lg shadow-purple-200'>
+            <button className='inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-full sm:w-[200px] h-[50px] rounded-full font-medium text-sm sm:text-base hover:scale-105 transition-transform shadow-lg'>
               <Image src='/images/solutions/phone.svg' alt='Phone' width={20} height={20} />
               Contact Us
             </button>

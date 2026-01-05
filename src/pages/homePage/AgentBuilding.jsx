@@ -9,8 +9,6 @@ const categories = [
   { id: 'sales', label: 'Sales' },
   { id: 'retail', label: 'Retail' },
   { id: 'manufacturing', label: 'Manufacturing' },
-  { id: 'realestate', label: 'Real-estate' },
-  { id: 'fashion', label: 'Fashion' },
   { id: 'supplychain', label: 'Supply chain and Logistics' },
   { id: 'travel', label: 'Travel and hospitality' },
 ];
@@ -152,34 +150,7 @@ const agentData = {
       description: 'For: Manufacturing Ops, Supply Chain',
     },
   ],
-  realestate: [
-    {
-      title: 'Property Valuation Agent',
-      description: 'For: Real Estate, Property Valuers',
-    },
-    {
-      title: 'Lead Generation Agent',
-      description: 'For: Real Estate, Sales Teams',
-    },
-    {
-      title: 'Document Processing Agent',
-      description: 'For: Real Estate, Legal Teams',
-    },
-  ],
-  fashion: [
-    {
-      title: 'Trend Analysis Agent',
-      description: 'For: Fashion, Design Teams',
-    },
-    {
-      title: 'Inventory Forecasting Agent',
-      description: 'For: Fashion, Merchandising',
-    },
-    {
-      title: 'Customer Styling Agent',
-      description: 'For: Fashion, Personal Shoppers',
-    },
-  ],
+
   supplychain: [
     {
       title: 'Route Optimization Agent',
@@ -217,7 +188,7 @@ export default function AgentBuilding() {
     <section className='w-full py-16 lg:py-24' style={{ backgroundColor: '#F2ECFE' }}>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Title */}
-        <h2 className='text-3xl md:text-5xl font-medium text-center mb-12 sm:mb-16 tracking-tight'>
+        <h2 className='text-[28px] md:text-[32px] font-medium text-center mb-12 sm:mb-16 tracking-tight'>
           <span className='text-[#7030B1]'>Agentic building blocks</span>{' '}
           <span className='text-gray-700'>for the modern enterprise</span>
         </h2>
@@ -227,20 +198,40 @@ export default function AgentBuilding() {
            ========================================= */}
         <div className='hidden lg:block'>
           {/* Category Tabs */}
-          <div className='flex flex-wrap justify-center gap-4 rounded-2xl mb-12'>
-            {categories.map(category => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-2xl border-2 text-base font-medium transition-all duration-200 ${
-                  activeCategory === category.id
-                    ? 'border-[#7030B1] bg-white text-[#7030B1] shadow-xl'
-                    : 'border-gray-200 bg-white text-gray-600 hover:border-purple-200 hover:bg-gray-50'
-                }`}
-              >
-                {category.label}
-              </button>
-            ))}
+          <div className='flex flex-wrap justify-center gap-4 mb-10'>
+            {categories.map(category => {
+              const isActive = activeCategory === category.id;
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`px-6 py-2.5 rounded-full text-[14px] font-medium transition-all duration-300 border ${
+                    isActive
+                      ? 'text-white border-transparent shadow-md'
+                      : 'border-[#EBD4F4] hover:bg-purple-50'
+                  }`}
+                  style={{
+                    background: isActive
+                      ? 'linear-gradient(270deg, #7030B1 0%, #B56DD3 100%)'
+                      : 'white',
+                  }}
+                >
+                  <span
+                    style={
+                      !isActive
+                        ? {
+                            background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                          }
+                        : {}
+                    }
+                  >
+                    {category.label}
+                  </span>
+                </button>
+              );
+            })}
           </div>
 
           {/* Agent Cards Grid */}
@@ -248,17 +239,22 @@ export default function AgentBuilding() {
             {agentData[activeCategory]?.map((agent, index) => (
               <div
                 key={index}
-                className='bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300 flex flex-col min-h-[240px]'
+                className='bg-white border border-gray-200 rounded-2xl p-10 hover:shadow-lg transition-shadow duration-300 flex flex-col'
+                style={{ width: '400px', height: '200px' }}
               >
-                <h3 className='text-lg font-semibold text-gray-800 mb-3 leading-tight'>
+                <h3 className='text-[20px] font-semibold text-gray-800 mb-3 leading-tight'>
                   {agent.title}
                 </h3>
-                <p className='text-base text-gray-500 mb-6 leading-relaxed'>{agent.description}</p>
-                <div className='w-full h-[1px] mb-4 bg-[linear-gradient(to_right,#D1D5DB_50%,rgba(0,0,0,0)_0%)] bg-[length:8px_1px] bg-repeat-x mt-auto' />
-                <button className='inline-flex items-center gap-2 text-[#7030B1] text-sm font-medium hover:gap-3 transition-all duration-200'>
-                  Learn more
-                  <FiArrowRight className='w-4 h-4' />
-                </button>
+                <p className='text-[14px] text-gray-500 mb-4 leading-relaxed'>
+                  {agent.description}
+                </p>
+                <div className='mt-auto w-full'>
+                  <div className='w-full border-t border-dashed border-gray-300 mb-4'></div>
+                  <button className='inline-flex items-center gap-2 text-[#7030B1] text-[14px] font-medium hover:gap-3 transition-all duration-200'>
+                    Learn more
+                    <FiArrowRight className='w-4 h-4' />
+                  </button>
+                </div>
               </div>
             ))}
           </div>

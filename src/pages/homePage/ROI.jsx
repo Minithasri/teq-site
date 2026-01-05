@@ -37,7 +37,7 @@ const ROI = () => {
       <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Title */}
         <div className='max-w-4xl mx-auto text-center mb-12 sm:mb-16'>
-          <h2 className='font-medium leading-tight text-[24px] sm:text-[24px] md:text-[32px] text-[#333333]'>
+          <h2 className='font-medium leading-tight text-[32px] text-[#333333]'>
             Increase your ROI with <span className='text-[#914ec2]'>Agentic AI</span> that
             <img
               src='/images/Spark.svg'
@@ -50,7 +50,7 @@ const ROI = () => {
         </div>
 
         {/* Grid Layout */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start'>
+        <div className='grid grid-cols-1 lg:grid-cols-[55%_45%] gap-8 lg:gap-16 items-start'>
           {/* Left Column: Cards */}
           <div className='p-4 md:p-8 rounded-[25px] w-full bg-[#f7f2f6]'>
             <div className='flex flex-col gap-4 md:gap-6'>
@@ -67,10 +67,8 @@ const ROI = () => {
 
                   {/* Text Card */}
                   <div className='rounded-[15px] bg-white p-5 md:p-6 flex-1 min-w-0 flex flex-col justify-center min-h-[100px] h-auto'>
-                    <h3 className='text-[#404040] text-base md:text-lg font-semibold mb-1'>
-                      {card.title}
-                    </h3>
-                    <p className='text-[#737373] text-sm md:text-base font-normal leading-relaxed break-words'>
+                    <h3 className='text-[#404040] text-[16px] font-semibold mb-1'>{card.title}</h3>
+                    <p className='text-[#737373] text-[14px] font-normal leading-relaxed break-words'>
                       {card.subtitle}
                     </p>
                   </div>
@@ -89,14 +87,12 @@ const ROI = () => {
                 >
                   <div className='w-full flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4'>
                     <span
-                      className='text-3xl sm:text-4xl font-medium'
+                      className='text-[30px] sm:text-[30px] font-medium'
                       style={{ color: feature.color }}
                     >
                       {feature.number}
                     </span>
-                    <span className='text-[#737373] text-base sm:text-lg font-normal'>
-                      {feature.text}
-                    </span>
+                    <span className='text-[#737373] text-[14px] font-normal'>{feature.text}</span>
                   </div>
                 </div>
               ))}

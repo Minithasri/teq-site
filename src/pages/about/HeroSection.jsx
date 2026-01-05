@@ -29,7 +29,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Subheading */}
-          <p className='text-white/90 mb-4' style={{ fontSize: '18px', lineHeight: '1.5' }}>
+          <p className='text-white/90 mb-1  ' style={{ fontSize: '18px', lineHeight: '1.5' }}>
             The Data Revolution Begins Here
           </p>
 

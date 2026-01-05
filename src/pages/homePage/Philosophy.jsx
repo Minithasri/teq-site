@@ -43,17 +43,17 @@ const Philosophy = () => {
   };
 
   return (
-    <div className='relative w-full bg-white py-16 lg:py-24'>
+    <div className='relative w-full bg-white py-16 lg:py-12'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='text-center mb-12 sm:mb-16'>
-          <h1 className='text-3xl md:text-5xl font-medium mb-6 tracking-tight'>
+          <h1 className='text-[28px] md:text-[28px] font-medium mb-6 tracking-light'>
             Our{' '}
             <span className='bg-gradient-to-r from-[#7030B1] to-[#B56DD3] bg-clip-text text-transparent'>
               Development Philosophy
             </span>
           </h1>
-          <p className='text-gray-700 text-lg md:text-2xl font-medium max-w-4xl mx-auto leading-relaxed'>
+          <p className='text-gray-700 text-[28px] md:text-[28px] font-medium max-w-4xl mx-auto leading-relaxed'>
             We build reliable, scalable AI that delivers real impact.
           </p>
         </div>
@@ -98,7 +98,7 @@ const Philosophy = () => {
                   {/* Title */}
                   <div className='flex-1'>
                     <h3
-                      className={`font-semibold text-xl transition-colors duration-200 ${
+                      className={`font-semibold text-md transition-colors duration-200 ${
                         expandedIndex === index
                           ? 'text-[#7030B1]'
                           : 'text-gray-400 group-hover:text-gray-600'

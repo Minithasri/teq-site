@@ -84,7 +84,7 @@ export default function VisionandMission() {
             {/* Vision Card */}
             <div className='relative ml-44'>
               {/* Three Dash Lines Decoration - Outside card */}
-              <div className='absolute -top-4 -left-12 w-12 h-12 z-10'>
+              <div className='absolute -top-0 -left-12 w-12 h-12 z-10'>
                 <Image src='/images/AboutUs/threedashlines.svg' alt='' width={38} height={38} />
               </div>
 

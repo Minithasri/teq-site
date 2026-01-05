@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 
 const TechnologyPartner = () => {
   const partners = [
@@ -16,31 +15,36 @@ const TechnologyPartner = () => {
       style={{
         background: 'linear-gradient(to bottom, #FFFFFF, #F7F0FF)',
         paddingTop: '100px',
-        paddingBottom: '100px'
+        paddingBottom: '100px',
       }}
     >
       {/* Title */}
       <div className='text-center mb-12 lg:mb-16'>
-        <p className='text-[26px] font-medium text-gray-800'>
+        <p className='text-[32px] font-medium text-gray-800'>
           Our Technology <span className='text-[#914ec2]'>Partners</span>
         </p>
       </div>
 
       {/* Responsive Layout */}
       <div className='w-full max-w-7xl mx-auto'>
-
         {/* ≡ LARGE SCREENS: Single Row ≡ */}
         <div className='hidden lg:flex justify-center items-center gap-12 xl:gap-16 2xl:gap-20'>
-          {partners.map((partner, index) => (
-            <img
-              key={index}
-              src={partner.image}
-              alt={partner.name}
-              className='object-contain transition-transform duration-300 hover:scale-110'
-              style={{ height: '75px', width: '180px' }}
-              onError={e => (e.currentTarget.src = '/images/placeholder.png')}
-            />
-          ))}
+          {partners.map((partner, index) => {
+            const isFirstOrLast = index === 0 || index === partners.length - 1;
+            return (
+              <img
+                key={index}
+                src={partner.image}
+                alt={partner.name}
+                className='object-contain transition-transform duration-300 hover:scale-110'
+                style={{
+                  height: isFirstOrLast ? '60px' : '75px',
+                  width: isFirstOrLast ? '140px' : '180px',
+                }}
+                onError={e => (e.currentTarget.src = '/images/placeholder.png')}
+              />
+            );
+          })}
         </div>
 
         {/* ≡ MEDIUM SCREENS: 3 top, 2 bottom ≡ */}

@@ -1,21 +1,40 @@
 'use client';
 import { FiArrowRight } from 'react-icons/fi';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const HomeBanner = () => {
   const videoRef = useRef(null);
 
+  const [aiAgents, setAiAgents] = useState(0);
+  const [enterprise, setEnterprise] = useState(0);
+  const [minutesSaved, setMinutesSaved] = useState(0);
+
+  const animateCount = (setValue, end, duration = 1200) => {
+    let start = 0;
+    let startTime = null;
+
+    const step = timestamp => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      setValue(Math.floor(progress * end));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+  };
+
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch(error => {
-        console.log('Video autoplay failed:', error);
-      });
+      videoRef.current.play().catch(() => {});
     }
+
+    animateCount(setAiAgents, 90);
+    animateCount(setEnterprise, 40);
+    animateCount(setMinutesSaved, 200000, 1500);
   }, []);
 
   return (
-<div className="pt-[50px] md:pt-[50px] lg:pt-10">
-
+    <div className='pt-[50px] md:pt-[50px] lg:pt-10'>
       {/* Background Video */}
       <div className='absolute inset-0 w-full h-full z-0'>
         <video
@@ -41,10 +60,9 @@ const HomeBanner = () => {
       {/* Main Container */}
       <div className='relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='grid grid-cols-1 lg:grid-cols-[1.45fr_0.85fr] gap-8 lg:gap-12 items-center py-8 sm:py-12 lg:py-16'>
-
           {/* LEFT COLUMN */}
           <div className='text-center lg:text-left space-y-6'>
-            <h1 className='font-bold text-[32px] leading-[40px] sm:text-[40px] sm:leading-[50px] lg:text-[46px] lg:leading-[58px]'>
+            <h1 className='font-bold text-[32px] leading-[40px] sm:text-[40px] sm:leading-[50px] lg:text-[40px] lg:leading-[58px]'>
               <span
                 className='bg-clip-text text-transparent'
                 style={{ backgroundImage: 'linear-gradient(to right, #7030B1, #B56DD3)' }}
@@ -55,7 +73,8 @@ const HomeBanner = () => {
             </h1>
 
             <p className='text-[16px] sm:text-[18px] font-normal text-[#737373] max-w-2xl mx-auto lg:mx-0 mt-4 sm:mt-6'>
-              Agentic AI solutions that transform your business <br></br>processes with measurable ROI and rapid deployment.
+              Agentic AI solutions that transform your business <br></br>processes with measurable
+              ROI and rapid deployment.
             </p>
 
             <div className='flex justify-center lg:justify-start'>
@@ -85,25 +104,42 @@ const HomeBanner = () => {
 
               <div className='space-y-3 sm:space-y-4'>
                 <div className='text-left'>
-                  <div className='text-[20px] sm:text-[24px] font-bold text-[#7030B1]'>90+</div>
-                  <div className='text-[12px] sm:text-[14px] font-medium text-gray-600 mt-1'>AI Agents</div>
+                  <div className='text-[20px] sm:text-[24px] font-bold text-[#7030B1]'>
+                    {aiAgents}+
+                  </div>
+
+                  <div className='text-[12px] sm:text-[14px] font-medium text-gray-600 mt-1'>
+                    AI Agents
+                  </div>
                 </div>
 
                 <div className='text-left'>
                   <div className='text-[20px] sm:text-[24px] font-bold text-[#7030B1]'>30–50%</div>
-                  <div className='text-[12px] sm:text-[14px] font-medium text-gray-600 mt-1'>Faster Implementation</div>
+                  <div className='text-[12px] sm:text-[14px] font-medium text-gray-600 mt-1'>
+                    Faster Implementation
+                  </div>
                 </div>
               </div>
 
               <div className='space-y-3 sm:space-y-4'>
                 <div className='text-left'>
-                  <div className='text-[20px] sm:text-[24px] font-bold text-[#7030B1]'>40+</div>
-                  <div className='text-[12px] sm:text-[14px] font-medium text-gray-600 mt-1'>Enterprise Deployments</div>
+                  <div className='text-[20px] sm:text-[24px] font-bold text-[#7030B1]'>
+                    {enterprise}+
+                  </div>
+
+                  <div className='text-[12px] sm:text-[14px] font-medium text-gray-600 mt-1'>
+                    Enterprise Deployments
+                  </div>
                 </div>
 
                 <div className='text-left'>
-                  <div className='text-[20px] sm:text-[24px] font-bold text-[#7030B1]'>200k+</div>
-                  <div className='text-[12px] sm:text-[14px] font-medium text-gray-600 mt-1'>Mins of human efforts saved</div>
+                  <div className='text-[20px] sm:text-[24px] font-bold text-[#7030B1]'>
+                    {Math.floor(minutesSaved / 1000)}k+
+                  </div>
+
+                  <div className='text-[12px] sm:text-[14px] font-medium text-gray-600 mt-1'>
+                    Mins of human efforts saved
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,13 +166,13 @@ const HomeBanner = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(-50%, -50%) translateY(0px);
           }
           50% {
