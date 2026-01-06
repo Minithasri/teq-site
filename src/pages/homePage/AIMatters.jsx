@@ -124,7 +124,7 @@ const AIMatters = () => {
                 <br className='hidden lg:block' /> enterprise AI advantage.
               </h2>
               <p className='text-white opacity-95 text-sm lg:text-base flex-1 max-w-[580px]'>
-                Agentic AI is the next evolution of automation — intelligent agents that observe,
+                Agentic AI is the next evolution of automation - intelligent agents that observe,
                 reason, and act with minimal human input.
               </p>
             </div>

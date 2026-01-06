@@ -48,7 +48,7 @@ const AgenticAI = () => {
           </div>
 
           {/* Dashed Line */}
-          <div className='hidden sm:block flex-1 mx-6 h-[2px] bg-[linear-gradient(to_right,#D4D4D4_50%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x' />
+          <div className='hidden sm:block flex-1 -mx-2 h-[2px] bg-[linear-gradient(to_right,#D4D4D4_50%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x' />
 
           {/* CTA Button */}
           <button

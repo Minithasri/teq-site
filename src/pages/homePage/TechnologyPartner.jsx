@@ -30,7 +30,8 @@ const TechnologyPartner = () => {
         {/* ≡ LARGE SCREENS: Single Row ≡ */}
         <div className='hidden lg:flex justify-center items-center gap-12 xl:gap-16 2xl:gap-20'>
           {partners.map((partner, index) => {
-            const isFirstOrLast = index === 0 || index === partners.length - 1;
+            const isFirst = index === 0;
+            const isLast = index === partners.length - 1;
             return (
               <img
                 key={index}
@@ -38,8 +39,8 @@ const TechnologyPartner = () => {
                 alt={partner.name}
                 className='object-contain transition-transform duration-300 hover:scale-110'
                 style={{
-                  height: isFirstOrLast ? '60px' : '75px',
-                  width: isFirstOrLast ? '140px' : '180px',
+                  height: isFirst ? '45px' : isLast ? '60px' : '75px',
+                  width: isFirst ? '120px' : isLast ? '140px' : '180px',
                 }}
                 onError={e => (e.currentTarget.src = '/images/placeholder.png')}
               />
@@ -56,7 +57,10 @@ const TechnologyPartner = () => {
                 src={partner.image}
                 alt={partner.name}
                 className='object-contain transition-transform duration-300 hover:scale-110'
-                style={{ height: '75px', width: '160px' }}
+                style={{
+                  height: index === 0 ? '45px' : '75px',
+                  width: index === 0 ? '120px' : '160px',
+                }}
                 onError={e => (e.currentTarget.src = '/images/placeholder.png')}
               />
             ))}
@@ -84,7 +88,10 @@ const TechnologyPartner = () => {
               src={partner.image}
               alt={partner.name}
               className='object-contain transition-transform duration-300 hover:scale-110'
-              style={{ height: '75px', width: '140px' }}
+              style={{
+                height: index === 0 ? '45px' : '75px',
+                width: index === 0 ? '120px' : '140px',
+              }}
               onError={e => (e.currentTarget.src = '/images/placeholder.png')}
             />
           ))}

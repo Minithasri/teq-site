@@ -52,13 +52,13 @@ const PlatformFeatures = () => {
           <div className='z-10'>
             <div
               className='flex items-center justify-center rounded-2xl shadow-md'
-              style={{ backgroundColor: '#ffffff', width: '66px', height: '66px' }}
+              style={{ backgroundColor: '#ffffff', width: '52px', height: '52px' }}
             >
-              <Image src='/images/Spark.svg' alt='Spark' width={36} height={36} />
+              <Image src='/images/Spark.svg' alt='Spark' width={28} height={28} />
             </div>
           </div>
 
-          <div className='hidden sm:flex border-t-2 border-dashed border-[#1F1F1F] absolute left-[100px] right-[300px] top-1/2 transform -translate-y-1/2 opacity-20' />
+          <div className='hidden sm:flex border-t-2 border-dashed border-[#1F1F1F] absolute left-[60px] right-[260px] top-1/2 transform -translate-y-1/2 opacity-20' />
 
           <div className='z-10'>
             <button

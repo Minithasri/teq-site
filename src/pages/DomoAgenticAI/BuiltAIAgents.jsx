@@ -1,7 +1,6 @@
 'use client';
-import React from 'react';
-import { FiArrowRight } from 'react-icons/fi';
 import Image from 'next/image';
+import { FiArrowRight } from 'react-icons/fi';
 
 const BuiltAIAgents = () => {
   const cards = [
@@ -45,13 +44,13 @@ const BuiltAIAgents = () => {
           <div className='z-10'>
             <div
               className='flex items-center justify-center rounded-2xl shadow-md'
-              style={{ backgroundColor: '#ffffff', width: '66px', height: '66px' }}
+              style={{ backgroundColor: '#ffffff', width: '52px', height: '52px' }}
             >
-              <Image src='/images/Spark.svg' alt='Spark' width={36} height={36} />
+              <Image src='/images/Spark.svg' alt='Spark' width={28} height={28} />
             </div>
           </div>
 
-          <div className='hidden sm:flex border-t-2 border-dashed border-[#1F1F1F] absolute left-[100px] right-[300px] top-1/2 transform -translate-y-1/2 opacity-20' />
+          <div className='hidden sm:flex border-t-2 border-dashed border-[#1F1F1F] absolute left-[60px] right-[260px] top-1/2 transform -translate-y-1/2 opacity-20' />
 
           <div className='z-10'>
             {/* Enhanced hover for button only */}
@@ -77,7 +76,7 @@ const BuiltAIAgents = () => {
             <h1
               className='leading-tight'
               style={{
-                fontSize: '40px',
+                fontSize: '32px',
                 fontWeight: 500,
                 color: '#1f1f1f',
               }}

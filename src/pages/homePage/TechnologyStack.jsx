@@ -153,39 +153,16 @@ const TechnologyStack = () => {
         // Right 1
         translateX = 240;
         scale = 0.94;
-        opacity = 0.5;
+        opacity = 0.4;
         zIndex = 5;
       } else if (diff === -1 || diff === 5) {
         // Left 1
         translateX = -240;
         scale = 0.94;
-        opacity = 0.5;
+        opacity = 0.4;
         zIndex = 5;
-      } else if (diff === 2 || diff === -4) {
-        // Right 2
-        translateX = 480;
-        scale = 0.8;
-        opacity = 0; // Hiding edge cards slightly or fully? User wanted 360.
-        // Original code had opacity 0 for +-2. Let's make them visible but faint?
-        // Original: const cardData = 6 items.
-        // Range: -3, -2, -1, 0, 1, 2. (Total 6).
-        // if total is 6, diffs are: 0, 1, 2, 3 (is -3), -2, -1.
-
-        // Let's refine visibility.
-        // 0: Center.
-        // 1, -1: Visible neighbors.
-        // 2, -2: Far neighbors.
-        // 3: Back.
-        opacity = 0.2; // Show faint edge
-        zIndex = 2;
-      } else if (diff === -2 || diff === 4) {
-        // Left 2
-        translateX = -480;
-        scale = 0.8;
-        opacity = 0.2;
-        zIndex = 2;
       } else {
-        // Back card (diff 3 / -3)
+        // Hide all other cards (diff ±2, etc.) to show only 3 cards
         translateX = 0;
         scale = 0.5;
         opacity = 0;
@@ -249,13 +226,13 @@ const TechnologyStack = () => {
            ======================= */}
         <div className='hidden lg:block relative w-full'>
           <button
-            className='bg-white rounded-full w-14 h-14 flex items-center justify-center border border-gray-300 transition-all duration-300 z-20 shadow-xl absolute left-4 top-1/2 -translate-y-1/2 hover:scale-105'
+            className='bg-white rounded-full w-14 h-14 flex items-center justify-center border border-gray-300 transition-all duration-300 z-20 shadow-xl absolute left-24 top-1/2 -translate-y-1/2 hover:scale-105'
             onClick={handlePrev}
           >
             <RiArrowLeftSLine size={26} />
           </button>
           <button
-            className='bg-white rounded-full w-14 h-14 flex items-center justify-center border border-gray-300 transition-all duration-300 z-20 shadow-xl absolute right-4 top-1/2 -translate-y-1/2 hover:scale-105'
+            className='bg-white rounded-full w-14 h-14 flex items-center justify-center border border-gray-300 transition-all duration-300 z-20 shadow-xl absolute right-24 top-1/2 -translate-y-1/2 hover:scale-105'
             onClick={handleNext}
           >
             <RiArrowRightSLine size={26} />

@@ -247,7 +247,7 @@ const AgentBundle = () => {
                   {/* Overlay Header */}
                   <div className='p-6 pb-4 border-b border-gray-200 bg-white shrink-0'>
                     <div className='flex items-center gap-4'>
-                      <div className='w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 border border-gray-200'>
+                      <div className='w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center shrink-0 border border-gray-200'>
                         {/* Icon in Black/Dark Gray */}
                         <Image
                           src={bundle.icon}
@@ -278,7 +278,7 @@ const AgentBundle = () => {
                           className='bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md transition-shadow'
                         >
                           <div className='flex items-start gap-3 mb-3'>
-                            <div className='w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center shrink-0 text-white'>
+                            <div className='w-8 h-8 rounded-xl bg-gray-800 flex items-center justify-center shrink-0 text-white'>
                               <span className='text-xs'>⚡</span>
                             </div>
                             <div>
@@ -297,7 +297,7 @@ const AgentBundle = () => {
                             {sub.features}
                           </p>
 
-                          <div className='flex items-start gap-2 bg-gray-50 p-3 rounded-lg border border-gray-200'>
+                          <div className='flex items-start gap-2 bg-gray-50 p-3 rounded-xl border border-gray-200'>
                             <div className='mt-0.5 min-w-[14px]'>
                               {/* Simple Gray Checkmark */}
                               <svg

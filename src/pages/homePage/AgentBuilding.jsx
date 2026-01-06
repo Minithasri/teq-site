@@ -185,12 +185,11 @@ export default function AgentBuilding() {
   const [activeCategory, setActiveCategory] = useState('hr');
 
   return (
-    <section className='w-full py-16 lg:py-24' style={{ backgroundColor: '#F2ECFE' }}>
+    <section className='w-full py-16 lg:py-24' style={{ backgroundColor: '#3B174A' }}>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Title */}
-        <h2 className='text-[28px] md:text-[32px] font-medium text-center mb-12 sm:mb-16 tracking-tight'>
-          <span className='text-[#7030B1]'>Agentic building blocks</span>{' '}
-          <span className='text-gray-700'>for the modern enterprise</span>
+        <h2 className='text-[28px] md:text-[32px] font-medium text-center mb-12 sm:mb-16 tracking-tight text-white'>
+          Agentic building blocks for the modern enterprise
         </h2>
 
         {/* =========================================
@@ -198,40 +197,30 @@ export default function AgentBuilding() {
            ========================================= */}
         <div className='hidden lg:block'>
           {/* Category Tabs */}
-          <div className='flex flex-wrap justify-center gap-4 mb-10'>
-            {categories.map(category => {
-              const isActive = activeCategory === category.id;
-              return (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`px-6 py-2.5 rounded-full text-[14px] font-medium transition-all duration-300 border ${
-                    isActive
-                      ? 'text-white border-transparent shadow-md'
-                      : 'border-[#EBD4F4] hover:bg-purple-50'
-                  }`}
-                  style={{
-                    background: isActive
-                      ? 'linear-gradient(270deg, #7030B1 0%, #B56DD3 100%)'
-                      : 'white',
-                  }}
-                >
-                  <span
-                    style={
-                      !isActive
-                        ? {
-                            background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                          }
-                        : {}
-                    }
+          <div className='flex justify-center mb-12'>
+            <div className='inline-flex flex-wrap justify-center bg-white rounded-full p-2 gap-2 shadow-lg border border-purple-50'>
+              {categories.map(category => {
+                const isActive = activeCategory === category.id;
+                return (
+                  <button
+                    key={category.id}
+                    onClick={() => setActiveCategory(category.id)}
+                    className={`px-6 py-2.5 rounded-full text-[14px] font-medium transition-all duration-300 border ${
+                      isActive
+                        ? 'text-white border-transparent shadow-md'
+                        : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
+                    }`}
+                    style={{
+                      background: isActive
+                        ? 'linear-gradient(270deg, #7030B1 0%, #B56DD3 100%)'
+                        : 'transparent',
+                    }}
                   >
                     {category.label}
-                  </span>
-                </button>
-              );
-            })}
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           {/* Agent Cards Grid */}
@@ -239,21 +228,52 @@ export default function AgentBuilding() {
             {agentData[activeCategory]?.map((agent, index) => (
               <div
                 key={index}
-                className='bg-white border border-gray-200 rounded-2xl p-10 hover:shadow-lg transition-shadow duration-300 flex flex-col'
-                style={{ width: '400px', height: '200px' }}
+                className='relative rounded-2xl overflow-hidden group border border-[#E5E5E5]'
+                style={{ width: '400px', height: '320px' }}
               >
-                <h3 className='text-[20px] font-semibold text-gray-800 mb-3 leading-tight'>
-                  {agent.title}
-                </h3>
-                <p className='text-[14px] text-gray-500 mb-4 leading-relaxed'>
-                  {agent.description}
-                </p>
-                <div className='mt-auto w-full'>
-                  <div className='w-full border-t border-dashed border-gray-300 mb-4'></div>
-                  <button className='inline-flex items-center gap-2 text-[#7030B1] text-[14px] font-medium hover:gap-3 transition-all duration-200'>
-                    Learn more
-                    <FiArrowRight className='w-4 h-4' />
-                  </button>
+                {/* Background Image */}
+                <div className='absolute inset-0 z-0'>
+                  <img
+                    src='/images/HomePage/agentbuildingbg.svg'
+                    alt=''
+                    className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
+                  />
+                </div>
+
+                {/* Top Gradient */}
+                <div
+                  className='absolute inset-x-0 top-0 h-24 z-10'
+                  style={{
+                    background:
+                      'linear-gradient(180deg, rgba(59, 23, 74, 0.7) 0%, rgba(59, 23, 74, 0) 100%)',
+                  }}
+                />
+
+                {/* Bottom Gradient */}
+                <div
+                  className='absolute inset-x-0 bottom-0 h-40 z-10'
+                  style={{
+                    background: 'linear-gradient(to bottom, rgba(59, 23, 74, 0) 0%, #3B174A 100%)',
+                  }}
+                />
+
+                {/* Overlay for whole card if needed for tint, or keep specific gradients */}
+
+                {/* Content */}
+                <div className='absolute bottom-0 w-full p-6 z-20 flex flex-col justify-end h-full'>
+                  <div className='mt-auto'>
+                    <h3 className='text-[20px] font-bold text-white mb-2 leading-tight'>
+                      {agent.title}
+                    </h3>
+                    <p className='text-[13px] text-white/80 mb-6 font-light'>{agent.description}</p>
+
+                    <div className='w-full h-[1px] bg-white/30 mb-4' />
+
+                    <button className='inline-flex items-center gap-2 text-[#F97316] text-[14px] font-medium hover:gap-3 transition-all duration-200'>
+                      Learn more
+                      <FiArrowRight className='w-4 h-4' />
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
@@ -268,11 +288,11 @@ export default function AgentBuilding() {
             <div key={category.id} className='flex flex-col gap-6'>
               {/* Category Header */}
               <div className='flex items-center gap-4'>
-                <div className='h-[2px] flex-1 bg-gray-200'></div>
-                <h3 className='text-2xl font-semibold text-[#7030B1] whitespace-nowrap'>
+                <div className='h-[2px] flex-1 bg-white/20'></div>
+                <h3 className='text-2xl font-semibold text-white whitespace-nowrap'>
                   {category.label}
                 </h3>
-                <div className='h-[2px] flex-1 bg-gray-200'></div>
+                <div className='h-[2px] flex-1 bg-white/20'></div>
               </div>
 
               {/* Cards for this Category */}
@@ -280,19 +300,46 @@ export default function AgentBuilding() {
                 {agentData[category.id]?.map((agent, index) => (
                   <div
                     key={index}
-                    className='bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col min-h-[200px]'
+                    className='relative rounded-2xl overflow-hidden min-h-[320px] shadow-lg group border border-[#E5E5E5]'
                   >
-                    <h3 className='text-lg font-semibold text-gray-800 mb-3 leading-tight'>
-                      {agent.title}
-                    </h3>
-                    <p className='text-sm text-gray-500 mb-6 leading-relaxed'>
-                      {agent.description}
-                    </p>
-                    <div className='w-full h-[1px] mb-4 bg-[linear-gradient(to_right,#D1D5DB_50%,rgba(0,0,0,0)_0%)] bg-[length:8px_1px] bg-repeat-x mt-auto' />
-                    <button className='inline-flex items-center gap-2 text-[#7030B1] text-sm font-medium'>
-                      Learn more
-                      <FiArrowRight className='w-4 h-4' />
-                    </button>
+                    {/* Background Image */}
+                    <div className='absolute inset-0 z-0'>
+                      <img
+                        src='/images/HomePage/agentbuildingbg.svg'
+                        alt=''
+                        className='w-full h-full object-cover'
+                      />
+                    </div>
+                    {/* Top Gradient */}
+                    <div
+                      className='absolute inset-x-0 top-0 h-24 z-10'
+                      style={{
+                        background:
+                          'linear-gradient(180deg, rgba(59, 23, 74, 0.7) 0%, rgba(59, 23, 74, 0) 100%)',
+                      }}
+                    />
+                    {/* Bottom Gradient */}
+                    <div
+                      className='absolute inset-x-0 bottom-0 h-40 z-10'
+                      style={{
+                        background:
+                          'linear-gradient(to bottom, rgba(59, 23, 74, 0) 0%, #3B174A 100%)',
+                      }}
+                    />
+
+                    <div className='absolute bottom-0 w-full p-6 z-20 flex flex-col justify-end h-full'>
+                      <div className='mt-auto'>
+                        <h3 className='text-lg font-bold text-white mb-2 leading-tight'>
+                          {agent.title}
+                        </h3>
+                        <p className='text-sm text-white/80 mb-6 font-light'>{agent.description}</p>
+                        <div className='w-full h-[1px] bg-white/30 mb-4' />
+                        <button className='inline-flex items-center gap-2 text-[#F97316] text-sm font-medium'>
+                          Learn more
+                          <FiArrowRight className='w-4 h-4' />
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>

@@ -30,24 +30,28 @@ const SimpleSteps = () => {
       title: 'Connect Your Data',
       description: 'Plug into any source—cloud apps, files, databases, APIs',
       position: 'top',
+      icon: '/images/Data.svg',
     },
     {
       id: 2,
       title: 'Set Your Logic',
       description: 'Use Agent Catalyst to define conditions, rules, and actions',
       position: 'bottom',
+      icon: '/images/DomoPage/icon_domo_2.svg',
     },
     {
       id: 3,
       title: 'Launch & Automate',
       description: 'Deploy agents that think, decide, and execute—autonomously',
       position: 'top',
+      icon: '/images/DomoPage/icon_domo_3.svg',
     },
     {
       id: 4,
       title: 'Track & Optimize',
       description: 'Visualize actions, tweak logic, and scale across business units',
       position: 'bottom',
+      icon: '/images/DomoPage/icon_domo_4.svg',
     },
   ];
 
@@ -101,7 +105,7 @@ const SimpleSteps = () => {
   }, []);
 
   return (
-    <section className='w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24'>
+    <section className='w-full bg-white py-12 sm:py-16 md:py-10 lg:py-10'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <h2 className='text-center mb-12 md:mb-16 lg:mb-20 leading-tight'>
           <span className='block text-[#404040] text-[32px] font-medium'>Know how it works in</span>
@@ -152,23 +156,23 @@ const SimpleSteps = () => {
               <div
                 key={step.id}
                 className={`relative text-left pl-8 xl:pl-10 ${
-                  step.id === steps.length ? 'ml-10 xl:ml-16' : ''
+                  step.id === 2 || step.id === 4 ? 'ml-10 xl:ml-16' : ''
                 }`}
                 style={{
                   marginTop: step.position === 'bottom' ? '160px' : '0px',
                 }}
               >
                 {/* Large number on the left side */}
-                <div className='absolute -left-2 xl:-left-4 top-0 text-6xl xl:text-7xl font-bold text-gray-200 opacity-30 leading-none'>
+                <div className='absolute -left-2 xl:-left-4 top-0 text-6xl xl:text-7xl font-bold text-gray-200 opacity-50 leading-none'>
                   {step.id}
                 </div>
 
                 {/* Content: Icon, Title, Description */}
                 <div className='relative z-10'>
                   <img
-                    src='/images/Data.svg'
+                    src={step.icon}
                     alt='step icon'
-                    className='w-12 h-12 xl:w-14 xl:h-14 object-contain mb-4'
+                    className='w-8 h-8 xl:w-8 xl:h-8 object-contain mb-4'
                   />
 
                   <h3 className='font-semibold text-base xl:text-lg bg-gradient-to-r from-[#7030B1] to-[#B56DD3] bg-clip-text text-transparent mb-2'>

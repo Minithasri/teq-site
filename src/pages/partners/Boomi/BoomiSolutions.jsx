@@ -73,40 +73,42 @@ const BoomiSolutions = () => {
         {/* Desktop View: Tabs & Interactive Card */}
         <div className='hidden md:block'>
           {/* Tabs */}
-          <div className='flex flex-wrap justify-center gap-4 mb-10'>
-            {solutions.map((solution, index) => {
-              const isActive = activeTab === index;
-              return (
-                <button
-                  key={index}
-                  onClick={() => setActiveTab(index)}
-                  className={`px-6 py-2.5 rounded-full text-[14px] font-medium transition-all duration-300 border ${
-                    isActive
-                      ? 'text-white border-transparent shadow-md'
-                      : 'border-[#EBD4F4] hover:bg-purple-50'
-                  }`}
-                  style={{
-                    background: isActive
-                      ? 'linear-gradient(270deg, #7030B1 0%, #B56DD3 100%)'
-                      : 'white',
-                  }}
-                >
-                  <span
-                    style={
-                      !isActive
-                        ? {
-                            background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                          }
-                        : {}
-                    }
+          <div className='flex justify-center mb-12'>
+            <div className='inline-flex flex-wrap justify-center bg-[#FBF4FE] rounded-full p-2 gap-2 shadow-lg border border-purple-50'>
+              {solutions.map((solution, index) => {
+                const isActive = activeTab === index;
+                return (
+                  <button
+                    key={index}
+                    onClick={() => setActiveTab(index)}
+                    className={`px-6 py-2.5 rounded-full text-[14px] font-medium transition-all duration-300 border ${
+                      isActive
+                        ? 'text-white border-transparent shadow-md'
+                        : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
+                    }`}
+                    style={{
+                      background: isActive
+                        ? 'linear-gradient(270deg, #7030B1 0%, #B56DD3 100%)'
+                        : 'transparent',
+                    }}
                   >
-                    {solution.tabName}
-                  </span>
-                </button>
-              );
-            })}
+                    <span
+                      style={
+                        !isActive
+                          ? {
+                              background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                              WebkitBackgroundClip: 'text',
+                              WebkitTextFillColor: 'transparent',
+                            }
+                          : {}
+                      }
+                    >
+                      {solution.tabName}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           {/* Content Card */}

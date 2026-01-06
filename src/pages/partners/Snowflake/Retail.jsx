@@ -61,40 +61,42 @@ export default function Retail() {
         </h2>
 
         {/* Scrollable Tabs */}
-        <div className='flex overflow-x-auto pb-4 mb-10 gap-4 justify-start lg:justify-center no-scrollbar'>
-          {industries.map(industry => {
-            const isActive = activeTab === industry;
-            return (
-              <button
-                key={industry}
-                onClick={() => setActiveTab(industry)}
-                className={`px-6 py-2.5 rounded-full text-[14px] font-medium whitespace-nowrap transition-all duration-300 border ${
-                  isActive
-                    ? 'text-white border-transparent shadow-md'
-                    : 'border-[#EBD4F4] hover:bg-purple-50'
-                }`}
-                style={{
-                  background: isActive
-                    ? 'linear-gradient(270deg, #7030B1 0%, #B56DD3 100%)'
-                    : 'white',
-                }}
-              >
-                <span
-                  style={
-                    !isActive
-                      ? {
-                          background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                          WebkitBackgroundClip: 'text',
-                          WebkitTextFillColor: 'transparent',
-                        }
-                      : {}
-                  }
+        <div className='flex justify-center mb-10'>
+          <div className='inline-flex flex-wrap justify-center bg-[#FBF4FE] rounded-full p-2 gap-2 shadow-lg border border-purple-50'>
+            {industries.map(industry => {
+              const isActive = activeTab === industry;
+              return (
+                <button
+                  key={industry}
+                  onClick={() => setActiveTab(industry)}
+                  className={`px-6 py-2.5 rounded-full text-[14px] font-medium whitespace-nowrap transition-all duration-300 border ${
+                    isActive
+                      ? 'text-white border-transparent shadow-md'
+                      : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
+                  }`}
+                  style={{
+                    background: isActive
+                      ? 'linear-gradient(270deg, #7030B1 0%, #B56DD3 100%)'
+                      : 'transparent',
+                  }}
                 >
-                  {industry}
-                </span>
-              </button>
-            );
-          })}
+                  <span
+                    style={
+                      !isActive
+                        ? {
+                            background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                          }
+                        : {}
+                    }
+                  >
+                    {industry}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Content Card */}

@@ -37,7 +37,7 @@ const ROI = () => {
       <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Title */}
         <div className='max-w-4xl mx-auto text-center mb-12 sm:mb-16'>
-          <h2 className='font-medium leading-tight text-[32px] text-[#333333]'>
+          <h2 className='font-medium leading-relaxed text-[32px] text-[#333333]'>
             Increase your ROI with <span className='text-[#914ec2]'>Agentic AI</span> that
             <img
               src='/images/Spark.svg'

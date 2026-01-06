@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
 
           {/* Col 3: Partners */}
-          <div className='-ml-12'>
+          <div className='-ml-20'>
             <h3 className='font-bold mb-6 text-sm uppercase tracking-wider'>PARTNERS</h3>
             <ul className='space-y-3'>
               {partners.map(partner => (
@@ -104,7 +104,7 @@ const Footer = () => {
           </div>
 
           {/* Col 4: Solutions */}
-          <div className='-ml-20'>
+          <div className='-ml-24'>
             <h3 className='font-bold mb-6 text-sm uppercase tracking-wider'>SOLUTIONS</h3>
             <ul className='space-y-3'>
               {solutions.map(solution => (
