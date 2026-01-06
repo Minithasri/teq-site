@@ -75,14 +75,14 @@ const ServicesGwc = () => {
         {/* Title & Description */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-[300px]'>
           <div>
-            <h2 className='text-3xl md:text-4xl font-semibold leading-tight text-gray-900'>
+            <h2 className='text-[28px] md:text-[32px] font-semibold leading-relaxed text-gray-900'>
               <span className='text-[#8B35BC]'>Google Cloud Services</span>
               <br />
               at GWC
             </h2>
           </div>
           <div className='flex justify-start lg:justify-end'>
-            <p className='text-gray-600 max-w-lg leading-relaxed text-left lg:text-left'>
+            <p className='text-gray-600 max-w-lg text-[15px] leading-relaxed text-left lg:text-left'>
               Our certified experts analyze and optimize your GCP environment to reduce costs,
               improve efficiency, and ensure reliable cloud operations so you can focus on your
               business goals.

@@ -8,7 +8,7 @@ export default function WhyGwc() {
       icon: '/images/AboutUs/icon61.svg',
       title: 'Proven ROI',
       description:
-        'GWC takes a strategic, ROI-driven approach by identifying gaps and solving high-impact business challenges.',
+        'GWC takes a strategic, ROI driven approach by identifying gaps and solving high impact business challenges.',
     },
     {
       icon: '/images/AboutUs/icon62.svg',
@@ -44,7 +44,7 @@ export default function WhyGwc() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Heading */}
         <h2 className='text-[40px] font-semibold text-white text-center mb-16'>
-          Why Choose GWC Data.AI?
+          Why choose GWC Data.AI?
         </h2>
 
         {/* Features Grid */}

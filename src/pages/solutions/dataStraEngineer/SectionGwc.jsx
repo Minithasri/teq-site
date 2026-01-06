@@ -6,7 +6,7 @@ const sectionData = {
   title: 'GWC Turns Your Data Into Business Value',
   subtitle:
     'Our BI and analytics solutions are customized to your business needs, delivering targeted insights that align with your unique challenges and goals.',
-  mainImage: '/images/solutions/dataStrategyEngineer/bg_section2.png',
+  mainImage: '/images/solutions/dataStrategyEngineer/bgsection2.png',
 };
 
 export default function SectionGwc() {
@@ -30,12 +30,12 @@ export default function SectionGwc() {
         {/* Main Image Container */}
         <div className='relative w-full lg:w-[620px] max-w-full mx-auto '>
           {/* Main Image (bg_frame.png) */}
-          <div className='relative' style={{ paddingBottom: '50%' }}>
+          <div className='relative rounded-xl overflow-hidden' style={{ paddingBottom: '50%' }}>
             <Image
               src={sectionData.mainImage}
               alt='Data Strategy visualization'
               fill
-              className='object-contain rounded-3xl'
+              className='object-contain'
               priority
             />
           </div>

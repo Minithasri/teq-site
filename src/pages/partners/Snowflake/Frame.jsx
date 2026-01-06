@@ -8,7 +8,7 @@ const bannerContent = {
   breadcrumb: {
     items: [
       { label: 'Home', href: '/' },
-      { label: 'Snow Flake', href: '/partners/snowflake' },
+      { label: 'SnowFlake', href: '/partners/snowflake' },
     ],
   },
   title: 'Snowflake Partnership & Expertise',

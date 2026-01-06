@@ -4,18 +4,18 @@ import Image from 'next/image';
 
 const features = [
   {
-    icon: '/images/partners/snowflake/icon_21.svg',
+    icon: '/images/partners/snowflake/snowicon1.svg',
     title: 'Scalable Cloud Data Platform',
     description:
       'Snowflake enables efficient data storage, processing, and analytics on the cloud.',
   },
   {
-    icon: '/images/partners/snowflake/icon_22.svg',
+    icon: '/images/partners/snowflake/snowicon2.svg',
     title: 'Advanced Data Management & Analytics',
     description: 'Seamlessly analyze large datasets with high performance and flexibility.',
   },
   {
-    icon: '/images/partners/snowflake/icon_23.svg',
+    icon: '/images/partners/snowflake/snowicon3.svg',
     title: 'Reliable Cloud Operations with GWC',
     description: 'Smooth, secure cloud operations so you can focus on your business goals.',
   },

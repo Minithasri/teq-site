@@ -37,7 +37,7 @@ export default function BannerSection() {
         <div className='absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent'></div>
       </div>
 
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-14 pb-24'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-14 pb-44'>
         {/* Breadcrumb */}
         <nav aria-label='Breadcrumb' className='relative z-10 mb-4'>
           <ol className='inline-flex items-center gap-2 text-sm py-1'>
@@ -66,7 +66,7 @@ export default function BannerSection() {
           {/* Left */}
           <div>
             <h1
-              className='text-[32px] md:text-[36px] font-bold max-w-[700px] mb-6 -mt-20'
+              className='text-[32px] md:text-[36px] font-bold max-w-[700px] mb-2 lg:-mt-20'
               style={{ color: '#404040', lineHeight: '52px' }}
             >
               Governed Data Foundation for
@@ -74,7 +74,7 @@ export default function BannerSection() {
               Acceleration
             </h1>
 
-            <p className='text-[#7A7A7A] text-[16px] md:text-[18px] max-w-2xl mb-12'>
+            <p className='text-[#7A7A7A] text-[16px] md:text-[18px] max-w-2xl mb-8'>
               {bannerContent.description}
             </p>
 
@@ -89,7 +89,7 @@ export default function BannerSection() {
 
           {/* Right */}
           {/* Added lg:-translate-y-16 to move it up visually without affecting layout flow */}
-          <div className='relative w-full max-w-[500px] mx-auto lg:mx-8 lg:-translate-y-16'>
+          <div className='relative w-full max-w-[500px] mx-auto lg:mx-0'>
             <Image
               src={bannerContent.images.illustration}
               alt='Data governance platform illustration'

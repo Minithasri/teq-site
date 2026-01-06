@@ -28,7 +28,7 @@ const Business = () => {
 
         {/* Content */}
         <div className='relative z-10 max-w-4xl mx-auto'>
-          <h2 className='text-[36px] font-medium text-gray-900 leading-tight mb-8 sm:mb-12'>
+          <h2 className='text-[24px] md:text-[36px] font-medium text-gray-900 leading-tight mb-8 sm:mb-12'>
             Ready to <span className='text-[#914DC1]'>Activate Agentic AI</span>
             <br />
             <span className='block sm:inline'> in Your Business?</span>

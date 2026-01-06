@@ -53,7 +53,7 @@ const Philosophy = () => {
               Development Philosophy
             </span>
           </h1>
-          <p className='text-gray-700 text-[28px] md:text-[28px] font-medium max-w-4xl mx-auto leading-relaxed'>
+          <p className='text-gray-700 text-[18px] md:text-[28px] font-medium max-w-4xl mx-auto leading-relaxed'>
             We build reliable, scalable AI that delivers real impact.
           </p>
         </div>
@@ -88,9 +88,8 @@ const Philosophy = () => {
                       alt=''
                       width={12}
                       height={12}
-                      className={`transition-transform duration-300 ${
-                        expandedIndex === index ? 'rotate-180' : ''
-                      }`}
+                      className={`transition-transform duration-300 ${expandedIndex === index ? 'rotate-180' : ''
+                        }`}
                       style={{ filter: 'brightness(0) invert(1)' }}
                     />
                   </div>
@@ -98,11 +97,10 @@ const Philosophy = () => {
                   {/* Title */}
                   <div className='flex-1'>
                     <h3
-                      className={`font-semibold text-md transition-colors duration-200 ${
-                        expandedIndex === index
-                          ? 'text-[#7030B1]'
-                          : 'text-gray-400 group-hover:text-gray-600'
-                      }`}
+                      className={`font-semibold text-md transition-colors duration-200 ${expandedIndex === index
+                        ? 'text-[#7030B1]'
+                        : 'text-gray-400 group-hover:text-gray-600'
+                        }`}
                     >
                       {item.title}
                     </h3>
@@ -111,9 +109,8 @@ const Philosophy = () => {
 
                 {/* Expandable Content */}
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    expandedIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
                 >
                   <p className='text-gray-600 text-base leading-relaxed pl-[3.25rem] pb-4'>
                     {item.description}

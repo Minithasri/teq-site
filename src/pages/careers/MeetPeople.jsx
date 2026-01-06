@@ -68,7 +68,7 @@ const MeetPeople = () => {
   };
 
   return (
-    <section className='w-full py-16 lg:py-24 bg-white'>
+    <section className='w-full py-16 lg:py-24'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Heading */}
         <div className='text-center mb-4'>
@@ -102,7 +102,7 @@ const MeetPeople = () => {
             {people.map(person => (
               <div
                 key={person.id}
-                className='flex-shrink-0 bg-gray-50 rounded-2xl p-6 pb-8 shadow-lg hover:shadow-xl transition-shadow'
+                className='flex-shrink-0  rounded-2xl p-6 pb-8 shadow-lg hover:shadow-xl transition-shadow'
                 style={{ width: '500px', height: '284px' }}
               >
                 {/* Profile */}

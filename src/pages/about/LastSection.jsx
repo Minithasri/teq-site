@@ -46,22 +46,20 @@ export default function AwardsSection() {
               <div
                 // LOGIC CHANGE:
                 // If Image is Left (1st/3rd): Use negative margin (-ml-24) to overlap.
-                // If Image is Right (2nd): Use NO negative margin to prevent intersection.
-                className={`flex-1 relative z-10 w-full mt-8 lg:mt-0 ${
-                  isImageLeft ? 'lg:-ml-24' : ''
-                }`}
+                // If Image is Right (2nd): Use negative margin (-mr-24) to reduce width overlap.
+                className={`flex-1 relative z-10 max-w-[1150px] w-full mt-8 lg:mt-0 ${isImageLeft ? 'lg:-ml-24' : 'lg:-mr-32'
+                  }`}
               >
                 <div
                   // LOGIC CHANGE:
                   // If Image Left: Add padding (pl-32) so text doesn't hit image.
-                  // If Image Right: NO extra padding needed since they don't overlap.
+                  // If Image Right: Padding removed from here (moved to inner elements) to keep bg wide.
                   className={`${isImageLeft ? 'lg:pl-32' : ''}`}
                 >
                   {/* --- HEADER --- */}
                   <div
-                    className={`mb-6 flex flex-col gap-3 ${
-                      !isImageLeft ? 'items-end text-right' : 'items-start'
-                    }`}
+                    className={`mb-6 flex flex-col gap-3 ${!isImageLeft ? 'items-end text-right lg:pr-64' : 'items-start'
+                      }`}
                   >
                     <span className='text-[18px] font-semibold' style={{ color: '#6F2B8C' }}>
                       {item.category}
@@ -76,20 +74,15 @@ export default function AwardsSection() {
 
                   {/* --- CARD --- */}
                   <div
-                    // LOGIC CHANGE:
-                    // If Image Left: Pull card left (-ml-12) for style.
-                    // If Image Right: No negative margins.
-                    className={`rounded-3xl p-8 lg:p-10 shadow-sm w-full ${
-                      isImageLeft ? 'lg:-ml-12' : ''
-                    }`}
+                    className={`rounded-3xl p-8 lg:p-10 shadow-sm w-full ${isImageLeft ? 'lg:-ml-12' : 'lg:pr-64'
+                      }`}
                     style={{
                       background: 'linear-gradient(135deg, #F1EBFE 0%, #FFFFFF 100%)',
                     }}
                   >
                     <h3
-                      className={`text-[24px] lg:text-[28px] font-semibold mb-4 leading-tight ${
-                        !isImageLeft ? 'text-right' : 'text-left'
-                      }`}
+                      className={`text-[24px] lg:text-[28px] font-semibold mb-4 leading-tight ${!isImageLeft ? 'text-right' : 'text-left'
+                        }`}
                       style={{
                         background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
                         WebkitBackgroundClip: 'text',
@@ -101,9 +94,8 @@ export default function AwardsSection() {
                     </h3>
 
                     <p
-                      className={`text-[14px] leading-relaxed ${
-                        !isImageLeft ? 'text-right' : 'text-left'
-                      }`}
+                      className={`text-[14px] leading-relaxed ${!isImageLeft ? 'text-right' : 'text-left'
+                        }`}
                       style={{ color: '#525252' }}
                     >
                       {item.description}
@@ -119,9 +111,8 @@ export default function AwardsSection() {
                 // LOGIC CHANGE:
                 // If Image Left: Use -mt-8 for overlap style.
                 // If Image Right: Use lg:ml-12 to push image away from text (Gap).
-                className={`relative z-20 shrink-0 rounded-2xl overflow-hidden shadow-xl ${
-                  isImageLeft ? '-mt-8' : 'lg:ml-12'
-                }`}
+                className={`relative z-20 shrink-0 rounded-2xl overflow-hidden shadow-xl ${isImageLeft ? '-mt-8' : 'lg:-ml-40'
+                  } ${index < 2 ? 'mb-12' : ''}`}
                 style={{
                   width: isThirdItem ? '460px' : '280px',
                   height: isThirdItem ? '245px' : '340px',

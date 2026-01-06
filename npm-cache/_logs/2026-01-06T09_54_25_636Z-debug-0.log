@@ -1,0 +1,1811 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.17.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:D:\REVAMP\gwc-website-revamp\.npmrc
+5 silly config load:file:C:\Users\ahars\.npmrc
+6 silly config load:file:C:\Users\ahars\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm uninstall shadcn-ui @radix-ui/react-select
+8 verbose argv "uninstall" "shadcn-ui" "@radix-ui/react-select"
+9 verbose logfile logs-max:10 dir:D:\REVAMP\gwc-website-revamp\npm-cache\_logs\2026-01-06T09_54_25_636Z-
+10 verbose logfile D:\REVAMP\gwc-website-revamp\npm-cache\_logs\2026-01-06T09_54_25_636Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest lucide-react@^0.562.0
+16 silly packumentCache full:https://registry.npmjs.org/lucide-react cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/lucide-react 907ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/lucide-react set size:undefined disposed:false
+19 silly fetch manifest react@^19.2.0
+20 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/react 973ms (cache miss)
+22 silly packumentCache full:https://registry.npmjs.org/react set size:undefined disposed:false
+23 silly fetch manifest tailwindcss-animate@^1.0.7
+24 silly packumentCache full:https://registry.npmjs.org/tailwindcss-animate cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/tailwindcss-animate 175ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/tailwindcss-animate set size:undefined disposed:false
+27 silly fetch manifest tailwindcss@^3.4.18
+28 silly packumentCache full:https://registry.npmjs.org/tailwindcss cache-miss
+29 http fetch GET 200 https://registry.npmjs.org/tailwindcss 2445ms (cache miss)
+30 silly packumentCache full:https://registry.npmjs.org/tailwindcss set size:undefined disposed:false
+31 silly placeDep ROOT lucide-react@0.562.0 REPLACE for: gwc-revamp@1.0.0 want: ^0.562.0
+32 silly placeDep ROOT tailwindcss-animate@1.0.7 OK for: gwc-revamp@1.0.0 want: ^1.0.7
+33 silly reify mark retired [
+33 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\acorn',
+33 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\acorn',
+33 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\acorn.cmd',
+33 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\acorn.ps1'
+33 silly reify ]
+34 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\ansi-styles' ]
+35 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\aria-hidden' ]
+36 silly reify mark retired [
+36 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\autoprefixer',
+36 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\autoprefixer',
+36 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\autoprefixer.cmd',
+36 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\autoprefixer.ps1'
+36 silly reify ]
+37 silly reify mark retired [
+37 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\baseline-browser-mapping',
+37 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\baseline-browser-mapping',
+37 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\baseline-browser-mapping.cmd',
+37 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\baseline-browser-mapping.ps1'
+37 silly reify ]
+38 silly reify mark retired [
+38 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\browserslist',
+38 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\browserslist',
+38 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\browserslist.cmd',
+38 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\browserslist.ps1'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\chalk\\node_modules\\ansi-styles'
+39 silly reify ]
+40 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\commander' ]
+41 silly reify mark retired [
+41 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\cssesc',
+41 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\cssesc',
+41 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\cssesc.cmd',
+41 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\cssesc.ps1'
+41 silly reify ]
+42 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\detect-node-es' ]
+43 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\doctrine' ]
+44 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\emoji-regex' ]
+45 silly reify mark retired [
+45 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint',
+45 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\eslint',
+45 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\eslint.cmd',
+45 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\eslint.ps1'
+45 silly reify ]
+46 silly reify mark retired [
+46 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-config-prettier',
+46 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\eslint-config-prettier',
+46 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\eslint-config-prettier.cmd',
+46 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\eslint-config-prettier.ps1'
+46 silly reify ]
+47 silly reify mark retired [
+47 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\esprima',
+47 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\esparse',
+47 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\esparse.cmd',
+47 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\esparse.ps1',
+47 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\esvalidate',
+47 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\esvalidate.cmd',
+47 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\esvalidate.ps1'
+47 silly reify ]
+48 silly reify mark retired [
+48 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-react\\node_modules\\resolve',
+48 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-react\\node_modules\\.bin\\resolve',
+48 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-react\\node_modules\\.bin\\resolve.cmd',
+48 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-react\\node_modules\\.bin\\resolve.ps1'
+48 silly reify ]
+49 silly reify mark retired [
+49 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-jsx-a11y\\node_modules\\emoji-regex'
+49 silly reify ]
+50 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\get-nonce' ]
+51 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\glob-parent' ]
+52 silly reify mark retired [
+52 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\glob',
+52 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\glob',
+52 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\glob.cmd',
+52 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\glob.ps1'
+52 silly reify ]
+53 silly reify mark retired [
+53 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\husky',
+53 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\husky',
+53 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\husky.cmd',
+53 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\husky.ps1'
+53 silly reify ]
+54 silly reify mark retired [
+54 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\is-bun-module\\node_modules\\semver',
+54 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\is-bun-module\\node_modules\\.bin\\semver',
+54 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\is-bun-module\\node_modules\\.bin\\semver.cmd',
+54 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\is-bun-module\\node_modules\\.bin\\semver.ps1'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\istanbul-lib-instrument\\node_modules\\semver',
+55 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\istanbul-lib-instrument\\node_modules\\.bin\\semver',
+55 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\istanbul-lib-instrument\\node_modules\\.bin\\semver.cmd',
+55 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\istanbul-lib-instrument\\node_modules\\.bin\\semver.ps1'
+55 silly reify ]
+56 silly reify mark retired [
+56 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\jiti',
+56 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\jiti',
+56 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\jiti.cmd',
+56 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\jiti.ps1'
+56 silly reify ]
+57 silly reify mark retired [
+57 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\js-yaml',
+57 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\js-yaml',
+57 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\js-yaml.cmd',
+57 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\js-yaml.ps1'
+57 silly reify ]
+58 silly reify mark retired [
+58 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\json5',
+58 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\json5',
+58 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\json5.cmd',
+58 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\json5.ps1'
+58 silly reify ]
+59 silly reify mark retired [
+59 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\jsesc',
+59 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\jsesc',
+59 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\jsesc.cmd',
+59 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\jsesc.ps1'
+59 silly reify ]
+60 silly reify mark retired [
+60 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\lint-staged',
+60 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\lint-staged',
+60 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\lint-staged.cmd',
+60 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\lint-staged.ps1'
+60 silly reify ]
+61 silly reify mark retired [
+61 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\loose-envify',
+61 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\loose-envify',
+61 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\loose-envify.cmd',
+61 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\loose-envify.ps1'
+61 silly reify ]
+62 silly reify mark retired [
+62 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\nanoid',
+62 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\nanoid',
+62 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\nanoid.cmd',
+62 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\nanoid.ps1'
+62 silly reify ]
+63 silly reify mark retired [
+63 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\napi-postinstall',
+63 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\napi-postinstall',
+63 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\napi-postinstall.cmd',
+63 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\napi-postinstall.ps1'
+63 silly reify ]
+64 silly reify mark retired [
+64 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\next',
+64 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next',
+64 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next.cmd',
+64 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next.ps1'
+64 silly reify ]
+65 silly reify mark retired [
+65 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\next-sitemap',
+65 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next-sitemap',
+65 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next-sitemap.cmd',
+65 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next-sitemap.ps1',
+65 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next-sitemap-cjs',
+65 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next-sitemap-cjs.cmd',
+65 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next-sitemap-cjs.ps1'
+65 silly reify ]
+66 silly reify mark retired [
+66 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\prettier',
+66 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\prettier',
+66 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\prettier.cmd',
+66 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\prettier.ps1'
+66 silly reify ]
+67 silly reify mark retired [
+67 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\pidtree',
+67 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\pidtree',
+67 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\pidtree.cmd',
+67 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\pidtree.ps1'
+67 silly reify ]
+68 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\react-remove-scroll' ]
+69 silly reify mark retired [
+69 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\react-style-singleton'
+69 silly reify ]
+70 silly reify mark retired [
+70 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\react-remove-scroll-bar'
+70 silly reify ]
+71 silly reify mark retired [
+71 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\resolve',
+71 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\resolve',
+71 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\resolve.cmd',
+71 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\resolve.ps1'
+71 silly reify ]
+72 silly reify mark retired [
+72 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\rimraf',
+72 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\rimraf',
+72 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\rimraf.cmd',
+72 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\rimraf.ps1'
+72 silly reify ]
+73 silly reify mark retired [
+73 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\semver',
+73 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\semver',
+73 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\semver.cmd',
+73 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\semver.ps1'
+73 silly reify ]
+74 silly reify mark retired [
+74 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sharp\\node_modules\\semver',
+74 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sharp\\node_modules\\.bin\\semver',
+74 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sharp\\node_modules\\.bin\\semver.cmd',
+74 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sharp\\node_modules\\.bin\\semver.ps1'
+74 silly reify ]
+75 silly reify mark retired [
+75 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\string-width-cjs\\node_modules\\strip-ansi'
+75 silly reify ]
+76 silly reify mark retired [
+76 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\string-width\\node_modules\\emoji-regex'
+76 silly reify ]
+77 silly reify mark retired [
+77 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sucrase',
+77 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\sucrase',
+77 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\sucrase.cmd',
+77 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\sucrase.ps1',
+77 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\sucrase-node',
+77 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\sucrase-node.cmd',
+77 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\sucrase-node.ps1'
+77 silly reify ]
+78 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\strip-ansi' ]
+79 silly reify mark retired [
+79 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tailwindcss',
+79 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\tailwind',
+79 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\tailwind.cmd',
+79 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\tailwind.ps1',
+79 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\tailwindcss',
+79 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\tailwindcss.cmd',
+79 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\tailwindcss.ps1'
+79 silly reify ]
+80 silly reify mark retired [
+80 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tsconfig-paths\\node_modules\\json5',
+80 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tsconfig-paths\\node_modules\\.bin\\json5',
+80 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tsconfig-paths\\node_modules\\.bin\\json5.cmd',
+80 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tsconfig-paths\\node_modules\\.bin\\json5.ps1'
+80 silly reify ]
+81 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\use-sidecar' ]
+82 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\use-callback-ref' ]
+83 silly reify mark retired [
+83 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\which',
+83 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\node-which',
+83 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\node-which.cmd',
+83 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\node-which.ps1'
+83 silly reify ]
+84 silly reify mark retired [
+84 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\update-browserslist-db',
+84 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\update-browserslist-db',
+84 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\update-browserslist-db.cmd',
+84 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\update-browserslist-db.ps1'
+84 silly reify ]
+85 silly reify mark retired [
+85 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\wrap-ansi-cjs\\node_modules\\ansi-styles'
+85 silly reify ]
+86 silly reify mark retired [
+86 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\wrap-ansi-cjs\\node_modules\\strip-ansi'
+86 silly reify ]
+87 silly reify mark retired [
+87 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\yaml',
+87 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\yaml',
+87 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\yaml.cmd',
+87 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\yaml.ps1'
+87 silly reify ]
+88 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\wrap-ansi' ]
+89 silly reify mark retired [
+89 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@babel\\parser',
+89 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\parser',
+89 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\parser.cmd',
+89 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\parser.ps1'
+89 silly reify ]
+90 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@floating-ui\\core' ]
+91 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@floating-ui\\dom' ]
+92 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@floating-ui\\utils' ]
+93 silly reify mark retired [
+93 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@isaacs\\cliui\\node_modules\\wrap-ansi'
+93 silly reify ]
+94 silly reify mark retired [
+94 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@istanbuljs\\load-nyc-config\\node_modules\\js-yaml',
+94 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@istanbuljs\\load-nyc-config\\node_modules\\.bin\\js-yaml',
+94 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@istanbuljs\\load-nyc-config\\node_modules\\.bin\\js-yaml.cmd',
+94 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@istanbuljs\\load-nyc-config\\node_modules\\.bin\\js-yaml.ps1'
+94 silly reify ]
+95 silly reify mark retired [
+95 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@floating-ui\\react-dom'
+95 silly reify ]
+96 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\number' ]
+97 silly reify mark retired [
+97 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\primitive'
+97 silly reify ]
+98 silly reify mark retired [
+98 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-arrow'
+98 silly reify ]
+99 silly reify mark retired [
+99 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-collection'
+99 silly reify ]
+100 silly reify mark retired [
+100 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-dismissable-layer'
+100 silly reify ]
+101 silly reify mark retired [
+101 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-context'
+101 silly reify ]
+102 silly reify mark retired [
+102 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-compose-refs'
+102 silly reify ]
+103 silly reify mark retired [
+103 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-focus-scope'
+103 silly reify ]
+104 silly reify mark retired [
+104 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-direction'
+104 silly reify ]
+105 silly reify mark retired [
+105 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-focus-guards'
+105 silly reify ]
+106 silly reify mark retired [
+106 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-portal'
+106 silly reify ]
+107 silly reify mark retired [
+107 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-slot'
+107 silly reify ]
+108 silly reify mark retired [
+108 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-popper'
+108 silly reify ]
+109 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-id' ]
+110 silly reify mark retired [
+110 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-callback-ref'
+110 silly reify ]
+111 silly reify mark retired [
+111 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-primitive'
+111 silly reify ]
+112 silly reify mark retired [
+112 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-select'
+112 silly reify ]
+113 silly reify mark retired [
+113 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-rect'
+113 silly reify ]
+114 silly reify mark retired [
+114 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-escape-keydown'
+114 silly reify ]
+115 silly reify mark retired [
+115 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-visually-hidden'
+115 silly reify ]
+116 silly reify mark retired [
+116 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-controllable-state'
+116 silly reify ]
+117 silly reify mark retired [
+117 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-previous'
+117 silly reify ]
+118 silly reify mark retired [
+118 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-effect-event'
+118 silly reify ]
+119 silly reify mark retired [
+119 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-layout-effect'
+119 silly reify ]
+120 silly reify mark retired [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\rect' ]
+121 silly reify mark retired [
+121 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-size'
+121 silly reify ]
+122 silly reify mark retired [
+122 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\semver',
+122 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\semver',
+122 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\semver.cmd',
+122 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\semver.ps1'
+122 silly reify ]
+123 silly reify moves {
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\acorn': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.acorn-MPT7wFz3',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\acorn': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.acorn-WyKYoE0C',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\acorn.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.acorn.cmd-P9Xwjf8V',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\acorn.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.acorn.ps1-VIBx2muz',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\ansi-styles': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.ansi-styles-aMZozLOL',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\aria-hidden': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.aria-hidden-fAWrqqj9',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\autoprefixer': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.autoprefixer-YlYJAkwL',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\autoprefixer': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.autoprefixer-jnJw2cAa',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\autoprefixer.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.autoprefixer.cmd-RTOVS8r2',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\autoprefixer.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.autoprefixer.ps1-b3fBKqiD',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\baseline-browser-mapping': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.baseline-browser-mapping-TABRYQhB',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\baseline-browser-mapping': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.baseline-browser-mapping-7Eq7Kgug',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\baseline-browser-mapping.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.baseline-browser-mapping.cmd-HcKjqz0T',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\baseline-browser-mapping.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.baseline-browser-mapping.ps1-tkfGBrY8',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\browserslist': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.browserslist-z7RdH8s1',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\browserslist': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.browserslist-RNRRvlJl',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\browserslist.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.browserslist.cmd-mVvmyq6a',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\browserslist.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.browserslist.ps1-F8JedWH3',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\chalk\\node_modules\\ansi-styles': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\chalk\\node_modules\\.ansi-styles-3XADZmuR',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\commander': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.commander-l5G4dny9',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\cssesc': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.cssesc-icL450Qx',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\cssesc': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.cssesc-jJod1qTC',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\cssesc.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.cssesc.cmd-Udg793a1',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\cssesc.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.cssesc.ps1-gpzzHaIx',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\detect-node-es': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.detect-node-es-mU3U6xNX',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\doctrine': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.doctrine-9JdK14C7',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\emoji-regex': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.emoji-regex-zt8C3qOF',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.eslint-kGBgYPHP',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\eslint': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.eslint-Acvf9yYM',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\eslint.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.eslint.cmd-ZElht2J6',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\eslint.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.eslint.ps1-mMOgjTZy',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-config-prettier': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.eslint-config-prettier-tIYwZq6l',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\eslint-config-prettier': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.eslint-config-prettier-yUULnhNp',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\eslint-config-prettier.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.eslint-config-prettier.cmd-sLVPRnv4',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\eslint-config-prettier.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.eslint-config-prettier.ps1-xjr2m7S9',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\esprima': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.esprima-zf6ZC2DN',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\esparse': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.esparse-LoERWiVK',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\esparse.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.esparse.cmd-osWG9PAo',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\esparse.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.esparse.ps1-oldz0WeA',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\esvalidate': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.esvalidate-EUWLqqgw',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\esvalidate.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.esvalidate.cmd-XgqfS9OU',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\esvalidate.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.esvalidate.ps1-rGDD01by',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-react\\node_modules\\resolve': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-react\\node_modules\\.resolve-JHupKo2W',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-react\\node_modules\\.bin\\resolve': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-react\\node_modules\\.bin\\.resolve-ARd3etSc',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-react\\node_modules\\.bin\\resolve.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-react\\node_modules\\.bin\\.resolve.cmd-6ZGBsbuc',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-react\\node_modules\\.bin\\resolve.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-react\\node_modules\\.bin\\.resolve.ps1-eyy3GqgI',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-jsx-a11y\\node_modules\\emoji-regex': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\eslint-plugin-jsx-a11y\\node_modules\\.emoji-regex-beNqeGZR',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\get-nonce': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.get-nonce-tGBSOwjN',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\glob-parent': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.glob-parent-8Gs4DK17',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\glob': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.glob-IDMku1uP',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\glob': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.glob-yiWX7UUZ',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\glob.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.glob.cmd-fA3mh6if',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\glob.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.glob.ps1-wXIusk4I',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\husky': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.husky-IUs0BAvr',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\husky': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.husky-cVlXZ6Q4',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\husky.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.husky.cmd-Cyf1UDlm',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\husky.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.husky.ps1-ALowLZAt',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\is-bun-module\\node_modules\\semver': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\is-bun-module\\node_modules\\.semver-8TwhxSK9',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\is-bun-module\\node_modules\\.bin\\semver': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\is-bun-module\\node_modules\\.bin\\.semver-aLkAMZIu',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\is-bun-module\\node_modules\\.bin\\semver.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\is-bun-module\\node_modules\\.bin\\.semver.cmd-pmpUbkIP',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\is-bun-module\\node_modules\\.bin\\semver.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\is-bun-module\\node_modules\\.bin\\.semver.ps1-3wElaEaY',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\istanbul-lib-instrument\\node_modules\\semver': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\istanbul-lib-instrument\\node_modules\\.semver-ffwSpUmf',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\istanbul-lib-instrument\\node_modules\\.bin\\semver': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\istanbul-lib-instrument\\node_modules\\.bin\\.semver-TUIumeOa',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\istanbul-lib-instrument\\node_modules\\.bin\\semver.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\istanbul-lib-instrument\\node_modules\\.bin\\.semver.cmd-Hk70gI5S',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\istanbul-lib-instrument\\node_modules\\.bin\\semver.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\istanbul-lib-instrument\\node_modules\\.bin\\.semver.ps1-hnfFdH6L',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\jiti': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.jiti-XRW9FhvP',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\jiti': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.jiti-3uuL4yil',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\jiti.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.jiti.cmd-YqZq9i5w',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\jiti.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.jiti.ps1-9KCOCdn4',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\js-yaml': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.js-yaml-j8ecVbPI',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\js-yaml': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.js-yaml-VdgsBbhm',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\js-yaml.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.js-yaml.cmd-lyvqbdhc',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\js-yaml.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.js-yaml.ps1-rbp08Noz',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\json5': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.json5-S94VmsV6',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\json5': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.json5-1mBPxTni',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\json5.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.json5.cmd-r11tTkU6',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\json5.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.json5.ps1-L0VPluwJ',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\jsesc': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.jsesc-kmTcuRGt',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\jsesc': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.jsesc-H854H7LE',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\jsesc.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.jsesc.cmd-iVBUXSbW',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\jsesc.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.jsesc.ps1-B0pOxAd4',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\lint-staged': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.lint-staged-J5lacptG',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\lint-staged': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.lint-staged-8nSvuZaJ',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\lint-staged.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.lint-staged.cmd-iXMIRttv',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\lint-staged.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.lint-staged.ps1-NikVEHAX',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\loose-envify': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.loose-envify-1sds7pr9',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\loose-envify': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.loose-envify-byklmTlg',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\loose-envify.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.loose-envify.cmd-oPXACIsB',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\loose-envify.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.loose-envify.ps1-LRXbcELn',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\nanoid': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.nanoid-iR2kXiYM',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\nanoid': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.nanoid-RGv8VARt',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\nanoid.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.nanoid.cmd-N2NT9i94',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\nanoid.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.nanoid.ps1-gE3616yb',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\napi-postinstall': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.napi-postinstall-ScuZcZW6',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\napi-postinstall': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.napi-postinstall-VPiddvFY',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\napi-postinstall.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.napi-postinstall.cmd-dWDfv2sb',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\napi-postinstall.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.napi-postinstall.ps1-4q6uWaHv',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\next': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.next-fQH4xasx',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.next-3kNnsjBG',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.next.cmd-WdVDKfGj',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.next.ps1-Jj1HPDS0',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\next-sitemap': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.next-sitemap-byioXFn3',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next-sitemap': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.next-sitemap-oKdHvnxa',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next-sitemap.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.next-sitemap.cmd-nORD8P3s',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next-sitemap.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.next-sitemap.ps1-swYShuHD',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next-sitemap-cjs': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.next-sitemap-cjs-yn9pxuoy',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next-sitemap-cjs.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.next-sitemap-cjs.cmd-bBLtLMaD',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\next-sitemap-cjs.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.next-sitemap-cjs.ps1-d9VTaQhY',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\prettier': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.prettier-fxezkoLM',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\prettier': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.prettier-WWLurYY0',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\prettier.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.prettier.cmd-H39cx8CR',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\prettier.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.prettier.ps1-Fza3tqnm',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\pidtree': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.pidtree-pzIfBSv9',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\pidtree': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.pidtree-4hlHW61a',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\pidtree.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.pidtree.cmd-aa03E697',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\pidtree.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.pidtree.ps1-9RYPJfri',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\react-remove-scroll': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.react-remove-scroll-K2Vj1pBz',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\react-style-singleton': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.react-style-singleton-fRx4cQUd',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\react-remove-scroll-bar': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.react-remove-scroll-bar-Iorb4zJe',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\resolve': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.resolve-9v4M7rtv',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\resolve': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.resolve-9Bkj6gri',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\resolve.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.resolve.cmd-DJdjTtGn',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\resolve.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.resolve.ps1-pVxWiQHi',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\rimraf': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.rimraf-vz9Dr8IJ',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\rimraf': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.rimraf-iZbR9pwq',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\rimraf.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.rimraf.cmd-5WdJcA4m',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\rimraf.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.rimraf.ps1-r8nbJopd',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\semver': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.semver-TKGpTUA2',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\semver': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.semver-rtN1CVzQ',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\semver.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.semver.cmd-uV7OhpJZ',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\semver.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.semver.ps1-M0OGF2Su',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sharp\\node_modules\\semver': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sharp\\node_modules\\.semver-SzHmd9Up',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sharp\\node_modules\\.bin\\semver': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sharp\\node_modules\\.bin\\.semver-bPLxrFwt',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sharp\\node_modules\\.bin\\semver.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sharp\\node_modules\\.bin\\.semver.cmd-6dsodjjS',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sharp\\node_modules\\.bin\\semver.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sharp\\node_modules\\.bin\\.semver.ps1-QvwWeRJA',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\string-width-cjs\\node_modules\\strip-ansi': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\string-width-cjs\\node_modules\\.strip-ansi-H6o51AjN',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\string-width\\node_modules\\emoji-regex': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\string-width\\node_modules\\.emoji-regex-O7pBfLUm',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\sucrase': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.sucrase-6zLexogC',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\sucrase': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.sucrase-DocWDVVk',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\sucrase.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.sucrase.cmd-yj8oWSZa',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\sucrase.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.sucrase.ps1-hxUYH8Gw',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\sucrase-node': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.sucrase-node-qw4LGy4C',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\sucrase-node.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.sucrase-node.cmd-HhuYbBOO',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\sucrase-node.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.sucrase-node.ps1-1hiESabt',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\strip-ansi': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.strip-ansi-UcwIqsaK',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tailwindcss': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.tailwindcss-QsF9H6Vg',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\tailwind': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.tailwind-r0kyaFQ1',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\tailwind.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.tailwind.cmd-wxPIGyXd',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\tailwind.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.tailwind.ps1-NA452IfG',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\tailwindcss': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.tailwindcss-ls5TBMK2',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\tailwindcss.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.tailwindcss.cmd-Li7PDcbU',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\tailwindcss.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.tailwindcss.ps1-gh06n5on',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tsconfig-paths\\node_modules\\json5': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tsconfig-paths\\node_modules\\.json5-cVBBtdzB',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tsconfig-paths\\node_modules\\.bin\\json5': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tsconfig-paths\\node_modules\\.bin\\.json5-yZzee7ov',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tsconfig-paths\\node_modules\\.bin\\json5.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tsconfig-paths\\node_modules\\.bin\\.json5.cmd-9r8gnhVw',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tsconfig-paths\\node_modules\\.bin\\json5.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\tsconfig-paths\\node_modules\\.bin\\.json5.ps1-eDeEoeVz',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\use-sidecar': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.use-sidecar-ejwAcwJI',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\use-callback-ref': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.use-callback-ref-ZJSGCdwK',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\which': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.which-uPLi9hrq',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\node-which': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.node-which-ehZwAHlF',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\node-which.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.node-which.cmd-XzCSzhjb',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\node-which.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.node-which.ps1-nwM5DzRw',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\update-browserslist-db': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.update-browserslist-db-goOn2WIg',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\update-browserslist-db': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.update-browserslist-db-6Ld44KTR',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\update-browserslist-db.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.update-browserslist-db.cmd-FXV4Nnur',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\update-browserslist-db.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.update-browserslist-db.ps1-LWtKRmOC',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\wrap-ansi-cjs\\node_modules\\ansi-styles': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\wrap-ansi-cjs\\node_modules\\.ansi-styles-fARSI4hp',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\wrap-ansi-cjs\\node_modules\\strip-ansi': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\wrap-ansi-cjs\\node_modules\\.strip-ansi-MCoEdxvg',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\yaml': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.yaml-n8k4QPK9',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\yaml': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.yaml-iD26D0eW',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\yaml.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.yaml.cmd-XjwkpDvk',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\yaml.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.yaml.ps1-ixjDOadE',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\wrap-ansi': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.wrap-ansi-CSld2GvN',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@babel\\parser': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@babel\\.parser-vB2c6hXA',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\parser': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.parser-9iphFUeA',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\parser.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.parser.cmd-7Wrk05bN',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\parser.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\.bin\\.parser.ps1-RZ4lVo5T',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@floating-ui\\core': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@floating-ui\\.core-x9VGBQ5Y',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@floating-ui\\dom': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@floating-ui\\.dom-xf5FghnU',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@floating-ui\\utils': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@floating-ui\\.utils-VWWF1E5v',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@isaacs\\cliui\\node_modules\\wrap-ansi': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@isaacs\\cliui\\node_modules\\.wrap-ansi-f8E5XHlw',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@istanbuljs\\load-nyc-config\\node_modules\\js-yaml': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@istanbuljs\\load-nyc-config\\node_modules\\.js-yaml-1Xgf0ktL',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@istanbuljs\\load-nyc-config\\node_modules\\.bin\\js-yaml': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@istanbuljs\\load-nyc-config\\node_modules\\.bin\\.js-yaml-iPlt1DYu',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@istanbuljs\\load-nyc-config\\node_modules\\.bin\\js-yaml.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@istanbuljs\\load-nyc-config\\node_modules\\.bin\\.js-yaml.cmd-gxKxxWLf',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@istanbuljs\\load-nyc-config\\node_modules\\.bin\\js-yaml.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@istanbuljs\\load-nyc-config\\node_modules\\.bin\\.js-yaml.ps1-cDnDoog4',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@floating-ui\\react-dom': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@floating-ui\\.react-dom-Xx4RlTkT',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\number': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.number-GuXaNIH4',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\primitive': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.primitive-QLcyTDDX',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-arrow': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-arrow-VJHZXyPo',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-collection': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-collection-idY2TX2F',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-dismissable-layer': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-dismissable-layer-5SuGnhre',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-context': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-context-rPWQfiP2',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-compose-refs': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-compose-refs-X7eF0dbk',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-focus-scope': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-focus-scope-CRcrHG7l',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-direction': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-direction-BidzlUzG',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-focus-guards': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-focus-guards-2nCCOaSR',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-portal': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-portal-6oMyNuxy',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-slot': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-slot-iJmEv4XW',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-popper': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-popper-xQcPVJTY',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-id': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-id-igZGVdXe',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-callback-ref': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-use-callback-ref-Eom21515',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-primitive': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-primitive-fIOhXUsD',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-select': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-select-BBwo4KNB',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-rect': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-use-rect-OqTFs9cs',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-escape-keydown': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-use-escape-keydown-Td2ezIW8',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-visually-hidden': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-visually-hidden-qp6PDrTj',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-controllable-state': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-use-controllable-state-jXFyGKus',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-previous': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-use-previous-Gx16ihfT',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-effect-event': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-use-effect-event-S1PN2iVx',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-layout-effect': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-use-layout-effect-yowYg1LV',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\rect': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.rect-VRhOYS9F',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\react-use-size': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@radix-ui\\.react-use-size-B2lAJ2hV',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\semver': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.semver-Xt3mP8on',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\semver': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\.semver-pynfGTNT',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\semver.cmd': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\.semver.cmd-i1htzCyc',
+123 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\semver.ps1': 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\.semver.ps1-6Mh2AGut'
+123 silly reify }
+124 silly audit bulk request {
+124 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+124 silly audit   '@babel/code-frame': [ '7.27.1' ],
+124 silly audit   '@babel/compat-data': [ '7.28.5' ],
+124 silly audit   '@babel/core': [ '7.28.5' ],
+124 silly audit   json5: [ '2.2.3', '1.0.2' ],
+124 silly audit   semver: [ '6.3.1', '7.7.3' ],
+124 silly audit   '@babel/generator': [ '7.28.5' ],
+124 silly audit   '@babel/helper-annotate-as-pure': [ '7.27.3' ],
+124 silly audit   '@babel/helper-compilation-targets': [ '7.27.2' ],
+124 silly audit   'lru-cache': [ '5.1.1', '10.4.3' ],
+124 silly audit   '@babel/helper-globals': [ '7.28.0' ],
+124 silly audit   '@babel/helper-module-imports': [ '7.27.1' ],
+124 silly audit   '@babel/helper-module-transforms': [ '7.28.3' ],
+124 silly audit   '@babel/helper-plugin-utils': [ '7.27.1' ],
+124 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+124 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+124 silly audit   '@babel/helper-validator-option': [ '7.27.1' ],
+124 silly audit   '@babel/helpers': [ '7.28.4' ],
+124 silly audit   '@babel/parser': [ '7.28.5' ],
+124 silly audit   '@babel/plugin-syntax-async-generators': [ '7.8.4' ],
+124 silly audit   '@babel/plugin-syntax-bigint': [ '7.8.3' ],
+124 silly audit   '@babel/plugin-syntax-class-properties': [ '7.12.13' ],
+124 silly audit   '@babel/plugin-syntax-class-static-block': [ '7.14.5' ],
+124 silly audit   '@babel/plugin-syntax-import-attributes': [ '7.27.1' ],
+124 silly audit   '@babel/plugin-syntax-import-meta': [ '7.10.4' ],
+124 silly audit   '@babel/plugin-syntax-json-strings': [ '7.8.3' ],
+124 silly audit   '@babel/plugin-syntax-jsx': [ '7.27.1' ],
+124 silly audit   '@babel/plugin-syntax-logical-assignment-operators': [ '7.10.4' ],
+124 silly audit   '@babel/plugin-syntax-nullish-coalescing-operator': [ '7.8.3' ],
+124 silly audit   '@babel/plugin-syntax-numeric-separator': [ '7.10.4' ],
+124 silly audit   '@babel/plugin-syntax-object-rest-spread': [ '7.8.3' ],
+124 silly audit   '@babel/plugin-syntax-optional-catch-binding': [ '7.8.3' ],
+124 silly audit   '@babel/plugin-syntax-optional-chaining': [ '7.8.3' ],
+124 silly audit   '@babel/plugin-syntax-private-property-in-object': [ '7.14.5' ],
+124 silly audit   '@babel/plugin-syntax-top-level-await': [ '7.14.5' ],
+124 silly audit   '@babel/plugin-transform-react-display-name': [ '7.28.0' ],
+124 silly audit   '@babel/plugin-transform-react-jsx': [ '7.27.1' ],
+124 silly audit   '@babel/plugin-transform-react-jsx-development': [ '7.27.1' ],
+124 silly audit   '@babel/plugin-transform-react-pure-annotations': [ '7.27.1' ],
+124 silly audit   '@babel/preset-react': [ '7.28.5' ],
+124 silly audit   '@babel/template': [ '7.27.2' ],
+124 silly audit   '@babel/traverse': [ '7.28.5' ],
+124 silly audit   '@babel/types': [ '7.28.5' ],
+124 silly audit   '@corex/deepmerge': [ '4.0.43' ],
+124 silly audit   '@emnapi/core': [ '1.7.0' ],
+124 silly audit   '@emnapi/runtime': [ '1.7.0' ],
+124 silly audit   '@emnapi/wasi-threads': [ '1.1.0' ],
+124 silly audit   '@eslint-community/eslint-utils': [ '4.9.0' ],
+124 silly audit   '@eslint-community/regexpp': [ '4.12.2' ],
+124 silly audit   '@eslint/eslintrc': [ '2.1.4' ],
+124 silly audit   '@eslint/js': [ '8.57.1' ],
+124 silly audit   '@humanwhocodes/config-array': [ '0.13.0' ],
+124 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+124 silly audit   '@humanwhocodes/object-schema': [ '2.0.3' ],
+124 silly audit   '@img/colour': [ '1.0.0' ],
+124 silly audit   '@img/sharp-darwin-arm64': [ '0.34.4' ],
+124 silly audit   '@img/sharp-darwin-x64': [ '0.34.4' ],
+124 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.2.3' ],
+124 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.2.3' ],
+124 silly audit   '@img/sharp-libvips-linux-arm': [ '1.2.3' ],
+124 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.2.3' ],
+124 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.2.3' ],
+124 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.2.3' ],
+124 silly audit   '@img/sharp-libvips-linux-x64': [ '1.2.3' ],
+124 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.2.3' ],
+124 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.2.3' ],
+124 silly audit   '@img/sharp-linux-arm': [ '0.34.4' ],
+124 silly audit   '@img/sharp-linux-arm64': [ '0.34.4' ],
+124 silly audit   '@img/sharp-linux-ppc64': [ '0.34.4' ],
+124 silly audit   '@img/sharp-linux-s390x': [ '0.34.4' ],
+124 silly audit   '@img/sharp-linux-x64': [ '0.34.4' ],
+124 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.34.4' ],
+124 silly audit   '@img/sharp-linuxmusl-x64': [ '0.34.4' ],
+124 silly audit   '@img/sharp-wasm32': [ '0.34.4' ],
+124 silly audit   '@img/sharp-win32-arm64': [ '0.34.4' ],
+124 silly audit   '@img/sharp-win32-ia32': [ '0.34.4' ],
+124 silly audit   '@img/sharp-win32-x64': [ '0.34.4' ],
+124 silly audit   '@isaacs/cliui': [ '8.0.2' ],
+124 silly audit   'ansi-regex': [ '6.2.2', '5.0.1' ],
+124 silly audit   'strip-ansi': [ '7.1.2', '6.0.1' ],
+124 silly audit   '@istanbuljs/load-nyc-config': [ '1.1.0' ],
+124 silly audit   argparse: [ '1.0.10', '2.0.1' ],
+124 silly audit   'find-up': [ '4.1.0', '5.0.0' ],
+124 silly audit   'js-yaml': [ '3.14.1', '4.1.0' ],
+124 silly audit   'locate-path': [ '5.0.0', '6.0.0' ],
+124 silly audit   'p-limit': [ '2.3.0', '3.1.0' ],
+124 silly audit   'p-locate': [ '4.1.0', '5.0.0' ],
+124 silly audit   'resolve-from': [ '5.0.0', '4.0.0' ],
+124 silly audit   '@istanbuljs/schema': [ '0.1.3' ],
+124 silly audit   '@jest/pattern': [ '30.0.1' ],
+124 silly audit   '@jest/schemas': [ '30.0.5' ],
+124 silly audit   '@jest/transform': [ '30.2.0' ],
+124 silly audit   '@jest/types': [ '30.2.0' ],
+124 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+124 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+124 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+124 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+124 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+124 silly audit   '@napi-rs/wasm-runtime': [ '0.2.12' ],
+124 silly audit   '@next/env': [ '16.0.1', '13.5.11' ],
+124 silly audit   '@next/eslint-plugin-next': [ '14.2.33' ],
+124 silly audit   '@next/swc-darwin-arm64': [ '16.0.1' ],
+124 silly audit   '@next/swc-darwin-x64': [ '16.0.1' ],
+124 silly audit   '@next/swc-linux-arm64-gnu': [ '16.0.1' ],
+124 silly audit   '@next/swc-linux-arm64-musl': [ '16.0.1' ],
+124 silly audit   '@next/swc-linux-x64-gnu': [ '16.0.1' ],
+124 silly audit   '@next/swc-linux-x64-musl': [ '16.0.1' ],
+124 silly audit   '@next/swc-win32-arm64-msvc': [ '16.0.1' ],
+124 silly audit   '@next/swc-win32-x64-msvc': [ '16.0.1' ],
+124 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+124 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+124 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+124 silly audit   '@nolyfill/is-core-module': [ '1.0.39' ],
+124 silly audit   '@pkgjs/parseargs': [ '0.11.0' ],
+124 silly audit   '@pkgr/core': [ '0.2.9' ],
+124 silly audit   '@rtsao/scc': [ '1.1.0' ],
+124 silly audit   '@rushstack/eslint-patch': [ '1.14.1' ],
+124 silly audit   '@sinclair/typebox': [ '0.34.41' ],
+124 silly audit   '@swc/helpers': [ '0.5.15' ],
+124 silly audit   '@tybys/wasm-util': [ '0.10.1' ],
+124 silly audit   '@types/babel__core': [ '7.20.5' ],
+124 silly audit   '@types/babel__generator': [ '7.27.0' ],
+124 silly audit   '@types/babel__template': [ '7.4.4' ],
+124 silly audit   '@types/babel__traverse': [ '7.28.0' ],
+124 silly audit   '@types/istanbul-lib-coverage': [ '2.0.6' ],
+124 silly audit   '@types/istanbul-lib-report': [ '3.0.3' ],
+124 silly audit   '@types/istanbul-reports': [ '3.0.4' ],
+124 silly audit   '@types/json5': [ '0.0.29' ],
+124 silly audit   '@types/node': [ '24.10.0' ],
+124 silly audit   '@types/react': [ '19.2.2' ],
+124 silly audit   '@types/yargs': [ '17.0.34' ],
+124 silly audit   '@types/yargs-parser': [ '21.0.3' ],
+124 silly audit   '@typescript-eslint/eslint-plugin': [ '8.46.3' ],
+124 silly audit   ignore: [ '7.0.5', '5.3.2' ],
+124 silly audit   '@typescript-eslint/parser': [ '8.46.3' ],
+124 silly audit   '@typescript-eslint/project-service': [ '8.46.3' ],
+124 silly audit   '@typescript-eslint/scope-manager': [ '8.46.3' ],
+124 silly audit   '@typescript-eslint/tsconfig-utils': [ '8.46.3' ],
+124 silly audit   '@typescript-eslint/type-utils': [ '8.46.3' ],
+124 silly audit   '@typescript-eslint/types': [ '8.46.3' ],
+124 silly audit   '@typescript-eslint/typescript-estree': [ '8.46.3' ],
+124 silly audit   'brace-expansion': [ '2.0.2', '1.1.12' ],
+124 silly audit   minimatch: [ '9.0.5', '3.1.2' ],
+124 silly audit   '@typescript-eslint/utils': [ '8.46.3' ],
+124 silly audit   '@typescript-eslint/visitor-keys': [ '8.46.3' ],
+124 silly audit   'eslint-visitor-keys': [ '4.2.1', '3.4.3' ],
+124 silly audit   '@ungap/structured-clone': [ '1.3.0' ],
+124 silly audit   '@unrs/resolver-binding-android-arm-eabi': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-android-arm64': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-darwin-arm64': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-darwin-x64': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-freebsd-x64': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-linux-arm-gnueabihf': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-linux-arm-musleabihf': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-linux-arm64-gnu': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-linux-arm64-musl': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-linux-ppc64-gnu': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-linux-riscv64-gnu': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-linux-riscv64-musl': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-linux-s390x-gnu': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-linux-x64-gnu': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-linux-x64-musl': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-wasm32-wasi': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-win32-arm64-msvc': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-win32-ia32-msvc': [ '1.11.1' ],
+124 silly audit   '@unrs/resolver-binding-win32-x64-msvc': [ '1.11.1' ],
+124 silly audit   acorn: [ '8.15.0' ],
+124 silly audit   'acorn-jsx': [ '5.3.2' ],
+124 silly audit   ajv: [ '6.12.6' ],
+124 silly audit   'ansi-escapes': [ '7.2.0' ],
+124 silly audit   'ansi-styles': [ '4.3.0', '6.2.3' ],
+124 silly audit   'any-promise': [ '1.3.0' ],
+124 silly audit   anymatch: [ '3.1.3' ],
+124 silly audit   arg: [ '5.0.2' ],
+124 silly audit   'aria-query': [ '5.3.2' ],
+124 silly audit   'array-buffer-byte-length': [ '1.0.2' ],
+124 silly audit   'array-includes': [ '3.1.9' ],
+124 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+124 silly audit   'array.prototype.findlastindex': [ '1.2.6' ],
+124 silly audit   'array.prototype.flat': [ '1.3.3' ],
+124 silly audit   'array.prototype.flatmap': [ '1.3.3' ],
+124 silly audit   'array.prototype.tosorted': [ '1.1.4' ],
+124 silly audit   'arraybuffer.prototype.slice': [ '1.0.4' ],
+124 silly audit   'ast-types-flow': [ '0.0.8' ],
+124 silly audit   'async-function': [ '1.0.0' ],
+124 silly audit   autoprefixer: [ '10.4.21' ],
+124 silly audit   'available-typed-arrays': [ '1.0.7' ],
+124 silly audit   'axe-core': [ '4.11.0' ],
+124 silly audit   'axobject-query': [ '4.1.0' ],
+124 silly audit   'babel-jest': [ '30.2.0' ],
+124 silly audit   'babel-plugin-istanbul': [ '7.0.1' ],
+124 silly audit   'babel-plugin-jest-hoist': [ '30.2.0' ],
+124 silly audit   'babel-preset-current-node-syntax': [ '1.2.0' ],
+124 silly audit   'babel-preset-jest': [ '30.2.0' ],
+124 silly audit   'balanced-match': [ '1.0.2' ],
+124 silly audit   'baseline-browser-mapping': [ '2.8.25' ],
+124 silly audit   'bezier-easing': [ '2.1.0' ],
+124 silly audit   'binary-extensions': [ '2.3.0' ],
+124 silly audit   'bindall-standalone': [ '1.0.5' ],
+124 silly audit   braces: [ '3.0.3' ],
+124 silly audit   browserslist: [ '4.27.0' ],
+124 silly audit   bser: [ '2.1.1' ],
+124 silly audit   'call-bind': [ '1.0.8' ],
+124 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+124 silly audit   'call-bound': [ '1.0.4' ],
+124 silly audit   callsites: [ '3.1.0' ],
+124 silly audit   camelcase: [ '5.3.1' ],
+124 silly audit   'camelcase-css': [ '2.0.1' ],
+124 silly audit   'caniuse-lite': [ '1.0.30001753' ],
+124 silly audit   chalk: [ '4.1.2' ],
+124 silly audit   chokidar: [ '3.6.0' ],
+124 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+124 silly audit   'ci-info': [ '4.3.1' ],
+124 silly audit   'class-variance-authority': [ '0.7.1' ],
+124 silly audit   classnames: [ '2.5.1' ],
+124 silly audit   'cli-cursor': [ '5.0.0' ],
+124 silly audit   'cli-truncate': [ '5.1.1' ],
+124 silly audit   'string-width': [ '8.1.0', '7.2.0', '5.1.2', '4.2.3' ],
+124 silly audit   'client-only': [ '0.0.1' ],
+124 silly audit   clsx: [ '2.1.1' ],
+124 silly audit   'color-convert': [ '2.0.1' ],
+124 silly audit   'color-name': [ '1.1.4' ],
+124 silly audit   colorette: [ '2.0.20' ],
+124 silly audit   commander: [ '4.1.1', '14.0.2' ],
+124 silly audit   'concat-map': [ '0.0.1' ],
+124 silly audit   'convert-source-map': [ '2.0.0' ],
+124 silly audit   'cross-spawn': [ '7.0.6' ],
+124 silly audit   cssesc: [ '3.0.0' ],
+124 silly audit   csstype: [ '3.1.3' ],
+124 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+124 silly audit   'data-view-buffer': [ '1.0.2' ],
+124 silly audit   'data-view-byte-length': [ '1.0.2' ],
+124 silly audit   'data-view-byte-offset': [ '1.0.1' ],
+124 silly audit   debug: [ '4.4.3', '3.2.7' ],
+124 silly audit   'deep-is': [ '0.1.4' ],
+124 silly audit   'define-data-property': [ '1.1.4' ],
+124 silly audit   'define-properties': [ '1.2.1' ],
+124 silly audit   'detect-libc': [ '2.1.2' ],
+124 silly audit   didyoumean: [ '1.2.2' ],
+124 silly audit   dlv: [ '1.1.3' ],
+124 silly audit   doctrine: [ '3.0.0', '2.1.0' ],
+124 silly audit   'dunder-proto': [ '1.0.1' ],
+124 silly audit   eastasianwidth: [ '0.2.0' ],
+124 silly audit   'electron-to-chromium': [ '1.5.245' ],
+124 silly audit   'emoji-regex': [ '9.2.2', '10.6.0', '8.0.0' ],
+124 silly audit   environment: [ '1.1.0' ],
+124 silly audit   'es-abstract': [ '1.24.0' ],
+124 silly audit   'es-define-property': [ '1.0.1' ],
+124 silly audit   'es-errors': [ '1.3.0' ],
+124 silly audit   'es-iterator-helpers': [ '1.2.1' ],
+124 silly audit   'es-object-atoms': [ '1.1.1' ],
+124 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+124 silly audit   'es-shim-unscopables': [ '1.1.0' ],
+124 silly audit   'es-to-primitive': [ '1.3.0' ],
+124 silly audit   escalade: [ '3.2.0' ],
+124 silly audit   'escape-string-regexp': [ '4.0.0' ],
+124 silly audit   eslint: [ '8.57.1' ],
+124 silly audit   'eslint-config-next': [ '14.2.33' ],
+124 silly audit   'eslint-config-prettier': [ '9.1.2' ],
+124 silly audit   'eslint-import-resolver-node': [ '0.3.9' ],
+124 silly audit   'eslint-import-resolver-typescript': [ '3.10.1' ],
+124 silly audit   'eslint-module-utils': [ '2.12.1' ],
+124 silly audit   'eslint-plugin-import': [ '2.32.0' ],
+124 silly audit   'eslint-plugin-jsx-a11y': [ '6.10.2' ],
+124 silly audit   'eslint-plugin-prettier': [ '5.5.4' ],
+124 silly audit   'eslint-plugin-react': [ '7.37.5' ],
+124 silly audit   'eslint-plugin-react-hooks': [ '5.0.0-canary-7118f5dd7-20230705' ],
+124 silly audit   resolve: [ '2.0.0-next.5', '1.22.11' ],
+124 silly audit   'eslint-plugin-unused-imports': [ '4.3.0' ],
+124 silly audit   'eslint-scope': [ '7.2.2' ],
+124 silly audit   espree: [ '9.6.1' ],
+124 silly audit   esprima: [ '4.0.1' ],
+124 silly audit   esquery: [ '1.6.0' ],
+124 silly audit   esrecurse: [ '4.3.0' ],
+124 silly audit   estraverse: [ '5.3.0' ],
+124 silly audit   esutils: [ '2.0.3' ],
+124 silly audit   eventemitter3: [ '5.0.1' ],
+124 silly audit   'fast-deep-equal': [ '3.1.3' ],
+124 silly audit   'fast-diff': [ '1.3.0' ],
+124 silly audit   'fast-glob': [ '3.3.3' ],
+124 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+124 silly audit   'fast-levenshtein': [ '2.0.6' ],
+124 silly audit   fastq: [ '1.19.1' ],
+124 silly audit   'fb-watchman': [ '2.0.2' ],
+124 silly audit   'file-entry-cache': [ '6.0.1' ],
+124 silly audit   'fill-range': [ '7.1.1' ],
+124 silly audit   'flat-cache': [ '3.2.0' ],
+124 silly audit   flatted: [ '3.3.3' ],
+124 silly audit   'for-each': [ '0.3.5' ],
+124 silly audit   'foreground-child': [ '3.3.1' ],
+124 silly audit   'fraction.js': [ '4.3.7' ],
+124 silly audit   'framer-motion': [ '12.23.24' ],
+124 silly audit   'fs.realpath': [ '1.0.0' ],
+124 silly audit   fsevents: [ '2.3.3' ],
+124 silly audit   'function-bind': [ '1.1.2' ],
+124 silly audit   'function.prototype.name': [ '1.1.8' ],
+124 silly audit   'functions-have-names': [ '1.2.3' ],
+124 silly audit   'generator-function': [ '2.0.1' ],
+124 silly audit   gensync: [ '1.0.0-beta.2' ],
+124 silly audit   'get-east-asian-width': [ '1.4.0' ],
+124 silly audit   'get-intrinsic': [ '1.3.0' ],
+124 silly audit   'get-package-type': [ '0.1.0' ],
+124 silly audit   'get-proto': [ '1.0.1' ],
+124 silly audit   'get-symbol-description': [ '1.1.0' ],
+124 silly audit   'get-tsconfig': [ '4.13.0' ],
+124 silly audit   glob: [ '10.3.10', '7.2.3' ],
+124 silly audit   globals: [ '13.24.0' ],
+124 silly audit   globalthis: [ '1.0.4' ],
+124 silly audit   gopd: [ '1.2.0' ],
+124 silly audit   'graceful-fs': [ '4.2.11' ],
+124 silly audit   graphemer: [ '1.4.0' ],
+124 silly audit   gsap: [ '3.13.0' ],
+124 silly audit   'has-bigints': [ '1.1.0' ],
+124 silly audit   'has-flag': [ '4.0.0' ],
+124 silly audit   'has-property-descriptors': [ '1.0.2' ],
+124 silly audit   'has-proto': [ '1.2.0' ],
+124 silly audit   'has-symbols': [ '1.1.0' ],
+124 silly audit   'has-tostringtag': [ '1.0.2' ],
+124 silly audit   hasown: [ '2.0.2' ],
+124 silly audit   husky: [ '9.1.7' ],
+124 silly audit   'import-fresh': [ '3.3.1' ],
+124 silly audit   imurmurhash: [ '0.1.4' ],
+124 silly audit   inflight: [ '1.0.6' ],
+124 silly audit   inherits: [ '2.0.4' ],
+124 silly audit   'internal-slot': [ '1.1.0' ],
+124 silly audit   'is-array-buffer': [ '3.0.5' ],
+124 silly audit   'is-async-function': [ '2.1.1' ],
+124 silly audit   'is-bigint': [ '1.1.0' ],
+124 silly audit   'is-binary-path': [ '2.1.0' ],
+124 silly audit   'is-boolean-object': [ '1.2.2' ],
+124 silly audit   'is-bun-module': [ '2.0.0' ],
+124 silly audit   'is-callable': [ '1.2.7' ],
+124 silly audit   'is-core-module': [ '2.16.1' ],
+124 silly audit   'is-data-view': [ '1.0.2' ],
+124 silly audit   'is-date-object': [ '1.1.0' ],
+124 silly audit   'is-extglob': [ '2.1.1' ],
+124 silly audit   'is-finalizationregistry': [ '1.1.1' ],
+124 silly audit   'is-fullwidth-code-point': [ '3.0.0', '5.1.0' ],
+124 silly audit   'is-generator-function': [ '1.1.2' ],
+124 silly audit   'is-glob': [ '4.0.3' ],
+124 silly audit   'is-map': [ '2.0.3' ],
+124 silly audit   'is-negative-zero': [ '2.0.3' ],
+124 silly audit   'is-number': [ '7.0.0' ],
+124 silly audit   'is-number-object': [ '1.1.1' ],
+124 silly audit   'is-path-inside': [ '3.0.3' ],
+124 silly audit   'is-regex': [ '1.2.1' ],
+124 silly audit   'is-set': [ '2.0.3' ],
+124 silly audit   'is-shared-array-buffer': [ '1.0.4' ],
+124 silly audit   'is-string': [ '1.1.1' ],
+124 silly audit   'is-symbol': [ '1.1.1' ],
+124 silly audit   'is-typed-array': [ '1.1.15' ],
+124 silly audit   'is-weakmap': [ '2.0.2' ],
+124 silly audit   'is-weakref': [ '1.1.1' ],
+124 silly audit   'is-weakset': [ '2.0.4' ],
+124 silly audit   isarray: [ '2.0.5' ],
+124 silly audit   isexe: [ '2.0.0' ],
+124 silly audit   'istanbul-lib-coverage': [ '3.2.2' ],
+124 silly audit   'istanbul-lib-instrument': [ '6.0.3' ],
+124 silly audit   'iterator.prototype': [ '1.1.5' ],
+124 silly audit   jackspeak: [ '2.3.6' ],
+124 silly audit   'jest-haste-map': [ '30.2.0' ],
+124 silly audit   'jest-regex-util': [ '30.0.1' ],
+124 silly audit   'jest-util': [ '30.2.0' ],
+124 silly audit   picomatch: [ '4.0.3', '2.3.1' ],
+124 silly audit   'jest-worker': [ '30.2.0' ],
+124 silly audit   'supports-color': [ '8.1.1', '7.2.0' ],
+124 silly audit   jiti: [ '1.21.7' ],
+124 silly audit   'js-tokens': [ '4.0.0' ],
+124 silly audit   jsesc: [ '3.1.0' ],
+124 silly audit   'json-buffer': [ '3.0.1' ],
+124 silly audit   'json-schema-traverse': [ '0.4.1' ],
+124 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+124 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+124 silly audit   keyv: [ '4.5.4' ],
+124 silly audit   'language-subtag-registry': [ '0.3.23' ],
+124 silly audit   'language-tags': [ '1.0.9' ],
+124 silly audit   lethargy: [ '1.0.9' ],
+124 silly audit   levn: [ '0.4.1' ],
+124 silly audit   lilconfig: [ '3.1.3' ],
+124 silly audit   'lines-and-columns': [ '1.2.4' ],
+124 silly audit   'lint-staged': [ '16.2.6' ],
+124 silly audit   listr2: [ '9.0.5' ],
+124 silly audit   'wrap-ansi': [ '9.0.2', '8.1.0', '7.0.0' ],
+124 silly audit   'locomotive-scroll': [ '4.1.4' ],
+124 silly audit   'lodash.merge': [ '4.6.2' ],
+124 silly audit   'log-update': [ '6.1.0' ],
+124 silly audit   'loose-envify': [ '1.4.0' ],
+124 silly audit   makeerror: [ '1.0.12' ],
+124 silly audit   'math-intrinsics': [ '1.1.0' ],
+124 silly audit   'merge-stream': [ '2.0.0' ],
+124 silly audit   merge2: [ '1.4.1' ],
+124 silly audit   micromatch: [ '4.0.8' ],
+124 silly audit   'mimic-function': [ '5.0.1' ],
+124 silly audit   minimist: [ '1.2.8' ],
+124 silly audit   minipass: [ '7.1.2' ],
+124 silly audit   motion: [ '12.23.24' ],
+124 silly audit   'motion-dom': [ '12.23.23' ],
+124 silly audit   'motion-utils': [ '12.23.6' ],
+124 silly audit   ms: [ '2.1.3' ],
+124 silly audit   mz: [ '2.7.0' ],
+124 silly audit   'nano-spawn': [ '2.0.0' ],
+124 silly audit   nanoid: [ '3.3.11' ],
+124 silly audit   'napi-postinstall': [ '0.3.4' ],
+124 silly audit   'natural-compare': [ '1.4.0' ],
+124 silly audit   next: [ '16.0.1' ],
+124 silly audit   'next-seo': [ '6.8.0' ],
+124 silly audit   'next-sitemap': [ '4.2.3' ],
+124 silly audit   postcss: [ '8.4.31', '8.5.6' ],
+124 silly audit   'node-int64': [ '0.4.0' ],
+124 silly audit   'node-releases': [ '2.0.27' ],
+124 silly audit   'normalize-path': [ '3.0.0' ],
+124 silly audit   'normalize-range': [ '0.1.2' ],
+124 silly audit   'object-assign': [ '4.1.1' ],
+124 silly audit   'object-hash': [ '3.0.0' ],
+124 silly audit   'object-inspect': [ '1.13.4' ],
+124 silly audit   'object-keys': [ '1.1.1' ],
+124 silly audit   'object.assign': [ '4.1.7' ],
+124 silly audit   'object.entries': [ '1.1.9' ],
+124 silly audit   'object.fromentries': [ '2.0.8' ],
+124 silly audit   'object.groupby': [ '1.0.3' ],
+124 silly audit   'object.values': [ '1.2.1' ],
+124 silly audit   once: [ '1.4.0' ],
+124 silly audit   onetime: [ '7.0.0' ],
+124 silly audit   optionator: [ '0.9.4' ],
+124 silly audit   'own-keys': [ '1.0.1' ],
+124 silly audit   'p-try': [ '2.2.0' ],
+124 silly audit   'parent-module': [ '1.0.1' ],
+124 silly audit   'path-exists': [ '4.0.0' ],
+124 silly audit   'path-is-absolute': [ '1.0.1' ],
+124 silly audit   'path-key': [ '3.1.1' ],
+124 silly audit   'path-parse': [ '1.0.7' ],
+124 silly audit   'path-scurry': [ '1.11.1' ],
+124 silly audit   picocolors: [ '1.1.1' ],
+124 silly audit   pidtree: [ '0.6.0' ],
+124 silly audit   pify: [ '2.3.0' ],
+124 silly audit   pirates: [ '4.0.7' ],
+124 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+124 silly audit   'postcss-import': [ '15.1.0' ],
+124 silly audit   'postcss-js': [ '4.1.0' ],
+124 silly audit   'postcss-load-config': [ '6.0.1' ],
+124 silly audit   'postcss-nested': [ '6.2.0' ],
+124 silly audit   'postcss-selector-parser': [ '6.1.2' ],
+124 silly audit   'postcss-value-parser': [ '4.2.0' ],
+124 silly audit   'prelude-ls': [ '1.2.1' ],
+124 silly audit   prettier: [ '3.6.2' ],
+124 silly audit   'prettier-linter-helpers': [ '1.0.0' ],
+124 silly audit   'prop-types': [ '15.8.1' ],
+124 silly audit   punycode: [ '2.3.1' ],
+124 silly audit   'queue-microtask': [ '1.2.3' ],
+124 silly audit   react: [ '19.2.0' ],
+124 silly audit   'react-dom': [ '19.2.0' ],
+124 silly audit   'react-icons': [ '5.5.0' ],
+124 silly audit   'react-intersection-observer': [ '10.0.0' ],
+124 silly audit   'react-is': [ '16.13.1' ],
+124 silly audit   'read-cache': [ '1.0.0' ],
+124 silly audit   readdirp: [ '3.6.0' ],
+124 silly audit   'reflect.getprototypeof': [ '1.0.10' ],
+124 silly audit   'regexp.prototype.flags': [ '1.5.4' ],
+124 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+124 silly audit   'restore-cursor': [ '5.1.0' ],
+124 silly audit   reusify: [ '1.1.0' ],
+124 silly audit   rfdc: [ '1.4.1' ],
+124 silly audit   rimraf: [ '3.0.2' ],
+124 silly audit   'run-parallel': [ '1.2.0' ],
+124 silly audit   'safe-array-concat': [ '1.1.3' ],
+124 silly audit   'safe-push-apply': [ '1.0.0' ],
+124 silly audit   'safe-regex-test': [ '1.1.0' ],
+124 silly audit   scheduler: [ '0.27.0' ],
+124 silly audit   'set-function-length': [ '1.2.2' ],
+124 silly audit   'set-function-name': [ '2.0.2' ],
+124 silly audit   'set-proto': [ '1.0.0' ],
+124 silly audit   sharp: [ '0.34.4' ],
+124 silly audit   'shebang-command': [ '2.0.0' ],
+124 silly audit   'shebang-regex': [ '3.0.0' ],
+124 silly audit   'side-channel': [ '1.1.0' ],
+124 silly audit   'side-channel-list': [ '1.0.0' ],
+124 silly audit   'side-channel-map': [ '1.0.1' ],
+124 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+124 silly audit   'signal-exit': [ '4.1.0' ],
+124 silly audit   slash: [ '3.0.0' ],
+124 silly audit   'slice-ansi': [ '7.1.2' ],
+124 silly audit   'smoothscroll-polyfill': [ '0.4.4' ],
+124 silly audit   'source-map-js': [ '1.2.1' ],
+124 silly audit   'split-type': [ '0.3.4' ],
+124 silly audit   'sprintf-js': [ '1.0.3' ],
+124 silly audit   'stable-hash': [ '0.0.5' ],
+124 silly audit   'stop-iteration-iterator': [ '1.1.0' ],
+124 silly audit   'string-argv': [ '0.3.2' ],
+124 silly audit   'string.prototype.includes': [ '2.0.1' ],
+124 silly audit   'string.prototype.matchall': [ '4.0.12' ],
+124 silly audit   'string.prototype.repeat': [ '1.0.0' ],
+124 silly audit   'string.prototype.trim': [ '1.2.10' ],
+124 silly audit   'string.prototype.trimend': [ '1.0.9' ],
+124 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+124 silly audit   'strip-bom': [ '3.0.0' ],
+124 silly audit   'strip-json-comments': [ '3.1.1' ],
+124 silly audit   'styled-jsx': [ '5.1.6' ],
+124 silly audit   sucrase: [ '3.35.0' ],
+124 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+124 silly audit   synckit: [ '0.11.11' ],
+124 silly audit   'tailwind-merge': [ '3.4.0' ],
+124 silly audit   tailwindcss: [ '3.4.18' ],
+124 silly audit   'test-exclude': [ '6.0.0' ],
+124 silly audit   'text-table': [ '0.2.0' ],
+124 silly audit   thenify: [ '3.3.1' ],
+124 silly audit   'thenify-all': [ '1.6.0' ],
+124 silly audit   three: [ '0.181.0' ],
+124 silly audit   'tiny-emitter': [ '1.2.0' ],
+124 silly audit   tinyglobby: [ '0.2.15' ],
+124 silly audit   fdir: [ '6.5.0' ],
+124 silly audit   tmpl: [ '1.0.5' ],
+124 silly audit   'to-regex-range': [ '5.0.1' ],
+124 silly audit   'ts-api-utils': [ '2.1.0' ],
+124 silly audit   'ts-interface-checker': [ '0.1.13' ],
+124 silly audit   'tsconfig-paths': [ '3.15.0' ],
+124 silly audit   tslib: [ '2.8.1' ],
+124 silly audit   'type-check': [ '0.4.0' ],
+124 silly audit   'type-fest': [ '0.20.2' ],
+124 silly audit   'typed-array-buffer': [ '1.0.3' ],
+124 silly audit   'typed-array-byte-length': [ '1.0.3' ],
+124 silly audit   'typed-array-byte-offset': [ '1.0.4' ],
+124 silly audit   'typed-array-length': [ '1.0.7' ],
+124 silly audit   typescript: [ '5.9.3' ],
+124 silly audit   'unbox-primitive': [ '1.1.0' ],
+124 silly audit   'undici-types': [ '7.16.0' ],
+124 silly audit   'unrs-resolver': [ '1.11.1' ],
+124 silly audit   'update-browserslist-db': [ '1.1.4' ],
+124 silly audit   'uri-js': [ '4.4.1' ],
+124 silly audit   'util-deprecate': [ '1.0.2' ],
+124 silly audit   'virtual-scroll': [ '1.5.2' ],
+124 silly audit   walker: [ '1.0.8' ],
+124 silly audit   which: [ '2.0.2' ],
+124 silly audit   'which-boxed-primitive': [ '1.1.1' ],
+124 silly audit   'which-builtin-type': [ '1.2.1' ],
+124 silly audit   'which-collection': [ '1.0.2' ],
+124 silly audit   'which-typed-array': [ '1.1.19' ],
+124 silly audit   'word-wrap': [ '1.2.5' ],
+124 silly audit   wrappy: [ '1.0.2' ],
+124 silly audit   'write-file-atomic': [ '5.0.1' ],
+124 silly audit   yallist: [ '3.1.1' ],
+124 silly audit   yaml: [ '2.8.1' ],
+124 silly audit   'yocto-queue': [ '0.1.0' ],
+124 silly audit   'lucide-react': [ '0.562.0' ],
+124 silly audit   'tailwindcss-animate': [ '1.0.7' ]
+124 silly audit }
+125 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\fsevents
+126 silly reify mark deleted [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\fsevents' ]
+127 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-win32-ia32-msvc
+128 silly reify mark deleted [
+128 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-win32-ia32-msvc'
+128 silly reify ]
+129 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-win32-arm64-msvc
+130 silly reify mark deleted [
+130 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-win32-arm64-msvc'
+130 silly reify ]
+131 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-wasm32-wasi
+132 silly reify mark deleted [
+132 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-wasm32-wasi'
+132 silly reify ]
+133 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@napi-rs\wasm-runtime
+134 silly reify mark deleted [
+134 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@napi-rs\\wasm-runtime'
+134 silly reify ]
+135 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@emnapi\core
+136 silly reify mark deleted [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@emnapi\\core' ]
+137 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@tybys\wasm-util
+138 silly reify mark deleted [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@tybys\\wasm-util' ]
+139 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@emnapi\wasi-threads
+140 silly reify mark deleted [
+140 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@emnapi\\wasi-threads'
+140 silly reify ]
+141 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-linux-x64-musl
+142 silly reify mark deleted [
+142 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-linux-x64-musl'
+142 silly reify ]
+143 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-linux-x64-gnu
+144 silly reify mark deleted [
+144 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-linux-x64-gnu'
+144 silly reify ]
+145 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-linux-s390x-gnu
+146 silly reify mark deleted [
+146 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-linux-s390x-gnu'
+146 silly reify ]
+147 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-linux-riscv64-musl
+148 silly reify mark deleted [
+148 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-linux-riscv64-musl'
+148 silly reify ]
+149 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-linux-riscv64-gnu
+150 silly reify mark deleted [
+150 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-linux-riscv64-gnu'
+150 silly reify ]
+151 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-linux-ppc64-gnu
+152 silly reify mark deleted [
+152 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-linux-ppc64-gnu'
+152 silly reify ]
+153 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-linux-arm64-musl
+154 silly reify mark deleted [
+154 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-linux-arm64-musl'
+154 silly reify ]
+155 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-linux-arm64-gnu
+156 silly reify mark deleted [
+156 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-linux-arm64-gnu'
+156 silly reify ]
+157 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-linux-arm-musleabihf
+158 silly reify mark deleted [
+158 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-linux-arm-musleabihf'
+158 silly reify ]
+159 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-linux-arm-gnueabihf
+160 silly reify mark deleted [
+160 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-linux-arm-gnueabihf'
+160 silly reify ]
+161 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-freebsd-x64
+162 silly reify mark deleted [
+162 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-freebsd-x64'
+162 silly reify ]
+163 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-darwin-x64
+164 silly reify mark deleted [
+164 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-darwin-x64'
+164 silly reify ]
+165 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-darwin-arm64
+166 silly reify mark deleted [
+166 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-darwin-arm64'
+166 silly reify ]
+167 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-android-arm64
+168 silly reify mark deleted [
+168 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-android-arm64'
+168 silly reify ]
+169 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@unrs\resolver-binding-android-arm-eabi
+170 silly reify mark deleted [
+170 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@unrs\\resolver-binding-android-arm-eabi'
+170 silly reify ]
+171 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@next\swc-win32-arm64-msvc
+172 silly reify mark deleted [
+172 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@next\\swc-win32-arm64-msvc'
+172 silly reify ]
+173 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@next\swc-linux-x64-musl
+174 silly reify mark deleted [
+174 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@next\\swc-linux-x64-musl'
+174 silly reify ]
+175 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@next\swc-linux-x64-gnu
+176 silly reify mark deleted [
+176 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@next\\swc-linux-x64-gnu'
+176 silly reify ]
+177 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@next\swc-linux-arm64-musl
+178 silly reify mark deleted [
+178 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@next\\swc-linux-arm64-musl'
+178 silly reify ]
+179 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@next\swc-linux-arm64-gnu
+180 silly reify mark deleted [
+180 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@next\\swc-linux-arm64-gnu'
+180 silly reify ]
+181 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@next\swc-darwin-x64
+182 silly reify mark deleted [
+182 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@next\\swc-darwin-x64'
+182 silly reify ]
+183 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@next\swc-darwin-arm64
+184 silly reify mark deleted [
+184 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@next\\swc-darwin-arm64'
+184 silly reify ]
+185 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-win32-ia32
+186 silly reify mark deleted [
+186 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-win32-ia32'
+186 silly reify ]
+187 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-win32-arm64
+188 silly reify mark deleted [
+188 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-win32-arm64'
+188 silly reify ]
+189 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-wasm32
+190 silly reify mark deleted [ 'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-wasm32' ]
+191 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-linuxmusl-x64
+192 silly reify mark deleted [
+192 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-linuxmusl-x64'
+192 silly reify ]
+193 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-linuxmusl-arm64
+194 silly reify mark deleted [
+194 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-linuxmusl-arm64'
+194 silly reify ]
+195 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-linux-x64
+196 silly reify mark deleted [
+196 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-linux-x64'
+196 silly reify ]
+197 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-linux-s390x
+198 silly reify mark deleted [
+198 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-linux-s390x'
+198 silly reify ]
+199 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-linux-ppc64
+200 silly reify mark deleted [
+200 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-linux-ppc64'
+200 silly reify ]
+201 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-linux-arm64
+202 silly reify mark deleted [
+202 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-linux-arm64'
+202 silly reify ]
+203 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-linux-arm
+204 silly reify mark deleted [
+204 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-linux-arm'
+204 silly reify ]
+205 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-libvips-linuxmusl-x64
+206 silly reify mark deleted [
+206 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+206 silly reify ]
+207 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-libvips-linuxmusl-arm64
+208 silly reify mark deleted [
+208 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+208 silly reify ]
+209 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-libvips-linux-x64
+210 silly reify mark deleted [
+210 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-libvips-linux-x64'
+210 silly reify ]
+211 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-libvips-linux-s390x
+212 silly reify mark deleted [
+212 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-libvips-linux-s390x'
+212 silly reify ]
+213 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-libvips-linux-ppc64
+214 silly reify mark deleted [
+214 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-libvips-linux-ppc64'
+214 silly reify ]
+215 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-libvips-linux-arm64
+216 silly reify mark deleted [
+216 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-libvips-linux-arm64'
+216 silly reify ]
+217 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-libvips-linux-arm
+218 silly reify mark deleted [
+218 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-libvips-linux-arm'
+218 silly reify ]
+219 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-libvips-darwin-x64
+220 silly reify mark deleted [
+220 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-libvips-darwin-x64'
+220 silly reify ]
+221 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-libvips-darwin-arm64
+222 silly reify mark deleted [
+222 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+222 silly reify ]
+223 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-darwin-x64
+224 silly reify mark deleted [
+224 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-darwin-x64'
+224 silly reify ]
+225 verbose reify failed optional dependency D:\REVAMP\gwc-website-revamp\node_modules\@img\sharp-darwin-arm64
+226 silly reify mark deleted [
+226 silly reify   'D:\\REVAMP\\gwc-website-revamp\\node_modules\\@img\\sharp-darwin-arm64'
+226 silly reify ]
+227 http cache tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.18.tgz 1ms (cache hit)
+228 http cache sucrase@https://registry.npmjs.org/sucrase/-/sucrase-3.35.0.tgz 0ms (cache hit)
+229 http cache strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz 0ms (cache hit)
+230 http cache eslint@https://registry.npmjs.org/eslint/-/eslint-8.57.1.tgz 0ms (cache hit)
+231 http cache @tybys/wasm-util@https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz 0ms (cache hit)
+232 http cache typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz 0ms (cache hit)
+233 http cache @napi-rs/wasm-runtime@https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.12.tgz 0ms (cache hit)
+234 http cache @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.1.0.tgz 0ms (cache hit)
+235 http cache @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-1.7.0.tgz 0ms (cache hit)
+236 http cache wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-8.1.0.tgz 0ms (cache hit)
+237 http cache @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-7.28.5.tgz 0ms (cache hit)
+238 http cache yaml@https://registry.npmjs.org/yaml/-/yaml-2.8.1.tgz 0ms (cache hit)
+239 http cache @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.7.0.tgz 0ms (cache hit)
+240 http cache update-browserslist-db@https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.1.4.tgz 0ms (cache hit)
+241 http cache which@https://registry.npmjs.org/which/-/which-2.0.2.tgz 3ms (cache hit)
+242 silly tarball no local data for tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.18.tgz. Extracting by manifest.
+243 http cache semver@https://registry.npmjs.org/semver/-/semver-7.7.3.tgz 1ms (cache hit)
+244 silly tarball no local data for sucrase@https://registry.npmjs.org/sucrase/-/sucrase-3.35.0.tgz. Extracting by manifest.
+245 http cache rimraf@https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz 0ms (cache hit)
+246 http cache resolve@https://registry.npmjs.org/resolve/-/resolve-1.22.11.tgz 0ms (cache hit)
+247 http cache pidtree@https://registry.npmjs.org/pidtree/-/pidtree-0.6.0.tgz 0ms (cache hit)
+248 http cache prettier@https://registry.npmjs.org/prettier/-/prettier-3.6.2.tgz 1ms (cache hit)
+249 http cache next@https://registry.npmjs.org/next/-/next-16.0.1.tgz 0ms (cache hit)
+250 http cache nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.11.tgz 2ms (cache hit)
+251 http cache next-sitemap@https://registry.npmjs.org/next-sitemap/-/next-sitemap-4.2.3.tgz 0ms (cache hit)
+252 http cache napi-postinstall@https://registry.npmjs.org/napi-postinstall/-/napi-postinstall-0.3.4.tgz 1ms (cache hit)
+253 http cache loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz 0ms (cache hit)
+254 http cache jsesc@https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz 0ms (cache hit)
+255 http cache json5@https://registry.npmjs.org/json5/-/json5-1.0.2.tgz 0ms (cache hit)
+256 http cache lint-staged@https://registry.npmjs.org/lint-staged/-/lint-staged-16.2.6.tgz 0ms (cache hit)
+257 http cache js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz 0ms (cache hit)
+258 http cache jiti@https://registry.npmjs.org/jiti/-/jiti-1.21.7.tgz 0ms (cache hit)
+259 http cache husky@https://registry.npmjs.org/husky/-/husky-9.1.7.tgz 0ms (cache hit)
+260 http cache glob-parent@https://registry.npmjs.org/glob-parent/-/glob-parent-6.0.2.tgz 0ms (cache hit)
+261 http cache glob@https://registry.npmjs.org/glob/-/glob-10.3.10.tgz 0ms (cache hit)
+262 http cache esprima@https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz 0ms (cache hit)
+263 http cache eslint-config-prettier@https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-9.1.2.tgz 0ms (cache hit)
+264 silly tarball no local data for eslint@https://registry.npmjs.org/eslint/-/eslint-8.57.1.tgz. Extracting by manifest.
+265 http cache doctrine@https://registry.npmjs.org/doctrine/-/doctrine-3.0.0.tgz 0ms (cache hit)
+266 http cache emoji-regex@https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz 0ms (cache hit)
+267 http cache cssesc@https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz 1ms (cache hit)
+268 http cache commander@https://registry.npmjs.org/commander/-/commander-4.1.1.tgz 0ms (cache hit)
+269 http cache browserslist@https://registry.npmjs.org/browserslist/-/browserslist-4.27.0.tgz 0ms (cache hit)
+270 http cache ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz 0ms (cache hit)
+271 http cache baseline-browser-mapping@https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.8.25.tgz 0ms (cache hit)
+272 http cache autoprefixer@https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.4.21.tgz 0ms (cache hit)
+273 http cache acorn@https://registry.npmjs.org/acorn/-/acorn-8.15.0.tgz 0ms (cache hit)
+274 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 1636ms
+275 silly audit report {
+275 silly audit report   'js-yaml': [
+275 silly audit report     {
+275 silly audit report       id: 1109801,
+275 silly audit report       url: 'https://github.com/advisories/GHSA-mh29-5h37-fv8m',
+275 silly audit report       title: 'js-yaml has prototype pollution in merge (<<)',
+275 silly audit report       severity: 'moderate',
+275 silly audit report       vulnerable_versions: '<3.14.2',
+275 silly audit report       cwe: [Array],
+275 silly audit report       cvss: [Object]
+275 silly audit report     },
+275 silly audit report     {
+275 silly audit report       id: 1109802,
+275 silly audit report       url: 'https://github.com/advisories/GHSA-mh29-5h37-fv8m',
+275 silly audit report       title: 'js-yaml has prototype pollution in merge (<<)',
+275 silly audit report       severity: 'moderate',
+275 silly audit report       vulnerable_versions: '>=4.0.0 <4.1.1',
+275 silly audit report       cwe: [Array],
+275 silly audit report       cvss: [Object]
+275 silly audit report     }
+275 silly audit report   ],
+275 silly audit report   glob: [
+275 silly audit report     {
+275 silly audit report       id: 1109842,
+275 silly audit report       url: 'https://github.com/advisories/GHSA-5j98-mcp5-4vw2',
+275 silly audit report       title: 'glob CLI: Command injection via -c/--cmd executes matches with shell:true',
+275 silly audit report       severity: 'high',
+275 silly audit report       vulnerable_versions: '>=10.2.0 <10.5.0',
+275 silly audit report       cwe: [Array],
+275 silly audit report       cvss: [Object]
+275 silly audit report     }
+275 silly audit report   ],
+275 silly audit report   next: [
+275 silly audit report     {
+275 silly audit report       id: 1111368,
+275 silly audit report       url: 'https://github.com/advisories/GHSA-9qr9-h5gf-34mp',
+275 silly audit report       title: 'Next.js is vulnerable to RCE in React flight protocol',
+275 silly audit report       severity: 'critical',
+275 silly audit report       vulnerable_versions: '>=16.0.0-canary.0 <16.0.7',
+275 silly audit report       cwe: [Array],
+275 silly audit report       cvss: [Object]
+275 silly audit report     },
+275 silly audit report     {
+275 silly audit report       id: 1111374,
+275 silly audit report       url: 'https://github.com/advisories/GHSA-w37m-7fhw-fmv9',
+275 silly audit report       title: 'Next Server Actions Source Code Exposure ',
+275 silly audit report       severity: 'moderate',
+275 silly audit report       vulnerable_versions: '>=16.0.0-beta.0 <16.0.9',
+275 silly audit report       cwe: [Array],
+275 silly audit report       cvss: [Object]
+275 silly audit report     },
+275 silly audit report     {
+275 silly audit report       id: 1111383,
+275 silly audit report       url: 'https://github.com/advisories/GHSA-mwv6-3258-q52c',
+275 silly audit report       title: 'Next Vulnerable to Denial of Service with Server Components',
+275 silly audit report       severity: 'high',
+275 silly audit report       vulnerable_versions: '>=16.0.0-beta.0 <16.0.9',
+275 silly audit report       cwe: [Array],
+275 silly audit report       cvss: [Object]
+275 silly audit report     }
+275 silly audit report   ]
+275 silly audit report }
+276 silly packumentCache corgi:https://registry.npmjs.org/js-yaml cache-miss
+277 silly packumentCache corgi:https://registry.npmjs.org/glob cache-miss
+278 silly packumentCache corgi:https://registry.npmjs.org/next cache-miss
+279 http cache js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz 0ms (cache hit)
+280 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+281 http cache strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz 0ms (cache hit)
+282 http cache strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz 0ms (cache hit)
+283 http cache ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz 5ms (cache hit)
+284 http cache ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz 0ms (cache hit)
+285 http cache ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz 0ms (cache hit)
+286 http cache emoji-regex@https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz 0ms (cache hit)
+287 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+288 http cache emoji-regex@https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz 1ms (cache hit)
+289 http cache strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz 0ms (cache hit)
+290 http cache json5@https://registry.npmjs.org/json5/-/json5-2.2.3.tgz 0ms (cache hit)
+291 http cache ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz 0ms (cache hit)
+292 http cache ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz 0ms (cache hit)
+293 http cache strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz 0ms (cache hit)
+294 http cache string-width@https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz 0ms (cache hit)
+295 http cache wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-9.0.2.tgz 0ms (cache hit)
+296 http cache emoji-regex@https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.6.0.tgz 0ms (cache hit)
+297 http cache ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz 0ms (cache hit)
+298 http cache wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-9.0.2.tgz 0ms (cache hit)
+299 http cache string-width@https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz 0ms (cache hit)
+300 http cache ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz 0ms (cache hit)
+301 http cache emoji-regex@https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.6.0.tgz 0ms (cache hit)
+302 http cache strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz 1ms (cache hit)
+303 http cache ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz 0ms (cache hit)
+304 http cache ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz 0ms (cache hit)
+305 http cache commander@https://registry.npmjs.org/commander/-/commander-14.0.2.tgz 0ms (cache hit)
+306 http cache glob-parent@https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz 0ms (cache hit)
+307 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+308 http cache doctrine@https://registry.npmjs.org/doctrine/-/doctrine-2.1.0.tgz 0ms (cache hit)
+309 http cache strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz 0ms (cache hit)
+310 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+311 http cache resolve@https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.5.tgz 1ms (cache hit)
+312 http cache doctrine@https://registry.npmjs.org/doctrine/-/doctrine-2.1.0.tgz 0ms (cache hit)
+313 http cache ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz 0ms (cache hit)
+314 http cache glob-parent@https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz 0ms (cache hit)
+315 silly tarball no local data for @tybys/wasm-util@https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz. Extracting by manifest.
+316 silly tarball no local data for typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz. Extracting by manifest.
+317 silly tarball no local data for @napi-rs/wasm-runtime@https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.12.tgz. Extracting by manifest.
+318 silly tarball no local data for @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.1.0.tgz. Extracting by manifest.
+319 silly tarball no local data for @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-1.7.0.tgz. Extracting by manifest.
+320 silly tarball no local data for wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-8.1.0.tgz. Extracting by manifest.
+321 silly tarball no local data for yaml@https://registry.npmjs.org/yaml/-/yaml-2.8.1.tgz. Extracting by manifest.
+322 silly tarball no local data for @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.7.0.tgz. Extracting by manifest.
+323 silly tarball no local data for update-browserslist-db@https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.1.4.tgz. Extracting by manifest.
+324 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-7.7.3.tgz. Extracting by manifest.
+325 silly tarball no local data for rimraf@https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz. Extracting by manifest.
+326 silly tarball no local data for resolve@https://registry.npmjs.org/resolve/-/resolve-1.22.11.tgz. Extracting by manifest.
+327 silly tarball no local data for pidtree@https://registry.npmjs.org/pidtree/-/pidtree-0.6.0.tgz. Extracting by manifest.
+328 silly tarball no local data for prettier@https://registry.npmjs.org/prettier/-/prettier-3.6.2.tgz. Extracting by manifest.
+329 silly tarball no local data for next@https://registry.npmjs.org/next/-/next-16.0.1.tgz. Extracting by manifest.
+330 silly tarball no local data for next-sitemap@https://registry.npmjs.org/next-sitemap/-/next-sitemap-4.2.3.tgz. Extracting by manifest.
+331 silly tarball no local data for napi-postinstall@https://registry.npmjs.org/napi-postinstall/-/napi-postinstall-0.3.4.tgz. Extracting by manifest.
+332 silly tarball no local data for loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz. Extracting by manifest.
+333 silly tarball no local data for json5@https://registry.npmjs.org/json5/-/json5-1.0.2.tgz. Extracting by manifest.
+334 silly tarball no local data for lint-staged@https://registry.npmjs.org/lint-staged/-/lint-staged-16.2.6.tgz. Extracting by manifest.
+335 silly tarball no local data for js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz. Extracting by manifest.
+336 silly tarball no local data for jiti@https://registry.npmjs.org/jiti/-/jiti-1.21.7.tgz. Extracting by manifest.
+337 silly tarball no local data for husky@https://registry.npmjs.org/husky/-/husky-9.1.7.tgz. Extracting by manifest.
+338 silly tarball no local data for glob-parent@https://registry.npmjs.org/glob-parent/-/glob-parent-6.0.2.tgz. Extracting by manifest.
+339 silly tarball no local data for glob@https://registry.npmjs.org/glob/-/glob-10.3.10.tgz. Extracting by manifest.
+340 silly tarball no local data for eslint-config-prettier@https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-9.1.2.tgz. Extracting by manifest.
+341 silly tarball no local data for doctrine@https://registry.npmjs.org/doctrine/-/doctrine-3.0.0.tgz. Extracting by manifest.
+342 silly tarball no local data for emoji-regex@https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz. Extracting by manifest.
+343 silly tarball no local data for commander@https://registry.npmjs.org/commander/-/commander-4.1.1.tgz. Extracting by manifest.
+344 silly tarball no local data for browserslist@https://registry.npmjs.org/browserslist/-/browserslist-4.27.0.tgz. Extracting by manifest.
+345 silly tarball no local data for baseline-browser-mapping@https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.8.25.tgz. Extracting by manifest.
+346 silly tarball no local data for autoprefixer@https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.4.21.tgz. Extracting by manifest.
+347 silly tarball no local data for acorn@https://registry.npmjs.org/acorn/-/acorn-8.15.0.tgz. Extracting by manifest.
+348 silly tarball no local data for js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz. Extracting by manifest.
+349 silly tarball no local data for ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz. Extracting by manifest.
+350 silly tarball no local data for ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz. Extracting by manifest.
+351 silly tarball no local data for wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-9.0.2.tgz. Extracting by manifest.
+352 silly tarball no local data for wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-9.0.2.tgz. Extracting by manifest.
+353 silly tarball no local data for ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz. Extracting by manifest.
+354 silly tarball no local data for ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz. Extracting by manifest.
+355 silly tarball no local data for doctrine@https://registry.npmjs.org/doctrine/-/doctrine-2.1.0.tgz. Extracting by manifest.
+356 silly tarball no local data for resolve@https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.5.tgz. Extracting by manifest.
+357 silly tarball no local data for doctrine@https://registry.npmjs.org/doctrine/-/doctrine-2.1.0.tgz. Extracting by manifest.
+358 http fetch GET 200 https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz 4410ms (cache miss)
+359 http fetch GET 200 https://registry.npmjs.org/pidtree/-/pidtree-0.6.0.tgz 5649ms (cache miss)
+360 http fetch GET 200 https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz 7728ms (cache miss)
+361 http fetch GET 200 https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-8.1.0.tgz 8308ms (cache miss)
+362 http fetch GET 200 https://registry.npmjs.org/husky/-/husky-9.1.7.tgz 8264ms (cache miss)
+363 http fetch GET 200 https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-9.1.2.tgz 8258ms (cache miss)
+364 warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+365 http fetch GET 200 https://registry.npmjs.org/glob-parent/-/glob-parent-6.0.2.tgz 8423ms (cache miss)
+366 http fetch GET 200 https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-9.0.2.tgz 7990ms (cache miss)
+367 http fetch GET 200 https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz 8503ms (cache miss)
+368 http fetch GET 200 https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz 8564ms (cache miss)
+369 http fetch GET 200 https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-9.0.2.tgz 8660ms (cache miss)
+370 http fetch GET 200 https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz 8646ms (cache miss)
+371 http fetch GET 200 https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz 9567ms (cache miss)
+372 http fetch GET 200 https://registry.npmjs.org/js-yaml 10500ms (cache miss)
+373 silly packumentCache corgi:https://registry.npmjs.org/js-yaml set size:undefined disposed:false
+374 http fetch GET 200 https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.1.4.tgz 11139ms (cache miss)
+375 http fetch GET 200 https://registry.npmjs.org/commander/-/commander-4.1.1.tgz 12543ms (cache miss)
+376 http fetch GET 200 https://registry.npmjs.org/glob 13245ms (cache miss)
+377 silly packumentCache corgi:https://registry.npmjs.org/glob set size:undefined disposed:false
+378 http fetch GET 200 https://registry.npmjs.org/doctrine/-/doctrine-2.1.0.tgz 12774ms (cache miss)
+379 http fetch GET 200 https://registry.npmjs.org/browserslist/-/browserslist-4.27.0.tgz 13963ms (cache miss)
+380 http fetch GET 200 https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.8.25.tgz 13979ms (cache miss)
+381 http fetch GET 200 https://registry.npmjs.org/json5/-/json5-1.0.2.tgz 14674ms (cache miss)
+382 http fetch GET 200 https://registry.npmjs.org/doctrine/-/doctrine-2.1.0.tgz 14348ms (cache miss)
+383 http fetch GET 200 https://registry.npmjs.org/doctrine/-/doctrine-3.0.0.tgz 15512ms (cache miss)
+384 http fetch GET 200 https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz 15877ms (cache miss)
+385 http fetch GET 200 https://registry.npmjs.org/acorn/-/acorn-8.15.0.tgz 16788ms (cache miss)
+386 http fetch GET 200 https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.1.0.tgz 17128ms (cache miss)
+387 http fetch GET 200 https://registry.npmjs.org/napi-postinstall/-/napi-postinstall-0.3.4.tgz 17868ms (cache miss)
+388 http fetch GET 200 https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.7.0.tgz 18227ms (cache miss)
+389 http fetch GET 200 https://registry.npmjs.org/lint-staged/-/lint-staged-16.2.6.tgz 19456ms (cache miss)
+390 http fetch GET 200 https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz 19613ms (cache miss)
+391 http fetch GET 200 https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz 19340ms (cache miss)
+392 http fetch GET 200 https://registry.npmjs.org/jiti/-/jiti-1.21.7.tgz 20445ms (cache miss)
+393 http fetch GET 200 https://registry.npmjs.org/@emnapi/core/-/core-1.7.0.tgz 20780ms (cache miss)
+394 http fetch GET 200 https://registry.npmjs.org/semver/-/semver-7.7.3.tgz 21098ms (cache miss)
+395 http fetch GET 200 https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz 21186ms (cache miss)
+396 http fetch GET 200 https://registry.npmjs.org/glob/-/glob-10.3.10.tgz 21482ms (cache miss)
+397 http fetch GET 200 https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.4.21.tgz 21720ms (cache miss)
+398 http fetch GET 200 https://registry.npmjs.org/resolve/-/resolve-1.22.11.tgz 22458ms (cache miss)
+399 http fetch GET 200 https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.5.tgz 21841ms (cache miss)
+400 http fetch GET 200 https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.12.tgz 22730ms (cache miss)
+401 http fetch GET 200 https://registry.npmjs.org/next-sitemap/-/next-sitemap-4.2.3.tgz 22663ms (cache miss)
+402 http fetch GET 200 https://registry.npmjs.org/prettier/-/prettier-3.6.2.tgz 23968ms (cache miss)
+403 http fetch GET 200 https://registry.npmjs.org/sucrase/-/sucrase-3.35.0.tgz 24720ms (cache miss)
+404 http fetch GET 200 https://registry.npmjs.org/yaml/-/yaml-2.8.1.tgz 24672ms (cache miss)
+405 http fetch GET 200 https://registry.npmjs.org/next 25631ms (cache miss)
+406 silly packumentCache corgi:https://registry.npmjs.org/next set size:undefined disposed:false
+407 silly packumentCache corgi:https://registry.npmjs.org/@istanbuljs%2fload-nyc-config cache-miss
+408 http fetch GET 200 https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.18.tgz 27826ms (cache miss)
+409 http fetch GET 200 https://registry.npmjs.org/@istanbuljs%2fload-nyc-config 164ms (cache miss)
+410 silly packumentCache corgi:https://registry.npmjs.org/@istanbuljs%2fload-nyc-config set size:undefined disposed:false
+411 silly packumentCache corgi:https://registry.npmjs.org/@eslint%2feslintrc cache-miss
+412 silly packumentCache corgi:https://registry.npmjs.org/eslint cache-miss
+413 http fetch GET 200 https://registry.npmjs.org/@eslint%2feslintrc 148ms (cache miss)
+414 silly packumentCache corgi:https://registry.npmjs.org/@eslint%2feslintrc set size:undefined disposed:false
+415 http fetch GET 200 https://registry.npmjs.org/eslint 227ms (cache miss)
+416 silly packumentCache corgi:https://registry.npmjs.org/eslint set size:undefined disposed:false
+417 silly packumentCache corgi:https://registry.npmjs.org/@next%2feslint-plugin-next cache-miss
+418 silly packumentCache corgi:https://registry.npmjs.org/sucrase cache-miss
+419 http fetch GET 200 https://registry.npmjs.org/sucrase 123ms (cache miss)
+420 silly packumentCache corgi:https://registry.npmjs.org/sucrase set size:undefined disposed:false
+421 http fetch GET 200 https://registry.npmjs.org/eslint/-/eslint-8.57.1.tgz 29341ms (cache miss)
+422 warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+423 http fetch GET 200 https://registry.npmjs.org/@next%2feslint-plugin-next 1380ms (cache miss)
+424 silly packumentCache corgi:https://registry.npmjs.org/next-seo cache-miss
+425 silly packumentCache corgi:https://registry.npmjs.org/next-sitemap cache-miss
+426 http fetch GET 200 https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz 29311ms (cache miss)
+427 http fetch GET 200 https://registry.npmjs.org/next-seo 1063ms (cache miss)
+428 silly packumentCache corgi:https://registry.npmjs.org/next-seo set size:undefined disposed:false
+429 http fetch GET 200 https://registry.npmjs.org/next-sitemap 1434ms (cache miss)
+430 silly packumentCache corgi:https://registry.npmjs.org/next-sitemap set size:undefined disposed:false
+431 silly packumentCache corgi:https://registry.npmjs.org/eslint-config-next cache-miss
+432 http fetch GET 200 https://registry.npmjs.org/eslint-config-next 705ms (cache miss)
+433 silly packumentCache corgi:https://registry.npmjs.org/eslint-config-next set size:undefined disposed:false
+434 http fetch GET 200 https://registry.npmjs.org/next/-/next-16.0.1.tgz 70437ms (cache miss)
+435 silly ADD node_modules/typescript
+436 silly ADD
+437 silly ADD
+438 silly ADD
+439 silly ADD
+440 silly ADD
+441 silly ADD
+442 silly ADD
+443 silly ADD
+444 silly ADD
+445 silly ADD
+446 silly ADD
+447 silly ADD
+448 silly ADD
+449 silly ADD
+450 silly ADD
+451 silly ADD
+452 silly ADD
+453 silly ADD
+454 silly ADD
+455 silly ADD
+456 silly ADD
+457 silly ADD
+458 silly ADD
+459 silly ADD
+460 silly ADD
+461 silly ADD
+462 silly ADD
+463 silly ADD
+464 silly ADD
+465 silly ADD
+466 silly ADD
+467 silly ADD
+468 silly ADD
+469 silly ADD
+470 silly ADD
+471 silly ADD
+472 silly ADD
+473 silly ADD
+474 silly ADD
+475 silly ADD
+476 silly ADD
+477 silly ADD
+478 silly ADD
+479 silly ADD
+480 silly ADD
+481 silly ADD
+482 silly ADD
+483 silly ADD
+484 silly ADD
+485 silly ADD
+486 silly ADD node_modules/@emnapi/runtime
+487 silly ADD
+488 silly REMOVE node_modules/@typescript-eslint/typescript-estree/node_modules/semver
+489 silly REMOVE node_modules/@radix-ui/react-use-size
+490 silly REMOVE node_modules/@radix-ui/rect
+491 silly REMOVE node_modules/@radix-ui/react-use-layout-effect
+492 silly REMOVE node_modules/@radix-ui/react-use-effect-event
+493 silly REMOVE node_modules/@radix-ui/react-use-previous
+494 silly REMOVE node_modules/@radix-ui/react-use-controllable-state
+495 silly REMOVE node_modules/@radix-ui/react-visually-hidden
+496 silly REMOVE node_modules/@radix-ui/react-use-escape-keydown
+497 silly REMOVE node_modules/@radix-ui/react-use-rect
+498 silly REMOVE node_modules/@radix-ui/react-select
+499 silly REMOVE node_modules/@radix-ui/react-primitive
+500 silly REMOVE node_modules/@radix-ui/react-use-callback-ref
+501 silly REMOVE node_modules/@radix-ui/react-id
+502 silly REMOVE node_modules/@radix-ui/react-popper
+503 silly REMOVE node_modules/@radix-ui/react-slot
+504 silly REMOVE node_modules/@radix-ui/react-portal
+505 silly REMOVE node_modules/@radix-ui/react-focus-guards
+506 silly REMOVE node_modules/@radix-ui/react-direction
+507 silly REMOVE node_modules/@radix-ui/react-focus-scope
+508 silly REMOVE node_modules/@radix-ui/react-compose-refs
+509 silly REMOVE node_modules/@radix-ui/react-context
+510 silly REMOVE node_modules/@radix-ui/react-dismissable-layer
+511 silly REMOVE node_modules/@radix-ui/react-collection
+512 silly REMOVE node_modules/@radix-ui/react-arrow
+513 silly REMOVE node_modules/@radix-ui/primitive
+514 silly REMOVE node_modules/@radix-ui/number
+515 silly REMOVE node_modules/@floating-ui/react-dom
+516 silly CHANGE node_modules/@istanbuljs/load-nyc-config/node_modules/js-yaml
+517 silly ADD node_modules/@isaacs/cliui/node_modules/strip-ansi
+518 silly ADD node_modules/@isaacs/cliui/node_modules/ansi-regex
+519 silly REMOVE node_modules/@isaacs/cliui/node_modules/wrap-ansi
+520 silly REMOVE node_modules/@floating-ui/utils
+521 silly REMOVE node_modules/@floating-ui/dom
+522 silly REMOVE node_modules/@floating-ui/core
+523 silly CHANGE node_modules/@babel/parser
+524 silly ADD node_modules/@babel/helper-compilation-targets/node_modules/semver
+525 silly CHANGE node_modules/wrap-ansi
+526 silly ADD node_modules/wrap-ansi/node_modules/strip-ansi
+527 silly ADD node_modules/wrap-ansi/node_modules/ansi-styles
+528 silly ADD node_modules/wrap-ansi/node_modules/ansi-regex
+529 silly REMOVE node_modules/wrap-ansi/node_modules/string-width
+530 silly REMOVE node_modules/wrap-ansi/node_modules/emoji-regex
+531 silly ADD node_modules/@babel/core/node_modules/semver
+532 silly ADD node_modules/@babel/core/node_modules/json5
+533 silly CHANGE node_modules/yaml
+534 silly ADD node_modules/wrap-ansi-cjs/node_modules/emoji-regex
+535 silly REMOVE node_modules/wrap-ansi-cjs/node_modules/strip-ansi
+536 silly REMOVE node_modules/wrap-ansi-cjs/node_modules/ansi-styles
+537 silly CHANGE node_modules/update-browserslist-db
+538 silly CHANGE node_modules/which
+539 silly REMOVE node_modules/use-callback-ref
+540 silly REMOVE node_modules/use-sidecar
+541 silly REMOVE node_modules/tsconfig-paths/node_modules/json5
+542 silly CHANGE node_modules/tailwindcss
+543 silly REMOVE node_modules/tailwindcss/node_modules/glob-parent
+544 silly CHANGE node_modules/strip-ansi
+545 silly REMOVE node_modules/strip-ansi/node_modules/ansi-regex
+546 silly CHANGE node_modules/sucrase
+547 silly REMOVE node_modules/sucrase/node_modules/commander
+548 silly ADD node_modules/string-width/node_modules/strip-ansi
+549 silly ADD node_modules/string-width/node_modules/ansi-regex
+550 silly REMOVE node_modules/string-width/node_modules/emoji-regex
+551 silly ADD node_modules/string-width-cjs/node_modules/emoji-regex
+552 silly REMOVE node_modules/string-width-cjs/node_modules/strip-ansi
+553 silly ADD node_modules/slice-ansi/node_modules/ansi-styles
+554 silly REMOVE node_modules/sharp/node_modules/semver
+555 silly CHANGE node_modules/semver
+556 silly CHANGE node_modules/rimraf
+557 silly CHANGE node_modules/resolve
+558 silly REMOVE node_modules/react-remove-scroll-bar
+559 silly REMOVE node_modules/react-style-singleton
+560 silly REMOVE node_modules/react-remove-scroll
+561 silly CHANGE node_modules/pidtree
+562 silly CHANGE node_modules/prettier
+563 silly CHANGE node_modules/next-sitemap
+564 silly CHANGE node_modules/next
+565 silly CHANGE node_modules/napi-postinstall
+566 silly CHANGE node_modules/nanoid
+567 silly CHANGE node_modules/loose-envify
+568 silly ADD node_modules/log-update/node_modules/wrap-ansi
+569 silly ADD node_modules/log-update/node_modules/strip-ansi
+570 silly ADD node_modules/log-update/node_modules/string-width
+571 silly ADD node_modules/log-update/node_modules/emoji-regex
+572 silly ADD node_modules/log-update/node_modules/ansi-styles
+573 silly ADD node_modules/log-update/node_modules/ansi-regex
+574 silly ADD node_modules/listr2/node_modules/wrap-ansi
+575 silly ADD node_modules/listr2/node_modules/strip-ansi
+576 silly ADD node_modules/listr2/node_modules/string-width
+577 silly ADD node_modules/listr2/node_modules/emoji-regex
+578 silly ADD node_modules/listr2/node_modules/ansi-styles
+579 silly ADD node_modules/listr2/node_modules/ansi-regex
+580 silly CHANGE node_modules/lint-staged
+581 silly ADD node_modules/lint-staged/node_modules/commander
+582 silly CHANGE node_modules/jsesc
+583 silly CHANGE node_modules/json5
+584 silly CHANGE node_modules/js-yaml
+585 silly CHANGE node_modules/jiti
+586 silly REMOVE node_modules/istanbul-lib-instrument/node_modules/semver
+587 silly REMOVE node_modules/is-bun-module/node_modules/semver
+588 silly CHANGE node_modules/husky
+589 silly CHANGE node_modules/glob
+590 silly CHANGE node_modules/glob-parent
+591 silly REMOVE node_modules/get-nonce
+592 silly ADD node_modules/fast-glob/node_modules/glob-parent
+593 silly REMOVE node_modules/eslint-plugin-jsx-a11y/node_modules/emoji-regex
+594 silly ADD node_modules/eslint-plugin-react/node_modules/semver
+595 silly ADD node_modules/eslint-plugin-react/node_modules/doctrine
+596 silly CHANGE node_modules/eslint-plugin-react/node_modules/resolve
+597 silly CHANGE node_modules/esprima
+598 silly ADD node_modules/eslint-plugin-import/node_modules/semver
+599 silly ADD node_modules/eslint-plugin-import/node_modules/doctrine
+600 silly CHANGE node_modules/eslint-config-prettier
+601 silly CHANGE node_modules/eslint
+602 silly REMOVE node_modules/eslint/node_modules/doctrine
+603 silly REMOVE node_modules/eslint/node_modules/strip-ansi
+604 silly REMOVE node_modules/eslint/node_modules/glob-parent
+605 silly CHANGE node_modules/emoji-regex
+606 silly CHANGE node_modules/doctrine
+607 silly REMOVE node_modules/detect-node-es
+608 silly CHANGE node_modules/cssesc
+609 silly CHANGE node_modules/commander
+610 silly ADD node_modules/cli-truncate/node_modules/strip-ansi
+611 silly ADD node_modules/cli-truncate/node_modules/ansi-regex
+612 silly ADD node_modules/chokidar/node_modules/glob-parent
+613 silly REMOVE node_modules/chalk/node_modules/ansi-styles
+614 silly CHANGE node_modules/browserslist
+615 silly CHANGE node_modules/baseline-browser-mapping
+616 silly CHANGE node_modules/autoprefixer
+617 silly REMOVE node_modules/aria-hidden
+618 silly CHANGE node_modules/ansi-styles
+619 silly CHANGE node_modules/acorn
+620 verbose cwd D:\REVAMP\gwc-website-revamp
+621 verbose os Windows_NT 10.0.26200
+622 verbose node v22.17.0
+623 verbose npm  v10.9.2
+624 verbose exit 0
+625 info ok

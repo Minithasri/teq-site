@@ -77,7 +77,7 @@ const DatabricksStandOut = () => {
         <div className='grid grid-cols-1 lg:grid-cols-[55%_45%] gap-12 lg:gap-20 items-start mb-20'>
           <div>
             <h2 className='text-3xl md:text-[40px] font-bold text-gray-900 leading-tight'>
-              What Makes
+              What makes
               <br />
               <span
                 style={{
@@ -86,7 +86,7 @@ const DatabricksStandOut = () => {
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-                GWC Databricks Stand Out
+                GWC Databricks stand out
               </span>
             </h2>
           </div>

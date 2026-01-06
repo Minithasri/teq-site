@@ -13,63 +13,70 @@ export default function Leaders() {
       id: 1,
       name: 'Abhinaya Sindhu',
       title: 'Head of People Operations',
-      image: '/images/AboutUs/abhinaya.png',
+      image: '/images/AboutUs/abhinaya11.svg',
       linkedin: '#',
     },
     {
       id: 2,
       name: 'Santhosh Kumar',
       title: 'Chief Innovation Officer',
-      image: '/images/AboutUs/santhosh.png',
+      image: '/images/AboutUs/santhosh11.svg',
       linkedin: '#',
     },
     {
       id: 3,
       name: 'Prasanna Srinivasan',
       title: 'Chief Operating Officer',
-      image: '/images/AboutUs/prasanna.png',
+      image: '/images/AboutUs/prasanna11.svg',
       linkedin: '#',
     },
     {
       id: 4,
       name: 'Naveen Kumar',
       title: 'Chief Executive Officer',
-      image: '/images/AboutUs/naveen.png',
+      image: '/images/AboutUs/naveen11.svg',
       linkedin: '#',
     },
     {
       id: 5,
       name: 'Mamtha Shanmugam',
       title: 'Associate Director',
-      image: '/images/AboutUs/mamtha.png',
+      image: '/images/AboutUs/mamtha11.svg',
       linkedin: '#',
     },
     {
       id: 6,
       name: 'Subash Ramu',
       title: 'Cheif Technology Officer',
-      image: '/images/AboutUs/Shubash.png',
+      image: '/images/AboutUs/subash11.svg',
       linkedin: '#',
     },
     {
       id: 7,
       name: 'Srinath Raja',
       title: 'Cheif Data Officer',
-      image: '/images/AboutUs/srinath.png',
+      image: '/images/AboutUs/srinath11.svg',
       linkedin: '#',
     },
     {
       id: 8,
       name: 'Shashank Ravikumar',
       title: 'Cheif Strategy Officer',
-      image: '/images/AboutUs/shashank.png',
+      image: '/images/AboutUs/shashank11.svg',
       linkedin: '#',
     },
     {
       id: 9,
       name: 'Sridhar Severkodiyan',
       title: 'Cheif Financial Officer',
-      image: '/images/AboutUs/sridhar.png',
+      image: '/images/AboutUs/sridhar11.svg',
+      linkedin: '#',
+    },
+    {
+      id: 9,
+      name: 'Madhu Sudhanan',
+      title: 'Vice President',
+      image: '/images/AboutUs/madhu11.svg',
       linkedin: '#',
     },
   ];
@@ -135,25 +142,25 @@ export default function Leaders() {
         // IMMEDIATE LEFT
         translateX = -150; // Tuck behind
         scale = 0.85;
-        opacity = 0.8;
+        opacity = 1.5;
         zIndex = 5;
       } else if (distance === 1) {
         // IMMEDIATE RIGHT
         translateX = 150; // Tuck behind
         scale = 0.85;
-        opacity = 0.8;
+        opacity = 1.5;
         zIndex = 5;
       } else if (distance === -2) {
         // FAR LEFT
         translateX = -280; // Further back
         scale = 0.75;
-        opacity = 0.5;
+        opacity = 0.3;
         zIndex = 2;
       } else if (distance === 2) {
         // FAR RIGHT
         translateX = 280; // Further back
         scale = 0.75;
-        opacity = 0.5;
+        opacity = 0.3;
         zIndex = 2;
       } else {
         // HIDDEN (Off screen)
@@ -308,7 +315,6 @@ export default function Leaders() {
         </div>
 
         {/* Decorative Line with 3 Dots */}
-        {/* Decorative Line with 3 Dots */}
         <div className='hidden md:block relative w-full mb-10 mt-16'>
           {/* Background Line */}
           <div
@@ -329,7 +335,7 @@ export default function Leaders() {
                 style={{
                   background:
                     'linear-gradient(0deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(107deg, #7030B1 0%, #B56DD3 100%)',
-                  boxShadow: '0 0 0 8px #3B174A',
+                  boxShadow: '0 0 0 4px white',
                 }}
               />
             </div>
@@ -340,7 +346,7 @@ export default function Leaders() {
                 className='w-4 h-4 rounded-full'
                 style={{
                   background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                  boxShadow: '0 0 0 8px #3B174A',
+                  boxShadow: '0 0 0 4px white',
                 }}
               />
             </div>
@@ -352,7 +358,7 @@ export default function Leaders() {
                 style={{
                   background:
                     'linear-gradient(0deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), linear-gradient(107deg, #7030B1 0%, #B56DD3 100%)',
-                  boxShadow: '0 0 0 8px #3B174A',
+                  boxShadow: '0 0 0 4px white',
                 }}
               />
             </div>

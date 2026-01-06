@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FiArrowRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 const offeringsData = [
@@ -10,31 +10,61 @@ const offeringsData = [
     title: 'Data Warehousing',
     description:
       'Snowflake offers a fully managed, cloud-based data warehousing solution to store, process, & analyze large volumes of data in a scalable manner.',
+    icon: '/images/partners/snowflake/data_warehouse.svg',
   },
   {
     title: 'Data Sharing',
     description:
       'Snowflake enables secure & easy data sharing between different organizations without copying or moving the data.',
+    icon: '/images/partners/snowflake/data_sharing.svg',
   },
   {
     title: 'Data Integration',
     description:
       'Snowflake integrates with various data integration tools & platforms, allowing users to load & extract data seamlessly.',
+    icon: '/images/partners/snowflake/Data_Integration.svg',
   },
   {
-    title: 'Data Warehousing',
+    title: 'Snowpark',
     description:
-      'Snowflake offers a fully managed, cloud-based data warehousing solution to store, process, & analyze large volumes of data in a scalable manner.',
+      'Snowpark is a feature that allows users to run custom code directly within Snowflake using familiar programming languages like Java & Scala.',
+    icon: '/images/partners/snowflake/Snowpark.svg',
   },
   {
-    title: 'Data Sharing',
+    title: 'Secure Data Collaboration',
     description:
-      'Snowflake enables secure & easy data sharing between different organizations without copying or moving the data.',
+      'Snowflake emphasizes security, providing features such as encryption, role-based access control, & compliance with various data protection regulations.',
+    icon: '/images/partners/snowflake/Secure_data_collaboration.svg',
   },
   {
-    title: 'Data Integration',
+    title: 'Multi-Cloud Architecture',
     description:
-      'Snowflake integrates with various data integration tools & platforms, allowing users to load & extract data seamlessly.',
+      'Snowflake supports a multi-cluster, multi-cloud architecture, giving organizations the flexibility to choose cloud providers & scale compute resources based on their needs.',
+    icon: '/images/partners/snowflake/Multi_cloud_architecture.svg',
+  },
+  {
+    title: 'Query Performance',
+    description:
+      'Snowflake is designed for high-performance query processing. It optimizes the speed of data retrieval & analysis, allowing users to derive insights rapidly.',
+    icon: '/images/partners/snowflake/Quary_performance.svg',
+  },
+  {
+    title: 'Global Availability',
+    description:
+      'Snowflake enables users to deploy data warehouses in different regions & across multiple cloud providers. This enhances performance, redundancy, & data accessibility.',
+    icon: '/images/partners/snowflake/global.svg',
+  },
+  {
+    title: 'Snowflake Marketplace',
+    description:
+      'The Snowflake Marketplace is a platform where users can discover & access a variety of data sets, connectors, & applications to enhance their Snowflake environment.',
+    icon: '/images/partners/snowflake/Snowflake_market.svg',
+  },
+  {
+    title: 'Data Governance & Management',
+    description:
+      'Snowflake provides features for effective data governance, including metadata management, data lineage, & auditing capabilities.',
+    icon: '/images/partners/snowflake/governance.svg',
   },
 ];
 
@@ -68,7 +98,7 @@ export default function Offerings() {
       >
         <div className='max-w-7xl mx-auto'>
           {/* Header */}
-          <header className='flex items-center mb-16 gap-2'>
+          <header className='flex flex-col md:flex-row items-center mb-16 gap-6 md:gap-2'>
             {/* Left Icon (decorative) */}
             <div className='w-12 h-12 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
               <Image src='/images/Spark.svg' alt='' aria-hidden width={24} height={24} />
@@ -98,7 +128,7 @@ export default function Offerings() {
               className='text-[15px] max-w-xl text-left leading-relaxed'
               style={{ color: '#70707B' }}
             >
-              Snowflake, a cloud-based data warehousing platform, provides a range of offerings to
+              Snowflake, a cloud based data warehousing platform, provides a range of offerings to
               help organizations manage & analyze their data efficiently. We ensure your cloud
               operations run smoothly & reliably so you can focus on your business goals.
             </p>
@@ -116,12 +146,30 @@ export default function Offerings() {
 
 function Carousel({ items }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
 
-  // Show 3 items on desktop, 1 on mobile
-  // We navigate 1 item at a time
+  // Responsive logic to show 1 item on mobile, 3 on desktop
+  // Using useEffect to handle window resize
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setItemsPerPage(1);
+      } else {
+        setItemsPerPage(3);
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const next = () => {
-    if (currentIndex < items.length - 3) {
+    if (currentIndex < items.length - itemsPerPage) {
       setCurrentIndex(currentIndex + 1);
     } else {
       setCurrentIndex(0); // loop back
@@ -132,7 +180,7 @@ function Carousel({ items }) {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     } else {
-      setCurrentIndex(items.length - 3); // loop to end
+      setCurrentIndex(items.length - itemsPerPage); // loop to end
     }
   };
 
@@ -141,28 +189,31 @@ function Carousel({ items }) {
       <div className='overflow-hidden'>
         <div
           className='flex transition-transform duration-500 ease-in-out'
-          style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }} // Default to desktop view logic for now, responsive needs media queries or window listener
+          style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}
         >
-          {/* Note: This simple transforms assumes desktop. For mobile support we usually need a resize listener or CSS grid.
-                        To make it robust without resize listener, we can use flex-basis.
-                    */}
           {items.map((item, index) => (
-            <div key={index} className='w-full md:w-1/3 flex-shrink-0 px-3'>
-              <div className='bg-white rounded-2xl p-8 h-full shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col items-start'>
-                <div className='w-14 h-14 rounded-xl border border-orange-100 bg-orange-50/30 flex items-center justify-center mb-6'>
-                  <Image
-                    src='/images/partners/snowflake/icon_db.svg'
-                    alt='Icon'
-                    width={28}
-                    height={28}
-                  />
+            <div
+              key={index}
+              className='flex-shrink-0 px-3 transition-all duration-300'
+              style={{ width: `${100 / itemsPerPage}%` }}
+            >
+              <div className='bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow border border-gray-100' style={{ width: '400px', height: '320px' }}>
+                <div className='bg-gray-50 rounded-xl p-6 h-full flex flex-col items-start'>
+                  <div className='w-14 h-14 rounded-xl bg-white flex items-center justify-center mb-4 shadow-md'>
+                    <Image
+                      src={item.icon}
+                      alt='Icon'
+                      width={28}
+                      height={28}
+                    />
+                  </div>
+                  <h3 className='text-xl font-bold mb-4' style={{ color: '#F97316' }}>
+                    {item.title}
+                  </h3>
+                  <p className='text-[15px] leading-relaxed' style={{ color: '#70707B' }}>
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className='text-xl font-bold mb-4' style={{ color: '#F97316' }}>
-                  {item.title}
-                </h3>
-                <p className='text-[15px] leading-relaxed' style={{ color: '#70707B' }}>
-                  {item.description}
-                </p>
               </div>
             </div>
           ))}
@@ -184,25 +235,6 @@ function Carousel({ items }) {
           <FiChevronRight size={24} />
         </button>
       </div>
-
-      {/* Mobile note: The transform logic `translateX(-${currentIndex * (100 / 3)}%)` works perfectly for 3 items.
-                For mobile (1 item), `w-full` in item class will make it 100% width,
-                but container width is 100%. If we want to show 1 item, we need to translate 100%.
-                This needs a customized hook or CSS media query based variable.
-
-                For now I'll hardcode style for larger screens (md) and rely on hidden overflow.
-                Actually, simpler way: define `--slide-width` variable in CSS.
-            */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .flex {
-            transform: translateX(-${currentIndex * 100}%) !important;
-          }
-          .flex-shrink-0 {
-            width: 100% !important;
-          }
-        }
-      `}</style>
     </div>
   );
 }

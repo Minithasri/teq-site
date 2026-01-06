@@ -64,7 +64,7 @@ const Footer = () => {
         <div className='w-full h-[1px] bg-white opacity-20 mb-12'></div>
 
         {/* Main Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5  mb-12'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-6 lg:gap-0 mb-12'>
           {/* Col 1: Certifications */}
           <div className='flex flex-col gap-4'>
             <img
@@ -76,7 +76,7 @@ const Footer = () => {
           </div>
 
           {/* Col 2: Quick Links */}
-          <div className='-ml-12'>
+          <div className='lg:-ml-12'>
             <h3 className='font-bold mb-6 text-sm uppercase tracking-wider'>QUICK LINKS</h3>
             <ul className='space-y-3'>
               {quickLinks.map(link => (
@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
 
           {/* Col 3: Partners */}
-          <div className='-ml-20'>
+          <div className='lg:-ml-20'>
             <h3 className='font-bold mb-6 text-sm uppercase tracking-wider'>PARTNERS</h3>
             <ul className='space-y-3'>
               {partners.map(partner => (
@@ -104,7 +104,7 @@ const Footer = () => {
           </div>
 
           {/* Col 4: Solutions */}
-          <div className='-ml-24'>
+          <div className='lg:-ml-24'>
             <h3 className='font-bold mb-6 text-sm uppercase tracking-wider'>SOLUTIONS</h3>
             <ul className='space-y-3'>
               {solutions.map(solution => (
@@ -118,7 +118,7 @@ const Footer = () => {
           </div>
 
           {/* Col 5: Contact Us */}
-          <div className='lg:col-span-1 -ml-12'>
+          <div className='lg:col-span-1 lg:-ml-12'>
             <h3 className='font-bold mb-6 text-sm uppercase tracking-wider'>CONTACT US</h3>
             <ul className='space-y-4'>
               <li className='flex items-start gap-3'>

@@ -16,7 +16,7 @@ const HomeTown = () => {
       </div>
 
       {/* Content */}
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20'>
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-36'>
         <div className='max-w-2xl'>
           {/* Heading */}
           <h2 className='text-white font-bold mb-6' style={{ fontSize: '50px', lineHeight: '1.2' }}>

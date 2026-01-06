@@ -39,7 +39,7 @@ export default function BannerSection() {
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-14 pb-44'>
         {/* Breadcrumb */}
-        <nav aria-label='Breadcrumb' className='relative z-10 mb-12'>
+        <nav aria-label='Breadcrumb' className='relative z-10 mb-20'>
           <ol className='inline-flex items-center gap-2 text-sm py-1'>
             {bannerContent.breadcrumb.items.map((item, index) => (
               <li key={index} className='flex items-center gap-2'>
@@ -66,13 +66,13 @@ export default function BannerSection() {
           {/* Left */}
           <div>
             <h1
-              className='text-[32px] md:text-[36px] font-semibold max-w-[700px] mb-2'
+              className='text-[32px] md:text-[36px] font-semibold max-w-[700px] mb-6 lg:-mt-20'
               style={{ color: '#404040', lineHeight: '52px' }}
             >
               {bannerContent.title}
             </h1>
 
-            <p className='text-[#7A7A7A] text-[15px] md:text-[16px] max-w-xl mb-8'>
+            <p className='text-[#7A7A7A] text-[15px] md:text-[16px] max-w-xl mb-12'>
               {bannerContent.description}
             </p>
 
@@ -86,12 +86,12 @@ export default function BannerSection() {
           </div>
 
           {/* Right */}
-          <div className='relative w-full max-w-[500px] mx-auto lg:mx-0'>
+          <div className='relative w-full max-w-[700px] mx-auto lg:mx-0'>
             <Image
               src={bannerContent.images.illustration}
               alt='Cloud Transformation platform illustration'
-              width={400}
-              height={340}
+              width={600}
+              height={500}
               priority
               className='w-full h-auto object-contain'
             />

@@ -83,7 +83,7 @@ export default function Success() {
 
         {/* Title & Description */}
         <div className='flex flex-col md:flex-row justify-between items-start mb-12 gap-8'>
-          <h2 className='text-[40px] font-bold'>What Sets Us Apart?</h2>
+          <h2 className='text-[40px] font-bold'>What sets us apart?</h2>
           <p
             className='text-[15px] max-w-xl text-left leading-relaxed'
             style={{ color: '#70707B' }}

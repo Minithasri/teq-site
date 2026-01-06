@@ -218,7 +218,7 @@ const ExploreSection = () => {
                     <span className='text-white/40'>|</span>
                     <span>Experience: 5-10 years</span>
                   </div>
-                  <p className='text-white/60 text-sm'>Required Skills:</p>
+                  {/* <p className='text-white/60 text-sm'>Required Skills:</p> */}
                 </div>
 
                 {/* Right Side - Read More Link */}
@@ -266,9 +266,8 @@ const ExploreSection = () => {
             <button
               key={pageNumber}
               onClick={() => handlePageChange(pageNumber)}
-              className={`text-white font-medium transition-all ${
-                currentPage === pageNumber ? 'border-b-2 border-white pb-1' : 'hover:opacity-70'
-              }`}
+              className={`text-white font-medium transition-all ${currentPage === pageNumber ? 'border-b-2 border-white pb-1' : 'hover:opacity-70'
+                }`}
             >
               {pageNumber}
             </button>

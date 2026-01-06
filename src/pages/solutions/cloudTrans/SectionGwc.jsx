@@ -31,7 +31,7 @@ const governanceContent = {
 
 export default function SectionGwc() {
   return (
-    <section className='relative w-full px-4 -mt-32'>
+    <section className='relative w-full px-4 -mt-12'>
       <div className='relative w-full max-w-[calc(100%-2rem)] mx-auto rounded-[32px] overflow-hidden py-16 z-10'>
         {/* BACKGROUND */}
         <div className='absolute inset-0 -z-10'>

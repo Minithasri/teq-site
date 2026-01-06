@@ -65,7 +65,7 @@ export default function GreatPlaceToWork() {
           <div className='flex flex-col lg:flex-row lg:items-start justify-between gap-8 mb-12'>
             {/* Main Heading */}
             <h2 className='text-[32px] lg:text-[40px] font-bold shrink-0 max-w-xl'>
-              What Makes GWC Data.AI a Great Place to Work?
+              What makes GWC Data.AI a great place to work?
             </h2>
 
             {/* Description */}
@@ -94,7 +94,7 @@ export default function GreatPlaceToWork() {
                     WebkitTextFillColor: 'transparent',
                   }}
                 >
-                  Great Place To Work - 2024
+                  Great place to work - 2024
                 </h3>
                 <p className='text-gray-600 text-sm mb-6 max-w-md'>
                   Our Great Place to Work® certification highlights our dedication to nurturing top

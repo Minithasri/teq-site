@@ -86,7 +86,7 @@ const Outcomes = () => {
                 {/* Bottom Row: Attributes */}
                 <div className='grid grid-cols-3 gap-0'>
                   {/* Attribute 1 */}
-                  <div className='border-r border-b border-gray-100/30 py-8 pr-8'>
+                  <div className='border-r border-gray-100/30 py-8 pr-8'>
                     <div className='mb-3'>
                       <Image
                         src='/images/partners/databricks/final_icon_1.svg'
@@ -103,7 +103,7 @@ const Outcomes = () => {
                   </div>
 
                   {/* Attribute 2 */}
-                  <div className='border-r border-b border-gray-100/30 py-8 px-8'>
+                  <div className='border-r border-gray-100/30 py-8 px-8'>
                     <div className='mb-3'>
                       <Image
                         src='/images/partners/databricks/final_icon_2.svg'
@@ -120,7 +120,7 @@ const Outcomes = () => {
                   </div>
 
                   {/* Attribute 3 */}
-                  <div className='border-b border-gray-100/30 py-8 pl-8'>
+                  <div className='py-8 pl-8'>
                     <div className='mb-3'>
                       <Image
                         src='/images/partners/databricks/final_icon_3.svg'
@@ -143,9 +143,8 @@ const Outcomes = () => {
                 {outcomesData.map((item, index) => (
                   <div
                     key={index}
-                    className={`py-6 ${
-                      index !== outcomesData.length - 1 ? 'border-b border-gray-100/30' : ''
-                    }`}
+                    className={`py-6 ${index !== outcomesData.length - 1 ? 'border-b border-gray-100/30' : ''
+                      }`}
                   >
                     {/* Metric Row */}
                     <div className='mb-4'>

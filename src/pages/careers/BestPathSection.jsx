@@ -67,7 +67,7 @@ const BestPathSection = () => {
               <div className='bg-white rounded-2xl h-full overflow-hidden'>
                 {/* Image */}
                 <div
-                  className='relative mx-auto mt-4 rounded-2xl overflow-hidden'
+                  className='relative mx-auto mt-2 rounded-2xl overflow-hidden'
                   style={{ width: '350px', height: '320px' }}
                 >
                   <Image

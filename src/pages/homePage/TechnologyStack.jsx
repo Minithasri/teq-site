@@ -261,15 +261,15 @@ const TechnologyStack = () => {
                       className='bg-gray-50 rounded-[5px] p-5 flex flex-col gap-3 flex-1'
                       style={{ border: '1px solid #E5E5E5' }}
                     >
-                      <div className='flex gap-2 items-center'>
-                        <div className='bg-white p-3 rounded-xl flex items-center justify-center w-14 h-14 min-w-14 shadow-sm'>
+                      <div className='flex gap-3 items-center'>
+                        <div className='bg-white p-3 rounded-xl flex items-center justify-center w-12 h-12 min-w-12 shadow-sm'>
                           {card.icon}
                         </div>
-                        <div className='flex-1 bg-white p-3 rounded-xl font-semibold text-base text-orange-500 shadow-sm'>
+                        <div className='flex-1 bg-white p-3 rounded-xl font-semibold text-base text-orange-500 shadow-sm text-left'>
                           {card.title}
                         </div>
                       </div>
-                      <div className='mt-4 flex-1 text-base leading-relaxed text-[#70707B]'>
+                      <div className='mt-4 flex-1 text-base leading-relaxed text-[#70707B] text-left'>
                         {card.description}
                       </div>
                       <div

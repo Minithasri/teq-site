@@ -67,7 +67,7 @@ export default function BannerSection() {
           {/* Left */}
           <div>
             <h1
-              className='text-[32px] md:text-[36px] font-semibold max-w-[600px] mb-4 -mt-20'
+              className='text-[32px] md:text-[36px] font-semibold max-w-[600px] mb-4 lg:-mt-20'
               style={{ color: '#404040', lineHeight: '52px' }}
             >
               {bannerContent.title}
