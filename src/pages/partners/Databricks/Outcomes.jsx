@@ -143,8 +143,9 @@ const Outcomes = () => {
                 {outcomesData.map((item, index) => (
                   <div
                     key={index}
-                    className={`py-6 ${index !== outcomesData.length - 1 ? 'border-b border-gray-100/30' : ''
-                      }`}
+                    className={`py-6 ${
+                      index !== outcomesData.length - 1 ? 'border-b border-gray-100/30' : ''
+                    }`}
                   >
                     {/* Metric Row */}
                     <div className='mb-4'>

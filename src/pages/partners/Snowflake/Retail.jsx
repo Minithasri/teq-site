@@ -85,8 +85,7 @@ const industryData = {
       },
       {
         title: 'Scalable Infrastructure',
-        description:
-          'Handles large datasets and adapts to changing infrastructure requirements.',
+        description: 'Handles large datasets and adapts to changing infrastructure requirements.',
       },
     ],
   },
@@ -180,10 +179,11 @@ export default function Retail() {
                 <button
                   key={industry}
                   onClick={() => setActiveTab(industry)}
-                  className={`px-6 py-2.5 rounded-full text-[14px] font-medium whitespace-nowrap transition-all duration-300 border ${isActive
-                    ? 'text-white border-transparent shadow-md'
-                    : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
-                    }`}
+                  className={`px-6 py-2.5 rounded-full text-[14px] font-medium whitespace-nowrap transition-all duration-300 border ${
+                    isActive
+                      ? 'text-white border-transparent shadow-md'
+                      : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
+                  }`}
                   style={{
                     background: isActive
                       ? 'linear-gradient(270deg, #7030B1 0%, #B56DD3 100%)'
@@ -194,10 +194,10 @@ export default function Retail() {
                     style={
                       !isActive
                         ? {
-                          background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                          WebkitBackgroundClip: 'text',
-                          WebkitTextFillColor: 'transparent',
-                        }
+                            background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                          }
                         : {}
                     }
                   >
@@ -264,10 +264,7 @@ export default function Retail() {
           {industries.map((industry, index) => {
             const data = industryData[industry] || industryData.default;
             return (
-              <div
-                key={industry}
-                className='bg-white rounded-[32px] p-4 shadow-xl w-full'
-              >
+              <div key={industry} className='bg-white rounded-[32px] p-4 shadow-xl w-full'>
                 <div className='flex flex-col gap-6'>
                   {/* Image */}
                   <div className='w-full'>

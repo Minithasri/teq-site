@@ -224,10 +224,11 @@ export default function AgentBuilding() {
                   <button
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
-                    className={`px-4 lg:px-6 py-2 lg:py-2.5 rounded-full text-[12px] lg:text-[14px] font-medium transition-all duration-300 border whitespace-nowrap ${isActive
-                      ? 'text-white border-transparent shadow-md'
-                      : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
-                      }`}
+                    className={`px-4 lg:px-6 py-2 lg:py-2.5 rounded-full text-[12px] lg:text-[14px] font-medium transition-all duration-300 border whitespace-nowrap ${
+                      isActive
+                        ? 'text-white border-transparent shadow-md'
+                        : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
+                    }`}
                     style={{
                       background: isActive
                         ? 'linear-gradient(90deg, #B56DD3 0%, #7030B1 100%)'
@@ -257,8 +258,6 @@ export default function AgentBuilding() {
                     className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
                   />
                 </div>
-
-
 
                 {/* Overlay for whole card if needed for tint, or keep specific gradients */}
 
@@ -296,10 +295,11 @@ export default function AgentBuilding() {
                   <button
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
-                    className={`px-4 py-2 rounded-full text-[12px] font-medium transition-all duration-300 border whitespace-nowrap ${isActive
-                      ? 'text-white border-transparent shadow-md'
-                      : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
-                      }`}
+                    className={`px-4 py-2 rounded-full text-[12px] font-medium transition-all duration-300 border whitespace-nowrap ${
+                      isActive
+                        ? 'text-white border-transparent shadow-md'
+                        : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
+                    }`}
                     style={{
                       background: isActive
                         ? 'linear-gradient(90deg, #B56DD3 0%, #7030B1 100%)'
@@ -340,8 +340,7 @@ export default function AgentBuilding() {
                 <div
                   className='absolute inset-x-0 bottom-0 h-40 z-10'
                   style={{
-                    background:
-                      'linear-gradient(to bottom, rgba(59, 23, 74, 0) 0%, #3B174A 100%)',
+                    background: 'linear-gradient(to bottom, rgba(59, 23, 74, 0) 0%, #3B174A 100%)',
                   }}
                 />
 

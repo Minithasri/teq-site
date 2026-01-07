@@ -151,7 +151,6 @@ function Carousel({ items }) {
   // Responsive logic to show 1 item on mobile, 3 on desktop
   // Using useEffect to handle window resize
 
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
@@ -197,15 +196,13 @@ function Carousel({ items }) {
               className='flex-shrink-0 px-3 transition-all duration-300'
               style={{ width: `${100 / itemsPerPage}%` }}
             >
-              <div className='bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow border border-gray-100' style={{ width: '400px', height: '320px' }}>
+              <div
+                className='bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow border border-gray-100'
+                style={{ width: '400px', height: '320px' }}
+              >
                 <div className='bg-gray-50 rounded-xl p-6 h-full flex flex-col items-start'>
                   <div className='w-14 h-14 rounded-xl bg-white flex items-center justify-center mb-4 shadow-md'>
-                    <Image
-                      src={item.icon}
-                      alt='Icon'
-                      width={28}
-                      height={28}
-                    />
+                    <Image src={item.icon} alt='Icon' width={28} height={28} />
                   </div>
                   <h3 className='text-xl font-bold mb-4' style={{ color: '#F97316' }}>
                     {item.title}

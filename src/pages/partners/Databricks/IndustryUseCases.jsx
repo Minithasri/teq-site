@@ -133,23 +133,26 @@ const IndustryUseCases = () => {
                 <div
                   key={index}
                   onClick={() => setActiveStep(index)}
-                  className={`cursor-pointer transition-all duration-300 py-4 border-l-[4px] pl-6 ${isActive
-                    ? 'border-[#7030B1] bg-gray-50/50 rounded-r-xl'
-                    : 'border-transparent hover:bg-gray-50 rounded-r-xl'
-                    }`}
+                  className={`cursor-pointer transition-all duration-300 py-4 border-l-[4px] pl-6 ${
+                    isActive
+                      ? 'border-[#7030B1] bg-gray-50/50 rounded-r-xl'
+                      : 'border-transparent hover:bg-gray-50 rounded-r-xl'
+                  }`}
                 >
                   <h3
-                    className={`text-lg font-bold transition-colors duration-300 ${isActive ? 'text-gray-900' : 'text-gray-500'
-                      }`}
+                    className={`text-lg font-bold transition-colors duration-300 ${
+                      isActive ? 'text-gray-900' : 'text-gray-500'
+                    }`}
                   >
                     {item.title}
                   </h3>
 
                   <div
-                    className={`grid transition-all duration-500 ease-in-out ${isActive
-                      ? 'grid-rows-[1fr] opacity-100 mt-2'
-                      : 'grid-rows-[0fr] opacity-0 mt-0'
-                      }`}
+                    className={`grid transition-all duration-500 ease-in-out ${
+                      isActive
+                        ? 'grid-rows-[1fr] opacity-100 mt-2'
+                        : 'grid-rows-[0fr] opacity-0 mt-0'
+                    }`}
                   >
                     <div className='overflow-hidden'>
                       <p className='text-gray-600 text-sm leading-relaxed'>{item.description}</p>
@@ -167,8 +170,9 @@ const IndustryUseCases = () => {
                 {industries.map((item, index) => (
                   <div
                     key={index}
-                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out bg-white ${activeStep === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
-                      }`}
+                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out bg-white ${
+                      activeStep === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                    }`}
                   >
                     <Image src={item.image} alt={item.title} fill className='object-cover' />
                   </div>

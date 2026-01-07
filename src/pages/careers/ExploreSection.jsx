@@ -266,8 +266,9 @@ const ExploreSection = () => {
             <button
               key={pageNumber}
               onClick={() => handlePageChange(pageNumber)}
-              className={`text-white font-medium transition-all ${currentPage === pageNumber ? 'border-b-2 border-white pb-1' : 'hover:opacity-70'
-                }`}
+              className={`text-white font-medium transition-all ${
+                currentPage === pageNumber ? 'border-b-2 border-white pb-1' : 'hover:opacity-70'
+              }`}
             >
               {pageNumber}
             </button>
