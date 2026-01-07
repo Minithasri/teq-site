@@ -53,7 +53,7 @@ const Philosophy = () => {
               Development Philosophy
             </span>
           </h1>
-          <p className='text-gray-700 text-[18px] md:text-[28px] font-medium max-w-4xl mx-auto leading-relaxed'>
+          <p className='text-gray-700 text-[18px] md:text-[28px] font-medium max-w-4xl mx-auto -mt-4'>
             We build reliable, scalable AI that delivers real impact.
           </p>
         </div>

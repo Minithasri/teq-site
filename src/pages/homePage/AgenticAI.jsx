@@ -55,7 +55,7 @@ const AgenticAI = () => {
             className='px-6 py-3 rounded-full border-2 font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2 bg-white'
             style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
           >
-            Talk to Our Experts
+            Talk to our experts
             <FiArrowRight className='w-5 h-5' />
           </button>
         </div>

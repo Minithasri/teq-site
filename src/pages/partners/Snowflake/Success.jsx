@@ -76,17 +76,17 @@ export default function Success() {
             className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
             style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
           >
-            Talk to Our Experts
+            Talk to our experts
             <FiArrowRight className='w-4 h-4' aria-hidden />
           </Link>
         </header>
 
         {/* Title & Description */}
         <div className='flex flex-col md:flex-row justify-between items-start mb-12 gap-8'>
-          <h2 className='text-[40px] font-bold'>What sets us apart?</h2>
+          <h2 className='text-[40px] text-[#404040] font-medium'>What sets us apart?</h2>
           <p
             className='text-[15px] max-w-xl text-left leading-relaxed'
-            style={{ color: '#70707B' }}
+            style={{ color: '#525252' }}
           >
             As a Snowflake partner, GWC combines certified expertise, proven delivery, and a client
             first approach to provide tailored, end to end Snowflake solutions that maximize value
@@ -114,8 +114,8 @@ export default function Success() {
                       className='object-cover group-hover:scale-105 transition-transform duration-500'
                     />
                   </div>
-                  <h3 className='text-[18px] font-bold text-gray-900 mb-3'>{card.title}</h3>
-                  <p className='text-[14px] leading-relaxed text-gray-600'>{card.description}</p>
+                  <h3 className='text-[18px] font-semibold text-[#404040] mb-3'>{card.title}</h3>
+                  <p className='text-[14px] leading-relaxed text-[#525252]'>{card.description}</p>
                 </div>
               </div>
             </div>

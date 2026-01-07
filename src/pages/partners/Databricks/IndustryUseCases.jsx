@@ -99,13 +99,13 @@ const IndustryUseCases = () => {
               href='/contact'
               className='w-[250px] h-[50px] rounded-full border border-[#6F2B8B] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors shrink-0 flex items-center justify-center gap-2 text-sm'
             >
-              Talk to Our Experts
+              Talk to our experts
               <FiArrowRight className='w-4 h-4' />
             </Link>
           </header>
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start'>
-            <h2 className='text-3xl md:text-[40px] font-bold text-gray-800 leading-tight'>
+            <h2 className='text-3xl md:text-[40px] font-medium text-[#404040] leading-tight'>
               Industry{' '}
               <span
                 style={{
@@ -140,7 +140,7 @@ const IndustryUseCases = () => {
                   }`}
                 >
                   <h3
-                    className={`text-lg font-bold transition-colors duration-300 ${
+                    className={`text-lg font-semibold transition-colors duration-300 ${
                       isActive ? 'text-gray-900' : 'text-gray-500'
                     }`}
                   >

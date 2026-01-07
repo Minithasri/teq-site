@@ -5,18 +5,18 @@ import Image from 'next/image';
 const features = [
   {
     icon: '/images/partners/snowflake/snowicon1.svg',
-    title: 'Scalable Cloud Data Platform',
+    title: 'Scalable cloud data platform',
     description:
       'Snowflake enables efficient data storage, processing, and analytics on the cloud.',
   },
   {
     icon: '/images/partners/snowflake/snowicon2.svg',
-    title: 'Advanced Data Management & Analytics',
+    title: 'Advanced data management & analytics',
     description: 'Seamlessly analyze large datasets with high performance and flexibility.',
   },
   {
     icon: '/images/partners/snowflake/snowicon3.svg',
-    title: 'Reliable Cloud Operations with GWC',
+    title: 'Reliable cloud operations with GWC',
     description: 'Smooth, secure cloud operations so you can focus on your business goals.',
   },
 ];
@@ -37,8 +37,8 @@ export default function Powerdata() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Header */}
         <div className='text-center mb-12'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4' style={{ color: '#5C2B8F' }}>
-            Unleash the Power of Data
+          <h2 className='text-3xl md:text-4xl font-medium mb-4' style={{ color: '#5C2B8F' }}>
+            Unleash the power of data
           </h2>
         </div>
 
@@ -67,8 +67,8 @@ export default function Powerdata() {
               <div className='mb-6'>
                 <Image src={feature.icon} alt='Feature Icon' width={32} height={32} />
               </div>
-              <h3 className='text-lg font-bold text-gray-900 mb-3'>{feature.title}</h3>
-              <p className='text-gray-600 text-sm leading-relaxed'>{feature.description}</p>
+              <h3 className='text-[18px] font-semibold text-[#404040] mb-3'>{feature.title}</h3>
+              <p className='text-[14px] text-[#404040] leading-relaxed'>{feature.description}</p>
             </div>
           ))}
         </div>

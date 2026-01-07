@@ -57,7 +57,7 @@ const BoomiPower = () => {
     mm.add('(min-width: 1024px)', () => {
       scrollTriggerRef.current = ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: 'top 2%', // Starts when top of section is 10% from top of viewport
+        start: 'top -8%', // Starts when top of section is 10% from top of viewport
         end: `+=${steps.length * 50}%`, // Scroll distance: 50% viewport height per item
         pin: true, // Pin the container
         scrub: 0.5, // Smooth scrubbing
@@ -90,19 +90,19 @@ const BoomiPower = () => {
               href='/contact'
               className='w-[250px] h-[50px] rounded-full border border-[#6F2B8B] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors shrink-0 flex items-center justify-center gap-2 text-sm'
             >
-              Talk to Our Experts
+              Talk to our experts
               <FiArrowRight className='w-4 h-4' />
             </Link>
           </header>
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start'>
-            <h2 className='text-3xl md:text-4xl font-bold text-gray-800 leading-tight'>
+            <h2 className='text-3xl md:text-4xl text-[#1F1F1F] font-medium lg:leading-[52px]'>
               Boomi Power on the
               <br />
               GWC Platform
             </h2>
             <div className='flex justify-start lg:justify-end'>
-              <p className='text-gray-600 max-w-lg leading-relaxed lg:text-right'>
+              <p className='text-[#1F1F1F] max-w-lg leading-relaxed lg:text-right'>
                 GWC brings the power of Boomi to integrate, automate, and scale your business
                 securely from one platform with flexibility and full control.
               </p>

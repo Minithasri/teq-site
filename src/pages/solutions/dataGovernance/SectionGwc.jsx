@@ -3,7 +3,7 @@
 import Image from 'next/image';
 
 const governanceContent = {
-  title: 'The GWC Approach to Data Governance Excellence',
+  title: 'The GWC approach to data governance excellence',
   subtitle: 'Enhanced data fabric architecture empowers you to build robust data governance.',
   cards: [
     {

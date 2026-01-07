@@ -12,7 +12,7 @@ const bannerContent = {
       { label: 'Data Strategy & Engineering', href: '/solutions/data-strategy-engineering' },
     ],
   },
-  title: 'Aim To Steer Your Business Towards Success',
+  title: 'Aim to steer your business towards success',
   description:
     'Strengthen your business with a unified, well-governed data foundation built for speed and accuracy.',
   ctaText: 'Get in touch',
@@ -38,7 +38,7 @@ export default function BannerSection() {
         <div className='absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent'></div>
       </div>
 
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-14 pb-44'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-14 pb-12'>
         {/* Breadcrumb */}
         <nav aria-label='Breadcrumb' className='relative z-10 mb-4 '>
           <ol className='inline-flex items-center gap-2 text-sm py-1'>

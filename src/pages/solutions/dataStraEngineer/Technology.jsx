@@ -10,28 +10,28 @@ const cards = [
     title: 'Strategic Data Assessment',
     description:
       'Embark on your data transformation journey with a comprehensive assessment of your existing data landscape. Our experts analyze data sources, quality, and accessibility to lay the groundwork for a robust data strategy.',
-    footer: 'Foundation for Data Excellence',
+    footer: 'Foundation for data excellence',
     icon: '/images/solutions/dataStrategyEngineer/image1.svg',
   },
   {
     title: 'Customized Data Roadmaps',
     description:
       "Every business is unique. That's why we tailor data roadmaps to align with your specific goals. Whether it's optimizing existing processes or adopting advanced analytics, our strategies are designed to meet your organization's evolving needs.",
-    footer: 'Tailored Strategies for Success',
+    footer: 'Tailored strategies for success',
     icon: '/images/solutions/dataStrategyEngineer/image2.svg',
   },
   {
     title: 'Data Governance & Compliance',
     description:
       'Navigate the complex landscape of data governance effortlessly. We help you establish frameworks that ensure data integrity, security, and compliance with industry regulations.',
-    footer: 'Secure and Compliant Data',
+    footer: 'Secure and compliant data',
     icon: '/images/solutions/datagoverance/logo3.svg',
   },
   {
     title: 'Advanced Analytics & AI Integration',
     description:
       'Uncover the power of your data with advanced analytics and AI. Our solutions integrate seamlessly with your existing systems, providing actionable insights that drive informed decision-making.',
-    footer: 'AI-Powered Insights',
+    footer: 'AI-powered insights',
     icon: '/images/solutions/datagoverance/logo4.svg',
   },
 ];
@@ -66,7 +66,7 @@ const Technology = () => {
               className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
               style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
             >
-              Talk to Our Experts
+              Talk to our experts
               <FiArrowRight className='w-4 h-4' aria-hidden />
             </Link>
           </header>
@@ -77,7 +77,7 @@ const Technology = () => {
               id='data-strategy-expertise'
               className='text-3xl md:text-4xl font-medium text-gray-800'
             >
-              Data Strategy Expertise
+              Data strategy expertise
             </h2>
 
             <p className='text-[16px] text-gray-500 mr-2 text-right'>

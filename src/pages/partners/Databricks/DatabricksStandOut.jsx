@@ -68,7 +68,7 @@ const DatabricksStandOut = () => {
             href='/contact'
             className='w-[250px] h-[50px] rounded-full border border-[#6F2B8B] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors shrink-0 flex items-center justify-center gap-2 text-sm'
           >
-            Talk to Our Experts
+            Talk to our experts
             <FiArrowRight className='w-4 h-4' />
           </Link>
         </header>
@@ -76,7 +76,7 @@ const DatabricksStandOut = () => {
         {/* Title & Description */}
         <div className='grid grid-cols-1 lg:grid-cols-[55%_45%] gap-12 lg:gap-20 items-start mb-20'>
           <div>
-            <h2 className='text-3xl md:text-[40px] font-bold text-gray-900 leading-tight'>
+            <h2 className='text-3xl md:text-[40px] font-medium text-[#404040] leading-tight'>
               What makes
               <br />
               <span
@@ -119,8 +119,8 @@ const DatabricksStandOut = () => {
                 </div>
                 {/* Text */}
                 <div>
-                  <h3 className='text-gray-900 font-bold text-lg mb-1'>{feature.title}</h3>
-                  <p className='text-gray-500 text-sm'>{feature.subtitle}</p>
+                  <h3 className='text-[#404040] font-semibold text-lg mb-1'>{feature.title}</h3>
+                  <p className='text-[#404040] text-sm'>{feature.subtitle}</p>
                 </div>
               </div>
             ))}

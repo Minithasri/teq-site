@@ -146,7 +146,7 @@ export default function LifeAtGwc() {
             }}
           >
             <button className='w-[246px] h-[46px] rounded-full bg-white font-medium flex items-center justify-center gap-2 text-[16px]'>
-              <span style={{ color: '#6F2B8B' }}>Talk to Our Experts</span>
+              <span style={{ color: '#6F2B8B' }}>Talk to our experts</span>
               <Image src='/images/Careers/arrow1.svg' alt='Arrow' width={12} height={12} />
             </button>
           </div>
@@ -159,11 +159,11 @@ export default function LifeAtGwc() {
             className='text-[32px] lg:text-[40px] font-bold shrink-0'
             style={{ marginRight: '40px' }}
           >
-            <span className='text-black'>Life at GWC Data.AI</span>
+            <span className='text-[#1F1F1F]'>Life at GWC Data.AI</span>
           </h2>
 
           {/* Description - Aligned with heading */}
-          <p className='text-gray-600 text-[15px] lg:text-[15px] max-w-xl leading-relaxed text-left'>
+          <p className='text-[#525252] text-[15px] lg:text-[15px] max-w-xl leading-relaxed text-left'>
             At GWC, career growth and celebrations go hand in hand, creating a vibrant community
             where every success is shared and celebrated together.
           </p>

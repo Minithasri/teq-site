@@ -21,22 +21,22 @@ gsap.registerPlugin(ScrollTrigger);
 /* ---------------- DATA ---------------- */
 
 const tabs = [
-  'Data Collection',
-  'Data Exploration',
-  'Dashboard & Report Design',
-  'Data Analysis',
-  'Data Presentation',
-  'Performance Monitoring',
-  'Data Interpretation & Insight Generation',
-  'Collaboration & Knowledge Sharing',
-  'Iterative Analysis & Refinement',
-  'Integration with Business Processes',
+  'Data collection',
+  'Data exploration',
+  'Dashboard & report design',
+  'Data analysis',
+  'Data presentation',
+  'Performance monitoring',
+  'Data interpretation & insight generation',
+  'Collaboration & knowledge sharing',
+  'Iterative analysis & refinement',
+  'Integration with business processes',
 ];
 
 const cards = [
   {
-    badge: 'Data Collection',
-    title: 'Streamline Your Data Collection Process',
+    badge: 'Data collection',
+    title: 'Streamline your data collection process',
     points: [
       'Gather data from multiple sources efficiently, ensuring comprehensive coverage of all relevant information.',
       'Implement automated data collection methods to reduce manual effort and improve accuracy.',
@@ -44,8 +44,8 @@ const cards = [
     image: imgDataCollection,
   },
   {
-    badge: 'Data Exploration',
-    title: 'Explore Your Data to Uncover Hidden Patterns',
+    badge: 'Data exploration',
+    title: 'Explore your data to uncover hidden patterns',
     points: [
       'Use advanced exploration techniques to discover trends and anomalies in your data.',
       'Enable your team to interact with data visually, making complex datasets more accessible.',
@@ -53,8 +53,8 @@ const cards = [
     image: imgDataExploration,
   },
   {
-    badge: 'Dashboard & Report Design',
-    title: 'Create Compelling Dashboards and Reports',
+    badge: 'Dashboard & report design',
+    title: 'Create compelling dashboards and reports',
     points: [
       'Design intuitive dashboards that provide real-time insights at a glance.',
       'Build customized reports that align with your business objectives and stakeholder needs.',
@@ -62,8 +62,8 @@ const cards = [
     image: imgDashboardReportDesign,
   },
   {
-    badge: 'Data Analysis',
-    title: 'Perform In-Depth Data Analysis',
+    badge: 'Data analysis',
+    title: 'Perform in-depth data analysis',
     points: [
       'Apply statistical and analytical methods to extract meaningful insights from your data.',
       'Leverage advanced analytics to support data-driven decision-making across your organization.',
@@ -71,8 +71,8 @@ const cards = [
     image: imgDataAnalysis,
   },
   {
-    badge: 'Data Presentation',
-    title: 'Present Data in a Clear and Impactful Way',
+    badge: 'Data presentation',
+    title: 'Present data in a clear and impactful way',
     points: [
       'Transform complex data into easy-to-understand visualizations and narratives.',
       'Communicate insights effectively to stakeholders at all levels of your organization.',
@@ -80,8 +80,8 @@ const cards = [
     image: imgDataPresentation,
   },
   {
-    badge: 'Performance Monitoring',
-    title: 'Monitor Performance with Real-Time Metrics',
+    badge: 'Performance monitoring',
+    title: 'Monitor performance with real-time metrics',
     points: [
       'Track key performance indicators (KPIs) continuously to stay on top of business performance.',
       'Set up alerts and notifications to respond quickly to changes in critical metrics.',
@@ -89,8 +89,8 @@ const cards = [
     image: imgPerformanceMonitoring,
   },
   {
-    badge: 'Data Interpretation & Insight Generation',
-    title: 'Generate Actionable Insights from Your Data',
+    badge: 'Data interpretation & insight generation',
+    title: 'Generate actionable insights from your data',
     points: [
       'Interpret data findings to uncover actionable business insights.',
       'Enable strategic decision-making by translating data into clear recommendations.',
@@ -98,8 +98,8 @@ const cards = [
     image: imgDataInterpretation,
   },
   {
-    badge: 'Collaboration & Knowledge Sharing',
-    title: 'Foster Collaboration Through Data Sharing',
+    badge: 'Collaboration & knowledge sharing',
+    title: 'Foster collaboration through data sharing',
     points: [
       'Create a collaborative environment where teams can share insights and findings.',
       'Enable knowledge sharing across departments to drive organizational alignment.',
@@ -107,8 +107,8 @@ const cards = [
     image: imgCollaboration,
   },
   {
-    badge: 'Iterative Analysis & Refinement',
-    title: 'Refine Your Analysis Through Iteration',
+    badge: 'Iterative analysis & refinement',
+    title: 'Refine your analysis through iteration',
     points: [
       'Continuously improve your analytical models and approaches based on feedback.',
       'Adapt your analysis to changing business needs and evolving data landscapes.',
@@ -116,8 +116,8 @@ const cards = [
     image: imgIterativeAnalysis,
   },
   {
-    badge: 'Integration with Business Processes',
-    title: 'Integrate Analytics into Your Business Workflows',
+    badge: 'Integration with business processes',
+    title: 'Integrate analytics into your business workflows',
     points: [
       'Embed analytics seamlessly into existing business processes for maximum impact.',
       'Ensure that insights are accessible where and when they are needed most.',
@@ -143,7 +143,7 @@ export default function BIAnalyticsSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 20px', // Pause when section is 80px from top to show tabs
-          end: `+=${cards.length * 80}%`, // Reduced from 100% to 80% for less scroll
+          end: `+=${cards.length * 60}%`, // Reduced for faster scroll while keeping lock
           pin: true,
           scrub: 1,
           anticipatePin: 1,
@@ -154,6 +154,8 @@ export default function BIAnalyticsSection() {
           },
         },
       });
+
+      tl.to({}, { duration: 0.5 }); // Short delay to lock first card
 
       cardRefs.current.forEach((card, i) => {
         gsap.set(card, {
@@ -176,7 +178,7 @@ export default function BIAnalyticsSection() {
           tl.to(
             card,
             {
-              opacity: 10,
+              opacity: 1,
               scale: 1,
               y: 0,
               pointerEvents: 'auto',

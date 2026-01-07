@@ -166,7 +166,7 @@ export default function Retail() {
       </div>
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-        <h2 className='text-center font-bold text-[#2D1C3C] mb-12 text-[40px]'>
+        <h2 className='text-center font-medium text-[#404040] mb-12 text-[40px]'>
           Snowflake for your industry
         </h2>
 

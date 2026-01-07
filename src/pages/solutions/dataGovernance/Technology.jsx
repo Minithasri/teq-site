@@ -10,14 +10,14 @@ const cards = [
     title: 'Data Lineage',
     description:
       'Prevent breaking changes & resolve data issues quickly with end-to-end Data Lineage implementation.',
-    footer: 'Accelerate Impact & Root cause Analysis',
+    footer: 'Accelerate impact & root cause analysis',
     icon: '/images/solutions/datagoverance/logo1.svg',
   },
   {
     title: 'Business Glossary',
     description:
       'We enable regulatory compliance and responsible data management by building transparency and a strong data-driven culture.',
-    footer: 'Your Dictionary for Data Assets',
+    footer: 'Your dictionary for data assets',
     icon: '/images/solutions/datagoverance/logo2.svg',
   },
   {
@@ -31,7 +31,7 @@ const cards = [
     title: 'Intelligent Automation',
     description:
       'Stop wasting hours on manual metadata entry. Automate enrichment across your data landscape and reclaim your day.',
-    footer: 'Boosting Efficiency and Control',
+    footer: 'Boosting efficiency and control',
     icon: '/images/solutions/datagoverance/logo4.svg',
   },
 ];
@@ -66,7 +66,7 @@ const Technology = () => {
               className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
               style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
             >
-              Talk to Our Experts
+              Talk to our experts
               <FiArrowRight className='w-4 h-4' aria-hidden />
             </Link>
           </header>
@@ -77,7 +77,7 @@ const Technology = () => {
               id='data-governance-expertise'
               className='text-3xl md:text-4xl font-medium text-gray-800'
             >
-              Data Governance Expertise
+              Data governance expertise
             </h2>
 
             <p className='text-[16px] text-gray-500 mr-2 text-right'>

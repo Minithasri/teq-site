@@ -3,7 +3,7 @@
 import Image from 'next/image';
 
 const governanceContent = {
-  title: 'Turn Data into Your Most Valuable Asset',
+  title: 'Turn data into your most valuable asset',
   subtitle:
     'Our BI and analytics solutions are crafted to match the unique needs of your business so you get insights that directly support your goals and challenges.',
   cards: [

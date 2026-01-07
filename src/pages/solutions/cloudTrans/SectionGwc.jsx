@@ -3,7 +3,7 @@
 import Image from 'next/image';
 
 const governanceContent = {
-  title: 'Why Choose Cloud Transformation with GWC',
+  title: 'Why choose cloud transformation with GWC',
   subtitle:
     'GWC drives digital resilience, helping businesses adapt fast, embrace innovation, and unlock the full potential of cloud technologies.',
   cards: [

@@ -62,7 +62,7 @@ const FeaturesBoomi = () => {
             href='/contact'
             className='px-6 py-2.5 rounded-full border border-[#6F2B8B] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors shrink-0 flex items-center gap-2 text-sm bg-white/80 backdrop-blur-sm'
           >
-            Talk to Our Experts
+            Talk to our experts
             <FiArrowRight className='w-4 h-4' />
           </Link>
         </header>
@@ -70,8 +70,8 @@ const FeaturesBoomi = () => {
         {/* Title & Description */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-20'>
           <div>
-            <h2 className='text-[32px] md:text-[40px] font-semibold'>
-              <span className='text-gray-900'>Features of</span>
+            <h2 className='text-[32px] md:text-[40px] text-[#1F1F1F] font-medium'>
+              <span className='text-[#1F1F1F]'>Features of</span>
               <br />
               <span
                 style={{
@@ -119,8 +119,10 @@ const FeaturesBoomi = () => {
 
                 {/* Content */}
                 <div className='p-6 pt-2 flex-1 flex flex-col'>
-                  <h3 className='text-lg font-bold text-gray-900 mb-3'>{feature.title}</h3>
-                  <p className='text-gray-600 text-[14px] leading-relaxed'>{feature.description}</p>
+                  <h3 className='text-lg font-semibold text-[#404040] mb-3'>{feature.title}</h3>
+                  <p className='text-[#404040] text-[14px] leading-relaxed'>
+                    {feature.description}
+                  </p>
                 </div>
               </article>
             </div>

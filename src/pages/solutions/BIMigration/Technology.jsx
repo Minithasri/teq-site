@@ -10,28 +10,28 @@ const cards = [
     title: 'GWC Data Migration Accelerator',
     description:
       'We adopt an indigenous framework called GWC Data Migration Accelerator that revolutionize your BI migration and modernization while helping you elicit all the benefits of the transformation.',
-    footer: 'Accelerated Migration Framework',
+    footer: 'Accelerated migration framework',
     icon: '/images/solutions/dataStrategyEngineer/image1.svg',
   },
   {
     title: 'Advanced Data Integration',
     description:
       'It involves the seamless combination of diverse datasets from multiple sources, formats, and structures, leveraging sophisticated techniques and technologies.',
-    footer: 'Seamless Data Combination',
+    footer: 'Seamless data combination',
     icon: '/images/solutions/dataStrategyEngineer/image2.svg',
   },
   {
     title: 'Cloud-Based BI Solutions',
     description:
       'Experience the agility and scalability of the cloud with our cloud-based BI solutions. Unlock the potential for enhanced collaboration, real-time analytics, and cost-effective scalability. AI-Infused',
-    footer: 'Scalable Cloud Analytics',
+    footer: 'Scalable cloud analytics',
     icon: '/images/solutions/datagoverance/logo3.svg',
   },
   {
     title: 'AI-Infused Analytics',
     description:
       'Infuse artificial intelligence into your analytics processes. Leverage machine learning algorithms to uncover predictive insights, enabling proactive strategies and uncovering hidden opportunities.',
-    footer: 'Intelligent Predictive Insights',
+    footer: 'Intelligent predictive insights',
     icon: '/images/solutions/datagoverance/logo4.svg',
   },
 ];
@@ -63,7 +63,7 @@ const Technology = () => {
               className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
               style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
             >
-              Talk to Our Experts
+              Talk to our experts
               <FiArrowRight className='w-4 h-4' aria-hidden />
             </Link>
           </header>
@@ -72,9 +72,9 @@ const Technology = () => {
           <div className='flex flex-col mb-12 md:flex-row justify-between items-start md:items-center gap-6'>
             <h2
               id='bi-migration-expertise'
-              className='text-3xl md:text-4xl font-medium text-gray-800'
+              className='text-[28px] md:text-[32px] font-medium text-gray-800'
             >
-              BI Migration and Modernization Expertise
+              BI migration and modernization expertise
             </h2>
 
             <p className='text-[16px] text-gray-500 mr-2 text-right'>

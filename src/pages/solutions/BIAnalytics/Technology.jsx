@@ -10,28 +10,28 @@ const cards = [
     title: 'Comprehensive Data Visualization',
     description:
       'Navigate your data landscape efficiently with our advanced data visualization tools. Transforming intricate datasets into intuitive visualizations, we offer clarity and actionable insights into your business metrics.',
-    footer: 'Clarity Through Visual Insights',
+    footer: 'Clarity through visual insights',
     icon: '/images/solutions/dataStrategyEngineer/image1.svg',
   },
   {
     title: 'Advanced Analytics Integration',
     description:
       'Elevate your decision-making process with our seamlessly integrated advanced analytics solutions. Leverage AI to uncover predictive insights, enabling proactive strategies for business growth.',
-    footer: 'AI-Powered Decision Making',
+    footer: 'AI-powered decision making',
     icon: '/images/solutions/dataStrategyEngineer/image2.svg',
   },
   {
     title: 'Real-time Reporting & Dashboards',
     description:
       'Stay ahead of the curve with real-time reporting and interactive dashboards. Monitor key performance indicators (KPIs) and business metrics, enabling agile responses to changing market conditions.',
-    footer: 'Instant Insights, Agile Actions',
+    footer: 'Instant insights, agile actions',
     icon: '/images/solutions/datagoverance/logo3.svg',
   },
   {
     title: 'Data-driven Strategy Development',
     description:
       'Craft robust business strategies with our data-driven approach. We assist in formulating actionable insights derived from your data, ensuring that your organization is always well-informed and strategically aligned.',
-    footer: 'Strategic Alignment Through Data',
+    footer: 'Strategic alignment through data',
     icon: '/images/solutions/datagoverance/logo4.svg',
   },
 ];
@@ -63,7 +63,7 @@ const Technology = () => {
               className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
               style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
             >
-              Talk to Our Experts
+              Talk to our experts
               <FiArrowRight className='w-4 h-4' aria-hidden />
             </Link>
           </header>
@@ -74,7 +74,7 @@ const Technology = () => {
               id='bi-analytics-expertise'
               className='text-3xl md:text-4xl font-medium text-gray-800'
             >
-              BI & Analytics Expertise
+              BI & Analytics expertise
             </h2>
 
             <p className='text-[16px] text-gray-500 mr-2 text-right'>

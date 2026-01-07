@@ -47,7 +47,7 @@ const Platforms = () => {
     >
       <div className='max-w-7xl mx-auto'>
         {/* Header Title */}
-        <h2 className='text-3xl md:text-4xl font-bold text-center  mb-12'>
+        <h2 className='text-3xl md:text-4xl font-medium text-center  mb-12'>
           The GWC Platform Services Advantage
         </h2>
 
@@ -101,7 +101,7 @@ const Platforms = () => {
 
               {/* Title Tag */}
               <div className='bg-white border border-gray-100 rounded-lg py-2 px-6 mb-6 shadow-sm w-full rounded-xl '>
-                <span className='text-[#F97316] font-bold text-base'>
+                <span className='text-[#F97316] font-semibold text-base'>
                   {platforms[activeTab].title}
                 </span>
               </div>

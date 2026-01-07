@@ -54,7 +54,7 @@ export default function GreatPlaceToWork() {
             className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
             style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
           >
-            Talk to Our Experts
+            Talk to our experts
             <FiArrowRight className='w-4 h-4' aria-hidden />
           </Link>
         </header>
@@ -64,12 +64,12 @@ export default function GreatPlaceToWork() {
           {/* Heading and Description - Aligned Horizontally */}
           <div className='flex flex-col lg:flex-row lg:items-start justify-between gap-8 mb-12'>
             {/* Main Heading */}
-            <h2 className='text-[32px] lg:text-[40px] font-bold shrink-0 max-w-xl'>
+            <h2 className='text-[32px] lg:text-[40px] font-medium shrink-0 max-w-xl'>
               What makes GWC Data.AI a great place to work?
             </h2>
 
             {/* Description */}
-            <p className='text-gray-600 text-[15px] max-w-lg leading-relaxed text-left'>
+            <p className='text-[#525252] text-[15px] max-w-lg leading-relaxed text-left'>
               Our certified experts analyze and optimize your GCP environment to reduce costs,
               improve efficiency, and ensure reliable cloud operations so you can focus on your
               business goals.
@@ -87,7 +87,7 @@ export default function GreatPlaceToWork() {
             >
               <div className='bg-white rounded-3xl p-8 relative overflow-visible'>
                 <h3
-                  className='text-2xl font-bold mb-4 bg-clip-text text-transparent'
+                  className='text-2xl font-semibold mb-4 bg-clip-text text-transparent'
                   style={{
                     background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
                     WebkitBackgroundClip: 'text',
@@ -182,8 +182,8 @@ function Carousel({ items }) {
 
                 {/* Card Content */}
                 <div className='p-6'>
-                  <h4 className='text-[#F97316] font-bold text-lg mb-3'>{card.title}</h4>
-                  <p className='text-gray-600 text-sm leading-relaxed'>{card.description}</p>
+                  <h4 className='text-[#F97316] font-semibold text-[16px] mb-3'>{card.title}</h4>
+                  <p className='text-[#70707B] text-[14px] leading-relaxed'>{card.description}</p>
                 </div>
               </div>
             </div>

@@ -33,14 +33,14 @@ const LastSection = () => {
         {/* Content */}
         <div className='relative z-10 max-w-3xl mx-auto'>
           <h2
-            className='font-semibold text-gray-900 leading-tight mb-4'
+            className='font-semibold text-[#404040] leading-tight mb-4'
             style={{ fontSize: '32px' }}
           >
             Explore more opportunities
           </h2>
 
           <p
-            className='text-gray-600 mb-6 max-w-2xl mx-auto'
+            className='text-[#404040] mb-6 max-w-2xl mx-auto'
             style={{ fontSize: '18px', lineHeight: '1.5' }}
           >
             Couldn't find your ideal job? Build a profile, and let us assist you in your job search.

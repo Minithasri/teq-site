@@ -11,9 +11,9 @@ const bannerContent = {
       { label: 'Cloud Transformation', href: '/solutions/cloud-transformation' },
     ],
   },
-  title: 'Transform Your Business Through Data-powered Innovation',
+  title: 'Transform your business through Data powered Innovation',
   description:
-    'Get ready for a future-ready and high-performance BI environment for your organization',
+    'Get ready for a future-ready and high performance BI environment for your organization',
   ctaText: 'Get in touch',
   images: {
     background: '/images/solutions/Hero section BG.jpg',

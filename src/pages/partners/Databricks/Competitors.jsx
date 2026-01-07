@@ -26,7 +26,7 @@ const Competitors = () => {
                     height={48}
                   />
                 </div>
-                <h2 className='text-3xl md:text-4xl font-bold text-gray-900 leading-tight'>
+                <h2 className='text-[28px] md:text-[36px] font-medium text-[#404040] leading-tight'>
                   Why GWC Data.AI Over <br /> Competitors
                 </h2>
               </div>
@@ -40,8 +40,8 @@ const Competitors = () => {
                   className='shrink-0'
                 />
                 <div>
-                  <h3 className='text-xl font-bold text-gray-900 mb-4'>Depth + Speed</h3>
-                  <ul className='space-y-3 text-gray-600 list-disc list-inside marker:text-black'>
+                  <h3 className='text-[18px] font-semibold text-[#404040] mb-4'>Depth + Speed</h3>
+                  <ul className='space-y-3 text-[14px] list-disc list-inside marker:text-black'>
                     <li>Rapid deployment capabilities</li>
                     <li>Deep architecture maturity</li>
                     <li>Sustainable & resilient solutions</li>
@@ -76,7 +76,7 @@ const Competitors = () => {
                   />
                 </div>
 
-                <h3 className='text-[16px] font-bold mb-4'>Tailored Industry Experience</h3>
+                <h3 className='text-[16px] font-semibold mb-4'>Tailored Industry Experience</h3>
                 <ul className='space-y-3 text-white/80 list-disc list-inside marker:text-white/50 text-[14px]'>
                   <li>Domain-specific expertise</li>
                   <li>Healthcare & manufacturing focus</li>
@@ -104,8 +104,10 @@ const Competitors = () => {
                   height={24}
                 />
               </div>
-              <h3 className='text-[18px] font-bold text-gray-900 mb-4'>Holistic Cost Governance</h3>
-              <ul className='space-y-3 text-gray-600 text-[14px] list-disc list-inside marker:text-black'>
+              <h3 className='text-[18px] font-semibold text-[#404040] mb-4'>
+                Holistic Cost Governance
+              </h3>
+              <ul className='space-y-3 text-[14px] list-disc list-inside marker:text-black'>
                 <li>Cost visibility from day one</li>
                 <li>Auto-scaling & spot instances</li>
                 <li>Proactive usage monitoring</li>
@@ -131,8 +133,10 @@ const Competitors = () => {
                   height={24}
                 />
               </div>
-              <h3 className='text-[18px] font-bold text-gray-900 mb-4'>Holistic Cost Governance</h3>
-              <ul className='space-y-3 text-gray-600 text-[14px] list-disc list-inside marker:text-black'>
+              <h3 className='text-[18px] font-semibold text-[#404040] mb-4'>
+                Holistic Cost Governance
+              </h3>
+              <ul className='space-y-3 text-[14px] list-disc list-inside marker:text-black'>
                 <li>Role-based access controls</li>
                 <li>End-to-end encryption</li>
                 <li>Complete audit trails</li>
@@ -158,8 +162,10 @@ const Competitors = () => {
                   height={24}
                 />
               </div>
-              <h3 className='text-[18px] font-bold text-gray-900 mb-4'>Continuous Innovation</h3>
-              <ul className='space-y-3 text-gray-600 text-[14px] list-disc list-inside marker:text-black'>
+              <h3 className='text-[18px] font-semibold text-[#404040] mb-4'>
+                Continuous Innovation
+              </h3>
+              <ul className='space-y-3 text-[14px] list-disc list-inside marker:text-black'>
                 <li>Post-deployment support</li>
                 <li>Feature adoption roadmaps</li>
                 <li>Continuous platform updates</li>

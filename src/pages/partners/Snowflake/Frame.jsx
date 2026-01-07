@@ -8,10 +8,10 @@ const bannerContent = {
   breadcrumb: {
     items: [
       { label: 'Home', href: '/' },
-      { label: 'SnowFlake', href: '/partners/snowflake' },
+      { label: 'Snowflake', href: '/partners/snowflake' },
     ],
   },
-  title: 'Snowflake Partnership & Expertise',
+  title: 'Snowflake partnership & expertise',
   description:
     "As a certified Snowflake partner, GWC delivers expert implementation, optimization, data migration, integration, and custom solutions using Snowflake's cloud data platform.",
   ctaText: 'Get in touch',

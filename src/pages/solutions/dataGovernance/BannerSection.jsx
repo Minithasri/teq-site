@@ -11,9 +11,9 @@ const bannerContent = {
       { label: 'Data Governance', href: '/solutions/data-governance' },
     ],
   },
-  title: 'Governed Data Foundation for Acceleration',
+  title: 'Governed data foundation for acceleration',
   description:
-    'Strengthen your business with a unified, well-governed data foundation built for speed and accuracy.',
+    'Strengthen your business with a unified, well governed data foundation built for speed and accuracy.',
   ctaText: 'Get in touch',
   images: {
     background: '/images/solutions/Hero section BG.jpg',
@@ -69,9 +69,9 @@ export default function BannerSection() {
               className='text-[32px] md:text-[36px] font-bold max-w-[700px] mb-2 lg:-mt-20'
               style={{ color: '#404040', lineHeight: '52px' }}
             >
-              Governed Data Foundation for
+              Governed data foundation for
               <br />
-              Acceleration
+              acceleration
             </h1>
 
             <p className='text-[#7A7A7A] text-[16px] md:text-[18px] max-w-2xl mb-8'>

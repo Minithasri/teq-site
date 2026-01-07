@@ -71,9 +71,9 @@ const HowWeHire = () => {
           </header>
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start'>
-            <h2 className='text-4xl lg:text-5xl font-bold text-gray-900'>How We Hire</h2>
+            <h2 className='text-[40px] font-medium text-[#1F1F1F]'>How We Hire</h2>
             <div className='flex justify-start'>
-              <p className='text-gray-600 max-w-xl leading-relaxed text-left'>
+              <p className='text-[#525252] max-w-xl leading-relaxed text-left'>
                 Empower your career journey. At GWC, we seek skilled individuals who are ready to
                 enrich their abilities with our expertise.
               </p>
@@ -100,7 +100,7 @@ const HowWeHire = () => {
 
         {/* Subtitle below image */}
         <div className='text-center mb-12'>
-          <p className='text-gray-600 text-sm lg:text-base max-w-3xl mx-auto'>
+          <p className='text-[#525252] text-[16px] max-w-3xl mx-auto'>
             A Recruiter/Technical panel will screen your application. We will contact you for
             further details if your credentials match our requirements.
           </p>

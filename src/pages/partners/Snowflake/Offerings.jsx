@@ -116,17 +116,17 @@ export default function Offerings() {
               className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
               style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
             >
-              Talk to Our Experts
+              Talk to our experts
               <FiArrowRight className='w-4 h-4' aria-hidden />
             </Link>
           </header>
 
           {/* Title & Description */}
           <div className='flex flex-col md:flex-row justify-between items-start mb-12 gap-8'>
-            <h2 className='text-[40px] font-bold'>Snowflake Offerings</h2>
+            <h2 className='text-[40px] text-[#404040] font-medium'>Snowflake offerings</h2>
             <p
               className='text-[15px] max-w-xl text-left leading-relaxed'
-              style={{ color: '#70707B' }}
+              style={{ color: '#525252' }}
             >
               Snowflake, a cloud based data warehousing platform, provides a range of offerings to
               help organizations manage & analyze their data efficiently. We ensure your cloud
@@ -204,7 +204,7 @@ function Carousel({ items }) {
                   <div className='w-14 h-14 rounded-xl bg-white flex items-center justify-center mb-4 shadow-md'>
                     <Image src={item.icon} alt='Icon' width={28} height={28} />
                   </div>
-                  <h3 className='text-xl font-bold mb-4' style={{ color: '#F97316' }}>
+                  <h3 className='text-[18px] font-semibold mb-4' style={{ color: '#F97316' }}>
                     {item.title}
                   </h3>
                   <p className='text-[15px] leading-relaxed' style={{ color: '#70707B' }}>

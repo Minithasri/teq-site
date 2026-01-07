@@ -43,7 +43,7 @@ export default function WhyGwc() {
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Heading */}
-        <h2 className='text-[40px] font-semibold text-white text-center mb-16'>
+        <h2 className='text-[40px] font-medium text-white text-center mb-16'>
           Why choose GWC Data.AI?
         </h2>
 
@@ -92,12 +92,13 @@ export default function WhyGwc() {
                 </div>
 
                 {/* Title */}
-                <h3 className='text-[16px] font-semibold mb-3' style={{ color: '#F4F0FF' }}>
-                  {feature.title}
-                </h3>
+                <h3 className='text-[16px] text-[#F4F0FF] font-semibold mb-3'>{feature.title}</h3>
 
                 {/* Description */}
-                <p className='text-[16px] leading-relaxed max-w-xs' style={{ color: '#EFEDFDB2' }}>
+                <p
+                  className='text-[14px] text-[#EFEDFDB2] leading-relaxed max-w-xs'
+                  style={{ color: '#EFEDFDB2' }}
+                >
                   {feature.description}
                 </p>
               </div>

@@ -21,22 +21,22 @@ gsap.registerPlugin(ScrollTrigger);
 /* ---------------- DATA (UNCHANGED) ---------------- */
 
 const tabs = [
-  'Data Classification & Sensitivity',
-  'Data Quality Management',
-  'Data Lineage',
-  'Data Access & Authorization',
-  'Data Privacy Compliance',
-  'Data Governance Policies',
-  'Metadata Management',
-  'Training & Awareness',
-  'Data Risk Management',
-  'Audit & Monitoring',
+  'Data classification & sensitivity',
+  'Data quality management',
+  'Data lineage',
+  'Data access & authorization',
+  'Data privacy compliance',
+  'Data governance policies',
+  'Metadata management',
+  'Training & awareness',
+  'Data risk management',
+  'Audit & monitoring',
 ];
 
 const cards = [
   {
-    badge: 'Data Classification & Sensitivity',
-    title: 'Data Classification & Sensitivity',
+    badge: 'Data classification & sensitivity',
+    title: 'Data classification & sensitivity',
     points: [
       'Secure your business and comply with regulations by implementing a robust data classification and sensitivity approach.',
       'Protect confidential information, prevent data breaches, and build trust with customers and stakeholders.',
@@ -44,8 +44,8 @@ const cards = [
     image: img3,
   },
   {
-    badge: 'Data Quality Management',
-    title: 'Data Quality Management',
+    badge: 'Data quality management',
+    title: 'Data quality management',
     points: [
       'Ensure trusted data fuels informed decisions.',
       'Turn data chaos into clarity to empower your business.',
@@ -53,8 +53,8 @@ const cards = [
     image: img10,
   },
   {
-    badge: 'Data Lineage',
-    title: 'Data Lineage',
+    badge: 'Data lineage',
+    title: 'Data lineage',
     points: [
       'Identifies potential downstream effects of data changes.',
       'Provides transparency into data origins and processing.',
@@ -62,8 +62,8 @@ const cards = [
     image: img4,
   },
   {
-    badge: 'Data Access & Authorization',
-    title: 'Data Access & Authorization',
+    badge: 'Data access & authorization',
+    title: 'Data access & authorization',
     points: [
       'Protects sensitive information from unauthorized access and misuse.',
       'Sets clear data classification levels based on sensitivity.',
@@ -71,8 +71,8 @@ const cards = [
     image: img2,
   },
   {
-    badge: 'Data Privacy Compliance',
-    title: 'Data Privacy Compliance',
+    badge: 'Data privacy compliance',
+    title: 'Data privacy compliance',
     points: [
       'Robust security measures in place to protect customer data from unauthorized access, disclosure, alteration, or destruction.',
       'Includes encryption, access controls, and incident response plans.',
@@ -80,8 +80,8 @@ const cards = [
     image: img7,
   },
   {
-    badge: 'Data Governance Policies',
-    title: 'Data Governance Policies',
+    badge: 'Data governance policies',
+    title: 'Data governance policies',
     points: [
       'Boosts operational efficiency with a framework for efficient data management processes.',
       'Proactive measures to reduce potential data breach issues and financial costs.',
@@ -89,8 +89,8 @@ const cards = [
     image: img6,
   },
   {
-    badge: 'Metadata Management',
-    title: 'Metadata Management',
+    badge: 'Metadata management',
+    title: 'Metadata management',
     points: [
       'Standards to establish consistent ways to describe and categorize your data.',
       'Integrates with your existing data infrastructure by making metadata easily accessible across your systems.',
@@ -98,8 +98,8 @@ const cards = [
     image: img9,
   },
   {
-    badge: 'Training & Awareness',
-    title: 'Training & Awareness',
+    badge: 'Training & awareness',
+    title: 'Training & awareness',
     points: [
       'Utilizes online training platforms and knowledge management systems for easy access and continuous learning.',
       'Certified professionals to develop and implement effective training programs.',
@@ -107,8 +107,8 @@ const cards = [
     image: img5,
   },
   {
-    badge: 'Data Risk Management',
-    title: 'Data Risk Management',
+    badge: 'Data risk management',
+    title: 'Data risk management',
     points: [
       'Demonstrates commitment to protecting valuable data, fostering trust and confidence.',
       'Ensures adherence to data privacy laws and reduces the risk of costly fines.',
@@ -116,8 +116,8 @@ const cards = [
     image: img8,
   },
   {
-    badge: 'Audit & Monitoring',
-    title: 'Audit & Monitoring',
+    badge: 'Audit & monitoring',
+    title: 'Audit & monitoring',
     points: [
       'Identifies areas of non-compliance and potential risks and focus on Data quality and consistency across the organization.',
       'Expertise on early detection and response to data issues before they cause significant harm to the business.',
@@ -143,7 +143,7 @@ export default function DataGovernanceSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 20px', // Pause when section is 80px from top to show tabs
-          end: `+=${cards.length * 80}%`, // Reduced from 100% to 80% for less scroll
+          end: `+=${cards.length * 60}%`, // Reduced for faster scroll while keeping lock
           pin: true,
           scrub: 1,
           anticipatePin: 1,
@@ -154,6 +154,8 @@ export default function DataGovernanceSection() {
           },
         },
       });
+
+      tl.to({}, { duration: 0.5 }); // Short delay to lock first card
 
       cardRefs.current.forEach((card, i) => {
         gsap.set(card, {
@@ -176,7 +178,7 @@ export default function DataGovernanceSection() {
           tl.to(
             card,
             {
-              opacity: 50,
+              opacity: 1,
               scale: 1,
               y: 0,
               pointerEvents: 'auto',

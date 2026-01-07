@@ -21,22 +21,22 @@ gsap.registerPlugin(ScrollTrigger);
 /* ---------------- DATA ---------------- */
 
 const tabs = [
-  'Operate & Optimize Dev Capabilities',
-  'Transform Cloud Operations',
-  'Application Migration',
-  'Integrate Hybrid Solutions',
-  'Setup & Optimize Security Operations',
-  'Compliance Management',
-  'Data Governance',
-  'Data Migration',
-  'Data & Analytics Solutions',
-  'Custom AI Solutions',
+  'Operate & optimize dev capabilities',
+  'Transform cloud operations',
+  'Application migration',
+  'Integrate hybrid solutions',
+  'Setup & optimize security operations',
+  'Compliance management',
+  'Data governance',
+  'Data migration',
+  'Data & analytics solutions',
+  'Custom AI solutions',
 ];
 
 const cards = [
   {
-    badge: 'Operate & Optimize Dev Capabilities',
-    title: 'Operate & Optimize Dev Capabilities',
+    badge: 'Operate & optimize dev capabilities',
+    title: 'Operate & optimize dev capabilities',
     points: [
       'Apply DevOps best practices to custom solutions, integrations, and managed services.',
       'Leverage cloud-based IDEs and collaboration tools for seamless development across teams and locations.',
@@ -44,8 +44,8 @@ const cards = [
     image: imgOperateOptimize,
   },
   {
-    badge: 'Transform Cloud Operations',
-    title: 'Transform Cloud Operations',
+    badge: 'Transform cloud operations',
+    title: 'Transform cloud operations',
     points: [
       'Set up and implement service management, operations monitoring and talent development.',
       'Regularly review and assess your cloud operations to identify areas for improvement and iterate on your strategy.',
@@ -53,8 +53,8 @@ const cards = [
     image: imgTransformCloud,
   },
   {
-    badge: 'Application Migration',
-    title: 'Application Migration',
+    badge: 'Application migration',
+    title: 'Application migration',
     points: [
       'Establish the essentials for cloud-native application development and modernizing legacy applications.',
       'Utilize cloud platform services like AI/ML, data analytics, and APIs to unlock new functionalities and data-driven insights.',
@@ -62,8 +62,8 @@ const cards = [
     image: imgApplicationMigration,
   },
   {
-    badge: 'Integrate Hybrid Solutions',
-    title: 'Integrate Hybrid Solutions',
+    badge: 'Integrate hybrid solutions',
+    title: 'Integrate hybrid solutions',
     points: [
       'Harness the agility and reach of the cloud while preserving the security and control of on-premises systems.',
       'Implement comprehensive disaster recovery and backup strategies that encompass both on-premises and cloud components.',
@@ -71,8 +71,8 @@ const cards = [
     image: imgIntegrateHybrid,
   },
   {
-    badge: 'Setup & Optimize Security Operations',
-    title: 'Setup & Optimize Security Operations',
+    badge: 'Setup & optimize security operations',
+    title: 'Setup & optimize security operations',
     points: [
       'Security monitoring, investigations and response coupled with security posture with a zero trust model.',
       'Integrate security into the DevOps pipeline and foster collaboration between security, development, and operations teams.',
@@ -80,8 +80,8 @@ const cards = [
     image: imgSetupSecurity,
   },
   {
-    badge: 'Compliance Management',
-    title: 'Compliance Management',
+    badge: 'Compliance management',
+    title: 'Compliance management',
     points: [
       'Streamline compliance processes and optimize resource allocation with best-in-class tools and expertise.',
       'Regularly review your compliance posture and adapt your strategies as regulations and cloud environments evolve.',
@@ -89,8 +89,8 @@ const cards = [
     image: imgCompliance,
   },
   {
-    badge: 'Data Governance',
-    title: 'Data Governance',
+    badge: 'Data governance',
+    title: 'Data governance',
     points: [
       'Optimizing data utilization and aligning with business goals using data governance practices.',
       'Implement a comprehensive data catalog across all environments to locate, understand, and track data lineage.',
@@ -98,8 +98,8 @@ const cards = [
     image: imgDataGovernance,
   },
   {
-    badge: 'Data Migration',
-    title: 'Data Migration',
+    badge: 'Data migration',
+    title: 'Data migration',
     points: [
       'Assess, develop, transform and modernize Enterprise Data Warehouses and Databases.',
       'Leverage cloud tools for data enrichment and transformation to unlock greater value.',
@@ -107,8 +107,8 @@ const cards = [
     image: imgDataMigration,
   },
   {
-    badge: 'Data & Analytics Solutions',
-    title: 'Data & Analytics Solutions',
+    badge: 'Data & analytics solutions',
+    title: 'Data & analytics solutions',
     points: [
       'Tailored to your needs, our solutions aim to make your organization data-aware and transform it into a data-driven one.',
       'Implement cloud-based BI platforms for interactive dashboards and data exploration.',
@@ -116,8 +116,8 @@ const cards = [
     image: imgDataAnalytics,
   },
   {
-    badge: 'Custom AI Solutions',
-    title: 'Custom AI Solutions',
+    badge: 'Custom AI solutions',
+    title: 'Custom AI solutions',
     points: [
       'Assess feasibility, build and train the model, and develop Machine Learning solutions.',
       'Ensure smooth integration of your custom AI solution with existing IT infrastructure and applications.',
@@ -143,7 +143,7 @@ export default function CloudTransformationSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 20px', // Pause when section is 80px from top to show tabs
-          end: `+=${cards.length * 80}%`, // Reduced from 100% to 80% for less scroll
+          end: `+=${cards.length * 60}%`, // Reduced for faster scroll while keeping lock
           pin: true,
           scrub: 1,
           anticipatePin: 1,
@@ -154,6 +154,8 @@ export default function CloudTransformationSection() {
           },
         },
       });
+
+      tl.to({}, { duration: 0.5 }); // Short delay to lock first card
 
       cardRefs.current.forEach((card, i) => {
         gsap.set(card, {
@@ -176,7 +178,7 @@ export default function CloudTransformationSection() {
           tl.to(
             card,
             {
-              opacity: 50,
+              opacity: 1,
               scale: 1,
               y: 0,
               pointerEvents: 'auto',

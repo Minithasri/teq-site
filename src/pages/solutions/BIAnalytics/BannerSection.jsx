@@ -12,9 +12,9 @@ const bannerContent = {
       { label: 'BI & Analytics', href: '/solutions/bi-migration-modernization' },
     ],
   },
-  title: 'Transform Your Data into Intelligent Action',
+  title: 'Transform your data into intelligent action',
   description:
-    'Discover the Full Potential of Your Data Through Our Innovative Business Intelligence & Analytics Solutions',
+    'Discover the full potential of your data through our innovative Business Intelligence & Analytics Solutions',
   ctaText: 'Get in touch',
   images: {
     background: '/images/solutions/Hero section BG.jpg',

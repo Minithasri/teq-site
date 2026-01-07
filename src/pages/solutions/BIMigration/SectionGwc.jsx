@@ -3,7 +3,7 @@
 import Image from 'next/image';
 
 const governanceContent = {
-  title: 'Transform Your BI Ecosystem with GWC',
+  title: 'Transform your BI ecosystem with GWC',
   subtitle:
     'GWC seamlessly aligns your business intelligence with your data strategy through a smooth and efficient migration journey.',
   cards: [

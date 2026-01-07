@@ -1,55 +1,79 @@
+'use client';
+
+import Image from 'next/image';
 import Link from 'next/link';
 import { FiSearch } from 'react-icons/fi';
 
-const Herosection = () => {
+const heroContent = {
+  breadcrumb: {
+    items: [
+      { label: 'Home', href: '/' },
+      { label: 'Case study', href: '/case-study' },
+    ],
+  },
+  title: 'Experience AI Agents at Work',
+  description:
+    'Move beyond manual analysis and inconsistent data. Our Agentic AI platform standardizes startup assessments, reduces bias, and enables faster, more confident investment decisions.',
+  backgroundImage: '/images/Casestudy/Frame case.png',
+};
+
+export default function HeroSection() {
   return (
-    <div
-      className='relative w-full min-h-[500px] flex flex-col bg-cover bg-center bg-no-repeat'
-      style={{ backgroundImage: "url('/images/Casestudy/Frame case.png')" }}
-    >
-      {/* Breadcrumbs - High z-index for visibility */}
-      <div className='absolute top-6 left-6 md:top-8 md:left-20 text-white text-sm font-light flex items-center gap-2 z-50'>
-        <Link href='/' className='hover:text-white/80 transition-colors'>
-          Home
-        </Link>
-        <span>&gt;</span>
-        <span>Case study</span>
+    <header className='relative w-full overflow-hidden pt-[60px] min-h-[630px]'>
+      {/* Background */}
+      <div className='absolute inset-0 -z-10'>
+        <div
+          className='w-full h-full bg-cover bg-center bg-no-repeat'
+          style={{ backgroundImage: `url('${heroContent.backgroundImage}')` }}
+        />
       </div>
 
-      {/* Content - Centered */}
-      <div className='flex-1 flex flex-col justify-center items-center text-center px-4 md:px-20 py-16'>
-        <div className='max-w-4xl mx-auto flex flex-col gap-6 items-center z-10'>
-          {/* Heading - 42px */}
-          <h1 className='text-[42px] font-bold text-white leading-tight'>
-            Experience AI Agents at Work
-          </h1>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 lg:py-24'>
+        {/* Breadcrumb */}
+        <nav aria-label='Breadcrumb' className='mb-16'>
+          <ol className='inline-flex items-center gap-2 text-[15px] text-white'>
+            {heroContent.breadcrumb.items.map((item, index) => (
+              <li key={index} className='flex items-center gap-2'>
+                {index > 0 && (
+                  <Image
+                    src='/images/next_arrow.svg'
+                    alt=''
+                    width={6}
+                    height={6}
+                    aria-hidden
+                    className='opacity-80'
+                    style={{ filter: 'brightness(0) invert(1)' }}
+                  />
+                )}
+                <Link href={item.href} className='font-medium hover:opacity-80 transition-opacity'>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </nav>
 
-          {/* Description - 18px */}
-          <p className='text-white/90 text-[18px] font-light max-w-3xl leading-relaxed'>
-            Move beyond manual analysis and inconsistent data. Our Agentic AI platform standardizes
-            startup assessments, reduces bias, and enables faster, more confident investment
-            decisions.
+        {/* Hero Content */}
+        <div className='flex flex-col items-center text-center gap-6 max-w-4xl mx-auto'>
+          <h1 className='text-[42px] font-bold text-white leading-tight'>{heroContent.title}</h1>
+
+          <p className='text-white/90 text-[18px] max-w-3xl leading-relaxed'>
+            {heroContent.description}
           </p>
         </div>
       </div>
 
-      {/* Search Bar - At Bottom */}
-      <div className='w-full px-4 md:px-20 pb-8 relative z-20'>
-        <div className='max-w-2xl mx-auto'>
-          <div className='relative'>
-            <div className='absolute left-4 top-1/2 -translate-y-1/2 text-gray-400'>
-              <FiSearch size={20} />
-            </div>
-            <input
-              type='text'
-              placeholder='Search case study'
-              className='w-full pl-12 pr-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-lg'
-            />
-          </div>
+      {/* Search Bar */}
+      <div className='absolute bottom-0 left-0 right-0 px-4 md:px-20 pb-4 translate-y-1/2 z-20'>
+        <div className='max-w-2xl mx-auto relative'>
+          <FiSearch size={20} className='absolute left-4 top-1/2 -translate-y-1/2 text-gray-400' />
+          <input
+            type='text'
+            placeholder='Search case study'
+            className='w-full pl-12 pr-4 py-4 rounded-full bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-lg'
+          />
         </div>
       </div>
-    </div>
+    </header>
   );
-};
-
-export default Herosection;
+}

@@ -40,7 +40,7 @@ const BestPathSection = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Heading */}
         <h2
-          className='text-center font-bold mb-12 lg:mb-16 bg-clip-text text-transparent'
+          className='text-center font-medium mb-12 lg:mb-16 bg-clip-text text-transparent'
           style={{
             background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
             WebkitBackgroundClip: 'text',
@@ -81,12 +81,12 @@ const BestPathSection = () => {
                 {/* Content */}
                 <div className='p-6'>
                   <h3
-                    className='font-semibold text-gray-900 mb-3'
+                    className='font-semibold text-[#1F1F1F] mb-3'
                     style={{ fontSize: '18px', lineHeight: '1.4' }}
                   >
                     {path.title}
                   </h3>
-                  <p className='text-gray-600' style={{ fontSize: '14px', lineHeight: '1.6' }}>
+                  <p className='text-[#525252]' style={{ fontSize: '14px', lineHeight: '1.6' }}>
                     {path.description}
                   </p>
                 </div>

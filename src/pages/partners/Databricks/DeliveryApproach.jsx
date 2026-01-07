@@ -96,7 +96,7 @@ const DeliveryApproach = () => {
         {/* Header */}
         <div className='text-center mb-24'>
           <h2
-            className='font-semibold text-[32px] md:text-[32px] mb-4'
+            className='font-medium text-[32px] md:text-[32px] mb-4'
             style={{
               background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
               WebkitBackgroundClip: 'text',
@@ -105,7 +105,7 @@ const DeliveryApproach = () => {
           >
             Our Delivery Approach
           </h2>
-          <h3 className='text-[#333333] font-medium text-[32px] md:text-[32px]'>
+          <h3 className='text-[#404040] font-medium text-[32px] md:text-[32px]'>
             How GWC ensures success from planning to adoption
           </h3>
         </div>
@@ -162,10 +162,10 @@ const DeliveryApproach = () => {
                 </div>
 
                 {/* Text */}
-                <h4 className='text-[#1F2937] font-bold text-lg mb-3 leading-tight'>
+                <h4 className='text-[#404040] font-semibold text-lg mb-3 leading-tight'>
                   {step.title}
                 </h4>
-                <p className='text-[#6B7280] text-sm leading-relaxed'>{step.description}</p>
+                <p className='text-[#404040] text-sm leading-relaxed'>{step.description}</p>
               </div>
             ))}
           </div>
@@ -192,8 +192,10 @@ const DeliveryApproach = () => {
               </div>
 
               {/* Text */}
-              <h4 className='text-[#1F2937] font-bold text-xl mb-3 leading-tight'>{step.title}</h4>
-              <p className='text-[#6B7280] text-base leading-relaxed'>{step.description}</p>
+              <h4 className='text-[#404040] font-semibold text-xl mb-3 leading-tight'>
+                {step.title}
+              </h4>
+              <p className='text-[#404040] text-base leading-relaxed'>{step.description}</p>
             </div>
           ))}
         </div>

@@ -73,7 +73,7 @@ const MeetPeople = () => {
         {/* Heading */}
         <div className='text-center mb-4'>
           <h2
-            className='font-bold bg-clip-text text-transparent mb-3'
+            className='font-medium bg-clip-text text-transparent mb-3'
             style={{
               background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
               WebkitBackgroundClip: 'text',
@@ -111,17 +111,23 @@ const MeetPeople = () => {
                     <Image src={person.image} alt={person.name} fill className='object-cover' />
                   </div>
                   <div>
-                    <h3 className='font-semibold text-gray-900' style={{ fontSize: '18px' }}>
+                    <h3 className='font-semibold text-[#404040]' style={{ fontSize: '18px' }}>
                       {person.name}
                     </h3>
-                    <p className='text-purple-600' style={{ fontSize: '16px' }}>
+                    <p
+                      className='bg-clip-text text-transparent'
+                      style={{
+                        backgroundImage: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                        fontSize: '16px',
+                      }}
+                    >
                       {person.role}
                     </p>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className='text-gray-600' style={{ fontSize: '14px', lineHeight: '1.6' }}>
+                <p className='text-[#404040]' style={{ fontSize: '14px', lineHeight: '1.6' }}>
                   {person.description}
                 </p>
               </div>

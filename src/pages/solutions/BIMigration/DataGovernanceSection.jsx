@@ -21,22 +21,22 @@ gsap.registerPlugin(ScrollTrigger);
 /* ---------------- DATA ---------------- */
 
 const tabs = [
-  'Assessment & Planning',
-  'Data Inventory & Analysis',
-  'Data Migration',
-  'Report & Dashboard Migration',
-  'Integration with Existing Systems',
-  'Security & Access Control',
-  'Training & Change Management',
-  'Testing & Quality Assurance',
+  'Assessment & planning',
+  'Data inventory & analysis',
+  'Data migration',
+  'Report & dashboard migration',
+  'Integration with existing systems',
+  'Security & access control',
+  'Training & change management',
+  'Testing & quality assurance',
   'Deployment',
-  'Post-Migration Optimization',
+  'Post-migration optimization',
 ];
 
 const cards = [
   {
-    badge: 'Assessment & Planning',
-    title: 'A Baseline for Understanding Current Challenges and Opportunities',
+    badge: 'Assessment & planning',
+    title: 'A baseline for understanding current challenges and opportunities',
     points: [
       'Conduct a comprehensive assessment of the existing BI infrastructure.',
       'Align BI migration goals with organizational objectives.',
@@ -44,9 +44,9 @@ const cards = [
     image: imgAssessmentPlanning,
   },
   {
-    badge: 'Data Inventory & Analysis',
+    badge: 'Data inventory & analysis',
     title:
-      'Ensure that the Migrated BI Solution is Built on Accurate, Reliable & Consistent Information',
+      'Ensure that the migrated BI solution is built on accurate, reliable & consistent information',
     points: [
       'Cleanse and transform data as needed.',
       'Identify dependencies between data sources, reports, and dashboards.',
@@ -54,8 +54,8 @@ const cards = [
     image: imgDataInventory,
   },
   {
-    badge: 'Data Migration',
-    title: 'Seamless & Efficient Transfer of Data to the New BI Platform',
+    badge: 'Data migration',
+    title: 'Seamless & efficient transfer of data to the new BI platform',
     points: [
       'Implement an incremental migration approach.',
       'Monitor the data migration process in real-time and validate the integrity of transferred data.',
@@ -63,8 +63,8 @@ const cards = [
     image: imgDataMigration,
   },
   {
-    badge: 'Report & Dashboard Migration',
-    title: 'Prioritize Migration Efforts',
+    badge: 'Report & dashboard migration',
+    title: 'Prioritize migration efforts',
     points: [
       'Optimize visualizations, layouts, and interactions.',
       'Gather feedback from stakeholders.',
@@ -72,8 +72,8 @@ const cards = [
     image: imgReportDashboard,
   },
   {
-    badge: 'Integration with Existing Systems',
-    title: 'Seamless Data Flow & Interoperability',
+    badge: 'Integration with existing systems',
+    title: 'Seamless data flow & interoperability',
     points: [
       'Integrate the new BI solution with existing systems, databases, and applications.',
       "Ensure a clean transition and minimize redundancy in the organization's IT landscape.",
@@ -81,8 +81,8 @@ const cards = [
     image: imgIntegration,
   },
   {
-    badge: 'Security & Access Control',
-    title: 'Address Any Aecurity Gaps & Maintain a Robust Security Posture',
+    badge: 'Security & access control',
+    title: 'Address any security gaps & maintain a robust security posture',
     points: [
       'Define and manage user access rights based on roles and responsibilities.',
       'Apply encryption to sensitive data during transmission and storage.',
@@ -90,8 +90,8 @@ const cards = [
     image: imgSecurity,
   },
   {
-    badge: 'Training & Change Management',
-    title: 'Leverage the Full Potential of the Modernized Solution',
+    badge: 'Training & change management',
+    title: 'Leverage the full potential of the modernized solution',
     points: [
       'Develop and deliver training programs to educate users.',
       'Implement a communication plan to inform stakeholders about the upcoming changes.',
@@ -99,8 +99,8 @@ const cards = [
     image: imgTraining,
   },
   {
-    badge: 'Testing & Quality Assurance',
-    title: 'Identify & Address Potential Issues',
+    badge: 'Testing & quality assurance',
+    title: 'Identify & address potential issues',
     points: [
       'Develop a testing strategy that covers data integrity, functionality, performance, and security.',
       'Optimize performance based on testing results to ensure a seamless user experience.',
@@ -109,7 +109,7 @@ const cards = [
   },
   {
     badge: 'Deployment',
-    title: 'Phased Deployment Approach to Minimize Disruptions',
+    title: 'Phased deployment approach to minimize disruptions',
     points: [
       'Provide adequate support during the go-live phase.',
       'Establish a support mechanism to assist users with the transition.',
@@ -117,8 +117,8 @@ const cards = [
     image: imgDeployment,
   },
   {
-    badge: 'Post-Migration Optimization',
-    title: 'Identify & Address Any Performance Bottlenecks',
+    badge: 'Post-migration optimization',
+    title: 'Identify & address any performance bottlenecks',
     points: [
       'Continuously monitor the performance of the new BI platform in the post-migration phase.',
       'Collect ongoing feedback from users and stakeholders.',
@@ -144,7 +144,7 @@ export default function BIMigrationSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 20px', // Pause when section is 80px from top to show tabs
-          end: `+=${cards.length * 80}%`, // Reduced from 100% to 80% for less scroll
+          end: `+=${cards.length * 60}%`, // Reduced for faster scroll while keeping lock
           pin: true,
           scrub: 1,
           anticipatePin: 1,
@@ -155,6 +155,8 @@ export default function BIMigrationSection() {
           },
         },
       });
+
+      tl.to({}, { duration: 0.5 }); // Short delay to lock first card
 
       cardRefs.current.forEach((card, i) => {
         gsap.set(card, {
@@ -177,7 +179,7 @@ export default function BIMigrationSection() {
           tl.to(
             card,
             {
-              opacity: 50,
+              opacity: 1,
               scale: 1,
               y: 0,
               pointerEvents: 'auto',

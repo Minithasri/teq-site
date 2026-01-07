@@ -67,7 +67,7 @@ const SetsApart = () => {
             href='/contact'
             className='px-6 py-2.5 rounded-full border border-[#6F2B8B] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors shrink-0 flex items-center gap-2 text-sm'
           >
-            Talk to Our Experts
+            Talk to our experts
             <FiArrowRight className='w-4 h-4' />
           </Link>
         </header>
@@ -75,12 +75,12 @@ const SetsApart = () => {
         {/* Title & Description */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-20'>
           <div>
-            <h2 className='text-3xl md:text-4xl font-semibold leading-tight text-gray-900'>
+            <h2 className='text-3xl md:text-4xl font-medium leading-tight text-[#404040]'>
               What sets us apart?
             </h2>
           </div>
           <div className='flex justify-start lg:justify-end'>
-            <p className='text-gray-600 max-w-lg leading-relaxed text-left lg:text-left text-sm md:text-base'>
+            <p className='text-[#404040] max-w-lg leading-relaxed text-left lg:text-left text-sm md:text-base'>
               GWC&apos;s Managed Services team navigates the GCP landscape for you, delivering peak
               performance and unlocking sustainable growth through a trusted partnership.
             </p>
@@ -112,8 +112,8 @@ const SetsApart = () => {
 
                 {/* Content */}
                 <div className='px-6 pb-6 pt-0 flex-1 flex flex-col'>
-                  <h3 className='text-lg font-bold text-gray-900 mb-3'>{card.title}</h3>
-                  <p className='text-gray-600 text-[14px] leading-relaxed'>{card.description}</p>
+                  <h3 className='text-lg font-semibold text-[#404040] mb-3'>{card.title}</h3>
+                  <p className='text-[#404040] text-[14px] leading-relaxed'>{card.description}</p>
                 </div>
               </article>
             </div>

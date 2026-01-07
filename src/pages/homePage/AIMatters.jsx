@@ -119,7 +119,7 @@ const AIMatters = () => {
 
             {/* Title Text */}
             <div className='flex flex-col lg:flex-row items-center text-center lg:items-start lg:text-left gap-6 lg:gap-8'>
-              <h2 className='text-white font-semibold text-2xl lg:text-4xl flex-1 leading-tight'>
+              <h2 className='text-white font-semibold text-2xl lg:text-4xl flex-1 lg:leading-[52px]'>
                 Why GWC? Your
                 <br className='hidden lg:block' /> enterprise AI advantage.
               </h2>

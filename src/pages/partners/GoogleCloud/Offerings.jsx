@@ -70,7 +70,7 @@ const Offerings = () => {
     >
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
-        <h2 className='text-3xl md:text-4xl font-semibold text-center text-gray-800 mb-12'>
+        <h2 className='text-3xl md:text-4xl font-medium text-center text-[#404040] mb-12'>
           Google Service Offerings
         </h2>
 
@@ -127,13 +127,13 @@ const Offerings = () => {
                   {activeTab + 1}. {googleCloudServices[activeTab].tag}
                 </div>
 
-                {/* Service Title */}
-                <h3 className='text-2xl font-bold text-gray-800 mb-4'>
+                {/* Service Title
+                <h3 className='text-2xl font-medium text-[#404040] mb-4'>
                   {googleCloudServices[activeTab].name}
-                </h3>
+                </h3> */}
 
                 {/* Description derived from sources */}
-                <p className='text-gray-600 leading-relaxed text-[15px] md:text-[16px]'>
+                <p className='text-[#404040] leading-relaxed text-[15px] md:text-[16px]'>
                   {googleCloudServices[activeTab].description}
                 </p>
               </div>

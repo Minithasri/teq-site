@@ -189,7 +189,7 @@ export default function Leaders() {
       <div className='max-w-7xl mx-auto relative z-10'>
         {/* Header */}
         <div className='text-center mb-12'>
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>Meet Our Leaders</h2>
+          <h2 className='text-[40px] font-semibold text-white mb-4'>Meet Our Leaders</h2>
           <p className='text-white/80 text-lg max-w-3xl mx-auto'>
             Our leaders inspire excellence, accelerate transformation, and drive global growth
             through innovation.
@@ -255,8 +255,8 @@ export default function Leaders() {
 
                   <div className='p-6 flex items-center justify-between'>
                     <div className='text-left'>
-                      <h3 className='text-xl font-bold text-gray-900 mb-1'>{leader.name}</h3>
-                      <p className='text-gray-600 text-sm'>{leader.title}</p>
+                      <h3 className='text-xl font-semibold text-[#212529] mb-1'>{leader.name}</h3>
+                      <p className='text-[#525252] text-sm'>{leader.title}</p>
                     </div>
                     <a
                       href={leader.linkedin}
@@ -386,8 +386,8 @@ export default function Leaders() {
                   />
                   <div className='absolute inset-0 bg-gradient-to-tr from-[#7030B1]/30 via-transparent to-[#B56DD3]/30 mix-blend-overlay'></div>
                 </div>
-                <h3 className='text-xl font-bold text-white mb-3'>{card.title}</h3>
-                <p className='text-white/80 text-sm leading-relaxed'>{card.description}</p>
+                <h3 className='text-[17px] font-semibold text-[#FFF] mb-3'>{card.title}</h3>
+                <p className='text-[#EFCAFF] text-[14px] leading-relaxed'>{card.description}</p>
               </div>
             </div>
           ))}

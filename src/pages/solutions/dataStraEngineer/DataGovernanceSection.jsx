@@ -21,22 +21,22 @@ gsap.registerPlugin(ScrollTrigger);
 /* ---------------- DATA ---------------- */
 
 const tabs = [
-  'Data Discovery',
-  'Advanced Analytics',
-  'Digital Transformation Consulting',
-  'Customized Data Roadmaps',
-  'Objective Identification',
-  'Target Audience Identification',
-  'Tailored Data Strategies',
-  'Data Maturity Identification',
-  'Data Compliance',
-  'IT Infra Optimization',
+  'Data discovery',
+  'Advanced analytics',
+  'Digital transformation consulting',
+  'Customized data roadmaps',
+  'Objective identification',
+  'Target audience identification',
+  'Tailored data strategies',
+  'Data maturity identification',
+  'Data compliance',
+  'IT infra optimization',
 ];
 
 const cards = [
   {
-    badge: 'Data Discovery',
-    title: 'Uncover Deeper Insights Through Data Discovery',
+    badge: 'Data discovery',
+    title: 'Uncover deeper insights through data discovery',
     points: [
       'Harness the potential of data discovery to make informed decisions, by uncovering patterns and trends.',
       'Embrace data discovery as a tool for efficient exploration, by allowing your team to dig deep into data effortlessly.',
@@ -44,8 +44,8 @@ const cards = [
     image: imgDataDiscovery,
   },
   {
-    badge: 'Advanced Analytics',
-    title: 'Overcome Complexity With Advanced Data Analytics',
+    badge: 'Advanced analytics',
+    title: 'Overcome complexity with advanced data analytics',
     points: [
       'Foresee trends, patterns, and potential challenges, empowering proactive responses with predictive analytics.',
       'Gain a competitive edge by leveraging sophisticated algorithms and models that extract meaningful information.',
@@ -53,18 +53,18 @@ const cards = [
     image: imgAdvancedAnalytics,
   },
   {
-    badge: 'Digital Transformation Consulting',
+    badge: 'Digital transformation consulting',
     title:
-      'Navigate Digital Transformation With Our Expert Digital Transformation Consulting Services',
+      'Navigate digital transformation with our expert digital transformation consulting services',
     points: [
-      'Get a strategic roadmap tailored to your business, guiding you through the complexities of digital evolution with a clear plan for success.',
+      'Expert digital transformation consulting for scalable growth.',
       'Embrace change with agility as our consultants assist in the seamless integration of digital technologies.',
     ],
     image: imgDigitalTransformation,
   },
   {
-    badge: 'Customized Data Roadmaps',
-    title: 'Craft Your Customized Data Roadmap With GWC',
+    badge: 'Customized data roadmaps',
+    title: 'Craft your customized data roadmap with GWC',
     points: [
       'Our customized data roadmap ensures strategic alignment with your business objectives, paving the way for data-driven success.',
       'Crafted with scalability in mind, the roadmap evolves alongside your business, accommodating growth and technological advancements.',
@@ -72,17 +72,17 @@ const cards = [
     image: imgCustomizedRoadmap,
   },
   {
-    badge: 'Objective Identification',
-    title: 'Get Clear Direction Through Objective Identification For Data-Driven Excellence',
+    badge: 'Objective identification',
+    title: 'Get clear direction through objective identification for data-driven excellence',
     points: [
-      'Our data strategy solution begins with objective identification, providing clarity on the strategic goals your organization aims to achieve through effective data utilization.',
-      'We meticulously assess the relevance of data objectives to ensure alignment with organizational priorities, enabling the creation of a purposeful and impactful data strategy.',
+      'Our data strategy solution begins with objective identification, providing clarity on the strategic goals your organization aims to achieve through data use.',
+      'We assess data objectives to ensure alignment with organizational priorities, enabling a purposeful and impactful data strategy.',
     ],
     image: imgObjectiveIdentification,
   },
   {
-    badge: 'Target Audience Identification',
-    title: 'Target Audience Identification For Precise Engagement',
+    badge: 'Target audience identification',
+    title: 'Target audience identification for precise engagement',
     points: [
       'Our approach involves strategic profiling to precisely identify your target audience, ensuring a deep understanding of their preferences, behaviors, and needs.',
       'Our strategies facilitate optimized outreach efforts, ensuring that your messages resonate with the right individuals.',
@@ -90,8 +90,8 @@ const cards = [
     image: imgTargetAudience,
   },
   {
-    badge: 'Tailored Data Strategies',
-    title: 'Crafting Tailored Data Strategies For Excellence',
+    badge: 'Tailored data strategies',
+    title: 'Crafting tailored data strategies for excellence',
     points: [
       'Our tailored data strategies are crafted with a customized approach, aligning with the unique needs, goals, and challenges of your organization.',
       'We focus on optimizing your data ecosystem, ensuring that every component of the strategy is tailored to enhance data quality, accessibility, and relevance.',
@@ -99,8 +99,8 @@ const cards = [
     image: imgTailoredStrategies,
   },
   {
-    badge: 'Data Maturity Identification',
-    title: 'We Reveal Insights Into Your Data Maturity Level',
+    badge: 'Data maturity identification',
+    title: 'We reveal insights into your data maturity level',
     points: [
       "Our data maturity identification process involves a precise assessment of your organization's current data capabilities.",
       'Gain strategic insights into the potential areas for growth and improvement in your data practices.',
@@ -108,8 +108,8 @@ const cards = [
     image: imgDataMaturity,
   },
   {
-    badge: 'Data Compliance',
-    title: 'Ensure Data Integrity While Navigating Data Compliance Challenges',
+    badge: 'Data compliance',
+    title: 'Ensure data integrity while navigating data compliance challenges',
     points: [
       'Our data compliance solutions guarantee strict adherence to regulatory requirements.',
       'We implement continuous monitoring mechanisms to track changes in data compliance regulations, allowing prompt adjustments.',
@@ -117,8 +117,8 @@ const cards = [
     image: imgDataCompliance,
   },
   {
-    badge: 'IT Infra Optimization',
-    title: 'Streamline Excellence With Our IT Infrastructure Optimization Strategies',
+    badge: 'IT infra optimization',
+    title: 'Streamline excellence with our IT infrastructure optimization strategies',
     points: [
       'Our IT infra optimization strategies focus on enhancing operational efficiency, ensuring that your IT resources are utilized effectively.',
       'We provide scalable solutions to accommodate the evolving needs of your organization.',
@@ -147,7 +147,7 @@ export default function DataStrategySection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 40px', // Pause when section is 80px from top to show tabs
-          end: `+=${cards.length * 80}%`, // Reduced from 100% to 80% for less scroll
+          end: `+=${cards.length * 60}%`, // Reduced for faster scroll while keeping lock
           pin: true,
           scrub: 1,
           anticipatePin: 1,
@@ -158,6 +158,8 @@ export default function DataStrategySection() {
           },
         },
       });
+
+      tl.to({}, { duration: 0.5 }); // Short delay to lock first card
 
       cardRefs.current.forEach((card, i) => {
         gsap.set(card, {
@@ -180,7 +182,7 @@ export default function DataStrategySection() {
           tl.to(
             card,
             {
-              opacity: 50,
+              opacity: 1,
               scale: 1,
               y: 0,
               pointerEvents: 'auto',

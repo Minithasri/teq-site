@@ -32,7 +32,7 @@ export default function Cards() {
               lineHeight: '1.5',
             }}
           >
-            Why this works better with GWC
+            Why this works better with GWC ?
           </h2>
 
           <p className='text-gray-600 leading-loose text-md mb-12'>
@@ -47,7 +47,7 @@ export default function Cards() {
             className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[170px] h-[45px] rounded-full font-medium text-[15px] justify-center hover:scale-105 transition-transform shadow-lg'
             style={{ background: 'linear-gradient(135deg, #6F2B8B 0%, #B56DD3 100%)' }}
           >
-            Contact Us
+            Contact us
             <FiArrowRight className='w-5 h-5' aria-hidden />
           </Link>
         </div>

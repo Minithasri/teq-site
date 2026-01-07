@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import Link from 'next/link';
 
 const Cards = () => {
@@ -16,7 +15,14 @@ const Cards = () => {
   return (
     <section className='py-16 px-4 md:px-12 bg-gray-50'>
       <div className='max-w-7xl mx-auto'>
-        <h2 className='text-3xl font-bold text-center mb-12 text-[#9333EA]'>
+        <h2
+          className='text-[32px] font-medium text-center mb-12 bg-clip-text text-transparent'
+          style={{
+            background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+          }}
+        >
           Explore Our Case Studies
         </h2>
 
@@ -25,34 +31,51 @@ const Cards = () => {
             <div
               key={card.id}
               className='bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col'
+              style={{ width: '400px', height: '400px' }}
             >
-              {/* Image Container */}
-              <div className='relative h-48 overflow-hidden'>
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className='w-full h-full object-cover transition-transform duration-300 hover:scale-105'
-                />
+              {/* Image Container with Padding */}
+              <div className='p-4'>
+                <div
+                  className='relative overflow-hidden rounded-xl'
+                  style={{ width: '350px', height: '190px' }}
+                >
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className='w-full h-full object-cover transition-transform duration-300 hover:scale-105'
+                  />
+                </div>
               </div>
 
               {/* Content Container */}
-              <div className='p-6 flex flex-col flex-grow'>
-                <h3 className='text-lg font-bold text-gray-900 mb-3'>{card.title}</h3>
-                <p className='text-gray-600 text-sm mb-6 flex-grow leading-relaxed'>
+              <div className='px-6 pb-6 flex flex-col flex-grow'>
+                <h3 className='text-[18px] font-semibold text-[#404040] mb-3'>{card.title}</h3>
+                <p className='text-[#404040] text-[14px] font-normal mb-2 flex-grow leading-relaxed'>
                   {card.description}
                 </p>
 
                 <Link
                   href={card.link}
-                  className='inline-flex items-center text-[#9333EA] font-semibold text-sm hover:underline mt-auto'
+                  className='inline-flex items-center font-semibold text-[16px] hover:underline mt-auto bg-clip-text text-transparent'
+                  style={{
+                    background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
                 >
                   Explore case study
                   <svg
                     className='w-4 h-4 ml-2'
                     fill='none'
-                    stroke='currentColor'
+                    stroke='url(#gradient)'
                     viewBox='0 0 24 24'
                   >
+                    <defs>
+                      <linearGradient id='gradient' x1='0%' y1='0%' x2='0%' y2='100%'>
+                        <stop offset='0%' stopColor='#7030B1' />
+                        <stop offset='100%' stopColor='#B56DD3' />
+                      </linearGradient>
+                    </defs>
                     <path
                       strokeLinecap='round'
                       strokeLinejoin='round'

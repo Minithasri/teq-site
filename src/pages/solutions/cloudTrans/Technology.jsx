@@ -10,28 +10,28 @@ const cards = [
     title: 'Cloud Migration Efficiency',
     description:
       'Embark on a seamless journey to the cloud with our expert guidance. We specialize in orchestrating smooth migrations, ensuring minimal downtime and maximum efficiency.',
-    footer: 'Seamless Cloud Migration',
+    footer: 'Seamless cloud migration',
     icon: '/images/solutions/dataStrategyEngineer/image1.svg',
   },
   {
     title: 'AI-Infused Cloud Services',
     description:
       'Elevate your cloud environment with the infusion of Artificial Intelligence. Unleash the potential of machine learning, predictive analytics, and automated decision-making for a future-ready business.',
-    footer: 'AI-Powered Cloud Innovation',
+    footer: 'AI powered cloud innovation',
     icon: '/images/solutions/dataStrategyEngineer/image2.svg',
   },
   {
     title: 'Data-Driven Decision Power',
     description:
       'Transform raw data into actionable insights. Our cloud-based analytics solutions empower you to make informed decisions, enhancing operational efficiency and cost.',
-    footer: 'Analytics-Driven Insights',
+    footer: 'Analytics driven insights',
     icon: '/images/solutions/datagoverance/logo3.svg',
   },
   {
     title: 'Secure Cloud Ecosystems',
     description:
       'Safeguard your digital assets with our robust security measures. Our solutions ensure that your cloud environment adheres to the highest standards of security and compliance, protecting your data at every level.',
-    footer: 'Comprehensive Cloud Security',
+    footer: 'Comprehensive cloud security',
     icon: '/images/solutions/datagoverance/logo4.svg',
   },
 ];
@@ -66,7 +66,7 @@ const Technology = () => {
               className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
               style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
             >
-              Talk to Our Experts
+              Talk to our experts
               <FiArrowRight className='w-4 h-4' aria-hidden />
             </Link>
           </header>
@@ -77,7 +77,7 @@ const Technology = () => {
               id='cloud-transformation-expertise'
               className='text-3xl md:text-4xl font-medium text-gray-800'
             >
-              Cloud Transformation Expertise
+              Cloud transformation expertise
             </h2>
 
             <p className='text-[16px] text-gray-500 mr-2 text-right'>

@@ -17,7 +17,7 @@ export default function Agent() {
           <div className='relative z-20 flex flex-col items-center justify-center text-center py-16 px-8'>
             {/* TITLE */}
             <h2 className='text-3xl sm:text-4xl font-semibold text-gray-800 mb-2'>
-              Ready to Activate <span style={{ color: '#6F2B8B' }}>Data Strategy</span>
+              Ready to activate <span style={{ color: '#6F2B8B' }}>Data Strategy</span>
             </h2>
             <h2 className='text-3xl sm:text-4xl font-semibold text-gray-800 mb-8'>
               to the next level?
@@ -29,11 +29,11 @@ export default function Agent() {
                 className='w-[200px] h-[48px] rounded-full border-2 font-medium hover:bg-purple-50 transition text-[15px]'
                 style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
               >
-                Explore Use Cases
+                Explore use cases
               </button>
               <button className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[200px] h-[48px] rounded-full font-medium text-[15px] justify-center hover:scale-105 transition-transform shadow-lg'>
                 <Image src='/images/solutions/phone.svg' alt='Phone' width={18} height={18} />
-                Contact Us
+                Contact us
               </button>
             </div>
           </div>

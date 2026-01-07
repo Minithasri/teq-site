@@ -1,15 +1,38 @@
 'use client';
 import Image from 'next/image';
-import { useRef, useState } from 'react';
-import { FiMapPin, FiSearch } from 'react-icons/fi';
+import { useEffect, useRef, useState } from 'react';
+import { FiChevronDown, FiMapPin, FiSearch } from 'react-icons/fi';
 
 const ExploreSection = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [location, setLocation] = useState('');
   const [jobType, setJobType] = useState('');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const sectionRef = useRef(null);
+  const dropdownRef = useRef(null);
   const jobsPerPage = 6;
+
+  // Job type options
+  const jobTypeOptions = [
+    { value: 'full-time', label: 'Full Time' },
+    { value: 'part-time', label: 'Part Time' },
+    { value: 'contract', label: 'Contract' },
+  ];
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = event => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   // All job listings
   const allJobs = [
@@ -100,7 +123,8 @@ const ExploreSection = () => {
     const matchesLocation =
       location === '' || job.location.toLowerCase().includes(location.toLowerCase());
 
-    const matchesType = jobType === '' || job.type.toLowerCase() === jobType.toLowerCase();
+    const matchesType =
+      jobType === '' || job.type.toLowerCase().replace(/\s+/g, '-') === jobType.toLowerCase();
 
     return matchesSearch && matchesLocation && matchesType;
   });
@@ -136,7 +160,7 @@ const ExploreSection = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='text-center mb-8 lg:mb-12'>
-          <h2 className='text-white text-3xl lg:text-4xl font-bold mb-4'>
+          <h2 className='text-white text-[32px] lg:text-[36px] font-medium mb-4'>
             Explore the Amazingness
           </h2>
           <p className='text-white/80 text-base lg:text-lg'>
@@ -174,18 +198,48 @@ const ExploreSection = () => {
             />
           </div>
 
-          {/* Job Type Select */}
-          <div className='flex-1'>
-            <select
-              value={jobType}
-              onChange={e => setJobType(e.target.value)}
-              className='w-full px-4 py-3 rounded-full bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 appearance-none cursor-pointer'
+          {/* Job Type Custom Dropdown */}
+          <div className='flex-1 relative' ref={dropdownRef}>
+            <button
+              type='button'
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className='w-full px-4 py-3 rounded-full bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 flex items-center justify-between'
             >
-              <option value=''>Select Type</option>
-              <option value='full-time'>Full Time</option>
-              <option value='part-time'>Part Time</option>
-              <option value='contract'>Contract</option>
-            </select>
+              <span className={jobType === '' ? 'text-gray-400' : 'text-gray-700'}>
+                {jobTypeOptions.find(opt => opt.value === jobType)?.label || 'Select Type'}
+              </span>
+              <FiChevronDown
+                className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
+                  isDropdownOpen ? 'rotate-180' : ''
+                }`}
+              />
+            </button>
+
+            {/* Dropdown Menu */}
+            {isDropdownOpen && (
+              <div className='absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-lg overflow-hidden z-50 border border-gray-100'>
+                {jobTypeOptions.map((option, index) => (
+                  <button
+                    key={option.value}
+                    type='button'
+                    onClick={() => {
+                      setJobType(option.value);
+                      setIsDropdownOpen(false);
+                      setCurrentPage(1); // Reset to page 1 when filtering
+                    }}
+                    className={`w-full px-4 py-3 text-left hover:bg-purple-50 transition-colors ${
+                      jobType === option.value
+                        ? 'bg-purple-50 text-purple-700 font-medium'
+                        : 'text-gray-700'
+                    } ${index === 0 ? 'rounded-t-2xl' : ''} ${
+                      index === jobTypeOptions.length - 1 ? 'rounded-b-2xl' : ''
+                    }`}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Search Button */}
@@ -210,7 +264,7 @@ const ExploreSection = () => {
               <div className='flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4'>
                 {/* Left Side - Job Info */}
                 <div className='flex-1 space-y-3'>
-                  <h3 className='text-white text-lg lg:text-xl font-semibold'>{job.title}</h3>
+                  <h3 className='text-white text-lg lg:text-[18px] font-medium'>{job.title}</h3>
                   <div className='flex flex-wrap items-center gap-2 text-sm text-white/70'>
                     <span>{job.location}</span>
                     <span className='text-white/40'>|</span>

@@ -42,8 +42,8 @@ export default function VisionandMission() {
         {/* --- Header Content (Split Layout) --- */}
         <div className='flex flex-col lg:flex-row lg:items-start justify-between gap-8 mb-16'>
           {/* Main Heading */}
-          <h2 className='text-[32px] lg:text-[40px] font-bold shrink-0'>
-            <span className='text-black'>Our </span>
+          <h2 className='text-[32px] lg:text-[40px] font-medium shrink-0'>
+            <span className='text-[#404040]'>Our </span>
             <span
               className='bg-clip-text text-transparent'
               style={{
@@ -57,7 +57,7 @@ export default function VisionandMission() {
           </h2>
 
           {/* Description - Aligned with heading */}
-          <p className='text-gray-600 text-[16px] lg:text-[16px] max-w-xl leading-relaxed text-left'>
+          <p className='text-[#525252] text-[16px] lg:text-[16px] max-w-xl leading-relaxed text-left'>
             Our certified experts analyze and optimize your GCP environment to reduce costs, improve
             efficiency, and ensure reliable cloud operations so you can focus on your business
             goals.
@@ -107,7 +107,7 @@ export default function VisionandMission() {
                 </div>
 
                 {/* Content */}
-                <h3 className='text-2xl font-bold text-white pb-20'>Vision</h3>
+                <h3 className='text-2xl font-semibold text-white pb-20'>Vision</h3>
                 <p className='text-white/90 text-[14px] leading-relaxed'>
                   Our vision is to inspire and transform businesses, propelling them to excel in the
                   digital realm utilizing data analytics and AI solutions. We envision a future
@@ -149,7 +149,7 @@ export default function VisionandMission() {
               </div>
 
               {/* Content */}
-              <h3 className='text-2xl font-bold text-white pb-20'>Mission</h3>
+              <h3 className='text-2xl font-semibold text-white pb-20'>Mission</h3>
               <p className='text-white/90 text-[14px] leading-relaxed'>
                 We are committed to helping our clients secure victories by creating holistic and
                 predictable impacts fueled by data-driven strategies. Our mission is to deliver

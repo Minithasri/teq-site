@@ -31,17 +31,17 @@ const Business = () => {
           <h2 className='text-[24px] md:text-[36px] font-medium text-gray-900 leading-tight mb-8 sm:mb-12'>
             Ready to <span className='text-[#914DC1]'>Activate Agentic AI</span>
             <br />
-            <span className='block sm:inline'> in Your Business?</span>
+            <span className='block sm:inline'> in your Business?</span>
           </h2>
 
           {/* BUTTONS */}
           <div className='flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center'>
             <button className='w-full sm:w-[200px] h-[50px] rounded-full border-2 font-medium hover:bg-purple-50 transition-colors duration-300 text-sm sm:text-base border-[#6F2B8B] text-[#6F2B8B]'>
-              Explore Use Cases
+              Explore use cases
             </button>
             <button className='inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-full sm:w-[200px] h-[50px] rounded-full font-medium text-sm sm:text-base hover:scale-105 transition-transform shadow-lg'>
               <Image src='/images/solutions/phone.svg' alt='Phone' width={20} height={20} />
-              Contact Us
+              Contact us
             </button>
           </div>
         </div>

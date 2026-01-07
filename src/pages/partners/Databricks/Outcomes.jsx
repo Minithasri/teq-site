@@ -44,7 +44,7 @@ const Outcomes = () => {
 
           <div className='w-full h-full relative z-10 p-8 md:p-16'>
             <div className='w-full md:w-3/4 lg:w-3/5'>
-              <h2 className='text-3xl md:text-[40px] font-bold text-white mb-8 leading-tight'>
+              <h2 className='text-3xl md:text-[40px] font-medium text-white mb-8 leading-tight'>
                 Outcomes & Metrics
                 <br />
                 You Can Expect

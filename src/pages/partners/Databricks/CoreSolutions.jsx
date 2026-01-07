@@ -62,7 +62,7 @@ const CoreSolutions = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Title */}
         <div className='flex items-center justify-center gap-4 mb-12'>
-          <h2 className='text-3xl md:text-4xl font-medium text-[#5C2B8F] text-center'>
+          <h2 className='text-[28px] md:text-[32px] font-medium text-[#5C2B8F] text-center'>
             Core Solution Scenarios We Deliver
           </h2>
           <Image
@@ -84,11 +84,11 @@ const CoreSolutions = () => {
                     <Image src={item.icon} alt={item.title} width={48} height={48} />
                   </div>
 
-                  <h3 className='text-lg font-bold text-gray-900 mb-3 leading-tight'>
+                  <h3 className='text-lg font-semibold text-[#404040] mb-3 leading-tight'>
                     {item.title}
                   </h3>
 
-                  <p className='text-gray-500 text-sm leading-relaxed'>{item.description}</p>
+                  <p className='text-[#404040] text-sm leading-relaxed'>{item.description}</p>
                 </div>
               ))}
             </div>
@@ -104,7 +104,7 @@ const CoreSolutions = () => {
               background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
             }}
           >
-            Talk to Our Experts
+            Talk to our experts
             <FiArrowRight className='w-4 h-4' />
           </Link>
         </div>

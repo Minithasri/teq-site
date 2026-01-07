@@ -60,7 +60,7 @@ const SmartAutomation = () => {
                     className='w-5 h-5 md:w-6 md:h-6'
                   />
                 </div>
-                <p className='text-gray-800 font-semibold text-sm md:text-base leading-snug'>
+                <p className='text-[#404040] font-semibold text-sm md:text-base leading-snug'>
                   {feature}
                 </p>
               </div>

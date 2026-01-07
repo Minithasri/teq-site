@@ -3,7 +3,7 @@
 import Image from 'next/image';
 
 const sectionData = {
-  title: 'GWC Turns Your Data Into Business Value',
+  title: 'GWC turns your data into business value',
   subtitle:
     'Our BI and analytics solutions are customized to your business needs, delivering targeted insights that align with your unique challenges and goals.',
   mainImage: '/images/solutions/dataStrategyEngineer/bgsection2.png',
@@ -16,7 +16,7 @@ export default function SectionGwc() {
       <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-36 relative'>
         {/* Title */}
         <h2
-          className='text-3xl md:text-3xl font-medium text-center mb-4'
+          className='text-3xl md:text-3xl font-medium text-center mb-4 '
           style={{ color: '#6F2B8B' }}
         >
           {sectionData.title}

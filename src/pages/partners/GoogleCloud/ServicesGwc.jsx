@@ -67,7 +67,7 @@ const ServicesGwc = () => {
             href='/contact'
             className='px-6 py-2.5 rounded-full border border-[#6F2B8B] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors shrink-0 flex items-center gap-2 text-sm bg-white/80 backdrop-blur-sm'
           >
-            Talk to Our Experts
+            Talk to our experts
             <FiArrowRight className='w-4 h-4' />
           </Link>
         </header>
@@ -75,14 +75,14 @@ const ServicesGwc = () => {
         {/* Title & Description */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-[300px]'>
           <div>
-            <h2 className='text-[28px] md:text-[32px] font-semibold leading-relaxed text-gray-900'>
+            <h2 className='text-[28px] md:text-[32px] font-medium leading-relaxed text-[#404040]'>
               <span className='text-[#8B35BC]'>Google Cloud Services</span>
               <br />
               at GWC
             </h2>
           </div>
           <div className='flex justify-start lg:justify-end'>
-            <p className='text-gray-600 max-w-lg text-[15px] leading-relaxed text-left lg:text-left'>
+            <p className='text-[#404040] max-w-lg text-[15px] leading-relaxed text-left lg:text-left'>
               Our certified experts analyze and optimize your GCP environment to reduce costs,
               improve efficiency, and ensure reliable cloud operations so you can focus on your
               business goals.
