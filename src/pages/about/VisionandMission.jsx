@@ -82,7 +82,7 @@ export default function VisionandMission() {
             </div>
 
             {/* Vision Card */}
-            <div className='relative ml-44'>
+            <div className='relative ml-[202px]'>
               {/* Three Dash Lines Decoration - Outside card */}
               <div className='absolute -top-0 -left-12 w-12 h-12 z-10'>
                 <Image src='/images/AboutUs/threedashlines.svg' alt='' width={38} height={38} />
@@ -92,8 +92,8 @@ export default function VisionandMission() {
                 className='relative rounded-3xl p-8 -mt-4 shadow-xl overflow-hidden'
                 style={{
                   background: 'linear-gradient(135deg, #6F2B8B 0%, #9D6D9D 100%)',
-                  width: '530px',
-                  height: '420px',
+                  width: '500px',
+                  height: '340px',
                 }}
               >
                 {/* Icon */}
@@ -107,7 +107,7 @@ export default function VisionandMission() {
                 </div>
 
                 {/* Content */}
-                <h3 className='text-2xl font-semibold text-white pb-20'>Vision</h3>
+                <h3 className='text-2xl font-semibold text-white pb-8'>Vision</h3>
                 <p className='text-white/90 text-[14px] leading-relaxed'>
                   Our vision is to inspire and transform businesses, propelling them to excel in the
                   digital realm utilizing data analytics and AI solutions. We envision a future
@@ -126,7 +126,7 @@ export default function VisionandMission() {
             </div>
 
             {/* Three Dash Lines Decoration - Bottom Left */}
-            <div className='absolute bottom-52 left-2 w-12 h-12 z-10'>
+            <div className='absolute bottom-48 left-2 w-12 h-12 z-10'>
               <Image src='/images/AboutUs/threedashlines3.svg' alt='' width={48} height={48} />
             </div>
 
@@ -134,8 +134,8 @@ export default function VisionandMission() {
               className='relative rounded-3xl p-8 shadow-xl overflow-hidden'
               style={{
                 background: 'linear-gradient(135deg, #DCA6AB 0%, #9257A0 50%, #823774 100%)',
-                width: '520px',
-                height: '400px',
+                width: '500px',
+                height: '340px',
               }}
             >
               {/* Icon */}
@@ -149,7 +149,7 @@ export default function VisionandMission() {
               </div>
 
               {/* Content */}
-              <h3 className='text-2xl font-semibold text-white pb-20'>Mission</h3>
+              <h3 className='text-2xl font-semibold text-white pb-8'>Mission</h3>
               <p className='text-white/90 text-[14px] leading-relaxed'>
                 We are committed to helping our clients secure victories by creating holistic and
                 predictable impacts fueled by data-driven strategies. Our mission is to deliver

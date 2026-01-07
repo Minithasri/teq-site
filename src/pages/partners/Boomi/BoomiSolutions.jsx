@@ -74,17 +74,17 @@ const BoomiSolutions = () => {
         <div className='hidden md:block'>
           {/* Tabs */}
           <div className='flex justify-center mb-12'>
-            <div className='inline-flex flex-wrap justify-center bg-[#FBF4FE] rounded-full p-2 gap-2 shadow-lg border border-purple-50'>
+            <div className='inline-flex flex-wrap justify-center bg-[#FBF4FE] rounded-full p-1 gap-2 shadow-lg border border-purple-50 max-w-full'>
               {solutions.map((solution, index) => {
                 const isActive = activeTab === index;
                 return (
                   <button
                     key={index}
                     onClick={() => setActiveTab(index)}
-                    className={`px-6 py-2.5 rounded-full text-[14px] font-medium transition-all duration-300 border ${
+                    className={`px-4 lg:px-6 py-2 lg:py-2.5 rounded-full text-[12px] lg:text-[14px] font-medium transition-all duration-300 border whitespace-nowrap ${
                       isActive
                         ? 'text-white border-transparent shadow-md'
-                        : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
+                        : 'text-[#7030B1] border-transparent hover:bg-purple-50'
                     }`}
                     style={{
                       background: isActive
@@ -155,40 +155,80 @@ const BoomiSolutions = () => {
           </div>
         </div>
 
-        {/* Mobile View: Stacked Cards (Scrollable) */}
-        <div className='md:hidden flex flex-col gap-8'>
-          {solutions.map((solution, index) => (
-            <div key={index} className='bg-white rounded-[24px] p-4 shadow-lg flex flex-col gap-6'>
-              {/* Image */}
-              <div className='relative w-full h-[240px] rounded-xl overflow-hidden'>
-                <Image
-                  src={solution.image}
-                  alt={solution.cardTitle}
-                  fill
-                  className='object-cover'
-                />
-              </div>
-
-              {/* Content */}
-              <div className='flex flex-col items-start'>
-                {/* Heading Badge */}
-                <div className='inline-flex items-center px-4 py-2 rounded-xl border border-[#9156AA] bg-white mb-4 shadow-sm'>
-                  <span
-                    className='text-[16px] font-bold'
+        {/* Mobile View: Tabs + Selected Card */}
+        <div className='md:hidden'>
+          {/* Mobile Tabs */}
+          <div className='flex justify-center mb-8 px-4'>
+            <div className='flex flex-wrap justify-center bg-[#FBF4FE] rounded-3xl p-3 gap-2 border border-purple-50 max-w-full'>
+              {solutions.map((solution, index) => {
+                const isActive = activeTab === index;
+                return (
+                  <button
+                    key={index}
+                    onClick={() => setActiveTab(index)}
+                    className={`px-4 py-2 rounded-full text-[12px] font-medium transition-all duration-300 border whitespace-nowrap ${
+                      isActive
+                        ? 'text-white border-transparent shadow-md'
+                        : 'text-[#7030B1] border-transparent hover:bg-purple-50'
+                    }`}
                     style={{
-                      background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
+                      background: isActive
+                        ? 'linear-gradient(270deg, #7030B1 0%, #B56DD3 100%)'
+                        : 'transparent',
                     }}
                   >
-                    {solution.id}. {solution.cardTitle}
-                  </span>
-                </div>
-                {/* Description */}
-                <p className='text-[#515151] text-sm leading-relaxed'>{solution.description}</p>
-              </div>
+                    <span
+                      style={
+                        !isActive
+                          ? {
+                              background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                              WebkitBackgroundClip: 'text',
+                              WebkitTextFillColor: 'transparent',
+                            }
+                          : {}
+                      }
+                    >
+                      {solution.tabName}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
-          ))}
+          </div>
+
+          {/* Selected Solution Card */}
+          <div className='bg-white rounded-[24px] p-4 shadow-lg flex flex-col gap-6'>
+            {/* Image */}
+            <div className='relative w-full h-[240px] rounded-xl overflow-hidden'>
+              <Image
+                src={solutions[activeTab].image}
+                alt={solutions[activeTab].cardTitle}
+                fill
+                className='object-cover'
+              />
+            </div>
+
+            {/* Content */}
+            <div className='flex flex-col items-start'>
+              {/* Heading Badge */}
+              <div className='inline-flex items-center px-4 py-2 rounded-xl border border-[#9156AA] bg-white mb-4 shadow-sm'>
+                <span
+                  className='text-[16px] font-bold'
+                  style={{
+                    background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
+                >
+                  {solutions[activeTab].id}. {solutions[activeTab].cardTitle}
+                </span>
+              </div>
+              {/* Description */}
+              <p className='text-[#515151] text-sm leading-relaxed'>
+                {solutions[activeTab].description}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

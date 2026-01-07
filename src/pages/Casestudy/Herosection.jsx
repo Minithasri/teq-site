@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiSearch } from 'react-icons/fi';
 
 const heroContent = {
   breadcrumb: {
@@ -19,7 +18,7 @@ const heroContent = {
 
 export default function HeroSection() {
   return (
-    <header className='relative w-full overflow-hidden pt-[60px] min-h-[630px]'>
+    <header className='relative w-full overflow-hidden pt-[60px] min-h-[400px]'>
       {/* Background */}
       <div className='absolute inset-0 -z-10'>
         <div
@@ -60,18 +59,6 @@ export default function HeroSection() {
           <p className='text-white/90 text-[18px] max-w-3xl leading-relaxed'>
             {heroContent.description}
           </p>
-        </div>
-      </div>
-
-      {/* Search Bar */}
-      <div className='absolute bottom-0 left-0 right-0 px-4 md:px-20 pb-4 translate-y-1/2 z-20'>
-        <div className='max-w-2xl mx-auto relative'>
-          <FiSearch size={20} className='absolute left-4 top-1/2 -translate-y-1/2 text-gray-400' />
-          <input
-            type='text'
-            placeholder='Search case study'
-            className='w-full pl-12 pr-4 py-4 rounded-full bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-lg'
-          />
         </div>
       </div>
     </header>

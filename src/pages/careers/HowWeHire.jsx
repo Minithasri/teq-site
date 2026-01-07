@@ -48,13 +48,13 @@ const HowWeHire = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Top Section */}
         <div className='mb-12'>
-          <header className='flex items-center mb-16 gap-4'>
-            <div className='w-14 h-14 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center shrink-0'>
+          <header className='flex flex-col sm:flex-row items-center mb-12 md:mb-16 gap-4'>
+            <div className='w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center shrink-0'>
               <Image src='/images/Spark.svg' alt='' aria-hidden width={24} height={24} />
             </div>
             <div
               aria-hidden
-              className='flex-1 h-[2px] bg-[linear-gradient(to_right,#E5E7EB_50%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x'
+              className='hidden sm:block flex-1 h-[2px] bg-[linear-gradient(to_right,#E5E7EB_50%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x'
             />
             {/* Button with gradient border */}
             <div
@@ -63,17 +63,19 @@ const HowWeHire = () => {
                 background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
               }}
             >
-              <button className='w-[246px] h-[46px] rounded-full bg-white font-medium flex items-center justify-center gap-2 text-sm'>
+              <button className='w-[200px] sm:w-[220px] md:w-[246px] h-[40px] md:h-[46px] rounded-full bg-white font-medium flex items-center justify-center gap-2 text-[12px] sm:text-sm'>
                 <span style={{ color: '#6F2B8B' }}>Explore opportunities</span>
                 <Image src='/images/Careers/arrow1.svg' alt='Arrow' width={12} height={12} />
               </button>
             </div>
           </header>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start'>
-            <h2 className='text-[40px] font-medium text-[#1F1F1F]'>How We Hire</h2>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-start'>
+            <h2 className='text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-medium text-[#1F1F1F]'>
+              How We Hire
+            </h2>
             <div className='flex justify-start'>
-              <p className='text-[#525252] max-w-xl leading-relaxed text-left'>
+              <p className='text-[#525252] text-[14px] sm:text-[15px] md:text-base max-w-xl leading-relaxed text-left'>
                 Empower your career journey. At GWC, we seek skilled individuals who are ready to
                 enrich their abilities with our expertise.
               </p>
@@ -82,12 +84,9 @@ const HowWeHire = () => {
         </div>
 
         {/* Center Image with rounded background */}
-        <div className='flex justify-center mb-12'>
+        <div className='flex justify-center mb-12 px-4'>
           <div className='relative w-full max-w-3xl'>
-            <div
-              className='relative mx-auto rounded-3xl overflow-hidden shadow-2xl'
-              style={{ width: '740px', height: '260px' }}
-            >
+            <div className='relative mx-auto rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl w-full h-[180px] sm:h-[220px] md:h-[260px]'>
               <Image
                 src='/images/Careers/howwehire_image.svg'
                 alt='How We Hire'
@@ -99,15 +98,15 @@ const HowWeHire = () => {
         </div>
 
         {/* Subtitle below image */}
-        <div className='text-center mb-12'>
-          <p className='text-[#525252] text-[16px] max-w-3xl mx-auto'>
+        <div className='text-center mb-12 px-4'>
+          <p className='text-[#525252] text-[14px] sm:text-[15px] md:text-[16px] max-w-3xl mx-auto leading-relaxed'>
             A Recruiter/Technical panel will screen your application. We will contact you for
             further details if your credentials match our requirements.
           </p>
         </div>
 
         {/* Process Flow - Using Image */}
-        <div className='flex justify-center'>
+        <div className='flex justify-center px-4'>
           <div className='relative w-full max-w-5xl'>
             <Image
               src='/images/Careers/wehire_bg.png'

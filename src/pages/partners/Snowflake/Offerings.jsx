@@ -193,21 +193,24 @@ function Carousel({ items }) {
           {items.map((item, index) => (
             <div
               key={index}
-              className='flex-shrink-0 px-3 transition-all duration-300'
+              className='flex-shrink-0 px-2 sm:px-3 transition-all duration-300'
               style={{ width: `${100 / itemsPerPage}%` }}
             >
-              <div
-                className='bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow border border-gray-100'
-                style={{ width: '400px', height: '320px' }}
-              >
-                <div className='bg-gray-50 rounded-xl p-6 h-full flex flex-col items-start'>
-                  <div className='w-14 h-14 rounded-xl bg-white flex items-center justify-center mb-4 shadow-md'>
+              <div className='bg-white rounded-2xl p-3 sm:p-4 shadow-sm hover:shadow-md transition-shadow border border-gray-100 h-full'>
+                <div className='bg-gray-50 rounded-xl p-4 sm:p-6 h-full flex flex-col items-start min-h-[280px] sm:min-h-[320px]'>
+                  <div className='w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white flex items-center justify-center mb-3 sm:mb-4 shadow-md shrink-0'>
                     <Image src={item.icon} alt='Icon' width={28} height={28} />
                   </div>
-                  <h3 className='text-[18px] font-semibold mb-4' style={{ color: '#F97316' }}>
+                  <h3
+                    className='text-[16px] sm:text-[18px] font-semibold mb-3 sm:mb-4'
+                    style={{ color: '#F97316' }}
+                  >
                     {item.title}
                   </h3>
-                  <p className='text-[15px] leading-relaxed' style={{ color: '#70707B' }}>
+                  <p
+                    className='text-[13px] sm:text-[15px] leading-relaxed flex-1'
+                    style={{ color: '#70707B' }}
+                  >
                     {item.description}
                   </p>
                 </div>

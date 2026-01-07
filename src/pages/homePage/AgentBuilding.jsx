@@ -217,17 +217,15 @@ export default function AgentBuilding() {
         <div className='hidden lg:block'>
           {/* Category Tabs */}
           <div className='flex justify-center mb-12 overflow-x-auto'>
-            <div className='inline-flex flex-wrap justify-center bg-[#FBF4FE] rounded-full p-2 gap-2  border border-purple-50 max-w-full'>
+            <div className='inline-flex flex-wrap justify-center bg-[#FBF4FE] rounded-full p-1 gap-2  max-w-full'>
               {categories.map(category => {
                 const isActive = activeCategory === category.id;
                 return (
                   <button
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
-                    className={`px-4 lg:px-6 py-2 lg:py-2.5 rounded-full text-[12px] lg:text-[14px] font-medium transition-all duration-300 border whitespace-nowrap ${
-                      isActive
-                        ? 'text-white border-transparent shadow-md'
-                        : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
+                    className={`px-4 lg:px-6 py-2 lg:py-2.5 rounded-full text-[12px] lg:text-[14px] font-medium transition-all duration-300 whitespace-nowrap ${
+                      isActive ? 'text-white shadow-md' : 'text-[#7030B1] hover:bg-purple-50'
                     }`}
                     style={{
                       background: isActive
@@ -269,7 +267,10 @@ export default function AgentBuilding() {
                     </h3>
                     <p className='text-[13px] text-white/80 mb-6 font-light'>{agent.description}</p>
 
-                    <div className='w-full h-[1px] bg-white/30 mb-4' />
+                    <div
+                      className='w-full h-[1px] mb-4 border-t border-dashed'
+                      style={{ borderColor: '#797979' }}
+                    />
 
                     <button className='inline-flex items-center gap-2 text-[#F97316] text-[14px] font-medium hover:gap-3 transition-all duration-200'>
                       Learn more
@@ -295,10 +296,8 @@ export default function AgentBuilding() {
                   <button
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
-                    className={`px-4 py-2 rounded-full text-[12px] font-medium transition-all duration-300 border whitespace-nowrap ${
-                      isActive
-                        ? 'text-white border-transparent shadow-md'
-                        : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
+                    className={`px-4 py-2 rounded-full text-[12px] font-medium transition-all duration-300 whitespace-nowrap ${
+                      isActive ? 'text-white shadow-md' : 'text-[#7030B1] hover:bg-purple-50'
                     }`}
                     style={{
                       background: isActive
@@ -350,7 +349,10 @@ export default function AgentBuilding() {
                       {agent.title}
                     </h3>
                     <p className='text-sm text-white/80 mb-6 font-light'>{agent.description}</p>
-                    <div className='w-full h-[1px] bg-white/30 mb-4' />
+                    <div
+                      className='w-full h-[1px] mb-4 border-t border-dashed'
+                      style={{ borderColor: '#797979' }}
+                    />
                     <button className='inline-flex items-center gap-2 text-[#F97316] text-sm font-medium'>
                       Learn more
                       <FiArrowRight className='w-4 h-4' />

@@ -45,92 +45,21 @@ export default function LifeAtGwc() {
     },
   ];
 
+  // Infinite loop navigation
   const handlePrev = () => {
-    setActiveIndex(prev => Math.max(0, prev - 1));
+    setActiveIndex(prev => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setActiveIndex(prev => Math.min(images.length - 1, prev + 1));
+    setActiveIndex(prev => (prev === images.length - 1 ? 0 : prev + 1));
   };
-
-  const getCardPositions = () => {
-    return images.map((_, i) => {
-      // Linear distance (no wrapping)
-      const distance = i - activeIndex;
-
-      let translateX = 0;
-      let scale = 1;
-      let opacity = 1;
-      let zIndex = 0;
-
-      if (distance === 0) {
-        // ACTIVE CARD (center)
-        translateX = 0;
-        scale = 1;
-        opacity = 1;
-        zIndex = 10;
-      } else if (distance === -1) {
-        // IMMEDIATE LEFT
-        translateX = -150;
-        scale = 0.9;
-        opacity = 0.8;
-        zIndex = 7;
-      } else if (distance === 1) {
-        // IMMEDIATE RIGHT
-        translateX = 150;
-        scale = 0.9;
-        opacity = 0.8;
-        zIndex = 7;
-      } else if (distance === -2) {
-        // 2ND LEFT
-        translateX = -280;
-        scale = 0.8;
-        opacity = 0.6;
-        zIndex = 5;
-      } else if (distance === 2) {
-        // 2ND RIGHT
-        translateX = 280;
-        scale = 0.8;
-        opacity = 0.6;
-        zIndex = 5;
-      } else if (distance === -3) {
-        // 3RD LEFT (far)
-        translateX = -400;
-        scale = 0.7;
-        opacity = 0.4;
-        zIndex = 3;
-      } else if (distance === 3) {
-        // 3RD RIGHT (far)
-        translateX = 400;
-        scale = 0.7;
-        opacity = 0.4;
-        zIndex = 3;
-      } else if (distance < -3) {
-        // HIDDEN LEFT (off screen)
-        translateX = -600;
-        scale = 0;
-        opacity = 0;
-        zIndex = 0;
-      } else {
-        // HIDDEN RIGHT (off screen)
-        translateX = 600;
-        scale = 0;
-        opacity = 0;
-        zIndex = 0;
-      }
-
-      return { index: i, translateX, scale, opacity, zIndex };
-    });
-  };
-
-  const cardPositions = getCardPositions();
 
   return (
     <section className='relative w-full py-16 lg:py-24 bg-white overflow-hidden'>
       {/* Header Section - Constrained Width */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Top Navigation: Spark + Dashed Line + Button */}
-        <header className='flex items-center mb-16 gap-4'>
+        <header className='flex items-center mb-6 lg:mb-8 gap-4'>
           <div className='w-14 h-14 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center shrink-0'>
             <Image src='/images/Spark.svg' alt='' aria-hidden width={24} height={24} />
           </div>
@@ -175,22 +104,89 @@ export default function LifeAtGwc() {
         {/* Image Carousel */}
         <div className='relative mb-8'>
           {/* Carousel Container */}
+
           <div className='flex justify-center items-center relative h-[220px] sm:h-[320px] md:h-[400px] lg:h-[520px] w-full overflow-hidden'>
-            {images.map((image, index) => {
-              const pos = cardPositions.find(p => p.index === index);
-              if (!pos) return null;
-              const isActive = index === activeIndex;
+            {/* Infinite Loop render */}
+            {[...images, ...images, ...images].map((image, idx) => {
+              const actualIndex = idx % images.length;
+
+              // Linear position logic
+              const centerSetStart = images.length;
+              const relativePosition = idx - (activeIndex + centerSetStart);
+
+              let translateX = '0%';
+              let scale = 1;
+              let opacity = 1;
+              let zIndex = 10;
+
+              if (relativePosition === 0) {
+                // Center
+                translateX = '0%';
+                scale = 1;
+                opacity = 1;
+                zIndex = 10;
+              } else if (relativePosition === 1) {
+                // Right 1
+                translateX = '20%';
+                scale = 0.9;
+                opacity = 0.8;
+                zIndex = 5;
+              } else if (relativePosition === -1) {
+                // Left 1
+                translateX = '-20%';
+                scale = 0.9;
+                opacity = 0.8;
+                zIndex = 5;
+              } else if (relativePosition === 2) {
+                // Right 2
+                translateX = '35%';
+                scale = 0.8;
+                opacity = 0.6;
+                zIndex = 3;
+              } else if (relativePosition === -2) {
+                // Left 2
+                translateX = '-35%';
+                scale = 0.8;
+                opacity = 0.6;
+                zIndex = 3;
+              } else if (relativePosition === 3) {
+                // Right 3
+                translateX = '50%';
+                scale = 0.7;
+                opacity = 0.4;
+                zIndex = 1;
+              } else if (relativePosition === -3) {
+                // Left 3
+                translateX = '-50%';
+                scale = 0.7;
+                opacity = 0.4;
+                zIndex = 1;
+              } else if (relativePosition > 3) {
+                // Far Right
+                translateX = '100%';
+                scale = 0.6;
+                opacity = 0;
+                zIndex = 0;
+              } else {
+                // Far Left
+                translateX = '-100%';
+                scale = 0.6;
+                opacity = 0;
+                zIndex = 0;
+              }
+
+              const isActive = actualIndex === activeIndex;
 
               return (
                 <div
-                  key={image.id}
+                  key={`${image.id}-${idx}`}
                   className='absolute transition-all duration-500 ease-out cursor-pointer w-[280px] h-[180px] sm:w-[400px] sm:h-[256px] md:w-[500px] md:h-[320px] lg:w-[720px] lg:h-[461px]'
                   style={{
-                    transform: `translateX(${pos.translateX}px) scale(${pos.scale})`,
-                    opacity: pos.opacity,
-                    zIndex: pos.zIndex,
+                    transform: `translateX(${translateX}) scale(${scale})`,
+                    opacity: opacity,
+                    zIndex: zIndex,
                   }}
-                  onClick={() => !isActive && setActiveIndex(index)}
+                  onClick={() => !isActive && setActiveIndex(actualIndex)}
                 >
                   <div className='relative w-full h-full rounded-3xl overflow-hidden'>
                     <Image src={image.src} alt={image.title} fill className='object-cover' />

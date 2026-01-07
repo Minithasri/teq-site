@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { FiSearch } from 'react-icons/fi';
 
 const Cards = () => {
   // Generate array of 25 items for images img21 to img45
@@ -13,8 +14,20 @@ const Cards = () => {
   }));
 
   return (
-    <section className='py-16 px-4 md:px-12 bg-gray-50'>
-      <div className='max-w-7xl mx-auto'>
+    <section className='relative py-16 px-4 md:px-12'>
+      {/* Search Bar - Overlapping from hero section */}
+      <div className='absolute top-0 left-0 right-0 px-4 md:px-20 -mt-8 z-50'>
+        <div className='max-w-2xl mx-auto relative'>
+          <FiSearch size={20} className='absolute left-4 top-1/2 -translate-y-1/2 text-gray-400' />
+          <input
+            type='text'
+            placeholder='Search case study'
+            className='w-full pl-12 pr-4 py-4 rounded-full bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-lg'
+          />
+        </div>
+      </div>
+
+      <div className='max-w-7xl mx-auto mt-16'>
         <h2
           className='text-[32px] font-medium text-center mb-12 bg-clip-text text-transparent'
           style={{

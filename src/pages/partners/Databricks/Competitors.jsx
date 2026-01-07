@@ -8,7 +8,7 @@ const Competitors = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-wrap justify-center gap-6'>
           {/* Card 1 — Frame 1 */}
-          <div className='relative w-full lg:w-[755px] h-auto lg:h-[386px]  p-8 md:p-12 overflow-hidden bg-white'>
+          <div className='relative w-full lg:w-[755px] min-h-[400px] lg:h-[386px] p-6 sm:p-8 md:p-12 overflow-hidden bg-white'>
             <Image
               src='/images/partners/databricks/Frame_1.png'
               alt=''
@@ -16,32 +16,36 @@ const Competitors = () => {
               className='object-fill pointer-events-none'
             />
 
-            <div className='relative z-10 h-full flex flex-col justify-between'>
-              <div className='flex flex-col md:flex-row items-start md:items-center gap-6'>
-                <div className='w-20 h-20 rounded-2xl bg-white shadow-sm  flex items-center justify-center shrink-0'>
+            <div className='relative z-10 h-full flex flex-col justify-between gap-6 sm:gap-8'>
+              <div className='flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6'>
+                <div className='w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0'>
                   <Image
                     src='/images/partners/databricks/robo.svg'
                     alt='Robo'
                     width={48}
                     height={48}
+                    className='w-8 h-8 sm:w-12 sm:h-12'
                   />
                 </div>
-                <h2 className='text-[28px] md:text-[36px] font-medium text-[#404040] leading-tight'>
-                  Why GWC Data.AI Over <br /> Competitors
+                <h2 className='text-[24px] sm:text-[28px] md:text-[36px] font-medium text-[#404040] leading-tight'>
+                  Why GWC Data.AI Over <br className='hidden sm:block' />
+                  <span className='sm:inline'> Competitors</span>
                 </h2>
               </div>
 
-              <div className='flex items-start gap-4'>
+              <div className='flex items-start gap-3 sm:gap-4'>
                 <Image
                   src='/images/partners/databricks/spark_bg.svg'
                   alt='Spark'
                   width={32}
                   height={32}
-                  className='shrink-0'
+                  className='shrink-0 w-6 h-6 sm:w-8 sm:h-8'
                 />
-                <div>
-                  <h3 className='text-[18px] font-semibold text-[#404040] mb-4'>Depth + Speed</h3>
-                  <ul className='space-y-3 text-[14px] list-disc list-inside marker:text-black'>
+                <div className='flex-1'>
+                  <h3 className='text-[16px] sm:text-[18px] font-semibold text-[#404040] mb-3 sm:mb-4'>
+                    Depth + Speed
+                  </h3>
+                  <ul className='space-y-2 sm:space-y-3 text-[13px] sm:text-[14px] list-disc list-inside marker:text-black'>
                     <li>Rapid deployment capabilities</li>
                     <li>Deep architecture maturity</li>
                     <li>Sustainable & resilient solutions</li>

@@ -172,16 +172,16 @@ function Carousel({ items }) {
           {items.map((card, index) => (
             <div key={index} className='w-full md:w-1/3 flex-shrink-0 px-3'>
               <div
-                className='bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full'
+                className='bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full p-4'
                 style={{ minHeight: '440px' }}
               >
                 {/* Card Image */}
-                <div className='relative w-full h-[230px]'>
+                <div className='relative w-full h-[230px] rounded-2xl overflow-hidden'>
                   <Image src={card.image} alt={card.title} fill className='object-cover' />
                 </div>
 
                 {/* Card Content */}
-                <div className='p-6'>
+                <div className='pt-6 px-2 pb-2'>
                   <h4 className='text-[#F97316] font-semibold text-[16px] mb-3'>{card.title}</h4>
                   <p className='text-[#70707B] text-[14px] leading-relaxed'>{card.description}</p>
                 </div>

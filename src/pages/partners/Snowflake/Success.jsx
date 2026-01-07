@@ -88,9 +88,9 @@ export default function Success() {
             className='text-[15px] max-w-xl text-left leading-relaxed'
             style={{ color: '#525252' }}
           >
-            As a Snowflake partner, GWC combines certified expertise, proven delivery, and a client
-            first approach to provide tailored, end to end Snowflake solutions that maximize value
-            and drive competitive advantage in data and analytics.
+            As a Snowflake partner, GWC combines certified expertise and proven delivery with a
+            client first approach to provide tailored end to end Snowflake solutions that maximize
+            value and drive competitive advantage.
           </p>
         </div>
 

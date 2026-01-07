@@ -224,13 +224,13 @@ export default function Leaders() {
               return (
                 <div
                   key={leader.id}
-                  className='bg-white rounded-2xl overflow-hidden shadow-2xl absolute transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer origin-center'
+                  className='bg-white rounded-2xl shadow-2xl absolute transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer origin-center p-4'
                   style={{
                     transform: `translateX(${pos.translateX}px) scale(${pos.scale})`,
                     opacity: pos.opacity,
                     zIndex: pos.zIndex,
                     width: '435px',
-                    height: '509px',
+                    height: '485px',
                     // Using box-shadow to enhance depth
                     boxShadow: isActive
                       ? '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
@@ -239,7 +239,7 @@ export default function Leaders() {
                   onClick={() => index !== activeIndex && handleDotClick(index)}
                 >
                   {/* Card Content */}
-                  <div className='relative h-96 bg-gray-200 rounded-xl overflow-hidden'>
+                  <div className='relative h-[375px] bg-gray-100 rounded-xl overflow-hidden mb-4'>
                     <Image
                       src={leader.image}
                       alt={leader.name}
@@ -253,10 +253,10 @@ export default function Leaders() {
                     )}
                   </div>
 
-                  <div className='p-6 flex items-center justify-between'>
+                  <div className='flex items-center justify-between px-2 pb-2'>
                     <div className='text-left'>
-                      <h3 className='text-xl font-semibold text-[#212529] mb-1'>{leader.name}</h3>
-                      <p className='text-[#525252] text-sm'>{leader.title}</p>
+                      <h3 className='text-xl font-bold text-[#212529] mb-1'>{leader.name}</h3>
+                      <p className='text-[#525252] text-sm font-medium'>{leader.title}</p>
                     </div>
                     <a
                       href={leader.linkedin}
@@ -282,8 +282,8 @@ export default function Leaders() {
         {/* Mobile Stacked View (unchanged) */}
         <div className='lg:hidden flex flex-col gap-6 w-full mb-16'>
           {leaders.map(leader => (
-            <div key={leader.id} className='bg-white rounded-2xl overflow-hidden shadow-lg w-full'>
-              <div className='relative h-80 bg-gray-200'>
+            <div key={leader.id} className='bg-white rounded-2xl shadow-lg w-full p-4'>
+              <div className='relative h-80 bg-gray-100 rounded-xl overflow-hidden mb-4'>
                 <Image
                   src={leader.image}
                   alt={leader.name}
@@ -291,10 +291,10 @@ export default function Leaders() {
                   className='object-cover object-top'
                 />
               </div>
-              <div className='p-6 flex items-center justify-between'>
+              <div className='flex items-center justify-between px-2 pb-2'>
                 <div className='text-left'>
                   <h3 className='text-xl font-bold text-gray-900 mb-1'>{leader.name}</h3>
-                  <p className='text-gray-600 text-sm'>{leader.title}</p>
+                  <p className='text-gray-600 text-sm font-medium'>{leader.title}</p>
                 </div>
                 <a
                   href={leader.linkedin}
@@ -366,8 +366,9 @@ export default function Leaders() {
         </div>
 
         {/* Bottom Value Cards */}
+        {/* Bottom Value Cards */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-          {valueCards.map((card, index) => (
+          {valueCards.map(card => (
             <div
               key={card.id}
               className='rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-500'
@@ -377,16 +378,21 @@ export default function Leaders() {
               }}
             >
               <div className='bg-[#3B174A] rounded-2xl p-6 h-full'>
-                <div className='relative h-48 mb-4 rounded-lg overflow-hidden shadow-lg'>
+                {/* Image Wrapper */}
+                <div className='relative h-48 mb-4 rounded-xl overflow-hidden shadow-lg'>
                   <Image
                     src={card.image}
                     alt={card.title}
                     fill
-                    className='object-cover hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]'
+                    className='object-cover rounded-xl'
                   />
-                  <div className='absolute inset-0 bg-gradient-to-tr from-[#7030B1]/30 via-transparent to-[#B56DD3]/30 mix-blend-overlay'></div>
+
+                  {/* Overlay */}
+                  <div className='absolute inset-0 rounded-xl bg-gradient-to-tr from-[#7030B1]/30 via-transparent to-[#B56DD3]/30 mix-blend-overlay' />
                 </div>
-                <h3 className='text-[17px] font-semibold text-[#FFF] mb-3'>{card.title}</h3>
+
+                <h3 className='text-[17px] font-semibold text-white mb-3'>{card.title}</h3>
+
                 <p className='text-[#EFCAFF] text-[14px] leading-relaxed'>{card.description}</p>
               </div>
             </div>

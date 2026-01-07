@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
 
 const AgenticAI = () => {
@@ -39,26 +40,28 @@ const AgenticAI = () => {
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header with Spark Icon and CTA Button */}
-        <div className='flex flex-col sm:flex-row items-center justify-between gap-6 mb-12 lg:mb-20'>
-          {/* Spark Icon */}
-          <div className='flex-shrink-0'>
-            <div className='w-16 h-16 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center'>
-              <Image src='/images/Spark.svg' alt='' aria-hidden width={32} height={32} />
-            </div>
+        <header className='flex flex-col md:flex-row items-center mb-16 gap-6 md:gap-2'>
+          {/* Left Icon (decorative) */}
+          <div className='w-12 h-12 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
+            <Image src='/images/Spark.svg' alt='' aria-hidden width={24} height={24} />
           </div>
 
-          {/* Dashed Line */}
-          <div className='hidden sm:block flex-1 -mx-2 h-[2px] bg-[linear-gradient(to_right,#D4D4D4_50%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x' />
+          {/* Connector */}
+          <div
+            aria-hidden
+            className='flex-1 h-[2px] bg-[linear-gradient(to_right,#1F1F1F_30%,rgba(0,0,0,0)_0%)] bg-[length:6px_2px] bg-repeat-x'
+          />
 
-          {/* CTA Button */}
-          <button
-            className='px-6 py-3 rounded-full border-2 font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2 bg-white'
+          {/* CTA */}
+          <Link
+            href='/contact'
+            className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
             style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
           >
             Talk to our experts
-            <FiArrowRight className='w-5 h-5' />
-          </button>
-        </div>
+            <FiArrowRight className='w-4 h-4' aria-hidden />
+          </Link>
+        </header>
 
         {/* Title + Description Grid */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 lg:mb-20'>

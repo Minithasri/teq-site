@@ -62,7 +62,7 @@ const HomeBanner = () => {
         <div className='grid grid-cols-1 lg:grid-cols-[1.45fr_0.85fr] gap-8 lg:gap-12 items-center py-8 sm:py-12 lg:py-16'>
           {/* LEFT COLUMN */}
           <div className='text-center lg:text-left space-y-6'>
-            <h1 className='font-bold text-[32px] leading-[40px] sm:text-[40px] sm:leading-[50px] lg:text-[40px] lg:leading-[58px]'>
+            <h1 className='font-bold text-[32px] text-[#404040] leading-[40px] sm:text-[40px] sm:leading-[50px] lg:text-[40px] lg:leading-[58px]'>
               <span
                 className='bg-clip-text text-transparent'
                 style={{ backgroundImage: 'linear-gradient(to right, #7030B1, #B56DD3)' }}

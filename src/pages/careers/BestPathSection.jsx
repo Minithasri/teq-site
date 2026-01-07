@@ -40,12 +40,11 @@ const BestPathSection = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Heading */}
         <h2
-          className='text-center font-medium mb-12 lg:mb-16 bg-clip-text text-transparent'
+          className='text-[24px] sm:text-[28px] md:text-[32px] text-center font-medium mb-12 lg:mb-16 bg-clip-text text-transparent'
           style={{
             background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-            fontSize: '32px',
           }}
         >
           Find Your Best Path
@@ -56,37 +55,37 @@ const BestPathSection = () => {
           {paths.map(path => (
             <div
               key={path.id}
-              className='rounded-2xl p-[2px] shadow-lg hover:shadow-xl transition-shadow'
+              className='rounded-2xl p-[2px] shadow-lg hover:shadow-xl transition-shadow w-full sm:w-[340px] md:w-[370px] min-h-[440px] md:min-h-[460px]'
               style={{
-                width: '370px',
-                height: '520px',
                 background: 'linear-gradient(135deg, #D9B8FF 0%, #FAE0FA 100%)',
               }}
             >
               {/* Inner card with white background */}
-              <div className='bg-white rounded-2xl h-full overflow-hidden'>
-                {/* Image */}
-                <div
-                  className='relative mx-auto mt-2 rounded-2xl overflow-hidden'
-                  style={{ width: '350px', height: '320px' }}
-                >
-                  <Image
-                    src={path.image}
-                    alt={path.title}
-                    fill
-                    className='object-cover rounded-2xl'
-                  />
+              <div className='bg-white rounded-2xl h-full overflow-hidden flex flex-col'>
+                {/* Image with padding on all sides */}
+                <div className='p-3 md:p-4'>
+                  <div className='relative w-full h-[260px] sm:h-[260px] md:h-[260px] rounded-2xl overflow-hidden'>
+                    <Image
+                      src={path.image}
+                      alt={path.title}
+                      fill
+                      className='object-cover rounded-2xl'
+                    />
+                  </div>
                 </div>
 
                 {/* Content */}
-                <div className='p-6'>
+                <div className='px-4 md:px-6 pb-4 md:pb-6 flex-1'>
                   <h3
-                    className='font-semibold text-[#1F1F1F] mb-3'
-                    style={{ fontSize: '18px', lineHeight: '1.4' }}
+                    className='font-semibold text-[#1F1F1F] mb-3 text-[16px] md:text-[18px]'
+                    style={{ lineHeight: '1.4' }}
                   >
                     {path.title}
                   </h3>
-                  <p className='text-[#525252]' style={{ fontSize: '14px', lineHeight: '1.6' }}>
+                  <p
+                    className='text-[#525252] text-[13px] md:text-[14px]'
+                    style={{ lineHeight: '1.6' }}
+                  >
                     {path.description}
                   </p>
                 </div>

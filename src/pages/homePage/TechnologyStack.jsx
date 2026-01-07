@@ -122,8 +122,21 @@ const cardData = [
 const TechnologyStack = () => {
   const [activeIndex, setActiveIndex] = useState(1);
 
-  const handlePrev = () => setActiveIndex(prev => (prev === 0 ? 5 : prev - 1));
-  const handleNext = () => setActiveIndex(prev => (prev === 5 ? 0 : prev + 1));
+  // Infinite loop navigation
+  const handlePrev = () => {
+    setActiveIndex(prev => {
+      if (prev === 0) return cardData.length - 1;
+      return prev - 1;
+    });
+  };
+
+  const handleNext = () => {
+    setActiveIndex(prev => {
+      if (prev === cardData.length - 1) return 0;
+      return prev + 1;
+    });
+  };
+
   const handleDotClick = index => setActiveIndex(index);
 
   const getCardPositions = () => {
@@ -131,40 +144,41 @@ const TechnologyStack = () => {
     const total = cardData.length;
 
     for (let i = 0; i < total; i++) {
-      // Calculate circular difference for 360 wrapping
-      let diff = (i - activeIndex) % total;
-      if (diff < 0) diff += total;
-      if (diff > total / 2) diff -= total;
+      // Calculate simple difference (no wrapping)
+      const diff = i - activeIndex;
 
       let translateX = 0;
       let scale = 0.85;
-      let opacity = 0.5;
+      let opacity = 0;
       let zIndex = 1;
       let height = '420px';
 
-      // Position cards based on wrapped difference
+      // Center card (active)
       if (diff === 0) {
         translateX = 0;
         scale = 1;
         opacity = 1;
         zIndex = 10;
-        height = '460px'; // Highlighted card taller
-      } else if (diff === 1 || diff === -5) {
-        // Right 1
+        height = '460px';
+      }
+      // Right card (only show 1 card to the right)
+      else if (diff === 1) {
         translateX = 240;
         scale = 0.94;
         opacity = 0.4;
         zIndex = 5;
-      } else if (diff === -1 || diff === 5) {
-        // Left 1
+      }
+      // Left card (only show 1 card to the left)
+      else if (diff === -1) {
         translateX = -240;
         scale = 0.94;
         opacity = 0.4;
         zIndex = 5;
-      } else {
-        // Hide all other cards (diff ±2, etc.) to show only 3 cards
-        translateX = 0;
-        scale = 0.5;
+      }
+      // Hide all other cards
+      else {
+        translateX = diff > 0 ? 600 : -600;
+        scale = 0.8;
         opacity = 0;
         zIndex = 0;
       }
@@ -186,7 +200,7 @@ const TechnologyStack = () => {
         }}
       />
 
-      <div className='relative text-center z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 md:pt-16 lg:pt-24 pb-20 md:pb-32 lg:pb-60'>
+      <div className='relative text-center z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 md:pt-8 lg:pt-12 pb-20 md:pb-24 lg:pb-60'>
         {/* Title Section */}
         {/* Title Section */}
         <h2 className='text-[28px] md:text-[32px]  text-[#404040] mb-4 font-medium tracking-tight text-center max-w-4xl mx-auto'>
@@ -239,22 +253,69 @@ const TechnologyStack = () => {
           </button>
 
           <div className='flex justify-center items-center relative h-[500px] w-full overflow-hidden'>
-            {cardData.map((card, index) => {
-              const pos = cardPositions.find(p => p.index === index);
-              if (!pos) return null;
-              const isActive = index === activeIndex;
+            {/* Render cards with duplication for seamless infinite scrolling */}
+            {[...cardData, ...cardData, ...cardData].map((card, idx) => {
+              // Get actual index (0-5)
+              const actualIndex = idx % cardData.length;
+
+              // Calculate linear position
+              // We show cards from the middle set (6-11) to avoid edge cases
+              const centerSetStart = cardData.length;
+              const relativePosition = idx - (activeIndex + centerSetStart);
+
+              let translateX = 0;
+              let scale = 0.85;
+              let opacity = 0;
+              let zIndex = 1;
+              let height = '420px';
+
+              // Linear positioning: only show 3 cards in a row
+              if (relativePosition === 0) {
+                // Center card (active)
+                translateX = 0;
+                scale = 1;
+                opacity = 1;
+                zIndex = 10;
+                height = '460px';
+              } else if (relativePosition === 1) {
+                // Card to the right (next card)
+                translateX = 240;
+                scale = 0.94;
+                opacity = 0.4;
+                zIndex = 5;
+              } else if (relativePosition === -1) {
+                // Card to the left (previous card)
+                translateX = -240;
+                scale = 0.94;
+                opacity = 0.4;
+                zIndex = 5;
+              } else if (relativePosition > 1) {
+                // Cards further to the right (hidden off-screen right)
+                translateX = 240 + (relativePosition - 1) * 240;
+                scale = 0.85;
+                opacity = 0;
+                zIndex = 0;
+              } else {
+                // Cards further to the left (hidden off-screen left)
+                translateX = -240 + (relativePosition + 1) * 240;
+                scale = 0.85;
+                opacity = 0;
+                zIndex = 0;
+              }
+
+              const isActive = actualIndex === activeIndex;
 
               return (
                 <div
-                  key={card.title}
+                  key={`${card.title}-${idx}`}
                   className='bg-white rounded-2xl p-4 shadow-xl flex flex-col gap-4 absolute w-[380px] transition-all duration-500 ease-out cursor-pointer'
                   style={{
-                    transform: `translateX(${pos.translateX}px) scale(${pos.scale})`,
-                    opacity: pos.opacity,
-                    zIndex: pos.zIndex,
-                    height: pos.height,
+                    transform: `translateX(${translateX}px) scale(${scale})`,
+                    opacity: opacity,
+                    zIndex: zIndex,
+                    height: height,
                   }}
-                  onClick={() => index !== activeIndex && handleDotClick(index)}
+                  onClick={() => actualIndex !== activeIndex && handleDotClick(actualIndex)}
                 >
                   <div className='p-2 flex flex-col h-full'>
                     <div

@@ -1,5 +1,8 @@
 'use client';
 
+import Image from 'next/image';
+import Link from 'next/link';
+
 const DomoMatter = () => {
   const items = [
     {
@@ -29,18 +32,37 @@ const DomoMatter = () => {
       <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='grid grid-cols-1 lg:grid-cols-[30%_70%] gap-10 items-start'>
           {/* LEFT COLUMN */}
-          <div className='space-y-4 sm:space-y-6 self-start'>
-            <h1 className='font-medium text-[24px] sm:text-[32px] leading-tight'>
-              <span className='text-[#404040]'>Why </span>
-              <span className='bg-gradient-to-r from-[#7030B1] to-[#B56DD3] bg-clip-text text-transparent'>
-                it matters
-              </span>
-              <span className='text-[#404040]'> for your Business</span>
-            </h1>
+          {/* LEFT COLUMN */}
+          <div className='flex flex-col items-start h-full justify-between py-4'>
+            <div className='space-y-6'>
+              <h2 className='font-medium text-[32px] sm:text-[40px] leading-tight'>
+                <span className='text-[#404040]'>Why </span>
+                <span className='bg-gradient-to-r from-[#7030B1] to-[#B56DD3] bg-clip-text text-transparent font-medium'>
+                  it matters
+                </span>
+                <span className='text-[#404040]'> for your Business</span>
+              </h2>
 
-            <p className='text-[#737373] text-[14px] sm:text-[18px] leading-[24px] sm:leading-[38px] font-medium'>
-              Our Development Philosophy We build reliable, scalable AI that delivers real impact.
-            </p>
+              <div className='space-y-2'>
+                <p className='text-[#737373] text-[16px] font-medium tracking-wide'>
+                  Our Development Philosophy
+                </p>
+                <p className='text-[#737373] text-[16px] font-medium leading-relaxed max-w-sm'>
+                  We build reliable, scalable AI that delivers real impact.
+                </p>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className='mt-12'>
+              <Link
+                href='/contact'
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white px-8 py-3 rounded-full font-medium text-[15px] hover:scale-105 transition-transform shadow-lg'
+              >
+                Get in touch
+                <Image src='/images/AboutUs/arrowicon_1.svg' alt='Arrow' width={16} height={16} />
+              </Link>
+            </div>
           </div>
 
           {/* RIGHT COLUMN */}

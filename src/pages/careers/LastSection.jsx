@@ -2,12 +2,11 @@ import Image from 'next/image';
 
 const LastSection = () => {
   return (
-    <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24'>
+    <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-12'>
       <div
-        className='relative p-8 sm:p-10 lg:p-12 rounded-[24px] border border-[#F2F2F2] bg-white text-center overflow-hidden flex items-center justify-center'
+        className='relative p-6 sm:p-8 md:p-10 lg:p-12 rounded-[20px] md:rounded-[24px] border border-[#F2F2F2] bg-white text-center overflow-hidden flex items-center justify-center min-h-[280px] sm:min-h-[300px]'
         style={{
           background: 'linear-gradient(135deg, #FFF7EB 0%, #FAE0FA 100%)',
-          height: '300px',
         }}
       >
         {/* Decorations - Left */}
@@ -32,28 +31,20 @@ const LastSection = () => {
 
         {/* Content */}
         <div className='relative z-10 max-w-3xl mx-auto'>
-          <h2
-            className='font-semibold text-[#404040] leading-tight mb-4'
-            style={{ fontSize: '32px' }}
-          >
+          <h2 className='font-semibold text-[#404040] leading-tight mb-3 md:mb-4 text-[24px] sm:text-[28px] md:text-[32px]'>
             Explore more opportunities
           </h2>
 
-          <p
-            className='text-[#404040] mb-6 max-w-2xl mx-auto'
-            style={{ fontSize: '18px', lineHeight: '1.5' }}
-          >
+          <p className='text-[#404040] mb-5 md:mb-6 max-w-2xl mx-auto text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed px-4'>
             Couldn't find your ideal job? Build a profile, and let us assist you in your job search.
           </p>
 
           {/* Button */}
           <div className='flex justify-center'>
             <button
-              className='inline-flex items-center justify-center gap-2 text-white rounded-full font-medium text-base hover:scale-105 transition-transform shadow-lg'
+              className='inline-flex items-center justify-center gap-2 text-white rounded-full font-medium text-[14px] sm:text-base hover:scale-105 transition-transform shadow-lg w-[180px] sm:w-[200px] md:w-[220px] h-[44px] sm:h-[48px] md:h-[50px]'
               style={{
                 background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                width: '220px',
-                height: '50px',
               }}
             >
               Sign Up

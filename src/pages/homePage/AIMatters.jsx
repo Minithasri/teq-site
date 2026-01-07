@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { Flip } from 'gsap/Flip';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 
@@ -102,20 +103,27 @@ const AIMatters = () => {
           {/* HEADER */}
           <div className='flex flex-col gap-10'>
             {/* Top Row: Icon ... Button */}
-            <div className='flex flex-col lg:flex-row items-center lg:justify-between w-full relative gap-6 lg:gap-0'>
+            {/* Top Row: Icon ... Button */}
+            <header className='flex flex-col md:flex-row items-center justify-between w-full gap-6 md:gap-2 lg:gap-2'>
               {/* Icon */}
-              <div className='bg-white rounded-xl w-14 h-14 flex items-center justify-center shadow-lg p-3'>
+              <div className='bg-white rounded-xl w-14 h-14 flex items-center justify-center shadow-lg p-3 shrink-0'>
                 <Image src='/images/Spark.svg' alt='Spark' width={40} height={40} />
               </div>
 
-              {/* Dashed Line (Desktop Only) */}
-              <div className='hidden lg:block flex-1 border-t-2 border-dashed border-white/60 absolute left-[calc(3.5rem+15px)] right-[calc(16rem+15px)] top-1/2 -translate-y-1/2' />
+              {/* Connector (White Dotted Line) */}
+              <div
+                aria-hidden
+                className='hidden md:block flex-1 h-[2px] bg-[linear-gradient(to_right,rgba(255,255,255,0.6)_50%,rgba(0,0,0,0)_0%)] bg-[length:10px_2px] bg-repeat-x'
+              />
 
               {/* Button */}
-              <button className='border-2 border-white/85 rounded-3xl bg-transparent text-white font-medium cursor-pointer flex items-center justify-center gap-2 transition-all duration-300 px-6 h-12 text-base w-full sm:w-64 hover:bg-white hover:text-[#7030B1]'>
+              <Link
+                href='/contact'
+                className='border-2 border-white/85 rounded-full bg-transparent text-white font-medium cursor-pointer flex items-center justify-center gap-2 transition-all duration-300 px-8 py-3 shrink-0 hover:bg-white hover:text-[#7030B1] whitespace-nowrap'
+              >
                 Talk to our expert <FiArrowRight size={18} />
-              </button>
-            </div>
+              </Link>
+            </header>
 
             {/* Title Text */}
             <div className='flex flex-col lg:flex-row items-center text-center lg:items-start lg:text-left gap-6 lg:gap-8'>
@@ -124,7 +132,7 @@ const AIMatters = () => {
                 <br className='hidden lg:block' /> enterprise AI advantage.
               </h2>
               <p className='text-white opacity-95 text-sm lg:text-base flex-1 max-w-[580px]'>
-                Agentic AI is the next evolution of automation - intelligent agents that observe,
+                Agentic AI is the next evolution of automation intelligent agents that observe,
                 reason, and act with minimal human input.
               </p>
             </div>

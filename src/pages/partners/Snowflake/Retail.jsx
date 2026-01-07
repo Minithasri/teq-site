@@ -172,7 +172,7 @@ export default function Retail() {
 
         {/* Scrollable Tabs (Desktop Only) */}
         <div className='hidden lg:flex justify-center mb-10'>
-          <div className='inline-flex flex-wrap justify-center bg-[#FBF4FE] rounded-full p-2 gap-2 shadow-lg border border-purple-50'>
+          <div className='inline-flex flex-wrap justify-center bg-[#FBF4FE] rounded-full p-1 gap-2 shadow-lg border border-purple-50 max-w-full'>
             {industries.map(industry => {
               const isActive = activeTab === industry;
               return (
@@ -182,7 +182,7 @@ export default function Retail() {
                   className={`px-6 py-2.5 rounded-full text-[14px] font-medium whitespace-nowrap transition-all duration-300 border ${
                     isActive
                       ? 'text-white border-transparent shadow-md'
-                      : 'text-[#7030B1] border-[#EBD4F4] hover:bg-purple-50'
+                      : 'text-[#7030B1] border-transparent hover:bg-purple-50'
                   }`}
                   style={{
                     background: isActive
@@ -259,59 +259,94 @@ export default function Retail() {
           </div>
         </div>
 
-        {/* Mobile Vertical Scroll */}
-        <div className='lg:hidden space-y-8 px-4'>
-          {industries.map((industry, index) => {
-            const data = industryData[industry] || industryData.default;
-            return (
-              <div key={industry} className='bg-white rounded-[32px] p-4 shadow-xl w-full'>
-                <div className='flex flex-col gap-6'>
-                  {/* Image */}
-                  <div className='w-full'>
-                    <div className='relative w-full h-[240px] rounded-2xl overflow-hidden'>
-                      <Image
-                        src={data.image}
-                        alt={`${industry} Snowflake Solution`}
-                        fill
-                        className='object-cover'
-                      />
-                    </div>
-                  </div>
+        {/* Mobile View: Tabs + Selected Card */}
+        <div className='lg:hidden'>
+          {/* Mobile Tabs */}
+          <div className='flex justify-center mb-8 px-4'>
+            <div className='flex flex-wrap justify-center bg-[#FBF4FE] rounded-3xl p-3 gap-2 border border-purple-50 max-w-full'>
+              {industries.map(industry => {
+                const isActive = activeTab === industry;
+                return (
+                  <button
+                    key={industry}
+                    onClick={() => setActiveTab(industry)}
+                    className={`px-4 py-2 rounded-full text-[12px] font-medium whitespace-nowrap transition-all duration-300 border ${
+                      isActive
+                        ? 'text-white border-transparent shadow-md'
+                        : 'text-[#7030B1] border-transparent hover:bg-purple-50'
+                    }`}
+                    style={{
+                      background: isActive
+                        ? 'linear-gradient(270deg, #7030B1 0%, #B56DD3 100%)'
+                        : 'transparent',
+                    }}
+                  >
+                    <span
+                      style={
+                        !isActive
+                          ? {
+                              background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                              WebkitBackgroundClip: 'text',
+                              WebkitTextFillColor: 'transparent',
+                            }
+                          : {}
+                      }
+                    >
+                      {industry}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
 
-                  {/* Content */}
-                  <div className='flex flex-col'>
-                    {/* Heading Badge */}
-                    <div className='inline-flex items-center px-4 py-2 rounded-xl border border-[#9156AA] bg-white mb-4 shadow-sm self-start'>
-                      <span
-                        className='text-[16px] font-bold'
-                        style={{
-                          background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                          WebkitBackgroundClip: 'text',
-                          WebkitTextFillColor: 'transparent',
-                          backgroundClip: 'text',
-                        }}
-                      >
-                        {index + 1}. {industry}
-                      </span>
-                    </div>
-
-                    {/* Description */}
-                    <ul className='space-y-4'>
-                      {data.items?.map((item, idx) => (
-                        <li key={idx} className='flex items-start gap-2'>
-                          <span className='mt-2 w-1.5 h-1.5 rounded-full bg-gray-400 shrink-0' />
-                          <p className='text-[#515151] text-[14px] leading-relaxed'>
-                            <strong className='text-gray-800 block mb-1'>{item.title}:</strong>
-                            {item.description}
-                          </p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+          {/* Selected Industry Card */}
+          <div className='bg-white rounded-[32px] p-4 shadow-xl w-full px-4'>
+            <div className='flex flex-col gap-6'>
+              {/* Image */}
+              <div className='w-full'>
+                <div className='relative w-full h-[240px] rounded-2xl overflow-hidden'>
+                  <Image
+                    src={currentData.image}
+                    alt={`${activeTab} Snowflake Solution`}
+                    fill
+                    className='object-cover'
+                  />
                 </div>
               </div>
-            );
-          })}
+
+              {/* Content */}
+              <div className='flex flex-col'>
+                {/* Heading Badge */}
+                <div className='inline-flex items-center px-4 py-2 rounded-xl border border-[#9156AA] bg-white mb-4 shadow-sm self-start'>
+                  <span
+                    className='text-[16px] font-bold'
+                    style={{
+                      background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                    }}
+                  >
+                    {industries.indexOf(activeTab) + 1}. {activeTab}
+                  </span>
+                </div>
+
+                {/* Description */}
+                <ul className='space-y-4'>
+                  {currentData.items?.map((item, idx) => (
+                    <li key={idx} className='flex items-start gap-2'>
+                      <span className='mt-2 w-1.5 h-1.5 rounded-full bg-gray-400 shrink-0' />
+                      <p className='text-[#515151] text-[14px] leading-relaxed'>
+                        <strong className='text-gray-800 block mb-1'>{item.title}:</strong>
+                        {item.description}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
