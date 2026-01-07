@@ -54,9 +54,11 @@ export default function HeroSection() {
 
         {/* Hero Content */}
         <div className='flex flex-col items-center text-center gap-6 max-w-4xl mx-auto'>
-          <h1 className='text-[42px] font-bold text-white leading-tight'>{heroContent.title}</h1>
+          <h1 className='text-[32px] md:text-[42px] font-bold text-white leading-tight'>
+            {heroContent.title}
+          </h1>
 
-          <p className='text-white/90 text-[18px] max-w-3xl leading-relaxed'>
+          <p className='text-white/90 text-[16px] md:text-[18px] max-w-3xl leading-relaxed'>
             {heroContent.description}
           </p>
         </div>

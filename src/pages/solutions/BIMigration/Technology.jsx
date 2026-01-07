@@ -45,22 +45,22 @@ const Technology = () => {
       >
         <div className='w-full px-4 md:px-6 lg:px-12 xl:px-36 pt-20 pb-16'>
           {/* Header */}
-          <header className='flex items-center mb-16 gap-2'>
+          <header className='hidden md:flex md:flex-row items-center justify-between w-full gap-4 md:gap-4 lg:gap-4 mb-16'>
             {/* Left Icon (decorative) */}
-            <div className='w-12 h-12 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
-              <Image src={img1} alt='' aria-hidden width={25} height={25} />
+            <div className='w-14 h-14 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
+              <Image src={img1} alt='' aria-hidden width={30} height={30} />
             </div>
 
             {/* Connector */}
             <div
               aria-hidden
-              className='flex-1 h-[2px] bg-[linear-gradient(to_right,#9CA3AF_50%,rgba(0,0,0,0)_0%)] bg-[length:6px_2px] bg-repeat-x'
+              className='flex-1 h-[2px] bg-[linear-gradient(to_right,#1F1F1F_30%,rgba(0,0,0,0)_0%)] bg-[length:6px_2px] bg-repeat-x'
             />
 
             {/* CTA */}
             <Link
               href='/contact'
-              className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
+              className='px-8 py-3 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
               style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
             >
               Talk to our experts

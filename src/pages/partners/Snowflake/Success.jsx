@@ -4,13 +4,13 @@ import { FiArrowRight } from 'react-icons/fi';
 
 const cards = [
   {
-    image: '/images/partners/Snowflake/img5.png',
+    image: '/images/partners/Snowflake/newimage1.svg',
     title: 'Performance Optimization',
     description:
       'Our Snowflake services optimize complex queries, significantly improving query execution times and overall system performance.',
   },
   {
-    image: '/images/partners/Snowflake/img4.png',
+    image: '/images/partners/Snowflake/newimage2.svg',
     title: 'Cost Optimization',
     description:
       "We implement cost-effective solutions by leveraging Snowflake's separation of storage & compute resources, resulting in optimized resource utilization & cost savings.",
@@ -22,19 +22,19 @@ const cards = [
       'We design & implement highly efficient & scalable data models in Snowflake, enhancing data organization & accessibility for analytics & reporting.',
   },
   {
-    image: '/images/partners/Snowflake/img2.png',
+    image: '/images/partners/Snowflake/newimage4.svg',
     title: 'Security Implementation',
     description:
       'We implement robust security measures, including role-based access control (RBAC), encryption, & data masking, ensuring data integrity & compliance with security standards.',
   },
   {
-    image: '/images/partners/Snowflake/img1.png',
+    image: '/images/partners/Snowflake/newimage6.svg',
     title: 'ETL Process Enhancements',
     description:
       'Our services streamline ETL processes, reducing data processing times and improving the efficiency of data movement within the Snowflake platform.',
   },
   {
-    image: '/images/partners/Snowflake/img6.png',
+    image: '/images/partners/Snowflake/newimage5.svg',
     title: 'BI Integration Success',
     description:
       'We integrate Snowflake with various Business Intelligence (BI) tools, enabling seamless data visualization & reporting capabilities for end-users.',
@@ -58,10 +58,10 @@ export default function Success() {
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Header Section */}
-        <header className='flex items-center mb-16 gap-2'>
+        <header className='hidden md:flex md:flex-row items-center justify-between w-full gap-4 md:gap-4 lg:gap-4 mb-16'>
           {/* Left Icon (decorative) */}
-          <div className='w-12 h-12 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
-            <Image src='/images/Spark.svg' alt='' aria-hidden width={25} height={25} />
+          <div className='w-14 h-14 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
+            <Image src='/images/Spark.svg' alt='' aria-hidden width={30} height={30} />
           </div>
 
           {/* Connector */}
@@ -73,7 +73,7 @@ export default function Success() {
           {/* CTA */}
           <Link
             href='/contact'
-            className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
+            className='px-8 py-3 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
             style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
           >
             Talk to our experts

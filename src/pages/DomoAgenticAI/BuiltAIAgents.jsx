@@ -32,15 +32,14 @@ const BuiltAIAgents = () => {
 
   return (
     <section
-      className='px-4 py-16 md:py-20 lg:py-24'
+      className='w-full px-4 py-16 md:py-20 lg:py-24'
       style={{
         backgroundColor: '#f3edff',
-        padding: '100px 20px',
       }}
     >
       <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        {/* Spark + Button Row */}
-        <div className='relative flex flex-col sm:flex-row items-center justify-between gap-6 mb-12 lg:mb-16'>
+        {/* Spark + Button Row - Hidden on mobile */}
+        <div className='hidden md:flex relative items-center justify-between gap-6 mb-12 lg:mb-16'>
           <div className='z-10'>
             <div
               className='flex items-center justify-center rounded-2xl shadow-md'
@@ -73,15 +72,9 @@ const BuiltAIAgents = () => {
         {/* Title + Description – unchanged */}
         <div className='grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 mb-16 lg:mb-20'>
           <div className='text-center lg:text-left'>
-            <h1
-              className='leading-tight'
-              style={{
-                fontSize: '32px',
-                fontWeight: 500,
-                color: '#1f1f1f',
-              }}
-            >
-              How We Develop <br></br>Purpose-Built AI Agents
+            <h1 className='leading-tight text-2xl md:text-3xl lg:text-[32px] font-medium text-[#1f1f1f]'>
+              How We Develop <br className='hidden md:block' />
+              Purpose-Built AI Agents
             </h1>
           </div>
 
@@ -102,21 +95,16 @@ const BuiltAIAgents = () => {
         </div>
 
         {/* Cards – only hover effects added, layout 100% identical */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 w-full px-6 lg:px-10'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 w-full px-0 md:px-6 lg:px-10'>
           {cards.map((card, index) => (
             <div
               key={index}
-              className='group text-center shadow-lg hover:shadow-2xl transition-all duration-400 hover:-translate-y-3 flex flex-col items-center justify-start w-full'
+              className='group text-center shadow-lg hover:shadow-2xl transition-all duration-400 hover:-translate-y-3 flex flex-col items-center justify-center w-full p-6 md:p-9 rounded-3xl min-h-auto md:min-h-[275px] border-2 border-transparent bg-origin-border bg-clip-border'
               style={{
-                borderRadius: '24px',
-                padding: '36px 24px',
-                minHeight: '275px',
-                border: '2px solid transparent',
                 backgroundImage: `
                   linear-gradient(#ffffff, #ffffff),
                   linear-gradient(135deg, #C4A3E5 0%, #E5E5E5 100%)
                 `,
-                backgroundOrigin: 'border-box',
                 backgroundClip: 'padding-box, border-box',
                 backgroundPosition: '0 0, 100% 100%',
                 transition:
@@ -130,14 +118,12 @@ const BuiltAIAgents = () => {
               }}
             >
               {/* Subtle inner glow */}
-              <div className='absolute inset-0 bg-gradient-to-br from-[#8c49bf12] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />
+              <div className='absolute inset-0 bg-gradient-to-br from-[#8c49bf12] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl' />
 
               <div
-                className='mb-4 flex items-center justify-center shadow-md rounded-full transition-transform duration-300 group-hover:scale-110'
+                className='mb-4 flex items-center justify-center shadow-md rounded-full transition-transform duration-300 group-hover:scale-110 w-[72px] h-[72px]'
                 style={{
                   background: 'linear-gradient(135deg, #7030B1 0%, #B56DD3 100%)',
-                  width: '72px',
-                  height: '72px',
                 }}
               >
                 <Image
@@ -149,28 +135,11 @@ const BuiltAIAgents = () => {
                 />
               </div>
 
-              <h3
-                className='font-semibold mb-4 mt-5 leading-tight transition-colors duration-300 group-hover:text-[#8c49bf]'
-                style={{
-                  color: '#404040',
-                  fontSize: '18px',
-                  fontWeight: 600,
-                }}
-              >
+              <h3 className='font-semibold mb-4 mt-5 leading-tight transition-colors duration-300 group-hover:text-[#8c49bf] text-[#404040] text-lg font-semibold'>
                 {card.title}
               </h3>
 
-              <p
-                className='leading-relaxed text-center transition-colors duration-300 group-hover:text-[#333333]'
-                style={{
-                  color: '#525252',
-                  fontSize: '14px',
-                  fontWeight: 400,
-                  lineHeight: '1.6',
-                  paddingLeft: '25px',
-                  paddingRight: '25px',
-                }}
-              >
+              <p className='leading-relaxed text-center transition-colors duration-300 group-hover:text-[#333333] text-[#525252] text-sm font-normal px-2 md:px-6'>
                 {card.subtitle}
               </p>
             </div>

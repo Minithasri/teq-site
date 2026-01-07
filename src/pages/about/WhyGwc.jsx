@@ -29,21 +29,15 @@ export default function WhyGwc() {
   ];
 
   return (
-    <section className='relative w-full py-20 overflow-hidden'>
+    <section className='relative w-full py-12 lg:py-20 overflow-hidden bg-[#0B0314] lg:bg-transparent'>
       {/* Background Image */}
-      <div className='absolute inset-0 z-0'>
-        <Image
-          src='/images/AboutUs/section6_bg.png'
-          alt=''
-          fill
-          className='object-cover'
-          priority
-        />
+      <div className='absolute inset-0 z-0 opacity-20 lg:opacity-100'>
+        <Image src='/images/AboutUs/bg_icons.svg' alt='' fill className='object-cover' priority />
       </div>
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Heading */}
-        <h2 className='text-[40px] font-medium text-white text-center mb-16'>
+        <h2 className='text-3xl md:text-[40px] font-medium text-white text-center mb-10 md:mb-16'>
           Why choose GWC Data.AI?
         </h2>
 
@@ -53,7 +47,7 @@ export default function WhyGwc() {
           <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/30 rounded-full blur-3xl' />
 
           {/* Grid Layout */}
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-16 max-w-5xl mx-auto relative'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-x-12 md:gap-x-32 gap-y-10 md:gap-y-16 max-w-5xl mx-auto relative'>
             {features.map((feature, index) => (
               <div key={index} className='flex flex-col items-center text-center'>
                 {/* Icon with Gradient Border */}
@@ -103,19 +97,6 @@ export default function WhyGwc() {
                 </p>
               </div>
             ))}
-          </div>
-
-          {/* Center Icon (Hidden behind/between grid items) */}
-          <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 hidden md:flex items-center justify-center'>
-            <div className='w-20 h-20 rounded-full bg-purple-600/40 backdrop-blur-sm flex items-center justify-center'>
-              <Image
-                src='/images/AboutUs/icon61.svg'
-                alt=''
-                width={40}
-                height={40}
-                className='opacity-60'
-              />
-            </div>
           </div>
         </div>
       </div>

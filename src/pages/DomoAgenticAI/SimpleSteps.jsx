@@ -155,8 +155,12 @@ const SimpleSteps = () => {
             {steps.map(step => (
               <div
                 key={step.id}
-                className={`relative text-left pl-8 xl:pl-10 ${
-                  step.id === 2 || step.id === 4 ? 'ml-10 xl:ml-16' : ''
+                className={`relative text-left pl-4 md:pl-8 xl:pl-10 ${
+                  step.id === 2
+                    ? 'ml-2 md:ml-8 xl:ml-10'
+                    : step.id === 4
+                      ? 'ml-8 md:ml-16 xl:ml-20'
+                      : ''
                 }`}
                 style={{
                   marginTop: step.position === 'bottom' ? '160px' : '0px',

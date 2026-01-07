@@ -9,13 +9,13 @@ const AgenticAI = () => {
       icon: '/images/HomePage/eye.svg',
       title: 'Observe',
       subtitle:
-        'Real time data monitoring and ingestion from multiple sources for continuous insights and faster responses.',
+        'Real time data monitoring and ingestion from multiple sources at scale for continuous insights and faster responses.',
     },
     {
       icon: '/images/HomePage/reason.svg',
       title: 'Reason',
       subtitle:
-        'Advanced AI reasoning using LLMs and custom logic engines to understand context and drive smarter decisions.',
+        'Advanced AI reasoning using LLMs and custom logic engines in real time to understand context and drive smarter decisions.',
     },
     {
       icon: '/images/HomePage/plan.svg',
@@ -27,7 +27,7 @@ const AgenticAI = () => {
       icon: '/images/HomePage/execute.svg',
       title: 'Execute',
       subtitle:
-        'Direct system integration with automated task completion to minimize manual effort and accelerate operations.',
+        'Direct system integration with automated task completion end to end to minimize manual effort and accelerate operations.',
     },
   ];
 
@@ -40,10 +40,10 @@ const AgenticAI = () => {
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header with Spark Icon and CTA Button */}
-        <header className='flex flex-col md:flex-row items-center mb-16 gap-6 md:gap-2'>
+        <header className='hidden md:flex md:flex-row items-center justify-between w-full gap-4 md:gap-4 lg:gap-4 mb-16'>
           {/* Left Icon (decorative) */}
-          <div className='w-12 h-12 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
-            <Image src='/images/Spark.svg' alt='' aria-hidden width={24} height={24} />
+          <div className='w-14 h-14 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
+            <Image src='/images/Spark.svg' alt='' aria-hidden width={30} height={30} />
           </div>
 
           {/* Connector */}
@@ -55,7 +55,7 @@ const AgenticAI = () => {
           {/* CTA */}
           <Link
             href='/contact'
-            className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
+            className='px-8 py-3 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
             style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
           >
             Talk to our experts
@@ -115,10 +115,7 @@ const AgenticAI = () => {
                 {/* Content */}
                 <div className='flex-1 flex flex-col'>
                   <h3 className='text-xl font-semibold text-[#404040] mb-4'>{card.title}</h3>
-                  <p
-                    className='mt-auto w-full text-[15px] text-[#525252] leading-relaxed text-justify'
-                    style={{ textAlignLast: 'left' }}
-                  >
+                  <p className='mt-auto w-full text-[15px] text-[#525252] leading-relaxed '>
                     {card.subtitle}
                   </p>
                 </div>

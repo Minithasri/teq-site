@@ -16,7 +16,7 @@ const industries = [
 
 const industryData = {
   Retail: {
-    image: '/images/partners/Snowflake/Retail.png',
+    image: '/images/partners/Snowflake/snow1.svg',
     items: [
       {
         title: 'Unified Data Platform',
@@ -31,7 +31,7 @@ const industryData = {
     ],
   },
   Healthcare: {
-    image: '/images/partners/Snowflake/helathcare.png',
+    image: '/images/partners/Snowflake/snow2.svg',
     items: [
       {
         title: 'Secure Data Handling',
@@ -46,7 +46,7 @@ const industryData = {
     ],
   },
   Finance: {
-    image: '/images/partners/Snowflake/finanace.png',
+    image: '/images/partners/Snowflake/snow3.svg',
     items: [
       {
         title: 'Scalable Data Processing',
@@ -61,7 +61,7 @@ const industryData = {
     ],
   },
   Manufacturing: {
-    image: '/images/partners/Snowflake/manufacturing.png',
+    image: '/images/partners/Snowflake/snow4.svg',
     items: [
       {
         title: 'Supply Chain Optimization',
@@ -76,7 +76,7 @@ const industryData = {
     ],
   },
   Technology: {
-    image: '/images/partners/Snowflake/technology.png',
+    image: '/images/partners/Snowflake/snow5.svg',
     items: [
       {
         title: 'Data Collaboration',
@@ -90,7 +90,7 @@ const industryData = {
     ],
   },
   Education: {
-    image: '/images/partners/Snowflake/Education.png',
+    image: '/images/partners/Snowflake/snow6.svg',
     items: [
       {
         title: 'Data-driven Decision-Making',
@@ -105,7 +105,7 @@ const industryData = {
     ],
   },
   Hospitality: {
-    image: '/images/partners/Snowflake/Hospitatlity.png',
+    image: '/images/partners/Snowflake/snow7.svg',
     items: [
       {
         title: 'Customer Experience Enhancement',
@@ -120,7 +120,7 @@ const industryData = {
     ],
   },
   Energy: {
-    image: '/images/partners/Snowflake/enery.png',
+    image: '/images/partners/Snowflake/snow1.svg',
     items: [
       {
         title: 'Smart Grid Analytics',
@@ -211,19 +211,17 @@ export default function Retail() {
 
         {/* Desktop Content */}
         <div className='hidden lg:block'>
-          <div className='bg-white rounded-[32px] p-4 shadow-xl w-full max-w-[1240px] h-auto lg:h-[400px] mx-auto'>
-            <div className='flex flex-col lg:flex-row gap-8 items-stretch bg-white rounded-[32px] overflow-hidden h-full'>
+          <div className='bg-white rounded-[16px] p-2 md:p-4 shadow-xl w-full max-w-[1240px] h-auto lg:h-[440px] mx-auto'>
+            <div className='flex flex-col lg:flex-row gap-8 items-stretch h-full'>
               {/* Left: Image */}
-              <div className='w-full lg:w-[600px] shrink-0'>
-                <div className='relative w-full h-[300px] lg:h-[385px] rounded-2xl overflow-hidden'>
-                  <Image
-                    src={currentData.image}
-                    alt={`${activeTab} Snowflake Solution`}
-                    fill
-                    className='object-cover'
-                    priority
-                  />
-                </div>
+              <div className='relative w-full lg:w-[600px] h-full min-h-[300px] lg:min-h-[385px] shrink-0 rounded-[12px] overflow-hidden'>
+                <Image
+                  src={currentData.image}
+                  alt={`${activeTab} Snowflake Solution`}
+                  fill
+                  className='object-cover'
+                  priority
+                />
               </div>
 
               {/* Right: Content */}

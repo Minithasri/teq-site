@@ -44,11 +44,10 @@ const DomoMatter = () => {
               </h2>
 
               <div className='space-y-2'>
-                <p className='text-[#737373] text-[16px] font-medium tracking-wide'>
-                  Our Development Philosophy
-                </p>
-                <p className='text-[#737373] text-[16px] font-medium leading-relaxed max-w-sm'>
-                  We build reliable, scalable AI that delivers real impact.
+                <p className='text-[#737373] text-[16px] font-medium leading-loose max-w-sm'>
+                  We build reliable, scalable AI solutions engineered for high performance and
+                  adaptability, designed to integrate seamlessly into real business environments and
+                  deliver meaningful, measurable real world impact at scale.
                 </p>
               </div>
             </div>

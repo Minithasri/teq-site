@@ -39,16 +39,15 @@ const PlatformFeatures = () => {
 
   return (
     <section
-      className='w-full mt-[-150px] sm:mt-[-250px] lg:mt-[-300px]'
+      className='w-full mt-[-150px] sm:mt-[-250px] lg:mt-[-300px] pt-[200px] md:pt-[250px] lg:pt-[300px] pb-16 lg:pb-24 px-5 lg:px-0'
       style={{
         background:
           'linear-gradient(135deg, #7030B14D 0%, #CAB9F64D 25%, #E6F2F64D 50%, #DDA16C4D 65%, #FFA5814D 80%, #E5AA664D 100%), #F9EAE1',
-        padding: '300px 20px 100px 20px',
       }}
     >
       <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        {/* Header with Spark & CTA */}
-        <div className='relative flex flex-col sm:flex-row items-center justify-between gap-6 mb-12 lg:mb-16'>
+        {/* Header with Spark & CTA - Hidden on mobile */}
+        <div className='hidden md:flex relative items-center justify-between gap-6 mb-12 lg:mb-16'>
           <div className='z-10'>
             <div
               className='flex items-center justify-center rounded-2xl shadow-md'
@@ -74,14 +73,7 @@ const PlatformFeatures = () => {
         {/* Title & Description */}
         <div className='grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-12 mb-16 lg:mb-20 items-start'>
           <div className='text-center lg:text-left'>
-            <h1
-              className='leading-tight'
-              style={{
-                fontSize: '40px',
-                fontWeight: 500,
-                color: '#1f1f1f',
-              }}
-            >
+            <h1 className='leading-tight text-3xl md:text-[40px] font-medium text-[#404040]'>
               Core Platform Features
             </h1>
           </div>

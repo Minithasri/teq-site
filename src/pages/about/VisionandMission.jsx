@@ -17,13 +17,13 @@ export default function VisionandMission() {
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Top Navigation: Spark + Dashed Line + Button */}
-        <header className='flex items-center mb-16 gap-4'>
+        <header className='hidden md:flex items-center mb-16 gap-4'>
           <div className='w-14 h-14 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center shrink-0'>
             <Image src='/images/Spark.svg' alt='' aria-hidden width={24} height={24} />
           </div>
           <div
             aria-hidden
-            className='flex-1 h-[2px] bg-[linear-gradient(to_right,#E5E7EB_50%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x'
+            className='flex-1 h-[2px] bg-[linear-gradient(to_right,#1F1F1F_30%,rgba(0,0,0,0)_0%)] bg-[length:6px_2px] bg-repeat-x'
           />
           {/* Button with gradient border */}
           <div
@@ -69,10 +69,7 @@ export default function VisionandMission() {
           {/* Left Column - Image and Vision Card */}
           <div className='space-y-8'>
             {/* Top Image Card */}
-            <div
-              className='relative rounded-3xl overflow-hidden shadow-xl'
-              style={{ width: '704px', height: '400px' }}
-            >
+            <div className='relative rounded-3xl overflow-hidden shadow-xl w-full lg:w-[704px] h-[250px] sm:h-[300px] lg:h-[400px]'>
               <Image
                 src='/images/AboutUs/section2image.png'
                 alt='Vision Target'
@@ -82,18 +79,16 @@ export default function VisionandMission() {
             </div>
 
             {/* Vision Card */}
-            <div className='relative ml-[202px]'>
+            <div className='relative ml-0 lg:ml-[202px]'>
               {/* Three Dash Lines Decoration - Outside card */}
-              <div className='absolute -top-0 -left-12 w-12 h-12 z-10'>
+              <div className='hidden lg:block absolute -top-0 -left-12 w-12 h-12 z-10'>
                 <Image src='/images/AboutUs/threedashlines.svg' alt='' width={38} height={38} />
               </div>
 
               <div
-                className='relative rounded-3xl p-8 -mt-4 shadow-xl overflow-hidden'
+                className='relative rounded-3xl p-8 lg:-mt-4 mt-6 shadow-xl overflow-hidden w-full lg:w-[500px] min-h-[300px] lg:h-[340px]'
                 style={{
                   background: 'linear-gradient(135deg, #6F2B8B 0%, #9D6D9D 100%)',
-                  width: '500px',
-                  height: '340px',
                 }}
               >
                 {/* Icon */}
@@ -119,23 +114,21 @@ export default function VisionandMission() {
           </div>
 
           {/* Right Column - Mission Card */}
-          <div className='relative ml-24 mt-44'>
+          <div className='relative ml-0 mt-8 lg:ml-24 lg:mt-44'>
             {/* Three Dash Lines Decoration - Top Right */}
-            <div className='absolute -top-12 -left-2 w-12 h-12 z-10'>
+            <div className='hidden lg:block absolute -top-12 -left-2 w-12 h-12 z-10'>
               <Image src='/images/AboutUs/threedashlines2.svg' alt='' width={48} height={48} />
             </div>
 
             {/* Three Dash Lines Decoration - Bottom Left */}
-            <div className='absolute bottom-48 left-2 w-12 h-12 z-10'>
+            <div className='hidden lg:block absolute bottom-48 left-2 w-12 h-12 z-10'>
               <Image src='/images/AboutUs/threedashlines3.svg' alt='' width={48} height={48} />
             </div>
 
             <div
-              className='relative rounded-3xl p-8 shadow-xl overflow-hidden'
+              className='relative rounded-3xl p-8 shadow-xl overflow-hidden w-full lg:w-[500px] min-h-[300px] lg:h-[340px]'
               style={{
                 background: 'linear-gradient(135deg, #DCA6AB 0%, #9257A0 50%, #823774 100%)',
-                width: '500px',
-                height: '340px',
               }}
             >
               {/* Icon */}

@@ -7,7 +7,7 @@ const solutions = [
   {
     id: 1,
     tabName: 'Healthcare and Life Sciences',
-    cardTitle: 'Improve analysis with a 360-degree view',
+    cardTitle: 'Healthcare and Life Sciences',
     description:
       'With Boomi, healthcare providers and payers can create a single view of the patient across healthcare systems, including siloed Electronic Health Record databases. Support patient mobility, anytime, in any place. Get insights into care plans, from actions to costs. Raise awareness of services and patient outcomes.',
     image: '/images/partners/boomi/last_image1.png',
@@ -15,7 +15,7 @@ const solutions = [
   {
     id: 2,
     tabName: 'Manufacturing',
-    cardTitle: 'Real-time visibility',
+    cardTitle: 'Manufacturing',
     description:
       'Boomi displays real-time visibility for instant collaboration with suppliers and active product tracking. Gain real-time visibility across the entire supply chain ecosystem. Identify problems in material procurement and product shipping faster for quicker resolution. Meet customer expectations with automated workflows that provide closer collaboration with suppliers and partners.',
     image: '/images/partners/boomi/last_image2.png',
@@ -23,7 +23,7 @@ const solutions = [
   {
     id: 3,
     tabName: 'Financial Services',
-    cardTitle: 'Cloud transformation & technology modernization',
+    cardTitle: 'Financial Services',
     description:
       'Modernize your organization by adepting a cloud-first strategy. Migrate to public, private and hybrid clouds to drive down cost. Streamline your application modernization approach for a faster delivery timeline. Connect disparate systems enabling you to adopt a modern data strategy approach. Automate processes and workflows to drive business agility, increasing time to value.',
     image: '/images/partners/boomi/last_image3.png',
@@ -31,7 +31,7 @@ const solutions = [
   {
     id: 4,
     tabName: 'Retail',
-    cardTitle: 'Improved product visibility',
+    cardTitle: 'Retail',
     description:
       'Improve the performance and sell through of your product. Build confidence in data with a self-service single view. Improve cash flow and margin optimization. Create greater accountability across business departments.',
     image: '/images/partners/boomi/last_image4.png',
@@ -39,7 +39,7 @@ const solutions = [
   {
     id: 5,
     tabName: 'Public Sector',
-    cardTitle: 'Enhance Public Sector Efficiency',
+    cardTitle: 'Public Sector',
     description:
       "Boomi is committed to help public sector organizations break down data silos to enhance information flow, improve citizen services, and increase operational effectiveness. The secure and compliant Boomi Atomosphere Platform enables you to modernize legacy infrastructure and harness the power of the cloud to overcome today's challenges for tomorrow's innovation.",
     image: '/images/partners/boomi/last_image5.png',
@@ -47,7 +47,7 @@ const solutions = [
   {
     id: 6,
     tabName: 'Education',
-    cardTitle: 'Build a resilient campus experience',
+    cardTitle: 'Education',
     description:
       'Higher education is in flux. With student enrollment fluctuating, classroom locations diversifying, and many employees requiring remote presence, there is no time to waste significant personnel and budget on custom-coded processes to optimize brittle and complex technology stacks. With Boomi, organizations can build a resilient campus experience that connects everyone, anything, anywhere.',
     image: '/images/partners/boomi/last_image6.png', // Placeholder
@@ -112,18 +112,16 @@ const BoomiSolutions = () => {
           </div>
 
           {/* Content Card */}
-          <div className='bg-white rounded-[32px] p-4 shadow-xl w-full max-w-[1240px] h-auto lg:h-[400px] mx-auto'>
-            <div className='flex flex-col lg:flex-row gap-8 items-stretch bg-white rounded-[32px] overflow-hidden h-full'>
+          <div className='bg-white rounded-[16px] p-2 md:p-4 shadow-xl w-full max-w-[1240px] lg:h-[340px] mx-auto'>
+            <div className='flex flex-col lg:flex-row gap-8 items-stretch h-full'>
               {/* Left Image */}
-              <div className='w-full lg:w-[600px] shrink-0'>
-                <div className='relative w-full h-[300px] lg:h-[385px] rounded-2xl overflow-hidden'>
-                  <Image
-                    src={solutions[activeTab].image}
-                    alt={solutions[activeTab].cardTitle}
-                    fill
-                    className='object-cover'
-                  />
-                </div>
+              <div className='relative w-full lg:w-[600px] min-h-[300px] lg:min-h-[285px] shrink-0 rounded-[12px] overflow-hidden'>
+                <Image
+                  src={solutions[activeTab].image}
+                  alt={solutions[activeTab].cardTitle}
+                  fill
+                  className='object-cover'
+                />
               </div>
 
               {/* Right Content */}

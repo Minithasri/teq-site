@@ -36,7 +36,7 @@ export default function GreatPlaceToWork() {
   return (
     <section className='relative w-full py-16 lg:py-24 bg-gradient-to-r from-pink-100 via-purple-50 to-orange-100 overflow-hidden'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-        <header className='flex items-center mb-16 gap-2'>
+        <header className='hidden md:flex items-center mb-16 gap-2'>
           {/* Left Icon (decorative) */}
           <div className='w-12 h-12 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
             <Image src='/images/Spark.svg' alt='' aria-hidden width={25} height={25} />
@@ -45,7 +45,7 @@ export default function GreatPlaceToWork() {
           {/* Connector */}
           <div
             aria-hidden
-            className='flex-1 h-[2px] bg-[linear-gradient(to_right,#E5E7EB_50%,rgba(0,0,0,0)_10%)] bg-[length:12px_2px] bg-repeat-x'
+            className='flex-1 h-[2px] bg-[linear-gradient(to_right,#1F1F1F_30%,rgba(0,0,0,0)_0%)] bg-[length:6px_2px] bg-repeat-x'
           />
 
           {/* CTA */}
@@ -85,9 +85,9 @@ export default function GreatPlaceToWork() {
                 background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 10%)',
               }}
             >
-              <div className='bg-white rounded-3xl p-8 relative overflow-visible'>
+              <div className='bg-white rounded-3xl p-6 sm:p-8 relative overflow-visible'>
                 <h3
-                  className='text-2xl font-semibold mb-4 bg-clip-text text-transparent'
+                  className='text-lg sm:text-2xl font-semibold mb-3 sm:mb-4 bg-clip-text text-transparent'
                   style={{
                     background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
                     WebkitBackgroundClip: 'text',
@@ -96,11 +96,11 @@ export default function GreatPlaceToWork() {
                 >
                   Great place to work - 2024
                 </h3>
-                <p className='text-gray-600 text-sm mb-6 max-w-md'>
+                <p className='text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 max-w-md'>
                   Our Great Place to Work® certification highlights our dedication to nurturing top
                   talent.
                 </p>
-                <button className='flex items-center gap-2 text-[#F97316] font-semibold text-sm hover:gap-3 transition-all'>
+                <button className='flex items-center gap-2 text-[#F97316] font-semibold text-xs sm:text-sm hover:gap-3 transition-all'>
                   Start your career here
                   <Image
                     src='/images/AboutUs/arrow_forward.svg'
@@ -112,7 +112,7 @@ export default function GreatPlaceToWork() {
                 </button>
 
                 {/* Overlapping Right Image */}
-                <div className='absolute right-16 top-1/2 -translate-y-1/2 w-[380px] h-[220px] pointer-events-none z-10'>
+                <div className='hidden lg:block absolute right-16 top-1/2 -translate-y-1/2 w-[380px] h-[220px] pointer-events-none z-10'>
                   <Image
                     src='/images/AboutUs/section4bg.svg'
                     alt=''
@@ -122,7 +122,7 @@ export default function GreatPlaceToWork() {
                 </div>
 
                 {/* Certification Badge */}
-                <div className='absolute right-36 top-1/2 -translate-y-1/2 w-32 h-32 z-20'>
+                <div className='hidden lg:block absolute right-36 top-1/2 -translate-y-1/2 w-32 h-32 z-20'>
                   <Image
                     src='/images/AboutUs/greatplacelogo.png'
                     alt='Great Place to Work Certified'

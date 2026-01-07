@@ -181,7 +181,7 @@ const AgentBundle = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8B35BC] to-[#BC6DD3] mb-6 pb-2'>
+          <h2 className='text-[26px] md:text-[28px] lg:text-[32px] font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#8B35BC] to-[#BC6DD3] mb-6 pb-2'>
             Agent Bundles
           </h2>
           <p className='max-w-3xl mx-auto text-gray-600 text-sm md:text-base leading-relaxed'>

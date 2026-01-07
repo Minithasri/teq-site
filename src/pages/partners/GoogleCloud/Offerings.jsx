@@ -104,10 +104,10 @@ const Offerings = () => {
           </div>
 
           {/* Content Card */}
-          <div className='bg-white rounded-[40px] p-2 md:p-4 shadow-xl max-w-6xl mx-auto border '>
+          <div className='bg-white rounded-[16px] p-2 md:p-4 shadow-xl max-w-6xl mx-auto border '>
             <div className='flex flex-col md:flex-row gap-8 items-center'>
               {/* Left Image Area */}
-              <div className='relative w-full md:w-[596px] h-[300px] md:h-[346px] shrink-0 rounded-[32px] overflow-hidden flex items-center justify-center'>
+              <div className='relative w-full md:w-[596px] h-[300px] md:h-[346px] shrink-0 rounded-[12px] overflow-hidden flex items-center justify-center'>
                 <div className='relative w-full h-full'>
                   <Image
                     key={activeTab}

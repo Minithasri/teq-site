@@ -50,22 +50,22 @@ const ServicesGwc = () => {
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Header (Spark + Dashed Line + CTA) */}
-        <header className='flex items-center mb-16 gap-4'>
+        <header className='hidden md:flex md:flex-row items-center justify-between w-full gap-4 md:gap-4 lg:gap-4 mb-16'>
           {/* Left Icon */}
-          <div className='w-12 h-12 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center shrink-0'>
-            <Image src={img1} alt='' aria-hidden width={24} height={24} />
+          <div className='w-14 h-14 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
+            <Image src={img1} alt='' aria-hidden width={30} height={30} />
           </div>
 
           {/* Connector */}
           <div
             aria-hidden
-            className='flex-1 h-[2px] bg-[linear-gradient(to_right,#E5E7EB_50%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x'
+            className='flex-1 h-[2px] bg-[linear-gradient(to_right,#1F1F1F_30%,rgba(0,0,0,0)_0%)] bg-[length:6px_2px] bg-repeat-x'
           />
 
           {/* CTA */}
           <Link
             href='/contact'
-            className='px-6 py-2.5 rounded-full border border-[#6F2B8B] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors shrink-0 flex items-center gap-2 text-sm bg-white/80 backdrop-blur-sm'
+            className='px-8 py-3 rounded-full border border-[#6F2B8B] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors shrink-0 flex items-center gap-2 bg-white/80 backdrop-blur-sm'
           >
             Talk to our experts
             <FiArrowRight className='w-4 h-4' />

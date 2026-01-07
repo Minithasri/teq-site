@@ -50,16 +50,6 @@ const agentData = {
       description: 'For: Retail Ops, Inventory Planners',
       image: '/images/HomePage/Component_7.png',
     },
-    {
-      title: 'AI Resume Filtering',
-      description: 'For: Retail Ops, Inventory Planners',
-      image: '/images/HomePage/Component_2.png',
-    },
-    {
-      title: 'Job Description Generator',
-      description: 'For: Retail Ops, Inventory Planners',
-      image: '/images/HomePage/Component_2.png',
-    },
   ],
   marketing: [
     {

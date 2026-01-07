@@ -86,7 +86,7 @@ const Platforms = () => {
           </div>
 
           {/* Main Content Card */}
-          <div className='w-full max-w-[1160px] mx-auto bg-white rounded-[32px] p-4 lg:p-6 shadow-xl flex flex-col lg:flex-row gap-8 items-center lg:h-[420px]'>
+          <div className='w-full max-w-[1160px] mx-auto bg-white rounded-[16px] p-4 lg:p-6 shadow-xl flex flex-col lg:flex-row gap-8 items-center lg:h-[420px]'>
             {/* Left Content */}
             <div className='w-full lg:w-[48%] h-full flex flex-col items-start justify-center rounded-2xl p-8 lg:p-10 bg-[#FCFCFC] border border-gray-50 shadow-[0px_4px_20px_rgba(0,0,0,0.02)]'>
               {/* Icon Box */}

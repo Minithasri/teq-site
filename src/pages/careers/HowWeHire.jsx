@@ -48,13 +48,13 @@ const HowWeHire = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Top Section */}
         <div className='mb-12'>
-          <header className='flex flex-col sm:flex-row items-center mb-12 md:mb-16 gap-4'>
+          <header className='hidden md:flex flex-row items-center mb-12 md:mb-16 gap-4'>
             <div className='w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center shrink-0'>
               <Image src='/images/Spark.svg' alt='' aria-hidden width={24} height={24} />
             </div>
             <div
               aria-hidden
-              className='hidden sm:block flex-1 h-[2px] bg-[linear-gradient(to_right,#E5E7EB_50%,rgba(0,0,0,0)_0%)] bg-[length:12px_2px] bg-repeat-x'
+              className='flex-1 h-[2px] bg-[linear-gradient(to_right,#1F1F1F_30%,rgba(0,0,0,0)_0%)] bg-[length:6px_2px] bg-repeat-x'
             />
             {/* Button with gradient border */}
             <div
@@ -106,8 +106,8 @@ const HowWeHire = () => {
         </div>
 
         {/* Process Flow - Using Image */}
-        <div className='flex justify-center px-4'>
-          <div className='relative w-full max-w-5xl'>
+        <div className='flex justify-center px-4 overflow-x-auto no-scrollbar pb-4 md:pb-0'>
+          <div className='relative w-full max-w-5xl min-w-[310px] md:min-w-0'>
             <Image
               src='/images/Careers/wehire_bg.png'
               alt='How We Hire Process'

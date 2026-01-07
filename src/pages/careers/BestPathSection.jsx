@@ -5,21 +5,21 @@ const BestPathSection = () => {
   const paths = [
     {
       id: 1,
-      image: '/images/Careers/best_1.svg',
+      image: '/images/Careers/Graduates.jpg',
       title: 'College Graduates',
       description:
         'Advance into a career with new terms and discover all we can offer, including learning opportunities, global projects and the freedom to explore.',
     },
     {
       id: 2,
-      image: '/images/Careers/best_2.svg',
+      image: '/images/Careers/Experienced Professionals.jpg',
       title: 'Experienced Professionals',
       description:
         "If you're looking for new opportunities to ignite or reignite your career, your experience matters here. Discover how you can begin to make a difference.",
     },
     {
       id: 3,
-      image: '/images/Careers/best_3.svg',
+      image: '/images/Careers/career resart.jpg',
       title: 'Career Restart',
       description:
         'Getting back to work after taking a break can be overwhelming, our Career Restart program help you feel self-assured while pursuing your professional aspirations.',
@@ -39,19 +39,24 @@ const BestPathSection = () => {
       {/* Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Heading */}
-        <h2
-          className='text-[24px] sm:text-[28px] md:text-[32px] text-center font-medium mb-12 lg:mb-16 bg-clip-text text-transparent'
-          style={{
-            background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-          }}
-        >
-          Find Your Best Path
-        </h2>
+        <div className='text-center mb-12 lg:mb-16'>
+          <h2
+            className='text-[24px] sm:text-[28px] md:text-[32px] font-medium mb-2 bg-clip-text text-transparent'
+            style={{
+              background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
+            Find Your Best Path
+          </h2>
+          <p className='text-[16px] font-medium text-[#525252]'>
+            A career path built around where you are and where you want to go
+          </p>
+        </div>
 
         {/* Cards Grid */}
-        <div className='flex flex-wrap justify-center gap-6 lg:gap-8'>
+        <div className='flex flex-wrap justify-center gap-4'>
           {paths.map(path => (
             <div
               key={path.id}

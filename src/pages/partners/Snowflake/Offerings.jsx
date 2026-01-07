@@ -98,10 +98,10 @@ export default function Offerings() {
       >
         <div className='max-w-7xl mx-auto'>
           {/* Header */}
-          <header className='flex flex-col md:flex-row items-center mb-16 gap-6 md:gap-2'>
+          <header className='hidden md:flex md:flex-row items-center justify-between w-full gap-4 md:gap-4 lg:gap-4 mb-16'>
             {/* Left Icon (decorative) */}
-            <div className='w-12 h-12 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
-              <Image src='/images/Spark.svg' alt='' aria-hidden width={24} height={24} />
+            <div className='w-14 h-14 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
+              <Image src='/images/Spark.svg' alt='' aria-hidden width={30} height={30} />
             </div>
 
             {/* Connector */}
@@ -113,7 +113,7 @@ export default function Offerings() {
             {/* CTA */}
             <Link
               href='/contact'
-              className='px-8 py-2 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
+              className='px-8 py-3 rounded-full border font-medium hover:bg-purple-50 transition shrink-0 flex items-center gap-2'
               style={{ borderColor: '#6F2B8B', color: '#6F2B8B' }}
             >
               Talk to our experts

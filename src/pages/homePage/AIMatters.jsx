@@ -103,17 +103,17 @@ const AIMatters = () => {
           {/* HEADER */}
           <div className='flex flex-col gap-10'>
             {/* Top Row: Icon ... Button */}
-            {/* Top Row: Icon ... Button */}
-            <header className='flex flex-col md:flex-row items-center justify-between w-full gap-6 md:gap-2 lg:gap-2'>
+            <header className='hidden md:flex md:flex-row items-center justify-between w-full gap-2 md:gap-2 lg:gap-2'>
               {/* Icon */}
               <div className='bg-white rounded-xl w-14 h-14 flex items-center justify-center shadow-lg p-3 shrink-0'>
                 <Image src='/images/Spark.svg' alt='Spark' width={40} height={40} />
               </div>
 
               {/* Connector (White Dotted Line) */}
+              {/* Connector */}
               <div
                 aria-hidden
-                className='hidden md:block flex-1 h-[2px] bg-[linear-gradient(to_right,rgba(255,255,255,0.6)_50%,rgba(0,0,0,0)_0%)] bg-[length:10px_2px] bg-repeat-x'
+                className='flex-1 h-[2px] bg-[linear-gradient(to_right,#FFFFFF_30%,rgba(0,0,0,0)_0%)] bg-[length:6px_2px] bg-repeat-x'
               />
 
               {/* Button */}
