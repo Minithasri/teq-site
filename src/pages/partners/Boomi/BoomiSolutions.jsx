@@ -10,7 +10,7 @@ const solutions = [
     cardTitle: 'Healthcare and Life Sciences',
     description:
       'With Boomi, healthcare providers and payers can create a single view of the patient across healthcare systems, including siloed Electronic Health Record databases. Support patient mobility, anytime, in any place. Get insights into care plans, from actions to costs. Raise awareness of services and patient outcomes.',
-    image: '/images/partners/boomi/last_image1.png',
+    image: '/images/partners/boomi/boomiimage1.jpg',
   },
   {
     id: 2,

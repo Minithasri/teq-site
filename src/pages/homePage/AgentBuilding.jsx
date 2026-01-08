@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import { FiArrowRight, FiX } from 'react-icons/fi';
 import { agentData } from '../../data/agentBuildingData';
@@ -36,7 +37,7 @@ const AgentModal = ({ agent, categoryLabel, onClose }) => {
         </button>
 
         {/* Header Image */}
-        <div className='relative w-full p-8'>
+        <div className='relative w-full p-10 pb-0'>
           <div className='h-52 w-full overflow-hidden rounded-2xl'>
             <img
               src={agent.image || '/images/HomePage/agentbuildingbg.svg'}
@@ -46,7 +47,7 @@ const AgentModal = ({ agent, categoryLabel, onClose }) => {
           </div>
         </div>
 
-        <div className='p-8'>
+        <div className='px-8 pt-4 pb-8'>
           {/* Title */}
           <h3
             className='text-lg font-semibold mb-6 bg-clip-text text-transparent'
@@ -119,12 +120,15 @@ const AgentModal = ({ agent, categoryLabel, onClose }) => {
           </div>
 
           {/* Footer Link */}
-          {/* <div className='pt-2'>
-            <button className='group flex items-center gap-2 text-[#8B5CF6] font-medium text-sm hover:gap-3 transition-all duration-300'>
+          <div className='pt-2'>
+            <Link
+              href='/contact'
+              className='group flex items-center gap-2 text-[#B56DD3] font-medium text-sm hover:gap-3 transition-all duration-300'
+            >
               Request Custom Implementation
               <FiArrowRight className='transition-transform group-hover:translate-x-1' />
-            </button>
-          </div> */}
+            </Link>
+          </div>
         </div>
       </div>
     </div>

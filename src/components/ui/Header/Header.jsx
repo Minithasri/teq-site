@@ -180,6 +180,13 @@ export default function Header({
                       </button>
                     )}
                   </div>
+
+                  {/* Dropdown positioned under this specific nav item */}
+                  {item.megaMenu && activeDropdown === item.label && (
+                    <div className='absolute left-1/2 -translate-x-1/2 top-full pt-2 z-[10000]'>
+                      {renderMegaMenu(item, dropdownRef)}
+                    </div>
+                  )}
                 </div>
               ))}
             </nav>
@@ -212,17 +219,6 @@ export default function Header({
               </Link>
             </div>
           </div>
-          {activeDropdown && (
-            <div className='absolute left-0 right-0 top-full z-[10000] w-full'>
-              <div className='w-full'>
-                <div className='bg-transparent overflow-hidden origin-top w-full'>
-                  {navItems
-                    .filter(i => i.label === activeDropdown)
-                    .map(item => renderMegaMenu(item, dropdownRef))}
-                </div>
-              </div>
-            </div>
-          )}
         </div>
         {open && (
           <div className='lg:hidden border-b border-gray-200 bg-white'>

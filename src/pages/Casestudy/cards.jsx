@@ -1,146 +1,163 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
-import { FiSearch } from 'react-icons/fi';
+import { FiArrowRight, FiSearch } from 'react-icons/fi';
 
 const Cards = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const caseStudiesData = [
     {
-      title: 'LMS Success for Digital Training Firm',
+      slug: 'eliminating-downtime-centralized-maintenance',
+      title: 'Eliminating Downtime Through Centralized Digital Maintenance',
       description:
-        'Moodle based LMS centralized training, reduced costs, and improved learning scalability.',
+        'Reduces unplanned downtime through centralized and digitized maintenance management.',
     },
     {
-      title: 'Data Analytics Transforming Restaurant Experiences',
-      description:
-        'Brisbane restaurant group automated analytics with GWC Data.AI, achieving 70% time savings.',
+      slug: 'quality-yield-intelligence',
+      title: 'Driving First-Time-Right Manufacturing Through Quality & Yield Intelligence',
+      description: 'Improves production accuracy using real time quality and yield insights.',
     },
     {
-      title: 'WhatsApp Salesforce Cybersecurity Integration',
-      description:
-        'Cybersecurity firm integrated WhatsApp via GWC Data.AI, driving 33% higher sales and 40% time savings.',
+      slug: 'real-time-iot-visibility',
+      title: 'Transforming Manufacturing Operations with Real-Time IoT Visibility',
+      description: 'Provides live IoT driven visibility into manufacturing operations.',
     },
     {
-      title: 'Salesforce Analytics Boosts Sales Performance',
-      description:
-        'Global industrial software leader improved sales analytics, delivering 15% cost savings and 25% sales growth.',
+      slug: 'downtime-optimization-electronics',
+      title: 'Downtime Optimization & Maintenance Digitization',
+      description: 'Optimizes downtime by digitizing maintenance workflows and data.',
     },
     {
-      title: 'ABC XYZ Inventory Optimization Analysis',
-      description:
-        'A home improvement retailer optimized inventory and pricing through advanced analytics.',
+      slug: 'yield-visibility-throughput-growth',
+      title: 'Turning Yield Visibility into Throughput Growth',
+      description: 'Boosts throughput by converting yield insights into actionable improvements.',
     },
     {
-      title: 'HR Analytics for Workforce Insights',
-      description:
-        'GWC enhanced workforce planning through improved people analytics dashboards and reporting.',
+      slug: 'digitizing-tool-intelligence',
+      title: 'Digitizing Tool Intelligence for Manufacturing Performance',
+      description: 'Enhances manufacturing performance through digital tool monitoring.',
     },
     {
-      title: 'BI Solutions for IT Management Firms',
-      description:
-        'Executive dashboards delivered real time insights into sales, engagement, and KPIs for an IT management software provider.',
+      slug: 'sustainability-energy-competitive-advantage',
+      title: 'Turning Energy Consumption into a Measurable Competitive Advantage',
+      description: 'Optimizes energy usage to reduce costs and improve efficiency.',
     },
     {
-      title: 'Advanced Analytics for Home Furnishing Retail',
-      description:
-        'GWC Data.AI enabled data driven sales optimization for a leading home furnishing retailer.',
+      slug: 'predictive-maintenance-ai-iot',
+      title: 'Predictive Maintenance (AI & IoT)',
+      description: 'Prevents equipment failures using AI powered predictive insights.',
     },
     {
-      title: 'MicroStrategy to Power BI Migration',
-      description:
-        'Power BI implementation ensured reliable, error free data access while saving time and operational costs.',
+      slug: 'ai-chatbot-knowledge-access',
+      title: 'AI Chatbot for Enterprise Knowledge Access',
+      description: 'Enables instant enterprise knowledge access through conversational AI.',
     },
     {
-      title: 'Workplace Analytics in Manufacturing',
-      description:
-        'Workplace analytics optimized hybrid office utilization for a global tobacco manufacturer.',
+      slug: 'commonality-traceability-analytics',
+      title: 'Commonality & Traceability Analytics',
+      description: 'Improves component traceability and root cause analysis.',
     },
     {
-      title: 'Power Apps for Task Management',
-      description:
-        'Advanced analytics supported operational insights for a global commercial real estate leader.',
+      slug: 'iot-based-machine-monitoring',
+      title: 'IoT-Based Machine Monitoring',
+      description: 'Monitors machine health and performance in real time.',
     },
     {
-      title: 'Oil and Gas Data Analytics',
-      description:
-        'Data analytics enabled sustainability and efficiency initiatives for a global energy company.',
+      slug: 'scrap-analytics-quality-improvement',
+      title: 'Scrap Analytics for Quality Improvement',
+      description: 'Reduces scrap by identifying quality issues and trends.',
     },
     {
-      title: 'Data Driven Culinary Transformation',
-      description:
-        'Anyday Group improved diner insights, pricing, and menu strategy using GWC Analytics to drive sales growth.',
+      slug: 'maintenance-amc-management-plant',
+      title: 'Maintenance & AMC Management',
+      description: 'Streamlines maintenance operations and AMC contract tracking.',
     },
     {
-      title: 'Analytics Driven Home Retail Success',
-      description:
-        'A home improvement retailer optimized inventory and pricing through advanced analytics.',
+      slug: 'quality-defect-traceability-source',
+      title: 'Quality & Defect Traceability',
+      description: 'Tracks defects end to end for faster resolution.',
     },
     {
-      title: 'Manufacturing Success with Workplace Analytics',
-      description:
-        'Hybrid workplace analytics improved office safety and space utilization for a global enterprise.',
+      slug: 'breakdown-analytics-mttr-mtbf',
+      title: 'Breakdown Analytics (MTTR / MTBF)',
+      description: 'Analyzes breakdown metrics to improve equipment reliability.',
     },
     {
-      title: 'IoT Driven Production Efficiency',
-      description:
-        'Analytics strengthened operational efficiency for a leading aluminium die casting manufacturer.',
+      slug: 'maintenance-efficiency-improvement-platform',
+      title: 'Maintenance Efficiency Improvement',
+      description: 'Improves maintenance productivity and operational efficiency.',
     },
     {
-      title: 'Manufacturing Demand & Supply Forecasting',
-      description:
-        'Data driven insights supported precision manufacturing and workforce growth in the mobile components sector.',
+      slug: 'automobile-warranty-vehicle-health',
+      title: 'Warranty & Vehicle Health Analytics',
+      description: 'Analyzes vehicle health and warranty data to reduce service costs.',
     },
     {
-      title: 'Healthcare Claims and Risk Analytics',
-      description:
-        'Advanced analytics and blockchain streamlined insurance operations and improved customer experience.',
+      slug: 'banking-operational-performance-analytics',
+      title: 'Operational Performance Analytics',
+      description: 'Provides insights into operational efficiency and performance.',
     },
     {
-      title: 'Power Apps for Data Auditing',
-      description:
-        'Data analytics supported operational excellence across a 6,800 flight global airline network.',
+      slug: 'funnel-conversion-analytics',
+      title: 'Funnel & Conversion Analytics',
+      description: 'Optimizes customer journeys by tracking funnel performance.',
     },
     {
-      title: 'Power Platform for Complaint Management',
-      description:
-        'Analytics ensured compliant and efficient customer complaint resolution for a UK energy provider.',
+      slug: 'cross-platform-campaign-analytics',
+      title: 'Cross-Platform Campaign Analytics',
+      description: 'Delivers unified insights across multiple marketing platforms.',
     },
     {
-      title: 'Salesforce Customization for CRM Transition',
-      description:
-        'Cost effective CRM analytics replaced expensive Salesforce licenses for a cybersecurity solutions provider.',
+      slug: 'healthcare-operational-kpi-dashboards',
+      title: 'Operational KPI Dashboards',
+      description: 'Offers real time visibility into healthcare operational KPIs.',
     },
     {
-      title: 'Sales Analytics Using Salesforce Studio',
-      description:
-        'Salesforce Analytics Studio improved forecasting, win rates, and revenue for a global industrial software firm.',
+      slug: 'healthcare-data-platform-modernization',
+      title: 'Data Platform Modernization',
+      description: 'Modernizes data platforms for scalable and secure analytics.',
     },
     {
-      title: 'Cybersecurity Growth via WhatsApp Integration',
-      description:
-        'WhatsApp CRM integration boosted engagement and operational efficiency for a cybersecurity services company.',
+      slug: 'retail-demand-forecasting',
+      title: 'Demand Forecasting & Replenishment Planning',
+      description: 'Predicts demand to optimize inventory replenishment.',
     },
     {
-      title: 'Teqcertify Academy LMS Development',
-      description:
-        'Moodle based LMS centralized training, reduced costs, and improved learning scalability.',
+      slug: 'retail-store-benchmarking',
+      title: 'Store Performance Benchmarking',
+      description: 'Benchmarks store KPIs to identify improvement opportunities.',
     },
     {
-      title: 'Financial Performance Analytics',
-      description:
-        'Analytics supported digital transformation for a global FinTech software provider.',
+      slug: 'retail-sales-inventory-intelligence',
+      title: 'Sales & Inventory Intelligence',
+      description: 'Provides unified insights into sales and inventory performance.',
+    },
+    {
+      slug: 'retail-customer-segmentation',
+      title: 'Customer Segmentation & Buying Behavior',
+      description: 'Analyzes customer behavior to enable targeted retail strategies.',
+    },
+    {
+      slug: 'oil-gas-work-order-monitoring',
+      title: 'Work Order & Asset Monitoring',
+      description: 'Monitors assets and work orders to improve operational reliability.',
     },
   ];
 
-  const cardsData = caseStudiesData.map((study, i) => ({
-    id: i + 21,
-    image: `/images/Casestudy/img${i + 21}.png`,
-    title: study.title,
-    description: study.description,
-    link: '/case-study-details',
-  }));
+  const cardsData = caseStudiesData.map((study, i) => {
+    const imgNumber = i + 21;
+    const extension = imgNumber === 46 || imgNumber === 47 ? 'jpg' : 'png';
+
+    return {
+      id: imgNumber,
+      image: `/images/Casestudy/img${imgNumber}.${extension}`,
+      title: study.title,
+      description: study.description,
+      slug: study.slug,
+      link: study.slug ? `/Casestudy/${study.slug}` : '/case-study-details',
+    };
+  });
 
   // Filter cards based on search query
   const filteredCards = cardsData.filter(card => {
@@ -185,9 +202,10 @@ const Cards = () => {
         ) : (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center'>
             {filteredCards.map(card => (
-              <div
+              <Link
                 key={card.id}
-                className='bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col w-full max-w-[400px]'
+                href={card.link}
+                className='bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col w-full max-w-[400px] cursor-pointer'
                 style={{ minHeight: '380px' }}
               >
                 {/* Image Container with Padding */}
@@ -213,38 +231,24 @@ const Cards = () => {
                     {card.description}
                   </p>
 
-                  <Link
-                    href={card.link}
-                    className='inline-flex items-center font-semibold text-[16px] hover:underline mt-auto bg-clip-text text-transparent'
-                    style={{
-                      background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                    }}
-                  >
-                    Explore case study
-                    <svg
-                      className='w-4 h-4 ml-2'
-                      fill='none'
-                      stroke='url(#gradient)'
-                      viewBox='0 0 24 24'
+                  <div className='inline-flex items-center font-semibold text-[16px] mt-auto group'>
+                    <span
+                      className='bg-clip-text text-transparent'
+                      style={{
+                        background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                      }}
                     >
-                      <defs>
-                        <linearGradient id='gradient' x1='0%' y1='0%' x2='0%' y2='100%'>
-                          <stop offset='0%' stopColor='#7030B1' />
-                          <stop offset='100%' stopColor='#B56DD3' />
-                        </linearGradient>
-                      </defs>
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-                        d='M17 8l4 4m0 0l-4 4m4-4H3'
-                      />
-                    </svg>
-                  </Link>
+                      Explore case study
+                    </span>
+                    <FiArrowRight
+                      className='w-4 h-4 ml-2 transition-transform group-hover:translate-x-1'
+                      style={{ color: '#7030B1' }}
+                    />
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}
