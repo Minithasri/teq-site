@@ -18,25 +18,25 @@ const steps = [
     title: 'Intuitive interface',
     description:
       "Boomi is known for its easy to use interface. Boomi's API Management makes it easy to create APIs from integrations with a simple one click wizard.",
-    image: '/images/partners/boomi/section2_img1.png',
+    image: '/images/partners/boomi/bo1.png',
   },
   {
     title: 'Multi-cloud runtime',
     description:
       "The API Gateway is built on top of Boomi's flexible, multi-cloud, molecule runtime, allowing deployment anywhere.",
-    image: '/images/partners/boomi/section2_img2.png',
+    image: '/images/partners/boomi/bo2.png',
   },
   {
     title: 'Powerful APIs',
     description:
       "Just like the rest of the Boomi platform, Boomi's API Management includes robust APIs for managing and reporting on your API usage.",
-    image: '/images/partners/boomi/section2_img3.png',
+    image: '/images/partners/boomi/bo3.png',
   },
   {
     title: 'Part of the family',
     description:
       'As part of the Boomi platform, take advantage of tight coupling with other services like Integration, EDI/B2B, Master Data Hub, and Flow.',
-    image: '/images/partners/boomi/section2_img4.png',
+    image: '/images/partners/boomi/bo4.png',
   },
 ];
 
@@ -102,7 +102,7 @@ const BoomiPower = () => {
               GWC Platform
             </h2>
             <div className='flex justify-start lg:justify-end'>
-              <p className='text-[#1F1F1F] max-w-lg leading-relaxed lg:text-right'>
+              <p className='text-[#1F1F1F] max-w-lg leading-relaxed lg:text-left'>
                 GWC brings the power of Boomi to integrate, automate, and scale your business
                 securely from one platform with flexibility and full control.
               </p>
@@ -153,7 +153,7 @@ const BoomiPower = () => {
 
           {/* Right: Image Display */}
           <div className='w-full lg:w-2/3 relative min-h-[400px] lg:min-h-auto flex justify-end'>
-            <div className='w-full max-w-[530px] h-[350px] bg-gradient-to-br from-[#F3E5F5] to-[#E1BEE7] rounded-[32px] overflow-hidden flex items-center justify-center p-8 shadow-inner'>
+            <div className='w-full max-w-[530px] h-[350px] bg-gradient-to-br from-[#F3E5F5] to-[#E1BEE7] rounded-[16px] overflow-hidden flex items-center justify-center p-8 shadow-inner'>
               {/* Image Transition Wrapper */}
               <div className='relative w-full h-full max-w-[550px] max-h-[450px]'>
                 {steps.map((step, index) => (

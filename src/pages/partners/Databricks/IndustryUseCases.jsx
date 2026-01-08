@@ -18,25 +18,25 @@ const industries = [
     title: 'Healthcare & Life Sciences',
     description:
       'Integrate EMR, genomics, imaging, claims data to build predictive models for disease progression, drug response, or patient flow.',
-    image: '/images/partners/databricks/image_11.png',
+    image: '/images/partners/databricks/industry1.jpg',
   },
   {
     title: 'Financial Services (BFSI)',
     description:
       'Real-time fraud detection, risk scoring, integrating transactional, customer, and alternative data for insights.',
-    image: '/images/partners/databricks/image_12.png',
+    image: '/images/partners/databricks/industry2.jpg',
   },
   {
     title: 'Retail & eCommerce',
     description:
       'Real-time recommendation engines, supply chain demand forecasting, personalized marketing campaigns.',
-    image: '/images/partners/databricks/image_13.png',
+    image: '/images/partners/databricks/industry3.jpg',
   },
   {
     title: 'Manufacturing & Industrial',
     description:
       'IoT sensor data analysis for predictive maintenance, quality monitoring, and throughput optimization.',
-    image: '/images/partners/databricks/image_14.png',
+    image: '/images/partners/databricks/industry4.jpg',
   },
   {
     title: 'Telecommunications & Media',
@@ -48,7 +48,7 @@ const industries = [
     title: 'Energy, Utilities & Infrastructure',
     description:
       'Smart grid analytics, demand forecasting, and asset management to optimize operations.',
-    image: '/images/partners/databricks/image_16.png',
+    image: '/images/partners/databricks/industry6.jpg',
   },
 ];
 

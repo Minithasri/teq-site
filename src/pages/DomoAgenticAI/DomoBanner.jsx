@@ -4,7 +4,7 @@ import { FiArrowRight } from 'react-icons/fi';
 
 const DomoBanner = () => {
   return (
-    <section className='relative w-full min-h-screen overflow-hidden pt-20 pb-24'>
+    <section className='relative w-full min-h-screen overflow-hidden pt-20 pb-6'>
       {/* HERO BACKGROUND IMAGE */}
       <div className='absolute inset-0 -z-10'>
         <Image
@@ -48,28 +48,15 @@ const DomoBanner = () => {
           </div>
         </div>
 
-        {/* ---------- IMAGE LAYOUT (66 / 33) ---------- */}
+        {/* ---------- HERO IMAGE ---------- */}
         <div className='w-full max-w-7xl mx-auto'>
-          <div className='grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 lg:gap-8'>
-            {/* LEFT IMAGE – 70% */}
-            <div className='relative h-[300px] md:h-[400px] rounded-[24px] overflow-hidden shadow-2xl'>
-              <Image
-                src='/images/DomoPage/leftimg.png'
-                alt='Domo Office Interior'
-                fill
-                className='object-cover'
-              />
-            </div>
-
-            {/* RIGHT IMAGE – 30% */}
-            <div className='relative h-[300px] md:h-[400px] rounded-[24px] overflow-hidden shadow-2xl'>
-              <Image
-                src='/images/DomoPage/rightimg.png'
-                alt='Domo Exterior'
-                fill
-                className='object-cover'
-              />
-            </div>
+          <div className='relative h-[300px] md:h-[400px] lg:h-[450px] rounded-[16px] overflow-hidden shadow-lg'>
+            <Image
+              src='/images/DomoPage/dframe1.png'
+              alt='Domo Banner'
+              fill
+              className='object-cover'
+            />
           </div>
         </div>
       </div>

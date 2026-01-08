@@ -20,22 +20,22 @@ const AIMatters = () => {
     {
       title: 'Complete Agent Lifecycle Hub',
       desc: 'A flexible, modular platform that lets you design, run, monitor, and manage agents end-to-end, all in one place, without dealing with complex integrations or scattered tools.',
-      image: '/images/LifecycleHub.svg',
+      image: '/images/HomePage/home11.png',
     },
     {
       title: 'Ready-Made Blueprints for Rapid Builds',
       desc: 'Unlock a private collection of pre-built agent blueprints to speed up development dramatically. Cut your initial build effort by nearly 70% and move from idea to launch in just weeks.',
-      image: '/images/RapidBuilds.svg',
+      image: '/images/HomePage/home2.png',
     },
     {
       title: 'Total Control of Your Data & IP',
       desc: 'Built on an open, transparent, and secure foundation. Your data is never used for training, and every agent you create remains completely and exclusively your own intellectual property.',
-      image: '/images/DataAndIP.svg',
+      image: '/images/HomePage/home3.png',
     },
     {
       title: 'Designed for Enterprise Scale & Security',
       desc: 'Deploy in your preferred environment cloud or on-prem with full model flexibility. Comes equipped with enterprise safeguards like SSO, RBAC, auditing, and built-in Human in the Loop controls.',
-      image: '/images/ScaleAndSecurity.svg',
+      image: '/images/HomePage/home4.png',
     },
   ];
 
@@ -180,13 +180,15 @@ const AIMatters = () => {
               </div>
             </div>
             {/* Right Image */}
+            {/* Right Image */}
             <div className='flex-[1.2] flex justify-end items-start'>
-              <div className='relative z-[10] w-full h-[325px]'>
+              <div className='relative z-[10] w-[580px] h-[350px] rounded-[16px] overflow-hidden bg-white/5'>
                 <Image
                   src={features[activeIndex].image}
                   alt={features[activeIndex].title}
                   fill
-                  className='object-contain object-right rounded-2xl'
+                  className='object-cover'
+                  priority
                 />
               </div>
             </div>

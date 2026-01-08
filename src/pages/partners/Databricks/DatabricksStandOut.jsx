@@ -134,7 +134,7 @@ const DatabricksStandOut = () => {
                   <span className='text-[#F97316] text-[25px] md:text-[30px] font-bold'>
                     {feature.statTitle}
                   </span>
-                  <span className='text-gray-400 text-lg md:text-[15px] font-medium'>
+                  <span className='text-[#737373] text-[16px] md:text-[18px] font-medium'>
                     {feature.statDesc}
                   </span>
                 </div>

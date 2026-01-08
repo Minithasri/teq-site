@@ -6,6 +6,7 @@ import DatabricksStandOut from '@/pages/partners/Databricks/DatabricksStandOut';
 import DeliveryApproach from '@/pages/partners/Databricks/DeliveryApproach';
 import HeroSection from '@/pages/partners/Databricks/HeroSection';
 import IndustryUseCases from '@/pages/partners/Databricks/IndustryUseCases';
+import LastSection from '@/pages/partners/Databricks/LastSection';
 import Outcomes from '@/pages/partners/Databricks/Outcomes';
 
 export default function DatabricksPage() {
@@ -18,6 +19,7 @@ export default function DatabricksPage() {
       <DeliveryApproach />
       <Competitors />
       <Outcomes />
+      <LastSection />
     </main>
   );
 }

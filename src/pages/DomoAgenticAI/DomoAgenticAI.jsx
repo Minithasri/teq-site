@@ -5,7 +5,7 @@ const DomoAgenticAI = () => {
   return (
     <div className='w-full'>
       {/* Top spacing */}
-      <div className='h-[50px] sm:h-[75px] lg:h-[100px]'></div>
+      <div className='h-[16px] sm:h-[18px] lg:h-[20px]'></div>
       <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='grid grid-cols-1 lg:grid-cols-[1.4fr_0.6fr] gap-6 lg:gap-[2%]'>
           <div

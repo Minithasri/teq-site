@@ -1,190 +1,150 @@
 'use client';
 
 import { useState } from 'react';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiX } from 'react-icons/fi';
+import { agentData } from '../../data/agentBuildingData';
 
 const categories = [
-  { id: 'hr', label: 'HR' },
-  { id: 'marketing', label: 'Marketing' },
-  { id: 'sales', label: 'Sales' },
-  { id: 'retail', label: 'Retail' },
+  { id: 'realestate', label: 'Real Estate' },
+  { id: 'supplychain', label: 'Supply Chain & Logistics' },
   { id: 'manufacturing', label: 'Manufacturing' },
-  { id: 'supplychain', label: 'Supply chain and Logistics' },
-  { id: 'travel', label: 'Travel and hospitality' },
+  { id: 'retail', label: 'Retail' },
+  { id: 'sales', label: 'Sales' },
+  { id: 'marketing', label: 'Marketing' },
+  { id: 'hr', label: 'HR' },
 ];
 
-const agentData = {
-  hr: [
-    {
-      title: 'AI L&D Agent',
-      description: 'For: Employees, HR Leaders, Enterprise Enablement',
-      image: '/images/HomePage/Component_1.png',
-    },
-    {
-      title: 'AI performance Review Agent',
-      description: 'For: Managers, HR Support Teams, Operations',
-      image: '/images/HomePage/Component_2.png',
-    },
-    {
-      title: 'Employee Onboarding Agent',
-      description: 'For: Retail Ops, Inventory Planners',
-      image: '/images/HomePage/Component_3.png',
-    },
-    {
-      title: 'HR HelpDesk Agent',
-      description: 'For: Employees, HR Support Teams, Operations',
-      image: '/images/HomePage/Component_4.png',
-    },
-    {
-      title: 'Policy generator Agent',
-      description: 'For: HR Leaders, Compliance Teams, Legal Operations',
-      image: '/images/HomePage/Component_5.png',
-    },
-    {
-      title: 'AI Hiring Assistant',
-      description: 'For: Retail Ops, Inventory Planners',
-      image: '/images/HomePage/Component_6.png',
-    },
-    {
-      title: 'Interview Analysis Agent',
-      description: 'For: Retail Ops, Inventory Planners',
-      image: '/images/HomePage/Component_7.png',
-    },
-  ],
-  marketing: [
-    {
-      title: 'Content Generation Agent',
-      description: 'For: Marketing Teams, Content Creators',
-    },
-    {
-      title: 'Social Media Manager',
-      description: 'For: Marketing Teams, Social Media Managers',
-    },
-    {
-      title: 'Campaign Analytics Agent',
-      description: 'For: Marketing Teams, Data Analysts',
-    },
-  ],
-  sales: [
-    {
-      title: 'Lead Qualification Agent',
-      description: 'For: Sales Teams, Account Managers',
-    },
-    {
-      title: 'Sales Forecasting Agent',
-      description: 'For: Sales Teams, Revenue Planners',
-    },
-    {
-      title: 'Customer Outreach Agent',
-      description: 'For: Sales Teams, Business Development',
-    },
-  ],
-  support: [
-    {
-      title: 'Customer Support Agent',
-      description: 'For: Support Teams, Service Desk',
-    },
-    {
-      title: 'Ticket Routing Agent',
-      description: 'For: Support Teams, IT Helpdesk',
-    },
-    {
-      title: 'Knowledge Base Agent',
-      description: 'For: Support Teams, Documentation',
-    },
-  ],
-  banking: [
-    {
-      title: 'Fraud Detection Agent',
-      description: 'For: Banking Operations, Risk Management',
-    },
-    {
-      title: 'Loan Processing Agent',
-      description: 'For: Banking Operations, Loan Officers',
-    },
-    {
-      title: 'Customer KYC Agent',
-      description: 'For: Banking Operations, Compliance',
-    },
-  ],
-  insurance: [
-    {
-      title: 'Claims Processing Agent',
-      description: 'For: Insurance Operations, Claims Adjusters',
-    },
-    {
-      title: 'Policy Recommendation Agent',
-      description: 'For: Insurance Operations, Underwriters',
-    },
-    {
-      title: 'Risk Assessment Agent',
-      description: 'For: Insurance Operations, Actuaries',
-    },
-  ],
-  retail: [
-    {
-      title: 'Inventory Management Agent',
-      description: 'For: Retail Ops, Inventory Planners',
-    },
-    {
-      title: 'Customer Experience Agent',
-      description: 'For: Retail Ops, Customer Service',
-    },
-    {
-      title: 'Price Optimization Agent',
-      description: 'For: Retail Ops, Pricing Teams',
-    },
-  ],
-  manufacturing: [
-    {
-      title: 'Production Planning Agent',
-      description: 'For: Manufacturing Ops, Production Planners',
-    },
-    {
-      title: 'Quality Control Agent',
-      description: 'For: Manufacturing Ops, QA Teams',
-    },
-    {
-      title: 'Supply Chain Agent',
-      description: 'For: Manufacturing Ops, Supply Chain',
-    },
-  ],
+const AgentModal = ({ agent, categoryLabel, onClose }) => {
+  if (!agent) return null;
 
-  supplychain: [
-    {
-      title: 'Route Optimization Agent',
-      description: 'For: Logistics, Operations Teams',
-    },
-    {
-      title: 'Demand Forecasting Agent',
-      description: 'For: Supply Chain, Planning Teams',
-    },
-    {
-      title: 'Warehouse Management Agent',
-      description: 'For: Logistics, Warehouse Ops',
-    },
-  ],
-  travel: [
-    {
-      title: 'Booking Assistant Agent',
-      description: 'For: Travel, Customer Service',
-    },
-    {
-      title: 'Itinerary Planning Agent',
-      description: 'For: Travel, Concierge Services',
-    },
-    {
-      title: 'Revenue Management Agent',
-      description: 'For: Hospitality, Revenue Teams',
-    },
-  ],
+  return (
+    <div
+      className='fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/60'
+      onClick={onClose}
+    >
+      <div
+        className='bg-white rounded-2xl w-full relative shadow-2xl overflow-y-auto'
+        style={{ maxWidth: '850px', maxHeight: '680px' }}
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Close Button */}
+        <button
+          className='absolute top-4 right-4 z-10 text-[#7030B1] hover:text-[#B56DD3] transition-colors'
+          onClick={onClose}
+        >
+          <FiX size={24} />
+        </button>
+
+        {/* Header Image */}
+        <div className='relative w-full p-8'>
+          <div className='h-52 w-full overflow-hidden rounded-2xl'>
+            <img
+              src={agent.image || '/images/HomePage/agentbuildingbg.svg'}
+              alt={agent.title}
+              className='w-full h-full object-cover'
+            />
+          </div>
+        </div>
+
+        <div className='p-8'>
+          {/* Title */}
+          <h3
+            className='text-lg font-semibold mb-6 bg-clip-text text-transparent'
+            style={{
+              background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
+            {agent.title}
+          </h3>
+
+          {/* Audience & Category - Gray Background Container */}
+          <div className='bg-gray-50 rounded-xl p-6 mb-6'>
+            <div className='grid grid-cols-2 gap-8'>
+              <div>
+                <h4 className='font-semibold text-gray-900 text-sm mb-3'>Audience</h4>
+                <p className='text-gray-600 text-sm leading-relaxed'>
+                  {agent.audience ? agent.audience.join(', ') : 'General Audience'}
+                </p>
+              </div>
+              <div>
+                <h4 className='font-semibold text-gray-900 text-sm mb-3'>Category</h4>
+                <span
+                  className='inline-block px-3 py-1.5 rounded-[12px] text-xs font-medium'
+                  style={{ backgroundColor: '#F0DEF8' }}
+                >
+                  {categoryLabel}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Dotted Separator */}
+          <div className='w-full mb-6' style={{ borderTop: '2px dashed #D1D5DB' }} />
+
+          {/* How it works */}
+          <div className='mb-6'>
+            <h4 className='font-semibold text-gray-900 mb-4 text-sm'>How it works</h4>
+            <ul className='space-y-2.5'>
+              {agent.howItWorks?.map((item, i) => (
+                <li
+                  key={i}
+                  className='flex items-start gap-3 text-gray-600 text-sm leading-relaxed'
+                >
+                  <span className='w-1 h-1 rounded-full bg-gray-400 mt-2 shrink-0' />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Dotted Separator */}
+          <div className='w-full mb-6' style={{ borderTop: '1px dashed #D1D5DB' }} />
+
+          {/* Potential Impact */}
+          <div className='mb-6'>
+            <h4 className='font-semibold text-gray-900 mb-5 text-sm'>Potential Impact</h4>
+            <div className='grid grid-cols-3 gap-4'>
+              {agent.potentialImpact?.map((item, i) => (
+                <div
+                  key={i}
+                  className='border border-purple-200 rounded-xl p-4 text-center'
+                  style={{ backgroundColor: '#FAF0FF' }}
+                >
+                  <p className=' font-medium text-sm leading-snug'>{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Footer Link */}
+          {/* <div className='pt-2'>
+            <button className='group flex items-center gap-2 text-[#8B5CF6] font-medium text-sm hover:gap-3 transition-all duration-300'>
+              Request Custom Implementation
+              <FiArrowRight className='transition-transform group-hover:translate-x-1' />
+            </button>
+          </div> */}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default function AgentBuilding() {
-  const [activeCategory, setActiveCategory] = useState('hr');
+  const [activeCategory, setActiveCategory] = useState('realestate');
+  const [selectedAgent, setSelectedAgent] = useState(null);
+
+  // Helper to get current agents safely
+  const currentAgents = agentData[activeCategory] || [];
+  const activeCategoryLabel = categories.find(c => c.id === activeCategory)?.label || 'General';
 
   return (
-    <section className='w-full py-16 lg:py-24' style={{ backgroundColor: '#F2ECFE' }}>
+    <section
+      id='agent-building'
+      className='w-full py-16 lg:py-24'
+      style={{ backgroundColor: '#F2ECFE' }}
+    >
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Title */}
         <h2 className='text-[28px] md:text-[32px] font-medium text-center mb-12 sm:mb-16 tracking-tight text-[#333333]'>
@@ -232,10 +192,10 @@ export default function AgentBuilding() {
 
           {/* Agent Cards Grid */}
           <div className='grid grid-cols-3 gap-8'>
-            {agentData[activeCategory]?.map((agent, index) => (
+            {currentAgents.map((agent, index) => (
               <div
                 key={index}
-                className='relative rounded-2xl overflow-hidden group border border-[#E5E5E5] w-full'
+                className='relative rounded-2xl overflow-hidden group border border-[#E5E5E5] w-full bg-white'
                 style={{ height: '320px' }}
               >
                 {/* Background Image */}
@@ -247,12 +207,10 @@ export default function AgentBuilding() {
                   />
                 </div>
 
-                {/* Overlay for whole card if needed for tint, or keep specific gradients */}
-
                 {/* Content */}
-                <div className='absolute bottom-0 w-full p-6 z-20 flex flex-col justify-end h-full'>
-                  <div className='mt-auto'>
-                    <h3 className='text-[20px] font-bold text-white mb-2 leading-tight'>
+                <div className='absolute bottom-0 w-full p-6 z-20 flex flex-col justify-end h-full pointer-events-none'>
+                  <div className='mt-auto pointer-events-auto'>
+                    <h3 className='text-[16px] font-medium text-white mb-2 leading-tight'>
                       {agent.title}
                     </h3>
                     <p className='text-[13px] text-white/80 mb-6 font-light'>{agent.description}</p>
@@ -262,7 +220,10 @@ export default function AgentBuilding() {
                       style={{ borderColor: '#797979' }}
                     />
 
-                    <button className='inline-flex items-center gap-2 text-[#F97316] text-[14px] font-medium hover:gap-3 transition-all duration-200'>
+                    <button
+                      onClick={() => setSelectedAgent(agent)}
+                      className='inline-flex items-center gap-2 text-[#F97316] text-[14px] font-medium hover:gap-3 transition-all duration-200 cursor-pointer'
+                    >
                       Learn more
                       <FiArrowRight className='w-4 h-4' />
                     </button>
@@ -304,10 +265,10 @@ export default function AgentBuilding() {
 
           {/* Agent Cards Grid - Mobile */}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-            {agentData[activeCategory]?.map((agent, index) => (
+            {currentAgents.map((agent, index) => (
               <div
                 key={index}
-                className='relative rounded-2xl overflow-hidden min-h-[320px] shadow-lg group border border-[#E5E5E5]'
+                className='relative rounded-2xl overflow-hidden min-h-[320px] shadow-lg group border border-[#E5E5E5] bg-white'
               >
                 {/* Background Image */}
                 <div className='absolute inset-0 z-0'>
@@ -333,8 +294,8 @@ export default function AgentBuilding() {
                   }}
                 />
 
-                <div className='absolute bottom-0 w-full p-6 z-20 flex flex-col justify-end h-full'>
-                  <div className='mt-auto'>
+                <div className='absolute bottom-0 w-full p-6 z-20 flex flex-col justify-end h-full pointer-events-none'>
+                  <div className='mt-auto pointer-events-auto'>
                     <h3 className='text-lg font-bold text-white mb-2 leading-tight'>
                       {agent.title}
                     </h3>
@@ -343,7 +304,10 @@ export default function AgentBuilding() {
                       className='w-full h-[1px] mb-4 border-t border-dashed'
                       style={{ borderColor: '#797979' }}
                     />
-                    <button className='inline-flex items-center gap-2 text-[#F97316] text-sm font-medium'>
+                    <button
+                      onClick={() => setSelectedAgent(agent)}
+                      className='inline-flex items-center gap-2 text-[#F97316] text-sm font-medium cursor-pointer'
+                    >
                       Learn more
                       <FiArrowRight className='w-4 h-4' />
                     </button>
@@ -353,6 +317,13 @@ export default function AgentBuilding() {
             ))}
           </div>
         </div>
+
+        {/* Modal */}
+        <AgentModal
+          agent={selectedAgent}
+          categoryLabel={activeCategoryLabel}
+          onClose={() => setSelectedAgent(null)}
+        />
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 'use client';
 import { ArrowRight } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
 
 const StepIcon = ({ stepNumber }) => {
   return (
@@ -21,9 +20,6 @@ const StepIcon = ({ stepNumber }) => {
 };
 
 const SimpleSteps = () => {
-  const pathRef = useRef(null);
-  const [isDrawing, setIsDrawing] = useState(false);
-
   const steps = [
     {
       id: 1,
@@ -55,55 +51,6 @@ const SimpleSteps = () => {
     },
   ];
 
-  useEffect(() => {
-    if (!pathRef.current) return;
-
-    // Define the dash and gap sizes
-    const DASH_AND_GAP_SIZE = 14;
-
-    // Wait 1 second for the DOM to settle
-    const delay = 1000;
-    const ANIMATION_DURATION = '6s';
-
-    const timer = setTimeout(() => {
-      if (!pathRef.current) return;
-
-      const pathTotalLength = pathRef.current.getTotalLength();
-
-      if (pathTotalLength === 0) {
-        console.error('SVG Path Length is 0. Check component visibility or rendering order.');
-        return;
-      }
-
-      setIsDrawing(true);
-
-      // --- CRUCIAL CHANGE ---
-
-      // 1. Set strokeDasharray AND strokeDashoffset to the full length
-      // This hides the entire line (solid or dashed) completely.
-      pathRef.current.style.strokeDasharray = `${pathTotalLength} ${pathTotalLength}`;
-      pathRef.current.style.strokeDashoffset = pathTotalLength;
-
-      // 2. Start the animation using requestAnimationFrame
-      requestAnimationFrame(() => {
-        // Ensure the initial state is applied
-        pathRef.current.getBoundingClientRect();
-
-        // 3. Set the desired dashed pattern *before* the transition starts
-        // We set the strokeDasharray here to define the visible pattern
-        pathRef.current.style.strokeDasharray = `${DASH_AND_GAP_SIZE} ${DASH_AND_GAP_SIZE}`;
-
-        // 4. Start the transition
-        pathRef.current.style.transition = `stroke-dashoffset ${ANIMATION_DURATION} ease-in-out`;
-
-        // 5. Animate offset back to 0 to reveal the dashed line
-        pathRef.current.style.strokeDashoffset = '0';
-      });
-    }, delay);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section className='w-full bg-white py-12 sm:py-16 md:py-10 lg:py-10'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -117,13 +64,25 @@ const SimpleSteps = () => {
         <div className='hidden md:block relative'>
           <div className='absolute top-16 left-0 w-full pointer-events-none z-0'>
             <svg
-              className='w-full h-96'
+              className='w-full h-96 overflow-visible'
               viewBox='0 0 1200 384'
               fill='none'
               preserveAspectRatio='none'
             >
+              <defs>
+                <marker
+                  id='arrow'
+                  viewBox='0 0 10 10'
+                  refX='5'
+                  refY='5'
+                  markerWidth='4'
+                  markerHeight='4'
+                  orient='auto'
+                >
+                  <path d='M 0 0 L 10 5 L 0 10 z' fill='#B87CD9' />
+                </marker>
+              </defs>
               <path
-                ref={pathRef}
                 d='
                   M 0 200
                   H 240
@@ -146,7 +105,10 @@ const SimpleSteps = () => {
                 stroke='#B87CD9'
                 strokeWidth='3'
                 strokeLinecap='round'
+                strokeDasharray='14 14'
                 fill='none'
+                markerStart='url(#arrow)'
+                markerEnd='url(#arrow)'
               />
             </svg>
           </div>

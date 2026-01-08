@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Business = () => {
   return (
@@ -36,13 +37,30 @@ const Business = () => {
 
           {/* BUTTONS */}
           <div className='flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center'>
-            <button className='w-full sm:w-[200px] h-[50px] rounded-full border-2 font-medium hover:bg-purple-50 transition-colors duration-300 text-sm sm:text-base border-[#6F2B8B] text-[#6F2B8B]'>
+            <button
+              onClick={() => {
+                const element = document.getElementById('agent-building');
+                if (element) {
+                  const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                  const offsetPosition = elementPosition - 100; // Scroll 100px above the section
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth',
+                  });
+                }
+              }}
+              className='w-full sm:w-[200px] h-[50px] rounded-full border-2 font-medium hover:bg-purple-50 transition-colors duration-300 text-sm sm:text-base border-[#6F2B8B] text-[#6F2B8B]'
+            >
               Explore use cases
             </button>
-            <button className='inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-full sm:w-[200px] h-[50px] rounded-full font-medium text-sm sm:text-base hover:scale-105 transition-transform shadow-lg'>
+            <Link
+              href='/contact'
+              className='inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-full sm:w-[200px] h-[50px] rounded-full font-medium text-sm sm:text-base hover:scale-105 transition-transform shadow-lg'
+            >
               <Image src='/images/solutions/phone.svg' alt='Phone' width={20} height={20} />
               Contact us
-            </button>
+            </Link>
           </div>
         </div>
       </div>

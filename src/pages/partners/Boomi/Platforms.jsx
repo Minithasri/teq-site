@@ -7,28 +7,28 @@ const platforms = [
   {
     title: 'Integration',
     icon: '/images/partners/boomi/icon_1_orange.svg',
-    image: '/images/partners/boomi/section3_img1.png',
+    image: '/images/partners/boomi/b1.png',
     description:
       "Unite your diverse ecosystem of applications and systems with Boomi's intuitive integration capabilities. Design and deploy integrations effortlessly with Boomi's drag and drop interface.",
   },
   {
     title: 'API Management',
     icon: '/images/partners/boomi/icon_2.svg',
-    image: '/images/partners/boomi/section3_img2.png',
+    image: '/images/partners/boomi/b2.png',
     description:
       'Create, manage, and secure APIs to unlock data and application functionality. Boomi’s API Management facilitates seamless connectivity between internal and external systems.',
   },
   {
     title: 'Master Data Hub',
     icon: '/images/partners/boomi/icon_3.svg',
-    image: '/images/partners/boomi/section3_img3.png',
+    image: '/images/partners/boomi/b3.png',
     description:
       'Ensure data consistency and accuracy across your organization with Master Data Hub. Boomi synchronizes and cleanses data to provide a single source of truth.',
   },
   {
     title: 'B2B/EDI Management',
     icon: '/images/partners/boomi/icon_4.svg',
-    image: '/images/partners/boomi/section3_img4.png',
+    image: '/images/partners/boomi/b4.png',
     description:
       'Simplify partnership interactions with robust B2B and EDI management capabilities. Automate partner workflows and ensure compliance with trading standards.',
   },

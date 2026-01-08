@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { FiArrowUpRight, FiChevronDown, FiMinus, FiPlus } from 'react-icons/fi';
+import { FiChevronDown, FiMinus, FiPlus } from 'react-icons/fi';
 import { headerData } from './headerData';
 export default function Header({
   animate = false,
@@ -31,8 +31,12 @@ export default function Header({
   }, []);
   useEffect(() => {
     const handleClickOutside = event => {
-      if (activeDropdown && !headerRef.current?.contains(event.target)) {
-        setActiveDropdown(null);
+      if (activeDropdown && dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        // Check if click is outside the dropdown and not on a nav item
+        const isNavClick = event.target.closest('nav');
+        if (!isNavClick) {
+          setActiveDropdown(null);
+        }
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -70,50 +74,35 @@ export default function Header({
     setOpen(false);
     setOpenMobileItems([]);
   };
-  const renderMegaMenu = item => {
+  const renderMegaMenu = (item, ref) => {
     if (!item.megaMenuColumns) return null;
-    const columnCount = item.megaMenuColumns.length;
+
+    // Flatten all links from all columns into a single list
+    const allLinks = item.megaMenuColumns.flatMap(column => column.links);
+
+    // Check if this is Solutions or Partners section
+    const shouldOpenInNewTab = item.label === 'Solutions' || item.label === 'Partners';
+
     return (
-      <div className='pt-12 pb-8 px-8'>
-        <div className='max-w-7xl mx-auto flex justify-end'>
-          <div className='flex gap-12 items-center'>
-            <div className='flex flex-col justify-center'>
-              <h2 className='text-2xl font-bold mb-3 text-black'>{item.label}</h2>
-              <p className='text-base mb-6 max-w-md text-gray-600'>{item.subtitle || ''}</p>
-              {item.cta && (
-                <Link
-                  href={item.cta.href}
-                  className='inline-flex items-center gap-2 px-5 py-3 text-white font-medium text-sm whitespace-nowrap w-fit bg-black rounded-[25px]'
-                  onClick={handleLinkClick}
-                >
-                  {item.cta.text}
-                  <FiArrowUpRight size={18} />
-                </Link>
-              )}
-            </div>
-            <div className={`grid gap-8 ${columnCount === 3 ? 'grid-cols-3' : 'grid-cols-2'}`}>
-              {item.megaMenuColumns.map((column, index) => (
-                <div key={index}>
-                  <h3 className='text-sm font-semibold uppercase tracking-wider mb-4 text-gray-800'>
-                    {column.title}
-                  </h3>
-                  <div className='space-y-3'>
-                    {column.links.map(link => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className='block text-[15px] font-medium text-gray-700 hover:opacity-70 transition-opacity'
-                        onClick={handleLinkClick}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+      <div className='py-4 px-8'>
+        <div className='max-w-7xl mx-auto flex justify-center'>
+          <div
+            ref={ref}
+            className='bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 min-w-[280px]'
+          >
+            {allLinks.map((link, index) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block px-6 py-3 text-left text-[15px] font-medium text-gray-700 hover:bg-purple-50 transition-colors ${
+                  index === 0 ? 'rounded-t-2xl' : ''
+                } ${index === allLinks.length - 1 ? 'rounded-b-2xl' : ''}`}
+                onClick={handleLinkClick}
+                {...(shouldOpenInNewTab && { target: '_blank', rel: 'noopener noreferrer' })}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
@@ -226,12 +215,10 @@ export default function Header({
           {activeDropdown && (
             <div className='absolute left-0 right-0 top-full z-[10000] w-full'>
               <div className='w-full'>
-                <div
-                  ref={dropdownRef}
-                  className='bg-white/95 backdrop-blur-xl border border-t-0 border-neutral-200/60 shadow-2xl overflow-hidden origin-top w-full'
-                  style={{ minHeight: '300px' }}
-                >
-                  {navItems.filter(i => i.label === activeDropdown).map(renderMegaMenu)}
+                <div className='bg-transparent overflow-hidden origin-top w-full'>
+                  {navItems
+                    .filter(i => i.label === activeDropdown)
+                    .map(item => renderMegaMenu(item, dropdownRef))}
                 </div>
               </div>
             </div>

@@ -91,7 +91,7 @@ const DomoMatter = () => {
                   <div
                     className='
                       absolute inset-0 flex items-center px-4 sm:px-6
-                      transition-all duration-700 ease-out
+                      transition-all duration-1000 ease-in-out
                       group-hover:-translate-y-full
                       text-[14px] sm:text-[20px] font-semibold
                     '
@@ -110,7 +110,7 @@ const DomoMatter = () => {
                     className='
                       absolute inset-0 flex items-center px-4 sm:px-6
                       translate-y-full
-                      transition-all duration-700 ease-out
+                      transition-all duration-1000 ease-in-out
                       group-hover:translate-y-0
                       text-[12px] sm:text-[14px] font-medium
                       leading-tight sm:leading-[22px]

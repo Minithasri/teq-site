@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Agent() {
   return (
@@ -31,10 +32,13 @@ export default function Agent() {
               >
                 Explore use cases
               </button>
-              <button className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[200px] h-[48px] rounded-full font-medium text-[15px] justify-center hover:scale-105 transition-transform shadow-lg'>
+              <Link
+                href='/contact'
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[200px] h-[48px] rounded-full font-medium text-[15px] justify-center hover:scale-105 transition-transform shadow-lg'
+              >
                 <Image src='/images/solutions/phone.svg' alt='Phone' width={18} height={18} />
                 Contact us
-              </button>
+              </Link>
             </div>
           </div>
         </div>
