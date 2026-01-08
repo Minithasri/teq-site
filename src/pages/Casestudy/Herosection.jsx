@@ -10,7 +10,7 @@ const heroContent = {
       { label: 'Case study', href: '/case-study' },
     ],
   },
-  title: 'Experience AI Agents at Work',
+  title: 'Experience AI agents at work',
   description:
     'Move beyond manual analysis and inconsistent data. Our Agentic AI platform standardizes startup assessments, reduces bias, and enables faster, more confident investment decisions.',
   backgroundImage: '/images/Casestudy/Frame case.png',

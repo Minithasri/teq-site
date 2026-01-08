@@ -175,7 +175,7 @@ const Cards = () => {
             WebkitTextFillColor: 'transparent',
           }}
         >
-          Explore Our Case Studies
+          Explore our case studies
         </h2>
 
         {filteredCards.length === 0 ? (
