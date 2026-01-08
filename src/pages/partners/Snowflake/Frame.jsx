@@ -17,7 +17,7 @@ const bannerContent = {
   ctaText: 'Get in touch',
   images: {
     background: '/images/partners/Snowflake/Frame.png',
-    illustration: '/images/partners/Snowflake/img8.png',
+    illustration: '/images/partners/Snowflake/snowflakebghero.svg',
   },
 };
 
