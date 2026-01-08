@@ -17,7 +17,7 @@ const bannerContent = {
   ctaText: 'Get in touch',
   images: {
     background: '/images/partners/Snowflake/Frame.png',
-    illustration: '/images/partners/Snowflake/snowflakebghero.svg',
+    illustration: '/images/partners/Snowflake/snowflakebghero3.png',
   },
 };
 
@@ -89,12 +89,12 @@ export default function Frame() {
           </div>
 
           {/* Right Image */}
-          <div className='relative w-full max-w-[500px] lg:max-w-[600px] mx-auto lg:mx-0 flex justify-center lg:justify-end'>
+          <div className='relative w-full max-w-[500px] lg:max-w-[500px] mx-auto lg:mx-0 flex justify-center lg:justify-end'>
             <Image
               src={bannerContent.images.illustration}
               alt='Snowflake Architecture'
-              width={600}
-              height={600}
+              width={500}
+              height={500}
               priority
               className='w-full h-auto object-contain'
             />
