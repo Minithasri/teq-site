@@ -1,9 +1,16 @@
 /* eslint-disable indent */
 'use client';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { FiChevronDown, FiMinus, FiPlus } from 'react-icons/fi';
+import { FiMinus, FiPlus } from 'react-icons/fi';
 import { headerData } from './headerData';
 export default function Header({
   animate = false,
@@ -14,34 +21,19 @@ export default function Header({
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
   const [openMobileItems, setOpenMobileItems] = useState([]);
   const headerRef = useRef(null);
-  const dropdownRef = useRef(null);
   const { navItems, ctaButton } = headerData;
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 80;
       setIsScrolled(scrolled);
-      if (scrolled) setActiveDropdown(null);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  useEffect(() => {
-    const handleClickOutside = event => {
-      if (activeDropdown && dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        // Check if click is outside the dropdown and not on a nav item
-        const isNavClick = event.target.closest('nav');
-        if (!isNavClick) {
-          setActiveDropdown(null);
-        }
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [activeDropdown]);
+
   useEffect(() => {
     if (animate && headerRef.current) {
       onAnimationStart?.();
@@ -49,13 +41,6 @@ export default function Header({
       onAnimationComplete?.();
     }
   }, [animate, onAnimationStart, onAnimationComplete]);
-  const toggleDropdown = (label, e) => {
-    if (label && e?.target?.tagName !== 'A') {
-      e.preventDefault();
-      e.stopPropagation();
-      setActiveDropdown(activeDropdown === label ? null : label);
-    }
-  };
   const toggleMobileItem = (label, e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -63,59 +48,19 @@ export default function Header({
       prev.includes(label) ? prev.filter(i => i !== label) : [...prev, label]
     );
   };
-  const handleNavItemClick = (item, e) => {
-    if (item.megaMenu) {
-      e.preventDefault();
-      toggleDropdown(item.label, e);
-    }
-  };
+
   const handleLinkClick = () => {
-    setActiveDropdown(null);
     setOpen(false);
     setOpenMobileItems([]);
   };
-  const renderMegaMenu = (item, ref) => {
-    if (!item.megaMenuColumns) return null;
 
-    // Flatten all links from all columns into a single list
-    const allLinks = item.megaMenuColumns.flatMap(column => column.links);
-
-    // Check if this is Solutions or Partners section
-    const shouldOpenInNewTab = item.label === 'Solutions' || item.label === 'Partners';
-
-    return (
-      <div className='py-4 px-8'>
-        <div className='max-w-7xl mx-auto flex justify-center'>
-          <div
-            ref={ref}
-            className='bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 min-w-[280px]'
-          >
-            {allLinks.map((link, index) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`block px-6 py-3 text-left text-[15px] font-medium text-gray-700 hover:bg-purple-50 transition-colors ${
-                  index === 0 ? 'rounded-t-2xl' : ''
-                } ${index === allLinks.length - 1 ? 'rounded-b-2xl' : ''}`}
-                onClick={handleLinkClick}
-                {...(shouldOpenInNewTab && { target: '_blank', rel: 'noopener noreferrer' })}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  };
   return (
     <>
-      {(activeDropdown || open) && (
+      {open && (
         <div
           className='fixed inset-0 bg-black z-[9998] transition-opacity duration-300'
-          style={{ opacity: activeDropdown || open ? 0.4 : 0 }}
+          style={{ opacity: open ? 0.4 : 0 }}
           onClick={() => {
-            setActiveDropdown(null);
             setOpen(false);
           }}
         />
@@ -138,20 +83,52 @@ export default function Header({
               <img src='/images/logo.svg' alt='GWC Data.Ai' className='w-[160px] h-[55px]' />
             </Link>
             <nav className='hidden lg:flex items-center gap-8 flex-1 justify-center'>
-              {navItems.map(item => (
-                <div key={item.label} className='relative group'>
-                  <div className='flex items-center gap-1'>
+              {navItems.map(item => {
+                // Flatten all links from all columns into a single list
+                const allLinks = item.megaMenuColumns?.flatMap(column => column.links) || [];
+                // Check if this is Solutions or Partners section
+                const shouldOpenInNewTab = item.label === 'Solutions' || item.label === 'Partners';
+
+                return (
+                  <div key={item.label} className='relative'>
                     {item.megaMenu ? (
-                      <button
-                        onClick={e => handleNavItemClick(item, e)}
-                        className={`text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
-                          pathname === item.href
-                            ? 'underline underline-offset-4'
-                            : 'hover:opacity-80'
-                        }`}
-                      >
-                        {item.label}
-                      </button>
+                      <DropdownMenu modal={false}>
+                        <DropdownMenuTrigger asChild>
+                          <button
+                            className={`flex items-center gap-1 text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
+                              pathname === item.href
+                                ? 'underline underline-offset-4'
+                                : 'hover:opacity-80'
+                            }`}
+                          >
+                            {item.label}
+                            <ChevronDown size={14} className='transition-transform duration-200' />
+                          </button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent
+                          align='center'
+                          sideOffset={24}
+                          className='bg-white shadow-lg border border-gray-100 min-w-[280px] p-0 overflow-hidden'
+                        >
+                          {allLinks.map((link, index) => (
+                            <DropdownMenuItem key={link.href} asChild className='p-0 rounded-none'>
+                              <Link
+                                href={link.href}
+                                className={`block px-6 py-3 text-left text-[15px] font-medium text-gray-700 hover:bg-purple-100 transition-colors cursor-pointer ${
+                                  index === 0 ? 'rounded-t-2xl' : ''
+                                } ${index === allLinks.length - 1 ? 'rounded-b-2xl' : ''}`}
+                                onClick={handleLinkClick}
+                                {...(shouldOpenInNewTab && {
+                                  target: '_blank',
+                                  rel: 'noopener noreferrer',
+                                })}
+                              >
+                                {link.label}
+                              </Link>
+                            </DropdownMenuItem>
+                          ))}
+                        </DropdownMenuContent>
+                      </DropdownMenu>
                     ) : (
                       <Link
                         href={item.href}
@@ -165,30 +142,9 @@ export default function Header({
                         {item.label}
                       </Link>
                     )}
-                    {item.megaMenu && (
-                      <button
-                        onClick={e => toggleDropdown(item.label, e)}
-                        className='p-1'
-                        aria-label='Toggle menu'
-                      >
-                        <FiChevronDown
-                          size={14}
-                          className={`transition-transform duration-200 text-gray-800 ${
-                            activeDropdown === item.label ? 'rotate-180' : ''
-                          }`}
-                        />
-                      </button>
-                    )}
                   </div>
-
-                  {/* Dropdown positioned under this specific nav item */}
-                  {item.megaMenu && activeDropdown === item.label && (
-                    <div className='absolute left-1/2 -translate-x-1/2 top-full pt-2 z-[10000]'>
-                      {renderMegaMenu(item, dropdownRef)}
-                    </div>
-                  )}
-                </div>
-              ))}
+                );
+              })}
             </nav>
             <div className='flex lg:hidden items-center gap-3'>
               <button
@@ -223,55 +179,61 @@ export default function Header({
         {open && (
           <div className='lg:hidden border-b border-gray-200 bg-white'>
             <div className='px-5 pb-5'>
-              {navItems.map(item => (
-                <div key={item.href} className='border-b border-gray-200 py-1'>
-                  <div className='flex items-center justify-between'>
-                    {item.megaMenu ? (
-                      <button
-                        onClick={e => handleNavItemClick(item, e)}
-                        className='block py-2.5 text-[14px] font-medium flex-1 text-left text-gray-800 whitespace-nowrap'
-                      >
-                        {item.label}
-                      </button>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        className='block py-2.5 text-[14px] font-medium flex-1 text-gray-800 whitespace-nowrap'
-                        onClick={handleLinkClick}
-                      >
-                        {item.label}
-                      </Link>
-                    )}
-                    {item.children && item.children.length > 0 && (
-                      <button onClick={e => toggleMobileItem(item.label, e)} className='p-1.5'>
-                        {openMobileItems.includes(item.label) ? (
-                          <FiMinus size={14} className='text-gray-800' />
-                        ) : (
-                          <FiPlus size={14} className='text-gray-800' />
-                        )}
-                      </button>
-                    )}
-                  </div>
-                  {item.children &&
-                    item.children.length > 0 &&
-                    openMobileItems.includes(item.label) && (
+              {navItems.map(item => {
+                const allLinks = item.megaMenuColumns?.flatMap(column => column.links) || [];
+                const shouldOpenInNewTab = item.label === 'Solutions' || item.label === 'Partners';
+                const hasDropdown = allLinks.length > 0;
+
+                return (
+                  <div key={item.href} className='border-b border-gray-200 py-1'>
+                    <div className='flex items-center justify-between'>
+                      {item.megaMenu ? (
+                        <button
+                          onClick={e => toggleMobileItem(item.label, e)}
+                          className='block py-2.5 text-[14px] font-medium flex-1 text-left text-gray-800 whitespace-nowrap'
+                        >
+                          {item.label}
+                        </button>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className='block py-2.5 text-[14px] font-medium flex-1 text-gray-800 whitespace-nowrap'
+                          onClick={handleLinkClick}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                      {hasDropdown && (
+                        <button onClick={e => toggleMobileItem(item.label, e)} className='p-1.5'>
+                          {openMobileItems.includes(item.label) ? (
+                            <FiMinus size={14} className='text-gray-800' />
+                          ) : (
+                            <FiPlus size={14} className='text-gray-800' />
+                          )}
+                        </button>
+                      )}
+                    </div>
+                    {hasDropdown && openMobileItems.includes(item.label) && (
                       <div className='pl-6 border-l-2 border-gray-200 ml-2.5 mb-2.5'>
-                        {item.children.map(child => (
+                        {allLinks.map(link => (
                           <Link
-                            key={child.href}
-                            href={child.href}
+                            key={link.href}
+                            href={link.href}
                             className='block py-1.5 text-[13px] font-medium text-gray-700 whitespace-nowrap'
                             onClick={handleLinkClick}
-                            target='_blank'
-                            rel='noopener noreferrer'
+                            {...(shouldOpenInNewTab && {
+                              target: '_blank',
+                              rel: 'noopener noreferrer',
+                            })}
                           >
-                            {child.label}
+                            {link.label}
                           </Link>
                         ))}
                       </div>
                     )}
-                </div>
-              ))}
+                  </div>
+                );
+              })}
               <div className='mt-4 pt-4 border-t border-gray-200'>
                 <Link
                   href={ctaButton.href}

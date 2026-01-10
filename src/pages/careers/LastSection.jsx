@@ -35,7 +35,7 @@ const LastSection = () => {
             Explore more opportunities
           </h2>
 
-          <p className='text-[#404040] mb-5 md:mb-6 max-w-2xl mx-auto text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed px-4'>
+          <p className='text-[#404040] mb-5 md:mb-6 max-w-3xl mx-auto text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed px-4'>
             Couldn't find your ideal job? Build a profile, and let us assist you in your job search.
           </p>
 

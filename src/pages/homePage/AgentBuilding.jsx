@@ -6,13 +6,13 @@ import { FiArrowRight, FiX } from 'react-icons/fi';
 import { agentData } from '../../data/agentBuildingData';
 
 const categories = [
-  { id: 'realestate', label: 'Real Estate' },
-  { id: 'supplychain', label: 'Supply Chain & Logistics' },
-  { id: 'manufacturing', label: 'Manufacturing' },
-  { id: 'retail', label: 'Retail' },
-  { id: 'sales', label: 'Sales' },
-  { id: 'marketing', label: 'Marketing' },
   { id: 'hr', label: 'HR' },
+  { id: 'marketing', label: 'Marketing' },
+  { id: 'sales', label: 'Sales' },
+  { id: 'retail', label: 'Retail' },
+  { id: 'manufacturing', label: 'Manufacturing' },
+  { id: 'supplychain', label: 'Supply Chain & Logistics' },
+  { id: 'travelandhospitality', label: 'Travel and Hospitality' },
 ];
 
 const AgentModal = ({ agent, categoryLabel, onClose }) => {
@@ -136,7 +136,7 @@ const AgentModal = ({ agent, categoryLabel, onClose }) => {
 };
 
 export default function AgentBuilding() {
-  const [activeCategory, setActiveCategory] = useState('realestate');
+  const [activeCategory, setActiveCategory] = useState('hr');
   const [selectedAgent, setSelectedAgent] = useState(null);
 
   // Helper to get current agents safely
@@ -202,34 +202,63 @@ export default function AgentBuilding() {
                 className='relative rounded-2xl overflow-hidden group border border-[#E5E5E5] w-full bg-white'
                 style={{ height: '320px' }}
               >
-                {/* Background Image */}
+                {/* Background Image with Shadow and Rounded Corners */}
                 <div className='absolute inset-0 z-0'>
-                  <img
-                    src={agent.image || '/images/HomePage/agentbuildingbg.svg'}
-                    alt=''
-                    className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
-                  />
+                  <div
+                    className='w-full h-full rounded-2xl overflow-hidden'
+                    style={{
+                      boxShadow: `
+      0 12px 30px rgba(0,0,0,0.35),
+      0 0 0 1px rgba(255,255,255,0.06)
+    `,
+                    }}
+                  >
+                    <img
+                      src={agent.image || '/images/HomePage/agentbuildingbg.svg'}
+                      alt=''
+                      className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
+                    />
+                  </div>
                 </div>
 
+                {/* Dark Gradient Overlays on All 4 Sides */}
+
+                {/* Bottom Gradient */}
+                <div
+                  className='absolute inset-x-0 bottom-0 h-[260px] z-10 pointer-events-none'
+                  style={{
+                    background: `
+                      linear-gradient(
+                        to top,
+                        rgba(0,0,0,0.95) 0%,
+                        rgba(0,0,0,0.75) 30%,
+                        rgba(0,0,0,0.45) 55%,
+                        rgba(0,0,0,0.15) 75%,
+                        rgba(0,0,0,0.0) 100%
+                      )
+                    `,
+                  }}
+                />
+
                 {/* Content */}
-                <div className='absolute bottom-0 w-full p-6 z-20 flex flex-col justify-end h-full pointer-events-none'>
-                  <div className='mt-auto pointer-events-auto'>
-                    <h3 className='text-[16px] font-medium text-white mb-2 leading-tight'>
-                      {agent.title}
-                    </h3>
-                    <p className='text-[13px] text-white/80 mb-6 font-light'>{agent.description}</p>
-
-                    <div
-                      className='w-full h-[1px] mb-4 border-t border-dashed'
-                      style={{ borderColor: '#797979' }}
-                    />
-
+                {/* Content */}
+                <div className='absolute bottom-0 w-full p-6 z-20 pointer-events-none'>
+                  <div className='flex items-end justify-between w-full'>
+                    <div className='pointer-events-auto max-w-[80%]'>
+                      <h3 className='text-[16px] font-semibold text-white leading-[1.8] line-clamp-3'>
+                        {agent.title}
+                      </h3>
+                    </div>
                     <button
                       onClick={() => setSelectedAgent(agent)}
-                      className='inline-flex items-center gap-2 text-[#F97316] text-[14px] font-medium hover:gap-3 transition-all duration-200 cursor-pointer'
+                      className='group relative pointer-events-auto w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-lg shrink-0 border-[1.5px] border-[#F97316] overflow-hidden'
                     >
-                      Learn more
-                      <FiArrowRight className='w-4 h-4' />
+                      <div className='absolute inset-0 bg-gradient-to-r from-[#FBB07B] to-[#F97316] opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+                      <img
+                        src='/images/HomePage/orangearrow1.svg'
+                        alt=''
+                        className='w-3 h-3 relative z-10 transition-all duration-300 group-hover:brightness-0 group-hover:invert'
+                      />
                     </button>
                   </div>
                 </div>
@@ -274,46 +303,122 @@ export default function AgentBuilding() {
                 key={index}
                 className='relative rounded-2xl overflow-hidden min-h-[320px] shadow-lg group border border-[#E5E5E5] bg-white'
               >
-                {/* Background Image */}
+                {/* Background Image with Shadow and Rounded Corners */}
                 <div className='absolute inset-0 z-0'>
-                  <img
-                    src={agent.image || '/images/HomePage/agentbuildingbg.svg'}
-                    alt=''
-                    className='w-full h-full object-cover'
-                  />
+                  <div
+                    className='w-full h-full rounded-2xl overflow-hidden'
+                    style={{
+                      boxShadow: `
+                        0 12px 30px rgba(0,0,0,0.35),
+                        0 0 0 1px rgba(255,255,255,0.06)
+                      `,
+                    }}
+                  >
+                    <img
+                      src={agent.image || '/images/HomePage/agentbuildingbg.svg'}
+                      alt=''
+                      className='w-full h-full object-cover'
+                    />
+                  </div>
                 </div>
-                {/* Top Gradient */}
-                <div
-                  className='absolute inset-x-0 top-0 h-24 z-10'
-                  style={{
-                    background:
-                      'linear-gradient(180deg, rgba(59, 23, 74, 0.7) 0%, rgba(59, 23, 74, 0) 100%)',
-                  }}
-                />
+
+                {/* Dark Gradient Overlays on All 4 Sides */}
+
                 {/* Bottom Gradient */}
                 <div
-                  className='absolute inset-x-0 bottom-0 h-40 z-10'
+                  className='absolute inset-x-0 bottom-0 h-[260px] z-10 pointer-events-none'
                   style={{
-                    background: 'linear-gradient(to bottom, rgba(59, 23, 74, 0) 0%, #3B174A 100%)',
+                    background: `
+                      linear-gradient(
+                        to top,
+                        rgba(0,0,0,0.95) 0%,
+                        rgba(0,0,0,0.75) 30%,
+                        rgba(0,0,0,0.45) 55%,
+                        rgba(0,0,0,0.15) 75%,
+                        rgba(0,0,0,0.0) 100%
+                      )
+                    `,
                   }}
                 />
 
-                <div className='absolute bottom-0 w-full p-6 z-20 flex flex-col justify-end h-full pointer-events-none'>
-                  <div className='mt-auto pointer-events-auto'>
-                    <h3 className='text-lg font-bold text-white mb-2 leading-tight'>
-                      {agent.title}
-                    </h3>
-                    <p className='text-sm text-white/80 mb-6 font-light'>{agent.description}</p>
-                    <div
-                      className='w-full h-[1px] mb-4 border-t border-dashed'
-                      style={{ borderColor: '#797979' }}
-                    />
+                {/* Top Gradient */}
+                <div
+                  className='absolute inset-x-0 top-0 h-32 z-10 pointer-events-none'
+                  style={{
+                    background: `
+                      linear-gradient(
+                        to bottom,
+                        rgba(0,0,0,0.6) 0%,
+                        rgba(0,0,0,0.3) 40%,
+                        rgba(0,0,0,0.0) 100%
+                      )
+                    `,
+                  }}
+                />
+
+                {/* Left Gradient */}
+                <div
+                  className='absolute inset-y-0 left-0 w-24 z-10 pointer-events-none'
+                  style={{
+                    background: `
+                      linear-gradient(
+                        to right,
+                        rgba(0,0,0,0.5) 0%,
+                        rgba(0,0,0,0.2) 50%,
+                        rgba(0,0,0,0.0) 100%
+                      )
+                    `,
+                  }}
+                />
+
+                {/* Right Gradient */}
+                <div
+                  className='absolute inset-y-0 right-0 w-24 z-10 pointer-events-none'
+                  style={{
+                    background: `
+                      linear-gradient(
+                        to left,
+                        rgba(0,0,0,0.5) 0%,
+                        rgba(0,0,0,0.2) 50%,
+                        rgba(0,0,0,0.0) 100%
+                      )
+                    `,
+                  }}
+                />
+
+                {/* Center Radial Gradient - Vignette Effect */}
+                <div
+                  className='absolute inset-0 z-10 pointer-events-none'
+                  style={{
+                    background: `
+                      radial-gradient(
+                        ellipse at center,
+                        rgba(0,0,0,0.3) 0%,
+                        rgba(0,0,0,0.45) 40%,
+                        rgba(0,0,0,0.65) 70%,
+                        rgba(0,0,0,0.85) 100%
+                      )
+                    `,
+                  }}
+                />
+
+                <div className='absolute bottom-0 w-full p-6 z-20 pointer-events-none'>
+                  <div className='flex items-end justify-between w-full'>
+                    <div className='pointer-events-auto max-w-[200px]'>
+                      <h3 className='text-[16px] font-semibold text-white leading-snug line-clamp-2'>
+                        {agent.title}
+                      </h3>
+                    </div>
                     <button
                       onClick={() => setSelectedAgent(agent)}
-                      className='inline-flex items-center gap-2 text-[#F97316] text-sm font-medium cursor-pointer'
+                      className='group relative pointer-events-auto w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-lg shrink-0 border-[1.5px] border-[#F97316] overflow-hidden'
                     >
-                      Learn more
-                      <FiArrowRight className='w-4 h-4' />
+                      <div className='absolute inset-0 bg-gradient-to-r from-[#FBB07B] to-[#F97316] opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+                      <img
+                        src='/images/HomePage/orangearrow.svg'
+                        alt=''
+                        className='w-4 h-4 relative z-10 transition-all duration-300 group-hover:brightness-0 group-hover:invert'
+                      />
                     </button>
                   </div>
                 </div>

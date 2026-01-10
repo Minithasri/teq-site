@@ -39,13 +39,13 @@ export const headerData = {
             { label: 'Case Study', href: '/Casestudy' },
           ],
         },
-        // {
-        //   title: 'WORK CULTURE',
-        //   links: [
-        //     { label: 'Work From Hometown', href: '/company/work-from-hometown' },
-        //     { label: 'Core Values', href: '/company/values' },
-        //   ],
-        // },
+        {
+          title: 'WORK CULTURE',
+          links: [
+            { label: 'Work From Hometown', href: '/company/work-from-hometown' },
+            // { label: 'Core Values', href: '/company/values' },
+          ],
+        },
       ],
     },
     {
@@ -106,7 +106,7 @@ export const headerData = {
         {
           title: 'PARTNER TYPES',
           links: [
-            // { label: 'Domo', href: '/partners/domo' },
+            { label: 'Domo', href: '/partners/domo' },
             { label: 'Snowflake', href: '/partners/snowflake' },
             { label: 'Databricks', href: '/partners/databricks' },
             { label: 'Google Cloud', href: '/partners/google-cloud' },
@@ -122,13 +122,13 @@ export const headerData = {
       children: [],
       megaMenuColumns: [],
     },
-    // {
-    //   label: 'Boomi',
-    //   href: '/boomi-integration',
-    //   megaMenu: false,
-    //   children: [],
-    //   megaMenuColumns: [],
-    // },
+    {
+      label: 'Boomi',
+      href: '/boomi-integration',
+      megaMenu: false,
+      children: [],
+      megaMenuColumns: [],
+    },
     {
       label: 'Careers',
       href: '/careers',

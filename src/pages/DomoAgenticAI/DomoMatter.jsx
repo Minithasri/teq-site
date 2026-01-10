@@ -86,43 +86,34 @@ const DomoMatter = () => {
                 </div>
 
                 {/* PILL STACK */}
-                <div className='relative overflow-hidden w-full max-w-[620px] h-[80px] sm:h-[109px]'>
-                  {/* TITLE PILL */}
-                  <div
-                    className='
-                      absolute inset-0 flex items-center px-4 sm:px-6
-                      transition-all duration-1000 ease-in-out
-                      group-hover:-translate-y-full
-                      text-[14px] sm:text-[20px] font-semibold
-                    '
-                    style={{
-                      borderRadius: '70px',
-                      border: '1px solid transparent',
-                      background:
-                        'linear-gradient(#FFFFFF, #FFFFFF) padding-box, linear-gradient(to right, #C4A3E5, #E5E5E5) border-box',
-                    }}
-                  >
-                    {item.title}
-                  </div>
+                <div className='relative w-full max-w-[620px] h-[80px] sm:h-[109px] [perspective:1000px]'>
+                  {/* FLIP INNER */}
+                  <div className='relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
+                    {/* FRONT FACE (Title) */}
+                    <div
+                      className='absolute inset-0 flex items-center px-4 sm:px-6 [backface-visibility:hidden] text-[14px] sm:text-[20px] font-semibold'
+                      style={{
+                        borderRadius: '70px',
+                        border: '1px solid transparent',
+                        background:
+                          'linear-gradient(#FFFFFF, #FFFFFF) padding-box, linear-gradient(to right, #C4A3E5, #E5E5E5) border-box',
+                      }}
+                    >
+                      {item.title}
+                    </div>
 
-                  {/* DESC PILL */}
-                  <div
-                    className='
-                      absolute inset-0 flex items-center px-4 sm:px-6
-                      translate-y-full
-                      transition-all duration-1000 ease-in-out
-                      group-hover:translate-y-0
-                      text-[12px] sm:text-[14px] font-medium
-                      leading-tight sm:leading-[22px]
-                    '
-                    style={{
-                      borderRadius: '70px',
-                      border: '1px solid transparent',
-                      background:
-                        'linear-gradient(#FFFFFF, #FFFFFF) padding-box, linear-gradient(to right, #C4A3E5, #E5E5E5) border-box',
-                    }}
-                  >
-                    {item.desc}
+                    {/* BACK FACE (Desc) */}
+                    <div
+                      className='absolute inset-0 flex items-center px-4 sm:px-6 [backface-visibility:hidden] [transform:rotateY(180deg)] text-[12px] sm:text-[14px] font-medium leading-tight sm:leading-[22px]'
+                      style={{
+                        borderRadius: '70px',
+                        border: '1px solid transparent',
+                        background:
+                          'linear-gradient(#FFFFFF, #FFFFFF) padding-box, linear-gradient(to right, #C4A3E5, #E5E5E5) border-box',
+                      }}
+                    >
+                      {item.desc}
+                    </div>
                   </div>
                 </div>
               </div>

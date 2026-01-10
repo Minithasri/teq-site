@@ -1,9 +1,9 @@
 export const agentData = {
-  realestate: [
+  travelandhospitality: [
     {
       title: 'Property Demand & Pricing Confidence Agent',
       description: 'Market demand forecasting',
-      image: '/images/HomePage/Component_1.png',
+      image: '/images/HomePage/real1.png',
       audience: ['Real Estate Developers', 'Sales & Leasing Teams', 'Strategy Leadership'],
       howItWorks: [
         'Analyzes demand signals, absorption rates, and market trends',
@@ -19,7 +19,7 @@ export const agentData = {
     {
       title: 'Lead Qualification & Buyer Readiness Agent',
       description: 'Buyer intent scoring',
-      image: '/images/HomePage/Component_2.png',
+      image: '/images/HomePage/real2.png',
       audience: ['Sales Teams', 'Channel Partners', 'Brokerage Leadership'],
       howItWorks: [
         'Evaluates lead source quality and engagement behavior',
@@ -35,7 +35,7 @@ export const agentData = {
     {
       title: 'Deal Closure & Negotiation Intelligence Agent',
       description: 'Negotiation outcome guidance',
-      image: '/images/HomePage/Component_3.png',
+      image: '/images/HomePage/real3.png',
       audience: ['Sales Managers', 'Brokers', 'Leadership'],
       howItWorks: [
         'Reviews deal terms, discounts, and negotiation history',
@@ -51,7 +51,7 @@ export const agentData = {
     {
       title: 'Inventory Aging & Unsold Unit Mitigation Agent',
       description: 'Unsold inventory risk',
-      image: '/images/HomePage/Component_4.png',
+      image: '/images/HomePage/real4.png',
       audience: ['Developers', 'Sales Leadership', 'Finance'],
       howItWorks: [
         'Monitors unsold inventory aging by project and unit',
@@ -63,7 +63,7 @@ export const agentData = {
     {
       title: 'Lease Renewal & Tenant Retention Agent',
       description: 'Tenant churn prevention',
-      image: '/images/HomePage/Component_5.png',
+      image: '/images/HomePage/real5.png',
       audience: ['Property Managers', 'Asset Management Teams', 'Real Estate Operations'],
       howItWorks: [
         'Tracks lease expiries, tenant behavior, and service issues',
@@ -79,7 +79,7 @@ export const agentData = {
     {
       title: 'Asset Performance & Portfolio Risk Agent',
       description: 'Portfolio risk monitoring',
-      image: '/images/HomePage/Component_6.png',
+      image: '/images/HomePage/real6.png',
       audience: ['Asset Managers', 'Investment Teams', 'Leadership'],
       howItWorks: [
         'Analyzes asset performance across yield, occupancy, and cost',
@@ -97,7 +97,7 @@ export const agentData = {
     {
       title: 'Inventory Aging & Excess Mitigation Agent',
       description: 'Excess inventory control',
-      image: '/images/HomePage/Component_1.png',
+      image: '/images/HomePage/supply1.png',
       audience: ['Inventory Planning Teams', 'Warehouse Operations', 'Finance'],
       howItWorks: [
         'Monitors inventory aging and movement patterns',
@@ -109,7 +109,7 @@ export const agentData = {
     {
       title: 'Logistics Exception & Shipment Decision Agent',
       description: 'Shipment exception handling',
-      image: '/images/HomePage/Component_2.png',
+      image: '/images/HomePage/supply2.png',
       audience: ['Logistics Operations', 'Control Tower Teams', 'Supply Chain Leadership'],
       howItWorks: [
         'Detects shipment delays, route deviations, or capacity issues',
@@ -125,7 +125,7 @@ export const agentData = {
     {
       title: 'Carrier Performance & SLA Governance Agent',
       description: 'Carrier SLA monitoring',
-      image: '/images/HomePage/Component_3.png',
+      image: '/images/HomePage/supply3.png',
       audience: ['Logistics Procurement', 'Transportation Teams', 'Operations Leadership'],
       howItWorks: [
         'Tracks carrier delivery, damage, and SLA performance',
@@ -141,7 +141,7 @@ export const agentData = {
     {
       title: 'Network Disruption & Recovery Planning Agent',
       description: 'Disruption response planning',
-      image: '/images/HomePage/Component_4.png',
+      image: '/images/HomePage/supply4.png',
       audience: ['Supply Chain Strategy Teams', 'Operations Leadership', 'Risk Management'],
       howItWorks: [
         'Monitors disruption signals across nodes and routes',
@@ -157,7 +157,7 @@ export const agentData = {
     {
       title: 'Order Fulfillment Risk & Promise Confidence Agent',
       description: 'Delivery promise assurance',
-      image: '/images/HomePage/Component_5.png',
+      image: '/images/HomePage/supply5.png',
       audience: ['Order Management Teams', 'Customer Service', 'Supply Chain Leadership'],
       howItWorks: [
         'Evaluates order status against inventory and transport readiness',
@@ -173,7 +173,7 @@ export const agentData = {
     {
       title: 'Returns Flow & Reverse Logistics Intelligence Agent',
       description: 'Returns flow optimization',
-      image: '/images/HomePage/Component_6.png',
+      image: '/images/HomePage/supply6.png',
       audience: ['Reverse Logistics Teams', 'Warehouse Operations', 'Customer Experience Teams'],
       howItWorks: [
         'Analyzes return volumes, reasons, and cycle times',
@@ -191,7 +191,7 @@ export const agentData = {
     {
       title: 'Production Planning & Capacity Confidence Agent',
       description: 'Capacity planning confidence',
-      image: '/images/HomePage/Component_1.png',
+      image: '/images/HomePage/manf1.png',
       audience: ['Plant Managers', 'Production Planning Teams', 'Operations Leadership'],
       howItWorks: [
         'Analyzes demand, capacity, and production constraints',
@@ -203,7 +203,7 @@ export const agentData = {
     {
       title: 'Maintenance Prioritization & Downtime Prevention Agent',
       description: 'Downtime risk prevention',
-      image: '/images/HomePage/Component_2.png',
+      image: '/images/HomePage/manf2.png',
       audience: ['Maintenance Teams', 'Plant Operations', 'Reliability Engineers'],
       howItWorks: [
         'Monitors equipment health and maintenance history',
@@ -219,7 +219,7 @@ export const agentData = {
     {
       title: 'Procurement Exception & Spend Governance Agent',
       description: 'Procurement spend control',
-      image: '/images/HomePage/Component_3.png',
+      image: '/images/HomePage/manf3.png',
       audience: ['Procurement Teams', 'Plant Controllers', 'Finance Leadership'],
       howItWorks: [
         'Evaluates procurement exceptions against policies and contracts',
@@ -235,7 +235,7 @@ export const agentData = {
     {
       title: 'Vendor Risk & Supply Continuity Agent',
       description: 'Supplier continuity risk',
-      image: '/images/HomePage/Component_4.png',
+      image: '/images/HomePage/manf4.png',
       audience: ['Supply Chain Teams', 'Procurement', 'Operations Leadership'],
       howItWorks: [
         'Analyzes vendor performance, dependency, and delivery trends',
@@ -251,7 +251,7 @@ export const agentData = {
     {
       title: 'Cost Variance & Margin Protection Agent',
       description: 'Margin variance protection',
-      image: '/images/HomePage/Component_5.png',
+      image: '/images/HomePage/manf5.png',
       audience: ['Operations Finance', 'Plant Leadership', 'Manufacturing Strategy Teams'],
       howItWorks: [
         'Monitors material, labor, and overhead cost trends',
@@ -269,7 +269,7 @@ export const agentData = {
     {
       title: 'Inventory Replenishment & Stockout Prevention Agent',
       description: 'Stockout risk prevention',
-      image: '/images/HomePage/Component_1.png',
+      image: '/images/HomePage/retail1.png',
       audience: ['Inventory Planning Teams', 'Store Operations', 'Supply Chain'],
       howItWorks: [
         'Monitors sell-through, stock levels, and lead times',
@@ -285,7 +285,7 @@ export const agentData = {
     {
       title: 'Pricing & Promotion Governance Agent',
       description: 'Price compliance governance',
-      image: '/images/HomePage/Component_2.png',
+      image: '/images/HomePage/retail2.png',
       audience: ['Pricing Teams', 'Merchandising', 'Finance'],
       howItWorks: [
         'Evaluates price and promotion requests against margins and policies',
@@ -301,7 +301,7 @@ export const agentData = {
     {
       title: 'Markdown & Clearance Decision Agent',
       description: 'Clearance optimization decisions',
-      image: '/images/HomePage/Component_3.png',
+      image: '/images/HomePage/retail3.png',
       audience: ['Merchandising Teams', 'Category Managers', 'Retail Leadership'],
       howItWorks: [
         'Identifies slow-moving or aging inventory',
@@ -317,7 +317,7 @@ export const agentData = {
     {
       title: 'Store Performance & Exception Intelligence Agent',
       description: 'Store exception insights',
-      image: '/images/HomePage/Component_4.png',
+      image: '/images/HomePage/retail4.png',
       audience: ['Store Operations', 'Regional Managers', 'Retail Leadership'],
       howItWorks: [
         'Compares store KPIs against peer benchmarks',
@@ -333,7 +333,7 @@ export const agentData = {
     {
       title: 'Customer Retention & Churn Risk Agent',
       description: 'Customer churn detection',
-      image: '/images/HomePage/Component_5.png',
+      image: '/images/HomePage/retail5.png',
       audience: ['CRM Teams', 'Loyalty Teams', 'Marketing & Retail Leadership'],
       howItWorks: [
         'Monitors purchase frequency and engagement trends',
@@ -349,7 +349,7 @@ export const agentData = {
     {
       title: 'Vendor Performance & Supply Risk Agent',
       description: 'Vendor supply risk',
-      image: '/images/HomePage/Component_6.png',
+      image: '/images/HomePage/retail6.png',
       audience: ['Procurement', 'Supply Chain', 'Retail Operations'],
       howItWorks: [
         'Evaluates vendor delivery, fill rate, and quality metrics',
@@ -367,7 +367,7 @@ export const agentData = {
     {
       title: 'Deal Qualification & Opportunity Readiness Agent',
       description: 'Opportunity readiness scoring',
-      image: '/images/HomePage/Component_1.png',
+      image: '/images/HomePage/sales1.png',
       audience: ['Sales Representatives', 'Sales Managers', 'Revenue Leaders'],
       howItWorks: [
         'Reviews opportunity data, deal stage history, and engagement signals',
@@ -383,7 +383,7 @@ export const agentData = {
     {
       title: 'Discount & Pricing Exception Governance Agent',
       description: 'Discount control governance',
-      image: '/images/HomePage/Component_2.png',
+      image: '/images/HomePage/sales2.png',
       audience: ['Sales Teams', 'Deal Desk', 'Finance & Leadership'],
       howItWorks: [
         'Evaluates discount requests against pricing policies and margin thresholds',
@@ -395,7 +395,7 @@ export const agentData = {
     {
       title: 'Renewal Risk & Revenue Protection Agent',
       description: 'Revenue renewal risk',
-      image: '/images/HomePage/Component_3.png',
+      image: '/images/HomePage/sales3.png',
       audience: ['Account Managers', 'Customer Success Teams', 'Sales Leadership'],
       howItWorks: [
         'Monitors renewal timelines, engagement gaps, and support signals',
@@ -411,7 +411,7 @@ export const agentData = {
     {
       title: 'Customer Fit & Deal Quality Guard Agent',
       description: 'Deal quality validation',
-      image: '/images/HomePage/Component_4.png',
+      image: '/images/HomePage/sales4.png',
       audience: ['Sales Leadership', 'Deal Desk', 'Customer Success'],
       howItWorks: [
         'Evaluates deal alignment with ideal customer profile',
@@ -429,7 +429,7 @@ export const agentData = {
     {
       title: 'Campaign Spend & ROI Governance Agent',
       description: 'Marketing ROI control',
-      image: '/images/HomePage/Component_1.png',
+      image: '/images/HomePage/mark1.png',
       audience: ['Marketing Leaders', 'Demand Generation Teams', 'Finance'],
       howItWorks: [
         'Monitors campaign spend and performance across channels',
@@ -445,7 +445,7 @@ export const agentData = {
     {
       title: 'Lead Quality & Funnel Readiness Agent',
       description: 'Lead quality scoring',
-      image: '/images/HomePage/Component_2.png',
+      image: '/images/HomePage/mark2.png',
       audience: ['Demand Generation Teams', 'Sales Operations', 'Marketing Leadership'],
       howItWorks: [
         'Evaluates lead behavior, source quality, and engagement signals',
@@ -461,7 +461,7 @@ export const agentData = {
     {
       title: 'Customer Segment & Personalization Qualification Agent',
       description: 'Segment personalization fit',
-      image: '/images/HomePage/Component_3.png',
+      image: '/images/HomePage/mark3.png',
       audience: ['Growth Marketing Teams', 'CRM Teams', 'Marketing Leadership'],
       howItWorks: [
         'Analyzes customer behavior and segment attributes',
@@ -477,7 +477,7 @@ export const agentData = {
     {
       title: 'Customer Journey Drop-off Diagnosis Agent',
       description: 'Journey drop-off analysis',
-      image: '/images/HomePage/Component_4.png',
+      image: '/images/HomePage/mark4.png',
       audience: ['Growth Marketing Teams', 'Digital Experience Teams', 'Marketing Leadership'],
       howItWorks: [
         'Monitors customer behavior across key journey touchpoints',
@@ -491,7 +491,7 @@ export const agentData = {
     {
       title: 'Talent Screening & Hiring Readiness Agent',
       description: 'Candidate readiness screening',
-      image: '/images/HomePage/Component_1.png',
+      image: '/images/HomePage/hr1.png',
       audience: ['Talent Acquisition Teams', 'Hiring Managers', 'HR Leadership'],
       howItWorks: [
         'Reviews candidate profiles, job requirements, and interview feedback',
@@ -507,7 +507,7 @@ export const agentData = {
     {
       title: 'Offer Exception & Compensation Governance Agent',
       description: 'Compensation exception control',
-      image: '/images/HomePage/Component_2.png',
+      image: '/images/HomePage/hr2.png',
       audience: ['HR Business Partners', 'Finance Teams', 'Leadership'],
       howItWorks: [
         'Evaluates offer exceptions against salary bands and equity rules',
@@ -523,7 +523,7 @@ export const agentData = {
     {
       title: 'Attrition Risk & Retention Decision Agent',
       description: 'Attrition risk prediction',
-      image: '/images/HomePage/Component_3.png',
+      image: '/images/HomePage/hr3.png',
       audience: ['HRBPs', 'People Managers', 'HR Leadership'],
       howItWorks: [
         'Monitors engagement, performance, and role changes',
@@ -539,7 +539,7 @@ export const agentData = {
     {
       title: 'Performance Review Consistency & Bias Guard Agent',
       description: 'Review bias detection',
-      image: '/images/HomePage/Component_4.png',
+      image: '/images/HomePage/hr4.png',
       audience: ['HR Teams', 'People Managers', 'Compliance & Leadership'],
       howItWorks: [
         'Compares performance ratings across peers and cycles',
@@ -555,7 +555,7 @@ export const agentData = {
     {
       title: 'Promotion & Career Progression Qualification Agent',
       description: 'Promotion readiness validation',
-      image: '/images/HomePage/Component_5.png',
+      image: '/images/HomePage/hr5.png',
       audience: ['Leadership', 'Talent Councils', 'HR Leadership'],
       howItWorks: [
         'Assesses role readiness using skills, impact, and performance history',
