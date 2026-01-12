@@ -92,14 +92,9 @@ export default function ExecutionCredits() {
                 </div>
 
                 {/* Floating elements around image */}
-                <div className='absolute -top-4 -left-4 w-10 h-10 bg-[#662B8C]/20 rounded-full animate-pulse'></div>
-                <div className='absolute -bottom-4 -right-4 w-8 h-8 bg-[#F27166]/30 rounded-full animate-pulse delay-75'></div>
-                <div className='absolute top-1/2 -right-4 w-6 h-6 bg-[#4988BF]/25 rounded-full animate-pulse delay-150'></div>
               </div>
 
               {/* Background decorative elements */}
-              <div className='absolute -z-10 top-10 -right-10 w-80 h-80 bg-gradient-to-r from-[#662B8C]/5 to-[#4988BF]/5 rounded-full blur-3xl'></div>
-              <div className='absolute -z-10 bottom-10 -left-10 w-72 h-72 bg-gradient-to-r from-[#F28963]/5 to-[#F27166]/5 rounded-full blur-3xl'></div>
             </div>
           </div>
         </div>

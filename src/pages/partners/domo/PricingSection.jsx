@@ -67,8 +67,6 @@ export default function PricingSection() {
                 </div>
 
                 {/* Decorative Elements */}
-                <div className='absolute top-4 right-4 w-3 h-3 bg-[#662B8C]/20 rounded-full'></div>
-                <div className='absolute bottom-4 left-4 w-4 h-4 bg-[#4988BF]/20 rounded-full'></div>
               </div>
             ))}
           </div>

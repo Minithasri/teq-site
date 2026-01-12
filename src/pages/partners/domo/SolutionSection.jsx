@@ -135,7 +135,7 @@ export default function SolutionsSection() {
 
       {/* Fixed CTA Section */}
       <div className='container mx-auto px-4 mt-16'>
-        <div className='bg-gradient-to-r from-[#662B8C] to-[#4988BF] p-8 text-white shadow-xl text-center'>
+        <div className='bg-gradient-to-r from-[#662B8C] to-[#4988BF] rounded-xl p-8 text-white shadow-xl text-center'>
           <h3 className='text-2xl font-bold mb-4'>Ready to Find Your Perfect Domo Solution?</h3>
           <p className='text-white/90 mb-6 max-w-2xl mx-auto'>
             Whether you're in healthcare, retail, manufacturing, or using cloud platforms like AWS

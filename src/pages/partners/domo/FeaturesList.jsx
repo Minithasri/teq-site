@@ -80,7 +80,7 @@ export default function FeaturesList() {
           <div className='bg-white/80 backdrop-blur-sm shadow-xl border border-white/40 overflow-hidden'>
             <div className='grid lg:grid-cols-2 gap-8 p-8'>
               {/* Left Side - Image */}
-              <div className='relative overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50/50 p-8'>
+              <div className='relative rounded-xl overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50/50 p-8'>
                 <div className='relative h-80 overflow-hidden bg-gradient-to-br from-[#662B8C]/5 via-[#4988BF]/5 to-[#F28963]/5 flex items-center justify-center'>
                   {/* Feature Image Placeholder */}
                   <div className='text-center'>
@@ -105,9 +105,6 @@ export default function FeaturesList() {
                 </div>
 
                 {/* Floating decorative elements */}
-                <div className='absolute top-4 left-4 w-6 h-6 bg-[#662B8C]/20 rounded-full'></div>
-                <div className='absolute bottom-4 right-4 w-8 h-8 bg-[#F27166]/30 rounded-full'></div>
-                <div className='absolute top-1/2 right-4 w-4 h-4 bg-[#4988BF]/25 rounded-full'></div>
 
                 {/* Background pattern */}
                 <div className='absolute inset-0 opacity-5 bg-gradient-to-r from-[#662B8C] via-[#4988BF] to-[#F28963]'></div>

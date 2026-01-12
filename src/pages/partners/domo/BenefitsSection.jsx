@@ -86,15 +86,13 @@ export default function BenefitsSection() {
                   </div>
 
                   {/* Decorative elements */}
-                  <div className='absolute top-2 right-2 w-3 h-3 bg-[#4988BF]/20 rounded-full'></div>
-                  <div className='absolute bottom-2 left-2 w-2 h-2 bg-[#F28963]/20 rounded-full'></div>
                 </div>
               );
             })}
           </div>
 
           {/* Additional Info Section */}
-          <div className='mt-16 bg-gradient-to-r from-[#662B8C] to-[#4988BF] p-8 text-white shadow-xl'>
+          <div className='mt-16 bg-gradient-to-r from-[#662B8C] to-[#4988BF] rounded-xl p-8 text-white shadow-xl'>
             <div className='grid md:grid-cols-2 gap-8 items-center'>
               <div>
                 <h3 className='text-md font-bold mb-4'>Why Choose Domo?</h3>

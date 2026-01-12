@@ -100,8 +100,6 @@ export default function UseCasesSection() {
                   </div>
 
                   {/* Decorative elements */}
-                  <div className='absolute top-3 right-3 w-2 h-2 bg-current opacity-20 rounded-full'></div>
-                  <div className='absolute bottom-3 left-3 w-3 h-3 bg-current opacity-20 rounded-full'></div>
                 </div>
               );
             })}
@@ -109,7 +107,7 @@ export default function UseCasesSection() {
 
           {/* CTA Section */}
           <div className='text-center'>
-            <div className='bg-gradient-to-r from-[#662B8C] to-[#4988BF] p-8 text-white shadow-xl'>
+            <div className='bg-gradient-to-r from-[#662B8C] to-[#4988BF] rounded-xl p-8 text-white shadow-xl'>
               <h3 className='text-2xl font-bold mb-4'>Ready to Transform Your Data Strategy?</h3>
               <p className='text-white/90 mb-6 max-w-2xl mx-auto'>
                 Discover how Domo can help your organization leverage data for better
