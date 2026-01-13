@@ -6,156 +6,39 @@ import { FiArrowRight, FiSearch } from 'react-icons/fi';
 const Cards = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
+  // New template-based case studies (add more as you create them)
   const caseStudiesData = [
     {
-      slug: 'eliminating-downtime-centralized-maintenance',
-      title: 'Eliminating Downtime Through Centralized Digital Maintenance',
+      slug: 'real-time-production',
+      title: 'Real-Time Production Monitoring with IoT',
       description:
-        'Reduces unplanned downtime through centralized and digitized maintenance management.',
+        'How Alubee Die Casters achieved 10-15% productivity boost and 90% reduction in manual effort through connected factory automation.',
+      image: '/images/Templates/template1/casebg1.png',
     },
     {
-      slug: 'quality-yield-intelligence',
-      title: 'Driving First-Time-Right Manufacturing Through Quality & Yield Intelligence',
-      description: 'Improves production accuracy using real time quality and yield insights.',
+      slug: 'maximizing-yield',
+      title: 'Maximizing Yield with Intelligent Production Analytics',
+      description:
+        'Driving packaging efficiency through real-time visibility and predictive insights.',
+      image: '/images/Templates/template1/hero1.png',
     },
-    {
-      slug: 'real-time-iot-visibility',
-      title: 'Transforming Manufacturing Operations with Real-Time IoT Visibility',
-      description: 'Provides live IoT driven visibility into manufacturing operations.',
-    },
-    {
-      slug: 'downtime-optimization-electronics',
-      title: 'Downtime Optimization & Maintenance Digitization',
-      description: 'Optimizes downtime by digitizing maintenance workflows and data.',
-    },
-    {
-      slug: 'yield-visibility-throughput-growth',
-      title: 'Turning Yield Visibility into Throughput Growth',
-      description: 'Boosts throughput by converting yield insights into actionable improvements.',
-    },
-    {
-      slug: 'digitizing-tool-intelligence',
-      title: 'Digitizing Tool Intelligence for Manufacturing Performance',
-      description: 'Enhances manufacturing performance through digital tool monitoring.',
-    },
-    {
-      slug: 'sustainability-energy-competitive-advantage',
-      title: 'Turning Energy Consumption into a Measurable Competitive Advantage',
-      description: 'Optimizes energy usage to reduce costs and improve efficiency.',
-    },
-    {
-      slug: 'predictive-maintenance-ai-iot',
-      title: 'Predictive Maintenance (AI & IoT)',
-      description: 'Prevents equipment failures using AI powered predictive insights.',
-    },
-    {
-      slug: 'ai-chatbot-knowledge-access',
-      title: 'AI Chatbot for Enterprise Knowledge Access',
-      description: 'Enables instant enterprise knowledge access through conversational AI.',
-    },
-    {
-      slug: 'commonality-traceability-analytics',
-      title: 'Commonality & Traceability Analytics',
-      description: 'Improves component traceability and root cause analysis.',
-    },
-    {
-      slug: 'iot-based-machine-monitoring',
-      title: 'IoT-Based Machine Monitoring',
-      description: 'Monitors machine health and performance in real time.',
-    },
-    {
-      slug: 'scrap-analytics-quality-improvement',
-      title: 'Scrap Analytics for Quality Improvement',
-      description: 'Reduces scrap by identifying quality issues and trends.',
-    },
-    {
-      slug: 'maintenance-amc-management-plant',
-      title: 'Maintenance & AMC Management',
-      description: 'Streamlines maintenance operations and AMC contract tracking.',
-    },
-    {
-      slug: 'quality-defect-traceability-source',
-      title: 'Quality & Defect Traceability',
-      description: 'Tracks defects end to end for faster resolution.',
-    },
-    {
-      slug: 'breakdown-analytics-mttr-mtbf',
-      title: 'Breakdown Analytics (MTTR / MTBF)',
-      description: 'Analyzes breakdown metrics to improve equipment reliability.',
-    },
-    {
-      slug: 'maintenance-efficiency-improvement-platform',
-      title: 'Maintenance Efficiency Improvement',
-      description: 'Improves maintenance productivity and operational efficiency.',
-    },
-    {
-      slug: 'automobile-warranty-vehicle-health',
-      title: 'Warranty & Vehicle Health Analytics',
-      description: 'Analyzes vehicle health and warranty data to reduce service costs.',
-    },
-    {
-      slug: 'banking-operational-performance-analytics',
-      title: 'Operational Performance Analytics',
-      description: 'Provides insights into operational efficiency and performance.',
-    },
-    {
-      slug: 'funnel-conversion-analytics',
-      title: 'Funnel & Conversion Analytics',
-      description: 'Optimizes customer journeys by tracking funnel performance.',
-    },
-    {
-      slug: 'cross-platform-campaign-analytics',
-      title: 'Cross-Platform Campaign Analytics',
-      description: 'Delivers unified insights across multiple marketing platforms.',
-    },
-    {
-      slug: 'healthcare-operational-kpi-dashboards',
-      title: 'Operational KPI Dashboards',
-      description: 'Offers real time visibility into healthcare operational KPIs.',
-    },
-    {
-      slug: 'healthcare-data-platform-modernization',
-      title: 'Data Platform Modernization',
-      description: 'Modernizes data platforms for scalable and secure analytics.',
-    },
-    {
-      slug: 'retail-demand-forecasting',
-      title: 'Demand Forecasting & Replenishment Planning',
-      description: 'Predicts demand to optimize inventory replenishment.',
-    },
-    {
-      slug: 'retail-store-benchmarking',
-      title: 'Store Performance Benchmarking',
-      description: 'Benchmarks store KPIs to identify improvement opportunities.',
-    },
-    {
-      slug: 'retail-sales-inventory-intelligence',
-      title: 'Sales & Inventory Intelligence',
-      description: 'Provides unified insights into sales and inventory performance.',
-    },
-    {
-      slug: 'retail-customer-segmentation',
-      title: 'Customer Segmentation & Buying Behavior',
-      description: 'Analyzes customer behavior to enable targeted retail strategies.',
-    },
-    {
-      slug: 'oil-gas-work-order-monitoring',
-      title: 'Work Order & Asset Monitoring',
-      description: 'Monitors assets and work orders to improve operational reliability.',
-    },
+    // Add more templates here as you create them
+    // {
+    //   slug: 'your-next-template',
+    //   title: 'Your Next Case Study Title',
+    //   description: 'Description of your case study',
+    //   image: '/images/Templates/template2/hero.png',
+    // },
   ];
 
   const cardsData = caseStudiesData.map((study, i) => {
-    const imgNumber = i + 21;
-    const extension = imgNumber === 46 || imgNumber === 47 ? 'jpg' : 'png';
-
     return {
-      id: imgNumber,
-      image: `/images/Casestudy/img${imgNumber}.${extension}`,
+      id: i + 1,
+      image: study.image,
       title: study.title,
       description: study.description,
       slug: study.slug,
-      link: study.slug ? `/Casestudy/${study.slug}` : '/case-study-details',
+      link: `/Casestudy/${study.slug}`,
     };
   });
 

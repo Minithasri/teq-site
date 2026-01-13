@@ -18,7 +18,7 @@ export const caseStudiesData = {
 
   'quality-yield-intelligence': {
     industry: 'Manufacturing',
-    title: 'Driving First-Time-Right Manufacturing Through Quality & Yield Intelligence',
+    title: 'Driving First Time Right Manufacturing Through Quality & Yield Intelligence',
     image: '/images/Casestudy/img22.png',
     problemStatement:
       'Quality teams struggled to identify defect patterns and yield losses due to manual data collection and delayed reporting. Defects were discovered late, making root cause analysis slow and increasing scrap, rework, and production inefficiencies.',
