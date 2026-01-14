@@ -22,6 +22,47 @@ const Cards = () => {
         'Driving packaging efficiency through real-time visibility and predictive insights.',
       image: '/images/Templates/template1/hero1.png',
     },
+    {
+      slug: 'mobile-manufacturing-quality',
+      title: 'Commonality & Traceability Analysis for Mobile Manufacturing Quality',
+      description:
+        'Enabling end-to-end visibility and data-driven quality governance in phone manufacturing.',
+      image: '/images/Templates/template3/heroimage1.png',
+    },
+    {
+      slug: 'predictive-maintenance',
+      title: 'Predictive Maintenance Powered by Advanced Analytics',
+      description: 'Minimizing unplanned downtime through proactive maintenance intelligence.',
+      image: '/images/Templates/template4/herobg.png',
+    },
+    {
+      slug: 'streamlining-production',
+      title: 'Streamlining Production Through Data-Driven IE Applications',
+      description:
+        'Digitizing maintenance operations for improved equipment reliability and performance.',
+      image: '/images/Templates/template5/herobgmain.png',
+    },
+    {
+      slug: 'optimizing-production',
+      title: 'Optimizing Production Efficiency Through Scrap Analytics',
+      description:
+        'Reducing material waste through real-time scrap tracking and data-driven insights.',
+      image: '/images/Templates/template6/hero6.png',
+    },
+    {
+      slug: 'sustainable-impact',
+      title: 'Sustainable Impact in Manufacturing',
+      description:
+        'Driving sustainability, compliance, and operational efficiency through Power Platform automation.',
+      image: '/images/Templates/template7/bg7.png',
+    },
+    {
+      slug: 'tool-management',
+      title: 'Tool Management Solution for Manufacturing',
+      description:
+        'Driving efficiency, traceability, and operational excellence through Power Platform automation.',
+      image: '/images/Templates/template8/temp8.png',
+    },
     // Add more templates here as you create them
     // {
     //   slug: 'your-next-template',
