@@ -1,128 +1,131 @@
 'use client';
 
-import { domoData } from '@/data/partners/domo';
 import Image from 'next/image';
-import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
-// Reusing Spark icon for header
-import img1 from '../../../../public/images/solutions/Icon.svg';
 
 const features = [
   {
-    title: domoData.features.businessApps.title,
-    description: domoData.features.businessApps.description,
-    image: '/images/domo/PrincipalDomo/Principal1.webp', // Using Appstore image for Business Apps
+    title: 'Business Apps',
+    description:
+      "Empower smarter decision-making with Domo's low-code and pro-code apps, enabling seamlessly automate business insights.",
+    linkText: 'Explore Foundation',
+    href: '#',
   },
   {
-    title: domoData.features.biAnalytics.title,
-    description: domoData.features.biAnalytics.description,
-    image: '/images/domo/PrincipalDomo/Principal8.webp', // Using Visualization image for Analytics
+    title: 'BI & Analytics',
+    description:
+      'Accelerate innovation and streamline processes, ensuring that your organization transforms data into actionable intelligence effortlessly.',
+    linkText: 'See BI & Analytics',
+    href: '#',
   },
   {
-    title: domoData.features.dataFoundation.title,
-    description: domoData.features.dataFoundation.description,
-    image: '/images/domo/PrincipalDomo/Principal2.webp', // Using Connections image for Data Foundation
+    title: 'Data Foundation',
+    description:
+      'Seamlessly integrate real-time data from any source to construct elevated data experiences.',
+    linkText: 'Discover Apps',
+    href: '#',
   },
+];
+
+const pills = [
+  'Build customizable, real time dashboards with ease using intuitive tools',
+  'Seamlessly connect data from multiple systems and cloud data warehouses',
+  'Ensure strong governance, security, and compliance with built in controls',
 ];
 
 export default function FeaturesSection() {
   return (
     <section className='w-full bg-white relative overflow-hidden py-20'>
-      {/* Background Image */}
-      <div className='absolute inset-0 w-full h-full flex items-center justify-start z-0'>
-        <div className='relative w-[800px] h-[800px] -translate-x-1/4'>
+      {/* Background Image for Whole Section */}
+      <div className='absolute top-32 inset-0 flex items-center justify-center pointer-events-none z-0'>
+        <div className='relative w-full h-full opacity-100'>
           <Image
-            src='/images/HomePage/circle_big.png'
+            src='/images/partners/domo/Background.png'
             alt='Background Decoration'
             fill
-            className='object-contain opacity-100'
-            priority
+            className='object-cover'
           />
         </div>
       </div>
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-        {/* Header (Spark + Dashed Line + CTA) */}
-        <header className='hidden md:flex md:flex-row items-center justify-between w-full gap-4 md:gap-4 lg:gap-4 mb-16'>
-          {/* Left Icon */}
-          <div className='w-14 h-14 rounded-xl bg-white shadow flex items-center justify-center shrink-0'>
-            <Image src={img1} alt='' aria-hidden width={30} height={30} />
-          </div>
-
-          {/* Connector */}
-          <div
-            aria-hidden
-            className='flex-1 h-[2px] bg-[linear-gradient(to_right,#1F1F1F_30%,rgba(0,0,0,0)_0%)] bg-[length:6px_2px] bg-repeat-x'
-          />
-
-          {/* CTA */}
-          <Link
-            href='/contact'
-            className='px-8 py-3 rounded-full border border-[#6F2B8B] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors shrink-0 flex items-center gap-2 bg-white/80 backdrop-blur-sm'
-          >
-            Talk to our experts
-            <FiArrowRight className='w-4 h-4' />
-          </Link>
-        </header>
-
-        {/* Title & Description */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-20'>
-          <div>
-            <h2 className='text-[32px] md:text-[40px] text-[#1F1F1F] font-medium'>
-              <span className='text-[#1F1F1F]'>Features of</span>
-              <br />
-              <span
-                style={{
-                  background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                Domo with GWC
-              </span>
-            </h2>
-          </div>
-          <div className='flex justify-start lg:justify-end'>
-            <p className='text-gray-600 max-w-lg leading-relaxed text-left lg:text-left text-sm md:text-[15px]'>
-              Leveraging more than 1,000 pre-built connectors and numerous alternative data
-              connection options, Domo eradicates the need for time-consuming and expensive
-              engineering projects.
-            </p>
-          </div>
+        {/* Header */}
+        <div className='flex items-center justify-center gap-3 mb-16'>
+          <Image src='/images/partners/domo/sparkss.svg' alt='spark' width={24} height={24} />
+          <h2 className='text-[28px] md:text-[32px] font-bold text-center'>
+            <span
+              style={{
+                background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              Features of Domo with GWC
+            </span>
+          </h2>
         </div>
 
-        {/* Cards Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center'>
+        {/* Top Cards Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center mb-[400px]'>
           {features.map((feature, index) => (
             <div
               key={index}
-              className='group relative rounded-2xl p-[1px] w-full max-w-[374px]'
+              className='w-full max-w-[380px] rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white h-full flex flex-col'
+            >
+              <div className='bg-[#F9F3FB] mx-2 mt-2 rounded-xl p-8 flex-1'>
+                <h3
+                  className='text-lg font-bold mb-4'
+                  style={{
+                    background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
+                >
+                  {feature.title}
+                </h3>
+                <p className='text-[#4B5563] text-[13px] leading-relaxed'>{feature.description}</p>
+              </div>
+              <div className='bg-white p-6 flex items-center justify-between group cursor-pointer'>
+                <span
+                  className='text-[14px] font-medium group-hover:underline'
+                  style={{
+                    background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
+                >
+                  {feature.linkText}
+                </span>
+                <FiArrowRight className='w-5 h-5 text-[#6F2B8B] transition-transform group-hover:translate-x-1' />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* What is Domo Section */}
+        <div className='text-center max-w-4xl mx-auto pt-24 mb-16 relative z-10'>
+          <h2 className='text-[36px] md:text-[52px] font-bold text-[#1F1F1F] mb-6'>
+            What is Domo?
+          </h2>
+          <p className='text-[#6B7280] text-[16px] leading-relaxed max-w-2xl mx-auto'>
+            Domo is a unified cloud platform that brings together data, analytics, app development,
+            security, and governance to deliver real time insights through interactive dashboards.
+          </p>
+        </div>
+
+        {/* Bottom Pills Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10'>
+          {pills.map((text, index) => (
+            <div
+              key={index}
+              className='rounded-[50px] px-4 py-4 flex items-center justify-center text-center h-full min-h-[100px]'
               style={{
-                background: 'linear-gradient(to right, #FFF7EB, #FAE0FA)',
-                boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.02)',
+                background:
+                  'linear-gradient(white, white) padding-box, linear-gradient(90deg, #E67582 0%, #7785F4 100%) border-box',
+                border: '1px solid transparent',
               }}
             >
-              <article className='flex flex-col bg-white rounded-2xl h-full w-full overflow-hidden'>
-                {/* Image Container */}
-                <div className='relative w-full p-6'>
-                  <div className='relative w-full h-[296px] rounded-xl overflow-hidden'>
-                    <Image
-                      src={feature.image}
-                      alt={feature.title}
-                      fill
-                      className='object-cover transition-transform duration-500 group-hover:scale-105'
-                    />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className='p-6 pt-2 flex-1 flex flex-col'>
-                  <h3 className='text-lg font-semibold text-[#404040] mb-3'>{feature.title}</h3>
-                  <p className='text-[#404040] text-[14px] leading-relaxed'>
-                    {feature.description}
-                  </p>
-                </div>
-              </article>
+              <p className='text-[#4B5563] text-[14px] font-medium leading-relaxed'>{text}</p>
             </div>
           ))}
         </div>

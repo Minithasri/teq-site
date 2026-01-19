@@ -1,104 +1,174 @@
 'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
+import { FiArrowRight } from 'react-icons/fi';
+
+const creditsData = [
+  {
+    title: 'Data Ingest',
+    description:
+      'Integrate data into Domo using connectors, file uploads, APIs, and more. Each completed update or table creation consumes 1 credit per table.',
+    icon: '/images/partners/domo/domoi1.svg',
+    footerText: '1 Credit per table created/updated',
+  },
+  {
+    title: 'Data Written',
+    description:
+      'Send insights back to external systems through a simple writeback process. Each completed writeback uses 1 credit per table.',
+    icon: '/images/partners/domo/domoi2.svg',
+    footerText: '1 Credit per table written',
+  },
+  {
+    title: 'Dataflow-Magic ETL',
+    description:
+      'Automate data extraction, transformation, and loading with Magic ETL. Each output table created or updated costs 1 credit.',
+    icon: '/images/partners/domo/domoi3.svg',
+    footerText: '1 Credit per output table created/updated',
+  },
+  {
+    title: 'Dataflow-Redshift & MySQL',
+    description:
+      'Process and transform data seamlessly using Redshift or MySQL, with 1 credit per output table created or updated.',
+    icon: '/images/partners/domo/domoi4.svg',
+    footerText: '1 Credit per output table created/updated',
+  },
+  {
+    title: 'Dataflow-Adrenaline',
+    description:
+      'Handle large datasets efficiently using advanced processing capabilities. Each execution costs 3 credits per output table.',
+    icon: '/images/partners/domo/domoi5.svg',
+    footerText: '3 Credit per output table created/updated',
+  },
+  {
+    title: 'Dataflow-Data Science',
+    description:
+      'Use Magic ETL with Data Science, R, or Python tiles to enable advanced analytics, consuming 2 credits per output table.',
+    icon: '/images/partners/domo/domoi6.svg',
+    footerText: '2 Credit per output table created/updated',
+  },
+];
 
 export default function ExecutionCredits() {
   return (
-    <section className='py-20 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30'>
-      <div className='container mx-auto px-4'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='grid lg:grid-cols-5 gap-12 lg:gap-16 items-center'>
-            {/* Left Side - Text Content (Reduced width) */}
-            <div className='lg:col-span-2 space-y-8'>
-              {/* Title */}
-              <div>
-                <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight'>
-                  How Execution Credits{' '}
-                  <span
-                    className='bg-clip-text text-transparent'
-                    style={{ backgroundImage: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)' }}
-                  >
-                    Works
-                  </span>
-                </h2>
-              </div>
+    <>
+      <style jsx global>{`
+        @keyframes swipe {
+          0% {
+            transform: translateX(-100%) rotate(-30deg);
+          }
+          100% {
+            transform: translateX(200%) rotate(-30deg);
+          }
+        }
+      `}</style>
 
-              {/* Text Content */}
-              <div className='space-y-6 text-gray-700 leading-relaxed'>
-                <div className='bg-white/50 backdrop-blur-sm p-5 rounded-xl border border-white/20 shadow-sm transition-transform duration-300 hover:scale-[1.02]'>
-                  <p className='font-semibold text-[#662B8C] mb-2 text-sm'>
-                    Purchase tailored credit packages
-                  </p>
-                  <p className='text-gray-600 text-sm'>
-                    Buy a credit package that perfectly matches your business requirements.
-                  </p>
-                </div>
-
-                <div className='bg-white/50 backdrop-blur-sm p-5 rounded-xl border border-white/20 shadow-sm transition-transform duration-300 hover:scale-[1.02]'>
-                  <p className='font-semibold text-[#662B8C] mb-2 text-sm'>Use with confidence</p>
-                  <p className='text-gray-600 text-sm'>
-                    Credits are deducted only when you actively use Domo's features.
-                  </p>
-                </div>
-
-                <div className='bg-white/50 backdrop-blur-sm p-5 rounded-xl border border-white/20 shadow-sm transition-transform duration-300 hover:scale-[1.02]'>
-                  <p className='font-semibold text-[#662B8C] mb-2 text-sm'>Monitor and control</p>
-                  <p className='text-gray-600 text-sm'>
-                    Track your credit consumption through built-in utilization reports.
-                  </p>
-                </div>
-              </div>
-
-              {/* Product Feature Badge */}
-              <div className='bg-gradient-to-r from-[#662B8C] to-[#4988BF] rounded-xl p-4 text-white text-center shadow-md'>
-                <div className='flex items-center justify-center space-x-2 mb-2'>
-                  <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>
-                    Product Feature
-                  </span>
-                  <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>
-                    Credit Utilization
-                  </span>
-                </div>
-                <p className='text-lg font-bold mb-1'>Get the full product experience</p>
-                <div className='flex items-center justify-center space-x-2 text-white/80 text-sm'>
-                  <span>Used Credits</span>
-                  <span className='bg-white/20 px-1 py-0.5 rounded text-xs'>New 2x</span>
-                </div>
-              </div>
-
-              {/* CTA Section */}
-              <div className='text-center lg:text-left'>
-                <p className='text-gray-600 mb-4 text-base'>
-                  Fully Featured. Unlimited number of Users. Only pay for what you use
-                </p>
-                <button className='bg-[#673091] text-white px-6 py-3 rounded-xl font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-[#5a2a7d] w-full lg:w-auto transform hover:translate-y-[-2px]'>
-                  Create Your Free Account
-                </button>
-              </div>
+      <section
+        className='w-full py-16 md:py-24 relative overflow-hidden'
+        style={{
+          background: 'linear-gradient(135deg, #FFF7EB 0%, #FAE0FA 100%)',
+        }}
+      >
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          {/* Header */}
+          <div className='flex items-center justify-between gap-4 mb-16 w-full'>
+            {/* Sparkle Icon */}
+            <div className='w-12 h-12 bg-white border border-purple-100 rounded-xl shadow-sm flex items-center justify-center p-2 shrink-0'>
+              <Image
+                src='/images/partners/domo/sparkss.svg'
+                alt='Sparkle'
+                width={24}
+                height={24}
+                className='w-6 h-6'
+              />
             </div>
 
-            {/* Right Side - Image (Increased width) */}
-            <div className='lg:col-span-3 relative'>
-              <div className='relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-2xl border border-white/20 transition-all duration-300 hover:shadow-3xl'>
-                {/* Main Image Container */}
-                <div className='relative h-[550px] rounded-xl overflow-hidden bg-gradient-to-br from-[#662B8C]/5 via-[#4988BF]/5 to-[#F28963]/5'>
-                  {/* Actual Image Component */}
-                  <Image
-                    src='/images/domo/creditUtilization.webp'
-                    alt='Execution Credits Dashboard'
-                    className='object-cover rounded-lg'
-                    fill
-                    priority
+            {/* Dotted Line */}
+            <div className='flex-1 h-[2px] bg-[linear-gradient(to_right,#A0A0A0_50%,rgba(0,0,0,0)_0%)] bg-[length:10px_2px] bg-repeat-x opacity-30'></div>
+
+            {/* CTA Button */}
+            <Link
+              href='/contact'
+              className='group inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#9156AA] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors duration-300 shrink-0'
+            >
+              Talk to Our Experts
+              <FiArrowRight className='w-4 h-4 transition-transform group-hover:translate-x-1' />
+            </Link>
+          </div>
+
+          {/* Title Section */}
+          <div className='flex flex-col lg:flex-row justify-between items-start gap-12 mb-20'>
+            <h2 className='text-[32px] md:text-[40px] font-medium text-[#404040]'>
+              Domo Execution Credits
+            </h2>
+            <p className='text-[#404040] text-[16px] leading-[24px] max-w-xl lg:text-right'>
+              Unlock Domo's full BI platform with a flexible pay as you go Executive Credits model,
+              offering unlimited users and complete feature access without complexity.
+            </p>
+          </div>
+
+          {/* Cards Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-96 gap-6 lg:gap-8'>
+            {creditsData.map((item, index) => (
+              <div
+                key={index}
+                className='bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col'
+              >
+                {/* Content */}
+                <div className='p-8 md:p-10 flex flex-col items-center text-center flex-1'>
+                  <div className='w-16 h-16 mb-6 flex items-center justify-center bg-[#FAFAFA] border border-[#E5E5E5] rounded-2xl'>
+                    <div
+                      className='w-8 h-8'
+                      style={{
+                        backgroundColor: '#D97706',
+                        mask: `url("${item.icon}") no-repeat center / contain`,
+                        WebkitMask: `url("${item.icon}") no-repeat center / contain`,
+                      }}
+                    />
+                  </div>
+
+                  <h3 className='text-[#F97316] font-semibold text-[18px] mb-4'>{item.title}</h3>
+                  <div
+                    aria-hidden
+                    className='w-full h-[1px] mb-4 bg-[linear-gradient(to_right,#E5E7EB_35%,rgba(0,0,0,0)_0%)] bg-[length:14px_2px] bg-repeat-x rounded-full'
                   />
+                  <p className='text-gray-600 text-sm leading-relaxed max-w-2xl'>
+                    {item.description}
+                  </p>
                 </div>
 
-                {/* Floating elements around image */}
-              </div>
+                {/* Footer */}
+                <div
+                  className='relative p-4 flex items-center justify-center gap-2 overflow-hidden'
+                  style={{ background: 'linear-gradient(90deg, #FFF7EB 0%, #FAE0FA 100%)' }}
+                >
+                  {/* Animation Overlay */}
+                  <div
+                    className='absolute inset-0 w-[200px] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent'
+                    style={{
+                      animation: 'swipe 3s ease-in-out infinite',
+                      pointerEvents: 'none',
+                    }}
+                  />
 
-              {/* Background decorative elements */}
-            </div>
+                  <div className='relative z-10 flex items-center gap-2'>
+                    <Image
+                      src='/images/partners/domo/newspark.svg'
+                      alt='credit'
+                      width={16}
+                      height={16}
+                      className='w-4 h-4'
+                    />
+                    <span className='text-[#6F2B8B] text-[13px] font-medium'>
+                      {item.footerText}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

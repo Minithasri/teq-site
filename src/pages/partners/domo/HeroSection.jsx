@@ -3,7 +3,7 @@
 import { domoData } from '@/data/partners/domo';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiArrowRight } from 'react-icons/fi';
+// import { FiArrowRight } from 'react-icons/fi'; // Removed as we are using custom SVGs
 
 const bannerContent = {
   breadcrumb: {
@@ -14,56 +14,28 @@ const bannerContent = {
   },
   title: domoData.hero.title,
   description: domoData.hero.subtitle,
-  ctaText: 'Get in touch', // Keeping standard CTA or using specific one? User said "without changing the contne".
-  // The Boomi one used "Get in touch". The Domo one had specific long text.
-  // I will use the specific Domo text for the button if it fits, or maybe just "Get in touch" to match the style strictness?
-  // "remove the colours used here and follow the colours that is usedin other herosection... replace that here without changing the contne from this"
-  // This likely means keep the Title and Subtitle. The CTA button text "Create Your Free Account Now & Access It Forever" is very long for a button in the new style.
-  // I will stick to "Get in touch" to match the design or "Contact Us".
-  // Actually, I'll use the `domoData.hero.cta` but check if it's too long.
   images: {
-    background: '/images/partners/boomi/hero_bg_partner.png', // Using the partner background as requested to "fix with the bg"
-    illustration: '/images/domo/bannerRight.svg',
+    background: '', // No background image needed for white bg
+    illustration: '/images/partners/domo/heroimgg.png',
   },
 };
 
 export default function HeroSection() {
   return (
-    <header className='relative w-full overflow-hidden pt-[60px] min-h-[700px] flex items-center'>
-      {/* Background Image */}
-      <div className='absolute inset-0 -z-10 bg-[#1e102e]'>
-        <Image
-          src={bannerContent.images.background}
-          alt='Domo Integration with GWC'
-          fill
-          priority
-          className='object-cover'
-        />
-      </div>
-
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 lg:py-14'>
+    <header className='relative w-full overflow-hidden pt-[100px] min-h-[600px] flex items-center bg-[#FFFFFF]'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 lg:py-14'>
         {/* Breadcrumb */}
-        <nav aria-label='Breadcrumb' className='relative z-10 mb-8'>
-          <ol className='inline-flex items-center gap-2 text-[15px] py-1'>
+        <nav aria-label='Breadcrumb' className='relative z-10 mb-6'>
+          <ol className='inline-flex items-center gap-2 text-[15px]'>
             {bannerContent.breadcrumb.items.map((item, index) => (
               <li key={index} className='flex items-center gap-2'>
-                {index > 0 && (
-                  <Image
-                    src='/images/next_arrow.svg'
-                    alt=''
-                    width={6}
-                    height={6}
-                    aria-hidden
-                    className='opacity-80'
-                    style={{ filter: 'brightness(0) invert(1)' }}
-                  />
-                )}
+                {index > 0 && <span className='text-gray-400 font-medium'>{'>'}</span>}
                 <Link
                   href={item.href}
-                  className={`font-medium hover:opacity-80 transition-opacity ${
+                  className={`font-medium hover:text-[#7030B1] transition-colors ${
                     index === bannerContent.breadcrumb.items.length - 1
-                      ? 'text-white'
-                      : 'text-white'
+                      ? 'text-[#1F1F1F] font-bold'
+                      : 'text-gray-500'
                   }`}
                 >
                   {item.label}
@@ -74,36 +46,63 @@ export default function HeroSection() {
         </nav>
 
         {/* Hero Grid */}
-        <div className='grid grid-cols-1 lg:grid-cols-[55%_45%] items-center gap-12 lg:gap-16'>
+        <div className='grid grid-cols-1 lg:grid-cols-[50%_50%] items-center gap-10 lg:gap-10'>
           {/* Left Content */}
-          <div>
-            <h1 className='text-[32px] md:text-[32px] font-bold text-white leading-[52px] mb-6'>
+          <div className='flex flex-col items-start'>
+            <h1 className='text-[28px] md:text-[35px] font-bold text-[#1F1F1F] leading-[1.2] mb-6'>
               {bannerContent.title}
             </h1>
 
-            <p className='text-white/80 text-[16px] md:text-[18px] max-w-2xl mb-12 leading-relaxed'>
+            <p className='text-[#4B5563] text-[16px] md:text-[18px] max-w-xl mb-10 leading-relaxed'>
               {bannerContent.description}
             </p>
 
-            <Link
-              href='/contact'
-              className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white px-8 h-[45px] rounded-full font-medium text-[15px] justify-center hover:scale-105 transition-transform shadow-lg'
-            >
-              Contact Us
-              <FiArrowRight className='w-5 h-5' />
-            </Link>
+            <div className='flex flex-col sm:flex-row gap-4'>
+              {/* Button 1: Talk to our expert */}
+              <Link
+                href='/contact'
+                className='inline-flex items-center gap-3 bg-[#F4EBFF] text-[#6F2B8B] px-8 py-3.5 rounded-full font-medium text-[16px] justify-center hover:bg-[#eaddf5] transition-colors'
+              >
+                Talk to our expert
+                <Image
+                  src='/images/partners/domo/arrowviolet.svg'
+                  alt='arrow'
+                  width={20}
+                  height={20}
+                />
+              </Link>
+
+              {/* Button 2: Request Demo */}
+              <Link
+                href='/contact'
+                className='inline-flex items-center gap-3 text-white px-8 py-3.5 rounded-full font-medium text-[16px] justify-center hover:opacity-90 transition-opacity'
+                style={{
+                  background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                }}
+              >
+                Request Demo
+                <Image
+                  src='/images/partners/domo/arrowwhite.svg'
+                  alt='arrow'
+                  width={20}
+                  height={20}
+                />
+              </Link>
+            </div>
           </div>
 
           {/* Right Image */}
-          <div className='relative w-full max-w-[600px] mx-auto lg:mx-0'>
-            <Image
-              src={bannerContent.images.illustration}
-              alt='Domo Platform'
-              width={600}
-              height={500}
-              priority
-              className='w-full h-auto object-contain'
-            />
+          <div className='relative w-full flex justify-end'>
+            <div className='relative w-full max-w-[650px]'>
+              <Image
+                src={bannerContent.images.illustration}
+                alt='Domo Platform'
+                width={700}
+                height={600}
+                priority
+                className='w-full h-auto object-contain'
+              />
+            </div>
           </div>
         </div>
       </div>

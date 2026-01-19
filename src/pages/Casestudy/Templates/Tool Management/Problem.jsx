@@ -51,7 +51,7 @@ export default function Problem() {
       {/* Bottom Section: Image Background with Overlapping Content */}
       <div className='relative w-full pb-20 lg:pb-28 px-4 sm:px-6 lg:px-8'>
         {/* Background Image and Overlay */}
-        <div className='absolute inset-0 z-0'>
+        <div className='absolute top-20 inset-0 z-0'>
           <Image
             src='/images/Templates/template8/laptop.png'
             alt='Background'
@@ -72,7 +72,7 @@ export default function Problem() {
               >
                 <div className='flex items-start gap-4'>
                   <div
-                    className='shrink-0 w-10 h-10 rounded-lg flex items-center justify-center'
+                    className='shrink-0 w-10 h-10 rounded-xl flex items-center justify-center'
                     style={{ backgroundColor: '#EF4444' }}
                   >
                     <div className='relative w-5 h-5'>

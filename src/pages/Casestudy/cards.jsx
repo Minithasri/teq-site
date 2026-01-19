@@ -49,20 +49,20 @@ const Cards = () => {
         'Reducing material waste through real-time scrap tracking and data-driven insights.',
       image: '/images/Templates/template6/hero6.png',
     },
-    {
-      slug: 'sustainable-impact',
-      title: 'Sustainable Impact in Manufacturing',
-      description:
-        'Driving sustainability, compliance, and operational efficiency through Power Platform automation.',
-      image: '/images/Templates/template7/bg7.png',
-    },
-    {
-      slug: 'tool-management',
-      title: 'Tool Management Solution for Manufacturing',
-      description:
-        'Driving efficiency, traceability, and operational excellence through Power Platform automation.',
-      image: '/images/Templates/template8/temp8.png',
-    },
+    // {
+    //   slug: 'sustainable-impact',
+    //   title: 'Sustainable Impact in Manufacturing',
+    //   description:
+    //     'Driving sustainability, compliance, and operational efficiency through Power Platform automation.',
+    //   image: '/images/Templates/template7/bg7.png',
+    // },
+    // {
+    //   slug: 'tool-management',
+    //   title: 'Tool Management Solution for Manufacturing',
+    //   description:
+    //     'Driving efficiency, traceability, and operational excellence through Power Platform automation.',
+    //   image: '/images/Templates/template8/temp8.png',
+    // },
     // Add more templates here as you create them
     // {
     //   slug: 'your-next-template',

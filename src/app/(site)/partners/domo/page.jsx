@@ -1,19 +1,20 @@
 'use client';
 
 import AnalyticsBanner from '@/pages/partners/domo/AnalyticsBanner';
-import BenefitsSection from '@/pages/partners/domo/BenefitsSection';
+import CreateAccount from '@/pages/partners/domo/CreateAccount';
 import DomoAIBanner from '@/pages/partners/domo/DomoAIBanner';
-import DomoDashboard from '@/pages/partners/domo/DomoDashboard';
+import DomoFeatures from '@/pages/partners/domo/DomoFeatures';
 import ExecutionCredits from '@/pages/partners/domo/ExecutionCredits';
-import FeaturesList from '@/pages/partners/domo/FeaturesList';
 import FeaturesSection from '@/pages/partners/domo/FeaturesSection';
-import FreeAccountSection from '@/pages/partners/domo/FreeAccountSection';
 import HeroSection from '@/pages/partners/domo/HeroSection';
+import HowItWorks from '@/pages/partners/domo/HowItWorks';
 import PartnerSection from '@/pages/partners/domo/PartnerSection';
-import PricingSection from '@/pages/partners/domo/PricingSection';
-import SolutionSection from '@/pages/partners/domo/SolutionSection';
-import StatsSection from '@/pages/partners/domo/StatsSection';
-import UseCasesSection from '@/pages/partners/domo/UseCasesSection';
+import Solutions from '@/pages/partners/domo/Solutions';
+import TopBenefits from '@/pages/partners/domo/TopBenefits';
+import WhenToUseDomo from '@/pages/partners/domo/WhenToUseDomo';
+import WhyDomo from '@/pages/partners/domo/WhyDomo';
+import LastSection from '@/pages/partners/domo/LastSection';
+import DomoDashboard from '@/pages/partners/domo/DomoDashboard';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef } from 'react';
@@ -40,35 +41,35 @@ export default function CareersPage() {
       <div className='section-animate'>
         <DomoAIBanner />
       </div>
-      {/* <div className='section-animate'>
-        <GWCServices />
-      </div> */}
       <div className='section-animate'>
-        <StatsSection />
+        <WhyDomo />
       </div>
       <div className='section-animate'>
-        <FreeAccountSection />
+        <CreateAccount />
       </div>
       <div className='section-animate'>
-        <FeaturesList />
+        <DomoFeatures />
       </div>
       <div className='section-animate'>
-        <BenefitsSection />
+        <TopBenefits />
       </div>
       <div className='section-animate'>
-        <UseCasesSection />
+        <WhenToUseDomo />
       </div>
       <div className='section-animate'>
-        <SolutionSection />
-      </div>
-      <div className='section-animate'>
-        <PricingSection />
+        <Solutions />
       </div>
       <div className='section-animate'>
         <ExecutionCredits />
       </div>
       <div className='section-animate'>
+        <HowItWorks />
+      </div>
+      <div className='section-animate'>
         <DomoDashboard />
+      </div>
+      <div className='section-animate'>
+        <LastSection />
       </div>
     </main>
   );

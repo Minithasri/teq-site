@@ -1,113 +1,167 @@
 'use client';
 import { domoData } from '@/data/partners/domo';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+import { FiArrowRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 export default function DomoDashboard() {
+  const dashboards = domoData.dashboardData;
+  const marqueeDashboards = [...dashboards, ...dashboards, ...dashboards, ...dashboards];
+
+  const scrollContainerRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Card settings matching Solutions.jsx
+  const cardWidth = 380;
+  const gap = 24;
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (!scrollContainer) return;
+
+    let animationFrameId;
+
+    const scroll = () => {
+      if (!isPaused) {
+        scrollContainer.scrollLeft += 1;
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+          scrollContainer.scrollLeft = 0;
+        }
+      }
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    animationFrameId = requestAnimationFrame(scroll);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isPaused]);
+
+  const handlePrev = () => {
+    setIsPaused(true);
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+    }
+    setTimeout(() => setIsPaused(false), 1000);
+  };
+
+  const handleNext = () => {
+    setIsPaused(true);
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
+    }
+    setTimeout(() => setIsPaused(false), 1000);
+  };
+
   return (
-    <section className='py-20 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30'>
-      <div className='container mx-auto px-4'>
-        <div className='max-w-7xl mx-auto'>
-          {/* Header Section */}
-          <div className='text-center mb-16'>
-            <h2
-              className='text-[24px] md:text-[32px] lg:text-[40px] font-bold mb-6 leading-tight text-transparent bg-clip-text'
-              style={{ backgroundImage: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)' }}
-            >
-              <span className='text-[#404040]'>Powerful </span>Domo Dashboards
-            </h2>
-            <p className='text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-white/20 shadow-sm'>
-              Explore our collection of interactive dashboards designed to transform your data into
-              actionable insights. From business intelligence to operational analytics, Domo
-              delivers powerful visualization tools.
-            </p>
+    <section className='py-20  overflow-hidden'>
+      <div className='max-w-7xl mx-auto px-4'>
+        {/* Header Row */}
+        <div className='flex items-center justify-between gap-4 mb-16 w-full'>
+          {/* Sparkle Icon */}
+          <div className='w-12 h-12 bg-white border border-purple-100 rounded-xl shadow-sm flex items-center justify-center p-2 shrink-0'>
+            <Image
+              src='/images/partners/domo/sparkss.svg'
+              alt='Sparkle'
+              width={24}
+              height={24}
+              className='w-6 h-6'
+            />
           </div>
 
-          {/* Dashboard Images Grid */}
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {domoData.dashboardData.map((dashboard, index) => (
-              <div
-                key={index}
-                className='bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden'
-              >
-                {/* Image Container */}
-                <div className='relative h-80 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden'>
-                  {/* Placeholder for image - replace with actual Image component */}
-                  <div className='absolute inset-0 flex items-center justify-center'>
-                    <div className='text-center p-6'>
-                      <div className='w-16 h-16 bg-gradient-to-r from-[#662B8C] to-[#4988BF] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg'>
-                        <svg
-                          className='w-8 h-8 text-white'
-                          fill='none'
-                          stroke='currentColor'
-                          viewBox='0 0 24 24'
-                        >
-                          <path
-                            strokeLinecap='round'
-                            strokeLinejoin='round'
-                            strokeWidth={2}
-                            d='M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
-                          />
-                        </svg>
-                      </div>
-                      <p className='text-gray-700 font-semibold text-xl mb-2'>{dashboard.title}</p>
-                      <p className='text-gray-500'>Dashboard Preview</p>
+          {/* Dotted Line */}
+          <div className='flex-1 h-[2px] bg-[linear-gradient(to_right,#A0A0A0_50%,rgba(0,0,0,0)_0%)] bg-[length:10px_2px] bg-repeat-x opacity-30'></div>
 
-                      {/* Mock Dashboard Elements */}
-                      <div className='mt-4 grid grid-cols-2 gap-2 max-w-xs mx-auto'>
-                        <div className='h-3 bg-[#662B8C] rounded'></div>
-                        <div className='h-3 bg-[#4988BF] rounded'></div>
-                        <div className='h-3 bg-[#F28963] rounded'></div>
-                        <div className='h-3 bg-[#F27166] rounded'></div>
-                        <div className='h-3 bg-[#673091] rounded col-span-2'></div>
-                      </div>
-                    </div>
+          {/* CTA Button */}
+          <Link
+            href='/contact'
+            className='group inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#9156AA] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors duration-300 shrink-0'
+          >
+            Talk to Our Experts
+            <FiArrowRight className='w-4 h-4 transition-transform group-hover:translate-x-1' />
+          </Link>
+        </div>
+
+        {/* Title Section */}
+        <div className='flex flex-col lg:flex-row justify-between items-start gap-12 mb-20'>
+          <h2 className='text-[32px] md:text-[40px] font-medium text-[#404040]'>
+            Powerful Domo Dashboards
+          </h2>
+          <p className='text-[#404040] text-[16px] leading-[24px] max-w-xl lg:text-right'>
+            Explore our collection of interactive dashboards designed to transform your data into
+            actionable insights. From business intelligence to operational analytics, Domo delivers
+            powerful visualization tools.
+          </p>
+        </div>
+      </div>
+
+      {/* Marquee Scroll Container - Full Width */}
+      <div className='relative w-full'>
+        <div
+          ref={scrollContainerRef}
+          className='flex gap-6 overflow-x-hidden pb-8 no-scrollbar'
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          style={{ whiteSpace: 'nowrap' }}
+        >
+          {marqueeDashboards.map((dashboard, index) => (
+            <div
+              key={`${dashboard.title}-${index}`}
+              className='flex-shrink-0 w-[300px] md:w-[380px] inline-block align-top whitespace-normal'
+            >
+              <div className='bg-white rounded-3xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 h-full border border-gray-100 group'>
+                {/* Card Image */}
+                <div className='relative w-full h-[220px] overflow-hidden p-4'>
+                  <div className='relative w-full h-full rounded-2xl overflow-hidden'>
+                    <div className='absolute inset-0 bg-gray-100 animate-pulse'></div>
+                    <Image
+                      src={dashboard.src}
+                      alt={dashboard.title}
+                      fill
+                      className='object-cover transition-transform duration-500 group-hover:scale-110'
+                    />
                   </div>
-
-                  {/* Actual Image Component (commented out for now) */}
-                  <Image
-                    src={dashboard.src}
-                    alt={dashboard.title}
-                    fill
-                    className='object-cover'
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw'
-                  />
                 </div>
 
-                {/* Content */}
-                <div className='p-6'>
-                  <h3 className='text-xl font-bold text-[#662B8C] mb-2'>{dashboard.title}</h3>
-                  <p className='text-gray-600 leading-relaxed'>{dashboard.description}</p>
+                {/* Card Content */}
+                <div className='px-6 pb-8 pt-2'>
+                  <h4 className='text-[#303030] font-bold text-[18px] mb-3 leading-tight'>
+                    {dashboard.title}
+                  </h4>
+                  <p className='text-[#606060] text-[14px] leading-relaxed mb-6 line-clamp-3'>
+                    {dashboard.description}
+                  </p>
 
-                  {/* Features */}
-                  <div className='flex flex-wrap gap-2 mt-4'>
-                    <span className='bg-[#662B8C]/10 text-[#662B8C] px-2 py-1 rounded text-xs font-medium'>
-                      Real-time
-                    </span>
-                    <span className='bg-[#4988BF]/10 text-[#4988BF] px-2 py-1 rounded text-xs font-medium'>
-                      Interactive
-                    </span>
-                    <span className='bg-[#F28963]/10 text-[#F28963] px-2 py-1 rounded text-xs font-medium'>
-                      Customizable
-                    </span>
-                  </div>
+                  <Link
+                    href='#'
+                    className='inline-flex items-center gap-2 text-[#8B3DA8] font-semibold text-[15px] hover:gap-3 transition-all'
+                  >
+                    Learn more
+                    <FiArrowRight />
+                  </Link>
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* CTA Section */}
-          <div className='text-center mt-12'>
-            <div className='bg-gradient-to-r from-[#662B8C] to-[#4988BF] rounded-2xl p-8 text-white shadow-xl'>
-              <h3 className='text-[28px] font-medium mb-4'>
-                Want to gain actionable insights from your data?
-              </h3>
-              <p className='text-white/90 mb-6 max-w-2xl mx-auto'>
-                Empower your business & drive success with our advanced BI and analytics solutions.
-              </p>
-              <button className='bg-white text-[#673091] px-8 py-4 rounded-2xl font-semibold shadow-lg hover:bg-[#5a2a7d] hover:text-white transition-colors duration-300'>
-                Start Building Now
-              </button>
             </div>
+          ))}
+        </div>
+
+        {/* Navigation Buttons Row - Constrained back to max-w-7xl */}
+        <div className='max-w-7xl mx-auto px-4'>
+          <div className='flex justify-center items-center gap-4 mt-8'>
+            <button
+              onClick={handlePrev}
+              className='w-12 h-12 rounded-full border border-gray-200 hover:bg-gray-50 flex items-center justify-center text-gray-600 transition-colors shadow-sm bg-white'
+              aria-label='Previous'
+            >
+              <FiChevronLeft size={24} />
+            </button>
+            <button
+              onClick={handleNext}
+              className='w-12 h-12 rounded-full bg-[#8B3DA8] border border-[#8B3DA8] flex items-center justify-center text-white hover:bg-[#7A35C2] transition-colors shadow-lg shadow-purple-200'
+              aria-label='Next'
+            >
+              <FiChevronRight size={24} />
+            </button>
           </div>
         </div>
       </div>
