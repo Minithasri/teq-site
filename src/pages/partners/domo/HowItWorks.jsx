@@ -11,7 +11,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className='w-full pb-16 md:pb-24 -mt-96 px-4 sm:px-6 lg:px-8 relative z-20'>
+    <section className='w-full pb-16 md:pb-24 lg:-mt-96 -mt-20 px-4 sm:px-6 lg:px-8 relative z-20'>
       <div className='max-w-7xl mx-auto'>
         <div className='w-full rounded-[40px] p-8 md:p-16 lg:p-20 text-center relative overflow-hidden'>
           <div className='absolute inset-0 -z-10'>

@@ -19,12 +19,12 @@ const row2 = [
   { icon: 'when9', label: 'Embedded Analytics' },
 ];
 
-const ItemCard = ({ icon, label, isLast }) => (
+const ItemCard = ({ icon, label, isLast, hideSeparator }) => (
   <div
-    className={`flex flex-col items-center justify-start text-center px-4 relative flex-1 min-w-[160px] max-w-[200px]`}
+    className={`flex flex-col items-center justify-start text-center px-4 md:px-8 relative flex-1 min-w-[200px] max-w-[250px] py-12`}
   >
     <div
-      className='w-[60px] h-[60px] rounded-2xl flex items-center justify-center mb-6 shadow-lg hover:scale-105 transition-transform duration-300'
+      className='w-[70px] h-[70px] rounded-2xl flex items-center justify-center mb-6 shadow-sm hover:scale-105 transition-transform duration-300'
       style={{
         background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
       }}
@@ -32,16 +32,16 @@ const ItemCard = ({ icon, label, isLast }) => (
       <Image
         src={`/images/partners/domo/${icon}.svg`}
         alt={label}
-        width={32}
-        height={32}
-        className='w-8 h-8 object-contain brightness-0 invert'
+        width={35}
+        height={35}
+        className='w-10 h-10 object-contain brightness-0 invert'
       />
     </div>
-    <p className='text-[#404040] text-[15px] font-medium leading-tight max-w-[160px]'>{label}</p>
+    <p className='text-[#404040] text-[15px] font-medium leading-[1.4] max-w-[160px]'>{label}</p>
 
-    {/* Vertical Separator - Hidden on mobile, visible on lg unless it's the last item */}
-    {!isLast && (
-      <div className='hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 h-24 w-[1px] bg-gray-200'></div>
+    {/* Vertical Separator - Visible on lg unless explicitly hidden or it's the last item */}
+    {!isLast && !hideSeparator && (
+      <div className='hidden lg:block absolute right-0 top-0 bottom-0 w-[1px] bg-[#E7E7E7]'></div>
     )}
   </div>
 );
@@ -49,14 +49,14 @@ const ItemCard = ({ icon, label, isLast }) => (
 export default function WhenToUseDomo() {
   return (
     <section
-      className='w-full py-16 md:py-24 -mt-96 relative overflow-hidden'
+      className='w-full py-16 md:py-24 lg:-mt-96 -mt-40 relative overflow-hidden'
       style={{
         background: 'linear-gradient(180deg, #EBD8F3 0%, #FFFFFF 75%, #EBD8F3 100%)',
       }}
     >
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-        {/* Header - Copied structure for consistency */}
-        <div className='flex items-center justify-between gap-4 mt-80 mb-20 w-full'>
+        {/* Header */}
+        <div className='flex items-center justify-between gap-4 lg:mt-80 mt-44 mb-12 lg:mb-16 w-full'>
           <div className='w-12 h-12 bg-white border border-purple-100 rounded-xl shadow-sm flex items-center justify-center p-2 shrink-0'>
             <Image
               src='/images/partners/domo/sparkss.svg'
@@ -77,19 +77,19 @@ export default function WhenToUseDomo() {
         </div>
 
         {/* Title Section */}
-        <div className='flex flex-col lg:flex-row justify-between items-end gap-6 mb-24'>
-          <h2 className='text-[32px] md:text-[40px] font-semibold text-[#303030]'>
+        <div className='flex flex-col lg:flex-row justify-between items-center gap-6 mb-16 text-center lg:text-left'>
+          <h2 className='text-[32px] md:text-[40px] font-medium text-[#303030] leading-tight'>
             When to use Domo?
           </h2>
-          <p className='text-[#505050] text-[16px] font-medium text-right'>
+          <p className='text-[#505050] text-[16px] font-medium lg:text-right w-full lg:max-w-lg'>
             Want actionable insights to make smart decisions? Try Domo!
           </p>
         </div>
 
         {/* Content Rows */}
-        <div className='flex flex-col gap-12 lg:gap-16 items-center'>
+        <div className='w-full relative'>
           {/* Row 1 */}
-          <div className='flex flex-wrap lg:flex-nowrap justify-center lg:justify-between w-full gap-y-12'>
+          <div className='flex flex-wrap lg:flex-nowrap justify-center lg:justify-between w-full'>
             {row1.map((item, index) => (
               <ItemCard
                 key={index}
@@ -100,8 +100,11 @@ export default function WhenToUseDomo() {
             ))}
           </div>
 
-          {/* Row 2 (Centered, with separators between items excluding the last one) */}
-          <div className='flex flex-wrap lg:flex-nowrap justify-center w-full gap-y-12 lg:w-4/5 mx-auto'>
+          {/* Horizontal Line - Desktop Only */}
+          <div className='hidden lg:block w-full h-[1px] bg-[#E7E7E7]'></div>
+
+          {/* Row 2 */}
+          <div className='flex flex-wrap lg:flex-nowrap justify-center w-full lg:max-w-4xl mx-auto'>
             {row2.map((item, index) => (
               <ItemCard
                 key={index}

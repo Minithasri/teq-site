@@ -7,30 +7,54 @@ const domoPlatforms = [
   {
     title: 'Overview',
     iconPath: '/images/partners/domo/Overview.png',
-    image: '/images/partners/domo/allicons.png',
+    image: '/images/partners/domo/1.png',
     description:
       "Unite your diverse ecosystem of applications and systems with Domo's intuitive integration capabilities. Design and deploy integrations effortlessly with Domo's drag and drop interface.",
+    outputs: [
+      'Interactive Dashboards',
+      'Business Apps',
+      'Embedded Analytics',
+      'Self-Serve Reporting',
+    ],
   },
   {
     title: 'App Creation',
     iconPath: '/images/partners/domo/app creation.png',
-    image: '/images/partners/domo/allicons.png',
+    image: '/images/partners/domo/2.png',
     description:
-      'Build custom intelligent apps with low-code and pro-code tools. Automate business logic and streamline workflows to drive action across your organization.',
+      "Optimize decision-making through Domo's low-code and pro-code apps. Catalyze innovation and enhance efficiencies, enabling your organization to effortlessly convert data into actionable intelligence.",
+    outputs: [
+      'Low-code Tools for Simple Design',
+      'Pro-code Tools for Fast Development',
+      'App Distribution',
+      'Task Automation',
+    ],
   },
   {
     title: 'BI & Analytics',
     iconPath: '/images/partners/domo/BI and analytics.png',
-    image: '/images/partners/domo/allicons.png',
+    image: '/images/partners/domo/4.png',
     description:
-      'Empower everyone with real-time insights. Create interactive dashboards and visualize data to make faster, confident data-driven decisions.',
+      'Facilitate quick and informed decision-making for diverse users with our intuitive custom data views and reporting functionalities.',
+    outputs: [
+      'Advanced Visualizations',
+      'AI & Data Science',
+      'Data Storytelling',
+      'Dashboard Interactivity & Customization',
+    ],
   },
   {
     title: 'Data Foundation',
     iconPath: '/images/partners/domo/data foundation.png',
-    image: '/images/partners/domo/allicons.png',
+    image: '/images/partners/domo/3.png',
     description:
-      'Connect and transform data from any source. Ensure data governance, security, and quality across your entire organization with a solid data foundation.',
+      'Leverage our Domo solutions to establish an advanced Data Foundation, serving as the framework for the continuous progress of your business.',
+    outputs: [
+      'Data Integration from Any Source',
+      'Data Governance',
+      'Cloud Data Warehouse Integration',
+      'Drag-&-Drop ETL Tools',
+    ],
   },
 ];
 
@@ -39,6 +63,7 @@ export default function DomoAIBanner() {
 
   return (
     <section
+      id='domo-ai-banner'
       className='w-full py-20 lg:py-24 px-4 overflow-hidden'
       style={{
         background:
@@ -47,14 +72,14 @@ export default function DomoAIBanner() {
     >
       <div className='max-w-7xl mx-auto'>
         {/* Header Title */}
-        <h2 className='text-3xl md:text-4xl font-bold text-center text-[#404040] mb-12'>
+        <h2 className='text-3xl md:text-4xl font-medium text-center text-[#404040] mb-8'>
           Domo Data Experience Platform
         </h2>
 
         {/* Desktop View: Tabs & Interactive Card */}
         <div className='hidden md:block'>
           {/* Tabs Container */}
-          <div className='flex justify-center mb-16'>
+          <div className='flex justify-center mb-8'>
             <div className='inline-flex flex-wrap md:flex-nowrap items-center bg-[#E5CFBE]/40 rounded-full p-1.5 gap-2 backdrop-blur-sm shadow-sm'>
               {domoPlatforms.map((platform, index) => {
                 const isActive = activeTab === index;
@@ -71,13 +96,6 @@ export default function DomoAIBanner() {
                         : 'transparent',
                     }}
                   >
-                    <Image
-                      src={platform.iconPath}
-                      alt=''
-                      width={20}
-                      height={20}
-                      className={`w-5 h-5 object-contain ${isActive ? 'brightness-0 invert' : ''}`}
-                    />
                     {platform.title}
                   </button>
                 );
@@ -86,42 +104,68 @@ export default function DomoAIBanner() {
           </div>
 
           {/* Main Content Card */}
-          <div className='w-full max-w-[1160px] mx-auto bg-white rounded-[16px] p-4 lg:p-6 shadow-xl flex flex-col lg:flex-row gap-8 items-center lg:h-[420px]'>
+          <div className='w-full max-w-[1160px] mx-auto bg-white rounded-[24px] p-6 lg:p-8 shadow-2xl flex flex-col lg:flex-row gap-8 items-stretch lg:h-[460px]'>
             {/* Left Content */}
-            <div className='w-full lg:w-[48%] h-full flex flex-col items-start justify-center rounded-2xl p-8 lg:p-10 bg-[#FAFAFA] border border-gray-50 shadow-[0px_4px_20px_rgba(0,0,0,0.02)]'>
-              {/* Header: Icon + Title */}
-              <div className='flex items-center gap-6 mb-8 w-full'>
-                {/* Icon Box */}
-                <div className='w-14 h-14 rounded-xl bg-white border border-gray-100 shadow-sm flex items-center justify-center shrink-0'>
-                  <Image
-                    src={domoPlatforms[activeTab].iconPath}
-                    alt={domoPlatforms[activeTab].title}
-                    width={28}
-                    height={28}
-                    className='w-7 h-7 object-contain'
-                  />
+            <div className='w-full lg:w-[50%] flex flex-col items-start justify-between rounded-2xl p-8 bg-[#F8F9FA] border border-gray-100/50 shadow-sm overflow-hidden'>
+              <div className='w-full'>
+                {/* Header: Icon + Title */}
+                <div className='flex items-center gap-4 mb-6 w-full'>
+                  {/* Icon Box */}
+                  <div className='h-12 w-12 rounded-xl bg-white border border-gray-100 shadow-sm flex items-center justify-center shrink-0'>
+                    <Image
+                      src={domoPlatforms[activeTab].iconPath}
+                      alt={domoPlatforms[activeTab].title}
+                      width={24}
+                      height={24}
+                      className='w-6 h-6 object-contain'
+                      style={{
+                        filter:
+                          'invert(53%) sepia(85%) saturate(1986%) hue-rotate(1deg) brightness(101%) contrast(105%)',
+                      }}
+                    />
+                  </div>
+
+                  {/* Title Tag */}
+                  <div className='bg-white border border-gray-100 rounded-xl h-12 px-6 shadow-sm flex items-center flex-1 max-w-[fit-content]'>
+                    <span className='text-[#F97316] font-bold text-base'>
+                      {domoPlatforms[activeTab].title}
+                    </span>
+                  </div>
                 </div>
 
-                {/* Title Tag */}
-                <div className='bg-white border border-gray-100 rounded-xl py-2 px-6 shadow-sm flex-1 max-w-[fit-content]'>
-                  <span className='text-[#F97316] font-semibold text-base'>
-                    {domoPlatforms[activeTab].title}
-                  </span>
-                </div>
+                {/* Description */}
+                <p className='text-[#70707B] leading-relaxed text-[15px] mb-6'>
+                  {domoPlatforms[activeTab].description}
+                </p>
               </div>
 
-              {/* Description */}
-              <p className='text-[#70707B] leading-relaxed text-[16px]'>
-                {domoPlatforms[activeTab].description}
-              </p>
+              {/* Dynamic Header & Content Grid */}
+              <div className='w-full'>
+                <h4 className='text-[#F97316] font-bold text-sm mb-4 tracking-wide uppercase'>
+                  {activeTab === 0 ? 'Platform Outputs' : 'CAPABILITIES'}
+                </h4>
+                <div className='grid grid-cols-2 gap-3 w-full max-h-[160px] overflow-y-auto pr-2 custom-scrollbar'>
+                  {domoPlatforms[activeTab].outputs.map((output, idx) => (
+                    <div
+                      key={idx}
+                      className='bg-white border border-gray-50 rounded-xl py-2 px-4 shadow-sm text-center flex items-center justify-center min-h-[44px]'
+                    >
+                      <span className='text-[#404040]/80 text-[12px] font-medium leading-tight'>
+                        {output}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Right Image */}
-            <div className='w-full lg:w-[52%] h-full flex justify-center items-center p-4'>
+            <div className='w-full lg:w-[50%] h-full flex justify-center items-center p-4'>
               <div className='relative w-full h-full'>
                 <Image
-                  src='/images/partners/domo/righti.png'
-                  alt='Domo Platform Overview'
+                  key={activeTab}
+                  src={domoPlatforms[activeTab].image}
+                  alt={domoPlatforms[activeTab].title}
                   fill
                   className='object-contain p-2'
                   priority
@@ -159,6 +203,10 @@ export default function DomoAIBanner() {
                       width={24}
                       height={24}
                       className='w-6 h-6 object-contain'
+                      style={{
+                        filter:
+                          'invert(53%) sepia(85%) saturate(1986%) hue-rotate(1deg) brightness(101%) contrast(105%)',
+                      }}
                     />
                   </div>
                   <div className='bg-[#FFF4EB] rounded-lg py-2 px-4 shadow-sm'>

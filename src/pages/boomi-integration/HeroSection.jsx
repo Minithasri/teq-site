@@ -43,9 +43,9 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 lg:py-14 relative'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 lg:py-8 relative'>
         {/* Breadcrumb */}
-        <nav aria-label='Breadcrumb' className='relative z-10 mb-8'>
+        <nav aria-label='Breadcrumb' className='relative z-10 mt-10 mb-2'>
           <ol className='inline-flex items-center gap-2 text-[15px] py-1'>
             {bannerContent.breadcrumb.items.map((item, index) => (
               <li key={index} className='flex items-center gap-2'>
@@ -125,7 +125,7 @@ export default function HeroSection() {
 
         {/* Stats Bar - Positioned to straddle the bottom line */}
         <div className='absolute bottom-0 left-0 right-0 translate-y-1/2 z-20 px-4'>
-          <div className='bg-white rounded-2xl p-6 lg:p-8 shadow-xl max-w-5xl mx-auto'>
+          <div className='bg-white rounded-2xl p-6 lg:p-8 shadow-xl max-w-7xl mx-auto'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-100'>
               {bannerContent.stats.map((stat, index) => (
                 <div key={index} className='pt-4 md:pt-0 px-4'>

@@ -2,27 +2,27 @@ import Image from 'next/image';
 
 const features = [
   {
-    icon: '/images/frame1.svg',
+    icon: '/images/HomePage/f3.svg',
     title: 'Pre-Built Connector Library',
     description: 'Ready-to-use integrations for Salesforce, SAP, Workday, NetSuite, and Snowflake',
   },
   {
-    icon: '/images/frame2.svg',
+    icon: '/images/HomePage/f1.svg',
     title: 'AI-Powered Mapping Engine',
     description: 'Automatically maps data structures, accelerating complex migrations',
   },
   {
-    icon: '/images/frame3.svg',
+    icon: '/images/HomePage/f4.svg',
     title: 'Reusable Error Handling Blueprints',
     description: 'Standardized workflows for exception logging and resolution',
   },
   {
-    icon: '/images/frame4.svg',
+    icon: '/images/HomePage/f2.svg',
     title: 'Governance & Monitoring Toolkit',
     description: 'Centralized dashboards with alerts for integration health and compliance',
   },
   {
-    icon: '/images/frame5.svg',
+    icon: '/images/HomePage/f5.svg',
     title: 'ROI Calculator & Cost Estimator',
     description: 'Built-in tools to forecast savings and showcase tangible value',
   },
@@ -93,13 +93,7 @@ const Frameworks = () => {
                 className='flex flex-col items-center text-center p-8 md:p-12 group hover:bg-gray-50 transition-colors duration-300'
               >
                 <div className='mb-6 shrink-0'>
-                  <Image
-                    src={item.icon}
-                    alt={item.title}
-                    width={64}
-                    height={64}
-                    className='w-14 h-14'
-                  />
+                  <Image src={item.icon} alt={item.title} width={52} height={52} className='' />
                 </div>
                 <h3 className='font-semibold text-[#737373] mb-3 text-[16px]'>{item.title}</h3>
                 <p className='text-[#737373] text-[14px] leading-relaxed max-w-xs mx-auto'>

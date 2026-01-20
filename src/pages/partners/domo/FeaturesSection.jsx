@@ -37,13 +37,13 @@ export default function FeaturesSection() {
   return (
     <section className='w-full bg-white relative overflow-hidden py-20'>
       {/* Background Image for Whole Section */}
-      <div className='absolute top-32 inset-0 flex items-center justify-center pointer-events-none z-0'>
-        <div className='relative w-full h-full opacity-100'>
+      <div className='absolute top-[400px] md:top-32 inset-0 flex items-center justify-center pointer-events-none z-0'>
+        <div className='relative w-[450px] h-[500px] md:w-full md:h-full opacity-100'>
           <Image
             src='/images/partners/domo/Background.png'
             alt='Background Decoration'
             fill
-            className='object-cover'
+            className='object-contain md:object-cover'
           />
         </div>
       </div>
@@ -66,7 +66,7 @@ export default function FeaturesSection() {
         </div>
 
         {/* Top Cards Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center mb-[400px]'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center mb-20 lg:mb-[400px]'>
           {features.map((feature, index) => (
             <div
               key={index}
@@ -85,7 +85,16 @@ export default function FeaturesSection() {
                 </h3>
                 <p className='text-[#4B5563] text-[13px] leading-relaxed'>{feature.description}</p>
               </div>
-              <div className='bg-white p-6 flex items-center justify-between group cursor-pointer'>
+              <div
+                className='bg-white p-6 flex items-center justify-between group cursor-pointer'
+                onClick={e => {
+                  e.preventDefault();
+                  const target = document.getElementById('domo-ai-banner');
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 <span
                   className='text-[14px] font-medium group-hover:underline'
                   style={{

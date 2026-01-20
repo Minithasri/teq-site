@@ -1,6 +1,6 @@
 'use client';
-import { FiArrowRight } from 'react-icons/fi';
 import { useEffect, useRef, useState } from 'react';
+import { FiArrowRight } from 'react-icons/fi';
 
 const HomeBanner = () => {
   const videoRef = useRef(null);
@@ -62,6 +62,27 @@ const HomeBanner = () => {
         <div className='grid grid-cols-1 lg:grid-cols-[1.45fr_0.85fr] gap-8 lg:gap-12 items-center py-8 sm:py-12 lg:py-16'>
           {/* LEFT COLUMN */}
           <div className='text-center lg:text-left space-y-6'>
+            {/* New Badge */}
+            <div className='relative inline-flex items-center gap-2 px-1 py-1 rounded-full border border-[#D6A9E9] bg-transparent self-start'>
+              {/* Outer Ring */}
+              <div className='absolute -inset-[5px] rounded-full border border-[#D6A9E9] opacity-40 pointer-events-none'></div>
+              <span
+                className='pl-3 text-[16px] sm:text-[20px] font-medium bg-clip-text text-transparent'
+                style={{
+                  backgroundImage: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                }}
+              >
+                Build your first AI agent in
+              </span>
+              <span
+                className='px-4 py-1 rounded-full text-white text-[18px] sm:text-[24px] font-medium'
+                style={{
+                  background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                }}
+              >
+                10 Hours.
+              </span>
+            </div>
             <h1 className='font-bold text-[32px] text-[#404040] leading-[40px] sm:text-[40px] sm:leading-[50px] lg:text-[40px] lg:leading-[58px]'>
               <span
                 className='bg-clip-text text-transparent'
@@ -91,7 +112,7 @@ const HomeBanner = () => {
             </div>
 
             {/* Stats */}
-            <div className='grid grid-cols-3 gap-4 pt-6 sm:pt-8 -ml-2'>
+            {/* <div className='grid grid-cols-3 gap-4 pt-6 sm:pt-8 -ml-2'>
               <div className='flex justify-center lg:justify-start'>
                 <div className='rounded-2xl w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] lg:w-[140px] lg:h-[140px]'>
                   <img
@@ -142,7 +163,7 @@ const HomeBanner = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT COLUMN - Improved mobile responsiveness */}

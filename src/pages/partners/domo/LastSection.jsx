@@ -24,7 +24,7 @@ const LastSection = () => {
           </h2>
 
           <p className='text-[#727272] mb-8 max-w-2xl mx-auto text-[14px] sm:text-[14px] md:text-[16px] leading-relaxed'>
-            Accelerate your digital transformation with GWC + Boomi. Let's connect your apps,
+            Accelerate your digital transformation with GWC + Domo. Let's connect your apps,
             automate your workflows, and deliver insights that drive real business outcomes.
           </p>
 

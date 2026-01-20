@@ -36,7 +36,7 @@ const timeline = [
 
 export default function WhyDomo() {
   return (
-    <section className='w-full bg-white relative overflow-hidden py-16 md:py-24'>
+    <section className='w-full bg-white relative overflow-hidden py-8'>
       {/* Background Circle */}
       <div className='absolute top-72 left-20 w-[1200px] h-[900px] -translate-x-1/4 -translate-y-1/3 pointer-events-none z-0'>
         <Image
@@ -47,9 +47,9 @@ export default function WhyDomo() {
         />
       </div>
 
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 relative z-10'>
         {/* Header */}
-        <div className='flex items-center justify-between gap-4 mb-16 w-full'>
+        <div className='flex items-center justify-between gap-4 mb-12 w-full'>
           {/* Sparkle Icon */}
           <div className='w-12 h-12 bg-white border border-purple-100 rounded-xl shadow-sm flex items-center justify-center p-2 shrink-0'>
             <Image
@@ -75,67 +75,60 @@ export default function WhyDomo() {
         </div>
 
         {/* Title Section */}
-        <div className='flex flex-col lg:flex-row justify-between items-start gap-12 mb-20'>
+        <div className='flex flex-col lg:flex-row justify-between items-start gap-12 mb-12'>
           <h2 className='text-[32px] md:text-[40px] font-medium text-[#404040]'>Why Domo?</h2>
           <p className='text-[#404040] text-[16px] leading-[24px] max-w-xl lg:text-right'>
             With over 1,000 pre built connectors, Domo enables fast data integration without complex
             engineering, empowering teams to analyze data and make smarter decisions with ease.
           </p>
         </div>
+      </div>
 
+      <div className='w-full px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Content Box */}
-        <div className='bg-[#F9F3FB] rounded-[32px] p-8 md:p-12 lg:p-16'>
+        <div className='bg-[#F9F3FB] rounded-[32px] max-w-9xl p-8 md:p-12 lg:p-16 mx-auto'>
           {/* Timeline */}
-          <div className='relative mb-20 hidden md:block'>
+          <div className='relative mb-32 hidden md:block'>
             {/* Horizontal Connection Line */}
-            <div className='absolute top-[144px] left-0 right-0 z-0'>
+            <div className='absolute top-[100px] left-16 right-0 z-0'>
               <Image
-                src='/images/partners/domo/Line 60.svg'
+                src='/images/partners/domo/lines.svg'
                 alt='Timeline Line'
-                width={951}
-                height={1}
-                className='w-full'
+                width={1200}
+                height={40}
+                className=''
               />
             </div>
 
             <div className='grid grid-cols-4 gap-8'>
               {timeline.map((item, index) => {
-                const iconSequence = [
-                  'round1',
-                  'round2',
-                  'round3',
-                  'round2',
-                  'round1',
-                  'round2',
-                  'round3',
-                ];
+                const iconSequence = [];
                 return (
                   <div key={index} className='relative flex flex-col items-center text-center z-10'>
                     {/* Text */}
-                    <p className='text-[13px] text-gray-500 leading-relaxed mb-12 h-[80px] flex items-end justify-center'>
+                    <p className='text-[14px] text-gray-500 leading-relaxed mb-12 h-[120px] w-full max-w-[300px] flex items-start justify-center px-2'>
                       {item.text}
                     </p>
-
-                    {/* Icon Point */}
-                    <div className='w-8 h-8 relative mb-12 bg-[#F9F3FB] z-20'>
-                      <Image
-                        src={`/images/partners/domo/${iconSequence[index] || 'round1'}.svg`}
-                        alt='Milestone Point'
-                        fill
-                        className='object-contain'
-                      />
-                    </div>
-
-                    {/* Vertical Line - Only for specific items if design requires, keeping logical connection */}
-                    <div className='absolute top-[145px] bottom-[-40px] w-[1px] bg-[#404040]/20'></div>
                   </div>
                 );
               })}
             </div>
           </div>
 
+          {/* Mobile Timeline View */}
+          <div className='md:hidden space-y-8 mb-16'>
+            {timeline.map((item, index) => (
+              <div
+                key={index}
+                className='flex gap-4 items-start border-l-2 border-purple-200 pl-4 py-2 hover:border-purple-400 transition-colors'
+              >
+                <p className='text-[14px] text-gray-600 leading-relaxed'>{item.text}</p>
+              </div>
+            ))}
+          </div>
+
           {/* Metrics Grid */}
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-3 lg:mx-24 gap-6'>
             {metrics.map((metric, index) => (
               <div
                 key={index}

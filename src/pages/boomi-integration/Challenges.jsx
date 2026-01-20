@@ -14,14 +14,14 @@ const challenges = [
 const Challenges = () => {
   return (
     <section
-      className='w-full py-16 md:py-24 relative overflow-hidden'
+      className='w-full py-12 md:py-16 pb-16 md:pb-24 relative overflow-hidden'
       style={{
         background: `linear-gradient(259deg, rgba(229, 170, 102, 0.30) -13.56%, rgba(255, 165, 129, 0.30) -13.56%, rgba(221, 161, 108, 0.30) 18.23%, rgba(230, 242, 246, 0.30) 53.64%, rgba(202, 185, 246, 0.30) 91.85%, rgba(112, 48, 177, 0.30) 119.62%), #F9EAE1`,
       }}
     >
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Title Section */}
-        <div className='mb-20 max-w-3xl'>
+        <div className='-mb-44 max-w-3xl'>
           <div className='flex items-center gap-2 mb-4'>
             <Image
               src='/images/partners/boomi/Spark.svg'
@@ -34,7 +34,7 @@ const Challenges = () => {
           <h2 className='text-[24px] md:text-[32px] font-medium text-[#5C2B8F] mb-6 leading-tight'>
             Challenges We Solve
           </h2>
-          <p className='text-[#404040] text-[16px] leading-relaxed'>
+          <p className='text-[#404040] text-[16px] max-w-lg leading-relaxed line-clamp-3'>
             Overcoming data silos, legacy complexity, and manual processes to enable real time
             insights, seamless integration, and faster decision making.
           </p>
@@ -61,7 +61,7 @@ const Challenges = () => {
             const bottomPos = `${index * 12 + 25}%`; // Increased vertical step to separate cards
 
             // Custom heights for each line to match the wave visual
-            const lineHeights = ['160px', '220px', '180px', '140px', '200px', '160px'];
+            const lineHeights = ['160px', '220px', '100px', '200px', '180px', '260px'];
 
             return (
               <div

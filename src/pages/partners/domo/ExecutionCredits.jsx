@@ -108,7 +108,7 @@ export default function ExecutionCredits() {
           </div>
 
           {/* Cards Grid */}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-96 gap-6 lg:gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-20 lg:pb-96 gap-6 lg:gap-8'>
             {creditsData.map((item, index) => (
               <div
                 key={index}

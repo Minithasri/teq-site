@@ -39,9 +39,9 @@ export default function CreateAccount() {
           background: 'linear-gradient(90deg, #D6A9E9 0%, #99CCEE 100%)',
         }}
       >
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center overflow-hidden'>
           {/* Left Content */}
-          <div className='max-w-xl'>
+          <div className='max-w-xl lg:mx-12 mx-auto text-center lg:text-left flex flex-col items-center lg:items-start'>
             <h2 className='text-[24px] md:text-[32px] font-medium text-[#303030] mb-6 leading-tight'>
               Create Your Free Account Now & Access It Forever
             </h2>
@@ -61,7 +61,7 @@ export default function CreateAccount() {
           </div>
 
           {/* Right Grid */}
-          <div className='relative h-[520px]  w-full hidden lg:block'>
+          <div className='relative h-[480px] w-full hidden lg:block'>
             {/*
                    Positioning the cards manually to replicate the scattered/stepped look in the image.
                    The image shows columns with different vertical alignments.
@@ -87,9 +87,9 @@ export default function CreateAccount() {
           </div>
 
           {/* Mobile Grid View */}
-          <div className='grid grid-cols-2 gap-4 lg:hidden'>
+          <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 lg:hidden w-full'>
             {features.map((feature, idx) => (
-              <FeatureCard key={idx} feature={feature} />
+              <FeatureCard key={idx} feature={feature} isGrid />
             ))}
           </div>
         </div>
@@ -98,21 +98,23 @@ export default function CreateAccount() {
   );
 }
 
-function FeatureCard({ feature }) {
+function FeatureCard({ feature, isGrid }) {
   return (
     <div
-      className='w-[160px] h-[160px] md:w-[180px] md:h-[180px] rounded-2xl flex flex-col items-center justify-center p-4 text-center gap-3 transition-transform hover:-translate-y-1 duration-300'
+      className={`rounded-2xl flex flex-col items-center justify-center p-4 text-center gap-3 transition-transform hover:-translate-y-1 duration-300 shadow-sm
+        ${isGrid ? 'w-full aspect-square min-h-[140px]' : 'w-[160px] h-[160px] xl:w-[180px] xl:h-[180px]'}
+      `}
       style={{ backgroundColor: '#FFFFFF' }}
     >
       <div
-        className='w-10 h-10'
+        className='w-8 h-8 md:w-10 md:h-10'
         style={{
           backgroundColor: '#2297E4',
           mask: `url("${feature.icon}") no-repeat center / contain`,
           WebkitMask: `url("${feature.icon}") no-repeat center / contain`,
         }}
       />
-      <p className='text-[#2297E4] font-semibold text-sm md:text-base leading-tight'>
+      <p className='text-[#2297E4] font-semibold text-[13px] md:text-base leading-tight'>
         {feature.title}
       </p>
     </div>

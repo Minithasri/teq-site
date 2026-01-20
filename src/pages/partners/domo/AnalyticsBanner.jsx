@@ -22,7 +22,7 @@ const contentData = [
       'Seamlessly embed App Studio content with Domo Everywhere Embed for versatile usage.',
     ],
     video: '/images/partners/domo/video1.gif',
-    link: '#',
+    link: 'https://www.domo.com/product/new-features#domopalooza-2024-app-studio',
   },
   {
     id: 'workflows',
@@ -39,12 +39,12 @@ const contentData = [
   },
   {
     id: 'domo-ai',
-    title: 'Domo.AI',
+    title: 'Domo AI',
     tagline: "Unleash the potential of AI with Domo's Advanced Solutions",
     points: [
-      "Seamlessly integrate AI and ML models into your business processes with Domo's user-friendly platform.",
-      'Manage your own models serverlessly, integrate external models, and continuously refine and optimize performance for peak efficiency.',
-      "Empower decision-making with Domo's AI chat feature, offering personalized insights and guiding conversations within your workflow.",
+      'Easily integrate and manage AI and ML models in a user friendly platform',
+      'Run serverless models and connect external AI models with ease',
+      'Get personalized insights and guided decisions through Domo AI chat',
     ],
     video: '/images/partners/domo/video3.gif',
     link: '#',
@@ -55,9 +55,9 @@ const contentData = [
     tagline:
       'Seamless Integration & Effortless Transformation to Unlock Data Potential with Cloud Amplifier',
     points: [
-      "Domo Cloud Amplifier integrates effortlessly with existing cloud and data infrastructure, enabling Domo's data experience platform usage without data movements.",
-      'Customers can now customize how often Domo checks for updated data, ensuring data freshness and reliability.',
-      'Streamline data connections, empowering data architects to optimize each data source while ensuring intelligent, governed, and speedy transformations directly where data resides.',
+      'Integrates seamlessly with existing cloud and data infrastructure without moving data',
+      'Allows flexible data refresh schedules for reliable and fresh insights',
+      'Enables governed, fast data transformations directly at the source',
     ],
     video: '/images/partners/domo/video4.gif',
     link: '#',
@@ -178,10 +178,15 @@ export default function AnalyticsBanner() {
                         </li>
                       ))}
                     </ul>
-                    <button className='text-[#8B3DA8] font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all mt-2'>
+                    <Link
+                      href={item.link}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-[#8B3DA8] font-bold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all mt-2'
+                    >
                       Learn more
                       <FiArrowRight />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               );

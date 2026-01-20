@@ -15,15 +15,26 @@ const bannerContent = {
   title: domoData.hero.title,
   description: domoData.hero.subtitle,
   images: {
-    background: '', // No background image needed for white bg
+    background: '/images/partners/domo/domoframe.png',
     illustration: '/images/partners/domo/heroimgg.png',
   },
 };
 
 export default function HeroSection() {
   return (
-    <header className='relative w-full overflow-hidden pt-[100px] min-h-[600px] flex items-center bg-[#FFFFFF]'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 lg:py-14'>
+    <header className='relative w-full overflow-hidden pt-[100px] min-h-[600px] flex items-center '>
+      {/* Background Image */}
+      <div className='absolute inset-0 w-full h-full z-0'>
+        <Image
+          src={bannerContent.images.background}
+          alt='Hero Background'
+          fill
+          className='object-cover'
+          priority
+        />
+      </div>
+
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 lg:py-14 relative z-10'>
         {/* Breadcrumb */}
         <nav aria-label='Breadcrumb' className='relative z-10 mb-6'>
           <ol className='inline-flex items-center gap-2 text-[15px]'>

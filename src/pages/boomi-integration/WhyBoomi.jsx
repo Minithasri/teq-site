@@ -4,23 +4,28 @@ import Image from 'next/image';
 
 const features = [
   {
-    text: 'Cloud native, 100% low code, scalable integrations.',
+    title: 'Cloud-Native iPaaS',
+    description: '100% low-code, scalable, and future-ready platform for seamless integrations.',
     icon: '/images/boo1.svg',
   },
   {
-    text: 'Streamlined workflows tailored to your business',
+    title: 'Certified Expertise',
+    description: '1000+ integrations delivered across industries with proven methodologies.',
     icon: '/images/boo2.svg',
   },
   {
-    text: 'Reduced manual effort with intelligent automation',
+    title: 'AI-Infused Services',
+    description: 'From error resolution to customer service automation powered by advanced AI.',
     icon: '/images/boo3.svg',
   },
   {
-    text: 'Scalable solutions backed by GWC expertise',
+    title: 'Accelerated Delivery',
+    description: '70% faster deployment with our frameworks & proprietary accelerators.',
     icon: '/images/boo4.svg',
   },
   {
-    text: 'Scalable solutions backed by GWC expertise',
+    title: 'End-to-End Ownership',
+    description: 'Complete lifecycle management from strategy to managed services.',
     icon: '/images/boo5.svg',
   },
 ];
@@ -63,21 +68,27 @@ const WhyBoomi = () => {
           </div>
 
           {/* Right Features List */}
-          <div className='w-full lg:w-1/2 space-y-5'>
+          <div className='w-full lg:w-[70%] space-y-4'>
             {features.map((feature, index) => (
               <div
                 key={index}
-                className='group flex items-center gap-5 p-4 md:p-5 rounded-full border border-purple-100 bg-white hover:shadow-lg hover:border-purple-200 transition-all duration-300'
+                className='group flex items-start gap-4 p-4 rounded-full bg-white hover:shadow-lg transition-all duration-300'
                 style={{
+                  background:
+                    'linear-gradient(white, white) padding-box, linear-gradient(90deg, #E67582 0%, #7785F4 100%) border-box',
+                  border: '1px solid transparent',
                   boxShadow: '0px 4px 20px rgba(111, 43, 139, 0.05)',
                 }}
               >
-                <div className='shrink-0 w-10 h-10 flex items-center justify-center'>
+                <div className='shrink-0 w-10 h-10 flex items-center justify-center mt-1'>
                   <Image src={feature.icon} alt='' width={24} height={24} className='w-6 h-6' />
                 </div>
-                <p className='text-[#404040] font-semibold text-sm md:text-[15px] leading-snug'>
-                  {feature.text}
-                </p>
+                <div>
+                  <h4 className='text-[#5C2B8F] font-bold text-[16px] mb-1'>{feature.title}</h4>
+                  <p className='text-[#404040] text-[14px] leading-relaxed opacity-80'>
+                    {feature.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

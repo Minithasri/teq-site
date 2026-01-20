@@ -26,13 +26,12 @@ export default function DomoFeatures() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top top-=80', // Start pinning when top of section is 80px from top of viewport
-          end: `+=${features.length * 60}%`, // Scroll duration
+          start: 'top top-=100px',
+          end: `+=${features.length * 60}%`,
           pin: true,
           scrub: 1,
           anticipatePin: 1,
           onUpdate: self => {
-            // Sync active tab with scroll progress
             const index = Math.min(
               features.length - 1,
               Math.floor(self.progress * features.length)
@@ -42,30 +41,26 @@ export default function DomoFeatures() {
         },
       });
 
-      tl.to({}, { duration: 0.1 }); // Tiny delay to stabilize
+      tl.to({}, { duration: 0.5 }); // Lock first card
 
       cardRefs.current.forEach((card, i) => {
-        // Initial state
         gsap.set(card, {
           opacity: i === 0 ? 1 : 0,
-          scale: i === 0 ? 1 : 0.95,
-          y: i === 0 ? 0 : 50,
+          scale: i === 0 ? 1 : 0.96,
+          y: i === 0 ? 0 : 120,
           pointerEvents: i === 0 ? 'auto' : 'none',
-          zIndex: features.length - i,
         });
 
         if (i > 0) {
-          // Animate previous card out
           tl.to(cardRefs.current[i - 1], {
             opacity: 0,
-            scale: 0.95,
+            scale: 0.96,
             y: -20,
             pointerEvents: 'none',
             duration: 1,
             ease: 'power2.out',
           });
 
-          // Animate current card in
           tl.to(
             card,
             {
@@ -76,7 +71,7 @@ export default function DomoFeatures() {
               duration: 1,
               ease: 'power3.out',
             },
-            '<' // Start at same time as previous animation
+            '<'
           );
         }
       });
@@ -110,7 +105,7 @@ export default function DomoFeatures() {
     <section ref={sectionRef} className='relative min-h-screen bg-white py-2 overflow-hidden'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col'>
         {/* Header - Sparkle & CTA */}
-        <div className='flex items-center justify-between gap-4 mb-8 w-full'>
+        <div className='flex items-center justify-between gap-4  mb-8 w-full'>
           {/* Sparkle Icon */}
           <div className='w-12 h-12 bg-white border border-purple-100 rounded-xl shadow-sm flex items-center justify-center p-2 shrink-0'>
             <Image
@@ -144,38 +139,41 @@ export default function DomoFeatures() {
           </p>
         </div>
 
-        {/* Tabs - Centered Pills */}
-        <div className='hidden lg:flex flex-wrap justify-center gap-4 mb-4 max-w-6xl mx-auto'>
-          {features.map((feature, i) => (
-            <button
-              key={i}
-              onClick={() => onTabClick(i)}
-              className={`px-6 py-3 rounded-full text-xs font-semibold border transition-all duration-300 ${
-                i === activeIndex
-                  ? 'border-[#9156AA] text-[#6F2B8B] bg-[#FBF4FE] shadow-sm'
-                  : 'border-gray-200 text-gray-500 hover:border-purple-200 bg-white'
-              }`}
-            >
-              {feature.title}
-            </button>
-          ))}
+        {/* Tabs - Centered flex pills to match reference image 6-2 split */}
+        <div className='hidden lg:block max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-16 mb-4'>
+          <div className='flex flex-wrap justify-center gap-3'>
+            {features.map((feature, i) => (
+              <button
+                key={i}
+                onClick={() => onTabClick(i)}
+                className={`flex items-center justify-center px-4 py-4 rounded-full border text-xs font-semibold transition text-center leading-tight min-h-[60px]
+                  ${
+                    i === activeIndex
+                      ? 'bg-[#FBF4FE] border-[#9156AA] text-[#6F2B8B]'
+                      : 'bg-white border-gray-300 text-gray-500 hover:border-purple-300'
+                  }`}
+              >
+                {feature.title}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Cards Container */}
-        <div className='relative w-full max-w-6xl mx-auto min-h-[450px]'>
+        <div className='relative w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-12 xl:px-24 h-[650px] md:h-[480px] lg:h-[440px] mb-8'>
           {features.map((feature, i) => (
             <div key={i} ref={el => (cardRefs.current[i] = el)} className='absolute inset-0 w-full'>
-              <div className='bg-white rounded-[16px] border border-[#E5E5E5] shadow-[0px_4px_24px_#D2D0E111] p-6 md:p-12 h-full'>
-                <div className='flex flex-col lg:flex-row items-center gap-12 h-full'>
+              <div className='bg-white rounded-3xl border-2 border-[#E9D5FF] shadow-xl p-6 md:p-10 h-full overflow-hidden'>
+                <div className='flex flex-col lg:flex-row items-center gap-6 lg:gap-12 h-full'>
                   {/* Left Content */}
-                  <div className='w-full lg:w-1/2 space-y-8'>
+                  <div className='w-full lg:w-1/2 space-y-4 lg:space-y-8'>
                     {/* Badge */}
-                    <div className='inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#E9D5FF] bg-[#FBF4FE]'>
+                    <div className='inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-[#E9D5FF]'>
                       <Image
                         src='/images/partners/domo/sparkss.svg'
                         alt='icon'
-                        width={16}
-                        height={16}
+                        width={20}
+                        height={20}
                       />
                       <span className='text-[#6F2B8B] font-bold text-[18px]'>{feature.title}</span>
                     </div>
@@ -201,10 +199,13 @@ export default function DomoFeatures() {
                   </div>
 
                   {/* Right Image */}
-                  <div className='w-full lg:w-1/2 relative h-[250px] lg:h-[350px] rounded-2xl overflow-hidden'>
-                    <Image src={feature.image} alt={feature.title} fill className='object-cover' />
-                    {/* Optional Overlay Gradient from image */}
-                    <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent' />
+                  <div className='w-full lg:w-1/2 relative h-[200px] sm:h-[250px] lg:h-full rounded-2xl overflow-hidden border-2 border-gray-100 flex-shrink-0'>
+                    <Image
+                      src={feature.image}
+                      alt={feature.title}
+                      fill
+                      className='object-cover object-center'
+                    />
                   </div>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FiArrowRight, FiX } from 'react-icons/fi';
 import { agentData } from '../../data/agentBuildingData';
 
@@ -18,6 +18,26 @@ const categories = [
 const AgentModal = ({ agent, categoryLabel, onClose }) => {
   if (!agent) return null;
 
+  useEffect(() => {
+    // Lock body scroll
+    document.body.style.overflow = 'hidden';
+
+    // Hide navbar elements
+    const navElements = document.querySelectorAll('header, nav');
+    navElements.forEach(el => {
+      el.style.visibility = 'hidden'; // Using visibility hidden to maintain layout space if needed, or display none. User said "closed", let's use display none to remove it.
+      el.style.display = 'none';
+    });
+
+    return () => {
+      document.body.style.overflow = '';
+      navElements.forEach(el => {
+        el.style.visibility = '';
+        el.style.display = '';
+      });
+    };
+  }, []);
+
   return (
     <div
       className='fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/60'
@@ -25,15 +45,17 @@ const AgentModal = ({ agent, categoryLabel, onClose }) => {
     >
       <div
         className='bg-white rounded-2xl w-full relative shadow-2xl overflow-y-auto'
-        style={{ maxWidth: '850px', maxHeight: '680px' }}
+        style={{ maxWidth: '850px', maxHeight: '580px' }}
         onClick={e => e.stopPropagation()}
       >
         {/* Close Button */}
+        {/* Close Button */}
         <button
-          className='absolute top-4 right-4 z-10 text-[#7030B1] hover:text-[#B56DD3] transition-colors'
+          className='absolute top-4 right-2 z-10 w-8 h-8 flex items-center justify-center rounded-full text-white shadow-md hover:scale-110 transition-transform'
+          style={{ background: 'linear-gradient(180deg, #a6a6a6ff 10%, #525151ff 100%)' }}
           onClick={onClose}
         >
-          <FiX size={24} />
+          <FiX size={16} />
         </button>
 
         {/* Header Image */}
@@ -146,10 +168,30 @@ export default function AgentBuilding() {
   return (
     <section
       id='agent-building'
-      className='w-full py-16 lg:py-24'
-      style={{ backgroundColor: '#F2ECFE' }}
+      className='w-full py-16 lg:py-24 relative overflow-hidden'
+      style={{
+        backgroundImage: 'url("/images/HomePage/BG.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      {/* Linear Gradient Overlay */}
+      <div
+        className='absolute inset-0 pointer-events-none'
+        style={{
+          background: 'linear-gradient(180deg, #FFF7EB 0%, rgba(255, 247, 235, 0.00) 100%)',
+          opacity: 0.9,
+        }}
+      />
+      <div
+        className='absolute inset-0 pointer-events-none'
+        style={{
+          background: 'linear-gradient(180deg, #FAE0FA 0%, rgba(250, 224, 250, 0.00) 100%)',
+          opacity: 0.6,
+        }}
+      />
+
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Title */}
         <h2 className='text-[28px] md:text-[32px] font-medium text-center mb-12 sm:mb-16 tracking-tight text-[#333333]'>
           <span
@@ -165,274 +207,110 @@ export default function AgentBuilding() {
           for the modern enterprise
         </h2>
 
-        {/* =========================================
-            DESKTOP VIEW: TABS + INTERACTIVE GRID
-           ========================================= */}
-        <div className='hidden lg:block'>
-          {/* Category Tabs */}
-          <div className='flex justify-center mb-12 overflow-x-auto'>
-            <div className='inline-flex flex-wrap justify-center bg-[#FBF4FE] rounded-full p-1 gap-2  max-w-full'>
-              {categories.map(category => {
-                const isActive = activeCategory === category.id;
-                return (
-                  <button
-                    key={category.id}
-                    onClick={() => setActiveCategory(category.id)}
-                    className={`px-4 lg:px-6 py-2 lg:py-2.5 rounded-full text-[12px] lg:text-[14px] font-medium transition-all duration-300 whitespace-nowrap ${
-                      isActive ? 'text-white shadow-md' : 'text-[#7030B1] hover:bg-purple-50'
-                    }`}
-                    style={{
-                      background: isActive
-                        ? 'linear-gradient(90deg, #B56DD3 0%, #7030B1 100%)'
-                        : 'transparent',
-                    }}
-                  >
-                    {category.label}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Agent Cards Grid */}
-          <div className='grid grid-cols-3 gap-8'>
-            {currentAgents.map((agent, index) => (
-              <div
-                key={index}
-                className='relative rounded-2xl overflow-hidden group border border-[#E5E5E5] w-full bg-white'
-                style={{ height: '320px' }}
-              >
-                {/* Background Image with Shadow and Rounded Corners */}
-                <div className='absolute inset-0 z-0'>
-                  <div
-                    className='w-full h-full rounded-2xl overflow-hidden'
-                    style={{
-                      boxShadow: `
-      0 12px 30px rgba(0,0,0,0.35),
-      0 0 0 1px rgba(255,255,255,0.06)
-    `,
-                    }}
-                  >
-                    <img
-                      src={agent.image || '/images/HomePage/agentbuildingbg.svg'}
-                      alt=''
-                      className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
-                    />
-                  </div>
-                </div>
-
-                {/* Dark Gradient Overlays on All 4 Sides */}
-
-                {/* Bottom Gradient */}
-                <div
-                  className='absolute inset-x-0 bottom-0 h-[260px] z-10 pointer-events-none'
+        {/* Category Tabs */}
+        <div className='flex justify-center mb-12 overflow-x-auto'>
+          <div className='inline-flex flex-wrap justify-center bg-white rounded-full p-1.5 gap-2 max-w-full shadow-sm'>
+            {categories.map(category => {
+              const isActive = activeCategory === category.id;
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`px-4 lg:px-6 py-2 rounded-full text-[13px] lg:text-[14px] font-medium transition-all duration-300 whitespace-nowrap ${
+                    isActive ? 'text-white shadow-md' : 'text-[#4B5563] hover:bg-gray-50'
+                  }`}
                   style={{
-                    background: `
-                      linear-gradient(
-                        to top,
-                        rgba(0,0,0,0.95) 0%,
-                        rgba(0,0,0,0.75) 30%,
-                        rgba(0,0,0,0.45) 55%,
-                        rgba(0,0,0,0.15) 75%,
-                        rgba(0,0,0,0.0) 100%
-                      )
-                    `,
+                    background: isActive
+                      ? 'linear-gradient(90deg, #B56DD3 0%, #7030B1 100%)'
+                      : 'transparent',
                   }}
-                />
-
-                {/* Content */}
-                {/* Content */}
-                <div className='absolute bottom-0 w-full p-6 z-20 pointer-events-none'>
-                  <div className='flex items-end justify-between w-full'>
-                    <div className='pointer-events-auto max-w-[80%]'>
-                      <h3 className='text-[16px] font-semibold text-white leading-[1.8] line-clamp-3'>
-                        {agent.title}
-                      </h3>
-                    </div>
-                    <button
-                      onClick={() => setSelectedAgent(agent)}
-                      className='group relative pointer-events-auto w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-lg shrink-0 border-[1.5px] border-[#F97316] overflow-hidden'
-                    >
-                      <div className='absolute inset-0 bg-gradient-to-r from-[#FBB07B] to-[#F97316] opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
-                      <img
-                        src='/images/HomePage/orangearrow1.svg'
-                        alt=''
-                        className='w-3 h-3 relative z-10 transition-all duration-300 group-hover:brightness-0 group-hover:invert'
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
+                >
+                  {category.label}
+                </button>
+              );
+            })}
           </div>
         </div>
 
-        {/* =========================================
-            MOBILE VIEW: TABS + GRID (same as desktop)
-           ========================================= */}
-        <div className='lg:hidden'>
-          {/* Category Tabs - Mobile */}
-          <div className='flex justify-center mb-8 px-4'>
-            <div className='flex flex-wrap justify-center bg-[#FBF4FE] rounded-3xl p-3 gap-2 border border-purple-50 max-w-full'>
-              {categories.map(category => {
-                const isActive = activeCategory === category.id;
-                return (
-                  <button
-                    key={category.id}
-                    onClick={() => setActiveCategory(category.id)}
-                    className={`px-4 py-2 rounded-full text-[12px] font-medium transition-all duration-300 whitespace-nowrap ${
-                      isActive ? 'text-white shadow-md' : 'text-[#7030B1] hover:bg-purple-50'
-                    }`}
-                    style={{
-                      background: isActive
-                        ? 'linear-gradient(90deg, #B56DD3 0%, #7030B1 100%)'
-                        : 'transparent',
+        {/* Agent Cards Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'>
+          {currentAgents.map((agent, index) => (
+            <div
+              key={index}
+              className='flex flex-col rounded-2xl overflow-hidden cursor-pointer group bg-white shadow-sm hover:shadow-xl transition-all duration-300'
+              style={{
+                boxShadow: '0px 4px 24px -1px rgba(0, 0, 0, 0.05)',
+              }}
+              onClick={() => setSelectedAgent(agent)}
+            >
+              {/* Top Content Area - Gray Background */}
+              <div className='bg-[#F8F8F8] m-2 rounded-2xl px-4 py-8 flex-1 flex flex-col items-start gap-4 min-h-[160px]'>
+                {/* Brain Icon */}
+                <div
+                  className='w-14 h-14 rounded-2xl flex items-center justify-center mb-2 border border-[#E5E5E5]'
+                  style={{
+                    backgroundColor: '#FAFAFA',
+                    boxShadow: '0px 0px 10px 0px #0000001A',
+                  }}
+                >
+                  <img
+                    src='/images/HomePage/brain.svg'
+                    alt='AI'
+                    className='w-6 h-6'
+                    onError={e => {
+                      e.target.style.display = 'none';
                     }}
-                  >
-                    {category.label}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Agent Cards Grid - Mobile */}
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-            {currentAgents.map((agent, index) => (
-              <div
-                key={index}
-                className='relative rounded-2xl overflow-hidden min-h-[320px] shadow-lg group border border-[#E5E5E5] bg-white'
-              >
-                {/* Background Image with Shadow and Rounded Corners */}
-                <div className='absolute inset-0 z-0'>
-                  <div
-                    className='w-full h-full rounded-2xl overflow-hidden'
-                    style={{
-                      boxShadow: `
-                        0 12px 30px rgba(0,0,0,0.35),
-                        0 0 0 1px rgba(255,255,255,0.06)
-                      `,
-                    }}
-                  >
-                    <img
-                      src={agent.image || '/images/HomePage/agentbuildingbg.svg'}
-                      alt=''
-                      className='w-full h-full object-cover'
-                    />
-                  </div>
+                  />
                 </div>
 
-                {/* Dark Gradient Overlays on All 4 Sides */}
-
-                {/* Bottom Gradient */}
-                <div
-                  className='absolute inset-x-0 bottom-0 h-[260px] z-10 pointer-events-none'
-                  style={{
-                    background: `
-                      linear-gradient(
-                        to top,
-                        rgba(0,0,0,0.95) 0%,
-                        rgba(0,0,0,0.75) 30%,
-                        rgba(0,0,0,0.45) 55%,
-                        rgba(0,0,0,0.15) 75%,
-                        rgba(0,0,0,0.0) 100%
-                      )
-                    `,
-                  }}
-                />
-
-                {/* Top Gradient */}
-                <div
-                  className='absolute inset-x-0 top-0 h-32 z-10 pointer-events-none'
-                  style={{
-                    background: `
-                      linear-gradient(
-                        to bottom,
-                        rgba(0,0,0,0.6) 0%,
-                        rgba(0,0,0,0.3) 40%,
-                        rgba(0,0,0,0.0) 100%
-                      )
-                    `,
-                  }}
-                />
-
-                {/* Left Gradient */}
-                <div
-                  className='absolute inset-y-0 left-0 w-24 z-10 pointer-events-none'
-                  style={{
-                    background: `
-                      linear-gradient(
-                        to right,
-                        rgba(0,0,0,0.5) 0%,
-                        rgba(0,0,0,0.2) 50%,
-                        rgba(0,0,0,0.0) 100%
-                      )
-                    `,
-                  }}
-                />
-
-                {/* Right Gradient */}
-                <div
-                  className='absolute inset-y-0 right-0 w-24 z-10 pointer-events-none'
-                  style={{
-                    background: `
-                      linear-gradient(
-                        to left,
-                        rgba(0,0,0,0.5) 0%,
-                        rgba(0,0,0,0.2) 50%,
-                        rgba(0,0,0,0.0) 100%
-                      )
-                    `,
-                  }}
-                />
-
-                {/* Center Radial Gradient - Vignette Effect */}
-                <div
-                  className='absolute inset-0 z-10 pointer-events-none'
-                  style={{
-                    background: `
-                      radial-gradient(
-                        ellipse at center,
-                        rgba(0,0,0,0.3) 0%,
-                        rgba(0,0,0,0.45) 40%,
-                        rgba(0,0,0,0.65) 70%,
-                        rgba(0,0,0,0.85) 100%
-                      )
-                    `,
-                  }}
-                />
-
-                <div className='absolute bottom-0 w-full p-6 z-20 pointer-events-none'>
-                  <div className='flex items-end justify-between w-full'>
-                    <div className='pointer-events-auto max-w-[200px]'>
-                      <h3 className='text-[16px] font-semibold text-white leading-snug line-clamp-2'>
-                        {agent.title}
-                      </h3>
-                    </div>
-                    <button
-                      onClick={() => setSelectedAgent(agent)}
-                      className='group relative pointer-events-auto w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110 shadow-lg shrink-0 border-[1.5px] border-[#F97316] overflow-hidden'
-                    >
-                      <div className='absolute inset-0 bg-gradient-to-r from-[#FBB07B] to-[#F97316] opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
-                      <img
-                        src='/images/HomePage/orangearrow.svg'
-                        alt=''
-                        className='w-4 h-4 relative z-10 transition-all duration-300 group-hover:brightness-0 group-hover:invert'
-                      />
-                    </button>
-                  </div>
-                </div>
+                <h3 className='text-[16px] font-semibold text-[#1F1F1F] leading-[1.6] line-clamp-3'>
+                  {agent.title}
+                </h3>
               </div>
-            ))}
-          </div>
+
+              {/* Bottom Area - White Background */}
+              <div className='bg-white px-8 pt-2 pb-4 flex items-center justify-between'>
+                <span
+                  className='text-[16px] font-medium group-hover:underline'
+                  style={{
+                    background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
+                >
+                  Explore
+                </span>
+
+                <button
+                  className='group/btn w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110'
+                  style={{
+                    background: 'transparent',
+                  }}
+                  onMouseEnter={e =>
+                    (e.currentTarget.style.background =
+                      'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)')
+                  }
+                  onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                >
+                  <img
+                    src='/images/HomePage/sidearrow.svg'
+                    alt='Arrow'
+                    className='w-10 h-10 transition-all duration-300 group-hover/btn:brightness-0 group-hover/btn:invert'
+                  />
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Modal */}
-        <AgentModal
-          agent={selectedAgent}
-          categoryLabel={activeCategoryLabel}
-          onClose={() => setSelectedAgent(null)}
-        />
+        {selectedAgent && (
+          <AgentModal
+            agent={selectedAgent}
+            categoryLabel={activeCategoryLabel}
+            onClose={() => setSelectedAgent(null)}
+          />
+        )}
       </div>
     </section>
   );
