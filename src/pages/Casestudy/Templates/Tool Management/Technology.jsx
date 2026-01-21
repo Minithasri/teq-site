@@ -3,27 +3,27 @@ import Image from 'next/image';
 export default function Technology() {
   const techStack = [
     {
-      icon: '/images/Templates/template8/ticon1.svg',
+      icon: '/images/Templates/technologyicons/power apps.png',
       title: 'Power Apps',
       description: 'Tool lifecycle management and user interface',
     },
     {
-      icon: '/images/Templates/template8/ticon2.svg',
+      icon: '/images/Templates/technologyicons/Power automate.png',
       title: 'Power Automate',
       description: 'Alerts, approvals, and maintenance workflows',
     },
     {
-      icon: '/images/Templates/template8/ticon3.svg',
+      icon: '/images/Templates/technologyicons/SQL server.png',
       title: 'SQL Server',
       description: 'Centralized data storage and integration',
     },
     {
-      icon: '/images/Templates/template8/ticon4.svg',
+      icon: '/images/Templates/technologyicons/OCR Technology.png',
       title: 'OCR Technology',
       description: 'Automated tool ID recognition and data capture',
     },
     {
-      icon: '/images/Templates/template8/ticon5.svg',
+      icon: '/images/Templates/technologyicons/power BI.png',
       title: 'Power BI',
       description: 'Real-time dashboards and performance analytics',
     },
@@ -53,19 +53,28 @@ export default function Technology() {
           {techStack.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col items-start w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1rem)]'
+              className='bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex items-start gap-4 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1rem)]'
             >
-              <div className='mb-6'>
+              {/* Icon Container with Shadow Effect */}
+              <div
+                className={`shrink-0 relative flex items-center justify-center overflow-visible ${
+                  index === 3 ? 'w-24 h-24' : 'w-12 h-12'
+                }`}
+              >
                 <Image
                   src={item.icon}
                   alt={item.title}
-                  width={48}
-                  height={48}
-                  className='object-contain'
+                  width={index === 3 ? 96 : 64}
+                  height={index === 3 ? 96 : 64}
+                  className='object-contain drop-shadow-[0_10px_20px_#00000054]'
                 />
               </div>
-              <h3 className='text-xl font-bold text-blue-600 mb-3'>{item.title}</h3>
-              <p className='text-gray-600 text-sm leading-relaxed'>{item.description}</p>
+
+              {/* Content */}
+              <div>
+                <h3 className='text-xl font-bold text-blue-600 mb-2'>{item.title}</h3>
+                <p className='text-gray-600 text-sm leading-relaxed'>{item.description}</p>
+              </div>
             </div>
           ))}
         </div>

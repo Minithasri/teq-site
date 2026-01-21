@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Technology() {
   const stack = [
     {
-      icon: '/images/Templates/template6/mail1.svg',
+      icon: '/images/Templates/technologyicons/SQL server.png',
       title: 'SQL Server',
       description: 'Centralized database for scrap and production data',
     },
@@ -23,7 +23,7 @@ export default function Technology() {
       description: 'Source systems for live production and quality data',
     },
     {
-      icon: '/images/Templates/template6/mail.svg',
+      icon: '/images/Templates/technologyicons/Power automate.png',
       title: 'Power Automate',
       description: 'Daily syncs and threshold-based notifications',
     },
@@ -35,9 +35,9 @@ export default function Technology() {
   ];
 
   const floatingIcons = [
-    '/images/Templates/template6/tech1.png',
-    '/images/Templates/template6/tech2.png',
-    '/images/Templates/template5/i5.png', // 3rd icon
+    '/images/Templates/technologyicons/Power automate.png',
+    '/images/Templates/technologyicons/Azure Data Factory1.png',
+    '/images/Templates/technologyicons/SQL server.png',
     '/images/Templates/template6/tech4.png',
   ];
 
@@ -73,10 +73,13 @@ export default function Technology() {
               key={index}
               className='bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex items-start gap-4 hover:shadow-md transition-shadow'
             >
-              <div className='w-12 h-12 relative flex-shrink-0 bg-blue-50 rounded-lg flex items-center justify-center'>
-                <div className='relative w-8 h-8'>
-                  <Image src={item.icon} alt={item.title} fill className='object-contain' />
-                </div>
+              <div className='w-14 h-14 relative flex-shrink-0 flex items-center justify-center'>
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  fill
+                  className='object-contain drop-shadow-[0_10px_20px_#00000054]'
+                />
               </div>
               <div>
                 <h3 className='text-lg font-bold text-[#1D2530] mb-1'>{item.title}</h3>

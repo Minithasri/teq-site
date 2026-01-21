@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
 
 const ROI = () => {
@@ -99,7 +100,8 @@ const ROI = () => {
             </div>
 
             <div className='mt-10 lg:mt-12 flex justify-center lg:justify-start'>
-              <button
+              <Link
+                href='/contact'
                 className='flex items-center justify-center gap-2 text-white transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg'
                 style={{
                   background: 'linear-gradient(to right, #7030B1, #B56DD3)',
@@ -112,7 +114,7 @@ const ROI = () => {
               >
                 Contact Us
                 <FiArrowRight className='text-lg' />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

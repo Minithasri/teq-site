@@ -42,24 +42,6 @@ const LastSection = () => {
               <Image src='/images/last1.svg' alt='' width={20} height={20} className='w-4 h-4' />
               Schedule a Strategy Call
             </Link>
-
-            {/* Download Brochure Button */}
-            <Link
-              href='/brochure'
-              className='inline-flex items-center justify-center gap-2 text-white px-6 py-3 rounded-full font-medium text-[15px] transition-transform hover:scale-105 shadow-md'
-              style={{
-                background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-              }}
-            >
-              <Image
-                src='/images/last2.svg'
-                alt=''
-                width={20}
-                height={20}
-                className='w-4 h-4 brightness-0 invert'
-              />
-              Download Brochure
-            </Link>
           </div>
         </div>
       </div>

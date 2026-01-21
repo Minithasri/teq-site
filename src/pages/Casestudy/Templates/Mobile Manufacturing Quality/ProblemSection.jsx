@@ -67,7 +67,7 @@ export default function ProblemSection() {
         </div>
 
         {/* Challenges Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-5xl'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 -mt-16 max-w-5xl'>
           {challenges.map((item, index) => (
             <div
               key={index}

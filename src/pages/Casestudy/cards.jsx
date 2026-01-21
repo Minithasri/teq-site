@@ -49,27 +49,33 @@ const Cards = () => {
         'Reducing material waste through real-time scrap tracking and data-driven insights.',
       image: '/images/Templates/template6/hero6.png',
     },
-    // {
-    //   slug: 'sustainable-impact',
-    //   title: 'Sustainable Impact in Manufacturing',
-    //   description:
-    //     'Driving sustainability, compliance, and operational efficiency through Power Platform automation.',
-    //   image: '/images/Templates/template7/bg7.png',
-    // },
-    // {
-    //   slug: 'tool-management',
-    //   title: 'Tool Management Solution for Manufacturing',
-    //   description:
-    //     'Driving efficiency, traceability, and operational excellence through Power Platform automation.',
-    //   image: '/images/Templates/template8/temp8.png',
-    // },
-    // Add more templates here as you create them
-    // {
-    //   slug: 'your-next-template',
-    //   title: 'Your Next Case Study Title',
-    //   description: 'Description of your case study',
-    //   image: '/images/Templates/template2/hero.png',
-    // },
+    {
+      slug: 'sustainable-impact',
+      title: 'Sustainable Impact in Manufacturing',
+      description:
+        'Driving sustainability, compliance, and operational efficiency through Power Platform automation.',
+      image: '/images/Templates/template7/bg7.png',
+    },
+    {
+      slug: 'tool-management',
+      title: 'Tool Management Solution for Manufacturing',
+      description:
+        'Driving efficiency, traceability, and operational excellence through Power Platform automation.',
+      image: '/images/Templates/template8/temp888.png',
+    },
+    {
+      slug: 'smart-maintenance',
+      title: 'Smart Maintenance Solution for Manufacturing',
+      description:
+        'Modernizing traditional maintenance processes with Microsoft Power Platform, enabling predictive analytics and preventive maintenance strategies',
+      image: '/images/Templates/template9/9hero.png',
+    },
+    {
+      slug: 'next-gen-knowledge',
+      title: 'Next-Gen Knowledge Engine on Azure',
+      description: 'Transforming Enterprise Knowledge Access with AI-Powered Retrieval',
+      image: '/images/Templates/template10/hero10.jpg',
+    },
   ];
 
   const cardsData = caseStudiesData.map((study, i) => {

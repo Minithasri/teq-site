@@ -1,3 +1,4 @@
+import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
 import Architecture from '@/pages/Casestudy/Templates/Tool Management/Architecture';
 import BusinessImpact from '@/pages/Casestudy/Templates/Tool Management/BusinessImpact';
 import CoreSolutions from '@/pages/Casestudy/Templates/Tool Management/CoreSolutions';
@@ -16,6 +17,7 @@ export default function ToolManagementPage() {
       <Technology />
       <BusinessImpact />
       <Quantitative />
+      <LastSection pdfUrl='/case-studies/GWC_Tool Management & Utilization.pdf' />
     </main>
   );
 }

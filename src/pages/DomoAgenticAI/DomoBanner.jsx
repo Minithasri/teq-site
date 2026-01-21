@@ -36,13 +36,21 @@ const DomoBanner = () => {
 
           <div className='flex justify-center pt-4'>
             <button
+              onClick={() => {
+                const element = document.getElementById('agent-bundle');
+                if (element) {
+                  const yOffset = -10;
+                  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                  window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+              }}
               className='group flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 shadow-xl'
               style={{
                 background: 'linear-gradient(90deg, #9D50BB 0%, #6E48AA 100%)',
                 borderRadius: '50px',
               }}
             >
-              Explore solutions
+              Explore Use Cases
               <FiArrowRight className='text-lg transition-transform group-hover:translate-x-1' />
             </button>
           </div>

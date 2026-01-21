@@ -50,19 +50,18 @@ export default function CurrentStateSection() {
         </div>
 
         {/* Right Images (Collage) - Absolute Positioned */}
-        <div className='hidden lg:block absolute -top-10 right-0 w-[45%] h-full pointer-events-none z-20'>
-          {/* Top Image (Robot) */}
-          <div className='absolute top-0 right-0 w-[300px] h-[200px] overflow-hidden rounded-2xl shadow-none drop-shadow-none border-4 border-white'>
+        <div className='hidden lg:block absolute -top-10 right-10 w-[45%] h-full pointer-events-none z-20'>
+          <div className='absolute top-0 right-0 w-[300px] h-[200px] overflow-hidden rounded-2xl shadow-none drop-shadow-none !shadow-none !drop-shadow-none border-none ring-0 outline-none'>
             <Image
               src='/images/Templates/template3/sideimg1.png'
               alt='Automated Inspection'
               fill
-              className='object-cover'
+              className='object-cover shadow-none drop-shadow-none !shadow-none !drop-shadow-none'
             />
           </div>
 
           {/* Bottom Image (Hands) */}
-          <div className='absolute top-32 right-[-20px] w-[350px] h-[280px] overflow-hidden rounded-2xl shadow-none drop-shadow-none'>
+          <div className='absolute top-32 right-[-20px] w-[350px] h-[280px] overflow-hidden rounded-2xl'>
             <Image
               src='/images/Templates/template3/sideimg2.png'
               alt='Manual Inspection'

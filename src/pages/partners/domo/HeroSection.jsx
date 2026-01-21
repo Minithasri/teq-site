@@ -72,11 +72,14 @@ export default function HeroSection() {
               {/* Button 1: Talk to our expert */}
               <Link
                 href='/contact'
-                className='inline-flex items-center gap-3 bg-[#F4EBFF] text-[#6F2B8B] px-8 py-3.5 rounded-full font-medium text-[16px] justify-center hover:bg-[#eaddf5] transition-colors'
+                className='inline-flex items-center gap-3 text-white px-8 py-3.5 rounded-full font-medium text-[16px] justify-center hover:scale-105 transition-transform shadow-md'
+                style={{
+                  background: 'linear-gradient(90deg, #7030B1 0%, #B56DD3 100%)',
+                }}
               >
                 Talk to our expert
                 <Image
-                  src='/images/partners/domo/arrowviolet.svg'
+                  src='/images/partners/domo/arrowwhite.svg'
                   alt='arrow'
                   width={20}
                   height={20}

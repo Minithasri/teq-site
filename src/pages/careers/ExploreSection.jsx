@@ -42,6 +42,7 @@ const ExploreSection = () => {
       location: 'Pan India, Pan India, India',
       type: 'Full time',
       date: '08/05/2025',
+      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414912/Senior-Product-Manager?source=CareerSite',
     },
     {
       id: 2,
@@ -49,6 +50,7 @@ const ExploreSection = () => {
       location: 'Kolkata, West Bengal, India',
       type: 'Full time',
       date: '08/05/2025',
+      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414201/Associate-Data-Scientist?source=CareerSite',
     },
     {
       id: 3,
@@ -56,6 +58,7 @@ const ExploreSection = () => {
       location: 'Kolkata, West Bengal, India',
       type: 'Full time',
       date: '08/05/2025',
+      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414170/Agentic-AI-Developer?source=CareerSite',
     },
     {
       id: 4,
@@ -63,6 +66,7 @@ const ExploreSection = () => {
       location: 'Kolkata, West Bengal, India',
       type: 'Full time',
       date: '08/05/2025',
+      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414141/Senior-UI-UX-Designer?source=CareerSite',
     },
     {
       id: 5,
@@ -70,6 +74,7 @@ const ExploreSection = () => {
       location: 'Kolkata, West Bengal, India',
       type: 'Full time',
       date: '08/05/2025',
+      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414112/Snowflake-Architect?source=CareerSite',
     },
     {
       id: 6,
@@ -77,6 +82,7 @@ const ExploreSection = () => {
       location: 'Kolkata, West Bengal, India',
       type: 'Full time',
       date: '08/05/2025',
+      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414083/Senior-Full-Stack-Engineer?source=CareerSite',
     },
     {
       id: 7,
@@ -84,6 +90,7 @@ const ExploreSection = () => {
       location: 'Kolkata, West Bengal, India',
       type: 'Full time',
       date: '08/05/2025',
+      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414040/PowerBI-Architect?source=CareerSite',
     },
     {
       id: 8,
@@ -91,6 +98,7 @@ const ExploreSection = () => {
       location: 'Kolkata, West Bengal, India',
       type: 'Full time',
       date: '08/08/2025',
+      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000453707/Sales-Director-US-Market?source=CareerSite',
     },
     {
       id: 9,
@@ -98,6 +106,7 @@ const ExploreSection = () => {
       location: 'Salt Lake City, Utah, United States',
       type: 'Full time',
       date: '09/30/2025',
+      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000001271281/Program-Manager?source=CareerSite',
     },
     {
       id: 10,
@@ -105,6 +114,7 @@ const ExploreSection = () => {
       location: 'Kolkata, West Bengal, India',
       type: 'Full time',
       date: '10/03/2025',
+      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000403201/Senior-AI-Engineer?source=CareerSite',
     },
     {
       id: 11,
@@ -112,6 +122,7 @@ const ExploreSection = () => {
       location: 'Hosur, Tamil Nadu, India',
       type: 'Full time',
       date: '10/08/2025',
+      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000001612075/Creative-Digital-Media-Designer?source=CareerSite',
     },
   ];
 
@@ -154,6 +165,7 @@ const ExploreSection = () => {
   return (
     <section
       ref={sectionRef}
+      id='explore-section'
       className='w-full py-16 lg:py-24'
       style={{ backgroundColor: '#3D194B' }}
     >
@@ -276,7 +288,13 @@ const ExploreSection = () => {
                 </div>
 
                 {/* Right Side - Read More Link */}
-                <div className='flex items-center gap-2 cursor-pointer group flex-shrink-0'>
+                {/* Right Side - Read More Link */}
+                <a
+                  href={job.link || '#'}
+                  target={job.link ? '_blank' : '_self'}
+                  rel={job.link ? 'noopener noreferrer' : ''}
+                  className='flex items-center gap-2 cursor-pointer group flex-shrink-0'
+                >
                   <span
                     className='text-sm lg:text-base font-medium whitespace-nowrap'
                     style={{ color: '#F97316' }}
@@ -291,7 +309,7 @@ const ExploreSection = () => {
                       className='object-contain group-hover:translate-x-1 transition-transform'
                     />
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           ))}

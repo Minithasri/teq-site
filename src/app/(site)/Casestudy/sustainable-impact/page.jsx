@@ -1,3 +1,4 @@
+import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
 import Architecture from '@/pages/Casestudy/Templates/Sustainable Impact/Architecture';
 import BusinessImpact from '@/pages/Casestudy/Templates/Sustainable Impact/BusinessImpact';
 import CoreSolutions from '@/pages/Casestudy/Templates/Sustainable Impact/CoreSolutions';
@@ -16,6 +17,7 @@ export default function SustainableImpactPage() {
       <Technology />
       <CoreSolutions />
       <BusinessImpact />
+      <LastSection pdfUrl='/case-studies/GWC_Sustainability & Energy Optimization.pdf' />
     </main>
   );
 }

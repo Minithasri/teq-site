@@ -25,11 +25,11 @@ export default function Technology() {
   ];
 
   const floatingIcons = [
-    '/images/Templates/template2/iconnew1.svg',
-    '/images/Templates/template2/iconnew2.svg',
-    '/images/Templates/template2/iconnew3.svg',
-    '/images/Templates/template5/i4.png',
-    '/images/Templates/template5/i5.png',
+    '/images/Templates/technologyicons/pythonimg.png',
+    '/images/Templates/technologyicons/power BI.png',
+    '/images/Templates/technologyicons/Power automate.png',
+    '/images/Templates/technologyicons/power apps.png',
+    '/images/Templates/technologyicons/SQL server.png',
   ];
 
   return (
@@ -57,7 +57,12 @@ export default function Technology() {
                 key={index}
                 className='relative drop-shadow-sm transition-transform hover:-translate-y-1 w-10 h-10 lg:w-12 lg:h-12'
               >
-                <Image src={icon} alt={`Tech ${index}`} fill className='object-contain' />
+                <Image
+                  src={icon}
+                  alt={`Tech ${index}`}
+                  fill
+                  className='object-contain drop-shadow-[0_10px_20px_#00000054]'
+                />
               </div>
             ))}
           </div>

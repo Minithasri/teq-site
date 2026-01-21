@@ -2,17 +2,18 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { FiArrowRight, FiX } from 'react-icons/fi';
 import { agentData } from '../../data/agentBuildingData';
 
 const categories = [
+  { id: 'retail', label: 'Retail' },
+  { id: 'supplychain', label: 'Supply Chain & Logistics' },
+  { id: 'travelandhospitality', label: 'Travel and Hospitality' },
+  { id: 'manufacturing', label: 'Manufacturing' },
   { id: 'hr', label: 'HR' },
   { id: 'marketing', label: 'Marketing' },
   { id: 'sales', label: 'Sales' },
-  { id: 'retail', label: 'Retail' },
-  { id: 'manufacturing', label: 'Manufacturing' },
-  { id: 'supplychain', label: 'Supply Chain & Logistics' },
-  { id: 'travelandhospitality', label: 'Travel and Hospitality' },
 ];
 
 const AgentModal = ({ agent, categoryLabel, onClose }) => {
@@ -38,7 +39,7 @@ const AgentModal = ({ agent, categoryLabel, onClose }) => {
     };
   }, []);
 
-  return (
+  return createPortal(
     <div
       className='fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/60'
       onClick={onClose}
@@ -48,7 +49,6 @@ const AgentModal = ({ agent, categoryLabel, onClose }) => {
         style={{ maxWidth: '850px', maxHeight: '580px' }}
         onClick={e => e.stopPropagation()}
       >
-        {/* Close Button */}
         {/* Close Button */}
         <button
           className='absolute top-4 right-2 z-10 w-8 h-8 flex items-center justify-center rounded-full text-white shadow-md hover:scale-110 transition-transform'
@@ -153,12 +153,13 @@ const AgentModal = ({ agent, categoryLabel, onClose }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 
 export default function AgentBuilding() {
-  const [activeCategory, setActiveCategory] = useState('hr');
+  const [activeCategory, setActiveCategory] = useState('retail');
   const [selectedAgent, setSelectedAgent] = useState(null);
 
   // Helper to get current agents safely
@@ -168,32 +169,17 @@ export default function AgentBuilding() {
   return (
     <section
       id='agent-building'
-      className='w-full py-16 lg:py-24 relative overflow-hidden'
+      className='mx-4 md:mx-8 py-12 lg:py-16 rounded-xl relative overflow-hidden'
       style={{
-        backgroundImage: 'url("/images/HomePage/BG.png")',
+        background:
+          'linear-gradient(90deg, rgba(255, 247, 235, 0.75) 0%, rgba(250, 224, 250, 0.75) 100%), url("/images/HomePage/BG1.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      {/* Linear Gradient Overlay */}
-      <div
-        className='absolute inset-0 pointer-events-none'
-        style={{
-          background: 'linear-gradient(180deg, #FFF7EB 0%, rgba(255, 247, 235, 0.00) 100%)',
-          opacity: 0.9,
-        }}
-      />
-      <div
-        className='absolute inset-0 pointer-events-none'
-        style={{
-          background: 'linear-gradient(180deg, #FAE0FA 0%, rgba(250, 224, 250, 0.00) 100%)',
-          opacity: 0.6,
-        }}
-      />
-
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Title */}
-        <h2 className='text-[28px] md:text-[32px] font-medium text-center mb-12 sm:mb-16 tracking-tight text-[#333333]'>
+        <h2 className='text-[28px] md:text-[32px] font-medium text-center mb-8 sm:mb-10 tracking-tight text-[#333333]'>
           <span
             style={{
               background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
@@ -208,7 +194,7 @@ export default function AgentBuilding() {
         </h2>
 
         {/* Category Tabs */}
-        <div className='flex justify-center mb-12 overflow-x-auto'>
+        <div className='flex justify-center mb-8 overflow-x-auto'>
           <div className='inline-flex flex-wrap justify-center bg-white rounded-full p-1.5 gap-2 max-w-full shadow-sm'>
             {categories.map(category => {
               const isActive = activeCategory === category.id;
@@ -233,7 +219,7 @@ export default function AgentBuilding() {
         </div>
 
         {/* Agent Cards Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-4'>
           {currentAgents.map((agent, index) => (
             <div
               key={index}
@@ -244,26 +230,46 @@ export default function AgentBuilding() {
               onClick={() => setSelectedAgent(agent)}
             >
               {/* Top Content Area - Gray Background */}
-              <div className='bg-[#F8F8F8] m-2 rounded-2xl px-4 py-8 flex-1 flex flex-col items-start gap-4 min-h-[160px]'>
+              <div className='bg-[#F8F8F8] m-2 rounded-2xl px-4 py-8 flex-1 flex flex-row items-center gap-4 min-h-[120px]'>
                 {/* Brain Icon */}
                 <div
-                  className='w-14 h-14 rounded-2xl flex items-center justify-center mb-2 border border-[#E5E5E5]'
+                  className='w-14 h-14 rounded-2xl flex items-center justify-center border border-[#E5E5E5] shrink-0'
                   style={{
                     backgroundColor: '#FAFAFA',
                     boxShadow: '0px 0px 10px 0px #0000001A',
                   }}
                 >
                   <img
-                    src='/images/HomePage/brain.svg'
+                    src={(() => {
+                      const i = index + 1;
+                      switch (activeCategory) {
+                        case 'retail':
+                          return `/images/HomePage/icons/${i}.svg`;
+                        case 'supplychain':
+                          return `/images/HomePage/icons/s${i}.svg`;
+                        case 'travelandhospitality':
+                          return `/images/HomePage/icons/t${i}.svg`;
+                        case 'manufacturing':
+                          return `/images/HomePage/icons/m${i}.svg`;
+                        case 'hr':
+                          return `/images/HomePage/icons/hr${i}.svg`;
+                        case 'marketing':
+                          return `/images/HomePage/icons/mark${i}.svg`;
+                        case 'sales':
+                          return `/images/HomePage/icons/sales${i}.svg`;
+                        default:
+                          return '/images/HomePage/brain.svg';
+                      }
+                    })()}
                     alt='AI'
-                    className='w-6 h-6'
+                    className='w-8 h-8'
                     onError={e => {
                       e.target.style.display = 'none';
                     }}
                   />
                 </div>
 
-                <h3 className='text-[16px] font-semibold text-[#1F1F1F] leading-[1.6] line-clamp-3'>
+                <h3 className='text-[14px] font-semibold text-[#525252] leading-[1.6] line-clamp-3'>
                   {agent.title}
                 </h3>
               </div>

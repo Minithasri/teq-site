@@ -79,7 +79,7 @@ const WhyWork = () => {
             href='/contact'
             className='px-8 py-3 rounded-full border border-[#6F2B8B] text-[#6F2B8B] font-medium hover:bg-purple-50 transition-colors shrink-0 flex items-center gap-2'
           >
-            Talk to our Experts
+            Explore Opportunity
             <FiArrowRight className='w-4 h-4' />
           </Link>
         </header>

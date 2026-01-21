@@ -1,5 +1,6 @@
 'use client';
 
+import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiArrowLeft } from 'react-icons/fi';
@@ -98,30 +99,7 @@ export default function CaseStudyTemplate({ caseStudy }) {
       </section>
 
       {/* CTA */}
-      <section
-        className='py-16 lg:py-20'
-        style={{
-          background: 'linear-gradient(135deg, #FFF7EB 0%, #FAE0FA 100%)',
-        }}
-      >
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-6'>
-            Ready to Transform Your Business?
-          </h2>
-          <p className='text-gray-600 text-lg mb-8'>
-            Let's discuss how we can help you achieve similar results.
-          </p>
-          <Link
-            href='/contact'
-            className='inline-flex items-center justify-center gap-2 text-white px-8 py-4 rounded-full font-medium text-base hover:scale-105 transition-transform shadow-lg'
-            style={{
-              background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-            }}
-          >
-            Get in Touch
-          </Link>
-        </div>
-      </section>
+      <LastSection />
     </main>
   );
 }

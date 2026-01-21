@@ -3,6 +3,7 @@ import Challenges from '@/pages/Casestudy/Templates/Predictive Maintenance/Chall
 import HeroSection from '@/pages/Casestudy/Templates/Predictive Maintenance/HeroSection';
 import Management from '@/pages/Casestudy/Templates/Predictive Maintenance/Management';
 import Technology from '@/pages/Casestudy/Templates/Predictive Maintenance/Technology';
+import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
 
 export default function PredictiveMaintenancePage() {
   return (
@@ -12,6 +13,7 @@ export default function PredictiveMaintenancePage() {
       <Management />
       <Technology />
       <BusinessImpact />
+      <LastSection pdfUrl='/case-studies/GWC_Predictive Maintenance with AI & IoT.pdf' />
     </main>
   );
 }

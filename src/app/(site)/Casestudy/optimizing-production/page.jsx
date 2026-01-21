@@ -4,6 +4,7 @@ import Challenges from '@/pages/Casestudy/Templates/Optimizing Production/Challe
 import HeroSection from '@/pages/Casestudy/Templates/Optimizing Production/HeroSection';
 import Solution from '@/pages/Casestudy/Templates/Optimizing Production/Solution';
 import Technology from '@/pages/Casestudy/Templates/Optimizing Production/Technology';
+import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
 
 export default function OptimizingProductionPage() {
   return (
@@ -14,7 +15,7 @@ export default function OptimizingProductionPage() {
       <Architecture />
       <Technology />
       <BusinessImpact />
-      {/* Other sections will be added here */}
+      <LastSection pdfUrl='/case-studies/GWC_Scrap Analytics for Quality Improvement.pdf' />
     </main>
   );
 }

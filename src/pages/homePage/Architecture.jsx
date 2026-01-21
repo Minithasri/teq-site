@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 
@@ -228,7 +229,8 @@ const Architecture = () => {
 
         {/* Button */}
         <div className='flex justify-center mt-16'>
-          <button
+          <Link
+            href='/contact'
             className='flex items-center justify-center gap-2 text-white transition-all duration-300 hover:scale-105'
             style={{
               background: 'linear-gradient(to right, #7030B1, #B56DD3)',
@@ -241,7 +243,7 @@ const Architecture = () => {
           >
             Contact Us
             <FiArrowRight className='text-lg' />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

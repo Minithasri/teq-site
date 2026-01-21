@@ -51,7 +51,7 @@ export default function CreateAccount() {
             </p>
 
             <Link
-              href='/contact'
+              href='https://www.domo.com/start/free?utm_source=referral_gwc&utm_medium=organic&orgid=100000770&utm_campid=701f2000001C6UOAA0%20Start%20Free%20|%20Domo'
               className='inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-[#FFFFFF] font-medium transition-transform hover:scale-105 shadow-sm'
               style={{ background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)' }}
             >

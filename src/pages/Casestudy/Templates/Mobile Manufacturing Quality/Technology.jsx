@@ -74,7 +74,7 @@ export default function Technology() {
         </div>
 
         {/* Floating Bottom Images - Overlapping into next section */}
-        <div className='absolute -bottom-80 -right-10  w-full max-w-[800px] h-[500px] z-30 hidden lg:block pointer-events-none'>
+        <div className='absolute -bottom-80 -right-28  w-full max-w-[800px] h-[500px] z-30 hidden lg:block pointer-events-none'>
           {/* Back Image */}
           <div className='absolute bottom-0 right-0 w-[550px] h-[400px]'>
             <Image

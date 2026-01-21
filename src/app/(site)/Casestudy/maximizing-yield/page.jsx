@@ -6,6 +6,7 @@ import Images from '@/pages/Casestudy/Templates/Maximizing Yield/Images';
 import OurSolutions from '@/pages/Casestudy/Templates/Maximizing Yield/OurSolutions';
 import Solutions from '@/pages/Casestudy/Templates/Maximizing Yield/Solutions';
 import Technology from '@/pages/Casestudy/Templates/Maximizing Yield/Technology';
+import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
 
 export default function MaximizingYieldPage() {
   return (
@@ -18,6 +19,7 @@ export default function MaximizingYieldPage() {
       <Technology />
       <Images />
       <BusinessImpact />
+      <LastSection pdfUrl='/case-studies/GWC_Production & Yield Analytics.pdf' />
     </main>
   );
 }

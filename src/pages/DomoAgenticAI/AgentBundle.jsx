@@ -177,7 +177,7 @@ const bundles = [
 
 const AgentBundle = () => {
   return (
-    <section className='w-full bg-white py-16 lg:py-24'>
+    <section id='agent-bundle' className='w-full bg-white py-16 lg:py-24'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='text-center mb-16'>

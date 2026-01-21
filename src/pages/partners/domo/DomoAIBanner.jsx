@@ -33,7 +33,7 @@ const domoPlatforms = [
   {
     title: 'BI & Analytics',
     iconPath: '/images/partners/domo/BI and analytics.png',
-    image: '/images/partners/domo/4.png',
+    image: '/images/partners/domo/3.png',
     description:
       'Facilitate quick and informed decision-making for diverse users with our intuitive custom data views and reporting functionalities.',
     outputs: [
@@ -46,7 +46,7 @@ const domoPlatforms = [
   {
     title: 'Data Foundation',
     iconPath: '/images/partners/domo/data foundation.png',
-    image: '/images/partners/domo/3.png',
+    image: '/images/partners/domo/4.png',
     description:
       'Leverage our Domo solutions to establish an advanced Data Foundation, serving as the framework for the continuous progress of your business.',
     outputs: [

@@ -2,6 +2,7 @@ import ClientOverview from '@/pages/Casestudy/Templates/Real Time Production/Cli
 import DrivenSolution from '@/pages/Casestudy/Templates/Real Time Production/DrivenSolution';
 import HeroSection from '@/pages/Casestudy/Templates/Real Time Production/HeroSection';
 import KeyChallenges from '@/pages/Casestudy/Templates/Real Time Production/KeyChallenges';
+import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
 import RealBusiness from '@/pages/Casestudy/Templates/Real Time Production/RealBusiness';
 import TechnologyStack from '@/pages/Casestudy/Templates/Real Time Production/TechnologyStack';
 
@@ -20,6 +21,7 @@ export default function RealTimeProductionPage() {
       <DrivenSolution />
       <RealBusiness />
       <TechnologyStack />
+      <LastSection pdfUrl='/case-studies/GWC_IoT-Driven Smart Factory.pdf' />
     </>
   );
 }

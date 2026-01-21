@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function VisionandMission() {
   return (
@@ -32,10 +33,13 @@ export default function VisionandMission() {
               background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
             }}
           >
-            <button className='w-[246px] h-[46px] rounded-full bg-white font-medium flex items-center justify-center gap-2 text-[16px]'>
+            <Link
+              href='/contact'
+              className='w-[246px] h-[46px] rounded-full bg-white font-medium flex items-center justify-center gap-2 text-[16px]'
+            >
               <span style={{ color: '#6F2B8B' }}>Talk to our experts</span>
               <Image src='/images/Careers/arrow1.svg' alt='Arrow' width={12} height={12} />
-            </button>
+            </Link>
           </div>
         </header>
 

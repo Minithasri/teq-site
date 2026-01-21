@@ -6,6 +6,7 @@ import OurSolutions from '@/pages/Casestudy/Templates/Mobile Manufacturing Quali
 import ProblemSection from '@/pages/Casestudy/Templates/Mobile Manufacturing Quality/ProblemSection';
 import Solutions from '@/pages/Casestudy/Templates/Mobile Manufacturing Quality/Solutions';
 import Technology from '@/pages/Casestudy/Templates/Mobile Manufacturing Quality/Technology';
+import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
 
 export default function MobileManufacturingQualityPage() {
   return (
@@ -18,6 +19,7 @@ export default function MobileManufacturingQualityPage() {
       <Highlights />
       <Technology />
       <BusinessImpact />
+      <LastSection pdfUrl='/case-studies/GWC_Commonality & Traceability in Manufacturing.pdf' />
     </main>
   );
 }

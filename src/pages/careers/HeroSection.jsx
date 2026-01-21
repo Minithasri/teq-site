@@ -36,6 +36,14 @@ const HeroSection = () => {
 
             <div className='pt-4'>
               <button
+                onClick={() => {
+                  const element = document.getElementById('explore-section');
+                  if (element) {
+                    const yOffset = -50;
+                    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                  }
+                }}
                 className='inline-flex items-center justify-center gap-2 text-white px-8 py-4 rounded-full font-medium text-base hover:scale-105 transition-transform shadow-lg'
                 style={{
                   background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',

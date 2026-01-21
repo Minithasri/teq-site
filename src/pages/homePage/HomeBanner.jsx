@@ -62,35 +62,49 @@ const HomeBanner = () => {
         <div className='grid grid-cols-1 lg:grid-cols-[1.45fr_0.85fr] gap-8 lg:gap-12 items-center py-8 sm:py-12 lg:py-16'>
           {/* LEFT COLUMN */}
           <div className='text-center lg:text-left space-y-6'>
-            {/* New Badge */}
-            <div className='relative inline-flex items-center gap-2 px-1 py-1 rounded-full border border-[#D6A9E9] bg-transparent self-start'>
-              {/* Outer Ring */}
-              <div className='absolute -inset-[5px] rounded-full border border-[#D6A9E9] opacity-40 pointer-events-none'></div>
-              <span
-                className='pl-3 text-[16px] sm:text-[20px] font-medium bg-clip-text text-transparent'
-                style={{
-                  backgroundImage: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                }}
-              >
-                Build your first AI agent in
-              </span>
-              <span
-                className='px-4 py-1 rounded-full text-white text-[18px] sm:text-[24px] font-medium'
+            <div className='flex items-center gap-4 mb-4 lg:mb-0'>
+              {/* Clock Icon */}
+              <div
+                className='w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0'
                 style={{
                   background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
                 }}
               >
-                10 Hours.
-              </span>
+                <img src='/images/HomePage/Frame.svg' alt='' className='w-5 h-5 sm:w-6 sm:h-6' />
+              </div>
+              {/* Badge */}
+              <div className='relative inline-flex items-center gap-2 px-1 py-1 rounded-full border border-[#D6A9E9] bg-transparent self-start'>
+                {/* Outer Ring */}
+                <div className='absolute -inset-[5px] rounded-full border border-[#D6A9E9] opacity-40 pointer-events-none'></div>
+                <span
+                  className='pl-3 text-[14px] sm:text-[16px] font-medium bg-clip-text text-transparent'
+                  style={{
+                    backgroundImage: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                  }}
+                >
+                  Build your first AI agent in
+                </span>
+                <span
+                  className='px-4 py-1 rounded-full text-white text-[16px] sm:text-[18px] font-medium'
+                  style={{
+                    background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                  }}
+                >
+                  10 Hours.
+                </span>
+              </div>
             </div>
-            <h1 className='font-bold text-[32px] text-[#404040] leading-[40px] sm:text-[40px] sm:leading-[50px] lg:text-[40px] lg:leading-[58px]'>
+            <h1 className='pt-2 font-bold text-[32px] text-[#404040] leading-[40px] sm:text-[40px] sm:leading-[50px] lg:text-[40px] lg:leading-[58px]'>
               <span
                 className='bg-clip-text text-transparent'
                 style={{ backgroundImage: 'linear-gradient(to right, #7030B1, #B56DD3)' }}
               >
                 Agentic AI
               </span>
-              <span className='text-[#404040]'> that turns Automation into Intelligence</span>
+              <span className='text-[#404040]'>
+                {' '}
+                that turns <br /> Automation into Intelligence
+              </span>
             </h1>
 
             <p className='text-[16px] sm:text-[18px] font-normal text-[#737373] max-w-2xl mx-auto lg:mx-0 mt-4 sm:mt-6'>
@@ -98,15 +112,23 @@ const HomeBanner = () => {
               ROI and rapid deployment.
             </p>
 
-            <div className='flex justify-center lg:justify-start'>
+            <div className='flex justify-center lg:justify-start pt-6'>
               <button
+                onClick={() => {
+                  const element = document.getElementById('agent-building');
+                  if (element) {
+                    const yOffset = -120; // Adjust this value to scroll more higher/lower
+                    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                  }
+                }}
                 className='flex items-center justify-center gap-2 w-[170px] h-[42px] sm:w-[190px] sm:h-[45px] text-[13px] sm:text-[14px] text-white transition-all duration-300 hover:scale-105'
                 style={{
                   background: 'linear-gradient(to right, #7030B1, #B56DD3)',
                   borderRadius: '25px',
                 }}
               >
-                Explore Solutions
+                Explore Use Cases
                 <FiArrowRight className='text-lg' />
               </button>
             </div>

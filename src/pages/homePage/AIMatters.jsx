@@ -94,7 +94,7 @@ const AIMatters = () => {
   return (
     <div
       ref={sectionRef}
-      className='flex items-center justify-center relative w-full mt-[-100px] lg:mt-[-200px] px-0 lg:px-10'
+      className='flex items-center justify-center relative z-50 w-full mt-[-100px] lg:mt-[-200px] px-0 lg:px-10'
     >
       <div className='bg-gradient-to-br from-[#7030B1] to-[#A545CC] relative overflow-hidden w-full min-h-[500px] lg:min-h-[450px] rounded-none lg:rounded-[25px]'>
         <div className="absolute inset-0 bg-[url('/images/AIMatters.jpg')] bg-cover bg-center opacity-40" />

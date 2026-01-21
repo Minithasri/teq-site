@@ -6,6 +6,7 @@ import OurSolutions from '@/pages/Casestudy/Templates/Streamlining Production/Ou
 import Problem from '@/pages/Casestudy/Templates/Streamlining Production/Problem';
 import Technology from '@/pages/Casestudy/Templates/Streamlining Production/Technology';
 // import Impact from '@/pages/Casestudy/Templates/Streamlining Production/Impact'; // Placeholder
+import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
 
 export default function StreamliningProductionPage() {
   return (
@@ -17,7 +18,7 @@ export default function StreamliningProductionPage() {
       <Architecture />
       <Technology />
       <BusinessImpact />
-      {/* Other sections will be added here */}
+      <LastSection pdfUrl='/case-studies/GWC_IE App for Downtime Optimization.pdf' />
     </main>
   );
 }
