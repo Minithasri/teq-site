@@ -10,7 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import * as Yup from 'yup';
 
-const SERVICEID = 'service_52ras9h';
+const SERVICEID = 'service_orzo3pj';
 const TEMPLATEID = 'template_ivl46tu';
 const PUBLICID = 'mPEoxk7E9_GZ0ooHP';
 
@@ -66,15 +66,17 @@ export default function HeroSection() {
       message: values.message,
     };
 
+    console.log('Sending email with data:', formData);
     emailjs.send(SERVICEID, TEMPLATEID, formData, PUBLICID).then(
       response => {
+        console.log('EmailJS Response:', response);
         notify();
         resetForm();
         setIsSending(false);
         setIsModalOpen(false);
       },
       err => {
-        console.error('Error:', err);
+        console.error('EmailJS Error:', err);
         toast.error(
           'Hello! There is some network issue. Please check your internet connection and re-submit the request.'
         );
