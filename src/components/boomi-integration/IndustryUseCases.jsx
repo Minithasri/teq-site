@@ -10,7 +10,7 @@ const solutions = [
     cardTitle: 'Retail',
     description:
       'Enable seamless, real time synchronization of orders and inventory across ERP, POS, and e commerce platforms, ensuring accurate stock visibility, faster fulfillment, and superior customer experiences.',
-    image: '/images/partners/boomi/retails.jpg',
+    image: '/images/partners/boomi/retails.webp',
     features: ['25% reduction in stock-outs'],
   },
   {
@@ -19,7 +19,7 @@ const solutions = [
     cardTitle: 'Manufacturing',
     description:
       'Leverage IoT and ERP integration to drive intelligent production planning, enable predictive maintenance, reduce downtime, and improve operational efficiency across the factory floor.',
-    image: '/images/partners/boomi/manufacturing.jpg',
+    image: '/images/partners/boomi/manufacturing.webp',
     features: ['30% improvement in efficiency'],
   },
   {
@@ -28,7 +28,7 @@ const solutions = [
     cardTitle: 'Healthcare',
     description:
       'Securely integrate claims processing, patient data management, and regulatory compliance workflows to ensure data integrity, privacy, and smoother healthcare operations.',
-    image: '/images/partners/boomi/medical.jpg',
+    image: '/images/partners/boomi/medical.webp',
     features: ['60% faster cycle times'],
   },
   {
@@ -37,7 +37,7 @@ const solutions = [
     cardTitle: 'Finance',
     description:
       'Automate end to end invoice processing, financial reconciliations, and reporting to improve accuracy, reduce manual effort, and accelerate financial decision making.',
-    image: '/images/partners/boomi/finance.jpg',
+    image: '/images/partners/boomi/finance.webp',
     features: ['Up to 80% faster processing'],
   },
   {
@@ -46,7 +46,7 @@ const solutions = [
     cardTitle: 'Multi Cloud Enterprises',
     description:
       'Achieve real time data orchestration across AWS, Azure, and GCP using Boomi, enabling unified visibility, scalable integrations, and cloud agnostic operations.',
-    image: '/images/partners/boomi/multicloud.jpg',
+    image: '/images/partners/boomi/multicloud.webp',
     features: ['99.9% uptime achieved'],
   },
 ];

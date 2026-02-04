@@ -48,7 +48,7 @@ export default function ProblemSection() {
           {/* Floating Illustration - Desktop */}
           <div className='hidden lg:block absolute -right-0 -top-56 w-[450px] h-[350px] pointer-events-none z-50'>
             <Image
-              src='/images/Templates/template3/heroimage2.png'
+              src='/images/Templates/template3/heroimage2.webp'
               alt='Production Line Illustration'
               fill
               className='object-contain'
@@ -58,7 +58,7 @@ export default function ProblemSection() {
           {/* Mobile Image */}
           <div className='lg:hidden w-full h-[250px] relative mb-8'>
             <Image
-              src='/images/Templates/template3/heroimage2.png'
+              src='/images/Templates/template3/heroimage2.webp'
               alt='Production Line Illustration'
               fill
               className='object-contain'

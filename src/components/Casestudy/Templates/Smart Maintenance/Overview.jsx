@@ -6,7 +6,7 @@ const Overview = () => {
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='/images/Templates/template9/overview9.png'
+          src='/images/Templates/template9/overview9.webp'
           alt='Overview Background'
           fill
           className='object-cover'

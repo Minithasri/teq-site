@@ -13,7 +13,7 @@ const heroContent = {
   title: 'Experience AI agents at work',
   description:
     'Move beyond manual analysis and inconsistent data. Our Agentic AI platform standardizes startup assessments, reduces bias, and enables faster, more confident investment decisions.',
-  backgroundImage: '/images/Casestudy/Frame case.png',
+  backgroundImage: '/images/Casestudy/Frame case.webp',
 };
 
 export default function HeroSection() {

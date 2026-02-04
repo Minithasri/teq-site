@@ -10,7 +10,7 @@ const Competitors = () => {
           {/* Card 1 — Frame 1 */}
           <div className='relative w-full lg:w-[755px] min-h-[400px] lg:h-[386px] p-6 sm:p-8 md:p-12 overflow-hidden bg-white'>
             <Image
-              src='/images/partners/databricks/Frame_1.png'
+              src='/images/partners/databricks/Frame_1.webp'
               alt=''
               fill
               className='object-fill pointer-events-none'
@@ -58,7 +58,7 @@ const Competitors = () => {
           {/* Card 2 — Frame 2 (Purple Card) */}
           <div className='relative w-full lg:w-[375px] h-auto lg:h-[386px] rounded-[32px] p-8 md:p-12 overflow-hidden bg-[#7030B1] text-white'>
             <Image
-              src='/images/partners/databricks/Frame_2.png'
+              src='/images/partners/databricks/Frame_2.webp'
               alt=''
               fill
               className='object-fill pointer-events-none'
@@ -93,7 +93,7 @@ const Competitors = () => {
           {/* Card 3 — Frame 3 */}
           <div className='relative w-full lg:w-[375px] h-auto lg:h-[242px]  p-8 overflow-hidden bg-white'>
             <Image
-              src='/images/partners/databricks/Frame_3.png'
+              src='/images/partners/databricks/Frame_3.webp'
               alt=''
               fill
               className='object-fill pointer-events-none'
@@ -122,7 +122,7 @@ const Competitors = () => {
           {/* Card 4 — Frame 4 */}
           <div className='relative w-full lg:w-[375px] h-auto lg:h-[242px]  p-8 overflow-hidden bg-white'>
             <Image
-              src='/images/partners/databricks/Frame_4.png'
+              src='/images/partners/databricks/Frame_4.webp'
               alt=''
               fill
               className='object-fill pointer-events-none'

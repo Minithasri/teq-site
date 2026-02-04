@@ -11,19 +11,19 @@ const features = [
     title: 'Drag & Drop Interface',
     description:
       "Design and deploy integrations effortlessly with Boomi's intuitive interface, no extensive coding required.",
-    image: '/images/partners/boomi/section_img_1.png',
+    image: '/images/partners/boomi/section_img_1.webp',
   },
   {
     title: 'Pre built Connectors',
     description:
       'Access a vast library of pre built connectors, accelerating integration and reducing time to market.',
-    image: '/images/partners/boomi/section_img_2.png',
+    image: '/images/partners/boomi/section_img_2.webp',
   },
   {
     title: 'Real time Monitoring',
     description:
       'Monitor your integrations in real-time, ensuring optimal performance and reliability.',
-    image: '/images/partners/boomi/section_img_3.png',
+    image: '/images/partners/boomi/section_img_3.webp',
   },
 ];
 
@@ -34,7 +34,7 @@ const FeaturesBoomi = () => {
       <div className='absolute inset-0 w-full h-full flex items-center justify-start z-0'>
         <div className='relative w-[800px] h-[800px] -translate-x-1/4'>
           <Image
-            src='/images/HomePage/circle_big.png'
+            src='/images/HomePage/circle_big.webp'
             alt='Background Decoration'
             fill
             className='object-contain opacity-100'

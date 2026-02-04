@@ -16,7 +16,7 @@ const bannerContent = {
     'As a certified Databricks Partner, GWC helps organizations unlock the power of data using the lakehouse approach to deliver governed, scalable, AI enabled solutions that drive real business impact.',
   ctaText: 'Get in touch',
   images: {
-    background: '/images/partners/databricks/hero_bg_partner.png',
+    background: '/images/partners/databricks/hero_bg_partner.webp',
     illustration: '/images/partners/databricks/databricks_hero.png',
   },
 };

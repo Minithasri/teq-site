@@ -12,7 +12,7 @@ export default function HeroSection() {
       <div className='absolute inset-0 z-0 flex justify-end'>
         <div className='relative w-full lg:w-[60%] h-full'>
           <Image
-            src='/images/Templates/template4/herobg.png'
+            src='/images/Templates/template4/herobg.webp'
             alt='Predictive Maintenance Background'
             fill
             className='object-cover object-center'

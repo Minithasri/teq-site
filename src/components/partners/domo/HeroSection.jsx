@@ -15,7 +15,7 @@ const bannerContent = {
   title: domoData.hero.title,
   description: domoData.hero.subtitle,
   images: {
-    background: '/images/partners/domo/domoframe.png',
+    background: '/images/partners/domo/domoframe.webp',
     illustration: '/images/partners/domo/heroimgg.png',
   },
 };

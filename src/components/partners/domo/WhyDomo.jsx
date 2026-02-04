@@ -40,7 +40,7 @@ export default function WhyDomo() {
       {/* Background Circle */}
       <div className='absolute top-72 left-20 w-[1200px] h-[900px] -translate-x-1/4 -translate-y-1/3 pointer-events-none z-0'>
         <Image
-          src='/images/HomePage/circle_big.png'
+          src='/images/HomePage/circle_big.webp'
           alt='Background Decoration'
           fill
           className='object-contain opacity-50'

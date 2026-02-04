@@ -30,7 +30,7 @@ const HowWeHire = () => {
       {/* Semi-circle background - ends before process flow section */}
       <div className='absolute top-[4%] left-0 right-0 h-[61%] z-1'>
         <Image
-          src='/images/Careers/semi_bgimage.png'
+          src='/images/Careers/semi_bgimage.webp'
           alt='Background'
           fill
           className='object-cover object-top'
@@ -109,7 +109,7 @@ const HowWeHire = () => {
         <div className='flex justify-center px-4 overflow-x-auto no-scrollbar pb-4 md:pb-0'>
           <div className='relative w-full max-w-5xl min-w-[310px] md:min-w-0'>
             <Image
-              src='/images/Careers/wehire_bg.png'
+              src='/images/Careers/wehire_bg.webp'
               alt='How We Hire Process'
               width={1200}
               height={400}

@@ -5,16 +5,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-import imgAdvancedAnalytics from '../../../../public/images/solutions/dataStrategyEngineer/Advanced analytics.png';
-import imgCustomizedRoadmap from '../../../../public/images/solutions/dataStrategyEngineer/Customized data roadmap.png';
-import imgDataCompliance from '../../../../public/images/solutions/dataStrategyEngineer/Data compliance.png';
-import imgDataDiscovery from '../../../../public/images/solutions/dataStrategyEngineer/Data discovery.png';
-import imgDataMaturity from '../../../../public/images/solutions/dataStrategyEngineer/Data maturity identification.png';
-import imgDigitalTransformation from '../../../../public/images/solutions/dataStrategyEngineer/Digital transformation consulting.png';
-import imgITInfra from '../../../../public/images/solutions/dataStrategyEngineer/IT infra optimization.png';
-import imgObjectiveIdentification from '../../../../public/images/solutions/dataStrategyEngineer/Objective identification.png';
-import imgTailoredStrategies from '../../../../public/images/solutions/dataStrategyEngineer/Tailored data strategies.png';
-import imgTargetAudience from '../../../../public/images/solutions/dataStrategyEngineer/Target audience identification.png';
+import imgAdvancedAnalytics from '../../../../public/images/solutions/dataStrategyEngineer/Advanced analytics.webp';
+import imgCustomizedRoadmap from '../../../../public/images/solutions/dataStrategyEngineer/Customized data roadmap.webp';
+import imgDataCompliance from '../../../../public/images/solutions/dataStrategyEngineer/Data compliance.webp';
+import imgDataDiscovery from '../../../../public/images/solutions/dataStrategyEngineer/Data discovery.webp';
+import imgDataMaturity from '../../../../public/images/solutions/dataStrategyEngineer/Data maturity identification.webp';
+import imgDigitalTransformation from '../../../../public/images/solutions/dataStrategyEngineer/Digital transformation consulting.webp';
+import imgITInfra from '../../../../public/images/solutions/dataStrategyEngineer/IT infra optimization.webp';
+import imgObjectiveIdentification from '../../../../public/images/solutions/dataStrategyEngineer/Objective identification.webp';
+import imgTailoredStrategies from '../../../../public/images/solutions/dataStrategyEngineer/Tailored data strategies.webp';
+import imgTargetAudience from '../../../../public/images/solutions/dataStrategyEngineer/Target audience identification.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -128,7 +128,7 @@ const cards = [
 ];
 
 // Path to circle image
-const CIRCLE_IMAGE_PATH = '/images/solutions/dataStrategyEngineer/circle_image.png';
+const CIRCLE_IMAGE_PATH = '/images/solutions/dataStrategyEngineer/circle_image.webp';
 
 /* ---------------- COMPONENT ---------------- */
 

@@ -21,7 +21,7 @@ const TopBenefits = () => {
         {/* Background Image */}
         <div className='absolute inset-0 -z-10 bg-[#3B174A]'>
           <Image
-            src='/images/partners/domo/linesbg.png'
+            src='/images/partners/domo/linesbg.webp'
             alt='Success Background'
             fill
             className='object-cover opacity-100'

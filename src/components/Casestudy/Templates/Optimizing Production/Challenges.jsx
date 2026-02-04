@@ -87,7 +87,7 @@ export default function Challenges() {
           {/* Right Image - Absolutely Positioned */}
           <div className='absolute -top-44 -right-44 w-[400px] h-[500px] lg:w-[600px] lg:h-[700px] z-10'>
             <Image
-              src='/images/Templates/template6/mobile.png'
+              src='/images/Templates/template6/mobile.webp'
               alt='Scrap Pile'
               fill
               className='object-contain'

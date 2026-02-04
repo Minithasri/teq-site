@@ -8,7 +8,7 @@ const HomeTown = () => {
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='/images/Careers/home_bg1.png'
+          src='/images/Careers/home_bg1.webp'
           alt='Hometown Background'
           fill
           className='object-cover'

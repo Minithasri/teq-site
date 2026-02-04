@@ -6,7 +6,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='/images/Templates/template10/hero10.jpg'
+          src='/images/Templates/template10/hero10.webp'
           alt='Next Gen Knowledge Background'
           fill
           className='object-cover'

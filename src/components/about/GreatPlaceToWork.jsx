@@ -8,25 +8,25 @@ import { FiArrowRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 export default function GreatPlaceToWork() {
   const cards = [
     {
-      image: '/images/AboutUs/section41.png',
+      image: '/images/AboutUs/section41.webp',
       title: 'People First Culture',
       description:
         'We put people at the heart of everything we do. By valuing every team member and encouraging collaboration and continuous learning, we build trust, engagement, and long-term commitment.',
     },
     {
-      image: '/images/AboutUs/section42.png',
+      image: '/images/AboutUs/section42.webp',
       title: 'Inclusivity',
       description:
         'We embrace diversity and respect different perspectives. A culture of inclusion helps us foster creativity, strengthen collaboration, and drive meaningful innovation together.',
     },
     {
-      image: '/images/AboutUs/section43.png',
+      image: '/images/AboutUs/section43.webp',
       title: 'Innovation',
       description:
         'We encourage creative thinking and bold ideas. Our teams are empowered to explore new approaches and continuously improve our products and services.',
     },
     {
-      image: '/images/AboutUs/section44.png',
+      image: '/images/AboutUs/section44.webp',
       title: 'Growth & Development',
       description:
         'We invest in our people through training, mentorship, and career advancement opportunities. Your growth is our priority, and we support you every step of the way.',

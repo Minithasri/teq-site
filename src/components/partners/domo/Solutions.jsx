@@ -7,49 +7,49 @@ import { FiArrowRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 const solutionsData = [
   {
-    image: '/images/partners/domo/sd3.jpg',
+    image: '/images/partners/domo/sd3.webp',
     title: 'Domo for Manufacturing',
     description:
       'Incorporate data from your supply chain, manufacturing, IoT, and distribution channels to unearth valuable insights and enhance operational efficiency.',
     link: 'https://www.domo.com/industries/manufacturing',
   },
   {
-    image: '/images/partners/domo/sd2.jpg',
+    image: '/images/partners/domo/sd2.webp',
     title: 'Domo for Retail',
     description:
       'Merge data from diverse sources & systems spanning supply chain, retail operations, e-commerce, IoT & beyond to reveal insights, refine planning & execution processes.',
     link: 'https://www.domo.com/industries/retail',
   },
   {
-    image: '/images/partners/domo/sd1.jpg',
+    image: '/images/partners/domo/sd1.webp',
     title: 'Domo for Healthcare',
     description:
       'Incorporate and oversee data generated at every phase of the life sciences value chain to reveal insights and facilitate improved, expedited decision-making.',
     link: 'https://www.domo.com/industries/healthcare',
   },
   {
-    image: '/images/partners/domo/sd7.jpg',
+    image: '/images/partners/domo/sd7.webp',
     title: 'Domo for Enterprise',
     description:
       'Domo empowers users to centralize their data, allowing for the creation and maintenance of intuitive data pipelines.',
     link: 'https://www.domo.com/domo-for-enterprise',
   },
   {
-    image: '/images/partners/domo/sd4.jpg',
+    image: '/images/partners/domo/sd4.webp',
     title: 'Domo for Business',
     description:
       'Domo, an all-in-one platform that swiftly connects and transforms data from diverse sources into actionable insights enabling informed decision-making.',
     link: 'https://www.domo.com/domo-for-business',
   },
   {
-    image: '/images/partners/domo/sd6.jpg',
+    image: '/images/partners/domo/sd6.webp',
     title: 'Domo for AWS',
     description:
       'Domo for AWS takes your data experience to new heights, enabling seamless access, visualization, and collaboration on AWS data.',
     link: 'https://www.domo.com/partners/aws',
   },
   {
-    image: '/images/partners/domo/sd5.jpg',
+    image: '/images/partners/domo/sd5.webp',
     title: 'Domo for Snowflake',
     description:
       "Domo empowers business users to access real-time insights from anywhere. Domo's low-code custom app capabilities mean users can seamlessly act on Snowflake data.",

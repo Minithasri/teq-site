@@ -229,7 +229,7 @@ export const domoData = {
       title: 'Domo for Healthcare',
       description:
         'Transform healthcare delivery with real-time data insights. Improve patient outcomes, optimize operations, and ensure compliance with HIPAA regulations through secure data analytics.',
-      image: '/images/domo/DomoSolutions/Artboard3.png',
+      image: '/images/domo/DomoSolutions/Artboard3.webp',
       features: [
         'Patient Analytics',
         'Operational Efficiency',
@@ -241,7 +241,7 @@ export const domoData = {
       title: 'Domo for AWS',
       description:
         'Seamlessly integrate and analyze AWS data streams. Leverage cloud-native analytics to optimize costs, monitor performance, and drive innovation across your AWS ecosystem.',
-      image: '/images/domo/DomoSolutions/Artboard2.png',
+      image: '/images/domo/DomoSolutions/Artboard2.webp',
       features: [
         'Cost Optimization',
         'Performance Monitoring',
@@ -253,14 +253,14 @@ export const domoData = {
       title: 'Domo for Manufacturing',
       description:
         'Revolutionize manufacturing operations with IoT and predictive analytics. Enhance quality control, optimize supply chains, and enable predictive maintenance for maximum efficiency.',
-      image: '/images/domo/DomoSolutions/Artboard4.png',
+      image: '/images/domo/DomoSolutions/Artboard4.webp',
       features: ['IoT Monitoring', 'Quality Control', 'Supply Chain', 'Predictive Maintenance'],
     },
     {
       title: 'Domo for Enterprise',
       description:
         'Empower large organizations with scalable, secure data solutions. Drive digital transformation across departments with enterprise-grade governance and collaboration tools.',
-      image: '/images/domo/DomoSolutions/Artboard1.png',
+      image: '/images/domo/DomoSolutions/Artboard1.webp',
       features: [
         'Scalable Architecture',
         'Enterprise Security',
@@ -272,14 +272,14 @@ export const domoData = {
       title: 'Domo for Business',
       description:
         'Accelerate business growth with actionable insights. Make data-driven decisions faster with intuitive dashboards and self-service analytics for teams of all sizes.',
-      image: '/images/domo/DomoSolutions/Artboard5.png',
+      image: '/images/domo/DomoSolutions/Artboard5.webp',
       features: ['Quick Insights', 'Team Collaboration', 'Growth Analytics', 'Self-Service'],
     },
     {
       title: 'Domo for Retail',
       description:
         'Elevate retail performance with customer intelligence and inventory analytics. Understand buying patterns, optimize stock levels, and enhance customer experiences.',
-      image: '/images/domo/DomoSolutions/Artboard7.png',
+      image: '/images/domo/DomoSolutions/Artboard7.webp',
       features: [
         'Customer Analytics',
         'Inventory Management',
@@ -291,7 +291,7 @@ export const domoData = {
       title: 'Domo for Snowflake',
       description:
         "Unlock the full potential of your Snowflake data warehouse. Create powerful analytics workflows that leverage Snowflake's scalability and performance capabilities.",
-      image: '/images/domo/DomoSolutions/Artboard6.png',
+      image: '/images/domo/DomoSolutions/Artboard6.webp',
       features: ['Data Warehouse', 'Scalable Analytics', 'Real-time Insights', 'Snowflake Native'],
     },
   ],
@@ -306,7 +306,7 @@ export const domoData = {
     },
     {
       title: 'Automotive Retail',
-      src: '/images/domo/Automotive_Retail.png',
+      src: '/images/domo/Automotive_Retail.webp',
       description:
         'Sales performance analytics, vehicle inventory management, customer insights, and dealership performance tracking for automotive retail businesses.',
       features: [
@@ -318,14 +318,14 @@ export const domoData = {
     },
     {
       title: 'Custom App',
-      src: '/images/domo/customapp.png',
+      src: '/images/domo/customapp.webp',
       description:
         'Build and monitor custom business applications with real-time performance metrics, user engagement tracking, and application health monitoring.',
       features: ['Performance Metrics', 'User Engagement', 'App Health', 'Custom Analytics'],
     },
     {
       title: 'Service Monitoring',
-      src: '/images/domo/service_monitoring.png',
+      src: '/images/domo/service_monitoring.webp',
       description:
         'Monitor service performance, track response times, analyze customer satisfaction, and optimize service delivery operations across your organization.',
       features: [

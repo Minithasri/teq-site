@@ -87,7 +87,7 @@ export default function BusinessImpact() {
             {/* Back Image */}
             <div className='absolute -top-4 -right-32 w-[250px] h-[280px] z-10 opacity-90'>
               <Image
-                src='/images/Templates/template7/business2.png'
+                src='/images/Templates/template7/business2.webp'
                 alt='Dashboard Back'
                 fill
                 className='object-cover rounded-xl '
@@ -96,7 +96,7 @@ export default function BusinessImpact() {
             {/* Front Image */}
             <div className='absolute -top-1 -right-24 w-[380px] h-[230px] z-0'>
               <Image
-                src='/images/Templates/template7/business1.png'
+                src='/images/Templates/template7/business1.webp'
                 alt='Dashboard Front'
                 fill
                 className='object-cover rounded-xl '

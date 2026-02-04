@@ -21,7 +21,7 @@ const technologies = [
   },
   {
     icon: '/images/Templates/template9/tech4.svg',
-    bgIcon: '/images/Templates/technologyicons/Azure Data Factory1.png',
+    bgIcon: '/images/Templates/technologyicons/Azure Data Factory1.webp',
     name: 'Azure Data Factory',
     description: 'Integration of data from external systems for unified analytics',
   },
@@ -78,7 +78,7 @@ const Technology = () => {
       {/* Decorative Top Right Images */}
       <div className='absolute -top-40 -right-20 z-[60] w-[400px] md:w-[400px] overflow-visible'>
         <Image
-          src='/images/Templates/template9/right1.png'
+          src='/images/Templates/template9/right1.webp'
           alt='Decoration 1'
           width={400}
           height={300}
@@ -87,7 +87,7 @@ const Technology = () => {
       </div>
       <div className='absolute -top-20 right-48 z-50 w-[200px] md:w-[300px]'>
         <Image
-          src='/images/Templates/template9/right2.png'
+          src='/images/Templates/template9/right2.webp'
           alt='Decoration 2'
           width={300}
           height={200}

@@ -100,7 +100,7 @@ const WhyGwc = () => {
       <div className='absolute inset-0 w-full h-full flex items-center justify-start z-0'>
         <div className='relative w-[800px] h-[800px] -translate-x-1/4'>
           <Image
-            src='/images/HomePage/circle_big.png'
+            src='/images/HomePage/circle_big.webp'
             alt='Background Decoration'
             fill
             className='object-contain opacity-100'

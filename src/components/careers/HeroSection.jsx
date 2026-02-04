@@ -8,7 +8,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='/images/Careers/hero_main_bg.png'
+          src='/images/Careers/hero_main_bg.webp'
           alt='Background'
           fill
           className='object-cover'

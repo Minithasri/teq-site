@@ -6,7 +6,7 @@ const AgentCatalyst = () => {
     <div className='px-4 sm:px-6 md:px-8 lg:px-10 flex justify-center my-8 sm:my-12 md:my-16 lg:my-20 xl:my-[80px]'>
       <div className='bg-gradient-to-br from-[#7030B1] to-[#A545CC] rounded-2xl sm:rounded-[25px] relative overflow-hidden w-full max-w-[1200px]'>
         {/* Background Image */}
-        <div className="absolute inset-0 bg-[url('/images/AIMatters.jpg')] bg-cover bg-center opacity-40 rounded-2xl sm:rounded-[25px] z-10" />
+        <div className="absolute inset-0 bg-[url('/images/AIMatters.webp')] bg-cover bg-center opacity-40 rounded-2xl sm:rounded-[25px] z-10" />
 
         {/* CONTENT CONTAINER */}
         <div className='relative z-20 flex flex-col lg:flex-row h-auto min-h-[350px] sm:min-h-[400px] md:min-h-[450px] lg:h-[470px]'>

@@ -9,7 +9,7 @@ export default function Images() {
         {/* Center Background Image (Purple Dashboard) */}
         <div className='relative w-[90%] md:w-[70%] z-10 mx-auto'>
           <Image
-            src='/images/Templates/template2/new11.png'
+            src='/images/Templates/template2/new11.webp'
             alt='Main Dashboard Overview'
             width={1200}
             height={800}
@@ -20,7 +20,7 @@ export default function Images() {
         {/* Left Overlay Image (Production Report) */}
         <div className='absolute left-8 bottom-32 w-[50%] md:w-[40%] z-20'>
           <Image
-            src='/images/Templates/template2/new22.png'
+            src='/images/Templates/template2/new22.webp'
             alt='Line Production Report'
             width={800}
             height={600}
@@ -31,7 +31,7 @@ export default function Images() {
         {/* Right Overlay Image (Efficiency Report) */}
         <div className='absolute right-10 top-5 w-[50%] md:w-[40%] z-20'>
           <Image
-            src='/images/Templates/template2/new33.png'
+            src='/images/Templates/template2/new33.webp'
             alt='Efficiency Dashboard'
             width={800}
             height={600}

@@ -24,10 +24,10 @@ const features = [
 export default function Powerdata() {
   return (
     <section className='relative w-full py-20 overflow-hidden bg-white'>
-      {/* Background Image Layer - using Frame2.png as requested */}
+      {/* Background Image Layer - using Frame2.webp as requested */}
       <div className='absolute inset-0 pointer-events-none'>
         <Image
-          src='/images/partners/Snowflake/Frame2.png'
+          src='/images/partners/Snowflake/Frame2.webp'
           alt='Background Pattern'
           fill
           className='object-cover opacity-100'
@@ -42,14 +42,14 @@ export default function Powerdata() {
           </h2>
         </div>
 
-        {/* Central Image - img7.png */}
+        {/* Central Image - img7.webp */}
         <div className='flex justify-center mb-16'>
           <div
             className='relative rounded-3xl overflow-hidden'
             style={{ width: '670px', height: '270px' }}
           >
             <Image
-              src='/images/partners/Snowflake/img7.png'
+              src='/images/partners/Snowflake/img7.webp'
               alt='Snowflake Data Core'
               fill
               className='object-cover rounded-3xl'

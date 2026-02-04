@@ -46,7 +46,7 @@ const WhyBoomi = () => {
           <div className='absolute inset-0 flex justify-center items-center z-0'>
             <div className='relative w-[600px] h-[600px] md:w-[1000px] md:h-[1000px]'>
               <Image
-                src='/images/HomePage/circle_big.png'
+                src='/images/HomePage/circle_big.webp'
                 alt='Background Pattern'
                 fill
                 className='object-contain opacity-60'
@@ -57,7 +57,7 @@ const WhyBoomi = () => {
           {/* Main Image */}
           <div className='relative z-10 w-full max-w-[900px]'>
             <Image
-              src='/images/partners/boomi/img2.png'
+              src='/images/partners/boomi/img2.webp'
               alt='Boomi Ecosystem'
               width={900}
               height={500}

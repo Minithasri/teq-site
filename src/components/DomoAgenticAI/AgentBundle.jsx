@@ -6,7 +6,7 @@ const bundles = [
     title: 'Smart Retail Activation',
     subtitle: 'Fashion, Lifestyle, General Retail',
     icon: '/images/DomoPage/img1.svg',
-    image: '/images/DomoPage/image1.png',
+    image: '/images/DomoPage/image1.webp',
     subBundles: [
       {
         title: 'Promotions & Uplift Kit',
@@ -30,7 +30,7 @@ const bundles = [
     title: 'Manufacturing Intelligence',
     subtitle: 'Factory Operations, Maintenance, Procurement Teams',
     icon: '/images/DomoPage/img2.svg',
-    image: '/images/DomoPage/image2.png',
+    image: '/images/DomoPage/image2.webp',
     subBundles: [
       {
         title: 'Downtime & Maintenance Kit',
@@ -54,7 +54,7 @@ const bundles = [
     title: 'Digital Growth & Marketing Optimizer',
     subtitle: 'Digital Marketing, CRM, Growth Teams',
     icon: '/images/DomoPage/img3.svg',
-    image: '/images/DomoPage/image3.png',
+    image: '/images/DomoPage/image3.webp',
     subBundles: [
       {
         title: 'Performance Marketing Starter Kit',
@@ -78,7 +78,7 @@ const bundles = [
     title: 'Smart Frontline Sales Enablement',
     subtitle: 'SDRs, Sales Teams, Pre-Sales Operations',
     icon: '/images/DomoPage/img4.svg',
-    image: '/images/DomoPage/image4.png',
+    image: '/images/DomoPage/image4.webp',
     subBundles: [
       {
         title: 'SDR Acceleration Kit',
@@ -102,7 +102,7 @@ const bundles = [
     title: 'Food & Beverage SmartOps',
     subtitle: 'QSRs, Restaurant Chains, Food Service Ops',
     icon: '/images/DomoPage/img5.svg',
-    image: '/images/DomoPage/image5.png',
+    image: '/images/DomoPage/image5.webp',
     subBundles: [
       {
         title: 'Menu Growth Kit',
@@ -121,7 +121,7 @@ const bundles = [
     title: 'Logistics & Supply Chain Optimizer',
     subtitle: 'Logistics Teams, Delivery Managers, Warehouse Ops',
     icon: '/images/DomoPage/img6.svg',
-    image: '/images/DomoPage/image6.png',
+    image: '/images/DomoPage/image6.webp',
     subBundles: [
       {
         title: 'Transport Efficiency Pack',
@@ -140,7 +140,7 @@ const bundles = [
     title: 'IT Services & Enterprise Support',
     subtitle: 'Enterprise IT, HR Operations, Support Teams',
     icon: '/images/DomoPage/img7.svg',
-    image: '/images/DomoPage/image7.png',
+    image: '/images/DomoPage/image7.webp',
     subBundles: [
       {
         title: 'Incident & SLA Kit',
@@ -164,7 +164,7 @@ const bundles = [
     title: 'Real Estate Intelligence',
     subtitle: 'Property Managers, Leasing Teams',
     icon: '/images/DomoPage/img8.svg',
-    image: '/images/DomoPage/image8.png',
+    image: '/images/DomoPage/image8.webp',
     subBundles: [
       {
         title: 'Smart Real Estate Pack',

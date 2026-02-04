@@ -14,7 +14,7 @@ export default function ClientOverview() {
           {/* Desktop Overlay Image */}
           <div className='hidden lg:block absolute -right-10 -top-32 z-20 w-[500px] h-[350px] shadow-xl rounded-xl overflow-hidden'>
             <Image
-              src='/images/Templates/template1/hero1.png'
+              src='/images/Templates/template1/hero1.webp'
               alt='Die Casting Manufacturing'
               fill
               className='object-cover'
@@ -82,7 +82,7 @@ export default function ClientOverview() {
           {/* Mobile Image */}
           <div className='lg:hidden mt-8 rounded-xl overflow-hidden shadow-md'>
             <Image
-              src='/images/Templates/template1/hero1.png'
+              src='/images/Templates/template1/hero1.webp'
               alt='Die Casting Manufacturing'
               width={600}
               height={400}

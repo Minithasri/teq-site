@@ -32,7 +32,7 @@ const SmartAutomation = () => {
           <div className='w-full lg:w-1/2 flex justify-center'>
             <div className='relative w-full max-w-[500px] aspect-square'>
               <Image
-                src='/images/partners/boomi/bleft1.png'
+                src='/images/partners/boomi/bleft1.webp'
                 alt='Smart Automation Illustration'
                 fill
                 className='object-contain'

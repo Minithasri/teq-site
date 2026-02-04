@@ -17,8 +17,8 @@ const bannerContent = {
     'Discover the full potential of your data through our innovative business intelligence & analytics solutions',
   ctaText: 'Get in touch',
   images: {
-    background: '/images/solutions/Hero section BG.jpg',
-    illustration: '/images/solutions/heroimages/BI Migration & Modernization.png',
+    background: '/images/solutions/Hero section BG.webp',
+    illustration: '/images/solutions/heroimages/BI Migration & Modernization.webp',
   },
 };
 

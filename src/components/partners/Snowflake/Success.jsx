@@ -16,7 +16,7 @@ const cards = [
       "We implement cost-effective solutions by leveraging Snowflake's separation of storage & compute resources, resulting in optimized resource utilization & cost savings.",
   },
   {
-    image: '/images/partners/Snowflake/img3.png',
+    image: '/images/partners/Snowflake/img3.webp',
     title: 'Data Modeling Excellence',
     description:
       'We design & implement highly efficient & scalable data models in Snowflake, enhancing data organization & accessibility for analytics & reporting.',

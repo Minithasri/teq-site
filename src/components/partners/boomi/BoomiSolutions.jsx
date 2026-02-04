@@ -18,7 +18,7 @@ const solutions = [
     cardTitle: 'Manufacturing',
     description:
       'Boomi displays real-time visibility for instant collaboration with suppliers and active product tracking. Gain real-time visibility across the entire supply chain ecosystem. Identify problems in material procurement and product shipping faster for quicker resolution. Meet customer expectations with automated workflows that provide closer collaboration with suppliers and partners.',
-    image: '/images/partners/boomi/last_image2.png',
+    image: '/images/partners/boomi/last_image2.webp',
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const solutions = [
     cardTitle: 'Financial Services',
     description:
       'Modernize your organization by adepting a cloud-first strategy. Migrate to public, private and hybrid clouds to drive down cost. Streamline your application modernization approach for a faster delivery timeline. Connect disparate systems enabling you to adopt a modern data strategy approach. Automate processes and workflows to drive business agility, increasing time to value.',
-    image: '/images/partners/boomi/last_image3.png',
+    image: '/images/partners/boomi/last_image3.webp',
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const solutions = [
     cardTitle: 'Retail',
     description:
       'Improve the performance and sell through of your product. Build confidence in data with a self-service single view. Improve cash flow and margin optimization. Create greater accountability across business departments.',
-    image: '/images/partners/boomi/last_image4.png',
+    image: '/images/partners/boomi/last_image4.webp',
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const solutions = [
     cardTitle: 'Public Sector',
     description:
       "Boomi is committed to help public sector organizations break down data silos to enhance information flow, improve citizen services, and increase operational effectiveness. The secure and compliant Boomi Atomosphere Platform enables you to modernize legacy infrastructure and harness the power of the cloud to overcome today's challenges for tomorrow's innovation.",
-    image: '/images/partners/boomi/last_image5.png',
+    image: '/images/partners/boomi/last_image5.webp',
   },
   {
     id: 6,
@@ -50,7 +50,7 @@ const solutions = [
     cardTitle: 'Education',
     description:
       'Higher education is in flux. With student enrollment fluctuating, classroom locations diversifying, and many employees requiring remote presence, there is no time to waste significant personnel and budget on custom-coded processes to optimize brittle and complex technology stacks. With Boomi, organizations can build a resilient campus experience that connects everyone, anything, anywhere.',
-    image: '/images/partners/boomi/last_image6.png', // Placeholder
+    image: '/images/partners/boomi/last_image6.webp', // Placeholder
   },
 ];
 

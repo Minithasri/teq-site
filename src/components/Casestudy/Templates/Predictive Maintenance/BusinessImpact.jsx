@@ -45,7 +45,7 @@ export default function BusinessImpact() {
       {/* Decorative Background Image - Top Right */}
       <div className='absolute -top-28 right-44 w-[500px] h-[400px] pointer-events-none z-0'>
         <Image
-          src='/images/Templates/template4/lastsectionbg.png'
+          src='/images/Templates/template4/lastsectionbg.webp'
           alt='Growth Arrow'
           fill
           className='object-contain lg:object-right-top'

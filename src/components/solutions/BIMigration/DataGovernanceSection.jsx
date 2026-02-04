@@ -5,16 +5,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-import imgAssessmentPlanning from '../../../../public/images/solutions/bimigration/Assessment_and_Planning.png';
-import imgDataInventory from '../../../../public/images/solutions/bimigration/Data_Inventry_and_Analysis.png';
-import imgDataMigration from '../../../../public/images/solutions/bimigration/Data_Migration.png';
-import imgDeployment from '../../../../public/images/solutions/bimigration/Deployment.png';
-import imgIntegration from '../../../../public/images/solutions/bimigration/Integration_with_Existing_Systems.png';
-import imgPostMigration from '../../../../public/images/solutions/bimigration/Post-Migration_Optimization.png';
-import imgReportDashboard from '../../../../public/images/solutions/bimigration/Report_and_Dashboard_Migration.png';
-import imgSecurity from '../../../../public/images/solutions/bimigration/Security_and_Access_Control.png';
-import imgTesting from '../../../../public/images/solutions/bimigration/Testing_and_Quality_Assurance.png';
-import imgTraining from '../../../../public/images/solutions/bimigration/Training_and_Change_Management.png';
+import imgAssessmentPlanning from '../../../../public/images/solutions/bimigration/Assessment_and_Planning.webp';
+import imgDataInventory from '../../../../public/images/solutions/bimigration/Data_Inventry_and_Analysis.webp';
+import imgDataMigration from '../../../../public/images/solutions/bimigration/Data_Migration.webp';
+import imgDeployment from '../../../../public/images/solutions/bimigration/Deployment.webp';
+import imgIntegration from '../../../../public/images/solutions/bimigration/Integration_with_Existing_Systems.webp';
+import imgPostMigration from '../../../../public/images/solutions/bimigration/Post-Migration_Optimization.webp';
+import imgReportDashboard from '../../../../public/images/solutions/bimigration/Report_and_Dashboard_Migration.webp';
+import imgSecurity from '../../../../public/images/solutions/bimigration/Security_and_Access_Control.webp';
+import imgTesting from '../../../../public/images/solutions/bimigration/Testing_and_Quality_Assurance.webp';
+import imgTraining from '../../../../public/images/solutions/bimigration/Training_and_Change_Management.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 

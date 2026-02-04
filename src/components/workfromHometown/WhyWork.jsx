@@ -11,31 +11,31 @@ const cards = [
     title: 'Work-Life Harmony',
     description:
       'Embrace a balanced lifestyle with Work from Hometown, looking forward to lengthy commutes and integrate your professional and personal life, prioritizing what matters most to you.',
-    image: '/images/wFH/wfhimg1.png',
+    image: '/images/wFH/wfhimg1.webp',
   },
   {
     title: 'Cost Savings',
     description:
       'Enjoy significant cost savings as urban office expenses become a thing of the past. Contribute to your local economy while enjoying a more affordable and comfortable work environment.',
-    image: '/images/wFH/wfhimg2.png',
+    image: '/images/wFH/wfhimg2.webp',
   },
   {
     title: 'Local Talent Empowerment',
     description:
       'Our initiative creates job opportunities, fueling economic growth in regions often overlooked in the corporate landscape. This way, we empower local talent in tier 2 and 3 cities.',
-    image: '/images/wFH/wfhimg3.png',
+    image: '/images/wFH/wfhimg3.webp',
   },
   {
     title: 'Innovation & Collaboration',
     description:
       'Unleash the power of diverse perspectives and innovative ideas from various locations. Our robust digital infrastructure ensures seamless communication, making teamwork effortless.',
-    image: '/images/wFH/wfhimg4.png',
+    image: '/images/wFH/wfhimg4.webp',
   },
   {
     title: 'Community Connection',
     description:
       'Strengthen ties within your local community while contributing to a global mission. Participate in local events, dinner and inclusive remote work. ',
-    image: '/images/wFH/wfhimg5.png',
+    image: '/images/wFH/wfhimg5.webp',
   },
   {
     title: 'Increased Job Satisfaction',
@@ -52,7 +52,7 @@ const WhyWork = () => {
       <div className='absolute inset-0 w-full h-full flex items-center justify-start z-0'>
         <div className='relative w-[1200px] h-[1200px] -translate-x-1/4 -mt-40'>
           <Image
-            src='/images/HomePage/circle_big.png'
+            src='/images/HomePage/circle_big.webp'
             alt='Background Decoration'
             fill
             className='object-contain opacity-100'

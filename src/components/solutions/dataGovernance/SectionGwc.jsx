@@ -15,7 +15,7 @@ const governanceContent = {
     },
     {
       id: 'center',
-      image: '/images/solutions/datagoverance/center_img.png',
+      image: '/images/solutions/datagoverance/center_img.webp',
     },
     {
       id: 'right',
@@ -25,7 +25,7 @@ const governanceContent = {
       icon: '/images/solutions/icon.png',
     },
   ],
-  background: '/images/solutions/Second section BG.jpg',
+  background: '/images/solutions/Second section BG.webp',
 };
 
 export default function SectionGwc() {

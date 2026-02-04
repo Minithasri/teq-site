@@ -78,7 +78,7 @@ export default function Technology() {
           {/* Back Image */}
           <div className='absolute bottom-0 right-0 w-[550px] h-[400px]'>
             <Image
-              src='/images/Templates/template3/rightimgs1.png'
+              src='/images/Templates/template3/rightimgs1.webp'
               alt='Dashboard View 1'
               fill
               className='object-contain'
@@ -87,7 +87,7 @@ export default function Technology() {
           {/* Front Image (Overlay) */}
           <div className='absolute -bottom-32 right-[5%] w-[400px] h-[500px]'>
             <Image
-              src='/images/Templates/template3/rightimgs2.png'
+              src='/images/Templates/template3/rightimgs2.webp'
               alt='Dashboard View 2'
               fill
               className='object-contain'
@@ -99,7 +99,7 @@ export default function Technology() {
         <div className='lg:hidden w-full h-[250px] relative -mb-10'>
           <div className='absolute inset-0'>
             <Image
-              src='/images/Templates/template3/rightimgs1.png'
+              src='/images/Templates/template3/rightimgs1.webp'
               alt='Dashboard View Mobile'
               fill
               className='object-contain'

@@ -65,7 +65,7 @@ const Philosophy = () => {
           {/* Left: Image */}
           <div className='flex justify-center sticky top-24'>
             <Image
-              src='/images/Philosophy.png'
+              src='/images/Philosophy.webp'
               alt='Development Philosophy'
               width={500}
               height={500}
@@ -131,7 +131,7 @@ const Philosophy = () => {
           {/* Top Image */}
           <div className='flex justify-center'>
             <Image
-              src='/images/Philosophy.png'
+              src='/images/Philosophy.webp'
               alt='Development Philosophy'
               width={350}
               height={350}

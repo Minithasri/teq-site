@@ -11,31 +11,31 @@ const cards = [
     title: 'Symphonic Team',
     description:
       'Our team of Certified Architects and Data Engineers ensures that your GCP Managed services requirements are handled effectively.',
-    image: '/images/partners/google-cloud/google1.png',
+    image: '/images/partners/google-cloud/google1.webp',
   },
   {
     title: 'Proactive Infrastructure Management',
     description:
       'Leverage our expertise to ensure your GCP infrastructure is optimized for performance, security, and cost efficiency.',
-    image: '/images/partners/google-cloud/google2.png',
+    image: '/images/partners/google-cloud/google2.webp',
   },
   {
     title: 'IoT Integration with Google Cloud',
     description:
       'Transform machine data into actionable insights with GCP integration into IoT hardware designed by us.',
-    image: '/images/partners/google-cloud/google3.png',
+    image: '/images/partners/google-cloud/google3.webp',
   },
   {
     title: 'Cost Optimization',
     description:
       'We help you maximize cost savings by identifying and eliminating inefficiencies in your GCP usage, ensuring you only pay for what you need.',
-    image: '/images/partners/google-cloud/google4.png',
+    image: '/images/partners/google-cloud/google4.webp',
   },
   {
     title: 'Security and Compliance',
     description:
       'Trust in our expertise in using GCP’s security measures and compliance practices, keeping your data safe and meeting industry standards.',
-    image: '/images/partners/google-cloud/google5.png',
+    image: '/images/partners/google-cloud/google5.webp',
   },
   {
     title: 'Real time Monitoring',

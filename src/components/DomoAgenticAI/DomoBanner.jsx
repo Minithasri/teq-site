@@ -8,7 +8,7 @@ const DomoBanner = () => {
       {/* HERO BACKGROUND IMAGE */}
       <div className='absolute inset-0 -z-10'>
         <Image
-          src='/images/solutions/Hero section BG.jpg'
+          src='/images/solutions/Hero section BG.webp'
           alt=''
           fill
           priority
@@ -60,7 +60,7 @@ const DomoBanner = () => {
         <div className='w-full max-w-7xl mx-auto'>
           <div className='relative h-[300px] md:h-[400px] lg:h-[450px] rounded-[16px] overflow-hidden shadow-lg'>
             <Image
-              src='/images/DomoPage/dframe1.png'
+              src='/images/DomoPage/dframe1.webp'
               alt='Domo Banner'
               fill
               className='object-cover'

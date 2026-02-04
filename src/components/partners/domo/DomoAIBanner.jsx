@@ -7,7 +7,7 @@ const domoPlatforms = [
   {
     title: 'Overview',
     iconPath: '/images/partners/domo/Overview.png',
-    image: '/images/partners/domo/1.png',
+    image: '/images/partners/domo/1.webp',
     description:
       "Unite your diverse ecosystem of applications and systems with Domo's intuitive integration capabilities. Design and deploy integrations effortlessly with Domo's drag and drop interface.",
     outputs: [
@@ -20,7 +20,7 @@ const domoPlatforms = [
   {
     title: 'App Creation',
     iconPath: '/images/partners/domo/app creation.png',
-    image: '/images/partners/domo/2.png',
+    image: '/images/partners/domo/2.webp',
     description:
       "Optimize decision-making through Domo's low-code and pro-code apps. Catalyze innovation and enhance efficiencies, enabling your organization to effortlessly convert data into actionable intelligence.",
     outputs: [
@@ -33,7 +33,7 @@ const domoPlatforms = [
   {
     title: 'BI & Analytics',
     iconPath: '/images/partners/domo/BI and analytics.png',
-    image: '/images/partners/domo/3.png',
+    image: '/images/partners/domo/3.webp',
     description:
       'Facilitate quick and informed decision-making for diverse users with our intuitive custom data views and reporting functionalities.',
     outputs: [
@@ -46,7 +46,7 @@ const domoPlatforms = [
   {
     title: 'Data Foundation',
     iconPath: '/images/partners/domo/data foundation.png',
-    image: '/images/partners/domo/4.png',
+    image: '/images/partners/domo/4.webp',
     description:
       'Leverage our Domo solutions to establish an advanced Data Foundation, serving as the framework for the continuous progress of your business.',
     outputs: [

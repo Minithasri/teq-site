@@ -101,7 +101,7 @@ export default function Technology() {
           {/* Main Back Image */}
           <div className='absolute top-0 left-0 right-0 h-full w-full rounded-2xl overflow-hidden'>
             <Image
-              src='/images/Templates/template5/temp41.png'
+              src='/images/Templates/template5/temp41.webp'
               alt='Dashboard Main'
               fill
               className='object-cover'
@@ -111,7 +111,7 @@ export default function Technology() {
           {/* Overlapping Front Image */}
           <div className='absolute bottom-[-20%] right-[-5%] lg:right-[-10%] w-[55%] h-[70%] rounded-2xl overflow-hidden drop-shadow-xl z-30'>
             <Image
-              src='/images/Templates/template5/temp42.png'
+              src='/images/Templates/template5/temp42.webp'
               alt='Dashboard Detail'
               fill
               className='object-cover'

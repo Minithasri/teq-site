@@ -5,16 +5,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-import img1 from '../../../../public/images/solutions/datagoverance/imgi_4_Audit.png';
-import img2 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Access.png';
-import img3 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Classification.png';
-import img5 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Governance_Training.png';
-import img4 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Lifecycle.png';
-import img7 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Privacy.png';
-import img10 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Quality.png';
-import img8 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Risk.png';
-import img6 from '../../../../public/images/solutions/datagoverance/imgi_4_Governance.png';
-import img9 from '../../../../public/images/solutions/datagoverance/imgi_4_Metadata.png';
+import img1 from '../../../../public/images/solutions/datagoverance/imgi_4_Audit.webp';
+import img2 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Access.webp';
+import img3 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Classification.webp';
+import img5 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Governance_Training.webp';
+import img4 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Lifecycle.webp';
+import img7 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Privacy.webp';
+import img10 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Quality.webp';
+import img8 from '../../../../public/images/solutions/datagoverance/imgi_4_Data_Risk.webp';
+import img6 from '../../../../public/images/solutions/datagoverance/imgi_4_Governance.webp';
+import img9 from '../../../../public/images/solutions/datagoverance/imgi_4_Metadata.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 

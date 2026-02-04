@@ -8,7 +8,7 @@ export default function Challenges() {
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='/images/Templates/template2/section2bg.png'
+          src='/images/Templates/template2/section2bg.webp'
           alt='Circuit Background'
           fill
           className='object-cover scale-105'

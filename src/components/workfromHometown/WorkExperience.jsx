@@ -32,7 +32,7 @@ const WorkExperience = () => {
           }}
         >
           <Image
-            src='/images/WFH/expimg1.png'
+            src='/images/WFH/expimg1.webp'
             alt='Revolutionizing Work Experience'
             fill
             className='object-cover'

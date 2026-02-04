@@ -36,9 +36,9 @@ export default function Technology() {
 
   const floatingIcons = [
     '/images/Templates/technologyicons/Power automate.png',
-    '/images/Templates/technologyicons/Azure Data Factory1.png',
+    '/images/Templates/technologyicons/Azure Data Factory1.webp',
     '/images/Templates/technologyicons/SQL server.png',
-    '/images/Templates/template6/tech4.png',
+    '/images/Templates/template6/tech4.webp',
   ];
 
   return (

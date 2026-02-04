@@ -17,7 +17,7 @@ export default function LocationsSection() {
       id: 2,
       name: 'United Kingdom',
       address: '11 Grove Cl Road, Essex SS6 8QU, United Kingdom',
-      image: '/images/ContactUs/uk.jpeg',
+      image: '/images/ContactUs/uk.webp',
       mapLink: 'https://maps.google.com',
     },
     {
@@ -73,7 +73,7 @@ export default function LocationsSection() {
       id: 10,
       name: 'Kolkata',
       address: 'Level 3, Godrej Waterside, Sector V, Salt Lake, Kolkata, WB 700091',
-      image: '/images/ContactUs/kolkata.jpg',
+      image: '/images/ContactUs/kolkata.webp',
       mapLink: 'https://maps.google.com',
     },
   ];

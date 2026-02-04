@@ -14,7 +14,7 @@ const DomoAgenticAI = () => {
           >
             <div className='absolute inset-0 z-0'>
               <img
-                src='/images/DomoAgenticAI.jpg'
+                src='/images/DomoAgenticAI.webp'
                 alt='Background'
                 className='w-full h-full object-cover opacity-20'
               />
@@ -117,7 +117,7 @@ const DomoAgenticAI = () => {
             <div
               className='relative w-full rounded-[16px] lg:rounded-[24px] overflow-hidden flex flex-col justify-end p-6 sm:p-8 lg:p-10 min-h-[300px] lg:min-h-[400px]'
               style={{
-                backgroundImage: 'url(/images/DomoPage/right_side_image.png)',
+                backgroundImage: 'url(/images/DomoPage/right_side_image.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',

@@ -21,7 +21,7 @@ const DesignSection = () => {
         <div className='relative w-full mb-8 lg:mb-12 flex justify-center px-4'>
           <div className='relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl w-full max-w-[1240px] h-[180px] sm:h-[220px] md:h-[260px]'>
             <Image
-              src='/images/Careers/bg_employee.png'
+              src='/images/Careers/bg_employee.webp'
               alt='GWC Team'
               fill
               className='object-cover rounded-2xl md:rounded-3xl'

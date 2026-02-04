@@ -16,8 +16,8 @@ const bannerContent = {
     'At GWC, we offer expertise in Boomi, a leading integration platform designed to connect applications, data, automation, and devices seamlessly.',
   ctaText: 'Get in touch',
   images: {
-    background: '/images/partners/boomi/hero_bg_partner.png',
-    illustration: '/images/partners/boomi/hero_boomi.png',
+    background: '/images/partners/boomi/hero_bg_partner.webp',
+    illustration: '/images/partners/boomi/hero_boomi.webp',
   },
 };
 

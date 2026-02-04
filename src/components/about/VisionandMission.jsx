@@ -9,7 +9,7 @@ export default function VisionandMission() {
       {/* Center Background Circle */}
       <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] -z-0 opacity-100 pointer-events-none'>
         <Image
-          src='/images/HomePage/circle_big.png'
+          src='/images/HomePage/circle_big.webp'
           alt='Background Circle'
           fill
           className='object-contain'
@@ -75,7 +75,7 @@ export default function VisionandMission() {
             {/* Top Image Card */}
             <div className='relative rounded-3xl overflow-hidden shadow-xl w-full lg:w-[704px] h-[250px] sm:h-[300px] lg:h-[400px]'>
               <Image
-                src='/images/AboutUs/section2image.png'
+                src='/images/AboutUs/section2image.webp'
                 alt='Vision Target'
                 fill
                 className='object-cover'

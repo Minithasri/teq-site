@@ -5,16 +5,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-import imgApplicationMigration from '../../../../public/images/solutions/cloudtransformation/imgi_4_Application Migration.png';
-import imgCompliance from '../../../../public/images/solutions/cloudtransformation/imgi_4_Compliance Management.png';
-import imgCustomAI from '../../../../public/images/solutions/cloudtransformation/imgi_4_Custom AI Solutions.png';
-import imgDataGovernance from '../../../../public/images/solutions/cloudtransformation/imgi_4_Data Governance.png';
-import imgDataMigration from '../../../../public/images/solutions/cloudtransformation/imgi_4_Data Migration.png';
-import imgDataAnalytics from '../../../../public/images/solutions/cloudtransformation/imgi_4_Data _ Analytics Solutions.png';
-import imgIntegrateHybrid from '../../../../public/images/solutions/cloudtransformation/imgi_4_Integrate Hybrid Solutions.png';
-import imgOperateOptimize from '../../../../public/images/solutions/cloudtransformation/imgi_4_Operate _ Optimize Dev Capabilities.png';
-import imgSetupSecurity from '../../../../public/images/solutions/cloudtransformation/imgi_4_Setup _ Optimize Security Operations.png';
-import imgTransformCloud from '../../../../public/images/solutions/cloudtransformation/imgi_4_Transform Cloud Operations.png';
+import imgApplicationMigration from '../../../../public/images/solutions/cloudtransformation/imgi_4_Application Migration.webp';
+import imgCompliance from '../../../../public/images/solutions/cloudtransformation/imgi_4_Compliance Management.webp';
+import imgCustomAI from '../../../../public/images/solutions/cloudtransformation/imgi_4_Custom AI Solutions.webp';
+import imgDataGovernance from '../../../../public/images/solutions/cloudtransformation/imgi_4_Data Governance.webp';
+import imgDataMigration from '../../../../public/images/solutions/cloudtransformation/imgi_4_Data Migration.webp';
+import imgDataAnalytics from '../../../../public/images/solutions/cloudtransformation/imgi_4_Data _ Analytics Solutions.webp';
+import imgIntegrateHybrid from '../../../../public/images/solutions/cloudtransformation/imgi_4_Integrate Hybrid Solutions.webp';
+import imgOperateOptimize from '../../../../public/images/solutions/cloudtransformation/imgi_4_Operate _ Optimize Dev Capabilities.webp';
+import imgSetupSecurity from '../../../../public/images/solutions/cloudtransformation/imgi_4_Setup _ Optimize Security Operations.webp';
+import imgTransformCloud from '../../../../public/images/solutions/cloudtransformation/imgi_4_Transform Cloud Operations.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 

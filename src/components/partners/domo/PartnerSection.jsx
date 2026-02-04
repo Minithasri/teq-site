@@ -11,8 +11,8 @@ const teamImages = [
   '/images/partners/domo/team5.webp',
   '/images/partners/domo/team6.webp',
   '/images/partners/domo/team7.webp',
-  '/images/partners/domo/team8.jpeg',
-  '/images/partners/domo/team9.jpeg',
+  '/images/partners/domo/team8.webp',
+  '/images/partners/domo/team9.webp',
 ];
 
 export default function PartnerSection() {
@@ -57,7 +57,7 @@ export default function PartnerSection() {
                 <div className='flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 mt-8'>
                   <div className='w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] relative transition-transform hover:scale-105'>
                     <Image
-                      src='/images/partners/domo/circle1.png'
+                      src='/images/partners/domo/circle1.webp'
                       alt='Platform Accreditation'
                       fill
                       className='object-contain'
@@ -65,7 +65,7 @@ export default function PartnerSection() {
                   </div>
                   <div className='w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] relative transition-transform hover:scale-105'>
                     <Image
-                      src='/images/partners/domo/circle2.png'
+                      src='/images/partners/domo/circle2.webp'
                       alt='Professional Services Certification'
                       fill
                       className='object-contain'
@@ -73,7 +73,7 @@ export default function PartnerSection() {
                   </div>
                   <div className='w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] relative transition-transform hover:scale-105'>
                     <Image
-                      src='/images/partners/domo/circle3.png'
+                      src='/images/partners/domo/circle3.webp'
                       alt='Technical Consultant Certification'
                       fill
                       className='object-contain'

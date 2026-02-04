@@ -50,7 +50,7 @@ export default function CoreSolutions() {
             {/* Core 1 - Hand/Idea Image */}
             <div className='absolute -left-64 -bottom-20 w-[450px] h-[400px] z-0'>
               <Image
-                src='/images/Templates/template7/core1.png'
+                src='/images/Templates/template7/core1.webp'
                 alt='Concept'
                 fill
                 className='object-contain'
@@ -59,7 +59,7 @@ export default function CoreSolutions() {
             {/* Core 2 - Dashboard Interface */}
             <div className='absolute right-0 top-8 w-[350px] lg:w-[450px] h-[220px] shadow-xl rounded-xl overflow-hidden border-2 border-white z-0'>
               <Image
-                src='/images/Templates/template7/core2.png'
+                src='/images/Templates/template7/core2.webp'
                 alt='Dashboard Interface'
                 fill
                 className='object-cover'

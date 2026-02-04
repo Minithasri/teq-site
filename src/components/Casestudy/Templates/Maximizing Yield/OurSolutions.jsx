@@ -43,7 +43,7 @@ export default function OurSolutions() {
           {/* Adjust positions to match hanging bulbs */}
           <div className='absolute top-10 -right-2 w-72 h-52'>
             <Image
-              src='/images/Templates/template2/bulb1.png'
+              src='/images/Templates/template2/bulb1.webp'
               alt='bulb'
               fill
               className='object-contain'
@@ -51,7 +51,7 @@ export default function OurSolutions() {
           </div>
           <div className='absolute top-44 -right-8 w-72 h-52'>
             <Image
-              src='/images/Templates/template2/bulb2.png'
+              src='/images/Templates/template2/bulb2.webp'
               alt='bulb'
               fill
               className='object-contain'
@@ -95,7 +95,7 @@ export default function OurSolutions() {
           {/* Decorative Diagrams (Bulb 3 & 4) */}
           <div className='hidden lg:block absolute -top-24 left-0 w-32 h-32 opacity-80'>
             <Image
-              src='/images/Templates/template2/bulb3.png'
+              src='/images/Templates/template2/bulb3.webp'
               alt='Diagram Left'
               fill
               className='object-contain'
@@ -103,7 +103,7 @@ export default function OurSolutions() {
           </div>
           <div className='hidden lg:block absolute -top-24 right-0 w-32 h-32 opacity-80'>
             <Image
-              src='/images/Templates/template2/bulb4.png'
+              src='/images/Templates/template2/bulb4.webp'
               alt='Diagram Right'
               fill
               className='object-contain'

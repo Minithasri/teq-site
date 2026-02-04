@@ -9,7 +9,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className='absolute inset-0 -z-10'>
         <Image
-          src='/images/AboutUs/aboutus_hero.png'
+          src='/images/AboutUs/aboutus_hero.webp'
           alt='GWC Team'
           fill
           priority

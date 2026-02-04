@@ -16,8 +16,8 @@ const bannerContent = {
     'Unlock the full potential of Google Cloud to solve real business challenges and accelerate data powered digital transformation.',
   ctaText: 'Get in touch',
   images: {
-    background: '/images/partners/google-cloud/hero_bg_partner.png',
-    illustration: '/images/partners/google-cloud/google_hero.png',
+    background: '/images/partners/google-cloud/hero_bg_partner.webp',
+    illustration: '/images/partners/google-cloud/google_hero.webp',
   },
 };
 
@@ -72,7 +72,7 @@ export default function HeroSection() {
         <div className='grid grid-cols-1 lg:grid-cols-[55%_45%] items-center gap-12 lg:gap-16'>
           {/* Left Content */}
           <div>
-            <h1 className='text-[36px] md:text-[48px] font-bold text-white leading-tight mb-6'>
+            <h1 className='text-[28px] md:text-[42px] font-bold text-white leading-tight max-w-xl mb-6'>
               {bannerContent.title}
             </h1>
 

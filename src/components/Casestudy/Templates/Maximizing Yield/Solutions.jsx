@@ -48,7 +48,7 @@ export default function Solutions() {
           {/* Floating Chart Image */}
           <div className='hidden lg:block absolute right-0 -top-8 w-[500px] h-[300px] pointer-events-none z-0'>
             <Image
-              src='/images/Templates/template2/sec31.png'
+              src='/images/Templates/template2/sec31.webp'
               alt='Analytics Dashboard'
               fill
               className='object-contain object-right-top'

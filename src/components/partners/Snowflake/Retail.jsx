@@ -135,7 +135,7 @@ const industryData = {
     ],
   },
   default: {
-    image: '/images/partners/Snowflake/Retail.png',
+    image: '/images/partners/Snowflake/Retail.webp',
     items: [],
   },
 };
@@ -150,7 +150,7 @@ export default function Retail() {
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='/images/Careers/bestpath_image.png'
+          src='/images/Careers/bestpath_image.webp'
           alt='Background'
           fill
           className='object-cover'

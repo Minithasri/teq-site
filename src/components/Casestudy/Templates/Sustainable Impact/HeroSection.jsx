@@ -7,7 +7,7 @@ export default function HeroSection() {
       <div
         className='absolute inset-0 z-0'
         style={{
-          background: `linear-gradient(180deg, #085E12E5 0%, #F6F6F6 100%), url('/images/Templates/template7/bg7.png') center/cover no-repeat`,
+          background: `linear-gradient(180deg, #085E12E5 0%, #F6F6F6 100%), url('/images/Templates/template7/bg7.webp') center/cover no-repeat`,
         }}
       />
 

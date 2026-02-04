@@ -50,7 +50,7 @@ export function generateStructuredData({
     name: name || 'GWC Data AI',
     description: description || 'Agentic AI and Data Analytics Solutions',
     url: url || baseUrl,
-    logo: logo || `${baseUrl}/icons/icon-512.png`,
+    logo: logo || `${baseUrl}/icons/icon-512.webp`,
     sameAs: sameAs,
   };
 

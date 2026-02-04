@@ -24,7 +24,7 @@ export default function Quantitative() {
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='/images/Templates/template8/qobg.png'
+          src='/images/Templates/template8/qobg.webp'
           alt='Quantitative Background'
           fill
           className='object-cover'

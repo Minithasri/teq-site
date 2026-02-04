@@ -16,7 +16,7 @@ const HowItWorks = () => {
         <div className='w-full rounded-[40px] p-8 md:p-16 lg:p-20 text-center relative overflow-hidden'>
           <div className='absolute inset-0 -z-10'>
             <Image
-              src='/images/partners/domo/howbg.png'
+              src='/images/partners/domo/howbg.webp'
               alt='How it works background'
               fill
               className='object-cover'

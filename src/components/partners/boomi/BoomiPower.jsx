@@ -18,25 +18,25 @@ const steps = [
     title: 'Intuitive interface',
     description:
       "Boomi is known for its easy to use interface. Boomi's API Management makes it easy to create APIs from integrations with a simple one click wizard.",
-    image: '/images/partners/boomi/bo1.png',
+    image: '/images/partners/boomi/bo1.webp',
   },
   {
     title: 'Multi-cloud runtime',
     description:
       "The API Gateway is built on top of Boomi's flexible, multi-cloud, molecule runtime, allowing deployment anywhere.",
-    image: '/images/partners/boomi/bo2.png',
+    image: '/images/partners/boomi/bo2.webp',
   },
   {
     title: 'Powerful APIs',
     description:
       "Just like the rest of the Boomi platform, Boomi's API Management includes robust APIs for managing and reporting on your API usage.",
-    image: '/images/partners/boomi/bo3.png',
+    image: '/images/partners/boomi/bo3.webp',
   },
   {
     title: 'Part of the family',
     description:
       'As part of the Boomi platform, take advantage of tight coupling with other services like Integration, EDI/B2B, Master Data Hub, and Flow.',
-    image: '/images/partners/boomi/bo4.png',
+    image: '/images/partners/boomi/bo4.webp',
   },
 ];
 

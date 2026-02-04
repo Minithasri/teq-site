@@ -13,68 +13,68 @@ const Cards = () => {
       title: 'Real-Time Production Monitoring with IoT',
       description:
         'How Alubee Die Casters achieved 10-15% productivity boost and 90% reduction in manual effort through connected factory automation.',
-      image: '/images/Templates/template1/casebg1.png',
+      image: '/images/Templates/template1/casebg1.webp',
     },
     {
       slug: 'maximizing-yield',
       title: 'Maximizing Yield with Intelligent Production Analytics',
       description:
         'Driving packaging efficiency through real-time visibility and predictive insights.',
-      image: '/images/Templates/template1/hero1.png',
+      image: '/images/Templates/template1/hero1.webp',
     },
     {
       slug: 'mobile-manufacturing-quality',
       title: 'Commonality & Traceability Analysis for Mobile Manufacturing Quality',
       description:
         'Enabling end-to-end visibility and data-driven quality governance in phone manufacturing.',
-      image: '/images/Templates/template3/heroimage1.png',
+      image: '/images/Templates/template3/heroimage1.webp',
     },
     {
       slug: 'predictive-maintenance',
       title: 'Predictive Maintenance Powered by Advanced Analytics',
       description: 'Minimizing unplanned downtime through proactive maintenance intelligence.',
-      image: '/images/Templates/template4/herobg.png',
+      image: '/images/Templates/template4/herobg.webp',
     },
     {
       slug: 'streamlining-production',
       title: 'Streamlining Production Through Data-Driven IE Applications',
       description:
         'Digitizing maintenance operations for improved equipment reliability and performance.',
-      image: '/images/Templates/template5/herobgmain.png',
+      image: '/images/Templates/template5/herobgmain.webp',
     },
     {
       slug: 'optimizing-production',
       title: 'Optimizing Production Efficiency Through Scrap Analytics',
       description:
         'Reducing material waste through real-time scrap tracking and data-driven insights.',
-      image: '/images/Templates/template6/hero6.png',
+      image: '/images/Templates/template6/hero6.webp',
     },
     {
       slug: 'sustainable-impact',
       title: 'Sustainable Impact in Manufacturing',
       description:
         'Driving sustainability, compliance, and operational efficiency through Power Platform automation.',
-      image: '/images/Templates/template7/bg7.png',
+      image: '/images/Templates/template7/bg7.webp',
     },
     {
       slug: 'tool-management',
       title: 'Tool Management Solution for Manufacturing',
       description:
         'Driving efficiency, traceability, and operational excellence through Power Platform automation.',
-      image: '/images/Templates/template8/temp888.png',
+      image: '/images/Templates/template8/temp888.webp',
     },
     {
       slug: 'smart-maintenance',
       title: 'Smart Maintenance Solution for Manufacturing',
       description:
         'Modernizing traditional maintenance processes with Microsoft Power Platform, enabling predictive analytics and preventive maintenance strategies',
-      image: '/images/Templates/template9/9hero.png',
+      image: '/images/Templates/template9/9hero.webp',
     },
     {
       slug: 'next-gen-knowledge',
       title: 'Next-Gen Knowledge Engine on Azure',
       description: 'Transforming Enterprise Knowledge Access with AI-Powered Retrieval',
-      image: '/images/Templates/template10/hero10.jpg',
+      image: '/images/Templates/template10/hero10.webp',
     },
   ];
 

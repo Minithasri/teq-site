@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='/images/WFH/Framecase.png'
+          src='/images/WFH/Framecase.webp'
           alt='Work From Hometown Background'
           fill
           className='object-cover'

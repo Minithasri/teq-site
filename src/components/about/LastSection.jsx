@@ -6,7 +6,7 @@ export default function AwardsSection() {
   const awards = [
     {
       id: 1,
-      image: '/images/AboutUs/section71.png',
+      image: '/images/AboutUs/section71.webp',
       category: 'CEO Insights',
       tag: 'Top 10 CEO under 40',
       title: 'Naveen Kumar: Thinking Growth For The Society At Large (Work From Hometown)',
@@ -15,7 +15,7 @@ export default function AwardsSection() {
     },
     {
       id: 2,
-      image: '/images/AboutUs/section72.png',
+      image: '/images/AboutUs/section72.webp',
       category: 'SiliconIndia Startup City Magazine',
       tag: '10 Best Data & AI Startups',
       title: 'GWC DATA.AI: Navigating the Road to Cloud Data Analytics, AI & Beyond',
@@ -24,7 +24,7 @@ export default function AwardsSection() {
     },
     {
       id: 3,
-      image: '/images/AboutUs/section73.png',
+      image: '/images/AboutUs/section73.webp',
       category: 'GCU Puraskar',
       tag: 'Award 2023',
       title: 'GCU Puraskar',

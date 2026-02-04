@@ -43,7 +43,7 @@ export default function BusinessImpact() {
       {/* Background Image with Gradient Overlay */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='/images/Templates/template3/lastbg.png'
+          src='/images/Templates/template3/lastbg.webp'
           alt='Impact Background'
           fill
           className='object-cover'

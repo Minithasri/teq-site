@@ -23,7 +23,7 @@ export default function Technology() {
       name: 'Dataverse',
     },
     {
-      icon: '/images/Templates/technologyicons/Azure Data Factory1.png',
+      icon: '/images/Templates/technologyicons/Azure Data Factory1.webp',
       name: 'Azure Data Factory',
     },
     {

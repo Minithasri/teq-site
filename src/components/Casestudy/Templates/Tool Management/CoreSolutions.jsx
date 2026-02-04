@@ -51,7 +51,7 @@ export default function CoreSolutions() {
         {/* Decorative Bulb Image */}
         <div className='absolute -top-24 -left-10 w-96 h-64 hidden lg:block pointer-events-none'>
           <Image
-            src='/images/Templates/template8/bulb.png'
+            src='/images/Templates/template8/bulb.webp'
             alt='Idea Bulb'
             fill
             className='object-contain'

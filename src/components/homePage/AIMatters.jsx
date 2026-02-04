@@ -20,22 +20,22 @@ const AIMatters = () => {
     {
       title: 'Complete Agent Lifecycle Hub',
       desc: 'A flexible, modular platform that lets you design, run, monitor, and manage agents end-to-end, all in one place, without dealing with complex integrations or scattered tools.',
-      image: '/images/HomePage/home11.png',
+      image: '/images/HomePage/home11.webp',
     },
     {
       title: 'Ready-Made Blueprints for Rapid Builds',
       desc: 'Unlock a private collection of pre-built agent blueprints to speed up development dramatically. Cut your initial build effort by nearly 70% and move from idea to launch in just weeks.',
-      image: '/images/HomePage/home2.png',
+      image: '/images/HomePage/home2.webp',
     },
     {
       title: 'Total Control of Your Data & IP',
       desc: 'Built on an open, transparent, and secure foundation. Your data is never used for training, and every agent you create remains completely and exclusively your own intellectual property.',
-      image: '/images/HomePage/home3.png',
+      image: '/images/HomePage/home3.webp',
     },
     {
       title: 'Designed for Enterprise Scale & Security',
       desc: 'Deploy in your preferred environment cloud or on-prem with full model flexibility. Comes equipped with enterprise safeguards like SSO, RBAC, auditing, and built-in Human in the Loop controls.',
-      image: '/images/HomePage/home4.png',
+      image: '/images/HomePage/home4.webp',
     },
   ];
 
@@ -97,7 +97,7 @@ const AIMatters = () => {
       className='flex items-center justify-center relative z-50 w-full mt-[-100px] lg:mt-[-200px] px-0 lg:px-10'
     >
       <div className='bg-gradient-to-br from-[#7030B1] to-[#A545CC] relative overflow-hidden w-full min-h-[500px] lg:min-h-[450px] rounded-none lg:rounded-[25px]'>
-        <div className="absolute inset-0 bg-[url('/images/AIMatters.jpg')] bg-cover bg-center opacity-40" />
+        <div className="absolute inset-0 bg-[url('/images/AIMatters.webp')] bg-cover bg-center opacity-40" />
 
         <div className='relative z-20 mx-auto h-full w-full p-6 sm:p-10 lg:p-[100px]'>
           {/* HEADER */}

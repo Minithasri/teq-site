@@ -72,7 +72,7 @@ export default function Solution() {
             {/* Decorative Bulb Image - Absolute positioned overlapping top right */}
             <div className='absolute -top-40 right-32 w-[250px] h-[250px] z-20 pointer-events-none'>
               <Image
-                src='/images/Templates/template10/bulb.png'
+                src='/images/Templates/template10/bulb.webp'
                 alt='Idea Bulb'
                 fill
                 className='object-contain'

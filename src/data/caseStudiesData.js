@@ -3,7 +3,7 @@ export const caseStudiesData = {
   'eliminating-downtime-centralized-maintenance': {
     industry: 'Manufacturing',
     title: 'Eliminating Downtime Through Centralized Digital Maintenance',
-    image: '/images/Casestudy/img21.png',
+    image: '/images/Casestudy/img21.webp',
     problemStatement:
       'Manufacturing teams relied heavily on paper logs, Excel sheets, and disconnected systems to manage machine breakdowns, preventive maintenance, and AMC contracts. This resulted in delayed response times, missed AMC renewals, poor vendor accountability, and extended machine downtime, directly impacting production efficiency and costs.',
     solutionImplemented:
@@ -19,7 +19,7 @@ export const caseStudiesData = {
   'quality-yield-intelligence': {
     industry: 'Manufacturing',
     title: 'Driving First Time Right Manufacturing Through Quality & Yield Intelligence',
-    image: '/images/Casestudy/img22.png',
+    image: '/images/Casestudy/img22.webp',
     problemStatement:
       'Quality teams struggled to identify defect patterns and yield losses due to manual data collection and delayed reporting. Defects were discovered late, making root cause analysis slow and increasing scrap, rework, and production inefficiencies.',
     solutionImplemented:
@@ -35,7 +35,7 @@ export const caseStudiesData = {
   'real-time-iot-visibility': {
     industry: 'Manufacturing',
     title: 'Transforming Manufacturing Operations with Real-Time IoT Visibility',
-    image: '/images/Casestudy/img23.png',
+    image: '/images/Casestudy/img23.webp',
     problemStatement:
       'Manufacturing teams relied on manual logs and post-shift reports to track production and machine performance. This caused delayed issue detection, lack of real-time visibility into target vs actual output, unplanned downtime, and slow decision-making on the shop floor.',
     solutionImplemented:
@@ -58,7 +58,7 @@ export const caseStudiesData = {
   'downtime-optimization-electronics': {
     industry: 'Manufacturing',
     title: 'Downtime Optimization & Maintenance Digitization',
-    image: '/images/Casestudy/img24.png',
+    image: '/images/Casestudy/img24.webp',
     problemStatement:
       'An electronics manufacturing company relied on manual logs and spreadsheets to track equipment downtime and maintenance activities. Preventive maintenance schedules were frequently missed, breakdown response times were inconsistent, and there was limited visibility into downtime causes and maintenance costs.',
     solutionImplemented:
@@ -81,7 +81,7 @@ export const caseStudiesData = {
   'yield-visibility-throughput-growth': {
     industry: 'Manufacturing',
     title: 'Turning Yield Visibility into Throughput Growth',
-    image: '/images/Casestudy/img25.png',
+    image: '/images/Casestudy/img25.webp',
     problemStatement:
       'An electronics manufacturing company faced inconsistent production tracking in packaging operations due to manual data entry and lack of real-time monitoring. Limited visibility into machine utilization, yield losses, and bottlenecks led to reduced throughput, higher scrap rates, and delayed decision-making.',
     solutionImplemented:
@@ -104,7 +104,7 @@ export const caseStudiesData = {
   'digitizing-tool-intelligence': {
     industry: 'Manufacturing',
     title: 'Digitizing Tool Intelligence for Manufacturing Performance',
-    image: '/images/Casestudy/img26.png',
+    image: '/images/Casestudy/img26.webp',
     problemStatement:
       'Manufacturing teams managed tool data using manual registers, Excel sheets, and disconnected systems. This led to poor tool traceability, inaccurate maintenance tracking, delayed calibrations, unplanned downtime, and suboptimal utilization of tools across production lines.',
     solutionImplemented:
@@ -127,7 +127,7 @@ export const caseStudiesData = {
   'sustainability-energy-competitive-advantage': {
     industry: 'Manufacturing',
     title: 'Turning Energy Consumption into a Measurable Competitive Advantage',
-    image: '/images/Casestudy/img27.png',
+    image: '/images/Casestudy/img27.webp',
     problemStatement:
       'The manufacturing enterprise managed environmental data using manual registers and disconnected Excel sheets. This resulted in inaccurate reporting, high manual effort, limited visibility into energy, water, and waste metrics, and challenges in meeting regulatory and ISO 14001 compliance requirements.',
     solutionImplemented:
@@ -151,7 +151,7 @@ export const caseStudiesData = {
   'predictive-maintenance-ai-iot': {
     industry: 'Manufacturing',
     title: 'Predictive Maintenance (AI & IoT)',
-    image: '/images/Casestudy/img28.png',
+    image: '/images/Casestudy/img28.webp',
     problemStatement:
       'The manufacturing company followed a reactive maintenance approach with manual tracking and limited visibility into asset health. This resulted in frequent equipment breakdowns, high maintenance costs, poor workload forecasting, and inefficient technician utilization.',
     solutionImplemented:
@@ -173,7 +173,7 @@ export const caseStudiesData = {
   'ai-chatbot-knowledge-access': {
     industry: 'Manufacturing',
     title: 'AI Chatbot for Enterprise Knowledge Access',
-    image: '/images/Casestudy/img29.png',
+    image: '/images/Casestudy/img29.webp',
     problemStatement:
       'The enterprise stored knowledge across thousands of documents in PDFs, Word, Excel, and image files. Information retrieval relied on keyword-based search, resulting in slow access, inconsistent answers, high manual effort, and delayed decision-making.',
     solutionImplemented:
@@ -200,7 +200,7 @@ export const caseStudiesData = {
   'commonality-traceability-analytics': {
     industry: 'Manufacturing',
     title: 'Commonality & Traceability Analytics',
-    image: '/images/Casestudy/img30.png',
+    image: '/images/Casestudy/img30.webp',
     problemStatement:
       'A mobile manufacturing company operated a multi-stage production process with fragmented quality data across machining, assembly, and testing systems. The lack of unified traceability made root-cause analysis slow, defect containment inefficient, and recurring quality issues difficult to control.',
     solutionImplemented:
@@ -223,7 +223,7 @@ export const caseStudiesData = {
   'iot-based-machine-monitoring': {
     industry: 'Manufacturing',
     title: 'IoT-Based Machine Monitoring',
-    image: '/images/Casestudy/img31.png',
+    image: '/images/Casestudy/img31.webp',
     problemStatement:
       'Many legacy machines lacked digital interfaces, forcing supervisors to depend on manual shift reports for machine utilization and downtime. This limited real-time visibility and delayed response to performance issues.',
     solutionImplemented:
@@ -239,7 +239,7 @@ export const caseStudiesData = {
   'scrap-analytics-quality-improvement': {
     industry: 'Manufacturing',
     title: 'Scrap Analytics for Quality Improvement',
-    image: '/images/Casestudy/img32.png',
+    image: '/images/Casestudy/img32.webp',
     problemStatement:
       'A phone manufacturing company lacked centralized visibility into scrap generation across production lines. Manual data collection, inconsistent scrap classification, and delayed analysis made it difficult to correlate scrap trends with production output, leading to higher material waste and operational costs.',
     solutionImplemented:
@@ -262,7 +262,7 @@ export const caseStudiesData = {
   'maintenance-amc-management-plant': {
     industry: 'Manufacturing',
     title: 'Maintenance & AMC Management',
-    image: '/images/Casestudy/img33.png',
+    image: '/images/Casestudy/img33.webp',
     problemStatement:
       'Maintenance activities in the manufacturing plant were largely managed through paper registers and Excel sheets maintained by individual teams. Machine breakdowns were reported informally, AMC inspections were tracked manually, and vendor follow-ups depended on personal coordination. As production scale increased, this approach resulted in delayed breakdown resolution, missed AMC inspections, and lack of accountability. Leadership had no consolidated view of downtime, maintenance effectiveness, or vendor performance.',
     solutionImplemented:
@@ -278,7 +278,7 @@ export const caseStudiesData = {
   'quality-defect-traceability-source': {
     industry: 'Manufacturing',
     title: 'Quality & Defect Traceability',
-    image: '/images/Casestudy/img34.png',
+    image: '/images/Casestudy/img34.webp',
     problemStatement:
       'Quality data was captured manually across shifts and production lines, leading to delayed defect identification and inconsistent root cause analysis. This resulted in increased scrap, rework, and quality variations.',
     solutionImplemented:
@@ -294,7 +294,7 @@ export const caseStudiesData = {
   'breakdown-analytics-mttr-mtbf': {
     industry: 'Manufacturing',
     title: 'Breakdown Analytics (MTTR / MTBF)',
-    image: '/images/Casestudy/img35.png',
+    image: '/images/Casestudy/img35.webp',
     problemStatement:
       'Frequent machine breakdowns impacted production schedules, but there was no structured data to analyze recurring failures. Maintenance teams lacked visibility into key reliability metrics such as MTTR and MTBF, making it difficult to improve equipment performance.',
     solutionImplemented:
@@ -310,7 +310,7 @@ export const caseStudiesData = {
   'maintenance-efficiency-improvement-platform': {
     industry: 'Manufacturing',
     title: 'Maintenance Efficiency Improvement',
-    image: '/images/Casestudy/img36.png',
+    image: '/images/Casestudy/img36.webp',
     problemStatement:
       'Manufacturing operations relied on manual and disconnected systems for breakdown management, preventive maintenance, spare parts, and AMC tracking. This led to frequent unplanned downtime, slow issue resolution, poor visibility in maintenance performance, and higher operational costs.',
     solutionImplemented:
@@ -333,7 +333,7 @@ export const caseStudiesData = {
   'automobile-warranty-vehicle-health': {
     industry: 'Automobile',
     title: 'Warranty & Vehicle Health Analytics',
-    image: '/images/Casestudy/img37.png',
+    image: '/images/Casestudy/img37.webp',
     problemStatement:
       'Engineering and after-sales teams lacked a unified view of vehicle health, warranty claims, and recurring quality issues. Data was scattered across diagnostic systems and service records, making it difficult to proactively address faults and control warranty costs.',
     solutionImplemented:
@@ -349,7 +349,7 @@ export const caseStudiesData = {
   'banking-operational-performance-analytics': {
     industry: 'Banking',
     title: 'Operational Performance Analytics',
-    image: '/images/Casestudy/img38.png',
+    image: '/images/Casestudy/img38.webp',
     problemStatement:
       'Banking operations teams lacked timely visibility into critical KPIs such as loan delinquencies, deposit trends, and teller performance. Manual reporting delayed decision-making and limited the ability to identify risks early.',
     solutionImplemented:
@@ -365,7 +365,7 @@ export const caseStudiesData = {
   'funnel-conversion-analytics': {
     industry: 'Marketing & Media',
     title: 'Funnel & Conversion Analytics',
-    image: '/images/Casestudy/img39.png',
+    image: '/images/Casestudy/img39.webp',
     problemStatement:
       'Marketing teams were generating large volumes of leads across digital channels, but lacked visibility into how these leads progressed through the funnel. Data related to impressions, clicks, leads, and conversions existed in silos across platforms, making it difficult to identify where prospects dropped off. As a result, optimization decisions were based on assumptions rather than clear funnel insights, impacting conversion rates and marketing ROI.',
     solutionImplemented:
@@ -386,7 +386,7 @@ export const caseStudiesData = {
   'cross-platform-campaign-analytics': {
     industry: 'Digital Marketing',
     title: 'Cross-Platform Campaign Analytics',
-    image: '/images/Casestudy/img40.png',
+    image: '/images/Casestudy/img40.webp',
     problemStatement:
       'Marketing teams managed campaigns across multiple platforms but relied on manual reporting, leading to inconsistent metrics and delayed ROI insights. There was no single source of truth for campaign performance.',
     solutionImplemented:
@@ -402,7 +402,7 @@ export const caseStudiesData = {
   'healthcare-operational-kpi-dashboards': {
     industry: 'Healthcare',
     title: 'Operational KPI Dashboards',
-    image: '/images/Casestudy/img41.png',
+    image: '/images/Casestudy/img41.webp',
     problemStatement:
       "Healthcare operations teams relied on periodic, static reports to track admissions, appointments, bed occupancy, and resource utilization. These reports were often outdated by the time they were reviewed, limiting the team's ability to proactively manage capacity and respond to operational bottlenecks. This reactive approach impacted service efficiency, staff utilization, and overall patient experience.",
     solutionImplemented:
@@ -418,7 +418,7 @@ export const caseStudiesData = {
   'healthcare-data-platform-modernization': {
     industry: 'Healthcare',
     title: 'Data Platform Modernization',
-    image: '/images/Casestudy/img42.png',
+    image: '/images/Casestudy/img42.webp',
     problemStatement:
       'Healthcare organizations faced fragmented data pipelines and inconsistent reporting due to siloed systems and manual data handling. This limited scalability and compliance-ready analytics.',
     solutionImplemented:
@@ -434,7 +434,7 @@ export const caseStudiesData = {
   'retail-demand-forecasting': {
     industry: 'Retail',
     title: 'Demand Forecasting & Replenishment Planning',
-    image: '/images/Casestudy/img43.png',
+    image: '/images/Casestudy/img43.webp',
     problemStatement:
       'Inaccurate demand forecasting led to overstocking in some locations and frequent shortages in others, impacting revenue and customer satisfaction.',
     solutionImplemented:
@@ -450,7 +450,7 @@ export const caseStudiesData = {
   'retail-store-benchmarking': {
     industry: 'Retail',
     title: 'Store Performance Benchmarking',
-    image: '/images/Casestudy/img44.png',
+    image: '/images/Casestudy/img44.webp',
     problemStatement:
       'Retail leadership lacked a consolidated view to compare performance across stores. Store-level KPIs were reviewed in isolation, making it difficult to identify best-performing and underperforming locations.',
     solutionImplemented:
@@ -482,7 +482,7 @@ export const caseStudiesData = {
   'retail-customer-segmentation': {
     industry: 'Retail',
     title: 'Customer Segmentation & Buying Behavior',
-    image: '/images/Casestudy/img46.jpg',
+    image: '/images/Casestudy/img46.webp',
     problemStatement:
       'Retail organizations had access to large volumes of customer data across POS systems, loyalty programs, and digital channels, but this data was largely underutilized. Customer behavior was analyzed only at an aggregate level, making it difficult to understand purchasing patterns, preferences, repeat behavior, and category affinity. As a result, marketing campaigns were generic, promotions were poorly targeted, and customer engagement remained low.',
     solutionImplemented:

@@ -35,7 +35,7 @@ const AgenticAI = () => {
     <section className='relative w-full py-16 md:py-24 overflow-hidden bg-white'>
       {/* Background Circle - Left Side */}
       <div className='absolute left-0 top-1/2 -translate-y-1/2 w-[600px] md:w-[900px] h-[600px] md:h-[900px] -translate-x-1/3 pointer-events-none opacity-100'>
-        <Image src='/images/HomePage/circle_big.png' alt='' fill className='object-contain' />
+        <Image src='/images/HomePage/circle_big.webp' alt='' fill className='object-contain' />
       </div>
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>

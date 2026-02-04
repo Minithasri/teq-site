@@ -59,7 +59,7 @@ const Offerings = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   // Helper to get image path based on active tab index
-  const getImagePath = index => `/images/partners/google-cloud/img_${index + 1}.png`;
+  const getImagePath = index => `/images/partners/google-cloud/gg${index + 1}.png`;
 
   return (
     <section

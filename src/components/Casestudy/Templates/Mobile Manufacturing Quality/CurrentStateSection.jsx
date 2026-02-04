@@ -53,7 +53,7 @@ export default function CurrentStateSection() {
         <div className='hidden lg:block absolute -top-10 right-10 w-[45%] h-full pointer-events-none z-20'>
           <div className='absolute top-0 right-0 w-[300px] h-[200px] overflow-hidden rounded-2xl shadow-none drop-shadow-none !shadow-none !drop-shadow-none border-none ring-0 outline-none'>
             <Image
-              src='/images/Templates/template3/sideimg1.png'
+              src='/images/Templates/template3/sideimg1.webp'
               alt='Automated Inspection'
               fill
               className='object-cover shadow-none drop-shadow-none !shadow-none !drop-shadow-none'
@@ -63,7 +63,7 @@ export default function CurrentStateSection() {
           {/* Bottom Image (Hands) */}
           <div className='absolute top-32 right-[-20px] w-[350px] h-[280px] overflow-hidden rounded-2xl'>
             <Image
-              src='/images/Templates/template3/sideimg2.png'
+              src='/images/Templates/template3/sideimg2.webp'
               alt='Manual Inspection'
               fill
               className='object-cover'
@@ -74,7 +74,7 @@ export default function CurrentStateSection() {
         {/* Mobile Image (Just one) for responsiveness */}
         <div className='lg:hidden w-full h-[250px] relative rounded-xl overflow-hidden mt-8'>
           <Image
-            src='/images/Templates/template3/sideimg1.png'
+            src='/images/Templates/template3/sideimg1.webp'
             alt='Automated Inspection'
             fill
             className='object-cover'

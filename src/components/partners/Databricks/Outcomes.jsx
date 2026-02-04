@@ -35,7 +35,7 @@ const Outcomes = () => {
           {/* Background Image - Final Frame */}
           <div className='absolute inset-0 z-0'>
             <Image
-              src='/images/partners/databricks/final_frame.png'
+              src='/images/partners/databricks/final_frame.webp'
               alt='Background'
               fill
               className='object-cover'

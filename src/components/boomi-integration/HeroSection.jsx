@@ -19,8 +19,8 @@ const bannerContent = {
     demo: { text: 'Request Demo', href: '/contact' },
   },
   images: {
-    background: '/images/partners/boomi/hero_bg_partner.png',
-    illustration: '/images/partners/boomi/hero1.png',
+    background: '/images/partners/boomi/hero_bg_partner.webp',
+    illustration: '/images/partners/boomi/hero1.webp',
   },
   stats: [
     { value: '1000+', label: 'Integrations Delivered' },

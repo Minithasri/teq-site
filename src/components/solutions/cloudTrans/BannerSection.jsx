@@ -16,8 +16,8 @@ const bannerContent = {
     'Get ready for a future-ready and high performance BI environment for your organization',
   ctaText: 'Get in touch',
   images: {
-    background: '/images/solutions/Hero section BG.jpg',
-    illustration: '/images/solutions/heroimages/Cloud Transformation.png',
+    background: '/images/solutions/Hero section BG.webp',
+    illustration: '/images/solutions/heroimages/Cloud Transformation.webp',
   },
 };
 

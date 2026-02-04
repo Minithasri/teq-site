@@ -16,8 +16,8 @@ const bannerContent = {
     'Strengthen your business with a unified, well governed data foundation built for speed and accuracy.',
   ctaText: 'Get in touch',
   images: {
-    background: '/images/solutions/Hero section BG.jpg',
-    illustration: '/images/solutions/heroimages/Data Governance.png',
+    background: '/images/solutions/Hero section BG.webp',
+    illustration: '/images/solutions/heroimages/Data Governance.webp',
   },
 };
 

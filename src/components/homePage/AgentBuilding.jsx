@@ -172,7 +172,7 @@ export default function AgentBuilding() {
       className='mx-4 md:mx-8 py-12 lg:py-16 rounded-xl relative overflow-hidden'
       style={{
         background:
-          'linear-gradient(90deg, rgba(255, 247, 235, 0.75) 0%, rgba(250, 224, 250, 0.75) 100%), url("/images/HomePage/BG1.png")',
+          'linear-gradient(90deg, rgba(255, 247, 235, 0.75) 0%, rgba(250, 224, 250, 0.75) 100%), url("/images/HomePage/BG1.webp")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

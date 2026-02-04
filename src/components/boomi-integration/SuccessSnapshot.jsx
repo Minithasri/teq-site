@@ -33,7 +33,7 @@ const SuccessSnapshot = () => {
         {/* Background Image */}
         <div className='absolute inset-0 -z-10 bg-[#8857C7]'>
           <Image
-            src='/images/successbg1.png'
+            src='/images/successbg1.webp'
             alt='Success Background'
             fill
             className='object-cover opacity-100 '

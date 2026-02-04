@@ -56,7 +56,7 @@ export const defaultSEO = {
     },
     {
       rel: 'apple-touch-icon',
-      href: '/icons/icon-192.png',
+      href: '/icons/icon-192.webp',
       sizes: '192x192',
     },
     {

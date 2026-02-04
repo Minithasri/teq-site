@@ -50,7 +50,7 @@ const CoreSolutions = () => {
       <div className='absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 pointer-events-none'>
         <div className='relative w-full h-full opacity-100'>
           <Image
-            src='/images/partners/databricks/bg_rounded.png'
+            src='/images/partners/databricks/bg_rounded.webp'
             alt=''
             fill
             className='object-contain md:object-cover'

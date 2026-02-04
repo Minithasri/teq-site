@@ -8,7 +8,7 @@ export default function Problem() {
         {/* Faint Bulb */}
         <div className='absolute top-2 right-20 lg:right-56 w-32 h-32 opacity-60 hidden md:block'>
           <Image
-            src='/images/Templates/template5/4bulb1.png'
+            src='/images/Templates/template5/4bulb1.webp'
             alt='Idea'
             fill
             className='object-contain'
@@ -17,7 +17,7 @@ export default function Problem() {
         {/* Colored Bulb */}
         <div className='absolute top-6 right-0 lg:right-10 w-52 h-52 hidden md:block z-30'>
           <Image
-            src='/images/Templates/template5/4bulb2.png'
+            src='/images/Templates/template5/4bulb2.webp'
             alt='Idea'
             fill
             className='object-contain'

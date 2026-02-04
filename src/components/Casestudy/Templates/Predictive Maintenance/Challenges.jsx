@@ -65,7 +65,7 @@ export default function Challenges() {
       <div className='w-full h-[600px] relative mb-4 mt-0'>
         {/* Background Image */}
         <Image
-          src='/images/Templates/template4/phonebg.png'
+          src='/images/Templates/template4/phonebg.webp'
           alt='Phones Background'
           fill
           className='object-cover'

@@ -5,14 +5,14 @@ const BestPathSection = () => {
   const paths = [
     {
       id: 1,
-      image: '/images/Careers/Graduates.jpg',
+      image: '/images/Careers/Graduates.webp',
       title: 'College Graduates',
       description:
         'Advance into a career with new terms and discover all we can offer, including learning opportunities, global projects and the freedom to explore.',
     },
     {
       id: 2,
-      image: '/images/Careers/Experienced Professionals.jpg',
+      image: '/images/Careers/Experienced Professionals.webp',
       title: 'Experienced Professionals',
       description:
         "If you're looking for new opportunities to ignite or reignite your career, your experience matters here. Discover how you can begin to make a difference.",
@@ -30,7 +30,7 @@ const BestPathSection = () => {
     <section
       className='w-full py-16 lg:py-24 relative'
       style={{
-        backgroundImage: 'url(/images/Careers/bestpath_image.png)',
+        backgroundImage: 'url(/images/Careers/bestpath_image.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

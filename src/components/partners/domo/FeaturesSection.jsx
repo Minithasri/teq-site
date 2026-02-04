@@ -40,7 +40,7 @@ export default function FeaturesSection() {
       <div className='absolute top-[400px] md:top-32 inset-0 flex items-center justify-center pointer-events-none z-0'>
         <div className='relative w-[450px] h-[500px] md:w-full md:h-full opacity-100'>
           <Image
-            src='/images/partners/domo/Background.png'
+            src='/images/partners/domo/Background.webp'
             alt='Background Decoration'
             fill
             className='object-contain md:object-cover'

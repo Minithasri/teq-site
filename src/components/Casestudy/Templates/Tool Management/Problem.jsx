@@ -53,7 +53,7 @@ export default function Problem() {
         {/* Background Image and Overlay */}
         <div className='absolute top-20 inset-0 z-0'>
           <Image
-            src='/images/Templates/template8/laptop.png'
+            src='/images/Templates/template8/laptop.webp'
             alt='Background'
             fill
             className='object-cover'

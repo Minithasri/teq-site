@@ -12,7 +12,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className='absolute inset-0 z-0 opacity-40 mix-blend-overlay'>
         <Image
-          src='/images/Templates/template5/herobgmain.png'
+          src='/images/Templates/template5/herobgmain.webp'
           alt='Background'
           fill
           className='object-cover center'

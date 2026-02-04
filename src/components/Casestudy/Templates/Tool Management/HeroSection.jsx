@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className='absolute inset-0 z-0 opacity-30 mix-blend-overlay'>
         <Image
-          src='/images/Templates/template8/temp888.png'
+          src='/images/Templates/template8/temp888.webp'
           alt='Background'
           fill
           className='object-cover'

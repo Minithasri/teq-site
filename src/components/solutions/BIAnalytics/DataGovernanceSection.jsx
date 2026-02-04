@@ -5,16 +5,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-import imgCollaboration from '../../../../public/images/solutions/biandanalytics/Collaboration and Knowledge Sharing.png';
-import imgDashboardReportDesign from '../../../../public/images/solutions/biandanalytics/Dashboard and Report Design.png';
-import imgDataAnalysis from '../../../../public/images/solutions/biandanalytics/Data Analysis.png';
-import imgDataCollection from '../../../../public/images/solutions/biandanalytics/Data Collection.png';
-import imgDataExploration from '../../../../public/images/solutions/biandanalytics/Data Exploration.png';
-import imgDataInterpretation from '../../../../public/images/solutions/biandanalytics/Data Interpretation and Insight Generation.png';
-import imgDataPresentation from '../../../../public/images/solutions/biandanalytics/Data Presentation.png';
-import imgIntegration from '../../../../public/images/solutions/biandanalytics/Integration with Business Processes.png';
-import imgIterativeAnalysis from '../../../../public/images/solutions/biandanalytics/Iterative Analysis and Refinement.png';
-import imgPerformanceMonitoring from '../../../../public/images/solutions/biandanalytics/Performance Monitoring.png';
+import imgCollaboration from '../../../../public/images/solutions/biandanalytics/Collaboration and Knowledge Sharing.webp';
+import imgDashboardReportDesign from '../../../../public/images/solutions/biandanalytics/Dashboard and Report Design.webp';
+import imgDataAnalysis from '../../../../public/images/solutions/biandanalytics/Data Analysis.webp';
+import imgDataCollection from '../../../../public/images/solutions/biandanalytics/Data Collection.webp';
+import imgDataExploration from '../../../../public/images/solutions/biandanalytics/Data Exploration.webp';
+import imgDataInterpretation from '../../../../public/images/solutions/biandanalytics/Data Interpretation and Insight Generation.webp';
+import imgDataPresentation from '../../../../public/images/solutions/biandanalytics/Data Presentation.webp';
+import imgIntegration from '../../../../public/images/solutions/biandanalytics/Integration with Business Processes.webp';
+import imgIterativeAnalysis from '../../../../public/images/solutions/biandanalytics/Iterative Analysis and Refinement.webp';
+import imgPerformanceMonitoring from '../../../../public/images/solutions/biandanalytics/Performance Monitoring.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 

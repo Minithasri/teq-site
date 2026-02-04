@@ -25,7 +25,7 @@ export default function Smart() {
       <div
         className='absolute inset-0 z-0'
         style={{
-          background: `linear-gradient(180deg, #10751AE8 0%, #10751AE8 100%), url('/images/Templates/template7/bg7.png') center/cover no-repeat`,
+          background: `linear-gradient(180deg, #10751AE8 0%, #10751AE8 100%), url('/images/Templates/template7/bg7.webp') center/cover no-repeat`,
         }}
       />
 

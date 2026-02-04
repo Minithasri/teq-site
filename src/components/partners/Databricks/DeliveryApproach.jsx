@@ -84,7 +84,7 @@ const DeliveryApproach = () => {
       <div className='absolute inset-0 z-0 flex items-center justify-center pointer-events-none'>
         <div className='w-[1000px] h-[1000px] relative opacity-100'>
           <Image
-            src='/images/partners/databricks/circle_big.png'
+            src='/images/partners/databricks/circle_big.webp'
             alt=''
             fill
             className='object-contain'
