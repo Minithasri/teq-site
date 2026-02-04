@@ -1,12 +1,12 @@
 'use client';
-import HeroSection from '@/pages/careers/HeroSection';
-import DesignSection from '@/pages/careers/DesignSection';
-import ExploreSection from '@/pages/careers/ExploreSection';
-import BestPathSection from '@/pages/careers/BestPathSection';
-import HomeTown from '@/pages/careers/HomeTown';
-import LastSection from '@/pages/careers/LastSection';
-import MeetPeople from '@/pages/careers/MeetPeople';
-import HowWeHire from '@/pages/careers/HowWeHire';
+import HeroSection from '@/components/careers/HeroSection';
+import DesignSection from '@/components/careers/DesignSection';
+import ExploreSection from '@/components/careers/ExploreSection';
+import BestPathSection from '@/components/careers/BestPathSection';
+import HomeTown from '@/components/careers/HomeTown';
+import LastSection from '@/components/careers/LastSection';
+import MeetPeople from '@/components/careers/MeetPeople';
+import HowWeHire from '@/components/careers/HowWeHire';
 export default function Careers() {
   return (
     <div>

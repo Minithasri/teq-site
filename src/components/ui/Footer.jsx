@@ -1,6 +1,6 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import Business from '../../pages/homePage/Business';
+import Business from '../../components/homePage/Business';
 
 const Footer = () => {
   const pathname = usePathname();

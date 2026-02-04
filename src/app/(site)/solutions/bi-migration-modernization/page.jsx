@@ -1,12 +1,12 @@
 'use client';
 
-import Agent from '../../../../pages/solutions/BIMigration/Agent';
+import Agent from '../../../../components/solutions/BIMigration/Agent';
 /* eslint-disable semi */
-import BannerSection from '../../../../pages/solutions/BIMigration/BannerSection';
-import Cards from '../../../../pages/solutions/BIMigration/Cards';
-import DataGovernanceSection from '../../../../pages/solutions/BIMigration/DataGovernanceSection';
-import SectionGwc from '../../../../pages/solutions/BIMigration/SectionGwc';
-import Technology from '../../../../pages/solutions/BIMigration/Technology';
+import BannerSection from '../../../../components/solutions/BIMigration/BannerSection';
+import Cards from '../../../../components/solutions/BIMigration/Cards';
+import DataGovernanceSection from '../../../../components/solutions/BIMigration/DataGovernanceSection';
+import SectionGwc from '../../../../components/solutions/BIMigration/SectionGwc';
+import Technology from '../../../../components/solutions/BIMigration/Technology';
 
 function Solutionpage() {
   return (

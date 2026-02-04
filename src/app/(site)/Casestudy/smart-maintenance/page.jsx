@@ -1,11 +1,11 @@
-import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
-import Business from '@/pages/Casestudy/Templates/Smart Maintenance/Business';
-import Conclusion from '@/pages/Casestudy/Templates/Smart Maintenance/Conclusion';
-import HeroSection from '@/pages/Casestudy/Templates/Smart Maintenance/HeroSection';
-import KeyOutcomes from '@/pages/Casestudy/Templates/Smart Maintenance/KeyOutcomes';
-import Overview from '@/pages/Casestudy/Templates/Smart Maintenance/Overview';
-import Solution from '@/pages/Casestudy/Templates/Smart Maintenance/Solution';
-import Technology from '@/pages/Casestudy/Templates/Smart Maintenance/Technology';
+import LastSection from '@/components/Casestudy/Templates/Real Time Production/LastSection';
+import Business from '@/components/Casestudy/Templates/Smart Maintenance/Business';
+import Conclusion from '@/components/Casestudy/Templates/Smart Maintenance/Conclusion';
+import HeroSection from '@/components/Casestudy/Templates/Smart Maintenance/HeroSection';
+import KeyOutcomes from '@/components/Casestudy/Templates/Smart Maintenance/KeyOutcomes';
+import Overview from '@/components/Casestudy/Templates/Smart Maintenance/Overview';
+import Solution from '@/components/Casestudy/Templates/Smart Maintenance/Solution';
+import Technology from '@/components/Casestudy/Templates/Smart Maintenance/Technology';
 
 const Page = () => {
   return (

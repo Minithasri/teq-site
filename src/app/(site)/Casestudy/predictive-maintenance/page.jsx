@@ -1,9 +1,9 @@
-import BusinessImpact from '@/pages/Casestudy/Templates/Predictive Maintenance/BusinessImpact';
-import Challenges from '@/pages/Casestudy/Templates/Predictive Maintenance/Challenges';
-import HeroSection from '@/pages/Casestudy/Templates/Predictive Maintenance/HeroSection';
-import Management from '@/pages/Casestudy/Templates/Predictive Maintenance/Management';
-import Technology from '@/pages/Casestudy/Templates/Predictive Maintenance/Technology';
-import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
+import BusinessImpact from '@/components/Casestudy/Templates/Predictive Maintenance/BusinessImpact';
+import Challenges from '@/components/Casestudy/Templates/Predictive Maintenance/Challenges';
+import HeroSection from '@/components/Casestudy/Templates/Predictive Maintenance/HeroSection';
+import Management from '@/components/Casestudy/Templates/Predictive Maintenance/Management';
+import Technology from '@/components/Casestudy/Templates/Predictive Maintenance/Technology';
+import LastSection from '@/components/Casestudy/Templates/Real Time Production/LastSection';
 
 export default function PredictiveMaintenancePage() {
   return (

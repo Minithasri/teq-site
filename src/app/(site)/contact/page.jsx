@@ -1,5 +1,5 @@
-import HeroSection from '@/pages/contact/HeroSection';
-import LocationsSection from '@/pages/contact/LocationsSection';
+import HeroSection from '@/components/contact/HeroSection';
+import LocationsSection from '@/components/contact/LocationsSection';
 
 export const metadata = {
   title: 'Contact Us - GWC Data.AI',

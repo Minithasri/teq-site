@@ -1,6 +1,6 @@
 import React from 'react';
-import Herosection from '@/pages/Casestudy/Herosection';
-import Cards from '@/pages/Casestudy/cards';
+import Herosection from '@/components/Casestudy/Herosection';
+import Cards from '@/components/Casestudy/cards';
 
 const Page = () => {
   return (

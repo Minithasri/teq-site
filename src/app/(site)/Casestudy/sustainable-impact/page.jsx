@@ -1,11 +1,11 @@
-import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
-import Architecture from '@/pages/Casestudy/Templates/Sustainable Impact/Architecture';
-import BusinessImpact from '@/pages/Casestudy/Templates/Sustainable Impact/BusinessImpact';
-import CoreSolutions from '@/pages/Casestudy/Templates/Sustainable Impact/CoreSolutions';
-import HeroSection from '@/pages/Casestudy/Templates/Sustainable Impact/HeroSection';
-import Problem from '@/pages/Casestudy/Templates/Sustainable Impact/Problem';
-import Smart from '@/pages/Casestudy/Templates/Sustainable Impact/Smart';
-import Technology from '@/pages/Casestudy/Templates/Sustainable Impact/Technology';
+import LastSection from '@/components/Casestudy/Templates/Real Time Production/LastSection';
+import Architecture from '@/components/Casestudy/Templates/Sustainable Impact/Architecture';
+import BusinessImpact from '@/components/Casestudy/Templates/Sustainable Impact/BusinessImpact';
+import CoreSolutions from '@/components/Casestudy/Templates/Sustainable Impact/CoreSolutions';
+import HeroSection from '@/components/Casestudy/Templates/Sustainable Impact/HeroSection';
+import Problem from '@/components/Casestudy/Templates/Sustainable Impact/Problem';
+import Smart from '@/components/Casestudy/Templates/Sustainable Impact/Smart';
+import Technology from '@/components/Casestudy/Templates/Sustainable Impact/Technology';
 
 export default function SustainableImpactPage() {
   return (

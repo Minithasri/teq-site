@@ -1,10 +1,10 @@
-import Architecture from '@/pages/Casestudy/Templates/Optimizing Production/Architecture';
-import BusinessImpact from '@/pages/Casestudy/Templates/Optimizing Production/BusinessImpact';
-import Challenges from '@/pages/Casestudy/Templates/Optimizing Production/Challenges';
-import HeroSection from '@/pages/Casestudy/Templates/Optimizing Production/HeroSection';
-import Solution from '@/pages/Casestudy/Templates/Optimizing Production/Solution';
-import Technology from '@/pages/Casestudy/Templates/Optimizing Production/Technology';
-import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
+import Architecture from '@/components/Casestudy/Templates/Optimizing Production/Architecture';
+import BusinessImpact from '@/components/Casestudy/Templates/Optimizing Production/BusinessImpact';
+import Challenges from '@/components/Casestudy/Templates/Optimizing Production/Challenges';
+import HeroSection from '@/components/Casestudy/Templates/Optimizing Production/HeroSection';
+import Solution from '@/components/Casestudy/Templates/Optimizing Production/Solution';
+import Technology from '@/components/Casestudy/Templates/Optimizing Production/Technology';
+import LastSection from '@/components/Casestudy/Templates/Real Time Production/LastSection';
 
 export default function OptimizingProductionPage() {
   return (

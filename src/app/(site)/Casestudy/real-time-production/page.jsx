@@ -1,10 +1,10 @@
-import ClientOverview from '@/pages/Casestudy/Templates/Real Time Production/ClientOverview';
-import DrivenSolution from '@/pages/Casestudy/Templates/Real Time Production/DrivenSolution';
-import HeroSection from '@/pages/Casestudy/Templates/Real Time Production/HeroSection';
-import KeyChallenges from '@/pages/Casestudy/Templates/Real Time Production/KeyChallenges';
-import LastSection from '@/pages/Casestudy/Templates/Real Time Production/LastSection';
-import RealBusiness from '@/pages/Casestudy/Templates/Real Time Production/RealBusiness';
-import TechnologyStack from '@/pages/Casestudy/Templates/Real Time Production/TechnologyStack';
+import ClientOverview from '@/components/Casestudy/Templates/Real Time Production/ClientOverview';
+import DrivenSolution from '@/components/Casestudy/Templates/Real Time Production/DrivenSolution';
+import HeroSection from '@/components/Casestudy/Templates/Real Time Production/HeroSection';
+import KeyChallenges from '@/components/Casestudy/Templates/Real Time Production/KeyChallenges';
+import LastSection from '@/components/Casestudy/Templates/Real Time Production/LastSection';
+import RealBusiness from '@/components/Casestudy/Templates/Real Time Production/RealBusiness';
+import TechnologyStack from '@/components/Casestudy/Templates/Real Time Production/TechnologyStack';
 
 export const metadata = {
   title: 'Real-Time Production Monitoring with IoT - GWC Data.AI Case Study',

@@ -1,13 +1,13 @@
 'use client';
-import AgentBundle from '@/pages/DomoAgenticAI/AgentBundle';
-import AgentCatalyst from '@/pages/DomoAgenticAI/AgentCatalyst';
-import BuiltAIAgents from '@/pages/DomoAgenticAI/BuiltAIAgents';
-import DomoAgenticAI from '@/pages/DomoAgenticAI/DomoAgenticAI';
-import DomoBanner from '@/pages/DomoAgenticAI/DomoBanner';
-import DomoMatter from '@/pages/DomoAgenticAI/DomoMatter';
-import PlatformFeatures from '@/pages/DomoAgenticAI/PlatformFeatures';
-import SimpleSteps from '@/pages/DomoAgenticAI/SimpleSteps';
-import WhyDomo from '@/pages/DomoAgenticAI/WhyDomo';
+import AgentBundle from '@/components/DomoAgenticAI/AgentBundle';
+import AgentCatalyst from '@/components/DomoAgenticAI/AgentCatalyst';
+import BuiltAIAgents from '@/components/DomoAgenticAI/BuiltAIAgents';
+import DomoAgenticAI from '@/components/DomoAgenticAI/DomoAgenticAI';
+import DomoBanner from '@/components/DomoAgenticAI/DomoBanner';
+import DomoMatter from '@/components/DomoAgenticAI/DomoMatter';
+import PlatformFeatures from '@/components/DomoAgenticAI/PlatformFeatures';
+import SimpleSteps from '@/components/DomoAgenticAI/SimpleSteps';
+import WhyDomo from '@/components/DomoAgenticAI/WhyDomo';
 export default function DomoPage() {
   return (
     <div>
