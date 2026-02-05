@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import Footer from '../components/ui/Footer';
 import Header from '../components/ui/Header/Header';
-import TopHeader from '../components/ui/Header/TopHeader';
 import Providers from '../components/ui/Providers';
 import SplashScreen from '../components/ui/SplashScreen';
 import './globals.css';
@@ -19,7 +18,7 @@ export default function RootLayout({ children }) {
   const bannerVisiblePaths = ['/']; // add more if needed, e.g. ['/', '/about']
 
   const shouldShowBannerInitially = bannerVisiblePaths.some(
-    (page) => pathname === page || pathname.startsWith(page + '/')
+    page => pathname === page || pathname.startsWith(page + '/')
   );
 
   // Reset banner closed state when navigating to a page where banner should appear
@@ -32,11 +31,11 @@ export default function RootLayout({ children }) {
   const handleSplashFinish = () => setShowSplash(false);
   const handleBannerClose = () => setIsBannerClosed(true);
 
-  const isBannerVisible = shouldShowBannerInitially && !isBannerClosed;
+  const isBannerVisible = false; // shouldShowBannerInitially && !isBannerClosed;
 
   if (showSplash) {
     return (
-      <html lang="en">
+      <html lang='en'>
         <body>
           <SplashScreen onComplete={handleSplashFinish} />
         </body>
@@ -45,17 +44,15 @@ export default function RootLayout({ children }) {
   }
 
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>
         <Providers>
-          <TopHeader
+          {/* <TopHeader
             isVisible={isBannerVisible}
             onClose={handleBannerClose}
-          />
+          /> */}
           <Header isBannerVisible={isBannerVisible} />
-          <main className={isBannerVisible ? 'pt-20' : ''}>
-            {children}
-          </main>
+          <main className={isBannerVisible ? 'pt-20' : ''}>{children}</main>
           <Footer />
         </Providers>
       </body>
