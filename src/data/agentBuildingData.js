@@ -383,7 +383,7 @@ export const agentData = {
     {
       title: 'Discount & Pricing Exception Governance Agent',
       description: 'Discount control governance',
-      image: '/images/HomePage/sales2.webp',
+      image: '/images/HomePage/sales2.png',
       audience: ['Sales Teams', 'Deal Desk', 'Finance & Leadership'],
       howItWorks: [
         'Evaluates discount requests against pricing policies and margin thresholds',
