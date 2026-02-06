@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import ClientOverview from '@/components/Casestudy/Templates/Real Time Production/ClientOverview';
 import DrivenSolution from '@/components/Casestudy/Templates/Real Time Production/DrivenSolution';
 import HeroSection from '@/components/Casestudy/Templates/Real Time Production/HeroSection';

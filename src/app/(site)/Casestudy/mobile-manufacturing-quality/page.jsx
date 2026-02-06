@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import BusinessImpact from '@/components/Casestudy/Templates/Mobile Manufacturing Quality/BusinessImpact';
 import CurrentStateSection from '@/components/Casestudy/Templates/Mobile Manufacturing Quality/CurrentStateSection';
 import HeroSection from '@/components/Casestudy/Templates/Mobile Manufacturing Quality/HeroSection';

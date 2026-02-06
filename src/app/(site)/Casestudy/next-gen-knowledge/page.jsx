@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import Architecture from '@/components/Casestudy/Templates/Next Gen Knowledge/Architecture';
 import Business from '@/components/Casestudy/Templates/Next Gen Knowledge/Business';
 import HeroSection from '@/components/Casestudy/Templates/Next Gen Knowledge/HeroSection';

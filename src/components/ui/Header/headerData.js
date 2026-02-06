@@ -36,7 +36,7 @@ export const headerData = {
             { label: 'About Us', href: '/company/about' },
             // { label: 'Vision & Mission', href: '/company/vision-mission' },
             // { label: 'Leadership Team', href: '/company/leadership' },
-            { label: 'Case Study', href: '/Casestudy' },
+            { label: 'Case Study', href: '/casestudy' },
           ],
         },
         {

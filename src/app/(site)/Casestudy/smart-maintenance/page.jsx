@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import LastSection from '@/components/Casestudy/Templates/Real Time Production/LastSection';
 import Business from '@/components/Casestudy/Templates/Smart Maintenance/Business';
 import Conclusion from '@/components/Casestudy/Templates/Smart Maintenance/Conclusion';

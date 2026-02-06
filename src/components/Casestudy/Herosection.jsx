@@ -7,7 +7,7 @@ const heroContent = {
   breadcrumb: {
     items: [
       { label: 'Home', href: '/' },
-      { label: 'Case study', href: '/Casestudy' },
+      { label: 'Case study', href: '/casestudy' },
     ],
   },
   title: 'Experience AI agents at work',

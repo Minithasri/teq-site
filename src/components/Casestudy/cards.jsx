@@ -85,7 +85,7 @@ const Cards = () => {
       title: study.title,
       description: study.description,
       slug: study.slug,
-      link: `/Casestudy/${study.slug}`,
+      link: `/casestudy/${study.slug}`,
     };
   });
 

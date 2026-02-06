@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import BusinessImpact from '@/components/Casestudy/Templates/Maximizing Yield/BusinessImpact';
 import Challenges from '@/components/Casestudy/Templates/Maximizing Yield/Challenges';
 import CurrentState from '@/components/Casestudy/Templates/Maximizing Yield/CurrentState';

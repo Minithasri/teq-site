@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import BusinessImpact from '@/components/Casestudy/Templates/Predictive Maintenance/BusinessImpact';
 import Challenges from '@/components/Casestudy/Templates/Predictive Maintenance/Challenges';
 import HeroSection from '@/components/Casestudy/Templates/Predictive Maintenance/HeroSection';

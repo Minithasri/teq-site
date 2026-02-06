@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import Architecture from '@/components/Casestudy/Templates/Optimizing Production/Architecture';
 import BusinessImpact from '@/components/Casestudy/Templates/Optimizing Production/BusinessImpact';
 import Challenges from '@/components/Casestudy/Templates/Optimizing Production/Challenges';
