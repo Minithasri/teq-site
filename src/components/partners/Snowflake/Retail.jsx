@@ -120,7 +120,7 @@ const industryData = {
     ],
   },
   Energy: {
-    image: '/images/partners/Snowflake/snow3.svg',
+    image: '/images/partners/Snowflake/snow8.jpg',
     items: [
       {
         title: 'Smart Grid Analytics',
