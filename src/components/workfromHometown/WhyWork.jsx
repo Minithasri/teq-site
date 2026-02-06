@@ -11,37 +11,37 @@ const cards = [
     title: 'Work-Life Harmony',
     description:
       'Embrace a balanced lifestyle with Work from Hometown, looking forward to lengthy commutes and integrate your professional and personal life, prioritizing what matters most to you.',
-    image: '/images/wFH/wfhimg1.webp',
+    image: '/images/WFH/wfhimg1.webp',
   },
   {
     title: 'Cost Savings',
     description:
       'Enjoy significant cost savings as urban office expenses become a thing of the past. Contribute to your local economy while enjoying a more affordable and comfortable work environment.',
-    image: '/images/wFH/wfhimg2.webp',
+    image: '/images/WFH/wfhimg2.webp',
   },
   {
     title: 'Local Talent Empowerment',
     description:
       'Our initiative creates job opportunities, fueling economic growth in regions often overlooked in the corporate landscape. This way, we empower local talent in tier 2 and 3 cities.',
-    image: '/images/wFH/wfhimg3.webp',
+    image: '/images/WFH/wfhimg3.webp',
   },
   {
     title: 'Innovation & Collaboration',
     description:
       'Unleash the power of diverse perspectives and innovative ideas from various locations. Our robust digital infrastructure ensures seamless communication, making teamwork effortless.',
-    image: '/images/wFH/wfhimg4.webp',
+    image: '/images/WFH/wfhimg4.webp',
   },
   {
     title: 'Community Connection',
     description:
       'Strengthen ties within your local community while contributing to a global mission. Participate in local events, dinner and inclusive remote work. ',
-    image: '/images/wFH/wfhimg5.webp',
+    image: '/images/WFH/wfhimg5.webp',
   },
   {
     title: 'Increased Job Satisfaction',
     description:
       'Working in a familiar environment and being close to loved ones, your happiness can lead to increased job satisfaction and a sense of purpose.',
-    image: '/images/wFH/wfhimg6.png',
+    image: '/images/WFH/wfhimg6.png',
   },
 ];
 
