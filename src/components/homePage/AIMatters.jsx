@@ -50,7 +50,7 @@ const AIMatters = () => {
       // ScrollTrigger for activeIndex
       const st = ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: 'top -8%',
+        start: 'top -12%',
         end: `+=${features.length * 40}%`,
         pin: true,
         scrub: 0.5,

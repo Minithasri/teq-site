@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Business from '../../components/homePage/Business';
 
@@ -6,15 +7,31 @@ const Footer = () => {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
 
-  const quickLinks = ['Home', 'About Us', 'Contact Us', 'Blogs', 'Case Studies'];
-  const partners = ['DOMO', 'Snowflake', 'Boomi', 'Databricks', 'Google Cloud'];
+  const quickLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/company/about' },
+    { name: 'Contact Us', href: '/contact' },
+    { name: 'Case Studies', href: '/casestudy' },
+  ];
+
+  const partners = [
+    { name: 'DOMO', href: '/partners/domo' },
+    { name: 'Snowflake', href: '/partners/snowflake' },
+    { name: 'Boomi', href: '/partners/boomi' },
+    { name: 'Databricks', href: '/partners/databricks' },
+    { name: 'Google Cloud', href: '/partners/google-cloud' },
+  ];
+
   const solutions = [
-    'AI / Agentic AI',
-    'Data Governance',
-    'Data Strategy & Engineering',
-    'Business Intelligence & Analytics',
-    'BI Migration & Modernization',
-    'Cloud Transformation',
+    { name: 'AI / Agentic AI', href: '/domo-agentic-ai' },
+    { name: 'Data Governance', href: '/solutions/data-governance' },
+    { name: 'Data Strategy & Engineering', href: '/solutions/data-strategy-engineering' },
+    {
+      name: 'Business Intelligence & Analytics',
+      href: '/solutions/business-intelligence-analytics',
+    },
+    { name: 'BI Migration & Modernization', href: '/solutions/bi-migration-modernization' },
+    { name: 'Cloud Transformation', href: '/solutions/cloud-transformation' },
   ];
 
   return (
@@ -47,13 +64,28 @@ const Footer = () => {
           <div className='flex items-center gap-4'>
             <span className='text-sm font-medium'>Follow us on</span>
             <div className='flex gap-3'>
-              <a href='#' className='hover:opacity-80 transition-opacity'>
+              <a
+                href='https://www.instagram.com/gwcdata.ai'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='hover:opacity-80 transition-opacity'
+              >
                 <img src='/images/instagram_icon.svg' alt='Instagram' className='w-8 h-8' />
               </a>
-              <a href='#' className='hover:opacity-80 transition-opacity'>
+              <a
+                href='https://www.youtube.com/@gwcdataai'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='hover:opacity-80 transition-opacity'
+              >
                 <img src='/images/youtube_icon.svg' alt='YouTube' className='w-8 h-8' />
               </a>
-              <a href='#' className='hover:opacity-80 transition-opacity'>
+              <a
+                href='https://www.linkedin.com/company/gwcdataai'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='hover:opacity-80 transition-opacity'
+              >
                 <img src='/images/linkedin_icon.svg' alt='LinkedIn' className='w-8 h-8' />
               </a>
             </div>
@@ -80,10 +112,13 @@ const Footer = () => {
             <h3 className='font-bold mb-6 text-sm uppercase tracking-wider'>QUICK LINKS</h3>
             <ul className='space-y-3'>
               {quickLinks.map(link => (
-                <li key={link}>
-                  <a href='#' className='text-sm opacity-90 hover:opacity-100 transition-opacity'>
-                    {link}
-                  </a>
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className='text-sm opacity-90 hover:opacity-100 transition-opacity'
+                  >
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -94,10 +129,13 @@ const Footer = () => {
             <h3 className='font-bold mb-6 text-sm uppercase tracking-wider'>PARTNERS</h3>
             <ul className='space-y-3'>
               {partners.map(partner => (
-                <li key={partner}>
-                  <a href='#' className='text-sm opacity-90 hover:opacity-100 transition-opacity'>
-                    {partner}
-                  </a>
+                <li key={partner.name}>
+                  <Link
+                    href={partner.href}
+                    className='text-sm opacity-90 hover:opacity-100 transition-opacity'
+                  >
+                    {partner.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -108,10 +146,13 @@ const Footer = () => {
             <h3 className='font-bold mb-6 text-sm uppercase tracking-wider'>SOLUTIONS</h3>
             <ul className='space-y-3'>
               {solutions.map(solution => (
-                <li key={solution}>
-                  <a href='#' className='text-sm opacity-90 hover:opacity-100 transition-opacity'>
-                    {solution}
-                  </a>
+                <li key={solution.name}>
+                  <Link
+                    href={solution.href}
+                    className='text-sm opacity-90 hover:opacity-100 transition-opacity'
+                  >
+                    {solution.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -141,10 +182,15 @@ const Footer = () => {
                     d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'
                   />
                 </svg>
-                <span className='text-sm opacity-90 leading-relaxed'>
+                <a
+                  href='https://www.google.com/maps/search/?api=1&query=46%2F4+Novel+Tech+Park%2C+Kudlu+Gate%2C+Hosur+Rd%2C+HSR+Extension%2C+Bangalore%2C+Karnataka%2C+India+560068'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-sm opacity-90 leading-relaxed hover:opacity-100 transition-opacity'
+                >
                   #46/4 Novel Tech Park, Kudlu Gate, Hosur Rd, HSR Extension, Bangalore, Karnataka,
                   India 560068
-                </span>
+                </a>
               </li>
               <li className='flex items-center gap-3'>
                 <svg

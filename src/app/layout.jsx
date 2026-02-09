@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Footer from '../components/ui/Footer';
 import Header from '../components/ui/Header/Header';
 import Providers from '../components/ui/Providers';
+import ScrollToTop from '../components/ui/ScrollToTop'; // Import the new component
 import SplashScreen from '../components/ui/SplashScreen';
 import './globals.css';
 
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
             isVisible={isBannerVisible}
             onClose={handleBannerClose}
           /> */}
+          <ScrollToTop /> {/* Add ScrollToTop here outside of Header/Main/Footer */}
           <Header isBannerVisible={isBannerVisible} />
           <main className={isBannerVisible ? 'pt-20' : ''}>{children}</main>
           <Footer />
