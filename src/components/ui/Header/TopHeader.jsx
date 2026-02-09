@@ -25,17 +25,17 @@ const TopHeader = ({ isVisible = true, onClose }) => {
           {/* Center content */}
           <div className='flex-1 flex items-center justify-center'>
             <div className='flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center'>
-              {/* <span className="text-xs sm:text-sm font-medium whitespace-nowrap">
-                Quantum computing live show - Event happening on Sep 23, 2025
-              </span> */}
+              <span className='text-xs sm:text-sm font-medium whitespace-nowrap'>
+                Proudly Present at Domo Palooza 2026
+              </span>
 
               <a
-                href='https://your-registration-link.com'
+                href='https://www.domo.com/domopalooza'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-white text-xs sm:text-sm font-semibold hover:underline transition-all duration-200 flex items-center gap-1 whitespace-nowrap'
+                className='text-white text-xs sm:text-sm font-semibold hover:underline transition-all duration-200 flex items-center gap-1 whitespace-nowrap underline'
               >
-                <span>Register now</span>
+                <span>Learn more</span>
                 <svg
                   className='w-3 h-3 sm:w-4 sm:h-4'
                   fill='none'

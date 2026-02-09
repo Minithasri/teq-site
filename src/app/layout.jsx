@@ -4,8 +4,9 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Footer from '../components/ui/Footer';
 import Header from '../components/ui/Header/Header';
+import TopHeader from '../components/ui/Header/TopHeader';
 import Providers from '../components/ui/Providers';
-import ScrollToTop from '../components/ui/ScrollToTop'; // Import the new component
+import ScrollToTop from '../components/ui/ScrollToTop';
 import SplashScreen from '../components/ui/SplashScreen';
 import './globals.css';
 
@@ -32,11 +33,14 @@ export default function RootLayout({ children }) {
   const handleSplashFinish = () => setShowSplash(false);
   const handleBannerClose = () => setIsBannerClosed(true);
 
-  const isBannerVisible = false; // shouldShowBannerInitially && !isBannerClosed;
+  const isBannerVisible = shouldShowBannerInitially && !isBannerClosed;
 
   if (showSplash) {
     return (
       <html lang='en'>
+        <head>
+          <link rel='icon' href='/images/favlogo1.svg' type='image/svg+xml' sizes='any' />
+        </head>
         <body>
           <SplashScreen onComplete={handleSplashFinish} />
         </body>
@@ -46,12 +50,12 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang='en'>
+      <head>
+        <link rel='icon' href='/images/favlogo1.svg' type='image/svg+xml' sizes='any' />
+      </head>
       <body>
         <Providers>
-          {/* <TopHeader
-            isVisible={isBannerVisible}
-            onClose={handleBannerClose}
-          /> */}
+          <TopHeader isVisible={isBannerVisible} onClose={handleBannerClose} />
           <ScrollToTop /> {/* Add ScrollToTop here outside of Header/Main/Footer */}
           <Header isBannerVisible={isBannerVisible} />
           <main className={isBannerVisible ? 'pt-20' : ''}>{children}</main>

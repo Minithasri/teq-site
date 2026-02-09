@@ -79,6 +79,11 @@ export default function LifeAtGwc() {
       src: '/images/AboutUs/life14.svg',
       title: 'GWC’s Ganapathi Bappaa GWC',
     },
+    {
+      id: 15,
+      src: '/images/AboutUs/life15.jpg',
+      title: 'Domo CXO Cricket Premier League',
+    },
   ];
 
   // Infinite loop navigation
