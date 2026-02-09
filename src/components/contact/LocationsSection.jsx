@@ -90,9 +90,12 @@ export default function LocationsSection() {
         {/* Locations Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           {locations.map(location => (
-            <div
+            <Link
               key={location.id}
-              className='bg-white rounded-2xl overflow-hidden shadow-[0px_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0px_8px_32px_rgba(0,0,0,0.12)] transform hover:scale-105 transition-all duration-300 flex flex-col border border-gray-100 group'
+              href={location.mapLink}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='bg-white rounded-2xl overflow-hidden shadow-[0px_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0px_8px_32px_rgba(0,0,0,0.12)] transform hover:scale-105 transition-all duration-300 flex flex-col border border-gray-100 group pointer-events-auto'
             >
               {/* Location Image */}
               <div className='relative w-full h-[200px]'>
@@ -108,20 +111,15 @@ export default function LocationsSection() {
 
                 {/* Footer: View on Map + Icon */}
                 <div className='flex items-center justify-between mt-auto'>
-                  <Link
-                    href={location.mapLink}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-[#6f2b8c] text-[14px] font-medium hover:underline'
-                  >
+                  <span className='text-[#6f2b8c] text-[14px] font-medium group-hover:underline'>
                     View on Map
-                  </Link>
+                  </span>
                   <div className='w-10 h-10 rounded-full bg-[#E8EBF0] group-hover:bg-[#6f2b8c] transition-colors duration-300 flex items-center justify-center shrink-0'>
                     <FiMapPin className='text-[#6f2b8c] group-hover:text-white transition-colors duration-300 w-5 h-5 opacity-80 group-hover:opacity-100' />
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
