@@ -26,7 +26,20 @@ const TopHeader = ({ isVisible = true, onClose }) => {
           <div className='flex-1 flex items-center justify-center'>
             <div className='flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center'>
               <span className='text-xs sm:text-sm font-medium whitespace-nowrap'>
-                Proudly Present at Domo Palooza 2026
+                See Us Live at{' '}
+                <span
+                  style={{
+                    background:
+                      'linear-gradient(to right, #EA7E89, #C9AEF8, #6DCAF3, #8CE9C6, #BD6FDC, #CDCC70, #DB7178, #F49451)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    fontWeight: 'bold',
+                  }}
+                >
+                  Domo Palooza 2026
+                </span>{' '}
+                on this March 24-27th, in Salt Lake City, UTAH
               </span>
 
               <a
