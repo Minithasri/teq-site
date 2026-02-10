@@ -109,38 +109,37 @@ export default function DomoDashboard() {
               key={`${dashboard.title}-${index}`}
               className='flex-shrink-0 w-[300px] md:w-[380px] inline-block align-top whitespace-normal'
             >
-              <div className='bg-white rounded-3xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 h-full border border-gray-100 group'>
-                {/* Card Image */}
-                <div className='relative w-full h-[220px] overflow-hidden p-4'>
-                  <div className='relative w-full h-full rounded-2xl overflow-hidden'>
-                    <div className='absolute inset-0 bg-gray-100 animate-pulse'></div>
-                    <Image
-                      src={dashboard.src}
-                      alt={dashboard.title}
-                      fill
-                      className='object-cover transition-transform duration-500 group-hover:scale-110'
-                    />
+              <Link href={dashboard.url} className='block h-full'>
+                <div className='bg-white rounded-3xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 h-full border border-gray-100 group cursor-pointer'>
+                  {/* Card Image */}
+                  <div className='relative w-full h-[220px] overflow-hidden p-4'>
+                    <div className='relative w-full h-full rounded-2xl overflow-hidden'>
+                      <div className='absolute inset-0 bg-gray-100 animate-pulse'></div>
+                      <Image
+                        src={dashboard.src}
+                        alt={dashboard.title}
+                        fill
+                        className='object-cover transition-transform duration-500 group-hover:scale-110'
+                      />
+                    </div>
+                  </div>
+
+                  {/* Card Content */}
+                  <div className='px-6 pb-8 pt-2'>
+                    <h4 className='text-[#303030] font-bold text-[18px] mb-3 leading-tight'>
+                      {dashboard.title}
+                    </h4>
+                    <p className='text-[#606060] text-[14px] leading-relaxed mb-6 line-clamp-3'>
+                      {dashboard.description}
+                    </p>
+
+                    <span className='inline-flex items-center gap-2 text-[#8B3DA8] font-semibold text-[15px] group-hover:gap-3 transition-all'>
+                      Learn more
+                      <FiArrowRight />
+                    </span>
                   </div>
                 </div>
-
-                {/* Card Content */}
-                <div className='px-6 pb-8 pt-2'>
-                  <h4 className='text-[#303030] font-bold text-[18px] mb-3 leading-tight'>
-                    {dashboard.title}
-                  </h4>
-                  <p className='text-[#606060] text-[14px] leading-relaxed mb-6 line-clamp-3'>
-                    {dashboard.description}
-                  </p>
-
-                  <Link
-                    href='#'
-                    className='inline-flex items-center gap-2 text-[#8B3DA8] font-semibold text-[15px] hover:gap-3 transition-all'
-                  >
-                    Learn more
-                    <FiArrowRight />
-                  </Link>
-                </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

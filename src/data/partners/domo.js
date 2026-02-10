@@ -303,6 +303,7 @@ export const domoData = {
       description:
         'Real-time inventory tracking, stock level monitoring, and logistics optimization for efficient warehouse operations and supply chain management.',
       features: ['Inventory Tracking', 'Stock Levels', 'Logistics', 'Supply Chain'],
+      url: '/domoProdInfo/JZLOy',
     },
     {
       title: 'Automotive Retail',
@@ -315,6 +316,7 @@ export const domoData = {
         'Customer Insights',
         'Dealership Performance',
       ],
+      url: '/domoProdInfo/LgMj4',
     },
     {
       title: 'Custom App',
@@ -322,6 +324,7 @@ export const domoData = {
       description:
         'Build and monitor custom business applications with real-time performance metrics, user engagement tracking, and application health monitoring.',
       features: ['Performance Metrics', 'User Engagement', 'App Health', 'Custom Analytics'],
+      url: '/domoProdInfo/lOKxr',
     },
     {
       title: 'Service Monitoring',
@@ -334,6 +337,7 @@ export const domoData = {
         'Customer Satisfaction',
         'Service Delivery',
       ],
+      url: '/domoProdInfo/KOMP8',
     },
   ],
 

@@ -17,7 +17,7 @@ const BuiltAIAgents = () => {
         'We select the ideal logic, models, and workflows to shape agent behavior, conversation flows, and trigger mechanisms tailored to your use case.',
     },
     {
-      icon: '/images/Deploy.svg',
+      icon: '/images/deploy.svg',
       title: 'Deployment & Integration',
       subtitle:
         'We integrate the agent directly into your environment, whether it’s a dashboard, dataset, workflow, or API-driven system, ensuring a seamless experience.',
