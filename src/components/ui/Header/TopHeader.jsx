@@ -26,29 +26,28 @@ const TopHeader = ({ isVisible = true, onClose }) => {
           <div className='flex-1 flex items-center justify-center'>
             <div className='flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center'>
               <span className='text-xs sm:text-sm font-medium whitespace-nowrap'>
-                See Us Live at{' '}
+                Upcoming Webinar |{' '}
                 <span
                   style={{
-                    background:
-                      'linear-gradient(to right, #EA7E89, #C9AEF8, #6DCAF3, #8CE9C6, #BD6FDC, #CDCC70, #DB7178, #F49451)',
+                    background: 'linear-gradient(to right, #6DCAF3, #CDCC70, #DB7178, #FF8C00)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
                     fontWeight: 'bold',
                   }}
                 >
-                  Domo Palooza 2026
+                  BIMAS – BI Migration Accelerator as a Service
                 </span>{' '}
-                on this March 24-27th, in Salt Lake City, UTAH
+                | March 4, 2026 | 3:30 PM IST
               </span>
 
               <a
-                href='https://www.domo.com/domopalooza'
+                href='https://bimas-webinar.vercel.app/'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-white text-xs sm:text-sm font-semibold hover:underline transition-all duration-200 flex items-center gap-1 whitespace-nowrap underline'
               >
-                <span>Learn more</span>
+                <span>Register Now</span>
                 <svg
                   className='w-3 h-3 sm:w-4 sm:h-4'
                   fill='none'
