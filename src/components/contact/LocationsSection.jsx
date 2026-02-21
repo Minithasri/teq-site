@@ -37,9 +37,9 @@ export default function LocationsSection() {
     {
       id: 5,
       name: 'Coimbatore',
-      address: 'ELCOT SEZ, 2nd Floor, Vilankurichi Road, PO College of Technology, Coimbatore',
+      address: '22JF+Q67, ELCOT SEZ, Coimbatore - 641014',
       image: '/images/ContactUs/Coimbatore.webp',
-      mapLink: 'https://maps.google.com',
+      mapLink: 'https://maps.app.goo.gl/d1nGywiWSMTHJk7k9',
     },
     {
       id: 6,
@@ -68,7 +68,7 @@ export default function LocationsSection() {
       name: 'Tirupathur',
       address: '3/6, CKC Road, Jaibheem Nagar, CKC Nagar, Tirupattur, Tamil Nadu 635601',
       image: '/images/ContactUs/tirupattur.webp',
-      mapLink: 'https://maps.app.goo.gl/wcTFoj38WkmRmmAJ6',
+      mapLink: 'https://maps.app.goo.gl/1os8Q2QZyW6CtS939',
     },
     {
       id: 10,
