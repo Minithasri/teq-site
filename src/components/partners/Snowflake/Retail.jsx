@@ -16,7 +16,7 @@ const industries = [
 
 const industryData = {
   Retail: {
-    image: '/images/partners/Snowflake/snow1.svg',
+    image: '/images/partners/snowflake/snow1.svg',
     items: [
       {
         title: 'Unified Data Platform',
@@ -31,7 +31,7 @@ const industryData = {
     ],
   },
   Healthcare: {
-    image: '/images/partners/Snowflake/snow2.svg',
+    image: '/images/partners/snowflake/snow2.svg',
     items: [
       {
         title: 'Secure Data Handling',
@@ -46,7 +46,7 @@ const industryData = {
     ],
   },
   Finance: {
-    image: '/images/partners/Snowflake/snow3.svg',
+    image: '/images/partners/snowflake/snow3.svg',
     items: [
       {
         title: 'Scalable Data Processing',
@@ -61,7 +61,7 @@ const industryData = {
     ],
   },
   Manufacturing: {
-    image: '/images/partners/Snowflake/snow4.svg',
+    image: '/images/partners/snowflake/snow4.svg',
     items: [
       {
         title: 'Supply Chain Optimization',
@@ -76,7 +76,7 @@ const industryData = {
     ],
   },
   Technology: {
-    image: '/images/partners/Snowflake/snow5.svg',
+    image: '/images/partners/snowflake/snow5.svg',
     items: [
       {
         title: 'Data Collaboration',
@@ -90,7 +90,7 @@ const industryData = {
     ],
   },
   Education: {
-    image: '/images/partners/Snowflake/snow6.svg',
+    image: '/images/partners/snowflake/snow6.svg',
     items: [
       {
         title: 'Data-driven Decision-Making',
@@ -105,7 +105,7 @@ const industryData = {
     ],
   },
   Hospitality: {
-    image: '/images/partners/Snowflake/snow7.svg',
+    image: '/images/partners/snowflake/snow7.svg',
     items: [
       {
         title: 'Customer Experience Enhancement',
@@ -120,7 +120,7 @@ const industryData = {
     ],
   },
   Energy: {
-    image: '/images/partners/Snowflake/snow8.jpg',
+    image: '/images/partners/snowflake/snow8.jpg',
     items: [
       {
         title: 'Smart Grid Analytics',
@@ -135,7 +135,7 @@ const industryData = {
     ],
   },
   default: {
-    image: '/images/partners/Snowflake/Retail.webp',
+    image: '/images/partners/snowflake/Retail.webp',
     items: [],
   },
 };

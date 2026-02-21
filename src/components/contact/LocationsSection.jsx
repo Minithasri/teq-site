@@ -44,28 +44,29 @@ export default function LocationsSection() {
     {
       id: 6,
       name: 'Hosur',
-      address: 'ELCOT SEZ, 2nd Floor, Shoolagiri Road, NH Bangalore Road, Hosur 635126',
+      address: 'Kumudepalli, Moranapalli, Hosur, Tamil Nadu 635130',
       image: '/images/ContactUs/hosur.webp',
       mapLink: 'https://maps.app.goo.gl/i57obphBQjxg4FiXA?g_st=aw',
     },
     {
       id: 7,
       name: 'Dharmapuri',
-      address: 'ELCOT SEZ, 2nd Floor, Shoolagiri Road, Dharmapuri, Dharmapuri 636701',
+      address:
+        '116/3, First Floor, Salem Main Rd, Bharathipuram, Lakkiampatty, Dharmapuri, Tamil Nadu 636705',
       image: '/images/ContactUs/dharmapuri.webp',
       mapLink: 'https://maps.app.goo.gl/NRdwsJMYACUxuJpp8',
     },
     {
       id: 8,
       name: 'Salem',
-      address: 'ELCOT SEZ, 2nd Floor, Shoolagiri Road, NH Bangalore Road, Attur, Salem 636105',
+      address: 'Kandasamy Pudur, Kamarajar Nagar Colony, Ammapet, Salem, Tamil Nadu 636014',
       image: '/images/ContactUs/salem.webp',
       mapLink: 'https://maps.app.goo.gl/7uyNo1a6wddMhMHN6',
     },
     {
       id: 9,
       name: 'Tirupathur',
-      address: 'ELCOT SEZ, 2nd Floor, Shoolagiri Road, Tirupathur, Vellore District 635601',
+      address: '3/6, CKC Road, Jaibheem Nagar, CKC Nagar, Tirupattur, Tamil Nadu 635601',
       image: '/images/ContactUs/tirupattur.webp',
       mapLink: 'https://maps.app.goo.gl/wcTFoj38WkmRmmAJ6',
     },

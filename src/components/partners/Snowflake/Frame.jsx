@@ -16,8 +16,8 @@ const bannerContent = {
     "As a certified Snowflake partner, GWC delivers expert implementation, optimization, data migration, integration, and custom solutions using Snowflake's cloud data platform.",
   ctaText: 'Get in touch',
   images: {
-    background: '/images/partners/Snowflake/Frame.webp',
-    illustration: '/images/partners/Snowflake/snowflakebghero3.webp',
+    background: '/images/partners/snowflake/Frame.webp',
+    illustration: '/images/partners/snowflake/snowflakebghero3.webp',
   },
 };
 

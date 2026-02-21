@@ -27,7 +27,7 @@ export default function Powerdata() {
       {/* Background Image Layer - using Frame2.webp as requested */}
       <div className='absolute inset-0 pointer-events-none'>
         <Image
-          src='/images/partners/Snowflake/Frame2.webp'
+          src='/images/partners/snowflake/Frame2.webp'
           alt='Background Pattern'
           fill
           className='object-cover opacity-100'
@@ -49,7 +49,7 @@ export default function Powerdata() {
             style={{ width: '670px', height: '270px' }}
           >
             <Image
-              src='/images/partners/Snowflake/img7.webp'
+              src='/images/partners/snowflake/img7.webp'
               alt='Snowflake Data Core'
               fill
               className='object-cover rounded-3xl'

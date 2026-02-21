@@ -4,37 +4,37 @@ import { FiArrowRight } from 'react-icons/fi';
 
 const cards = [
   {
-    image: '/images/partners/Snowflake/newimage1.svg',
+    image: '/images/partners/snowflake/newimage1.svg',
     title: 'Performance Optimization',
     description:
       'Our Snowflake services optimize complex queries, significantly improving query execution times and overall system performance.',
   },
   {
-    image: '/images/partners/Snowflake/newimage2.svg',
+    image: '/images/partners/snowflake/newimage2.svg',
     title: 'Cost Optimization',
     description:
       "We implement cost-effective solutions by leveraging Snowflake's separation of storage & compute resources, resulting in optimized resource utilization & cost savings.",
   },
   {
-    image: '/images/partners/Snowflake/img3.webp',
+    image: '/images/partners/snowflake/img3.webp',
     title: 'Data Modeling Excellence',
     description:
       'We design & implement highly efficient & scalable data models in Snowflake, enhancing data organization & accessibility for analytics & reporting.',
   },
   {
-    image: '/images/partners/Snowflake/newimage4.svg',
+    image: '/images/partners/snowflake/newimage4.svg',
     title: 'Security Implementation',
     description:
       'We implement robust security measures, including role-based access control (RBAC), encryption, & data masking, ensuring data integrity & compliance with security standards.',
   },
   {
-    image: '/images/partners/Snowflake/newimage6.svg',
+    image: '/images/partners/snowflake/newimage6.svg',
     title: 'ETL Process Enhancements',
     description:
       'Our services streamline ETL processes, reducing data processing times and improving the efficiency of data movement within the Snowflake platform.',
   },
   {
-    image: '/images/partners/Snowflake/newimage5.svg',
+    image: '/images/partners/snowflake/newimage5.svg',
     title: 'BI Integration Success',
     description:
       'We integrate Snowflake with various Business Intelligence (BI) tools, enabling seamless data visualization & reporting capabilities for end-users.',
