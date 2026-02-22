@@ -24,8 +24,8 @@ const TopHeader = ({ isVisible = true, onClose }) => {
         <div className='max-w-7xl mx-auto flex items-center justify-between h-full'>
           {/* Center content */}
           <div className='flex-1 flex items-center justify-center'>
-            <div className='flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center'>
-              <span className='text-xs sm:text-sm font-medium whitespace-nowrap'>
+            <div className='flex flex-col sm:flex-row items-center gap-1 sm:gap-6 text-center'>
+              <span className='text-[clamp(9px,1.5vw,14px)] font-medium whitespace-nowrap'>
                 Upcoming Webinar |{' '}
                 <span
                   style={{
@@ -38,14 +38,14 @@ const TopHeader = ({ isVisible = true, onClose }) => {
                 >
                   BIMAS – BI Migration Accelerator as a Service
                 </span>{' '}
-                | March 4, 2026 | 3:30 PM IST
+                <span className='hidden md:inline'>| March 4, 2026 | 3:30 PM IST</span>
               </span>
 
               <a
                 href='https://bimas-webinar.vercel.app/'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-white text-xs sm:text-sm font-semibold hover:underline transition-all duration-200 flex items-center gap-1 whitespace-nowrap underline'
+                className='text-white text-[clamp(9px,1.5vw,14px)] font-semibold hover:underline transition-all duration-200 flex items-center gap-1 whitespace-nowrap underline'
               >
                 <span>Register Now</span>
                 <svg
