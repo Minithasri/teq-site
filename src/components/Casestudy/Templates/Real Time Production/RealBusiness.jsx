@@ -53,17 +53,17 @@ export default function RealBusiness() {
         <div className='flex flex-col lg:flex-row justify-between items-start mb-12'>
           {/* Header */}
           <div className='max-w-7xl'>
-            <h2 className='text-[28px] lg:text-[36px] font-bold text-[#1D2530] mb-4'>
+            <h2 className='text-[32px] md:text-[36px] font-bold text-[#1D2530] mb-4'>
               Real Business Impact
             </h2>
-            <p className='text-[16px] text-[#65758B]'>
+            <p className='text-[16px] md:text-[18px] text-[#65758B] leading-relaxed'>
               Quantifiable improvements across key operational metrics, delivering measurable value
               to production efficiency and bottom-line results.
             </p>
           </div>
 
           {/* Decorative Image */}
-          <div className='absolute top-0 -right-20 w-64 h-64 lg:-mt-48 lg:mr-12 pointer-events-none'>
+          <div className='hidden lg:block absolute top-0 -right-20 w-64 h-64 lg:-mt-48 lg:mr-12 pointer-events-none'>
             <Image
               src='/images/Templates/template1/bike2.svg'
               alt='Growth Chart'

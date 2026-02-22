@@ -36,10 +36,12 @@ export default function CurrentState() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Header */}
         <div className='text-center mb-16'>
-          <h2 className='text-3xl lg:text-4xl font-bold text-[#1D2530] mb-4'>
+          <h2 className='text-[32px] md:text-[40px] font-bold text-[#1D2530] mb-4'>
             Current State & Operational Gaps
           </h2>
-          <p className='text-lg text-[#65758B]'>Key areas requiring immediate improvement</p>
+          <p className='text-[16px] md:text-[18px] text-[#65758B] leading-relaxed max-w-3xl mx-auto'>
+            Key areas requiring immediate improvement
+          </p>
         </div>
 
         {/* Content Grid */}
@@ -59,8 +61,8 @@ export default function CurrentState() {
               </div>
             ))}
 
-            {/* Decorative Gear Image - Positioned absolutely near the 3rd card */}
-            <div className='hidden lg:block absolute -right-20 -top-24 w-64 h-64 z-20'>
+            {/* Decorative Gear Image - Hidden on mobile/tablet to avoid overlap */}
+            <div className='hidden xl:block absolute -right-20 -top-24 w-64 h-64 z-20'>
               <Image
                 src='/images/Templates/template2/section22.svg'
                 alt='Gears'

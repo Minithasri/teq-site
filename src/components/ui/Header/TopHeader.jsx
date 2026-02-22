@@ -1,7 +1,30 @@
 'use client';
 
-const TopHeader = ({ isVisible = true, onClose }) => {
-  if (!isVisible) return null;
+import { useEffect, useState } from 'react';
+
+const TopHeader = ({ isVisible: parentVisibility = true, onClose }) => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchAnnouncement = async () => {
+      try {
+        // Adding a timestamp to the URL ensures the browser and Hostinger
+        // don't cache the old JSON when you update it manually.
+        const response = await fetch(`/data/announcement.json?t=${Date.now()}`);
+        const json = await response.json();
+        setData(json);
+      } catch (error) {
+        console.error('Error fetching announcement:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAnnouncement();
+  }, []);
+
+  if (loading || !parentVisibility || !data || !data.isVisible) return null;
 
   const handleClose = () => {
     onClose?.();
@@ -10,7 +33,7 @@ const TopHeader = ({ isVisible = true, onClose }) => {
   return (
     <div
       className='w-full bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white py-1 sm:py-3 px-4 fixed top-0 left-0 right-0 z-[10001] overflow-hidden'
-      style={{ height: '40px' }} // consistent height for smooth header transition
+      style={{ height: '40px' }}
     >
       {/* Animated background swipe effect */}
       <div
@@ -26,7 +49,7 @@ const TopHeader = ({ isVisible = true, onClose }) => {
           <div className='flex-1 flex items-center justify-center'>
             <div className='flex flex-col sm:flex-row items-center gap-1 sm:gap-6 text-center'>
               <span className='text-[clamp(9px,1.5vw,14px)] font-medium whitespace-nowrap'>
-                Upcoming Webinar |{' '}
+                {data.title} |{' '}
                 <span
                   style={{
                     background: 'linear-gradient(to right, #6DCAF3, #CDCC70, #DB7178, #FF8C00)',
@@ -36,13 +59,15 @@ const TopHeader = ({ isVisible = true, onClose }) => {
                     fontWeight: 'bold',
                   }}
                 >
-                  BIMAS – BI Migration Accelerator as a Service
+                  {data.event}
                 </span>{' '}
-                <span className='hidden md:inline'>| March 4, 2026 | 3:30 PM IST</span>
+                <span className='hidden md:inline'>
+                  | {data.date} | {data.time}
+                </span>
               </span>
 
               <a
-                href='https://bimas-webinar.vercel.app/'
+                href={data.link}
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-white text-[clamp(9px,1.5vw,14px)] font-semibold hover:underline transition-all duration-200 flex items-center gap-1 whitespace-nowrap underline'
@@ -83,7 +108,6 @@ const TopHeader = ({ isVisible = true, onClose }) => {
         </div>
       </div>
 
-      {/* Inline keyframes */}
       <style jsx>{`
         @keyframes swipe {
           0% {

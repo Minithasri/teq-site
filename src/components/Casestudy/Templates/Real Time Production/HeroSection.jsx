@@ -26,11 +26,11 @@ export default function HeroSection() {
       ></div>
 
       {/* Content */}
-      <div className='relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16'>
+      <div className='relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24'>
         {/* Logos Row */}
-        <div className='flex items-center gap-4 mt-12 mb-8 lg:mb-8'>
+        <div className='flex items-center gap-4 mt-8 mb-8 lg:mb-12'>
           {/* GWC Logo */}
-          <div className='relative w-32 lg:w-40 h-12'>
+          <div className='relative w-32 lg:w-40 h-10 lg:h-12'>
             <Image
               src='/images/Templates/template1/gwclogo.svg'
               alt='GWC Data.AI'
@@ -43,12 +43,12 @@ export default function HeroSection() {
 
         {/* Title */}
         <div className='max-w-4xl'>
-          <h1 className='text-[28px] lg:text-[36px] xl:text-[48px] font-bold text-white mb-6 leading-tight'>
+          <h1 className='text-[32px] md:text-[40px] lg:text-[48px] xl:text-[56px] font-bold text-white mb-6 leading-[1.2]'>
             Real-Time Production Monitoring with <span className='text-yellow-400'>IoT</span>
           </h1>
         </div>
         {/* Subtitle */}
-        <p className='max-w-7xl text-[16px] lg:text-[18px] text-white/90 leading-relaxed'>
+        <p className='max-w-3xl text-[16px] md:text-[18px] lg:text-[20px] text-white/90 leading-relaxed font-medium'>
           How a leading automotive Manufacturer achieved 10-15% productivity boost and 90% reduction
           in manual effort through connected factory automation
         </p>

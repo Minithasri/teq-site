@@ -54,8 +54,13 @@ export default function BusinessImpact() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='text-center mb-16'>
-          <h2 className='text-3xl lg:text-4xl font-bold text-[#1D2530] mb-4'>Business Impact</h2>
-          <p className='text-lg text-[#65758B]'>Measurable results across operations</p>
+          <h2 className='text-[32px] md:text-[40px] font-bold text-[#1D2530] mb-4'>
+            {' '}
+            Business Impact
+          </h2>
+          <p className='text-[16px] md:text-[18px] text-[#65758B] leading-relaxed max-w-3xl mx-auto'>
+            Measurable results across operations
+          </p>
         </div>
 
         {/* Stats Grid */}

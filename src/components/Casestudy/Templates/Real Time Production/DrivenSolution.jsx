@@ -62,10 +62,10 @@ export default function DrivenSolution() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Header */}
         <div className='mb-12'>
-          <h2 className='text-[28px] lg:text-[36px] font-bold text-[#1D2530] mb-4'>
+          <h2 className='text-[32px] md:text-[36px] font-bold text-[#1D2530] mb-4'>
             GWC's IoT-Driven Solution
           </h2>
-          <p className='text-[16px] text-[#65758B] max-w-7xl'>
+          <p className='text-[16px] md:text-[18px] text-[#65758B] max-w-7xl leading-relaxed'>
             We deployed a Connected Factory Framework enabling automated live insights across the
             entire production floor.
           </p>

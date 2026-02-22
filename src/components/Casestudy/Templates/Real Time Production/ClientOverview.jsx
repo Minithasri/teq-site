@@ -11,8 +11,8 @@ export default function ClientOverview() {
         </h2>
 
         <div className='relative mt-8 lg:mt-16'>
-          {/* Desktop Overlay Image */}
-          <div className='hidden lg:block absolute -right-10 -top-32 z-20 w-[500px] h-[350px] shadow-xl rounded-xl overflow-hidden'>
+          {/* Desktop Overlay Image - Hidden on mobile/tablet to avoid overlap */}
+          <div className='hidden xl:block absolute -right-10 -top-32 z-20 w-[500px] h-[350px] shadow-xl rounded-xl overflow-hidden'>
             <Image
               src='/images/Templates/template1/hero1.webp'
               alt='Die Casting Manufacturing'
@@ -22,8 +22,8 @@ export default function ClientOverview() {
           </div>
 
           {/* Left Content Card */}
-          <div className='relative z-10 bg-white rounded-xl p-8 lg:pr-32 shadow-sm w-full lg:w-[70%]'>
-            <p className='text-[16px] text-[#65758B] leading-relaxed mb-6 max-w-5xl'>
+          <div className='relative z-10 bg-white rounded-xl p-6 sm:p-8 lg:pr-32 shadow-sm w-full lg:w-[70%]'>
+            <p className='text-[16px] md:text-[18px] text-[#65758B] leading-relaxed mb-8 max-w-5xl'>
               A leading automotive die-casting manufacturer producing high- precision aluminium
               components at scale. With multiple machines running continuous operations, the
               leadership team required live production insights to reduce downtime, increase
@@ -79,8 +79,8 @@ export default function ClientOverview() {
             </div>
           </div>
 
-          {/* Mobile Image */}
-          <div className='lg:hidden mt-8 rounded-xl overflow-hidden shadow-md'>
+          {/* Mobile Image - Hidden to match clean "no-overlap" look */}
+          <div className='hidden mt-8 rounded-xl overflow-hidden shadow-md'>
             <Image
               src='/images/Templates/template1/hero1.webp'
               alt='Die Casting Manufacturing'

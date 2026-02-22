@@ -135,7 +135,7 @@ const industryData = {
     ],
   },
   default: {
-    image: '/images/partners/snowflake/Retail.webp',
+    image: '/images/partners/snowflake/retail.webp',
     items: [],
   },
 };

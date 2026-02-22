@@ -36,8 +36,10 @@ export default function Technology() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='text-center mb-16'>
-          <h2 className='text-3xl lg:text-4xl font-bold text-[#1D2530] mb-4'>Technology Stack</h2>
-          <p className='text-lg text-[#65758B]'>
+          <h2 className='text-[32px] md:text-[40px] font-bold text-[#1D2530] mb-4'>
+            Technology Stack
+          </h2>
+          <p className='text-[16px] md:text-[18px] text-[#65758B] leading-relaxed max-w-3xl mx-auto'>
             Enterprise-grade tools powering real-time insights
           </p>
         </div>

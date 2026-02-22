@@ -22,31 +22,31 @@ const offeringsData = [
     title: 'Data Integration',
     description:
       'Snowflake integrates with various data integration tools & platforms, allowing users to load & extract data seamlessly.',
-    icon: '/images/partners/snowflake/Data_Integration.svg',
+    icon: '/images/partners/snowflake/data_integration.svg',
   },
   {
     title: 'Snowpark',
     description:
       'Snowpark is a feature that allows users to run custom code directly within Snowflake using familiar programming languages like Java & Scala.',
-    icon: '/images/partners/snowflake/Snowpark.svg',
+    icon: '/images/partners/snowflake/snowpark.svg',
   },
   {
     title: 'Secure Data Collaboration',
     description:
       'Snowflake emphasizes security, providing features such as encryption, role-based access control, & compliance with various data protection regulations.',
-    icon: '/images/partners/snowflake/Secure_data_collaboration.svg',
+    icon: '/images/partners/snowflake/secure_data_collaboration.svg',
   },
   {
     title: 'Multi-Cloud Architecture',
     description:
       'Snowflake supports a multi-cluster, multi-cloud architecture, giving organizations the flexibility to choose cloud providers & scale compute resources based on their needs.',
-    icon: '/images/partners/snowflake/Multi_cloud_architecture.svg',
+    icon: '/images/partners/snowflake/multi_cloud_architecture.svg',
   },
   {
     title: 'Query Performance',
     description:
       'Snowflake is designed for high-performance query processing. It optimizes the speed of data retrieval & analysis, allowing users to derive insights rapidly.',
-    icon: '/images/partners/snowflake/Quary_performance.svg',
+    icon: '/images/partners/snowflake/quary_performance.svg',
   },
   {
     title: 'Global Availability',
@@ -58,7 +58,7 @@ const offeringsData = [
     title: 'Snowflake Marketplace',
     description:
       'The Snowflake Marketplace is a platform where users can discover & access a variety of data sets, connectors, & applications to enhance their Snowflake environment.',
-    icon: '/images/partners/snowflake/Snowflake_market.svg',
+    icon: '/images/partners/snowflake/snowflake_market.svg',
   },
   {
     title: 'Data Governance & Management',

@@ -46,23 +46,27 @@ const LastSection = ({ pdfUrl }) => {
             {/* Schedule Call Button */}
             <Link
               href='/contact'
-              className='inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium text-[15px] transition-transform hover:scale-105 border'
+              className='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium text-[14px] sm:text-[16px] transition-transform hover:scale-105 border'
               style={{
                 borderColor: '#6F2B8B',
                 color: '#6F2B8B',
               }}
             >
-              <Image src='/images/last1.svg' alt='' width={20} height={20} className='w-4 h-4' />
+              <Image
+                src='/images/last1.svg'
+                alt=''
+                width={20}
+                height={20}
+                className='w-4 h-4 sm:w-5 sm:h-5'
+              />
               Schedule a Strategy Call
             </Link>
 
             {/* Download Brochure Button */}
-            {/* Download Brochure Button */}
-            {/* Download Brochure Button */}
             <a
               href={pdfUrl || '#'}
               download={pdfUrl ? pdfUrl.split('/').pop() : true}
-              className='inline-flex items-center justify-center gap-2 text-white px-6 py-3 rounded-full font-medium text-[15px] transition-transform hover:scale-105 shadow-md'
+              className='w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium text-[14px] sm:text-[16px] transition-transform hover:scale-105 shadow-md'
               style={{
                 background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
                 cursor: pdfUrl ? 'pointer' : 'not-allowed',
@@ -74,7 +78,7 @@ const LastSection = ({ pdfUrl }) => {
                 alt=''
                 width={20}
                 height={20}
-                className='w-4 h-4 brightness-0 invert'
+                className='w-4 h-4 sm:w-5 sm:h-5 brightness-0 invert'
               />
               Download Case Study
             </a>

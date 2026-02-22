@@ -27,7 +27,7 @@ export default function Powerdata() {
       {/* Background Image Layer - using Frame2.webp as requested */}
       <div className='absolute inset-0 pointer-events-none'>
         <Image
-          src='/images/partners/snowflake/Frame2.webp'
+          src='/images/partners/snowflake/frame2.webp'
           alt='Background Pattern'
           fill
           className='object-cover opacity-100'

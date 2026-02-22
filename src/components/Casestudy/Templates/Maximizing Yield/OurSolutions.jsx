@@ -37,8 +37,8 @@ export default function OurSolutions() {
         background: 'linear-gradient(180deg, #08AA79 0%, #155709 100%)',
       }}
     >
-      {/* Top Right Bulbs */}
-      <div className='absolute top-0 right-0 z-10 w-64 h-64 pointer-events-none'>
+      {/* Top Right Bulbs - Hidden on mobile/tablet to avoid overlap */}
+      <div className='hidden xl:block absolute top-0 right-0 z-10 w-64 h-64 pointer-events-none'>
         <div className='relative w-full h-full'>
           {/* Adjust positions to match hanging bulbs */}
           <div className='absolute top-10 -right-2 w-72 h-52'>
@@ -63,8 +63,10 @@ export default function OurSolutions() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20'>
         {/* Solution Header */}
         <div className='text-center mb-12'>
-          <h2 className='text-3xl lg:text-4xl font-bold text-white mb-2'>Our Solution</h2>
-          <p className='text-white/80 text-lg'>Real-Time Production & Yield Analytics Framework</p>
+          <h2 className='text-[32px] md:text-[40px] font-bold text-white mb-2'>Our Solution</h2>
+          <p className='text-[16px] md:text-[18px] text-white/80 leading-relaxed max-w-3xl mx-auto'>
+            Real-Time Production & Yield Analytics Framework
+          </p>
         </div>
 
         {/* Highlight Card */}
@@ -111,7 +113,9 @@ export default function OurSolutions() {
           </div>
 
           <div className='text-center mb-12'>
-            <h2 className='text-3xl lg:text-4xl font-bold text-white'>Architecture Overview</h2>
+            <h2 className='text-[32px] md:text-[40px] font-bold text-white'>
+              Architecture Overview
+            </h2>
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>

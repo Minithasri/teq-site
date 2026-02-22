@@ -39,14 +39,16 @@ export default function Solutions() {
         {/* Header and Floating Image */}
         <div className='flex flex-col lg:flex-row justify-between items-start mb-16 relative'>
           <div className='max-w-2xl'>
-            <h2 className='text-3xl lg:text-4xl font-bold text-[#1D2530] mb-4'>
+            <h2 className='text-[32px] md:text-[40px] font-bold text-[#1D2530] mb-4'>
               Strategic Solution Requirements
             </h2>
-            <p className='text-lg text-[#65758B]'>Building a comprehensive analytics framework</p>
+            <p className='text-[16px] md:text-[18px] text-[#65758B] leading-relaxed'>
+              Building a comprehensive analytics framework
+            </p>
           </div>
 
-          {/* Floating Chart Image */}
-          <div className='hidden lg:block absolute right-0 -top-8 w-[500px] h-[300px] pointer-events-none z-0'>
+          {/* Floating Chart Image - Hidden on mobile/tablet to avoid overlap */}
+          <div className='hidden xl:block absolute right-0 -top-8 w-[500px] h-[300px] pointer-events-none z-0'>
             <Image
               src='/images/Templates/template2/sec31.webp'
               alt='Analytics Dashboard'

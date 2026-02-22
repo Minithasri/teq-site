@@ -25,10 +25,10 @@ export default function HeroSection() {
       ></div>
 
       {/* Content */}
-      <div className='relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center'>
+      <div className='relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center'>
         {/* Logo */}
         <div className='flex justify-center mt-12 mb-8'>
-          <div className='relative w-48 h-12'>
+          <div className='relative w-32 md:w-48 h-10 md:h-12'>
             <Image
               src='/images/Templates/template1/gwclogo.svg'
               alt='GWC Data.AI'
@@ -40,12 +40,12 @@ export default function HeroSection() {
 
         {/* Title */}
         <div className='max-w-4xl mx-auto mb-6'>
-          <h1 className='text-4xl lg:text-5xl font-bold text-white leading-tight mb-4'>
+          <h1 className='text-[32px] md:text-[40px] lg:text-[56px] font-bold text-white leading-[1.2] mb-4'>
             Maximizing Yield with
             <br />
-            Intelligent Production Analytics"
+            Intelligent Production Analytics
           </h1>
-          <p className='text-lg text-white/90'>
+          <p className='text-[16px] md:text-[18px] lg:text-[20px] text-white/90 leading-relaxed max-w-3xl mx-auto'>
             Driving packaging efficiency through real-time visibility and predictive insights
           </p>
         </div>

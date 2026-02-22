@@ -18,8 +18,10 @@ export default function Challenges() {
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='text-center mb-12'>
-          <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>The Challenge</h2>
-          <p className='text-lg text-white/90'>Inconsistent Production Tracking and Yield Loss</p>
+          <h2 className='text-[32px] md:text-[40px] font-bold text-white mb-4'>The Challenge</h2>
+          <p className='text-[16px] md:text-[18px] text-white/90 leading-relaxed max-w-3xl mx-auto'>
+            Inconsistent Production Tracking and Yield Loss
+          </p>
         </div>
 
         {/* Challenge Card */}

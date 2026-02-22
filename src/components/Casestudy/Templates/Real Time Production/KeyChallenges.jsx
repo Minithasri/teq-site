@@ -41,10 +41,10 @@ export default function KeyChallenges() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Header */}
         <div className='mb-12'>
-          <h2 className='text-[28px] lg:text-[36px] font-bold text-[#1D2530] mb-4'>
+          <h2 className='text-[32px] md:text-[36px] font-bold text-[#1D2530] mb-4'>
             Key Challenges
           </h2>
-          <p className='text-[16px] text-[#000000] max-w-7xl'>
+          <p className='text-[16px] md:text-[18px] text-[#000000] max-w-7xl leading-relaxed'>
             Traditional manufacturing processes created significant operational blind spots that
             prevented optimal production efficiency and timely decision-making.
           </p>
@@ -97,8 +97,8 @@ export default function KeyChallenges() {
               </div>
             </div>
 
-            {/* Domino Image - Positioned next to the card */}
-            <div className='hidden md:block absolute left-full -bottom-20 w-64 h-64'>
+            {/* Domino Image - Hidden on mobile/tablet to avoid overlap */}
+            <div className='hidden xl:block absolute left-full -bottom-20 w-64 h-64'>
               <Image
                 src='/images/Templates/template1/bike1.svg'
                 alt='Domino Effect'
@@ -108,8 +108,8 @@ export default function KeyChallenges() {
             </div>
           </div>
 
-          {/* Mobile Image */}
-          <div className='md:hidden mt-6 relative w-64 h-32 mx-auto'>
+          {/* Mobile Image - Hidden to avoid clutter */}
+          <div className='hidden mt-6 relative w-64 h-32 mx-auto'>
             <Image
               src='/images/Templates/template1/bike1.svg'
               alt='Domino Effect'
@@ -121,7 +121,7 @@ export default function KeyChallenges() {
       </div>
 
       {/* Background Bike Image */}
-      <div className='absolute left-[-2%] bottom-0 w-[110%] h-full pointer-events-none z-0'>
+      <div className='absolute left-[-2%] bottom-0 w-[110%] h-full pointer-events-none z-0 hidden lg:block'>
         <div className='relative w-full h-full'>
           <Image
             src='/images/Templates/template1/bike.svg'
