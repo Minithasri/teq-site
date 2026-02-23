@@ -73,9 +73,10 @@ export default function LocationsSection() {
     {
       id: 5,
       name: 'Coimbatore',
-      address: '22JF+Q67, ELCOT SEZ, Coimbatore - 641014',
+      address:
+        'Mayflower Signature, 923b, 7TH FLOOR, Avinashi Road, Peelamedu, (opp PSG Tech), Coimbatore – 641004',
       image: '/images/ContactUs/Coimbatore.webp',
-      mapLink: 'https://maps.app.goo.gl/d1nGywiWSMTHJk7k9',
+      mapLink: 'https://maps.app.goo.gl/f79uBSkC9DV36cs76',
     },
   ];
 
