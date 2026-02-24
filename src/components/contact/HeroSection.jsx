@@ -106,11 +106,11 @@ export default function HeroSection() {
 
       {/* Content Container */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 min-h-[700px]'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 min-h-[700px] pt-12 lg:pt-0'>
           {/* Left Side */}
-          <div className='flex flex-col justify-between py-12 lg:py-20'>
+          <div className='flex flex-col justify-start lg:justify-between py-8 lg:py-20 gap-8 lg:gap-0'>
             {/* Breadcrumb - Positioned on the Image Area */}
-            <nav aria-label='Breadcrumb' className='pt-8'>
+            <nav aria-label='Breadcrumb' className='pt-4 lg:pt-8'>
               <ol className='inline-flex items-center gap-2 text-[15px] text-white font-medium'>
                 <li className='flex items-center gap-2'>
                   <Link href='/' className='hover:opacity-80 transition-opacity'>
@@ -136,14 +136,14 @@ export default function HeroSection() {
 
             {/* Main Text - Positioned on the Purple Area */}
             <div className=''>
-              <h1 className='text-white text-[32px] lg:text-[40px] font-bold leading-tight mb-6'>
+              <h1 className='text-white text-[28px] md:text-[32px] lg:text-[40px] font-bold leading-tight mb-6'>
                 Get In Touch With Us
               </h1>
               <div className='space-y-2'>
-                <p className='text-white text-[18px] lg:text-[20px] leading-relaxed'>
+                <p className='text-white text-[16px] md:text-[18px] lg:text-[20px] leading-relaxed'>
                   Have an inquiry or some feedback for us?
                 </p>
-                <p className='text-white text-[18px] lg:text-[20px] leading-relaxed'>
+                <p className='text-white text-[16px] md:text-[18px] lg:text-[20px] leading-relaxed'>
                   Fill out this form to contact our team.
                 </p>
               </div>

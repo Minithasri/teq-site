@@ -34,16 +34,16 @@ const HomeBanner = () => {
   }, []);
 
   return (
-    <div className='pt-[50px] md:pt-[50px] lg:pt-10'>
+    <div className='relative overflow-hidden pt-[50px] md:pt-[50px] lg:pt-10'>
       {/* Background Video */}
-      <div className='absolute inset-0 w-full h-full z-0'>
+      <div className='absolute -top-[70px] left-0 w-full h-[calc(100%+70px)] z-0'>
         <video
           ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          className='w-full h-full object-cover opacity-20'
+          className='min-w-full min-h-full w-full h-full object-cover opacity-30 object-top'
         >
           <source src='/videos/BannerVideo.mp4' type='video/mp4' />
           <source src='/videos/BannerVideo.webm' type='video/webm' />
@@ -53,7 +53,7 @@ const HomeBanner = () => {
 
       {/* Gradient */}
       <div
-        className='absolute inset-0 w-full h-full z-10 opacity-60'
+        className='absolute -top-[70px] left-0 w-full h-[calc(100%+70px)] z-10 opacity-[0.65]'
         style={{ background: 'linear-gradient(to bottom, #CEB3E9, #FFFFFF)' }}
       />
 

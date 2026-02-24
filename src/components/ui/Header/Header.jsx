@@ -74,15 +74,19 @@ export default function Header({
         }}
       >
         <div className='relative backdrop-blur-sm border-b border-neutral-200/40 bg-white'>
-          <div className='mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 lg:px-8'>
+          <div className='mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 lg:px-4 xl:px-8'>
             <Link
               href='/'
               className='flex items-center z-50 flex-shrink-0'
               onClick={handleLinkClick}
             >
-              <img src='/images/logo.svg' alt='GWC Data.Ai' className='w-[160px] h-[55px]' />
+              <img
+                src='/images/logo.svg'
+                alt='GWC Data.Ai'
+                className='w-[140px] lg:w-[130px] xl:w-[160px] h-auto'
+              />
             </Link>
-            <nav className='hidden lg:flex items-center gap-8 flex-1 justify-center'>
+            <nav className='hidden lg:flex items-center lg:gap-2 xl:gap-8 flex-1 justify-center'>
               {navItems.map(item => {
                 // Flatten all links from all columns into a single list
                 const allLinks = item.megaMenuColumns?.flatMap(column => column.links) || [];
@@ -95,7 +99,7 @@ export default function Header({
                       <DropdownMenu modal={false}>
                         <DropdownMenuTrigger asChild>
                           <button
-                            className={`flex items-center gap-1 text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
+                            className={`flex items-center gap-1 text-[13px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
                               pathname === item.href
                                 ? 'underline underline-offset-4'
                                 : 'hover:opacity-80'
@@ -132,7 +136,7 @@ export default function Header({
                     ) : (
                       <Link
                         href={item.href}
-                        className={`text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
+                        className={`text-[13px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
                           pathname === item.href
                             ? 'underline underline-offset-4'
                             : 'hover:opacity-80'
@@ -158,7 +162,7 @@ export default function Header({
             <div className='hidden lg:flex items-center flex-shrink-0'>
               <Link
                 href={ctaButton.href}
-                className='flex items-center justify-center gap-1 text-[13px] font-medium w-[155px] h-[45px] text-white rounded-[25px] transition-all duration-300 hover:opacity-90'
+                className='flex items-center justify-center gap-1 text-[12px] xl:text-[13px] font-medium lg:w-[125px] xl:w-[155px] h-[45px] text-white rounded-[25px] transition-all duration-300 hover:opacity-90 flex-shrink-0'
                 style={{ background: 'linear-gradient(to right, #7030B1, #B56DD3)' }}
                 onClick={handleLinkClick}
               >
