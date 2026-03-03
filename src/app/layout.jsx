@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   const pathname = usePathname();
 
   // Define on which paths the banner should appear
-  const bannerVisiblePaths = ['/']; // add more if needed, e.g. ['/', '/about']
+  const bannerVisiblePaths = ['/', '/domopalooza']; // add more if needed, e.g. ['/', '/about']
 
   const shouldShowBannerInitially = bannerVisiblePaths.some(
     page => pathname === page || pathname.startsWith(page + '/')

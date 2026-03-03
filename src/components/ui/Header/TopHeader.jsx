@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const TopHeader = ({ isVisible: parentVisibility = true, onClose }) => {
@@ -66,10 +67,8 @@ const TopHeader = ({ isVisible: parentVisibility = true, onClose }) => {
                 </span>
               </span>
 
-              <a
-                href={data.link}
-                target='_blank'
-                rel='noopener noreferrer'
+              <Link
+                href='/domopalooza'
                 className='text-white text-[clamp(9px,1.5vw,14px)] font-semibold hover:underline transition-all duration-200 flex items-center gap-1 whitespace-nowrap underline'
               >
                 <span>Register Now</span>
@@ -86,7 +85,7 @@ const TopHeader = ({ isVisible: parentVisibility = true, onClose }) => {
                     d='M9 5l7 7-7 7'
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 
