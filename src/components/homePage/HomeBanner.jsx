@@ -2,211 +2,179 @@
 import { useEffect, useRef, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 
+function GradientHeading() {
+  const lines = ['Build your First AI Agent', 'in 10 Hours'];
+
+  const wordGradients = {
+    Build: ['#501988', '#501988'],
+    your: ['#501988', '#F97316'],
+    First: ['#F97316', '#F97316'],
+    AI: ['#F97316', '#501988'],
+    Agent: ['#501988', '#501988'],
+    in: ['#F97316', '#F97316'],
+    10: ['#F97316', '#501988'],
+    Hours: ['#501988', '#501988'],
+  };
+
+  return (
+    <div style={{ textAlign: 'center' }}>
+      {lines.map((line, li) => (
+        <div key={li}>
+          <span
+            className='responsive-heading'
+            style={{
+              fontSize: 'clamp(26px, 5.5vw, 50px)',
+              fontWeight: 700,
+              lineHeight: 1.25,
+              letterSpacing: '-0.01em',
+              display: 'inline-block',
+            }}
+          >
+            {line.split(' ').map((word, i, arr) => {
+              const [from, to] = wordGradients[word] ?? ['#501988', '#501988'];
+              return (
+                <span key={i}>
+                  <span
+                    style={{
+                      display: 'inline-block',
+                      backgroundImage: `linear-gradient(to right, ${from}, ${to})`,
+                      WebkitBackgroundClip: 'text',
+                      backgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      color: 'transparent',
+                    }}
+                  >
+                    {word}
+                  </span>
+                  {i < arr.length - 1 && (
+                    <span style={{ display: 'inline-block', width: '0.28em' }} />
+                  )}
+                </span>
+              );
+            })}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 const HomeBanner = () => {
   const videoRef = useRef(null);
-
   const [aiAgents, setAiAgents] = useState(0);
   const [enterprise, setEnterprise] = useState(0);
   const [minutesSaved, setMinutesSaved] = useState(0);
 
   const animateCount = (setValue, end, duration = 1200) => {
-    let start = 0;
     let startTime = null;
-
     const step = timestamp => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       setValue(Math.floor(progress * end));
       if (progress < 1) requestAnimationFrame(step);
     };
-
     requestAnimationFrame(step);
   };
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
-    }
-
+    if (videoRef.current) videoRef.current.play().catch(() => {});
     animateCount(setAiAgents, 90);
     animateCount(setEnterprise, 40);
     animateCount(setMinutesSaved, 200000, 1500);
   }, []);
 
   return (
-    <div className='relative overflow-hidden pt-[50px] md:pt-[50px] lg:pt-10'>
-      {/* Background Video */}
-      <div className='absolute -top-[70px] left-0 w-full h-[calc(100%+70px)] z-0'>
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className='min-w-full min-h-full w-full h-full object-cover opacity-30 object-top'
-        >
-          <source src='/videos/BannerVideo.mp4' type='video/mp4' />
-          <source src='/videos/BannerVideo.webm' type='video/webm' />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    <div
+      className='relative overflow-hidden border-none outline-none'
+      style={{
+        minHeight: '100vh',
+        background: '#F8F9FA', // Fallback background color for mobile only
+      }}
+    >
+      {/* Video Background - Hidden on mobile, shown on tablet and above */}
+      <video
+        ref={videoRef}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className='absolute inset-0 w-full h-full object-cover border-none outline-none shadow-none z-0 hidden md:block'
+        style={{
+          objectPosition: 'center',
+        }}
+      >
+        <source src='/videos/earth.mp4' type='video/mp4' />
+        <source src='/videos/earth.webm' type='video/webm' />
+        Your browser does not support the video tag.
+      </video>
 
-      {/* Gradient */}
+      {/* Overlay - Only show on tablet and desktop when video is present */}
       <div
-        className='absolute -top-[70px] left-0 w-full h-[calc(100%+70px)] z-10 opacity-[0.65]'
-        style={{ background: 'linear-gradient(to bottom, #CEB3E9, #FFFFFF)' }}
+        className='hidden md:block'
+        style={{
+          position: 'absolute',
+          inset: 0,
+          zIndex: 1,
+        }}
       />
 
-      {/* Main Container */}
-      <div className='relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='grid grid-cols-1 lg:grid-cols-[1.45fr_0.85fr] gap-8 lg:gap-12 items-center py-8 sm:py-12 lg:py-16'>
-          {/* LEFT COLUMN */}
-          <div className='text-center lg:text-left space-y-6'>
-            <div className='flex items-center gap-4 mb-4 lg:mb-0'>
-              {/* Clock Icon */}
-              <div
-                className='w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0'
-                style={{
-                  background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                }}
-              >
-                <img src='/images/HomePage/Frame.svg' alt='' className='w-5 h-5 sm:w-6 sm:h-6' />
-              </div>
-              {/* Badge */}
-              <div className='relative inline-flex items-center gap-2 px-1 py-1 rounded-full border border-[#D6A9E9] bg-transparent self-start'>
-                {/* Outer Ring */}
-                <div className='absolute -inset-[5px] rounded-full border border-[#D6A9E9] opacity-40 pointer-events-none'></div>
-                <span
-                  className='pl-3 text-[14px] sm:text-[16px] font-medium bg-clip-text text-transparent'
-                  style={{
-                    backgroundImage: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                  }}
+      {/* Content */}
+      <div
+        className='relative w-full mx-auto px-4 sm:px-6 lg:px-8'
+        style={{
+          zIndex: 2,
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <div className='w-full max-w-7xl mx-auto py-12 sm:py-16 lg:py-20'>
+          <div className='text-center'>
+            {/* Badge */}
+            <div className='flex items-center justify-center mb-6 sm:mb-8'>
+              <div className='inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm border border-gray-100 px-3 sm:px-4 py-1.5 rounded-[10px] shadow-lg'>
+                <div
+                  className='w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center shrink-0'
+                  style={{ background: 'linear-gradient(135deg, #F97316 0%, #43145E 100%)' }}
                 >
-                  Build your first AI agent in
-                </span>
-                <span
-                  className='px-4 py-1 rounded-full text-white text-[16px] sm:text-[18px] font-medium'
-                  style={{
-                    background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                  }}
-                >
-                  10 Hours.
+                  <img src='/images/HomePage/Frame.svg' alt='' className='w-4 h-4 sm:w-5 sm:h-5' />
+                </div>
+                <span className='text-[11px] sm:text-[12px] font-medium text-[#444444]'>
+                  Agentic AI that turns Automation into Intelligence
                 </span>
               </div>
             </div>
-            <h1 className='pt-2 font-bold text-[32px] text-[#404040] leading-[40px] sm:text-[40px] sm:leading-[50px] lg:text-[40px] lg:leading-[58px]'>
-              <span
-                className='bg-clip-text text-transparent'
-                style={{ backgroundImage: 'linear-gradient(to right, #7030B1, #B56DD3)' }}
-              >
-                Agentic AI
-              </span>
-              <span className='text-[#404040]'>
-                {' '}
-                that turns <br /> Automation into Intelligence
-              </span>
-            </h1>
 
-            <p className='text-[16px] sm:text-[18px] font-normal text-[#737373] max-w-2xl mx-auto lg:mx-0 mt-4 sm:mt-6'>
-              Agentic AI solutions that transform your business <br></br>processes with measurable
-              ROI and rapid deployment.
+            {/* Heading */}
+            <GradientHeading />
+
+            {/* Description */}
+            <p className='text-sm sm:text-base lg:text-lg text-[#737373] max-w-2xl mx-auto mt-4 sm:mt-6 px-4'>
+              Agentic AI solutions that transform your business processes with measurable ROI and
+              rapid deployment.
             </p>
 
-            <div className='flex justify-center lg:justify-start pt-6'>
+            {/* CTA Button */}
+            <div className='flex justify-center mt-8 sm:mt-10 lg:mt-12'>
               <button
                 onClick={() => {
                   const element = document.getElementById('agent-building');
                   if (element) {
-                    const yOffset = -120; // Adjust this value to scroll more higher/lower
+                    const yOffset = -80;
                     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: y, behavior: 'smooth' });
                   }
                 }}
-                className='flex items-center justify-center gap-2 w-[170px] h-[42px] sm:w-[190px] sm:h-[45px] text-[13px] sm:text-[14px] text-white transition-all duration-300 hover:scale-105'
+                className='flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base text-white transition-all duration-300 hover:scale-105 hover:shadow-lg'
                 style={{
                   background: 'linear-gradient(to right, #7030B1, #B56DD3)',
-                  borderRadius: '25px',
+                  borderRadius: '30px',
                 }}
               >
                 Explore Use Cases
-                <FiArrowRight className='text-lg' />
+                <FiArrowRight className='text-lg sm:text-xl' />
               </button>
-            </div>
-
-            {/* Stats */}
-            {/* <div className='grid grid-cols-3 gap-4 pt-6 sm:pt-8 -ml-2'>
-              <div className='flex justify-center lg:justify-start'>
-                <div className='rounded-2xl w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] lg:w-[140px] lg:h-[140px]'>
-                  <img
-                    src='/images/DomoPatner.png'
-                    alt='Partner Logo'
-                    className='w-full h-full object-contain rounded-2xl'
-                  />
-                </div>
-              </div>
-
-              <div className='space-y-3 sm:space-y-4'>
-                <div className='text-left'>
-                  <div className='text-[20px] sm:text-[24px] font-bold text-[#7030B1]'>
-                    {aiAgents}+
-                  </div>
-
-                  <div className='text-[12px] sm:text-[14px] font-medium text-gray-600 mt-1'>
-                    AI Agents
-                  </div>
-                </div>
-
-                <div className='text-left'>
-                  <div className='text-[20px] sm:text-[24px] font-bold text-[#7030B1]'>30–50%</div>
-                  <div className='text-[12px] sm:text-[14px] font-medium text-gray-600 mt-1'>
-                    Faster Implementation
-                  </div>
-                </div>
-              </div>
-
-              <div className='space-y-3 sm:space-y-4'>
-                <div className='text-left'>
-                  <div className='text-[20px] sm:text-[24px] font-bold text-[#7030B1]'>
-                    {enterprise}+
-                  </div>
-
-                  <div className='text-[12px] sm:text-[14px] font-medium text-gray-600 mt-1'>
-                    Enterprise Deployments
-                  </div>
-                </div>
-
-                <div className='text-left'>
-                  <div className='text-[20px] sm:text-[24px] font-bold text-[#7030B1]'>
-                    {Math.floor(minutesSaved / 1000)}k+
-                  </div>
-
-                  <div className='text-[12px] sm:text-[14px] font-medium text-gray-600 mt-1'>
-                    Mins of human efforts saved
-                  </div>
-                </div>
-              </div>
-            </div> */}
-          </div>
-
-          {/* RIGHT COLUMN - Improved mobile responsiveness */}
-          <div className='flex justify-center lg:justify-end mt-4 sm:mt-8 lg:mt-0 w-full p-0 pt-8 sm:pt-12 lg:pt-[90px]'>
-            <div className='relative w-full max-w-md lg:max-w-7xl flex justify-center lg:justify-end'>
-              <img
-                src='/images/Chip.svg'
-                alt='Chip Illustration'
-                className='w-full max-w-[280px] sm:max-w-[400px] lg:max-w-none h-auto scale-[1.2] sm:scale-[1.3] lg:scale-[1.5]'
-              />
-
-              <div
-                className='absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
-                style={{ animation: 'float 6s ease-in-out infinite' }}
-              >
-                <img
-                  src='/images/Robot.svg'
-                  alt='Robot Illustration'
-                  className='w-[80px] h-[120px] sm:w-[120px] sm:h-[180px] lg:w-[150px] lg:h-[225px] object-contain'
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -220,6 +188,66 @@ const HomeBanner = () => {
           }
           50% {
             transform: translate(-50%, -50%) translateY(-25px);
+          }
+        }
+
+        /* Mobile first responsive heading */
+        .responsive-heading {
+          white-space: normal !important;
+          word-break: keep-all;
+          display: block !important;
+          padding: 0 1rem;
+          line-height: 1.2 !important;
+        }
+
+        /* Tablet and above */
+        @media (min-width: 768px) {
+          .responsive-heading {
+            padding: 0 2rem;
+          }
+        }
+
+        /* Desktop - 1024px and above */
+        @media (min-width: 1024px) {
+          .responsive-heading {
+            white-space: nowrap !important;
+            padding: 0;
+          }
+        }
+
+        /* Large desktop */
+        @media (min-width: 1280px) {
+          .responsive-heading {
+            font-size: 56px !important;
+          }
+        }
+
+        /* Video positioning for tablet and above */
+        @media (min-width: 768px) {
+          video {
+            top: -200px;
+            height: calc(100% + 150px);
+          }
+        }
+
+        @media (min-width: 1024px) {
+          video {
+            top: -230px;
+            height: calc(100% + 200px);
+          }
+        }
+
+        @media (min-width: 1280px) {
+          video {
+            top: -250px;
+            height: calc(100% + 250px);
+          }
+        }
+
+        @media (min-width: 1536px) {
+          video {
+            top: -300px;
+            height: calc(100% + 300px);
           }
         }
       `}</style>
