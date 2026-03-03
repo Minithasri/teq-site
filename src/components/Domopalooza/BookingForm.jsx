@@ -114,10 +114,12 @@ const BookingForm = () => {
               <CheckCircle className='w-20 h-20 text-green-500' />
             </div>
 
-            <h1 className='text-3xl font-bold text-gray-800 mb-3'>Registration Successful!</h1>
+            <h1 className='text-3xl font-bold text-gray-800 mb-3'>Meeting Request Received!</h1>
 
             <p className='text-gray-600 mb-8'>
-              Thank you for submitting your details. We will get back to you shortly.
+              Thank you for booking a 1:1 discussion.
+              <br />
+              Our team will review your submission and confirm the session shortly.
             </p>
 
             <button
