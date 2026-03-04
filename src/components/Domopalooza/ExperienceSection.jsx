@@ -18,7 +18,7 @@ const ExperienceSection = () => {
                 backgroundClip: 'text',
               }}
             >
-              Create Your Domopalooza Experience
+              Turn Domopalooza into your moment
             </h2>
 
             <h3 className='mt-5 text-xl font-bold text-gray-800'>GWC Data & AI Experience</h3>

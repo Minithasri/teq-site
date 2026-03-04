@@ -74,7 +74,7 @@ export default function Header({
         }}
       >
         <div className='relative backdrop-blur-sm border-b border-neutral-200/40 bg-white'>
-          <div className='mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 lg:px-4 xl:px-8'>
+          <div className='mx-auto flex h-14 items-center justify-between px-6 lg:px-4 xl:px-6'>
             <Link
               href='/'
               className='flex items-center z-50 flex-shrink-0'
@@ -189,7 +189,7 @@ export default function Header({
                 const hasDropdown = allLinks.length > 0;
 
                 return (
-                  <div key={item.href} className='border-b border-gray-200 py-1'>
+                  <div key={item.href} className='border-b border-gray-200 py-2'>
                     <div className='flex items-center justify-between'>
                       {item.megaMenu ? (
                         <button

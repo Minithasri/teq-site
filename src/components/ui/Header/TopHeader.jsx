@@ -32,8 +32,8 @@ const TopHeader = ({ isVisible: parentVisibility = true, onClose }) => {
 
   return (
     <div
-      className='w-full bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white py-1 sm:py-3 px-4 fixed top-0 left-0 right-0 z-[10001] overflow-hidden'
-      style={{ height: '40px' }}
+      className='w-full bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white py-1 px-4 fixed top-0 left-0 right-0 z-[10001] overflow-hidden'
+      style={{ minHeight: '40px' }}
     >
       {/* Animated background swipe effect */}
       <div
@@ -47,8 +47,8 @@ const TopHeader = ({ isVisible: parentVisibility = true, onClose }) => {
         <div className='max-w-7xl mx-auto flex items-center justify-between h-full'>
           {/* Center content */}
           <div className='flex-1 flex items-center justify-center'>
-            <div className='flex flex-col sm:flex-row items-center gap-1 sm:gap-6 text-center'>
-              <span className='text-[clamp(9px,1.5vw,14px)] font-medium whitespace-nowrap'>
+            <div className='flex flex-col sm:flex-row items-center gap-0.5 sm:gap-6 text-center'>
+              <span className='text-[clamp(7.5px,2vw,14px)] font-medium whitespace-nowrap'>
                 {data.title} |{' '}
                 <span
                   style={{
@@ -61,7 +61,7 @@ const TopHeader = ({ isVisible: parentVisibility = true, onClose }) => {
                 >
                   {data.event}
                 </span>{' '}
-                <span className='hidden md:inline'>
+                <span className='inline'>
                   | {data.date} | {data.time}
                 </span>
               </span>
@@ -70,7 +70,7 @@ const TopHeader = ({ isVisible: parentVisibility = true, onClose }) => {
                 href='/domopalooza'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-white text-[clamp(9px,1.5vw,14px)] font-semibold hover:underline transition-all duration-200 flex items-center gap-1 whitespace-nowrap underline'
+                className='text-white text-[clamp(7.5px,2vw,14px)] font-semibold hover:underline transition-all duration-200 flex items-center gap-1 whitespace-nowrap underline'
               >
                 <span>Register Now</span>
                 <svg
