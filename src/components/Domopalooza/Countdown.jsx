@@ -32,36 +32,60 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className='flex justify-end text-purple-700 font-semibold gap-3 sm:gap-4 md:gap-6'>
-      <div className='text-center'>
-        <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl' style={{ color: '#2E94DB' }}>
+    <div className='flex justify-center sm:justify-end text-purple-700 font-semibold gap-1 sm:gap-1.5 md:gap-3 lg:gap-6 shrink-0'>
+      <div className='text-center min-w-[30px] sm:min-w-[35px] md:min-w-[45px]'>
+        <p
+          className='text-sm font-bold sm:text-base md:text-xl lg:text-3xl'
+          style={{ color: '#2E94DB' }}
+        >
           {timeLeft.days}
         </p>
-        <p className='text-[10px] sm:text-xs uppercase tracking-wider' style={{ color: '#7030B1' }}>
+        <p
+          className='text-[6px] sm:text-[7.5px] md:text-[10px] uppercase tracking-wider'
+          style={{ color: '#7030B1' }}
+        >
           Days
         </p>
       </div>
-      <div className='text-center'>
-        <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl' style={{ color: '#2E94DB' }}>
+      <div className='text-center min-w-[30px] sm:min-w-[35px] md:min-w-[45px]'>
+        <p
+          className='text-sm font-bold sm:text-base md:text-xl lg:text-3xl'
+          style={{ color: '#2E94DB' }}
+        >
           {timeLeft.hours}
         </p>
-        <p className='text-[10px] sm:text-xs uppercase tracking-wider' style={{ color: '#7030B1' }}>
+        <p
+          className='text-[6px] sm:text-[7.5px] md:text-[10px] uppercase tracking-wider'
+          style={{ color: '#7030B1' }}
+        >
           Hours
         </p>
       </div>
-      <div className='text-center'>
-        <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl' style={{ color: '#2E94DB' }}>
+      <div className='text-center min-w-[30px] sm:min-w-[35px] md:min-w-[45px]'>
+        <p
+          className='text-sm font-bold sm:text-base md:text-xl lg:text-3xl'
+          style={{ color: '#2E94DB' }}
+        >
           {timeLeft.minutes}
         </p>
-        <p className='text-[10px] sm:text-xs uppercase tracking-wider' style={{ color: '#7030B1' }}>
+        <p
+          className='text-[6px] sm:text-[7.5px] md:text-[10px] uppercase tracking-wider'
+          style={{ color: '#7030B1' }}
+        >
           Minutes
         </p>
       </div>
-      <div className='text-center'>
-        <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl' style={{ color: '#2E94DB' }}>
+      <div className='text-center min-w-[30px] sm:min-w-[35px] md:min-w-[45px]'>
+        <p
+          className='text-sm font-bold sm:text-base md:text-xl lg:text-3xl'
+          style={{ color: '#2E94DB' }}
+        >
           {timeLeft.seconds}
         </p>
-        <p className='text-[10px] sm:text-xs uppercase tracking-wider' style={{ color: '#7030B1' }}>
+        <p
+          className='text-[6px] sm:text-[7.5px] md:text-[10px] uppercase tracking-wider'
+          style={{ color: '#7030B1' }}
+        >
           Seconds
         </p>
       </div>

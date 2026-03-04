@@ -8,28 +8,22 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <div className='grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-8 md:mt-10 px-2'>
-      {stats.map((stat, index) => (
-        <div
-          key={index}
-          className='bg-white/30 border border-white rounded-xl py-3 sm:py-4 md:py-6 px-2 text-center hover:shadow-lg transition'
-        >
-          <h3
-            className='text-base sm:text-lg md:text-xl lg:text-2xl font-bold'
-            style={{
-              background: 'linear-gradient(90deg, #2E94DB, #7030B1)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
+    <div className='max-w-4xl mx-auto px-4 mt-6 sm:mt-8'>
+      <div className='grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4'>
+        {stats.map((stat, index) => (
+          <div
+            key={index}
+            className='bg-blue-50/20 backdrop-blur-sm border border-white/80 rounded-2xl py-3 sm:py-4 px-2 text-center shadow-[0_4px_12px_rgba(0,0,0,0.02)] transition-all duration-300 hover:bg-white/60'
           >
-            {stat.value}
-          </h3>
-          <p className='text-[10px] sm:text-xs md:text-sm text-gray-600 mt-1 font-medium'>
-            {stat.label}
-          </p>
-        </div>
-      ))}
+            <h3 className='text-xl sm:text-2xl font-bold text-[#2E94DB] tracking-tight'>
+              {stat.value}
+            </h3>
+            <p className='text-[10px] sm:text-[11px] md:text-xs text-gray-700 mt-1 font-semibold leading-tight max-w-[90px] mx-auto'>
+              {stat.label}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -3,10 +3,17 @@ import BookingForm from './BookingForm';
 
 const ExperienceSection = () => {
   return (
-    <section className='px-6 py-10 bg-gray-50'>
-      <div className='max-w-6xl mx-auto'>
-        {/* Content grid with adjusted ratios */}
-        <div className='grid md:grid-cols-2 gap-12 mt-8 items-start'>
+    <section
+      className='relative px-4 sm:px-6 py-12 md:py-24 overflow-hidden'
+      style={{
+        backgroundImage: `url(/images/domopalooza/waves.png)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <div className='max-w-7xl mx-auto relative z-10'>
+        <div className='grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-start'>
           {/* Left content - smaller */}
           <div className='pr-4'>
             <h2
@@ -18,7 +25,7 @@ const ExperienceSection = () => {
                 backgroundClip: 'text',
               }}
             >
-              Turn Domopalooza into your moment
+              Create Your Domopalooza Experience
             </h2>
 
             <h3 className='mt-5 text-xl font-bold text-gray-800'>GWC Data & AI Experience</h3>
@@ -27,7 +34,7 @@ const ExperienceSection = () => {
               <img
                 src='/images/domopalooza/icomoon-free_point-left.png'
                 alt='icon'
-                className='text-[#7030B1] flex-shrink-0 w-6 h-6'
+                className='text-[#7030B1] flex-shrink-0 '
               />
               <p className='text-sm text-gray-700'>
                 Visit the <span className='text-[#7030B1] font-bold'>GWC Booth</span> and see how

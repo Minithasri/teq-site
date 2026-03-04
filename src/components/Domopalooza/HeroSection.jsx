@@ -18,7 +18,7 @@ const HeroSection = () => {
 
       <div className='max-w-6xl mx-auto relative z-10'>
         {/* Container for Domopalooza and Countdown */}
-        <div className='bg-white/30 border border-white/50 flex flex-col sm:flex-row justify-between items-center gap-4 backdrop-blur-md rounded-2xl p-4 sm:p-5 mb-6 sm:mb-8'>
+        <div className='bg-white/30 border border-white/50 flex flex-col sm:flex-row justify-between items-center gap-4 backdrop-blur-md rounded-2xl p-4 sm:p-5 mb-6 sm:mb-8 mt-4'>
           {/* Domopalooza text with gradient */}
           <img
             src='/images/domopalooza/domo-palooza.png'
@@ -32,7 +32,7 @@ const HeroSection = () => {
         <p
           className='text-sm sm:text-base md:text-lg font-bold mt-2 px-2'
           style={{
-            background: 'linear-gradient(90deg, #2E94DB, #7030B1)',
+            background: 'linear-gradient(90deg, #2E94DB 40%, #7030B1 60%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
@@ -46,7 +46,7 @@ const HeroSection = () => {
           <span
             className='block mt-1 sm:mt-2'
             style={{
-              background: 'linear-gradient(90deg, #2E94DB, #7030B1)',
+              background: 'linear-gradient(90deg, #2E94DB 40%, #7030B1 60%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
