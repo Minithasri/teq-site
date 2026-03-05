@@ -32,8 +32,8 @@ const TopHeader = ({ isVisible: parentVisibility = true, onClose }) => {
 
   return (
     <div
-      className='w-full bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white py-1 px-4 fixed top-0 left-0 right-0 z-[10001] overflow-hidden'
-      style={{ minHeight: '40px' }}
+      className='w-full bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white px-4 fixed top-0 left-0 right-0 z-[10001] overflow-hidden'
+      style={{ minHeight: '30px' }}
     >
       {/* Animated background swipe effect */}
       <div

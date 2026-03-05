@@ -37,6 +37,11 @@ const BookingForm = () => {
 
     if (!formData.companyName.trim()) newErrors.companyName = 'Company name is required';
 
+    if (!formData.explore.trim()) newErrors.explore = 'Please tell us what you want to explore';
+
+    if (!formData.preferredDateTime.trim())
+      newErrors.preferredDateTime = 'Preferred date/time is required';
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -191,69 +196,41 @@ const BookingForm = () => {
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 text-left'>
-          {/* Explore Dropdown */}
+          {/* Explore Input */}
           <div className='space-y-2'>
             <label className='text-[15px] font-semibold text-gray-700'>
-              What would you like to explore?
-            </label>
-            <div className='relative'>
-              <select
-                name='explore'
-                value={formData.explore}
-                onChange={e => setFormData(prev => ({ ...prev, explore: e.target.value }))}
-                className='w-full px-4 py-2.5 border border-gray-200 rounded-xl appearance-none bg-white focus:outline-none focus:ring-2 focus:ring-purple-100 transition-all text-gray-500'
-              >
-                <option value=''>Select</option>
-                <option value='data'>Data Strategy</option>
-                <option value='ai'>AI Agents</option>
-                <option value='analytics'>Analytics</option>
-              </select>
-              <div className='absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none'>
-                <svg
-                  className='w-5 h-5 text-gray-400'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='M19 9l-7 7-7-7'
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Preferred Date/Time Container (To match design) */}
-          <div className='space-y-2'>
-            <label className='text-[15px] font-semibold text-gray-700'>
-              Preferred Date/Time Slot
+              What would you like to explore?*
             </label>
             <div className='relative'>
               <input
-                type={formData.preferredDateTime ? 'datetime-local' : 'text'}
+                name='explore'
+                value={formData.explore}
+                onChange={handleChange}
+                placeholder='Data strategy, AI agents, analytics, etc.'
+                required
+                className={`w-full px-4 py-2.5 border rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-purple-100 transition-all ${
+                  errors.explore ? 'border-red-500' : 'border-gray-200'
+                }`}
+              />
+            </div>
+          </div>
+
+          {/* Preferred Date/Time Slot */}
+          <div className='space-y-2'>
+            <label className='text-[15px] font-semibold text-gray-700'>
+              Preferred Date/Time Slot*
+            </label>
+            <div className='relative'>
+              <input
+                type='datetime-local'
                 name='preferredDateTime'
                 value={formData.preferredDateTime}
                 onChange={handleChange}
-                placeholder='Schedule Now'
-                onFocus={e => (e.target.type = 'datetime-local')}
-                onBlur={e => {
-                  if (!formData.preferredDateTime) e.target.type = 'text';
-                }}
-                className='w-full px-4 py-2.5 border border-gray-200 rounded-xl bg-white text-gray-800 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-100 transition-all [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:inset-0 [&::-webkit-calendar-picker-indicator]:cursor-pointer'
+                required
+                className={`w-full px-4 py-2.5 border rounded-xl bg-white text-gray-800 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-100 transition-all ${
+                  errors.preferredDateTime ? 'border-red-500' : 'border-gray-200'
+                }`}
               />
-              <div className='absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-800'>
-                <svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
-                  />
-                </svg>
-              </div>
             </div>
           </div>
         </div>

@@ -69,7 +69,7 @@ export default function Header({
         ref={headerRef}
         className='fixed left-0 right-0 z-[9999] transition-all duration-300'
         style={{
-          top: isBannerVisible ? '40px' : '0px',
+          top: isBannerVisible ? '35px' : '0px',
           opacity: animate ? 0 : 1,
         }}
       >
@@ -111,7 +111,7 @@ export default function Header({
                         </DropdownMenuTrigger>
                         <DropdownMenuContent
                           align='center'
-                          sideOffset={24}
+                          sideOffset={15}
                           className='bg-white shadow-lg border border-gray-100 min-w-[280px] p-0 overflow-hidden'
                         >
                           {allLinks.map((link, index) => (
