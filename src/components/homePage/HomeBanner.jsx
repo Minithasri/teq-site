@@ -120,7 +120,7 @@ const HomeBanner = () => {
           <div className='text-center'>
             {/* Badge */}
             <div className='flex items-center justify-center mb-6 sm:mb-8'>
-              <div className='inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm border border-gray-100 px-3 sm:px-4 py-1.5 rounded-[10px] shadow-lg'>
+              <div className='inline-flex items-center mt-8 gap-2 bg-white/90 backdrop-blur-sm border border-gray-100 px-3 sm:px-4 py-1.5 rounded-[10px] shadow-lg'>
                 <div
                   className='w-4 h-4 sm:w-4 sm:h-4 rounded-full flex items-center justify-center shrink-0'
                   style={{ background: 'linear-gradient(135deg, #F97316 0%, #43145E 100%)' }}
@@ -137,7 +137,7 @@ const HomeBanner = () => {
             <GradientHeading />
 
             {/* Description */}
-            <p className='text-sm sm:text-base lg:text-lg mb-8 text-[#737373] max-w-3xl mx-auto mt-4 sm:mt-6 px-2'>
+            <p className='text-sm sm:text-base lg:text-lg mb-8 lg:mb-16 text-[#737373] max-w-3xl mx-auto mt-4 sm:mt-6 px-2'>
               Agentic AI solutions that transform your business processes with measurable ROI and
               rapid deployment.
             </p>
@@ -304,7 +304,7 @@ const HomeBanner = () => {
             height: calc(100% + 150px);
           }
           .mt-8.sm\:mt-10.lg\:mt-12 {
-            margin-top: -1rem !important;
+            margin-top: -2.5rem !important;
           }
         }
 
