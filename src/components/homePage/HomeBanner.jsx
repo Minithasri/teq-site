@@ -1,19 +1,28 @@
 'use client';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
+import bg from '../../../public/images/background.png';
 
 function GradientHeading() {
-  const lines = ['Build your First AI Agent', 'in 10 Hours'];
+  const lines = ['Build your First', 'AI Agent in 10 Hours'];
 
   const wordGradients = {
-    Build: ['#6E2B8B', '#6E2B8B'],
-    your: ['#6E2B8B', '#F97316'],
-    First: ['#F97316', '#F97316'],
-    AI: ['#F97316', '#6E2B8B'],
-    Agent: ['#6E2B8B', '#6E2B8B'],
-    in: ['#F97316', '#F97316'],
-    10: ['#F97316', '#6E2B8B'],
-    Hours: ['#6E2B8B', '#6E2B8B'],
+    Build: ['#fff', '#fff'],
+    your: ['#fff', '#fff'],
+    First: ['#fff', '#fff'],
+    AI: ['#fff', '#fff'],
+    Agent: ['#fff', '#fff'],
+    in: ['#fff', '#fff'],
+    10: ['#fff', '#fff'],
+    Hours: ['#fff', '#fff'],
+    Build: ['#fff', '#fff'],
+    First: ['#fff', '#fff'],
+    AI: ['#fff', '#fff'],
+    Agent: ['#fff', '#fff'],
+    in: ['#fff', '#fff'],
+    10: ['#fff', '#fff'],
+    Hours: ['#fff', '#fff'],
   };
 
   return (
@@ -23,7 +32,7 @@ function GradientHeading() {
           <span
             className='responsive-heading'
             style={{
-              fontSize: 'clamp(26px, 5.5vw, 50px)',
+              fontSize: 'clamp(22px, 5.5vw, 60px)',
               fontWeight: 700,
               lineHeight: 1.25,
               letterSpacing: '-0.01em',
@@ -31,6 +40,32 @@ function GradientHeading() {
             }}
           >
             {line.split(' ').map((word, i, arr) => {
+              // Group "10 Hours" with gradient background on second line
+              if (li === 1 && i === 3) {
+                const groupedWords = arr.slice(i).join(' ');
+                return (
+                  <span
+                    key={i}
+                    style={{
+                      display: 'inline-block',
+                      background: 'linear-gradient(135deg, #F97316 , #43145E)',
+                      borderRadius: '40px',
+                      padding: '8px 20px',
+                      marginLeft: '4px',
+                      color: 'white',
+                      fontWeight: 700,
+                    }}
+                  >
+                    {groupedWords}
+                  </span>
+                );
+              }
+
+              // Skip "Hours" as it's already rendered in the group
+              if (li === 1 && i === 4) {
+                return null;
+              }
+
               const [from, to] = wordGradients[word] ?? ['#6E2B8B', '#6E2B8B'];
               return (
                 <span key={i}>
@@ -85,25 +120,20 @@ const HomeBanner = () => {
 
   return (
     <div
-      className='relative overflow-hidden border-none outline-none w-full'
+      className='relative overflow-hidden rounded-2xl border  mt-0  outline-none w-full'
       style={{
         minHeight: '100vh',
         background: '#F8F9FA',
+        borderRadius: '20px ',
       }}
     >
-      {/* Video Background */}
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        className='absolute inset-0 w-full h-full object-cover z-0 hidden md:block'
-      >
-        <source src='/videos/earth.mp4' type='video/mp4' />
-        <source src='/videos/earth.webm' type='video/webm' />
-        Your browser does not support the video tag.
-      </video>
+      {/* Background image */}
+      <img
+        src={bg.src}
+        alt='Background'
+        className='absolute  z-1 rounded-2xl top-0 left-0 w-full h-full object-cover px-4'
+        style={{ zIndex: 1, borderRadius: '40px', padding: '20px' }}
+      />
 
       {/* Content - Full width on 1024px */}
       <div
@@ -120,14 +150,19 @@ const HomeBanner = () => {
           <div className='text-center'>
             {/* Badge */}
             <div className='flex items-center justify-center mb-6 sm:mb-8'>
-              <div className='inline-flex items-center mt-8 gap-2 bg-white/90 backdrop-blur-sm border border-gray-100 px-3 sm:px-4 py-1.5 rounded-[10px] shadow-lg'>
+              <div
+                className='inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm border border-gray-100 px-3 sm:px-4 py-1.5 rounded-[10px] shadow-lg'
+                style={{
+                  boxShadow: '0 20px 40px rgba(255,255,255,0.15)',
+                }}
+              >
                 <div
                   className='w-4 h-4 sm:w-4 sm:h-4 rounded-full flex items-center justify-center shrink-0'
                   style={{ background: 'linear-gradient(135deg, #F97316 0%, #43145E 100%)' }}
                 >
                   <img src='/images/HomePage/Frame.svg' alt='' className='w-3 h-3 sm:w-3 sm:h-3' />
                 </div>
-                <span className='text-[11px] sm:text-[12px] font-medium text-[#444444]'>
+                <span className='text-[11px] sm:text-[16px] font-medium text-[#444444]'>
                   Agentic AI that turns Automation into Intelligence
                 </span>
               </div>
@@ -137,13 +172,16 @@ const HomeBanner = () => {
             <GradientHeading />
 
             {/* Description */}
-            <p className='text-sm sm:text-base lg:text-lg mb-8 lg:mb-16 text-[#737373] max-w-3xl mx-auto mt-4 sm:mt-6 px-2'>
+            <p
+              className='text-[20px] mb-12 sm:text-base lg:text-[16px]  text-[#FAFAFA] max-w-4xl mx-auto mt-4 sm:mt-6 px-2'
+              style={{ lineHeight: '1.5' }}
+            >
               Agentic AI solutions that transform your business processes with measurable ROI and
               rapid deployment.
             </p>
 
             {/* CTA Button */}
-            <div className='flex justify-center mt-8 sm:mt-10 lg:mt-12 13inch:mt-10'>
+            <div className='mb-6 flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 sm:mt-10 lg:mt-12'>
               <button
                 onClick={() => {
                   const element = document.getElementById('agent-building');
@@ -159,7 +197,25 @@ const HomeBanner = () => {
                   borderRadius: '30px',
                 }}
               >
-                Explore Use Cases
+                Explore Solution
+                <FiArrowRight className='text-lg sm:text-xl' />
+              </button>
+              <button
+                // onClick={() => {
+                //   const element = document.getElementById('agent-building');
+                //   if (element) {
+                //     const yOffset = -80;
+                //     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                //     window.scrollTo({ top: y, behavior: 'smooth' });
+                //   }
+                // }}
+                className='flex items-center justify-center gap-2 px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base text-[#6F2B8B] transition-all duration-300 hover:scale-105 hover:shadow-lg'
+                style={{
+                  background: 'white',
+                  borderRadius: '30px',
+                }}
+              >
+                <Link href='/contact'>Schedule a Call</Link>
                 <FiArrowRight className='text-lg sm:text-xl' />
               </button>
             </div>
@@ -169,8 +225,13 @@ const HomeBanner = () => {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
-          50%       { transform: translate(-50%, -50%) translateY(-25px); }
+          0%,
+          100% {
+            transform: translate(-50%, -50%) translateY(0px);
+          }
+          50% {
+            transform: translate(-50%, -50%) translateY(-25px);
+          }
         }
 
         /* Mobile first responsive heading */
@@ -191,10 +252,9 @@ const HomeBanner = () => {
 
         /* Desktop - 1024px and above - FULL WIDTH */
         @media (min-width: 1024px) {
-  .responsive-heading {
-    font-size: 52px !important;
-  }
-}
+          .responsive-heading {
+            font-size: 52px !important;
+          }
 
           /* Make content full width at 1024px */
           .max-w-\[90\%\] {
@@ -223,7 +283,6 @@ const HomeBanner = () => {
             padding-left: 3rem;
             padding-right: 3rem;
           }
-
         }
 
         /* Specific adjustment for 13.3-inch with 1280x800 resolution */
@@ -257,8 +316,6 @@ const HomeBanner = () => {
             font-size: 1rem !important;
             line-height: 1.6 !important;
           }
-
-
 
           .gap-2.px-3.sm\:px-4.py-1\\.5 {
             padding: 0.5rem 1rem !important;
@@ -302,9 +359,6 @@ const HomeBanner = () => {
           video {
             top: -200px;
             height: calc(100% + 150px);
-          }
-          .mt-8.sm\:mt-10.lg\:mt-12 {
-            margin-top: -2.5rem !important;
           }
         }
 
