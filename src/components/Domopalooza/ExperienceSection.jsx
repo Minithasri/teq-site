@@ -92,13 +92,25 @@ const ExperienceSection = () => {
         {/* CTA Button */}
         <div className='mt-8'>
           <button
-            className='group inline-flex items-center gap-2 px-10 py-4 rounded-full text-white font-bold text-base md:text-lg shadow-lg transition-all hover:opacity-90 active:scale-95'
+            onClick={() =>
+              document
+                .getElementById('support-form')
+                ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+            className='group inline-flex items-center gap-2 px-6 py-2.5 lg:px-10 lg:py-4 rounded-full text-white font-bold text-base lg:text-lg shadow-lg transition-all hover:opacity-90 active:scale-95'
             style={{
               background: 'linear-gradient(90deg, #7030B1, #9B59D0)',
             }}
           >
             Share your Use case now
-            <ArrowRight size={20} className='transition-transform group-hover:translate-x-1' />
+            <ArrowRight
+              size={16}
+              className='lg:hidden transition-transform group-hover:translate-x-1'
+            />
+            <ArrowRight
+              size={20}
+              className='hidden lg:block transition-transform group-hover:translate-x-1'
+            />
           </button>
         </div>
       </div>

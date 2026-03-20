@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { submitSupportRequest } from './supportApi.js';
+import { createPortal } from 'react-dom';
 
 // Confetti Party Popper
 const FireworkPopper = () => {
@@ -212,7 +213,7 @@ const FireworkPopper = () => {
   );
 };
 
-function SupportForm() {
+const SupportForm = React.forwardRef((props, ref) => {
   const [customerName, setCustomerName] = useState('');
   const [email, setEmail] = useState('');
   const [usecase, setUsecase] = useState('');
@@ -345,7 +346,11 @@ function SupportForm() {
       `}</style>
 
       {/* ── FORM CARD ── */}
-      <div className='bg-white rounded-2xl sm:rounded-3xl shadow-[0_16px_32px_-8px_rgba(0,0,0,0.1)] border border-gray-100 p-4 sm:p-6 h-full overflow-y-auto'>
+      <div
+        id='support-form'
+        ref={ref}
+        className='bg-white rounded-2xl sm:rounded-3xl shadow-[0_16px_32px_-8px_rgba(0,0,0,0.1)] border border-gray-100 p-4 sm:p-6 h-full overflow-y-auto'
+      >
         {/* Header bar */}
         <div className='bg-[#F3F5FB] rounded-2xl p-4 mb-5 flex items-center gap-3 border border-[#F5F0FF]'>
           <div className='w-10 h-10 bg-gradient-to-br from-[#2E94DB] to-[#7030B1] rounded-xl flex items-center justify-center shadow-lg flex-shrink-0'>
@@ -454,11 +459,11 @@ function SupportForm() {
           <button
             onClick={submitRequest}
             disabled={loading || workflowStatus === 'COMPLETED'}
-            className='group relative w-full overflow-hidden rounded-full bg-gradient-to-r from-[#2E94DB] to-[#7030B1] px-6 py-3 text-base font-bold text-white shadow-[0_5px_15px_-5px_rgba(139,92,246,0.5)] transition-all active:scale-[0.98] disabled:opacity-70 disabled:grayscale disabled:cursor-not-allowed'
+            className='group relative w-full overflow-hidden rounded-full bg-gradient-to-r from-[#2E94DB] to-[#7030B1] px-4 py-2 lg:px-6 lg:py-3 text-sm font-bold text-white shadow-[0_5px_15px_-5px_rgba(139,92,246,0.5)] transition-all active:scale-[0.98] disabled:opacity-70 disabled:grayscale disabled:cursor-not-allowed'
           >
             {loading ? (
               <span className='flex items-center justify-center gap-2'>
-                <svg className='animate-spin h-4 w-4' viewBox='0 0 24 24'>
+                <svg className='animate-spin h-3 w-3 lg:h-4 lg:w-4' viewBox='0 0 24 24'>
                   <circle
                     className='opacity-25'
                     cx='12'
@@ -481,7 +486,14 @@ function SupportForm() {
             ) : (
               <span className='flex items-center justify-center gap-2'>
                 Submit
-                <ArrowRight size={16} className='transition-transform group-hover:translate-x-1' />
+                <ArrowRight
+                  size={14}
+                  className='lg:hidden transition-transform group-hover:translate-x-1'
+                />
+                <ArrowRight
+                  size={16}
+                  className='hidden lg:block transition-transform group-hover:translate-x-1'
+                />
               </span>
             )}
           </button>
@@ -513,159 +525,166 @@ function SupportForm() {
       </div>
 
       {/* ── SUCCESS POPUP ── */}
-      {showPopup && result && (
-        <div className='fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50 p-4'>
-          {/* Outer — fixed height, no overflow */}
-          <div className='bg-white rounded-2xl max-w-2xl w-full mx-auto shadow-2xl transform animate-slideUp border border-gray-100 max-h-[70vh] flex flex-col relative overflow-hidden'>
-            {/* Confetti sits outside scroll */}
-            {result.status === 'COMPLETED' && <FireworkPopper />}
+      {showPopup &&
+        result &&
+        typeof window !== 'undefined' &&
+        createPortal(
+          <div
+            className='fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50 p-4'
+            style={{ zIndex: 99999 }}
+          >
+            {/* Outer — fixed height, no overflow */}
+            <div className='bg-white rounded-2xl max-w-2xl w-full mx-auto shadow-2xl transform animate-slideUp border border-gray-100 max-h-[70vh] flex flex-col relative overflow-hidden'>
+              {/* Confetti sits outside scroll */}
+              {result.status === 'COMPLETED' && <FireworkPopper />}
 
-            {/* Header — sticky, never scrolls */}
-            <div className='flex-shrink-0 bg-white rounded-t-2xl relative z-10'>
-              <div className='absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#2E94DB] to-[#7030B1] rounded-t-2xl'></div>
-              <div className='p-4 pb-2 pt-5'>
-                <div className='flex items-center justify-between'>
-                  <h2 className='text-xl font-bold text-[#0A1E3C]'>
-                    {result.status === 'COMPLETED' ? 'Analysis Completed!' : 'Request Received!'}
-                  </h2>
-                  <button
-                    onClick={handleClosePopup}
-                    className='text-gray-400 hover:text-gray-600 w-8 h-8 rounded-full hover:bg-gray-100 flex items-center justify-center'
-                  >
-                    ✕
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Scrollable content — only this part scrolls */}
-            <div className='overflow-y-auto flex-1 relative z-10'>
-              <div className='px-4 pb-5 pt-1'>
-                {/* Submission Details */}
-                <div className='bg-gradient-to-br from-gray-50 to-white rounded-xl p-4 mb-3 border border-gray-200 shadow-sm'>
-                  <h3 className='text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 flex items-center'>
-                    <span className='w-1 h-3 bg-[#FBBF24] rounded-full mr-1.5'></span>
-                    Submission Details
-                  </h3>
-                  <div className='space-y-2'>
-                    {[
-                      { icon: '👤', label: 'Name', value: result.name },
-                      { icon: '📧', label: 'Email', value: result.email },
-                      { icon: '🏢', label: 'Company', value: result.companyName },
-                      { icon: '💼', label: 'Business', value: result.businessType },
-                    ].map(({ icon, label, value }) => (
-                      <div key={label} className='flex items-start gap-2 text-sm'>
-                        <span className='w-24 flex items-center text-gray-500 font-medium text-xs flex-shrink-0'>
-                          <span className='mr-1.5'>{icon}</span>
-                          {label}:
-                        </span>
-                        <div className='flex-1 bg-white rounded-lg px-3 py-1.5 border border-gray-100 text-gray-900 text-xs break-all'>
-                          {value}
-                        </div>
-                      </div>
-                    ))}
-                    {/* Use Case */}
-                    <div className='flex items-start gap-2 text-sm'>
-                      <span className='w-24 flex items-center text-gray-500 font-medium text-xs flex-shrink-0'>
-                        <span className='mr-1.5'>📋</span>Use Case:
-                      </span>
-                      <div className='flex-1 bg-white rounded-lg px-3 py-2 border border-gray-100 text-gray-800 text-xs max-h-24 overflow-y-auto'>
-                        {result.usecase}
-                      </div>
-                    </div>
-                    {/* Status */}
-                    <div className='flex items-center gap-2'>
-                      <span className='w-24 flex items-center text-gray-500 font-medium text-xs flex-shrink-0'>
-                        <span className='mr-1.5'>⚡</span>Status:
-                      </span>
-                      <span
-                        className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${
-                          result.status === 'COMPLETED'
-                            ? 'bg-green-100 text-green-800 border border-green-200'
-                            : 'bg-[#FBBF24]/20 text-[#0A1E3C] border border-[#FBBF24]/30'
-                        }`}
-                      >
-                        <span
-                          className={`w-1.5 h-1.5 rounded-full mr-1.5 ${
-                            result.status === 'COMPLETED'
-                              ? 'bg-green-500 animate-pulse'
-                              : 'bg-[#FBBF24]'
-                          }`}
-                        ></span>
-                        OPEN
-                      </span>
-                    </div>
+              {/* Header — sticky, never scrolls */}
+              <div className='flex-shrink-0 bg-white rounded-t-2xl relative' style={{ zIndex: 10 }}>
+                <div className='absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#2E94DB] to-[#7030B1] rounded-t-2xl'></div>
+                <div className='p-4 pb-2 pt-5'>
+                  <div className='flex items-center justify-between'>
+                    <h2 className='text-xl font-bold text-[#0A1E3C]'>
+                      {result.status === 'COMPLETED' ? 'Analysis Completed!' : 'Request Received!'}
+                    </h2>
+                    <button
+                      onClick={handleClosePopup}
+                      className='text-gray-400 hover:text-gray-600 w-8 h-8 rounded-full hover:bg-gray-100 flex items-center justify-center'
+                    >
+                      ✕
+                    </button>
                   </div>
                 </div>
+              </div>
 
-                {/* AI Agent Result */}
-                {result.agentResult && (
-                  <div className='bg-gradient-to-br from-[#1E3A8A]/5 to-[#0A1E3C]/5 rounded-xl p-4 mb-3 border-l-4 border-[#FBBF24]'>
+              {/* Scrollable content — only this part scrolls */}
+              <div className='overflow-y-auto flex-1 relative z-10'>
+                <div className='px-4 pb-5 pt-1'>
+                  {/* Submission Details */}
+                  <div className='bg-gradient-to-br from-gray-50 to-white rounded-xl p-4 mb-3 border border-gray-200 shadow-sm'>
+                    <h3 className='text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 flex items-center'>
+                      <span className='w-1 h-3 bg-[#FBBF24] rounded-full mr-1.5'></span>
+                      Submission Details
+                    </h3>
+                    <div className='space-y-2'>
+                      {[
+                        { icon: '👤', label: 'Name', value: result.name },
+                        { icon: '📧', label: 'Email', value: result.email },
+                        { icon: '🏢', label: 'Company', value: result.companyName },
+                        { icon: '💼', label: 'Business', value: result.businessType },
+                      ].map(({ icon, label, value }) => (
+                        <div key={label} className='flex items-start gap-2 text-sm'>
+                          <span className='w-24 flex items-center text-gray-500 font-medium text-xs flex-shrink-0'>
+                            <span className='mr-1.5'>{icon}</span>
+                            {label}:
+                          </span>
+                          <div className='flex-1 bg-white rounded-lg px-3 py-1.5 border border-gray-100 text-gray-900 text-xs break-all'>
+                            {value}
+                          </div>
+                        </div>
+                      ))}
+                      {/* Use Case */}
+                      <div className='flex items-start gap-2 text-sm'>
+                        <span className='w-24 flex items-center text-gray-500 font-medium text-xs flex-shrink-0'>
+                          <span className='mr-1.5'>📋</span>Use Case:
+                        </span>
+                        <div className='flex-1 bg-white rounded-lg px-3 py-2 border border-gray-100 text-gray-800 text-xs max-h-24 overflow-y-auto'>
+                          {result.usecase}
+                        </div>
+                      </div>
+                      {/* Status */}
+                      <div className='flex items-center gap-2'>
+                        <span className='w-24 flex items-center text-gray-500 font-medium text-xs flex-shrink-0'>
+                          <span className='mr-1.5'>⚡</span>Status:
+                        </span>
+                        <span
+                          className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${
+                            result.status === 'COMPLETED'
+                              ? 'bg-green-100 text-green-800 border border-green-200'
+                              : 'bg-[#FBBF24]/20 text-[#0A1E3C] border border-[#FBBF24]/30'
+                          }`}
+                        >
+                          <span
+                            className={`w-1.5 h-1.5 rounded-full mr-1.5 ${
+                              result.status === 'COMPLETED'
+                                ? 'bg-green-500 animate-pulse'
+                                : 'bg-[#FBBF24]'
+                            }`}
+                          ></span>
+                          OPEN
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* AI Agent Result */}
+                  {result.agentResult && (
+                    <div className='bg-gradient-to-br from-[#1E3A8A]/5 to-[#0A1E3C]/5 rounded-xl p-4 mb-3 border-l-4 border-[#FBBF24]'>
+                      <div className='flex items-start gap-3'>
+                        <div className='w-8 h-8 bg-[#1E3A8A] rounded-lg flex items-center justify-center flex-shrink-0'>
+                          <span className='text-white text-sm'>🤖</span>
+                        </div>
+                        <div className='flex-1'>
+                          <h4 className='font-semibold text-[#0A1E3C] text-sm mb-2 flex items-center gap-2'>
+                            AI Agent Analysis
+                            <span
+                              className={`px-2 py-0.5 text-[10px] rounded-full border ${
+                                result.status === 'COMPLETED'
+                                  ? 'bg-green-100 text-green-800 border-green-200'
+                                  : 'bg-[#FBBF24]/20 text-[#0A1E3C] border-[#FBBF24]/30'
+                              }`}
+                            >
+                              {result.status === 'COMPLETED' ? 'COMPLETED' : 'PROCESSING'}
+                            </span>
+                          </h4>
+                          <div className='bg-white rounded-lg p-3 border border-[#FBBF24]/20 shadow-sm text-xs text-gray-700'>
+                            {Array.isArray(result.agentResult) ? (
+                              <ul className='list-disc pl-4 space-y-1'>
+                                {result.agentResult.map((item, i) => (
+                                  <li key={i}>{item}</li>
+                                ))}
+                              </ul>
+                            ) : typeof result.agentResult === 'object' ? (
+                              <div className='space-y-2'>
+                                {Object.entries(result.agentResult).map(([key, value]) => (
+                                  <div
+                                    key={key}
+                                    className='border-b border-gray-100 pb-1 last:border-0'
+                                  >
+                                    <span className='font-medium text-[#1E3A8A] capitalize'>
+                                      {key}:{' '}
+                                    </span>
+                                    <span>
+                                      {typeof value === 'object' ? JSON.stringify(value) : value}
+                                    </span>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : (
+                              <p className='whitespace-pre-wrap'>{result.agentResult}</p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Message */}
+                  <div className='bg-gradient-to-br from-[#1E3A8A]/5 to-[#0A1E3C]/5 rounded-xl p-4 border-l-4 border-[#FBBF24]'>
                     <div className='flex items-start gap-3'>
                       <div className='w-8 h-8 bg-[#1E3A8A] rounded-lg flex items-center justify-center flex-shrink-0'>
-                        <span className='text-white text-sm'>🤖</span>
+                        <span className='text-white text-sm'>📧</span>
                       </div>
-                      <div className='flex-1'>
-                        <h4 className='font-semibold text-[#0A1E3C] text-sm mb-2 flex items-center gap-2'>
-                          AI Agent Analysis
-                          <span
-                            className={`px-2 py-0.5 text-[10px] rounded-full border ${
-                              result.status === 'COMPLETED'
-                                ? 'bg-green-100 text-green-800 border-green-200'
-                                : 'bg-[#FBBF24]/20 text-[#0A1E3C] border-[#FBBF24]/30'
-                            }`}
-                          >
-                            {result.status === 'COMPLETED' ? 'COMPLETED' : 'PROCESSING'}
-                          </span>
-                        </h4>
-                        <div className='bg-white rounded-lg p-3 border border-[#FBBF24]/20 shadow-sm text-xs text-gray-700'>
-                          {Array.isArray(result.agentResult) ? (
-                            <ul className='list-disc pl-4 space-y-1'>
-                              {result.agentResult.map((item, i) => (
-                                <li key={i}>{item}</li>
-                              ))}
-                            </ul>
-                          ) : typeof result.agentResult === 'object' ? (
-                            <div className='space-y-2'>
-                              {Object.entries(result.agentResult).map(([key, value]) => (
-                                <div
-                                  key={key}
-                                  className='border-b border-gray-100 pb-1 last:border-0'
-                                >
-                                  <span className='font-medium text-[#1E3A8A] capitalize'>
-                                    {key}:{' '}
-                                  </span>
-                                  <span>
-                                    {typeof value === 'object' ? JSON.stringify(value) : value}
-                                  </span>
-                                </div>
-                              ))}
-                            </div>
-                          ) : (
-                            <p className='whitespace-pre-wrap'>{result.agentResult}</p>
-                          )}
-                        </div>
-                      </div>
+                      <p className='text-xs text-gray-700 leading-relaxed'>{result.message}</p>
                     </div>
-                  </div>
-                )}
-
-                {/* Message */}
-                <div className='bg-gradient-to-br from-[#1E3A8A]/5 to-[#0A1E3C]/5 rounded-xl p-4 border-l-4 border-[#FBBF24]'>
-                  <div className='flex items-start gap-3'>
-                    <div className='w-8 h-8 bg-[#1E3A8A] rounded-lg flex items-center justify-center flex-shrink-0'>
-                      <span className='text-white text-sm'>📧</span>
-                    </div>
-                    <p className='text-xs text-gray-700 leading-relaxed'>{result.message}</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </>
   );
-}
+});
 
 export default SupportForm;

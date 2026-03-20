@@ -2,8 +2,10 @@
 import Countdown from './Countdown';
 import StatsSection from './StatsSection';
 import SupportForm from './SupportForm';
+import { useRef } from 'react';
 
 const HeroSection = () => {
+  const supportFormRef = useRef(null);
   return (
     <section className='relative pt-8 sm:pt-10 md:pt-12 pb-8 sm:pb-10 px-4 sm:px-6 overflow-hidden'>
       {/* Background image */}
@@ -59,7 +61,7 @@ const HeroSection = () => {
             </p>
 
             <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-4 sm:mt-6 leading-tight px-2'>
-              Build your First AI Agent
+              Build your First AI Agent{' '}
               <span
                 className='block mt-1 sm:mt-2'
                 style={{
@@ -84,7 +86,7 @@ const HeroSection = () => {
 
           {/* RIGHT — Support Form */}
           <div className='w-full lg:w-1/2'>
-            <SupportForm />
+            <SupportForm ref={supportFormRef} />
           </div>
         </div>
       </div>
