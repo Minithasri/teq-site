@@ -120,19 +120,18 @@ const HomeBanner = () => {
 
   return (
     <div
-      className='relative overflow-hidden rounded-2xl border  mt-0  outline-none w-full'
+      className='relative overflow-hidden border-none mt-0 outline-none w-full'
       style={{
         minHeight: '100vh',
         background: '#F8F9FA',
-        borderRadius: '20px ',
       }}
     >
       {/* Background image */}
       <img
         src={bg.src}
         alt='Background'
-        className='absolute  z-1 rounded-2xl top-0 left-0 w-full h-full object-cover px-4'
-        style={{ zIndex: 1, borderRadius: '40px', padding: '20px' }}
+        className='absolute z-1 top-0 left-0 w-full h-full object-cover'
+        style={{ zIndex: 1 }}
       />
 
       {/* Content - Full width on 1024px */}
@@ -146,7 +145,7 @@ const HomeBanner = () => {
           justifyContent: 'center',
         }}
       >
-        <div className='w-full max-w-7xl mx-auto py-12 sm:py-16 lg:py-20 px-4'>
+        <div className='w-full max-w-7xl mx-auto py-8 sm:py-10 lg:py-12 px-4'>
           <div className='text-center'>
             {/* Badge */}
             <div className='flex items-center justify-center mb-6 sm:mb-8'>

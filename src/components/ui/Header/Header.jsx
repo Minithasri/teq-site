@@ -69,7 +69,7 @@ export default function Header({
         ref={headerRef}
         className='fixed left-0 right-0 z-[9999] transition-all duration-300'
         style={{
-          top: isBannerVisible ? '35px' : '0px',
+          top: '0px',
           opacity: animate ? 0 : 1,
         }}
       >

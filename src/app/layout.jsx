@@ -33,7 +33,8 @@ export default function RootLayout({ children }) {
   const handleSplashFinish = () => setShowSplash(false);
   const handleBannerClose = () => setIsBannerClosed(true);
 
-  const isBannerVisible = shouldShowBannerInitially && !isBannerClosed;
+  // const isBannerVisible = shouldShowBannerInitially && !isBannerClosed;
+  const isBannerVisible = false; // Temporarily disabled
 
   if (showSplash) {
     return (
@@ -57,8 +58,8 @@ export default function RootLayout({ children }) {
         <Providers>
           <TopHeader isVisible={isBannerVisible} onClose={handleBannerClose} />
           <ScrollToTop /> {/* Add ScrollToTop here outside of Header/Main/Footer */}
-          <Header isBannerVisible={isBannerVisible} />
-          <main className={isBannerVisible ? 'pt-20' : ''}>{children}</main>
+          <Header isBannerVisible={false} />
+          <main className='pt-0'>{children}</main>
           <Footer />
         </Providers>
       </body>
