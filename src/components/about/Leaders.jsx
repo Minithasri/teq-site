@@ -73,11 +73,18 @@ export default function Leaders() {
       linkedin: 'https://www.linkedin.com/in/sridhar-vediyappan-943340b5/',
     },
     {
-      id: 10, // Fixed duplicate ID
+      id: 10,
       name: 'Madhu Sudhanan',
       title: 'Vice President',
       image: '/images/AboutUs/Madhu Sudhanan.webp',
       linkedin: 'https://www.linkedin.com/in/madhu-sudhanan-mahendran-a00b4477/',
+    },
+    {
+      id: 11,
+      name: 'Mike Murali',
+      title: 'Chief Experience Officer',
+      image: '/images/AboutUs/Mike Murali.webp',
+      linkedin: 'https://www.linkedin.com/in/mike-murali-3428aa',
     },
   ];
 
@@ -239,12 +246,16 @@ export default function Leaders() {
                   onClick={() => index !== activeIndex && handleDotClick(index)}
                 >
                   {/* Card Content */}
-                  <div className='relative h-[375px] bg-gray-100 rounded-xl overflow-hidden mb-4'>
+                  <div
+                    className={`relative h-[375px] ${leader.id === 11 ? 'bg-white' : 'bg-gray-100'} rounded-xl overflow-hidden mb-4`}
+                  >
                     <Image
                       src={leader.image}
                       alt={leader.name}
                       fill
-                      className='object-cover object-top'
+                      className={
+                        leader.id === 11 ? 'object-contain scale-80' : 'object-cover object-top'
+                      }
                     />
 
                     {/* Dark Overlay for INACTIVE cards to make center pop */}
@@ -283,12 +294,16 @@ export default function Leaders() {
         <div className='lg:hidden flex flex-col gap-6 w-full mb-16'>
           {leaders.map(leader => (
             <div key={leader.id} className='bg-white rounded-2xl shadow-lg w-full p-4'>
-              <div className='relative h-80 bg-gray-100 rounded-xl overflow-hidden mb-4'>
+              <div
+                className={`relative h-80 ${leader.id === 11 ? 'bg-white' : 'bg-gray-100'} rounded-xl overflow-hidden mb-4`}
+              >
                 <Image
                   src={leader.image}
                   alt={leader.name}
                   fill
-                  className='object-cover object-top'
+                  className={
+                    leader.id === 11 ? 'object-contain scale-80' : 'object-cover object-top'
+                  }
                 />
               </div>
               <div className='flex items-center justify-between px-2 pb-2'>
