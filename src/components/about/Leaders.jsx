@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 
 export default function Leaders() {
-  const [activeIndex, setActiveIndex] = useState(3);
+  const [activeIndex, setActiveIndex] = useState(2);
 
   // Dummy leader data - 10 leaders
   const leaders = [
@@ -18,24 +18,24 @@ export default function Leaders() {
     },
     {
       id: 2,
-      name: 'Santhosh Kumar',
-      title: 'Chief Innovation Officer',
-      image: '/images/AboutUs/Santhosh Kumar.webp',
-      linkedin: 'https://www.linkedin.com/in/santhosh-kumar-5a3ba3121/',
-    },
-    {
-      id: 3,
       name: 'Prasanna Srinivasan',
       title: 'Chief Operating Officer',
       image: '/images/AboutUs/Prasanna Srinivasan .webp',
       linkedin: 'https://www.linkedin.com/in/prasanna-srinivasan-a533b062/',
     },
     {
-      id: 4,
+      id: 3,
       name: 'Naveen Kumar',
       title: 'Chief Executive Officer',
       image: '/images/AboutUs/Naveen Kumar.webp',
       linkedin: 'https://www.linkedin.com/in/naveenkumarnawinkrp/',
+    },
+    {
+      id: 4,
+      name: 'Mike Murali',
+      title: 'Chief Experience Officer',
+      image: '/images/AboutUs/Mike Murali.webp',
+      linkedin: 'https://www.linkedin.com/in/mike-murali-3428aa',
     },
     {
       id: 5,
@@ -81,10 +81,10 @@ export default function Leaders() {
     },
     {
       id: 11,
-      name: 'Mike Murali',
-      title: 'Chief Experience Officer',
-      image: '/images/AboutUs/Mike Murali.webp',
-      linkedin: 'https://www.linkedin.com/in/mike-murali-3428aa',
+      name: 'Santhosh Kumar',
+      title: 'Chief Innovation Officer',
+      image: '/images/AboutUs/Santhosh Kumar.webp',
+      linkedin: 'https://www.linkedin.com/in/santhosh-kumar-5a3ba3121/',
     },
   ];
 
@@ -246,15 +246,13 @@ export default function Leaders() {
                   onClick={() => index !== activeIndex && handleDotClick(index)}
                 >
                   {/* Card Content */}
-                  <div
-                    className={`relative h-[375px] ${leader.id === 11 ? 'bg-white' : 'bg-gray-100'} rounded-xl overflow-hidden mb-4`}
-                  >
+                  <div className='relative h-[375px] bg-gray-100 rounded-xl overflow-hidden mb-4'>
                     <Image
                       src={leader.image}
                       alt={leader.name}
                       fill
                       className={
-                        leader.id === 11 ? 'object-contain scale-80' : 'object-cover object-top'
+                        leader.id === 4 ? 'object-contain scale-80' : 'object-cover object-top'
                       }
                     />
 
@@ -294,15 +292,13 @@ export default function Leaders() {
         <div className='lg:hidden flex flex-col gap-6 w-full mb-16'>
           {leaders.map(leader => (
             <div key={leader.id} className='bg-white rounded-2xl shadow-lg w-full p-4'>
-              <div
-                className={`relative h-80 ${leader.id === 11 ? 'bg-white' : 'bg-gray-100'} rounded-xl overflow-hidden mb-4`}
-              >
+              <div className='relative h-80 bg-gray-100 rounded-xl overflow-hidden mb-4'>
                 <Image
                   src={leader.image}
                   alt={leader.name}
                   fill
                   className={
-                    leader.id === 11 ? 'object-contain scale-80' : 'object-cover object-top'
+                    leader.id === 4 ? 'object-contain scale-80' : 'object-cover object-top'
                   }
                 />
               </div>
