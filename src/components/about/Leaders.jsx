@@ -254,8 +254,11 @@ export default function Leaders() {
                       priority
                       loading='eager'
                       sizes='435px'
-                      className={
-                        leader.id === 4 ? 'object-contain scale-80' : 'object-cover object-top'
+                      className='object-cover'
+                      style={
+                        leader.id === 4
+                          ? { objectPosition: 'center top' }
+                          : { objectPosition: 'center top' }
                       }
                     />
 
@@ -303,8 +306,11 @@ export default function Leaders() {
                   priority
                   loading='eager'
                   sizes='100vw'
-                  className={
-                    leader.id === 4 ? 'object-contain scale-80' : 'object-cover object-top'
+                  className='object-cover'
+                  style={
+                    leader.id === 4
+                      ? { objectPosition: 'center top' }
+                      : { objectPosition: 'center top' }
                   }
                 />
               </div>
