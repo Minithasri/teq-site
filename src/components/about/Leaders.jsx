@@ -27,14 +27,14 @@ export default function Leaders() {
       id: 3,
       name: 'Naveen Kumar',
       title: 'Chief Executive Officer',
-      image: '/images/AboutUs/Naveen Kumar.webp',
+      image: '/images/AboutUs/NaveenKumar.webp',
       linkedin: 'https://www.linkedin.com/in/naveenkumarnawinkrp/',
     },
     {
       id: 4,
       name: 'Mike Murali',
       title: 'Chief Experience Officer',
-      image: '/images/AboutUs/Mike Murali.webp',
+      image: '/images/AboutUs/MikeMurali.webp',
       linkedin: 'https://www.linkedin.com/in/mike-murali-3428aa',
     },
     {
@@ -251,6 +251,9 @@ export default function Leaders() {
                       src={leader.image}
                       alt={leader.name}
                       fill
+                      priority
+                      loading='eager'
+                      sizes='435px'
                       className={
                         leader.id === 4 ? 'object-contain scale-80' : 'object-cover object-top'
                       }
@@ -297,6 +300,9 @@ export default function Leaders() {
                   src={leader.image}
                   alt={leader.name}
                   fill
+                  priority
+                  loading='eager'
+                  sizes='100vw'
                   className={
                     leader.id === 4 ? 'object-contain scale-80' : 'object-cover object-top'
                   }
