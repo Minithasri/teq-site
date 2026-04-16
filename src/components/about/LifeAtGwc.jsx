@@ -22,7 +22,7 @@ export default function LifeAtGwc() {
     {
       id: 3,
       src: '/images/AboutUs/life3.svg',
-      title: 'Domopalooza 2025 – Saltlake city, Utah',
+      title: "How's the josh - 2025",
     },
     {
       id: 4,
