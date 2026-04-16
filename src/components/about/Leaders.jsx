@@ -239,7 +239,7 @@ export default function Leaders() {
 
               return (
                 <div
-                  key={leader.id}
+                  key={`${leader.id}-${leader.image}`}
                   className='bg-white rounded-2xl shadow-2xl absolute transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer origin-center p-4'
                   style={{
                     transform: `translateX(${pos.translateX}px) scale(${pos.scale})`,
@@ -261,8 +261,6 @@ export default function Leaders() {
                       alt={leader.name}
                       fill
                       priority
-                      unoptimized
-                      loading='eager'
                       sizes='435px'
                       className='object-cover'
                       style={{ objectPosition: 'center top' }}
