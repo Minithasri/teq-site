@@ -301,16 +301,17 @@ export default function Leaders() {
         {/* Mobile Stacked View (unchanged) */}
         <div className='lg:hidden flex flex-col gap-6 w-full mb-16'>
           {leaders.map(leader => (
-            <div key={leader.id} className='bg-white rounded-2xl shadow-lg w-full p-4'>
+            <div
+              key={`${leader.id}-${leader.image}`}
+              className='bg-white rounded-2xl shadow-lg w-full p-4'
+            >
               <div className='relative h-80 bg-gray-100 rounded-xl overflow-hidden mb-4'>
                 <Image
-                  src={leader.image}
+                  src={leader.image} // This will now use the 'v1' path from your array
                   alt={leader.name}
                   fill
                   priority
                   unoptimized
-                  loading='eager'
-                  sizes='100vw'
                   className='object-cover'
                   style={{ objectPosition: 'center top' }}
                 />
