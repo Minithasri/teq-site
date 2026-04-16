@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 
 export default function Leaders() {
@@ -112,6 +112,15 @@ export default function Leaders() {
       image: '/images/AboutUs/section33.webp',
     },
   ];
+
+  // Preload all leader images on mount to prevent carousel lazy-load race conditions.
+  // This is a belt-and-suspenders safety net alongside the unoptimized + loading="eager" props.
+  useEffect(() => {
+    leaders.forEach(leader => {
+      const img = new window.Image();
+      img.src = leader.image;
+    });
+  }, []);
 
   // Removed GSAP animations to prevent loading issues
 
@@ -252,14 +261,11 @@ export default function Leaders() {
                       alt={leader.name}
                       fill
                       priority
+                      unoptimized
                       loading='eager'
                       sizes='435px'
                       className='object-cover'
-                      style={
-                        leader.id === 4
-                          ? { objectPosition: 'center top' }
-                          : { objectPosition: 'center top' }
-                      }
+                      style={{ objectPosition: 'center top' }}
                     />
 
                     {/* Dark Overlay for INACTIVE cards to make center pop */}
@@ -304,14 +310,11 @@ export default function Leaders() {
                   alt={leader.name}
                   fill
                   priority
+                  unoptimized
                   loading='eager'
                   sizes='100vw'
                   className='object-cover'
-                  style={
-                    leader.id === 4
-                      ? { objectPosition: 'center top' }
-                      : { objectPosition: 'center top' }
-                  }
+                  style={{ objectPosition: 'center top' }}
                 />
               </div>
               <div className='flex items-center justify-between px-2 pb-2'>
