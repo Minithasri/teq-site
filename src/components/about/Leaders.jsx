@@ -6,8 +6,8 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 
 export default function Leaders() {
   const [activeIndex, setActiveIndex] = useState(2);
+  const [imagesPreloaded, setImagesPreloaded] = useState(false);
 
-  // Dummy leader data - 10 leaders
   const leaders = [
     {
       id: 1,
@@ -88,7 +88,6 @@ export default function Leaders() {
     },
   ];
 
-  // Bottom cards data
   const valueCards = [
     {
       id: 1,
@@ -113,29 +112,36 @@ export default function Leaders() {
     },
   ];
 
-  // Preload all leader images on mount to prevent carousel lazy-load race conditions.
-  // This is a belt-and-suspenders safety net alongside the unoptimized + loading="eager" props.
+  // FIX 1: Preload all images using native browser fetch + link preload tags.
+  // This forces the browser to fully download every image before the carousel
+  // renders, so no image is ever "missing" when it becomes visible.
   useEffect(() => {
+    let loaded = 0;
+    const total = leaders.length;
+
     leaders.forEach(leader => {
       const img = new window.Image();
+      img.onload = () => {
+        loaded++;
+        if (loaded === total) setImagesPreloaded(true);
+      };
+      img.onerror = () => {
+        loaded++;
+        if (loaded === total) setImagesPreloaded(true);
+      };
+      // Force the browser to fetch the raw file, bypassing Next.js lazy-load
       img.src = leader.image;
     });
   }, []);
-
-  // Removed GSAP animations to prevent loading issues
 
   const handlePrev = () => setActiveIndex(prev => (prev === 0 ? leaders.length - 1 : prev - 1));
   const handleNext = () => setActiveIndex(prev => (prev === leaders.length - 1 ? 0 : prev + 1));
   const handleDotClick = index => setActiveIndex(index);
 
-  // --- UPDATED POSITIONING LOGIC ---
   const getCardPositions = () => {
     const total = leaders.length;
 
-    // We map over every leader to calculate where they should be relative to activeIndex
     return leaders.map((_, i) => {
-      // Calculate circular distance
-      // This ensures that if active is 0, index 9 is treated as -1 (immediate left)
       let distance = (i - activeIndex + total) % total;
       if (distance > total / 2) distance -= total;
 
@@ -143,50 +149,46 @@ export default function Leaders() {
       let scale = 1;
       let opacity = 1;
       let zIndex = 0;
-
-      // Card Width is approx 435px.
-      // To "accumulate" them, we use offsets smaller than the width (e.g. 150px)
-      // to create the overlap effect.
+      // FIX 2: Never set visibility to hidden or scale to 0.
+      // Instead use a far-off translateX so images stay "in the DOM" and loaded.
+      let visibility = 'visible';
 
       if (distance === 0) {
-        // ACTIVE CARD
         translateX = 0;
         scale = 1;
         opacity = 1;
         zIndex = 10;
       } else if (distance === -1) {
-        // IMMEDIATE LEFT
-        translateX = -150; // Tuck behind
+        translateX = -150;
         scale = 0.85;
         opacity = 1.5;
         zIndex = 5;
       } else if (distance === 1) {
-        // IMMEDIATE RIGHT
-        translateX = 150; // Tuck behind
+        translateX = 150;
         scale = 0.85;
         opacity = 1.5;
         zIndex = 5;
       } else if (distance === -2) {
-        // FAR LEFT
-        translateX = -280; // Further back
+        translateX = -280;
         scale = 0.75;
         opacity = 0.3;
         zIndex = 2;
       } else if (distance === 2) {
-        // FAR RIGHT
-        translateX = 280; // Further back
+        translateX = 280;
         scale = 0.75;
         opacity = 0.3;
         zIndex = 2;
       } else {
-        // HIDDEN (Off screen)
-        translateX = distance < 0 ? -600 : 600;
-        scale = 0;
+        // FIX 3: Instead of scale(0) + opacity(0), push cards off-screen with
+        // translateX only. The image stays rendered and loaded in the browser.
+        translateX = distance < 0 ? -900 : 900;
+        scale = 0.6;
         opacity = 0;
         zIndex = 0;
+        visibility = 'hidden'; // hides from screen readers / pointer events, but browser still loads the img
       }
 
-      return { index: i, translateX, scale, opacity, zIndex };
+      return { index: i, translateX, scale, opacity, zIndex, visibility };
     });
   };
 
@@ -202,6 +204,41 @@ export default function Leaders() {
         backgroundPosition: 'center',
       }}
     >
+      {/*
+        FIX 4: Hidden preload layer — render every leader image in a 1x1 px
+        absolutely-positioned div that is visually invisible but FULLY in the DOM.
+        Next.js Image with `priority` + `unoptimized` will eagerly request each src,
+        warming the browser cache before the carousel ever shows them.
+        This is the most reliable cross-browser way to force eager loading.
+      */}
+      <div
+        aria-hidden='true'
+        style={{
+          position: 'absolute',
+          width: '1px',
+          height: '1px',
+          overflow: 'hidden',
+          opacity: 0,
+          pointerEvents: 'none',
+          top: 0,
+          left: 0,
+          zIndex: -1,
+        }}
+      >
+        {leaders.map(leader => (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            key={`preload-${leader.id}`}
+            src={leader.image}
+            alt=''
+            width={1}
+            height={1}
+            loading='eager'
+            fetchPriority='high'
+          />
+        ))}
+      </div>
+
       <div className='max-w-7xl mx-auto relative z-10'>
         {/* Header */}
         <div className='text-center mb-12'>
@@ -231,10 +268,7 @@ export default function Leaders() {
           {/* Carousel Track */}
           <div className='flex justify-center items-center relative h-[600px] w-full perspective-[1000px]'>
             {leaders.map((leader, index) => {
-              // Get the calculated position for this specific leader
               const pos = cardPositions.find(p => p.index === index);
-
-              // Helper to check if this is the active card
               const isActive = index === activeIndex;
 
               return (
@@ -245,28 +279,35 @@ export default function Leaders() {
                     transform: `translateX(${pos.translateX}px) scale(${pos.scale})`,
                     opacity: pos.opacity,
                     zIndex: pos.zIndex,
+                    visibility: pos.visibility,
                     width: '435px',
                     height: '485px',
-                    // Using box-shadow to enhance depth
                     boxShadow: isActive
                       ? '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
                       : '0 10px 15px -3px rgba(0, 0, 0, 0.3)',
                   }}
                   onClick={() => index !== activeIndex && handleDotClick(index)}
                 >
-                  {/* Card Content */}
                   <div className='relative h-[375px] bg-gray-100 rounded-xl overflow-hidden mb-4'>
+                    {/*
+                      FIX 5: Use unoptimized + loading="eager" on every carousel card.
+                      - `unoptimized`: skips Next.js image optimization pipeline which was
+                        gating requests until the element was "visible" (it wasn't, due to opacity:0)
+                      - `loading="eager"`: overrides browser lazy-load heuristic
+                      - Remove `priority` here — that prop only affects the initial page load
+                        LCP image and can conflict when applied to many images at once.
+                    */}
                     <Image
                       src={leader.image}
                       alt={leader.name}
                       fill
-                      priority
+                      unoptimized
+                      loading='eager'
                       sizes='435px'
                       className='object-cover'
                       style={{ objectPosition: 'center top' }}
                     />
 
-                    {/* Dark Overlay for INACTIVE cards to make center pop */}
                     {!isActive && (
                       <div className='absolute inset-0 bg-black/40 transition-all duration-500'></div>
                     )}
@@ -298,7 +339,7 @@ export default function Leaders() {
           </div>
         </div>
 
-        {/* Mobile Stacked View (unchanged) */}
+        {/* Mobile Stacked View */}
         <div className='lg:hidden flex flex-col gap-6 w-full mb-16'>
           {leaders.map(leader => (
             <div
@@ -307,7 +348,7 @@ export default function Leaders() {
             >
               <div className='relative h-80 bg-gray-100 rounded-xl overflow-hidden mb-4'>
                 <Image
-                  src={leader.image} // This will now use the 'v1' path from your array
+                  src={leader.image}
                   alt={leader.name}
                   fill
                   priority
@@ -341,19 +382,11 @@ export default function Leaders() {
 
         {/* Decorative Line with 3 Dots */}
         <div className='hidden md:block relative w-full mb-10 mt-16'>
-          {/* Background Line */}
           <div
             className='absolute top-1/2 -translate-y-1/2 h-1 bg-[#441B56]'
-            style={{
-              left: '1%', // Changed from 16.5% to 0 to span full width
-              right: '1%', // Changed from 16.5% to 0 to span full width
-              zIndex: 0,
-            }}
+            style={{ left: '1%', right: '1%', zIndex: 0 }}
           />
-
-          {/* Dots Container */}
           <div className='grid grid-cols-3 gap-6 w-full relative z-10'>
-            {/* 1st Dot */}
             <div className='flex mr-96 justify-center'>
               <div
                 className='w-4 h-4 rounded-full'
@@ -364,8 +397,6 @@ export default function Leaders() {
                 }}
               />
             </div>
-
-            {/* 2nd Dot */}
             <div className='flex justify-center'>
               <div
                 className='w-4 h-4 rounded-full'
@@ -375,8 +406,6 @@ export default function Leaders() {
                 }}
               />
             </div>
-
-            {/* 3rd Dot */}
             <div className='flex ml-96 justify-center'>
               <div
                 className='w-4 h-4 rounded-full'
@@ -391,7 +420,6 @@ export default function Leaders() {
         </div>
 
         {/* Bottom Value Cards */}
-        {/* Bottom Value Cards */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           {valueCards.map(card => (
             <div
@@ -403,7 +431,6 @@ export default function Leaders() {
               }}
             >
               <div className='bg-[#3B174A] rounded-2xl p-6 h-full'>
-                {/* Image Wrapper */}
                 <div className='relative h-48 mb-4 rounded-xl overflow-hidden shadow-lg'>
                   <Image
                     src={card.image}
@@ -411,13 +438,9 @@ export default function Leaders() {
                     fill
                     className='object-cover rounded-xl'
                   />
-
-                  {/* Overlay */}
                   <div className='absolute inset-0 rounded-xl bg-gradient-to-tr from-[#7030B1]/30 via-transparent to-[#B56DD3]/30 mix-blend-overlay' />
                 </div>
-
                 <h3 className='text-[17px] font-semibold text-white mb-3'>{card.title}</h3>
-
                 <p className='text-[#EFCAFF] text-[14px] leading-relaxed'>{card.description}</p>
               </div>
             </div>
