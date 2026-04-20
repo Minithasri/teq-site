@@ -1,0 +1,15 @@
+# Place this file in your /public folder.
+# Hostinger uses Apache, so this is the correct way to set cache headers.
+# next.config.js `async headers()` is ignored on static hosts like Hostinger.
+
+<IfModule mod_headers.c>
+  # Force browsers and CDN to always revalidate images
+  # This fixes the "old image after deploy" problem on Hostinger
+  <FilesMatch "\.(webp|jpg|jpeg|png|gif|svg)$">
+    Header set Cache-Control "no-cache, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Also disable ETags to prevent stale cache serving
+FileETag None
+Header unset ETag
