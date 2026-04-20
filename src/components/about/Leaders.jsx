@@ -8,7 +8,7 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 // Bump this string every time you replace/rename any leader image.
 // It appends ?v=X to every image src, forcing browsers AND CDNs to
 // fetch the new file instead of serving a cached copy.
-const IMAGE_VERSION = 'v3';
+const IMAGE_VERSION = 'v4';
 // ───────────────────────────────────────────────────────────────────────────────
 
 const bust = src => `${src}?${IMAGE_VERSION}`;
@@ -28,7 +28,7 @@ export default function Leaders() {
       id: 2,
       name: 'Prasanna Srinivasan',
       title: 'Chief Operating Officer',
-      image: bust('/images/AboutUs/Prasanna Srinivasan .webp'),
+      image: bust('/images/AboutUs/Prasanna Srinivasan.webp'),
       linkedin: 'https://www.linkedin.com/in/prasanna-srinivasan-a533b062/',
     },
     {
