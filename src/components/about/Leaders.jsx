@@ -4,86 +4,94 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 
+// ─── CACHE BUSTER ──────────────────────────────────────────────────────────────
+// Bump this string every time you replace/rename any leader image.
+// It appends ?v=X to every image src, forcing browsers AND CDNs to
+// fetch the new file instead of serving a cached copy.
+const IMAGE_VERSION = 'v3';
+// ───────────────────────────────────────────────────────────────────────────────
+
+const bust = src => `${src}?${IMAGE_VERSION}`;
+
 export default function Leaders() {
   const [activeIndex, setActiveIndex] = useState(2);
-  const [imagesPreloaded, setImagesPreloaded] = useState(false);
 
   const leaders = [
     {
       id: 1,
       name: 'Abhinaya Sindhu',
       title: 'Head of People Operations',
-      image: '/images/AboutUs/Abinaya Sindhu.webp',
+      image: bust('/images/AboutUs/Abinaya Sindhu.webp'),
       linkedin: 'https://www.linkedin.com/in/abinaya-sindhu-a05311206/',
     },
     {
       id: 2,
       name: 'Prasanna Srinivasan',
       title: 'Chief Operating Officer',
-      image: '/images/AboutUs/Prasanna Srinivasan .webp',
+      image: bust('/images/AboutUs/Prasanna Srinivasan .webp'),
       linkedin: 'https://www.linkedin.com/in/prasanna-srinivasan-a533b062/',
     },
     {
       id: 3,
       name: 'Naveen Kumar',
       title: 'Chief Executive Officer',
-      image: '/images/AboutUs/NaveenKumarv1.webp',
+      image: bust('/images/AboutUs/NaveenKumarv1.webp'),
       linkedin: 'https://www.linkedin.com/in/naveenkumarnawinkrp/',
     },
     {
       id: 4,
       name: 'Mike Murali',
       title: 'Chief Experience Officer',
-      image: '/images/AboutUs/MikeMuraliv1.webp',
+      image: bust('/images/AboutUs/MikeMuraliv1.webp'),
       linkedin: 'https://www.linkedin.com/in/mike-murali-3428aa',
     },
     {
       id: 5,
       name: 'Mamtha Shanmugam',
       title: 'Chief Marketing Officer',
-      image: '/images/AboutUs/Mamtha Shanmugam.webp',
+      image: bust('/images/AboutUs/Mamtha Shanmugam.webp'),
       linkedin: 'https://www.linkedin.com/in/mamtha-shanmugam-43ba8016a/',
     },
     {
       id: 6,
       name: 'Subash Ramu',
       title: 'Chief Technology Officer',
-      image: '/images/AboutUs/Subash Ramu.webp',
+      image: bust('/images/AboutUs/Subash Ramu.webp'),
       linkedin: 'https://www.linkedin.com/in/subash-ramu-92553784/',
     },
     {
       id: 7,
       name: 'Srinath Raja',
       title: 'Chief Data Officer',
-      image: '/images/AboutUs/Srinath Raja.webp',
+      image: bust('/images/AboutUs/Srinath Raja.webp'),
       linkedin: 'https://www.linkedin.com/in/srinath-raja-8a5710115/',
     },
     {
       id: 8,
       name: 'Shashank Ravikumar',
       title: 'Chief Strategy Officer',
-      image: '/images/AboutUs/Shashank Ravikumar.webp',
+      image: bust('/images/AboutUs/Shashank Ravikumar.webp'),
       linkedin: 'https://www.linkedin.com/in/shashank-ravikumar-780649125/',
     },
     {
       id: 9,
       name: 'Sridhar Vediyappan',
       title: 'Chief Financial Officer',
-      image: '/images/AboutUs/Sridhar Vediyappan.webp',
+      image: bust('/images/AboutUs/Sridhar Vediyappan.webp'),
       linkedin: 'https://www.linkedin.com/in/sridhar-vediyappan-943340b5/',
     },
     {
       id: 10,
       name: 'Madhu Sudhanan',
       title: 'Vice President',
-      image: '/images/AboutUs/Madhu Sudhanan.webp',
+      image: bust('/images/AboutUs/Madhu Sudhanan.webp'),
       linkedin: 'https://www.linkedin.com/in/madhu-sudhanan-mahendran-a00b4477/',
     },
     {
       id: 11,
       name: 'Santhosh Kumar',
       title: 'Chief Innovation Officer',
-      image: '/images/AboutUs/Santhosh Kumar.webp',
+      image: bust('/images/AboutUs/Santhosh Kumar.webp'),
       linkedin: 'https://www.linkedin.com/in/santhosh-kumar-5a3ba3121/',
     },
   ];
@@ -112,25 +120,12 @@ export default function Leaders() {
     },
   ];
 
-  // FIX 1: Preload all images using native browser fetch + link preload tags.
-  // This forces the browser to fully download every image before the carousel
-  // renders, so no image is ever "missing" when it becomes visible.
+  // Preload all images via fetch() so the browser warms its HTTP cache
+  // before the carousel renders them. fetch() respects the ?v= cache-buster
+  // and works correctly with CDNs, unlike window.Image().
   useEffect(() => {
-    let loaded = 0;
-    const total = leaders.length;
-
     leaders.forEach(leader => {
-      const img = new window.Image();
-      img.onload = () => {
-        loaded++;
-        if (loaded === total) setImagesPreloaded(true);
-      };
-      img.onerror = () => {
-        loaded++;
-        if (loaded === total) setImagesPreloaded(true);
-      };
-      // Force the browser to fetch the raw file, bypassing Next.js lazy-load
-      img.src = leader.image;
+      fetch(leader.image, { method: 'GET', cache: 'force-cache' }).catch(() => {});
     });
   }, []);
 
@@ -140,7 +135,6 @@ export default function Leaders() {
 
   const getCardPositions = () => {
     const total = leaders.length;
-
     return leaders.map((_, i) => {
       let distance = (i - activeIndex + total) % total;
       if (distance > total / 2) distance -= total;
@@ -149,8 +143,6 @@ export default function Leaders() {
       let scale = 1;
       let opacity = 1;
       let zIndex = 0;
-      // FIX 2: Never set visibility to hidden or scale to 0.
-      // Instead use a far-off translateX so images stay "in the DOM" and loaded.
       let visibility = 'visible';
 
       if (distance === 0) {
@@ -179,13 +171,11 @@ export default function Leaders() {
         opacity = 0.3;
         zIndex = 2;
       } else {
-        // FIX 3: Instead of scale(0) + opacity(0), push cards off-screen with
-        // translateX only. The image stays rendered and loaded in the browser.
         translateX = distance < 0 ? -900 : 900;
         scale = 0.6;
         opacity = 0;
         zIndex = 0;
-        visibility = 'hidden'; // hides from screen readers / pointer events, but browser still loads the img
+        visibility = 'hidden';
       }
 
       return { index: i, translateX, scale, opacity, zIndex, visibility };
@@ -205,11 +195,11 @@ export default function Leaders() {
       }}
     >
       {/*
-        FIX 4: Hidden preload layer — render every leader image in a 1x1 px
-        absolutely-positioned div that is visually invisible but FULLY in the DOM.
-        Next.js Image with `priority` + `unoptimized` will eagerly request each src,
-        warming the browser cache before the carousel ever shows them.
-        This is the most reliable cross-browser way to force eager loading.
+        Hidden preload layer — 1×1px, invisible, aria-hidden.
+        Uses plain <img> (NOT next/image) with fetchpriority="high" and the
+        ?v= cache-buster. This forces the browser to fetch each real file on
+        first load, warming the cache before the carousel needs them.
+        Never serves a stale /_next/image optimized copy.
       */}
       <div
         aria-hidden='true'
@@ -234,7 +224,7 @@ export default function Leaders() {
             width={1}
             height={1}
             loading='eager'
-            fetchPriority='high'
+            fetchpriority='high'
           />
         ))}
       </div>
@@ -251,7 +241,6 @@ export default function Leaders() {
 
         {/* Desktop Carousel */}
         <div className='hidden lg:block relative w-full mb-16'>
-          {/* Controls */}
           <button
             className='bg-white rounded-full w-14 h-14 flex items-center justify-center border border-gray-300 transition-all duration-300 z-20 shadow-xl absolute left-4 top-1/2 -translate-y-1/2 hover:scale-105 active:scale-95'
             onClick={handlePrev}
@@ -265,7 +254,6 @@ export default function Leaders() {
             <RiArrowRightSLine size={26} />
           </button>
 
-          {/* Carousel Track */}
           <div className='flex justify-center items-center relative h-[600px] w-full perspective-[1000px]'>
             {leaders.map((leader, index) => {
               const pos = cardPositions.find(p => p.index === index);
@@ -273,8 +261,8 @@ export default function Leaders() {
 
               return (
                 <div
-                  key={`${leader.id}-${leader.image}`}
-                  className='bg-white rounded-2xl shadow-2xl absolute transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer origin-center p-4'
+                  key={leader.id}
+                  className='bg-white rounded-2xl shadow-2xl absolute cursor-pointer origin-center p-4'
                   style={{
                     transform: `translateX(${pos.translateX}px) scale(${pos.scale})`,
                     opacity: pos.opacity,
@@ -282,6 +270,9 @@ export default function Leaders() {
                     visibility: pos.visibility,
                     width: '435px',
                     height: '485px',
+                    willChange: 'transform, opacity',
+                    transition:
+                      'transform 420ms cubic-bezier(0.25,1,0.5,1), opacity 420ms cubic-bezier(0.25,1,0.5,1)',
                     boxShadow: isActive
                       ? '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
                       : '0 10px 15px -3px rgba(0, 0, 0, 0.3)',
@@ -290,12 +281,10 @@ export default function Leaders() {
                 >
                   <div className='relative h-[375px] bg-gray-100 rounded-xl overflow-hidden mb-4'>
                     {/*
-                      FIX 5: Use unoptimized + loading="eager" on every carousel card.
-                      - `unoptimized`: skips Next.js image optimization pipeline which was
-                        gating requests until the element was "visible" (it wasn't, due to opacity:0)
-                      - `loading="eager"`: overrides browser lazy-load heuristic
-                      - Remove `priority` here — that prop only affects the initial page load
-                        LCP image and can conflict when applied to many images at once.
+                      unoptimized={true} — skips /_next/image entirely.
+                      The browser fetches /images/AboutUs/X.webp?v3 directly,
+                      never a server-cached optimized copy. This fixes the
+                      "wrong image after deploy" bug in incognito / new users.
                     */}
                     <Image
                       src={leader.image}
@@ -308,9 +297,15 @@ export default function Leaders() {
                       style={{ objectPosition: 'center top' }}
                     />
 
-                    {!isActive && (
-                      <div className='absolute inset-0 bg-black/40 transition-all duration-500'></div>
-                    )}
+                    {/* Always-rendered overlay — fade via opacity only, never mount/unmount */}
+                    <div
+                      className='absolute inset-0 bg-black/40'
+                      style={{
+                        opacity: isActive ? 0 : 1,
+                        transition: 'opacity 420ms cubic-bezier(0.25,1,0.5,1)',
+                        willChange: 'opacity',
+                      }}
+                    />
                   </div>
 
                   <div className='flex items-center justify-between px-2 pb-2'>
@@ -342,17 +337,14 @@ export default function Leaders() {
         {/* Mobile Stacked View */}
         <div className='lg:hidden flex flex-col gap-6 w-full mb-16'>
           {leaders.map(leader => (
-            <div
-              key={`${leader.id}-${leader.image}`}
-              className='bg-white rounded-2xl shadow-lg w-full p-4'
-            >
+            <div key={leader.id} className='bg-white rounded-2xl shadow-lg w-full p-4'>
               <div className='relative h-80 bg-gray-100 rounded-xl overflow-hidden mb-4'>
                 <Image
                   src={leader.image}
                   alt={leader.name}
                   fill
-                  priority
                   unoptimized
+                  loading='eager'
                   className='object-cover'
                   style={{ objectPosition: 'center top' }}
                 />
