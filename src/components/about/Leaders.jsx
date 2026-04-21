@@ -35,14 +35,14 @@ export default function Leaders() {
       id: 3,
       name: 'Naveen Kumar',
       title: 'Chief Executive Officer',
-      image: bust('/images/AboutUs/NaveenKumarv1.webp'),
+      image: bust('/images/AboutUs/NaveenKumarv2.webp'),
       linkedin: 'https://www.linkedin.com/in/naveenkumarnawinkrp/',
     },
     {
       id: 4,
       name: 'Mike Murali',
       title: 'Chief Experience Officer',
-      image: bust('/images/AboutUs/MikeMuraliv1.webp'),
+      image: bust('/images/AboutUs/MikeMuraliv2.webp'),
       linkedin: 'https://www.linkedin.com/in/mike-murali-3428aa',
     },
     {
