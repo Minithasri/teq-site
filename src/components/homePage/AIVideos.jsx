@@ -108,10 +108,10 @@ const AIVideos = () => {
   const slide = slides[current];
 
   return (
-    <section className='relative bg-[#F8F9FE] py-12 px-6 lg:px-20 overflow-hidden'>
+    <section className='relative bg-[#FAFAFA] py-6 px-6 lg:px-20 overflow-hidden'>
       <div className='max-w-7xl mx-auto'>
         {/* ── Header ── */}
-        <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-10'>
+        <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 -mb-6'>
           <h2 className='text-3xl lg:text-5xl font-bold text-[#1a1a2e]'>
             <span className='bg-gradient-to-b from-[#7030B1] to-[#B56DD3] bg-clip-text text-transparent font-semibold'>
               Watch
@@ -238,19 +238,19 @@ const AIVideos = () => {
           </AnimatePresence>
         </div>
 
-        {/* ── Navigation Arrows ── */}
-        <div className='flex gap-4 justify-center mt-6 sm:mt-10'>
+        {/* ── Navigation Arrows (Squircle Design) ── */}
+        <div className='flex gap-5 justify-center mt-8 sm:mt-12'>
           <button
             onClick={prev}
-            className='w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-gray-200 bg-white text-gray-400 flex items-center justify-center hover:border-[#8B5CF6] hover:text-[#8B5CF6] transition-all duration-300 shadow-sm'
+            className='w-12 h-12 sm:w-14 sm:h-14 rounded-[18px] bg-white text-gray-400 flex items-center justify-center hover:text-[#7030B1] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_25px_rgba(0,0,0,0.1)]'
           >
-            <ChevronLeft className='w-5 h-5' />
+            <ChevronLeft className='w-6 h-6 stroke-[1.5px]' />
           </button>
           <button
             onClick={next}
-            className='w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-gray-200 bg-white text-gray-400 flex items-center justify-center hover:border-[#8B5CF6] hover:text-[#8B5CF6] transition-all duration-300 shadow-sm'
+            className='w-12 h-12 sm:w-14 sm:h-14 rounded-[18px] bg-white text-gray-900 flex items-center justify-center hover:text-[#7030B1] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_25px_rgba(0,0,0,0.1)]'
           >
-            <ChevronRight className='w-5 h-5' />
+            <ChevronRight className='w-6 h-6 stroke-[1.5px]' />
           </button>
         </div>
       </div>

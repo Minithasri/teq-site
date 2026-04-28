@@ -90,10 +90,10 @@ export default function Header({
         }}
       >
         <div
-          className='relative backdrop-blur-sm h-16 border-b border-neutral-200/40 bg-white rounded-full mt-6 max-w-[95%] lg:max-w-[85%] xl:max-w-[1100px] mx-auto'
+          className='relative backdrop-blur-sm h-16 border-b border-neutral-200/40 bg-white rounded-full mt-6 max-w-[95%] lg:max-w-[90%] xl:max-w-[1250px] mx-auto'
           style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)' }}
         >
-          <div className='mx-auto flex h-full items-center justify-between gap-4 xl:gap-8 px-6 lg:px-10 xl:px-12'>
+          <div className='mx-auto flex h-full items-center justify-between gap-4 xl:gap-10 px-6 lg:px-10 xl:px-12'>
             <Link
               href='/'
               className='flex items-center z-50 flex-shrink-0'
@@ -102,10 +102,10 @@ export default function Header({
               <img
                 src='/images/logo.svg'
                 alt='GWC Data.Ai'
-                className='w-[130px] lg:w-[120px] xl:w-[140px] h-auto'
+                className='w-[130px] lg:w-[120px] xl:w-[150px] h-auto'
               />
             </Link>
-            <nav className='hidden lg:flex items-center gap-4 xl:gap-8'>
+            <nav className='hidden lg:flex items-center gap-4 xl:gap-10'>
               {navItems.map(item => {
                 // Flatten all links from all columns into a single list
                 const allLinks = item.megaMenuColumns?.flatMap(column => column.links) || [];
@@ -118,7 +118,7 @@ export default function Header({
                       <DropdownMenu modal={false}>
                         <DropdownMenuTrigger asChild>
                           <button
-                            className={`flex items-center gap-0 text-[10px] xl:text-[12px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
+                            className={`flex items-center gap-0 text-[10px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
                               pathname === item.href ? '' : 'hover:opacity-80'
                             }`}
                           >
@@ -153,7 +153,7 @@ export default function Header({
                     ) : (
                       <Link
                         href={item.href}
-                        className={`text-[10px] xl:text-[12px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
+                        className={`text-[10px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
                           pathname === item.href ? '' : 'hover:opacity-80'
                         }`}
                         onClick={handleLinkClick}

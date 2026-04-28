@@ -83,7 +83,7 @@ const DomoBanner = () => {
               className='absolute bottom-8 z-20 bg-white shadow-xl flex items-center justify-center hidden md:flex'
               style={{
                 width: '726px',
-                height: '78px',
+                height: '60px',
                 borderRadius: '16px',
                 padding: '30px 24px',
               }}
