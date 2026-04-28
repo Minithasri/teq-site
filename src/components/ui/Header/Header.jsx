@@ -24,15 +24,29 @@ export default function Header({
   const [openMobileItems, setOpenMobileItems] = useState([]);
   const headerRef = useRef(null);
   const { navItems, ctaButton } = headerData;
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY > 80;
-      setIsScrolled(scrolled);
+      const currentScrollY = window.scrollY;
+
+      // Determine if we should show or hide based on scroll direction
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down - hide
+        setIsVisible(false);
+      } else {
+        // Scrolling up or at the top - show
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+      setIsScrolled(currentScrollY > 80);
     };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   useEffect(() => {
     if (animate && headerRef.current) {
@@ -67,14 +81,19 @@ export default function Header({
       )}
       <header
         ref={headerRef}
-        className='fixed left-0 right-0 z-[9999] transition-all duration-300'
+        className={`fixed left-0 right-0 z-[9999] transition-transform duration-500 ${
+          isVisible || open ? 'translate-y-0' : '-translate-y-full'
+        }`}
         style={{
           top: '0px',
           opacity: animate ? 0 : 1,
         }}
       >
-        <div className='relative backdrop-blur-sm border-b border-neutral-200/40 bg-white'>
-          <div className='mx-auto flex h-14 items-center justify-between px-6 lg:px-4 xl:px-6'>
+        <div
+          className='relative backdrop-blur-sm h-16 border-b border-neutral-200/40 bg-white rounded-full mt-6 max-w-[95%] lg:max-w-[85%] xl:max-w-[1100px] mx-auto'
+          style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)' }}
+        >
+          <div className='mx-auto flex h-full items-center justify-center gap-4 xl:gap-8 px-6 lg:px-10 xl:px-12'>
             <Link
               href='/'
               className='flex items-center z-50 flex-shrink-0'
@@ -83,10 +102,10 @@ export default function Header({
               <img
                 src='/images/logo.svg'
                 alt='GWC Data.Ai'
-                className='w-[140px] lg:w-[130px] xl:w-[160px] h-auto'
+                className='w-[130px] lg:w-[120px] xl:w-[140px] h-auto'
               />
             </Link>
-            <nav className='hidden lg:flex items-center lg:gap-2 xl:gap-8 flex-1 justify-center'>
+            <nav className='hidden lg:flex items-center gap-4 xl:gap-8'>
               {navItems.map(item => {
                 // Flatten all links from all columns into a single list
                 const allLinks = item.megaMenuColumns?.flatMap(column => column.links) || [];
@@ -94,15 +113,13 @@ export default function Header({
                 const shouldOpenInNewTab = item.label === 'Solutions' || item.label === 'Partners';
 
                 return (
-                  <div key={item.label} className='relative'>
+                  <div key={item.label} className='relative '>
                     {item.megaMenu ? (
                       <DropdownMenu modal={false}>
                         <DropdownMenuTrigger asChild>
                           <button
-                            className={`flex items-center gap-1 text-[13px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
-                              pathname === item.href
-                                ? 'underline underline-offset-4'
-                                : 'hover:opacity-80'
+                            className={`flex items-center gap-0 text-[10px] xl:text-[12px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
+                              pathname === item.href ? '' : 'hover:opacity-80'
                             }`}
                           >
                             {item.label}
@@ -136,10 +153,8 @@ export default function Header({
                     ) : (
                       <Link
                         href={item.href}
-                        className={`text-[13px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
-                          pathname === item.href
-                            ? 'underline underline-offset-4'
-                            : 'hover:opacity-80'
+                        className={`text-[10px] xl:text-[12px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
+                          pathname === item.href ? '' : 'hover:opacity-80'
                         }`}
                         onClick={handleLinkClick}
                       >
@@ -162,7 +177,7 @@ export default function Header({
             <div className='hidden lg:flex items-center flex-shrink-0'>
               <Link
                 href={ctaButton.href}
-                className='flex items-center justify-center gap-1 text-[12px] xl:text-[13px] font-medium lg:w-[125px] xl:w-[155px] h-[45px] text-white rounded-[25px] transition-all duration-300 hover:opacity-90 flex-shrink-0'
+                className='flex items-center justify-center gap-1 text-[12px] xl:text-[13px] font-medium lg:w-[115px] xl:w-[135px] h-[40px] text-white rounded-[25px] transition-all duration-300 hover:opacity-90 flex-shrink-0'
                 style={{ background: 'linear-gradient(to right, #7030B1, #B56DD3)' }}
                 onClick={handleLinkClick}
               >
