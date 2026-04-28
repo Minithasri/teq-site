@@ -14,81 +14,298 @@ const categories = [
 ];
 
 const slides = [
+  // FINANCE
   {
     id: 1,
     category: 'Finance',
     statNumber: '85',
     statSymbol: '%',
     statLabel: 'Improved efficiency',
-    title: 'Credit optimization agent (App)',
+    title: 'Credit Optimization Agent (App)',
     description:
       'Gain complete visibility into credit usage across dashboards, dataflows, and connectors to optimize costs and improve efficiency.',
     tags: ['Lineage Tracking', 'Cost Visibility', 'Usage Optimization'],
     image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1000',
     details: {
-      audience: 'Finance Teams, Operations Managers, IT Leadership',
+      audience: 'Finance Teams, IT Leadership, Cloud Administrators',
       howItWorks: [
-        'Monitors real-time credit consumption across platforms',
-        'Identifies unused resources and suggests optimizations',
-        'Provides detailed lineage tracking for cost attribution',
+        'Tracks credit consumption in real-time across all Domo instances',
+        'Links costs directly to specific dataflows and dashboards',
+        'Suggests automated scaling rules to prevent overages',
       ],
       potentialImpact: [
-        'Lower cloud infrastructure costs',
-        'Enhanced budget predictability',
-        'Reduced waste in data operations',
+        'Significantly lower cloud spend',
+        'Transparent cost attribution',
+        'Elimination of surprise billing',
       ],
     },
   },
   {
     id: 2,
-    category: 'Operations',
-    statNumber: '40',
+    category: 'Finance',
+    statNumber: '70',
     statSymbol: '%',
-    statLabel: 'Reduced downtime',
-    title: 'Supply chain autonomous agent',
+    statLabel: 'Reduction in monitoring time',
+    title: 'Domo Agent Hub',
     description:
-      'Predict disruptions before they happen and automate procurement workflows for seamless operational continuity.',
-    tags: ['Predictive Alerts', 'Automated Sourcing', 'Inventory Sync'],
+      'Monitor workflows and track agent credit consumption through a chat-based interface with real-time insights and prioritization.',
+    tags: ['Credit Tracking', 'Workflow Monitoring', 'Chat Access'],
     image:
-      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000',
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
     details: {
-      audience: 'Logistics Teams, Procurement Officers, Supply Chain Managers',
+      audience: 'Data Ops, Platform Owners, Finance Analysts',
       howItWorks: [
-        'Predicts potential supply disruptions using historical data',
-        'Automates re-ordering processes based on inventory levels',
-        'Synchronizes data across global distribution centers',
+        'Centralizes all AI agent activity into a single command center',
+        'Uses NLP to allow querying agent status via chat',
+        'Proactively alerts users to workflow bottlenecks',
       ],
       potentialImpact: [
-        'Minimized inventory stockouts',
-        'Faster response to market shifts',
-        'Reduced manual procurement effort',
+        'Instant visibility into ROI',
+        'Faster resolution of failed tasks',
+        'Scalable management of hundreds of agents',
+      ],
+    },
+  },
+
+  // OPERATIONS
+  {
+    id: 3,
+    category: 'Operations',
+    statNumber: '60',
+    statSymbol: '%',
+    statLabel: 'Faster procurement evaluation',
+    title: 'Procurement Agent',
+    description:
+      'Intelligent vendor evaluation using policy, contracts, and budget data to support faster, compliant procurement decisions.',
+    tags: ['Vendor Ranking', 'Policy Compliance', 'Risk Assessment'],
+    image:
+      'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1000',
+    details: {
+      audience: 'Procurement Officers, Supply Chain Leads, Compliance Teams',
+      howItWorks: [
+        'Parses vendor contracts using OCR and LLMs',
+        'Compares bids against company policy and historical benchmarks',
+        'Flags potential risks in vendor financial stability',
+      ],
+      potentialImpact: [
+        'Shortened procurement cycles',
+        'Higher compliance rates',
+        'Better vendor selection based on data',
       ],
     },
   },
   {
-    id: 3,
-    category: 'Retail',
-    statNumber: '3x',
-    statSymbol: '',
-    statLabel: 'Higher conversion rate',
-    title: 'Customer Retention & Churn Risk Agent',
+    id: 4,
+    category: 'Operations',
+    statNumber: '80',
+    statSymbol: '%',
+    statLabel: 'Reduction in planning time',
+    title: 'Predictive Maintenance Agent',
     description:
-      'Deliver hyper-personalized recommendations to users in real-time, boosting sales and customer satisfaction.',
-    tags: ['Recommendation Engine', 'User Profiling', 'Cart Optimization'],
+      'Automate production planning and proactively monitor machine health using real-time data to prevent failures and optimize allocation.',
+    tags: ['Failure Prediction', 'Machine Health', 'Resource Optimization'],
+    image:
+      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
+    details: {
+      audience: 'Plant Managers, Maintenance Engineers, Operations VPs',
+      howItWorks: [
+        'Ingests sensor data to detect early signs of mechanical wear',
+        'Automates work order generation for preventive tasks',
+        'Optimizes machine schedules based on health status',
+      ],
+      potentialImpact: [
+        'Zero unplanned downtime',
+        'Extended machinery lifespan',
+        'Lower maintenance costs',
+      ],
+    },
+  },
+  {
+    id: 5,
+    category: 'Operations',
+    statNumber: '90',
+    statSymbol: '%',
+    statLabel: 'Less manual reporting effort',
+    title: 'Automated PPT Generator',
+    description:
+      'Auto-generate professional presentations from dashboards using card snapshots, filters, and AI-driven summarization via Domo APIs.',
+    tags: ['Slide Generation', 'AI Insights', 'Dashboard Export'],
+    image:
+      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1000',
+    details: {
+      audience: 'Business Analysts, Executives, Sales Teams',
+      howItWorks: [
+        'Pulls live data snapshots directly from Domo cards',
+        'Synthesizes bullet points using context-aware LLMs',
+        'Exports into brand-compliant PowerPoint templates',
+      ],
+      potentialImpact: [
+        'Hours saved per week on reporting',
+        'Data-driven storytelling consistency',
+        'Faster executive decision making',
+      ],
+    },
+  },
+  {
+    id: 6,
+    category: 'Operations',
+    statNumber: '40',
+    statSymbol: '%',
+    statLabel: 'Improved staff utilization',
+    title: 'Magic Rostering',
+    description:
+      'Automate staff scheduling using past attendance, leave, and performance data to eliminate conflicts and optimize workforce planning.',
+    tags: ['Auto Scheduling', 'Leave Management', 'Predictive Roster'],
+    image:
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000',
+    details: {
+      audience: 'HR Managers, Shift Leads, Retail Operations',
+      howItWorks: [
+        'Forecasts labor demand using historical foot traffic data',
+        'Cross-references staff skills and availability to build rosters',
+        'Automatically handles swap requests and leave approvals',
+      ],
+      potentialImpact: [
+        'Reduced overtime costs',
+        'Improved employee work-life balance',
+        'Optimal floor coverage at all times',
+      ],
+    },
+  },
+
+  // RETAIL
+  {
+    id: 7,
+    category: 'Retail',
+    statNumber: 'Real-time',
+    statSymbol: '',
+    statLabel: 'Floor decision speed',
+    title: 'Fashion Retail – Store Manager',
+    description:
+      'Deliver instant AI-generated floor decisions (Replenish / Pull-Back / Hold) to store managers by analyzing sell-through, ROS, and lifecycle data at point of scan.',
+    tags: ['Scan & Decide', 'Inventory Action', 'Sell-Through Optimization'],
     image:
       'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1000',
     details: {
-      audience: 'CRM Teams, Loyalty Teams, Marketing & Retail Leadership',
+      audience: 'Store Managers, Visual Merchandisers, Inventory Planners',
       howItWorks: [
-        'Monitors purchase frequency and engagement trends',
-        'Qualifies churn risk at customer or segment level',
-        'Guides retention actions for approval',
+        'Integrates with mobile scanning devices at the store level',
+        'Processes SKU-level performance metrics in milliseconds',
+        'Provides actionable instructions based on global inventory levels',
       ],
       potentialImpact: [
-        'Higher repeat purchase rates',
-        'Improved customer lifetime value',
-        'More effective loyalty programs',
+        'Minimized out-of-stock items',
+        'Reduced manual inventory audits',
+        'Maximized full-price sell-through',
+      ],
+    },
+  },
+
+  // CUSTOMER EXPERIENCE
+  {
+    id: 8,
+    category: 'Customer Experience',
+    statNumber: '75',
+    statSymbol: '%',
+    statLabel: 'Reduction in manual effort',
+    title: 'Hapag Lloyd – Booking Amendment Agent',
+    description:
+      'Automate end-to-end booking amendment detection from customer emails — validating requests and generating responses in seconds.',
+    tags: ['Email Parsing', 'Amendment Detection', 'Auto Response'],
+    image:
+      'https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=80&w=1000',
+    details: {
+      audience: 'Logistics Coordinators, Customer Support, Shipping Lines',
+      howItWorks: [
+        'Uses NLP to extract data from unstructured customer emails',
+        'Verifies amendment requests against live shipment data',
+        'Drafts and sends confirmation or rejection responses',
+      ],
+      potentialImpact: [
+        'Instant response to customers',
+        'Elimination of data entry errors',
+        'Highly scalable support operations',
+      ],
+    },
+  },
+  {
+    id: 9,
+    category: 'Customer Experience',
+    statNumber: 'Centralized',
+    statSymbol: '',
+    statLabel: 'Support analytics view',
+    title: 'Sierra – Customer Support (C Certify)',
+    description:
+      'Monitor and analyze customer support data in one place — tracking tickets, resolution time, agent performance, and satisfaction scores.',
+    tags: ['Ticket Analytics', 'Agent Performance', 'CSAT Insights'],
+    image:
+      'https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=1000',
+    details: {
+      audience: 'CX Directors, Team Leads, Quality Assurance',
+      howItWorks: [
+        'Aggregates data from Zendesk, Salesforce, and live chat',
+        'Calculates sentiment scores across all interactions',
+        'Identifies high-performing support strategies automatically',
+      ],
+      potentialImpact: [
+        'Consistent service quality',
+        'Data-backed agent coaching',
+        'Real-time visibility into customer sentiment',
+      ],
+    },
+  },
+
+  // INFRASTRUCTURE
+  {
+    id: 10,
+    category: 'Infrastructure',
+    statNumber: '$1M+',
+    statSymbol: '',
+    statLabel: 'Potential annual savings',
+    title: 'Network Optimization',
+    description:
+      "Simulate cost and capacity scenarios for BISSELL's warehouse and shipping network to drive smarter, faster logistics decisions.",
+    tags: ['Scenario Planning', 'Capacity Forecasting', 'Lane Optimization'],
+    image:
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000',
+    details: {
+      audience: 'Logistics Planners, Network Engineers, CFOs',
+      howItWorks: [
+        'Digital twins of global shipping and warehouse nodes',
+        'Runs Monte Carlo simulations for varying demand profiles',
+        'Recommends optimal routing lanes to minimize costs',
+      ],
+      potentialImpact: [
+        'Substantial logistics cost reduction',
+        'Improved shipping lead times',
+        'Resilient infrastructure planning',
+      ],
+    },
+  },
+  {
+    id: 11,
+    category: 'Infrastructure',
+    statNumber: 'Instant',
+    statSymbol: '',
+    statLabel: 'Use case response via email',
+    title: 'Agent Horoscope + Developer Dashboard',
+    description:
+      'Collect AI use cases from clients or users, provide instant email solutions, and share details with the dev team via a tracking dashboard.',
+    tags: ['Use Case Intake', 'Auto Email', 'Dev Tracking'],
+    image:
+      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000',
+    details: {
+      audience: 'Sales Teams, Product Managers, Developers',
+      howItWorks: [
+        'Captures user requirements through a structured interface',
+        'Automatically maps needs to existing AI modules',
+        'Bridges the gap between sales intake and dev execution',
+      ],
+      potentialImpact: [
+        'Faster sales-to-development handoff',
+        'Standardized AI solutioning',
+        'Improved client engagement speed',
       ],
     },
   },
@@ -341,10 +558,16 @@ const AIAgents = () => {
                   <div>
                     <button
                       onClick={handleExplore}
-                      className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 hover:shadow-[0_8px_20px_rgba(139,92,246,0.3)] group'
+                      className='inline-flex items-center gap-3 text-white px-8 py-3 rounded-full font-bold text-[15px] transition-all duration-300 hover:scale-105 hover:shadow-xl group'
+                      style={{
+                        background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                        boxShadow:
+                          'inset 0px 0px 12px 0px #FFFFFF, 0px 0px 2px 0px rgba(0, 0, 0, 0.1)',
+                        borderRadius: '30px',
+                      }}
                     >
-                      Explore{' '}
-                      <ArrowRight className='w-4 h-4 ml-1 transition-transform group-hover:translate-x-1' />
+                      Explore
+                      <ArrowRight className='w-4 h-4 transition-transform group-hover:translate-x-1' />
                     </button>
                   </div>
                 </motion.div>

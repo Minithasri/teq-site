@@ -42,10 +42,16 @@ const AISolutions = () => {
 
           {/* Orange Line — Desktop */}
           <div className='hidden lg:flex flex-1 items-center self-start mt-[30px] px-2'>
-            <div className='w-full h-[5px] bg-[#F97316] rounded-full' />
+            <div
+              className='w-full h-[5px] rounded-full'
+              style={{ background: 'linear-gradient(100.44deg, #F97316 41.13%, #43145E 119.62%)' }}
+            />
           </div>
           {/* Orange Line — Mobile */}
-          <div className='flex lg:hidden w-[4px] h-10 bg-[#F97316] rounded-full my-3' />
+          <div
+            className='flex lg:hidden w-[4px] h-10 rounded-full my-3'
+            style={{ background: 'linear-gradient(100.44deg, #F97316 41.13%, #43145E 119.62%)' }}
+          />
 
           {/* Center Icon — Production ready (elevated, with glow) */}
           <div className='flex flex-col items-center w-[200px] flex-shrink-0 z-10 lg:-mt-4'>
@@ -63,10 +69,16 @@ const AISolutions = () => {
                 />
               </div>
             </div>
-            {/* Dots row */}
-            <div className='flex gap-1.5 mb-3'>
+            {/* Dots row — White Capsule */}
+            <div className='flex gap-2 mb-4 bg-white px-4 py-1.5 rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.05)] border border-gray-100 transition-all hover:shadow-md'>
               {[...Array(5)].map((_, i) => (
-                <div key={i} className='w-2 h-2 rounded-full bg-[#F97316]' />
+                <div
+                  key={i}
+                  className='w-2.5 h-2.5 rounded-full shadow-sm'
+                  style={{
+                    background: 'linear-gradient(100.44deg, #F97316 41.13%, #43145E 119.62%)',
+                  }}
+                />
               ))}
             </div>
             <p className='text-[#222] text-sm font-semibold text-center leading-snug'>
@@ -76,10 +88,16 @@ const AISolutions = () => {
 
           {/* Orange Line — Desktop */}
           <div className='hidden lg:flex flex-1 items-center self-start mt-[30px] px-2'>
-            <div className='w-full h-[5px] bg-[#F97316] rounded-full' />
+            <div
+              className='w-full h-[5px] rounded-full'
+              style={{ background: 'linear-gradient(100.44deg, #F97316 41.13%, #43145E 119.62%)' }}
+            />
           </div>
           {/* Orange Line — Mobile */}
-          <div className='flex lg:hidden w-[4px] h-10 bg-[#F97316] rounded-full my-3' />
+          <div
+            className='flex lg:hidden w-[4px] h-10 rounded-full my-3'
+            style={{ background: 'linear-gradient(100.44deg, #F97316 41.13%, #43145E 119.62%)' }}
+          />
 
           {/* Right Icon — Enterprise grade */}
           <div className='flex flex-col items-center w-[200px] flex-shrink-0 z-10'>
@@ -119,7 +137,12 @@ const AISolutions = () => {
         <div className='flex justify-center'>
           <Link
             href='/contact'
-            className='flex items-center gap-2 bg-gradient-to-b from-[#7030B1] to-[#B56DD3] hover:bg-[#7C3AED] text-white font-medium px-8 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-violet-300/40 hover:shadow-violet-400/50 hover:-translate-y-0.5'
+            className='flex items-center gap-2 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl'
+            style={{
+              background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+              boxShadow: 'inset 0px 0px 12px 0px #FFFFFF, 0px 0px 2px 0px rgba(0, 0, 0, 0.1)',
+              borderRadius: '30px',
+            }}
           >
             Explore solutions
             <ArrowRight className='w-4 h-4' />

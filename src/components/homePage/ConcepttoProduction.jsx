@@ -18,13 +18,13 @@ const ConcepttoProduction = () => {
       num: '03',
       title: 'Build & Deploy',
       text: 'We develop, test, and deploy your agent into production with robust monitoring, fallbacks, and scalable infrastructure',
-      img: 'image3.png',
+      img: 'imgg3.svg',
     },
     {
       num: '04',
       title: 'Optimize & Scale',
       text: 'Continuous improvement through performance analytics, user feedback loops, and iterative fine-tuning to maximize impact.',
-      img: 'image4.png',
+      img: 'imgg4.svg',
     },
   ];
 

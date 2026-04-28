@@ -49,7 +49,7 @@ const FullStackAgent = () => {
 
   return (
     <section className='py-14 md:py-20 bg-[#fafafa]'>
-      <div className='max-w-7xl mx-auto px-6 md:px-12 lg:px-20'>
+      <div className='max-w-9xl mx-auto px-6 md:px-12 lg:px-20'>
         {/* Title */}
         <div className='text-center mb-12 md:mb-16'>
           <h2 className='text-[28px] md:text-[32px] font-bold text-[#222222]'>
@@ -76,7 +76,7 @@ const FullStackAgent = () => {
               <h3 className='text-[#333333] font-semibold text-[14px] md:text-[16px] mb-3'>
                 {item.title}
               </h3>
-              <p className='text-[#737373] text-[12px] leading-[1.6]'>{item.description}</p>
+              <p className='text-[#737373] text-[14px] leading-[1.6]'>{item.description}</p>
             </div>
           ))}
         </div>

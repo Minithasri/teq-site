@@ -14,7 +14,7 @@ import AISolutions from '@/components/homePage/AISolutions';
 import AIAgents from '@/components/homePage/AIAgents';
 import AINative from '@/components/homePage/AINative';
 import ConcepttoProduction from '@/components/homePage/ConcepttoProduction';
-import AgenticBlocks from '@/components/homePage/AgenticBlocks';
+// import AgenticBlocks from '@/components/homePage/AgenticBlocks';
 
 const AIVideos = dynamic(() => import('@/components/homePage/AIVideos'), {
   ssr: false,
@@ -33,7 +33,7 @@ export default function HomePage() {
         <AISolutions />
 
         <AIAgents />
-        <AgenticBlocks />
+        {/* <AgenticBlocks /> */}
         <ConcepttoProduction />
         {/* <AgentBuilding /> */}
         {/* <Architecture /> */}

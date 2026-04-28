@@ -38,14 +38,14 @@ const AINative = () => {
                   <br className='hidden md:block' /> Day One
                 </h2>
 
-                <p className='text-[#737373] text-[14px] lg:text-[12px] font-medium leading-[1.7] mb-5'>
+                <p className='text-[#737373] text-[12px] lg:text-[14px] font-medium leading-[1.7] mb-5'>
                   Founded by a team of AI researchers and enterprise engineers, Agent Forge exists
                   to bridge the gap between cutting edge AI research and real world business impact.
                   We don't just build chatbots we architect autonomous systems that reason, learn,
                   and act.
                 </p>
 
-                <p className='text-[#737373] text-[14px] lg:text-[12px] font-medium leading-[1.7] mb-2'>
+                <p className='text-[#737373] text-[14px] lg:text-[14px] font-medium leading-[1.7] mb-2'>
                   Our team includes former engineers from leading AI labs and Fortune 500 companies
                   who bring deep expertise in large language models, reinforcement learning, and
                   scalable system design. Every agent we build is production grade, secure, and

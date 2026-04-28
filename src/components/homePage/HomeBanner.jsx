@@ -159,9 +159,10 @@ const HomeBanner = () => {
             <div className='mb-6 flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 sm:mt-4'>
               <Link
                 href='/contact'
-                className='flex items-center justify-center gap-2 px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base text-white transition-all duration-300 hover:scale-105 hover:shadow-lg'
+                className='flex items-center justify-center gap-2 px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base text-white transition-all duration-300 hover:scale-105 hover:shadow-xl font-semibold'
                 style={{
-                  background: 'linear-gradient(to right, #7030B1, #B56DD3)',
+                  background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                  boxShadow: 'inset 0px 0px 12px 0px #FFFFFF, 0px 0px 2px 0px rgba(0, 0, 0, 0.1)',
                   borderRadius: '30px',
                 }}
               >
@@ -197,7 +198,7 @@ const HomeBanner = () => {
                   >
                     <div className='w-20 h-20 rounded-[20px] bg-white border border-gray-100 shadow-sm flex items-center justify-center p-4 mb-6'>
                       <img
-                        src='/images/group.png'
+                        src='/images/Group.png'
                         alt='AI Icon'
                         className='w-full h-full object-contain'
                       />

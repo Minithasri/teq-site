@@ -98,7 +98,9 @@ const AIVideos = () => {
   const openModal = () => setIsOpen(true);
   const closeModal = () => {
     setIsOpen(false);
-    videoRef.current?.pause();
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
   };
 
   if (!mounted) return null;
@@ -123,104 +125,127 @@ const AIVideos = () => {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }
             }}
-            className='flex items-center gap-2 px-5 py-2 lg:px-6 lg:py-2.5 rounded-full text-white text-sm lg:text-base font-medium bg-gradient-to-b from-[#7030B1] to-[#B56DD3] shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300'
+            className='flex items-center gap-2 px-8 py-3 rounded-full text-white text-sm lg:text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl'
+            style={{
+              background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+              boxShadow: 'inset 0px 0px 12px 0px #FFFFFF, 0px 0px 2px 0px rgba(0, 0, 0, 0.1)',
+              borderRadius: '30px',
+            }}
           >
             Explore All Agents
             <ArrowRight className='w-4 h-4' />
           </button>
         </div>
 
-        {/* ── Overlapping Slider Container ── */}
-        <div className='relative max-w-7xl mx-auto min-h-auto lg:min-h-[439px] flex flex-col lg:block'>
-          {/* ─── Video Card (Background — right-aligned, full height) ─── */}
-          <motion.div
-            key={current + '-video'}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className='relative lg:absolute lg:right-0 lg:top-0 w-full lg:w-[768px] h-[220px] sm:h-[350px] lg:h-[439px] overflow-hidden shadow-2xl cursor-pointer group mb-6 lg:mb-0'
-            onClick={openModal}
-            style={{
-              border: '6px solid #C8ABDA',
-              borderRadius: '24px',
-            }}
-          >
-            <Image
-              src={slide.thumbnail}
-              alt='Video Thumbnail'
-              fill
-              className='object-cover transition-transform duration-700 '
-            />
-            <div className='absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors' />
+        {/* ── Main Display Area (Split Layout) ── */}
+        <div className='relative max-w-[1300px] mx-auto h-[400px] sm:h-[500px] lg:h-[550px] flex items-center justify-center'>
+          {/* Video Slider Area (Right side) */}
+          <div className='absolute right-0 w-full lg:w-[75%] h-full flex items-center justify-center lg:justify-end pr-0 lg:pr-5'>
+            {slides.map((s, idx) => {
+              const diff = idx - current;
+              const isActive = idx === current;
 
-            {/* Play Button */}
-            <div className='absolute inset-0 flex items-center justify-center'>
-              <div className='w-14 h-14 lg:w-20 lg:h-20 rounded-full bg-white flex items-center justify-center shadow-2xl transition-transform duration-300 group-hover:scale-110'>
-                <div className='w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-[#7C3AED] border-b-[8px] border-b-transparent ml-1' />
+              let translateX = 0;
+              let opacity = 0;
+              let zIndex = 1;
+
+              if (diff === 0) {
+                translateX = 0;
+                opacity = 1;
+                zIndex = 10;
+              } else {
+                translateX = diff > 0 ? 100 : -100;
+                opacity = 0;
+                zIndex = 0;
+              }
+
+              return (
+                <motion.div
+                  key={idx}
+                  animate={{ x: translateX, opacity: opacity, zIndex: zIndex }}
+                  transition={{ duration: 0.6, ease: 'easeOut' }}
+                  className='absolute w-[95%] lg:w-full max-w-[720px] aspect-video cursor-pointer'
+                  onClick={() => (!isActive ? setCurrent(idx) : openModal())}
+                >
+                  <div
+                    className='relative w-full h-full overflow-hidden shadow-2xl transition-all duration-300'
+                    style={{
+                      border: isActive ? '4px solid #C8ABDA' : 'none',
+                      borderRadius: '32px',
+                    }}
+                  >
+                    <Image src={s.thumbnail} alt='Video' fill className='object-cover' />
+                    <div className='absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors' />
+                    <div className='absolute inset-0 flex items-center justify-center'>
+                      <div className='w-14 h-14 lg:w-20 lg:h-20 rounded-full bg-white flex items-center justify-center shadow-2xl'>
+                        <div className='w-0 h-0 border-t-[8px] lg:border-t-[12px] border-t-transparent border-l-[14px] lg:border-l-[20px] border-l-[#1a1a2e] border-b-[8px] lg:border-b-[12px] border-b-transparent ml-2' />
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Info Card Area (Left side, Overlapping) */}
+          <AnimatePresence mode='wait'>
+            <motion.div
+              key={current + '-info'}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 50 }}
+              transition={{ duration: 0.5 }}
+              className='absolute left-4 lg:left-0 top-1/2 -translate-y-1/2 z-[20] flex flex-row items-center w-[95%] sm:w-[480px] lg:w-[580px] p-6 lg:p-[35px] pr-8 lg:pr-10'
+              style={{
+                background: 'linear-gradient(270deg, #5A2A8A 0%, #242424 100%)',
+                borderRadius: '40px',
+              }}
+            >
+              {/* Illustration */}
+              <div className='absolute -left-[140px] top-1/2 -translate-y-1/2 w-[320px] hidden lg:block pointer-events-none'>
+                <Image
+                  src={AIVideologo}
+                  alt='AI Robot'
+                  width={320}
+                  height={320}
+                  className='object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)]'
+                />
               </div>
-            </div>
 
-            {/* Duration Badge */}
-            <div className='absolute bottom-5 right-6 bg-black/70 text-white text-sm font-bold px-4 py-1.5 rounded-lg backdrop-blur-md'>
-              {slide.duration}
-            </div>
-          </motion.div>
+              {/* Content Area */}
+              <div className='flex-1 text-left flex flex-col items-start lg:ml-[130px]'>
+                <h3 className='text-xl lg:text-[32px] font-bold text-white mb-3 leading-tight'>
+                  {slide.title}
+                </h3>
+                <p className='text-white/80 text-sm lg:text-[17px] leading-relaxed mb-8'>
+                  {slide.subtitle}
+                </p>
 
-          {/* ─── Info Card (Foreground — bottom-left, overlapping video) ─── */}
-          <motion.div
-            key={current + '-info'}
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className='relative lg:absolute left-0 bottom-0 lg:bottom-[-20px] z-20 shadow-2xl flex flex-row items-center w-full lg:w-[698px] h-auto lg:h-[303px] p-8 lg:p-[40px] gap-6 lg:gap-[33px]'
-            style={{
-              background: 'linear-gradient(270deg, #5A2A8A 0%, #242424 100%)',
-              borderRadius: '40px',
-            }}
-          >
-            {/* Robot Illustration — sticking out left & top */}
-            <div className='w-[40%] flex-shrink-0 -mt-44 -ml-[140px] hidden lg:block'>
-              <Image
-                src={AIVideologo}
-                alt='AI Robot'
-                width={344}
-                height={352}
-                className='object-contain drop-shadow-2xl max-w-none'
-                style={{ opacity: 1, width: '344px', height: '352px' }}
-              />
-            </div>
-
-            {/* Content */}
-            <div className='flex-1 text-left lg:text-right flex flex-col items-start lg:items-end'>
-              <h3 className='text-xl lg:text-2xl font-extrabold text-white mb-3 leading-tight capitalize'>
-                {slide.title}
-              </h3>
-              <p className='text-white/70 text-sm leading-relaxed mb-6'>{slide.subtitle}</p>
-
-              <button
-                onClick={openModal}
-                className='inline-flex items-center gap-3 bg-white hover:bg-violet-50 text-[#2E2452] font-bold text-[18px] px-6 py-3 rounded-full transition-all duration-300 shadow-xl group/btn'
-              >
-                Watch now
-                <span className='w-7 h-7 flex items-center justify-center rounded-full bg-gradient-to-b from-[#7030B1] to-[#B56DD3] transition-transform group-hover/btn:translate-x-1'>
-                  <ArrowRight className='w-3.5 h-3.5 text-white -rotate-45' />
-                </span>
-              </button>
-            </div>
-          </motion.div>
+                <button
+                  onClick={openModal}
+                  className='inline-flex items-center gap-4 bg-white hover:bg-violet-50 text-[#1a1a2e] font-bold text-base lg:text-[18px] px-8 py-3.5 rounded-full transition-all duration-300 group/btn shadow-xl'
+                >
+                  Watch now
+                  <span className='w-7 h-7 lg:w-9 lg:h-9 flex items-center justify-center rounded-full bg-[#7030B1] text-white transition-transform group-hover/btn:translate-x-1'>
+                    <ArrowRight className='w-3.5 h-3.5 lg:w-4.5 lg:h-4.5 -rotate-45' />
+                  </span>
+                </button>
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
 
         {/* ── Navigation Arrows ── */}
-        <div className='flex gap-4 justify-center mt-10'>
+        <div className='flex gap-4 justify-center mt-6 sm:mt-10'>
           <button
             onClick={prev}
-            className='w-12 h-12 rounded-full border-2 border-gray-200 bg-white text-gray-400 flex items-center justify-center hover:border-[#8B5CF6] hover:text-[#8B5CF6] transition-all duration-300 shadow-sm'
+            className='w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-gray-200 bg-white text-gray-400 flex items-center justify-center hover:border-[#8B5CF6] hover:text-[#8B5CF6] transition-all duration-300 shadow-sm'
           >
             <ChevronLeft className='w-5 h-5' />
           </button>
           <button
             onClick={next}
-            className='w-12 h-12 rounded-full border-2 border-gray-200 bg-white text-gray-400 flex items-center justify-center hover:border-[#8B5CF6] hover:text-[#8B5CF6] transition-all duration-300 shadow-sm'
+            className='w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-gray-200 bg-white text-gray-400 flex items-center justify-center hover:border-[#8B5CF6] hover:text-[#8B5CF6] transition-all duration-300 shadow-sm'
           >
             <ChevronRight className='w-5 h-5' />
           </button>
@@ -250,13 +275,15 @@ const AIVideos = () => {
                 <X className='w-6 h-6' />
               </button>
 
-              <video
-                ref={videoRef}
-                src={slide.videoUrl}
-                className='w-full h-full object-contain'
-                controls
-                autoPlay
-              />
+              <div className='w-full h-full'>
+                <video
+                  ref={videoRef}
+                  src={slide.videoUrl}
+                  className='w-full h-full object-contain'
+                  controls
+                  autoPlay
+                />
+              </div>
             </motion.div>
           </motion.div>
         )}
