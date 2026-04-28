@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const categories = [
@@ -26,6 +26,19 @@ const slides = [
     tags: ['Lineage Tracking', 'Cost Visibility', 'Usage Optimization'],
     image:
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
+    details: {
+      audience: 'Finance Teams, Operations Managers, IT Leadership',
+      howItWorks: [
+        'Monitors real-time credit consumption across platforms',
+        'Identifies unused resources and suggests optimizations',
+        'Provides detailed lineage tracking for cost attribution',
+      ],
+      potentialImpact: [
+        'Lower cloud infrastructure costs',
+        'Enhanced budget predictability',
+        'Reduced waste in data operations',
+      ],
+    },
   },
   {
     id: 2,
@@ -39,6 +52,19 @@ const slides = [
     tags: ['Predictive Alerts', 'Automated Sourcing', 'Inventory Sync'],
     image:
       'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000',
+    details: {
+      audience: 'Logistics Teams, Procurement Officers, Supply Chain Managers',
+      howItWorks: [
+        'Predicts potential supply disruptions using historical data',
+        'Automates re-ordering processes based on inventory levels',
+        'Synchronizes data across global distribution centers',
+      ],
+      potentialImpact: [
+        'Minimized inventory stockouts',
+        'Faster response to market shifts',
+        'Reduced manual procurement effort',
+      ],
+    },
   },
   {
     id: 3,
@@ -46,25 +72,143 @@ const slides = [
     statNumber: '3x',
     statSymbol: '',
     statLabel: 'Higher conversion rate',
-    title: 'Personalized shopping assistant',
+    title: 'Customer Retention & Churn Risk Agent',
     description:
       'Deliver hyper-personalized recommendations to users in real-time, boosting sales and customer satisfaction.',
     tags: ['Recommendation Engine', 'User Profiling', 'Cart Optimization'],
     image:
       'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1000',
+    details: {
+      audience: 'CRM Teams, Loyalty Teams, Marketing & Retail Leadership',
+      howItWorks: [
+        'Monitors purchase frequency and engagement trends',
+        'Qualifies churn risk at customer or segment level',
+        'Guides retention actions for approval',
+      ],
+      potentialImpact: [
+        'Higher repeat purchase rates',
+        'Improved customer lifetime value',
+        'More effective loyalty programs',
+      ],
+    },
   },
 ];
+
+const AgentDetailModal = ({ isOpen, onClose, slide }) => {
+  if (!slide) return null;
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <div className='fixed inset-0 z-[9999] flex items-center justify-center p-4'>
+          {/* Backdrop */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+            className='absolute inset-0 bg-black/40 backdrop-blur-sm'
+          />
+
+          {/* Modal Content */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            className='relative bg-white rounded-[28px] w-full max-w-[900px] max-h-[95vh] overflow-y-auto shadow-2xl custom-scrollbar'
+          >
+            {/* Close Button */}
+            <button
+              onClick={onClose}
+              className='absolute top-6 right-6 z-20 w-10 h-10 bg-black/20 hover:bg-black/40 backdrop-blur-md rounded-full flex items-center justify-center transition-colors'
+            >
+              <X className='w-6 h-6 text-white' />
+            </button>
+
+            {/* Header Image */}
+            <div className='relative w-full h-[320px]'>
+              <Image src={slide.image} alt={slide.title} fill className='object-cover' />
+            </div>
+
+            <div className='p-8 sm:p-10'>
+              <h3 className='text-2xl lg:text-[28px] font-bold text-[#A855F7] mb-8'>
+                {slide.title}
+              </h3>
+
+              {/* Audience & Category Section */}
+              <div className='bg-[#F9FAFB] rounded-xl p-6 mb-8 flex flex-col md:flex-row gap-8'>
+                <div className='flex-1'>
+                  <h4 className='text-sm font-bold text-[#1A1A1A] mb-3'>Audience</h4>
+                  <p className='text-[#666666] text-[15px] leading-relaxed'>
+                    {slide.details.audience}
+                  </p>
+                </div>
+                <div className='w-full md:w-32'>
+                  <h4 className='text-sm font-bold text-[#1A1A1A] mb-3'>Category</h4>
+                  <span className='inline-block px-4 py-1.5 rounded-full bg-[#F3E8FF] text-[#A855F7] text-xs font-bold uppercase'>
+                    {slide.category}
+                  </span>
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className='border-t border-dashed border-gray-200 mb-8' />
+
+              {/* How it works */}
+              <div className='mb-8'>
+                <h4 className='text-sm font-bold text-[#1A1A1A] mb-4'>How it works</h4>
+                <ul className='space-y-3'>
+                  {slide.details.howItWorks.map((item, idx) => (
+                    <li key={idx} className='flex items-start gap-3 text-[#666666] text-[15px]'>
+                      <span className='mt-1.5 w-1.5 h-1.5 rounded-full bg-[#9CA3AF] flex-shrink-0' />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Divider */}
+              <div className='border-t border-dashed border-gray-200 mb-8' />
+
+              {/* Potential Impact */}
+              <div className='mb-8'>
+                <h4 className='text-sm font-bold text-[#1A1A1A] mb-4'>Potential Impact</h4>
+                <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
+                  {slide.details.potentialImpact.map((impact, idx) => (
+                    <div
+                      key={idx}
+                      className='bg-[#FDF4FF] p-5 rounded-lg border border-[#F3E8FF] flex items-center justify-center text-center h-full'
+                    >
+                      <p className='text-[#1A1A1A] text-sm font-medium leading-snug'>{impact}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Footer Link */}
+              <button className='inline-flex items-center gap-2 text-[#A855F7] font-semibold text-[15px] hover:gap-3 transition-all group'>
+                Request Custom Implementation
+                <ArrowRight className='w-4 h-4' />
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
+  );
+};
 
 const AIAgents = () => {
   const [activeCategory, setActiveCategory] = useState('ALL');
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedSlide, setSelectedSlide] = useState(null);
 
   const filteredSlides =
     activeCategory === 'ALL'
       ? slides
       : slides.filter(slide => slide.category.toUpperCase() === activeCategory);
 
-  // If no slides match, just show the first one of all as fallback, but ideally won't happen if categories match
   const activeSlides = filteredSlides.length > 0 ? filteredSlides : slides;
 
   const nextSlide = () => {
@@ -77,11 +221,16 @@ const AIAgents = () => {
 
   const slide = activeSlides[currentSlide];
 
+  const handleExplore = () => {
+    setSelectedSlide(slide);
+    setIsModalOpen(true);
+  };
+
   return (
     <section className='py-12 bg-[#fafafa]'>
       <div className='max-w-7xl mx-auto px-4 sm:px-12 lg:px-20 relative'>
         {/* ── Title ── */}
-        <h2 className='text-3xl md:text-[38px] font-semibold text-center text-[#1A1A1A] leading-[1.3] mx-auto mb-8'>
+        <h2 className='text-3xl md:text-[30px] font-semibold text-center text-[#1A1A1A] leading-[1.3] mx-auto mb-8'>
           A Powerful Ecosystem of AI Agents Driving Efficiency and{' '}
           <br className='hidden md:block' /> Growth Across Industries
         </h2>
@@ -118,9 +267,9 @@ const AIAgents = () => {
           </button>
 
           {/* Card */}
-          <div className='bg-white rounded-[32px] p-3 shadow-[0_8px_40px_rgba(0,0,0,0.04)] w-full flex flex-col lg:flex-row gap-8 lg:gap-10 relative overflow-hidden'>
+          <div className='bg-white rounded-[32px] p-3 shadow-[0_8px_40px_rgba(0,0,0,0.04)] w-full flex flex-col lg:flex-row lg:items-stretch gap-8 lg:gap-10 relative overflow-hidden'>
             {/* Image Side */}
-            <div className='relative w-full lg:w-[45%] h-[240px] sm:h-[300px] lg:h-[340px] rounded-[24px] overflow-hidden'>
+            <div className='relative w-full lg:w-[45%] h-[240px] sm:h-[300px] lg:h-auto lg:min-h-[340px] rounded-[24px] overflow-hidden'>
               <AnimatePresence mode='wait'>
                 <motion.div
                   key={slide.id + '-image'}
@@ -190,7 +339,10 @@ const AIAgents = () => {
                   </div>
 
                   <div>
-                    <button className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 hover:shadow-[0_8px_20px_rgba(139,92,246,0.3)] group'>
+                    <button
+                      onClick={handleExplore}
+                      className='inline-flex items-center gap-2 bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 hover:shadow-[0_8px_20px_rgba(139,92,246,0.3)] group'
+                    >
                       Explore{' '}
                       <ArrowRight className='w-4 h-4 ml-1 transition-transform group-hover:translate-x-1' />
                     </button>
@@ -226,6 +378,12 @@ const AIAgents = () => {
           ))}
         </div>
       </div>
+
+      <AgentDetailModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        slide={selectedSlide}
+      />
     </section>
   );
 };

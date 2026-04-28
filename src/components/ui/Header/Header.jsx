@@ -93,7 +93,7 @@ export default function Header({
           className='relative backdrop-blur-sm h-16 border-b border-neutral-200/40 bg-white rounded-full mt-6 max-w-[95%] lg:max-w-[85%] xl:max-w-[1100px] mx-auto'
           style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)' }}
         >
-          <div className='mx-auto flex h-full items-center justify-center gap-4 xl:gap-8 px-6 lg:px-10 xl:px-12'>
+          <div className='mx-auto flex h-full items-center justify-between gap-4 xl:gap-8 px-6 lg:px-10 xl:px-12'>
             <Link
               href='/'
               className='flex items-center z-50 flex-shrink-0'

@@ -17,13 +17,13 @@ const AINative = () => {
       <section className='py-16 md:py-24 bg-[#fafafa]'>
         <div className='max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-20'>
           <div className='bg-white rounded-[40px] md:rounded-[60px] p-8 md:p-12 lg:p-20 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch'>
               {/* Left Column: Image */}
               <div className='w-full'>
                 <Image
                   src={AINativeImg}
                   alt='AI Native Handshake'
-                  className='w-full h-auto rounded-[32px] object-cover shadow-[0_8px_30px_rgba(0,0,0,0.06)]'
+                  className='w-full h-full rounded-[32px] object-cover shadow-[0_8px_30px_rgba(0,0,0,0.06)]'
                 />
               </div>
 
