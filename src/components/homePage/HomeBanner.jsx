@@ -134,7 +134,7 @@ const HomeBanner = () => {
         <div className='w-full max-w-7xl mx-auto pt-32 sm:pt-40 lg:pt-24 pb-8 sm:pb-10 lg:pb-12 px-4'>
           <div className='text-center'>
             {/* Badge */}
-            <div className='flex items-center justify-center mb-6 sm:mb-8'>
+            <div className='flex items-center justify-center mb-6 sm:mb-16'>
               <div
                 className='inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm border border-gray-100 px-3 sm:px-4 py-1.5 rounded-[10px] shadow-lg'
                 style={{

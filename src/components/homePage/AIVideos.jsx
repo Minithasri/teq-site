@@ -24,7 +24,7 @@ const slides = [
     subtitle: 'Exploring the interconnected landscape of autonomous AI agents.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Agents%20ecosystenm.mp4',
-    thumbnail: '/images/homePage/ai_video_thumbnail_2.png',
+    thumbnail: '/images/homePage/agenteco.png',
     duration: '1:45',
   },
   {
@@ -43,7 +43,7 @@ const slides = [
     subtitle: 'Optimizing stock levels through intelligent predictive replenishment.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Inventory%20Replenishment.mp4',
-    thumbnail: '/images/homePage/ai_video_thumbnail.png',
+    thumbnail: '/images/homePage/invent.png',
     duration: '0:48',
   },
   {
@@ -52,7 +52,7 @@ const slides = [
     subtitle: 'Maximizing network efficiency and resource allocation dynamically.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Network%20Optimization%20Agent.mp4',
-    thumbnail: '/images/homePage/ai_video_thumbnail_2.png',
+    thumbnail: '/images/homePage/network.png',
     duration: '2:04',
   },
   {
@@ -61,7 +61,7 @@ const slides = [
     subtitle: 'Streamlining procurement processes from sourcing to settlement.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Procurement_Agent.mp4',
-    thumbnail: '/images/homePage/ai_video_thumbnail_3.png',
+    thumbnail: '/images/homePage/pro.png',
     duration: '1:30',
   },
   {
@@ -79,7 +79,7 @@ const slides = [
     subtitle: 'Driving growth through data-driven marketing decisions and automation.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/marketing%20Intelligence%20agent.mp4',
-    thumbnail: '/images/homePage/ai_video_thumbnail_2.png',
+    thumbnail: '/images/homePage/mark.png',
     duration: '2:30',
   },
 ];
@@ -223,10 +223,13 @@ const AIVideos = () => {
 
                 <button
                   onClick={openModal}
-                  className='inline-flex items-center gap-4 bg-white hover:bg-violet-50 text-[#1a1a2e] font-bold text-base lg:text-[18px] px-8 py-3.5 rounded-full transition-all duration-300 group/btn shadow-xl'
+                  className='inline-flex items-center gap-4 bg-white hover:bg-violet-50 text-[#1a1a2e] font-bold text-base lg:text-[18px] px-8 py-1.5 rounded-full transition-all duration-300 group/btn shadow-xl'
                 >
                   Watch now
-                  <span className='w-7 h-7 lg:w-9 lg:h-9 flex items-center justify-center rounded-full bg-[#7030B1] text-white transition-transform group-hover/btn:translate-x-1'>
+                  <span
+                    className='w-7 h-7 lg:w-9 lg:h-9 flex items-center justify-center rounded-full text-white transition-transform group-hover/btn:translate-x-1'
+                    style={{ background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)' }}
+                  >
                     <ArrowRight className='w-3.5 h-3.5 lg:w-4.5 lg:h-4.5 -rotate-45' />
                   </span>
                 </button>
