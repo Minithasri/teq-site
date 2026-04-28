@@ -5,24 +5,17 @@ import { FiArrowRight } from 'react-icons/fi';
 import bg from '../../../public/images/background.png';
 
 function GradientHeading() {
-  const lines = ['Build your First', 'AI Agent in 10 Hours'];
+  const lines = ['We Build Intelligent Agents', 'that work for you'];
 
   const wordGradients = {
-    Build: ['#fff', '#fff'],
-    your: ['#fff', '#fff'],
-    First: ['#fff', '#fff'],
-    AI: ['#fff', '#fff'],
-    Agent: ['#fff', '#fff'],
-    in: ['#fff', '#fff'],
-    10: ['#fff', '#fff'],
-    Hours: ['#fff', '#fff'],
-    Build: ['#fff', '#fff'],
-    First: ['#fff', '#fff'],
-    AI: ['#fff', '#fff'],
-    Agent: ['#fff', '#fff'],
-    in: ['#fff', '#fff'],
-    10: ['#fff', '#fff'],
-    Hours: ['#fff', '#fff'],
+    We: ['#1f1f1f', '#1f1f1f'],
+    Build: ['#bc83d7', '#7333b2', '#bc83d7'],
+    Intelligent: ['#975bc4', '#7c3db7', '#8b4ebf'],
+    Agents: ['#7333b2', '#bc83d7'],
+    that: ['#1f1f1f', '#1f1f1f'],
+    work: ['#1f1f1f', '#1f1f1f'],
+    for: ['#1f1f1f', '#1f1f1f'],
+    you: ['#1f1f1f', '#1f1f1f'],
   };
 
   return (
@@ -40,32 +33,6 @@ function GradientHeading() {
             }}
           >
             {line.split(' ').map((word, i, arr) => {
-              // Group "10 Hours" with gradient background on second line
-              if (li === 1 && i === 3) {
-                const groupedWords = arr.slice(i).join(' ');
-                return (
-                  <span
-                    key={i}
-                    style={{
-                      display: 'inline-block',
-                      background: 'linear-gradient(135deg, #F97316 , #43145E)',
-                      borderRadius: '40px',
-                      padding: '8px 20px',
-                      marginLeft: '4px',
-                      color: 'white',
-                      fontWeight: 700,
-                    }}
-                  >
-                    {groupedWords}
-                  </span>
-                );
-              }
-
-              // Skip "Hours" as it's already rendered in the group
-              if (li === 1 && i === 4) {
-                return null;
-              }
-
               const [from, to] = wordGradients[word] ?? ['#6E2B8B', '#6E2B8B'];
               return (
                 <span key={i}>
@@ -127,11 +94,30 @@ const HomeBanner = () => {
       }}
     >
       {/* Background image */}
-      <img
+      {/* <img
         src={bg.src}
         alt='Background'
         className='absolute z-1 top-0 left-0 w-full h-full object-cover'
         style={{ zIndex: 1 }}
+      /> */}
+      {/* Grid Background - Bottom Half Only */}
+      {/* Grid Background - Positioned between text and cards */}
+      <div
+        className='absolute left-0 right-0'
+        style={{
+          top: '32%',
+          height: '60%',
+          backgroundImage: `
+            linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 2px),
+            linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 2px)
+          `,
+          backgroundSize: '100px 100px',
+          zIndex: 1,
+          maskImage:
+            'linear-gradient(to bottom, transparent, rgba(0,0,0,0.4) 15%, black 40%, black 85%, transparent)',
+          WebkitMaskImage:
+            'linear-gradient(to bottom, transparent, rgba(0,0,0,0.4) 15%, black 40%, black 85%, transparent)',
+        }}
       />
 
       {/* Content - Full width on 1024px */}
@@ -145,7 +131,7 @@ const HomeBanner = () => {
           justifyContent: 'center',
         }}
       >
-        <div className='w-full max-w-7xl mx-auto py-8 sm:py-10 lg:py-12 px-4'>
+        <div className='w-full max-w-7xl mx-auto pt-32 sm:pt-40 lg:pt-24 pb-8 sm:pb-10 lg:pb-12 px-4'>
           <div className='text-center'>
             {/* Badge */}
             <div className='flex items-center justify-center mb-6 sm:mb-8'>
@@ -154,17 +140,7 @@ const HomeBanner = () => {
                 style={{
                   boxShadow: '0 20px 40px rgba(255,255,255,0.15)',
                 }}
-              >
-                <div
-                  className='w-4 h-4 sm:w-4 sm:h-4 rounded-full flex items-center justify-center shrink-0'
-                  style={{ background: 'linear-gradient(135deg, #F97316 0%, #43145E 100%)' }}
-                >
-                  <img src='/images/HomePage/Frame.svg' alt='' className='w-3 h-3 sm:w-3 sm:h-3' />
-                </div>
-                <span className='text-[11px] sm:text-[16px] font-medium text-[#444444]'>
-                  Agentic AI that turns Automation into Intelligence
-                </span>
-              </div>
+              ></div>
             </div>
 
             {/* Heading */}
@@ -172,15 +148,15 @@ const HomeBanner = () => {
 
             {/* Description */}
             <p
-              className='text-[20px] mb-12 sm:text-base lg:text-[16px]  text-[#FAFAFA] max-w-4xl mx-auto mt-4 sm:mt-6 px-2'
+              className='text-[20px] mb-6 sm:text-base lg:text-[16px] max-w-4xl mx-auto mt-4 sm:mt-6 px-2'
               style={{ lineHeight: '1.5' }}
             >
-              Agentic AI solutions that transform your business processes with measurable ROI and
-              rapid deployment.
+              We design AI agents that automate support and workflows so <br /> your team can focus
+              on what matters
             </p>
 
             {/* CTA Button */}
-            <div className='mb-6 flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 sm:mt-10 lg:mt-12'>
+            <div className='mb-6 flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 sm:mt-4'>
               <button
                 onClick={() => {
                   const element = document.getElementById('agent-building');
@@ -196,19 +172,11 @@ const HomeBanner = () => {
                   borderRadius: '30px',
                 }}
               >
-                Explore Solution
+                Build your agent
                 <FiArrowRight className='text-lg sm:text-xl' />
               </button>
               <button
-                // onClick={() => {
-                //   const element = document.getElementById('agent-building');
-                //   if (element) {
-                //     const yOffset = -80;
-                //     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                //     window.scrollTo({ top: y, behavior: 'smooth' });
-                //   }
-                // }}
-                className='flex items-center justify-center gap-2 px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base text-[#6F2B8B] transition-all duration-300 hover:scale-105 hover:shadow-lg'
+                className='flex items-center justify-center border border-[#7030B1] gap-2 px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base text-[#6F2B8B] transition-all duration-300 hover:scale-105 hover:shadow-lg'
                 style={{
                   background: 'white',
                   borderRadius: '30px',
@@ -217,6 +185,115 @@ const HomeBanner = () => {
                 <Link href='/contact'>Schedule a Call</Link>
                 <FiArrowRight className='text-lg sm:text-xl' />
               </button>
+            </div>
+
+            {/* Cards Grid Section */}
+            <div className='mt-16 lg:mt-24 w-full max-w-[1200px] mx-auto'>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
+                {/* Column 1: Small Info + Enterprise Stats */}
+                <div className='flex flex-col gap-2 h-[460px]'>
+                  {/* Card 1: Agentic AI */}
+                  <div className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-center flex-1'>
+                    <div className='w-20 h-20 rounded-[20px] bg-white border border-gray-100 shadow-sm flex items-center justify-center p-4 mb-6'>
+                      <img
+                        src='/images/group.png'
+                        alt='AI Icon'
+                        className='w-full h-full object-contain'
+                      />
+                    </div>
+                    <p className='text-lg sm:text-xl  text-gray-900 text-left leading-snug'>
+                      Agentic AI that turns Automation into Intelligence
+                    </p>
+                  </div>
+                  {/* Card 2: Enterprise Deployments */}
+                  <div className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-center h-[38%]'>
+                    <h3 className='text-[40px] leading-none font-black text-gray-900 text-left'>
+                      {enterprise}+
+                    </h3>
+                    <p className='text-[15px] font-bold text-gray-900 text-left mt-3'>
+                      Enterprise Deployments
+                    </p>
+                    <p className='text-[13px] text-gray-400 text-left mt-1'>
+                      Proven real world execution
+                    </p>
+                  </div>
+                </div>
+
+                {/* Column 2: Tall AI Robot Card */}
+                <div className='lg:col-span-1 h-[460px ]'>
+                  <div
+                    className='w-full h-full rounded-[32px] overflow-hidden ml-4'
+                    style={{ WebkitMaskImage: '-webkit-radial-gradient(white, black)' }}
+                  >
+                    <img
+                      src='/images/Frame 1566662872.png'
+                      alt='AI Agent'
+                      className='w-full h-full object-cover'
+                    />
+                  </div>
+                </div>
+
+                {/* Column 3: Stats + DOMO Award */}
+                <div className='lg:col-span-2 flex flex-col gap-2 h-[460px]'>
+                  <div className='grid grid-cols-1 sm:grid-cols-2 gap-2 h-[48%]'>
+                    {/* Card 3: AI Agents Delivered */}
+                    <div className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-center'>
+                      <h3 className='text-[44px] leading-none font-black text-gray-900 text-left'>
+                        {aiAgents}+
+                      </h3>
+                      <p className='text-[15px] font-bold text-gray-900 text-left mt-4'>
+                        AI Agents Delivered
+                      </p>
+                      <p className='text-[13px] text-gray-400 text-left mt-1'>
+                        Faster automation at scale
+                      </p>
+                    </div>
+                    {/* Card 4: Uptime SLA */}
+                    <div className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-center'>
+                      <h3 className='text-[44px] leading-none font-black text-gray-900 text-left'>
+                        99.7%
+                      </h3>
+                      <p className='text-[15px] font-bold text-gray-900 text-left mt-4'>
+                        Uptime SLA
+                      </p>
+                      <p className='text-[13px] text-gray-400 text-left mt-1'>
+                        Faster automation at scale
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Card 5: DOMO Award */}
+                  <div className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex-1 flex flex-col justify-center relative overflow-hidden'>
+                    <div className='z-10 text-left max-w-[65%]'>
+                      <h3 className='text-3xl font-black mb-3 inline-block bg-clip-text text-transparent bg-gradient-to-r from-[#3688d6] to-[#693bb6] tracking-wide'>
+                        DOMO
+                      </h3>
+                      <p className='text-lg sm:text-[20px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#693bb6] to-[#3688d6] leading-snug inline-block'>
+                        International Partner of the Year <br />
+                        2025 – GWC Data.AI
+                      </p>
+                    </div>
+
+                    {/* Trophy Section */}
+                    <div className='absolute right-4 bottom-0 h-full w-[35%] flex items-end justify-center'>
+                      <div className='relative w-full h-[90%] flex flex-col items-center justify-end'>
+                        {/* Pedestal */}
+                        <img
+                          src='/images/white-pedestal-vector-podium-vector-illustration 1.png'
+                          alt='Podium'
+                          className='w-[130px] h-auto z-0 translate-y-3'
+                        />
+                        {/* Trophy */}
+                        <img
+                          src='/images/image 8.png'
+                          alt='Trophy'
+                          className='absolute bottom-3 h-[85%] object-contain z-10'
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
