@@ -193,7 +193,14 @@ const HomeBanner = () => {
                 {/* Column 1: Small Info + Enterprise Stats */}
                 <div className='flex flex-col gap-2 h-[460px]'>
                   {/* Card 1: Agentic AI */}
-                  <div className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-center flex-1'>
+                  <div
+                    className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-center flex-1'
+                    style={{
+                      backgroundImage: 'url("/images/bg2.png")',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  >
                     <div className='w-20 h-20 rounded-[20px] bg-white border border-gray-100 shadow-sm flex items-center justify-center p-4 mb-6'>
                       <img
                         src='/images/group.png'
@@ -206,7 +213,14 @@ const HomeBanner = () => {
                     </p>
                   </div>
                   {/* Card 2: Enterprise Deployments */}
-                  <div className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-center h-[38%]'>
+                  <div
+                    className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-center h-[38%]'
+                    style={{
+                      backgroundImage: 'url("/images/bg2.png")',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  >
                     <h3 className='text-[40px] leading-none font-black text-gray-900 text-left'>
                       {enterprise}+
                     </h3>
@@ -222,11 +236,11 @@ const HomeBanner = () => {
                 {/* Column 2: Tall AI Robot Card */}
                 <div className='lg:col-span-1 h-[460px ]'>
                   <div
-                    className='w-full h-full rounded-[32px] overflow-hidden ml-4'
+                    className='w-full h-full rounded-[32px] overflow-hidden'
                     style={{ WebkitMaskImage: '-webkit-radial-gradient(white, black)' }}
                   >
                     <img
-                      src='/images/Frame 1566662872.png'
+                      src='/images/bot1.png'
                       alt='AI Agent'
                       className='w-full h-full object-cover'
                     />
@@ -237,7 +251,14 @@ const HomeBanner = () => {
                 <div className='lg:col-span-2 flex flex-col gap-2 h-[460px]'>
                   <div className='grid grid-cols-1 sm:grid-cols-2 gap-2 h-[48%]'>
                     {/* Card 3: AI Agents Delivered */}
-                    <div className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-center'>
+                    <div
+                      className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-center'
+                      style={{
+                        backgroundImage: 'url("/images/bg2.png")',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }}
+                    >
                       <h3 className='text-[44px] leading-none font-black text-gray-900 text-left'>
                         {aiAgents}+
                       </h3>
@@ -249,7 +270,14 @@ const HomeBanner = () => {
                       </p>
                     </div>
                     {/* Card 4: Uptime SLA */}
-                    <div className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-center'>
+                    <div
+                      className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-center'
+                      style={{
+                        backgroundImage: 'url("/images/bg2.png")',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }}
+                    >
                       <h3 className='text-[44px] leading-none font-black text-gray-900 text-left'>
                         99.7%
                       </h3>
@@ -263,7 +291,14 @@ const HomeBanner = () => {
                   </div>
 
                   {/* Card 5: DOMO Award */}
-                  <div className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex-1 flex flex-col justify-center relative overflow-hidden'>
+                  <div
+                    className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex-1 flex flex-col justify-center relative overflow-hidden'
+                    style={{
+                      backgroundImage: 'url("/images/bg2.png")',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  >
                     <div className='z-10 text-left max-w-[65%]'>
                       <h3 className='text-3xl font-black mb-3 inline-block bg-clip-text text-transparent bg-gradient-to-r from-[#3688d6] to-[#693bb6] tracking-wide'>
                         DOMO

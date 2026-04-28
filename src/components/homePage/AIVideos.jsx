@@ -1,8 +1,8 @@
 'use client';
-import { useState, useEffect, useRef } from 'react';
-import { X, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowRight, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 // import { Link } from 'lucide-react';
 
 const AIVideologo = '/images/AIVideologo.png';
@@ -20,7 +20,7 @@ const slides = [
   },
   {
     tag: 'Ecosystem',
-    title: 'Agents ecosystenm',
+    title: 'Agents ecosystem',
     subtitle: 'Exploring the interconnected landscape of autonomous AI agents.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Agents%20ecosystenm.mp4',
@@ -57,7 +57,7 @@ const slides = [
   },
   {
     tag: 'Operations',
-    title: 'Procurement_Agent',
+    title: 'Procurement Agent',
     subtitle: 'Streamlining procurement processes from sourcing to settlement.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Procurement_Agent.mp4',
@@ -123,15 +123,22 @@ const AIVideos = () => {
         </div>
 
         {/* ── Overlapping Slider Container ── */}
-        <div className='relative max-w-6xl mx-auto' style={{ minHeight: '380px' }}>
+        <div className='relative max-w-7xl mx-auto' style={{ minHeight: '439px' }}>
           {/* ─── Video Card (Background — right-aligned, full height) ─── */}
           <motion.div
             key={current + '-video'}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className='absolute right-0 top-0 w-full lg:w-[65%] h-full rounded-[30px] overflow-hidden shadow-2xl cursor-pointer group'
+            className='absolute right-0 top-0 overflow-hidden shadow-2xl cursor-pointer group'
             onClick={openModal}
+            style={{
+              border: '6px solid #C8ABDA',
+              width: '768px',
+              height: '439px',
+              borderRadius: '24px',
+              gap: '10px',
+            }}
           >
             <Image
               src={slide.thumbnail}
@@ -160,21 +167,30 @@ const AIVideos = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className='relative lg:absolute left-0 bottom-0 lg:bottom-[-20px] z-20 w-full lg:w-[48%] bg-[#2E2452] rounded-[30px] p-6 lg:p-10 shadow-2xl flex flex-row items-center gap-6'
+            className='relative lg:absolute left-0 bottom-0 lg:bottom-[-20px] z-20 shadow-2xl flex flex-row items-center'
+            style={{
+              background: 'linear-gradient(270deg, #5A2A8A 0%, #242424 100%)',
+              width: '698px',
+              height: '303px',
+              borderRadius: '40px',
+              padding: '40px',
+              gap: '33px',
+            }}
           >
             {/* Robot Illustration — sticking out left & top */}
-            <div className='w-[40%] flex-shrink-0 -mt-20 -ml-10 hidden lg:block'>
+            <div className='w-[40%] flex-shrink-0 -mt-44 -ml-[140px] hidden lg:block'>
               <Image
                 src={AIVideologo}
                 alt='AI Robot'
-                width={260}
-                height={260}
-                className='w-full h-auto object-contain drop-shadow-2xl'
+                width={344}
+                height={352}
+                className='object-contain drop-shadow-2xl max-w-none'
+                style={{ opacity: 1, width: '344px', height: '352px' }}
               />
             </div>
 
             {/* Content */}
-            <div className='flex-1 text-center lg:text-center'>
+            <div className='flex-1 text-right lg:text-right flex flex-col items-end'>
               <h3 className='text-xl lg:text-2xl font-extrabold text-white mb-3 leading-tight capitalize'>
                 {slide.title}
               </h3>
@@ -182,7 +198,7 @@ const AIVideos = () => {
 
               <button
                 onClick={openModal}
-                className='inline-flex items-center gap-3 bg-white hover:bg-violet-50 text-[#2E2452] font-bold text-sm px-6 py-3 rounded-full transition-all duration-300 shadow-xl group/btn'
+                className='inline-flex items-center gap-3 bg-white hover:bg-violet-50 text-[#2E2452] font-bold text-[18px] px-6 py-3 rounded-full transition-all duration-300 shadow-xl group/btn'
               >
                 Watch now
                 <span className='w-7 h-7 flex items-center justify-center rounded-full bg-gradient-to-b from-[#7030B1] to-[#B56DD3] transition-transform group-hover/btn:translate-x-1'>

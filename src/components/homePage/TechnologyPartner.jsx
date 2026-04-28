@@ -34,7 +34,7 @@ const TechnologyPartner = () => {
 
   return (
     <section
-      className='flex flex-col items-center justify-center px-4 bg-[#f8f4f9]'
+      className='flex flex-col items-center justify-center px-4 bg-[#FAFAFA]'
       style={{
         paddingTop: '80px',
         paddingBottom: '80px',
