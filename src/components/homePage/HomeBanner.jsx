@@ -157,15 +157,8 @@ const HomeBanner = () => {
 
             {/* CTA Button */}
             <div className='mb-6 flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 sm:mt-4'>
-              <button
-                onClick={() => {
-                  const element = document.getElementById('agent-building');
-                  if (element) {
-                    const yOffset = -80;
-                    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                    window.scrollTo({ top: y, behavior: 'smooth' });
-                  }
-                }}
+              <Link
+                href='/contact'
                 className='flex items-center justify-center gap-2 px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base text-white transition-all duration-300 hover:scale-105 hover:shadow-lg'
                 style={{
                   background: 'linear-gradient(to right, #7030B1, #B56DD3)',
@@ -174,17 +167,18 @@ const HomeBanner = () => {
               >
                 Build your agent
                 <FiArrowRight className='text-lg sm:text-xl' />
-              </button>
-              <button
+              </Link>
+              <Link
+                href='/contact'
                 className='flex items-center justify-center border border-[#7030B1] gap-2 px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base text-[#6F2B8B] transition-all duration-300 hover:scale-105 hover:shadow-lg'
                 style={{
                   background: 'white',
                   borderRadius: '30px',
                 }}
               >
-                <Link href='/contact'>Schedule a Call</Link>
+                Schedule a Call
                 <FiArrowRight className='text-lg sm:text-xl' />
-              </button>
+              </Link>
             </div>
 
             {/* Cards Grid Section */}

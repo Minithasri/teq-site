@@ -23,7 +23,7 @@ const AINative = () => {
                 <Image
                   src={AINativeImg}
                   alt='AI Native Handshake'
-                  className='w-full h-full rounded-[32px] object-cover shadow-[0_8px_30px_rgba(0,0,0,0.06)]'
+                  className='w-full h-[250px] sm:h-[300px] lg:h-full rounded-[32px] object-cover shadow-[0_8px_30px_rgba(0,0,0,0.06)]'
                 />
               </div>
 
@@ -38,14 +38,14 @@ const AINative = () => {
                   <br className='hidden md:block' /> Day One
                 </h2>
 
-                <p className='text-[#737373] text-[10px] md:text-[12px] font-medium leading-[1.7] mb-5'>
+                <p className='text-[#737373] text-[14px] lg:text-[12px] font-medium leading-[1.7] mb-5'>
                   Founded by a team of AI researchers and enterprise engineers, Agent Forge exists
                   to bridge the gap between cutting edge AI research and real world business impact.
                   We don't just build chatbots we architect autonomous systems that reason, learn,
                   and act.
                 </p>
 
-                <p className='text-[#737373] text-[10px] md:text-[12px] font-medium leading-[1.7] mb-2'>
+                <p className='text-[#737373] text-[14px] lg:text-[12px] font-medium leading-[1.7] mb-2'>
                   Our team includes former engineers from leading AI labs and Fortune 500 companies
                   who bring deep expertise in large language models, reinforcement learning, and
                   scalable system design. Every agent we build is production grade, secure, and
@@ -59,10 +59,10 @@ const AINative = () => {
                       <div className='w-[36px] h-[36px] md:w-10 md:h-10 rounded-full bg-[#f3ecf9] flex items-center justify-center text-[#914ec2] mb-2'>
                         <stat.icon className='text-[16px] md:text-[16px]' />
                       </div>
-                      <h4 className='text-[#222222] font-bold text-[16px] md:text-[18px] mb-1'>
+                      <h4 className='text-[#222222] font-bold text-[18px] lg:text-[18px] mb-1'>
                         {stat.value}
                       </h4>
-                      <p className='text-[#888888] text-[11px] md:text-[11px] font-normal'>
+                      <p className='text-[#888888] text-[13px] lg:text-[11px] font-normal'>
                         {stat.label}
                       </p>
                     </div>

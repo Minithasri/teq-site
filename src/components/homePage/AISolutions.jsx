@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 const AISolutions = () => {
@@ -20,7 +21,7 @@ const AISolutions = () => {
 
       <div className='relative max-w-[1150px] mx-auto'>
         {/* ── Timeline Row ── */}
-        <div className='relative flex items-start justify-center gap-0 mb-16'>
+        <div className='relative flex flex-col lg:flex-row items-center lg:items-start justify-center gap-0 mb-16'>
           {/* Left Icon — Custom built */}
           <div className='flex flex-col items-center w-[200px] flex-shrink-0 z-10'>
             <div className='w-16 h-16 flex items-center justify-center mb-4'>
@@ -39,13 +40,15 @@ const AISolutions = () => {
             </p>
           </div>
 
-          {/* Orange Line — Left to Center */}
-          <div className='flex-1 flex items-center self-start mt-[30px]'>
+          {/* Orange Line — Desktop */}
+          <div className='hidden lg:flex flex-1 items-center self-start mt-[30px] px-2'>
             <div className='w-full h-[5px] bg-[#F97316] rounded-full' />
           </div>
+          {/* Orange Line — Mobile */}
+          <div className='flex lg:hidden w-[4px] h-10 bg-[#F97316] rounded-full my-3' />
 
           {/* Center Icon — Production ready (elevated, with glow) */}
-          <div className='flex flex-col items-center w-[200px] flex-shrink-0 z-10 -mt-4'>
+          <div className='flex flex-col items-center w-[200px] flex-shrink-0 z-10 lg:-mt-4'>
             <div className='relative w-24 h-24 flex items-center justify-center mb-3'>
               {/* Purple radial glow */}
               <div className='absolute inset-0 scale-125 rounded-full bg-[#8B5CF6]/15 blur-xl' />
@@ -71,10 +74,12 @@ const AISolutions = () => {
             </p>
           </div>
 
-          {/* Orange Line — Center to Right */}
-          <div className='flex-1 flex items-center self-start mt-[30px]'>
+          {/* Orange Line — Desktop */}
+          <div className='hidden lg:flex flex-1 items-center self-start mt-[30px] px-2'>
             <div className='w-full h-[5px] bg-[#F97316] rounded-full' />
           </div>
+          {/* Orange Line — Mobile */}
+          <div className='flex lg:hidden w-[4px] h-10 bg-[#F97316] rounded-full my-3' />
 
           {/* Right Icon — Enterprise grade */}
           <div className='flex flex-col items-center w-[200px] flex-shrink-0 z-10'>
@@ -112,10 +117,13 @@ const AISolutions = () => {
 
         {/* ── CTA Button ── */}
         <div className='flex justify-center'>
-          <button className='flex items-center gap-2 bg-gradient-to-b from-[#7030B1] to-[#B56DD3] hover:bg-[#7C3AED] text-white font-medium px-8 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-violet-300/40 hover:shadow-violet-400/50 hover:-translate-y-0.5'>
+          <Link
+            href='/contact'
+            className='flex items-center gap-2 bg-gradient-to-b from-[#7030B1] to-[#B56DD3] hover:bg-[#7C3AED] text-white font-medium px-8 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-violet-300/40 hover:shadow-violet-400/50 hover:-translate-y-0.5'
+          >
             Explore solutions
             <ArrowRight className='w-4 h-4' />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

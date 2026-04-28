@@ -73,7 +73,7 @@ const FullStackAgent = () => {
               />
 
               {/* Card Content */}
-              <h3 className='text-[#333333] font-semibold text-[10px] md:text-[16px] mb-3'>
+              <h3 className='text-[#333333] font-semibold text-[14px] md:text-[16px] mb-3'>
                 {item.title}
               </h3>
               <p className='text-[#737373] text-[12px] leading-[1.6]'>{item.description}</p>

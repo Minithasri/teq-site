@@ -292,7 +292,7 @@ const AIAgents = () => {
             </div>
 
             {/* Content Side */}
-            <div className='w-full lg:w-[55%] flex flex-col justify-center py-2 pr-4 sm:pr-6 lg:pr-8'>
+            <div className='w-full lg:w-[55%] flex flex-col justify-center py-2 px-3 sm:px-6 lg:pl-0 lg:pr-8'>
               <AnimatePresence mode='wait'>
                 <motion.div
                   key={slide.id + '-content'}

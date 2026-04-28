@@ -50,10 +50,12 @@ const AIMatters = () => {
       // ScrollTrigger for activeIndex
       const st = ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: 'top -6%',
-        end: `+=${features.length * 40}%`,
+        start: 'top -16%',
+        end: `+=${features.length * 100}%`, // increase scroll space
         pin: true,
         scrub: 0.5,
+        anticipatePin: 1, // 🔥 IMPORTANT (prevents jump)
+        invalidateOnRefresh: true, // 🔥 recalculates properly
         onUpdate: self => {
           const progress = self.progress;
           const newIdx = Math.min(Math.floor(progress * features.length), features.length - 1);
@@ -65,6 +67,14 @@ const AIMatters = () => {
 
     return () => mm.revert();
   }, [features.length]);
+
+  // Refresh ScrollTrigger after dynamic components load to prevent scroll jumps
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   // FLIP Effect (Desktop Only)
   useEffect(() => {
@@ -94,7 +104,7 @@ const AIMatters = () => {
   return (
     <div
       ref={sectionRef}
-      className='flex items-center justify-center relative z-50 w-full mt-10 lg:mt-16 px-0 lg:px-10 mb-28'
+      className='bg-[#FAFAFA] flex items-center justify-center relative z-50 w-full pt-10 lg:pt-16 px-0 lg:px-10 pb-28'
     >
       <div className='bg-gradient-to-br from-[#7030B1] to-[#A545CC] relative overflow-hidden w-full min-h-[500px] lg:min-h-[450px] rounded-none lg:rounded-[25px]'>
         <div className="absolute inset-0 bg-[url('/images/AIMatters.webp')] bg-cover bg-center opacity-40" />

@@ -109,35 +109,40 @@ const AIVideos = () => {
     <section className='relative bg-[#F8F9FE] py-12 px-6 lg:px-20 overflow-hidden'>
       <div className='max-w-7xl mx-auto'>
         {/* ── Header ── */}
-        <div className='flex items-center justify-between mb-10'>
-          <h2 className='text-4xl lg:text-5xl font-bold text-[#1a1a2e]'>
+        <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-10'>
+          <h2 className='text-3xl lg:text-5xl font-bold text-[#1a1a2e]'>
             <span className='bg-gradient-to-b from-[#7030B1] to-[#B56DD3] bg-clip-text text-transparent font-semibold'>
               Watch
             </span>{' '}
             AI in Action
           </h2>
-          <button className='flex items-center gap-2 px-6 py-2.5 rounded-full text-white font-medium bg-gradient-to-b from-[#7030B1] to-[#B56DD3] shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300'>
+          <button
+            onClick={() => {
+              const element = document.getElementById('agentic-blocks');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }}
+            className='flex items-center gap-2 px-5 py-2 lg:px-6 lg:py-2.5 rounded-full text-white text-sm lg:text-base font-medium bg-gradient-to-b from-[#7030B1] to-[#B56DD3] shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300'
+          >
             Explore All Agents
             <ArrowRight className='w-4 h-4' />
           </button>
         </div>
 
         {/* ── Overlapping Slider Container ── */}
-        <div className='relative max-w-7xl mx-auto' style={{ minHeight: '439px' }}>
+        <div className='relative max-w-7xl mx-auto min-h-auto lg:min-h-[439px] flex flex-col lg:block'>
           {/* ─── Video Card (Background — right-aligned, full height) ─── */}
           <motion.div
             key={current + '-video'}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className='absolute right-0 top-0 overflow-hidden shadow-2xl cursor-pointer group'
+            className='relative lg:absolute lg:right-0 lg:top-0 w-full lg:w-[768px] h-[220px] sm:h-[350px] lg:h-[439px] overflow-hidden shadow-2xl cursor-pointer group mb-6 lg:mb-0'
             onClick={openModal}
             style={{
               border: '6px solid #C8ABDA',
-              width: '768px',
-              height: '439px',
               borderRadius: '24px',
-              gap: '10px',
             }}
           >
             <Image
@@ -167,14 +172,10 @@ const AIVideos = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className='relative lg:absolute left-0 bottom-0 lg:bottom-[-20px] z-20 shadow-2xl flex flex-row items-center'
+            className='relative lg:absolute left-0 bottom-0 lg:bottom-[-20px] z-20 shadow-2xl flex flex-row items-center w-full lg:w-[698px] h-auto lg:h-[303px] p-8 lg:p-[40px] gap-6 lg:gap-[33px]'
             style={{
               background: 'linear-gradient(270deg, #5A2A8A 0%, #242424 100%)',
-              width: '698px',
-              height: '303px',
               borderRadius: '40px',
-              padding: '40px',
-              gap: '33px',
             }}
           >
             {/* Robot Illustration — sticking out left & top */}
@@ -190,7 +191,7 @@ const AIVideos = () => {
             </div>
 
             {/* Content */}
-            <div className='flex-1 text-right lg:text-right flex flex-col items-end'>
+            <div className='flex-1 text-left lg:text-right flex flex-col items-start lg:items-end'>
               <h3 className='text-xl lg:text-2xl font-extrabold text-white mb-3 leading-tight capitalize'>
                 {slide.title}
               </h3>
