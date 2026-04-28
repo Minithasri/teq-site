@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 const AISolutions = () => {
   return (
-    <section className='relative bg-white py-20 px-6 lg:px-20 overflow-hidden'>
+    <section className='relative bg-[#FAFAFA] py-20 px-6 lg:px-20 overflow-hidden'>
       {/* ── Full-section grid background ── */}
       <div
         className='absolute inset-0 pointer-events-none'
@@ -15,8 +15,8 @@ const AISolutions = () => {
         }}
       />
       {/* Fade edges so grid doesn't look cut off */}
-      <div className='absolute inset-0 pointer-events-none bg-gradient-to-b from-white via-transparent to-white' />
-      <div className='absolute inset-0 pointer-events-none bg-gradient-to-r from-white via-transparent to-white' />
+      <div className='absolute inset-0 pointer-events-none bg-gradient-to-b from-[#FAFAFA] via-transparent to-[#FAFAFA]' />
+      <div className='absolute inset-0 pointer-events-none bg-gradient-to-r from-[#FAFAFA] via-transparent to-[#FAFAFA]' />
 
       <div className='relative max-w-[1150px] mx-auto'>
         {/* ── Timeline Row ── */}

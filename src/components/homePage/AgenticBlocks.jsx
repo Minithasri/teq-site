@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { AgentModal } from './AgentBuilding';
 
 const allImages = [
   '/images/Agents/Background+Shadow (1).png',
@@ -114,6 +115,7 @@ const VISIBLE = 4;
 export default function AgenticBlocks() {
   const [activeId, setActiveId] = useState('hr');
   const [current, setCurrent] = useState(0);
+  const [selectedAgent, setSelectedAgent] = useState(null);
 
   const activeCategory = categories.find(c => c.id === activeId);
   const agents = activeCategory?.agents ?? [];
@@ -128,7 +130,7 @@ export default function AgenticBlocks() {
   const next = () => setCurrent(c => Math.min(maxIndex, c + 1));
 
   return (
-    <section className='py-16 md:py-20 bg-[#fdfdfd]'>
+    <section className='py-16 md:py-20 bg-[#FAFAFA]'>
       <div className='max-w-7xl mx-auto px-6 md:px-10 lg:px-16'>
         {/* Title */}
         <h2 className='text-[28px] md:text-[34px] font-semibold text-[#111111] text-center mb-8 leading-tight'>
@@ -211,34 +213,107 @@ export default function AgenticBlocks() {
             </div>
           </div>
 
-          {/* Cards Slider — exactly 4 visible, clip the rest */}
-          <div className='overflow-hidden'>
-            <div
-              className='flex gap-10 transition-transform duration-500 ease-in-out'
-              style={{
-                transform: `translateX(calc(-${current} * (25%)))`,
-              }}
-            >
-              {agents.map((agent, i) => (
-                <div
-                  key={i}
-                  className='shrink-0 flex flex-col'
-                  style={{ width: 'calc(23% - 12px)' }}
-                >
-                  {/* Image with Explore overlay */}
-                  <div className='relative w-full aspect-[1.2/1] rounded-[16px] overflow-hidden group cursor-pointer'>
-                    <Image src={agent.image} alt={agent.name} fill className='object-cover' />
+          {/* Agent Cards Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-4'>
+            {agents.map((agent, index) => (
+              <div
+                key={index}
+                className='flex flex-col rounded-2xl overflow-hidden cursor-pointer group bg-white shadow-sm hover:shadow-xl transition-all duration-300'
+                style={{
+                  boxShadow: '0px 4px 24px -1px rgba(0, 0, 0, 0.05)',
+                }}
+                onClick={() => setSelectedAgent({ ...agent, title: agent.name })}
+              >
+                {/* Top Content Area - Gray Background */}
+                <div className='bg-[#F8F8F8] m-2 rounded-2xl px-4 py-8 flex-1 flex flex-row items-center gap-4 min-h-[120px]'>
+                  {/* Brain Icon */}
+                  <div
+                    className='w-14 h-14 rounded-2xl flex items-center justify-center border border-[#E5E5E5] shrink-0'
+                    style={{
+                      backgroundColor: '#FAFAFA',
+                      boxShadow: '0px 0px 10px 0px #0000001A',
+                    }}
+                  >
+                    <img
+                      src={(() => {
+                        const i = index + 1;
+                        switch (activeId) {
+                          case 'retail':
+                            return `/images/HomePage/icons/${i}.svg`;
+                          case 'supplychain':
+                            return `/images/HomePage/icons/s${i}.svg`;
+                          case 'travelandhospitality':
+                            return `/images/HomePage/icons/t${i}.svg`;
+                          case 'manufacturing':
+                            return `/images/HomePage/icons/m${i}.svg`;
+                          case 'hr':
+                            return `/images/HomePage/icons/hr${i}.svg`;
+                          case 'marketing':
+                            return `/images/HomePage/icons/mark${i}.svg`;
+                          case 'sales':
+                            return `/images/HomePage/icons/sales${i}.svg`;
+                          default:
+                            return '/images/HomePage/brain.svg';
+                        }
+                      })()}
+                      alt='AI'
+                      className='w-8 h-8'
+                      onError={e => {
+                        e.target.onerror = null;
+                        e.target.src = '/images/HomePage/brain.svg';
+                      }}
+                    />
                   </div>
 
-                  {/* Agent Name */}
-                  <p className='mt-3 text-[13px] text-center font-medium text-[#333333] leading-snug px-1'>
+                  <h3 className='text-[14px] font-semibold text-[#525252] leading-[1.6] line-clamp-3'>
                     {agent.name}
-                  </p>
+                  </h3>
                 </div>
-              ))}
-            </div>
+
+                {/* Bottom Area - White Background */}
+                <div className='bg-white px-8 pt-2 pb-4 flex items-center justify-between'>
+                  <span
+                    className='text-[16px] font-medium group-hover:underline'
+                    style={{
+                      background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
+                    Explore
+                  </span>
+
+                  <button
+                    className='group/btn w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110'
+                    style={{
+                      background: 'transparent',
+                    }}
+                    onMouseEnter={e =>
+                      (e.currentTarget.style.background =
+                        'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)')
+                    }
+                    onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                  >
+                    <img
+                      src='/images/HomePage/sidearrow.svg'
+                      alt='Arrow'
+                      className='w-10 h-10 transition-all duration-300 group-hover/btn:brightness-0 group-hover/btn:invert'
+                    />
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+
+        {/* Modal */}
+        {selectedAgent && (
+          <AgentModal
+            agent={selectedAgent}
+            categoryLabel={activeCategory?.label || 'General'}
+            onClose={() => setSelectedAgent(null)}
+          />
+        )}
       </div>
     </section>
   );

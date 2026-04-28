@@ -48,7 +48,7 @@ const TechnologyPartner = () => {
       </div>
 
       {/* Responsive Layout */}
-      <div className='w-full max-w-7xl mx-auto'>
+      <div className='w-full max-w-9xl mx-auto'>
         {/* ≡ LARGE SCREENS: Single Row ≡ */}
         <div className='hidden lg:flex justify-center items-center gap-4 xl:gap-8 flex-wrap'>
           {partners.map((partner, index) => (

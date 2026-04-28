@@ -188,7 +188,7 @@ const HomeBanner = () => {
             </div>
 
             {/* Cards Grid Section */}
-            <div className='mt-16 lg:mt-24 w-full max-w-[1200px] mx-auto'>
+            <div className='mt-16 lg:mt-24 w-full max-w-[1600px] mx-auto'>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
                 {/* Column 1: Small Info + Enterprise Stats */}
                 <div className='flex flex-col gap-2 lg:h-[460px]'>
@@ -294,9 +294,9 @@ const HomeBanner = () => {
                   <div
                     className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex-1 min-h-[280px] flex flex-col justify-center relative overflow-hidden'
                     style={{
-                      backgroundImage: 'url("/images/bg2.png")',
+                      backgroundImage: 'url("/images/dbg5.png")',
                       backgroundSize: 'cover',
-                      backgroundPosition: 'center',
+                      backgroundPosition: 'right center',
                     }}
                   >
                     <div className='z-10 text-left max-w-[65%]'>
@@ -307,24 +307,6 @@ const HomeBanner = () => {
                         International Partner of the Year <br />
                         2025 – GWC Data.AI
                       </p>
-                    </div>
-
-                    {/* Trophy Section */}
-                    <div className='absolute right-4 bottom-0 h-full w-[35%] flex items-end justify-center'>
-                      <div className='relative w-full h-[90%] flex flex-col items-center justify-end'>
-                        {/* Pedestal */}
-                        <img
-                          src='/images/white-pedestal-vector-podium-vector-illustration 1.png'
-                          alt='Podium'
-                          className='w-[130px] h-auto z-0 translate-y-3'
-                        />
-                        {/* Trophy */}
-                        <img
-                          src='/images/image 8.png'
-                          alt='Trophy'
-                          className='absolute bottom-3 h-[85%] object-contain z-10'
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>

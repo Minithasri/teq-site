@@ -29,7 +29,7 @@ const ConcepttoProduction = () => {
   ];
 
   return (
-    <section className='py-10 md:py-16 px-4 sm:px-6 lg:px-8 w-full'>
+    <section className='py-10 md:py-16 px-4 sm:px-6 lg:px-8 w-full bg-[#FAFAFA]'>
       <div className='max-w-[1400px] mx-auto'>
         <div className='bg-white rounded-[32px] py-12 md:py-16 px-6 md:px-10 shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_60px_rgba(0,0,0,0.12)] transition-shadow duration-500 border border-gray-100 relative overflow-hidden'>
           {/* Header */}

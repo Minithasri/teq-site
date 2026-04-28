@@ -276,7 +276,7 @@ const AIAgents = () => {
                   initial={{ opacity: 0, scale: 1.05 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.2 }}
                   className='absolute inset-0'
                 >
                   <Image src={slide.image} alt={slide.title} fill className='object-cover' />
@@ -299,7 +299,7 @@ const AIAgents = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.2 }}
                 >
                   <p className='text-[#666666] font-semibold text-base lg:text-lg mb-2'>
                     {slide.category}

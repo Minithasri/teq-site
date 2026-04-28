@@ -57,14 +57,53 @@ const DomoBanner = () => {
         </div>
 
         {/* ---------- HERO IMAGE ---------- */}
-        <div className='w-full max-w-7xl mx-auto'>
-          <div className='relative h-[300px] md:h-[400px] lg:h-[450px] rounded-[16px] overflow-hidden shadow-lg'>
-            <Image
-              src='/images/DomoPage/dframe1.webp'
-              alt='Domo Banner'
-              fill
-              className='object-cover'
-            />
+        <div className='w-full max-w-7xl mx-auto pb-2'>
+          <div className='relative flex justify-center'>
+            <div
+              className='relative w-full overflow-hidden'
+              style={{
+                maxWidth: '1240px',
+                height: '485px',
+                borderRadius: '24px',
+                border: '1px solid #E5E7EB',
+                boxShadow:
+                  '0px 1.34px 4.15px 0px #D2D0E111, 0px 3.23px 9.98px 0px #D2D0E119, 0px 6.08px 18.8px 0px #D2D0E11F, 0px 10.85px 33.53px 0px #D2D0E124, 0px 20.3px 62.72px 0px #D2D0E12C',
+              }}
+            >
+              <Image
+                src='/images/domoa1.webp'
+                alt='Domo Banner'
+                fill
+                className='object-cover object-[center_70%]'
+              />
+            </div>
+
+            {/* Overlapping Badge */}
+            <div
+              className='absolute bottom-8 z-20 bg-white shadow-xl flex items-center justify-center hidden md:flex'
+              style={{
+                width: '726px',
+                height: '78px',
+                borderRadius: '16px',
+                padding: '30px 24px',
+              }}
+            >
+              <h3
+                className='text-center whitespace-nowrap'
+                style={{
+                  fontFamily: 'Poppins, sans-serif',
+                  fontWeight: 800,
+                  fontSize: '25px',
+                  lineHeight: '100%',
+                  background: 'linear-gradient(91.23deg, #2E94DB 31.47%, #7030B1 67.68%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                International Partner of the Year 2026 – GWC Data.AI
+              </h3>
+            </div>
           </div>
         </div>
       </div>

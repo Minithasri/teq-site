@@ -16,7 +16,7 @@ const categories = [
   { id: 'sales', label: 'Sales' },
 ];
 
-const AgentModal = ({ agent, categoryLabel, onClose }) => {
+export const AgentModal = ({ agent, categoryLabel, onClose }) => {
   if (!agent) return null;
 
   useEffect(() => {
