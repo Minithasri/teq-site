@@ -135,12 +135,7 @@ const HomeBanner = () => {
           <div className='text-center'>
             {/* Badge */}
             <div className='flex items-center justify-center mb-6 sm:mb-16'>
-              <div
-                className='inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm border border-gray-100 px-3 sm:px-4 py-1.5 rounded-[10px] shadow-lg'
-                style={{
-                  boxShadow: '0 20px 40px rgba(255,255,255,0.15)',
-                }}
-              ></div>
+              <div className='h-[20px]' />
             </div>
 
             {/* Heading */}
