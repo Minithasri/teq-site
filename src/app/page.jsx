@@ -1,6 +1,7 @@
 import HomePage from './(site)/Home/page';
 
 export const metadata = {
+  metadataBase: new URL('https://gwcdata.ai'),
   title: 'GWC DATA.AI | Enterprise AI Agents & Solutions',
   description:
     'GWC streamlines and automates complex data management, ensuring transparency, compliance, and smarter, faster decision making across the organization.',
