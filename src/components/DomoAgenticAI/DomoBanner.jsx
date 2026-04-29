@@ -80,21 +80,16 @@ const DomoBanner = () => {
 
             {/* Overlapping Badge */}
             <div
-              className='absolute bottom-8 z-20 bg-white shadow-xl flex items-center justify-center hidden md:flex'
+              className='absolute -bottom-4 md:bottom-8 z-20 bg-white flex items-center justify-center w-[92%] sm:w-[85%] md:w-[726px] min-h-[50px] md:h-[60px] px-4 md:px-6 py-3 md:py-0 shadow-none md:shadow-xl'
               style={{
-                width: '726px',
-                height: '60px',
                 borderRadius: '16px',
-                padding: '30px 24px',
               }}
             >
               <h3
-                className='text-center whitespace-nowrap'
+                className='text-center font-extrabold leading-tight'
                 style={{
                   fontFamily: 'Poppins, sans-serif',
-                  fontWeight: 800,
-                  fontSize: '25px',
-                  lineHeight: '100%',
+                  fontSize: 'clamp(12px, 4vw, 25px)',
                   background: 'linear-gradient(91.23deg, #2E94DB 31.47%, #7030B1 67.68%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
