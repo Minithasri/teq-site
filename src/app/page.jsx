@@ -13,13 +13,13 @@ export const metadata = {
     siteName: 'GWC DATA.AI',
     images: [
       {
-        url: '/images/HomePage/agenteco.png',
+        url: '/images/HomePage/agent2.webp',
         width: 1200,
         height: 630,
         alt: 'GWC AI Agent Ecosystem',
       },
       {
-        url: '/images/HomePage/pro.png',
+        url: '/images/HomePage/agent6.webp',
         width: 1200,
         height: 630,
         alt: 'GWC Procurement Agent',
@@ -44,7 +44,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'GWC DATA.AI | Enterprise AI Agents & Solutions',
     description: 'Autonomous agents that convert insight into action.',
-    images: ['/images/HomePage/agenteco.png'],
+    images: ['/images/HomePage/agent2.webp'],
   },
 };
 
