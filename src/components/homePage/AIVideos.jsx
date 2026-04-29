@@ -14,7 +14,7 @@ const slides = [
     subtitle: 'See how intelligent agents collaborate to solve complex problems.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Agent_hub.mp4',
-    thumbnail: '/images/homePage/agent1.webp',
+    thumbnail: '/images/HomePage/agent1.webp',
     duration: '0:53',
   },
   {
@@ -23,7 +23,7 @@ const slides = [
     subtitle: 'Exploring the interconnected landscape of autonomous AI agents.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Agents%20ecosystenm.mp4',
-    thumbnail: '/images/homePage/agent2.webp',
+    thumbnail: '/images/HomePage/agent2.webp',
     duration: '1:45',
   },
   {
@@ -32,7 +32,7 @@ const slides = [
     subtitle: 'Automating change requests and document amendments with precision.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Amendment%20Agent.mp4',
-    thumbnail: '/images/homePage/agent3.webp',
+    thumbnail: '/images/HomePage/agent3.webp',
     duration: '1:12',
   },
   {
@@ -41,7 +41,7 @@ const slides = [
     subtitle: 'Optimizing stock levels through intelligent predictive replenishment.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Inventory%20Replenishment.mp4',
-    thumbnail: '/images/homePage/agent4.webp',
+    thumbnail: '/images/HomePage/agent4.webp',
     duration: '0:48',
   },
   {
@@ -50,7 +50,7 @@ const slides = [
     subtitle: 'Maximizing network efficiency and resource allocation dynamically.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Network%20Optimization%20Agent.mp4',
-    thumbnail: '/images/homePage/agent5.webp',
+    thumbnail: '/images/HomePage/agent5.webp',
     duration: '2:04',
   },
   {
@@ -59,7 +59,7 @@ const slides = [
     subtitle: 'Streamlining procurement processes from sourcing to settlement.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Procurement_Agent.mp4',
-    thumbnail: '/images/homePage/agent6.webp',
+    thumbnail: '/images/HomePage/agent6.webp',
     duration: '1:30',
   },
   {
@@ -68,7 +68,7 @@ const slides = [
     subtitle: 'Analyzing and improving retail performance with real-time insights.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Store%20Performance.mp4',
-    thumbnail: '/images/homePage/agent7.webp',
+    thumbnail: '/images/HomePage/agent7.webp',
     duration: '1:15',
   },
   {
@@ -77,7 +77,7 @@ const slides = [
     subtitle: 'Driving growth through data-driven marketing decisions and automation.',
     videoUrl:
       'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/marketing%20Intelligence%20agent.mp4',
-    thumbnail: '/images/homePage/agent8.webp',
+    thumbnail: '/images/HomePage/agent8.webp',
     duration: '2:30',
   },
 ];
