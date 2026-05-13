@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://gwcdata.ai/</loc>
+    <image:image>
+      <image:loc>https://gwcdata.ai/images/bot1.png</image:loc>
+      <image:title>Enterprise AI Agent Assistant</image:title>
+      <image:caption>GWC DATA.AI's flagship enterprise AI agent designed to automate complex data workflows and improve operational efficiency.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gwcdata.ai/images/Container.png</image:loc>
+      <image:title>AI Solution ROI Visualization</image:title>
+      <image:caption>This visualization demonstrates the scalable and automated nature of GWC's AI solutions, highlighting their ability to deliver 80% reduction in manual processing.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gwcdata.ai/about</loc>
+    <image:image>
+      <image:loc>https://gwcdata.ai/images/AboutUs/NaveenKumarv2.webp</image:loc>
+      <image:title>Naveen Kumar CEO GWC DATA.AI</image:title>
+      <image:caption>Naveen Kumar, CEO of GWC DATA.AI, leading the mission to build intelligent agents that streamline enterprise data management.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://gwcdata.ai/images/AboutUs/Prasanna_Srinivasan1.jpg</image:loc>
+      <image:title>Prasanna Srinivasan COO GWC DATA.AI</image:title>
+      <image:caption>Prasanna Srinivasan, COO of GWC DATA.AI, ensuring operational excellence and strategic growth for AI-powered solutions.</image:caption>
+    </image:image>
+  </url>
+</urlset>

@@ -20,22 +20,43 @@ export default function robots() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gwcdata.ai';
 
   return {
-    // ✅ Main crawling rules for all bots
+    // ✅ Main crawling rules
     rules: [
       {
-        userAgent: '*', // Applies to all bots (Google, Bing, etc.)
-        allow: '/', // Allow crawling of all public pages
-        disallow: [
-          // Disallow specific private sections
-          '/api/',
-          '/admin/',
-          '/private/',
+        // 🌐 Standard Search Engines
+        userAgent: '*',
+        allow: ['/', '/.well-known/llms.txt'],
+        disallow: ['/api/', '/admin/', '/private/'],
+      },
+      {
+        // 🤖 Major AI Crawlers (Restrictive Configuration)
+        // Allow access to public content while protecting sensitive paths
+        userAgent: [
+          'GPTBot',
+          'ChatGPT-User',
+          'ClaudeBot',
+          'Anthropic-AI',
+          'Google-Extended',
+          'PerplexityBot',
+          'FacebookBot',
         ],
+        allow: '/',
+        disallow: ['/admin/', '/api/', '/private/', '/user/'],
+      },
+      {
+        // 🚫 Blocked AI/Training Bots
+        // Prevent unauthorized data mining and large-scale model training
+        userAgent: ['CCBot', 'cohere-ai', 'Diffbot', 'omgili', 'YouBot', 'Bytespider'],
+        disallow: '/',
       },
     ],
 
-    // ✅ Tells bots where the sitemap is
-    sitemap: `${baseUrl}/sitemap.xml`,
+    // ✅ Tells bots where the sitemaps are
+    sitemap: [
+      `${baseUrl}/sitemap.xml`,
+      `${baseUrl}/image-sitemap.xml`,
+      `${baseUrl}/video-sitemap.xml`,
+    ],
 
     // ✅ Optionally specify the preferred domain
     host: baseUrl,

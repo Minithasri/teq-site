@@ -1,13 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useCallback, useMemo, useRef } from 'react';
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 
 // ─── CACHE BUSTER ──────────────────────────────────────────────────────────────
-// Bump this string every time you replace/rename any leader image.
-// It appends ?v=X to every image src, forcing browsers AND CDNs to
-// fetch the new file instead of serving a cached copy.
 const IMAGE_VERSION = 'v4';
 // ───────────────────────────────────────────────────────────────────────────────
 
@@ -15,34 +12,36 @@ const bust = src => `${src}?${IMAGE_VERSION}`;
 
 export default function Leaders() {
   const [activeIndex, setActiveIndex] = useState(2);
+  // Transition lock: prevents new clicks while animation is in flight
+  const isAnimating = useRef(false);
 
   const leaders = [
     {
       id: 1,
       name: 'Abhinaya Sindhu',
       title: 'Head of People Operations',
-      image: bust('/images/AboutUs/Abinaya Sindhu.webp'),
+      image: bust('/images/AboutUs/Abinaya_Sindhu1.jpg'),
       linkedin: 'https://www.linkedin.com/in/abinaya-sindhu-a05311206/',
     },
     {
       id: 2,
       name: 'Prasanna Srinivasan',
       title: 'Chief Operating Officer',
-      image: bust('/images/AboutUs/Prasanna Srinivasan.webp'),
+      image: bust('/images/AboutUs/Prasanna_Srinivasan1.jpg'),
       linkedin: 'https://www.linkedin.com/in/prasanna-srinivasan-a533b062/',
     },
     {
       id: 3,
       name: 'Naveen Kumar',
       title: 'Chief Executive Officer',
-      image: bust('/images/AboutUs/NaveenKumarv2.webp'),
+      image: bust('/images/AboutUs/Naveen_Kumar1.jpg'),
       linkedin: 'https://www.linkedin.com/in/naveenkumarnawinkrp/',
     },
     {
       id: 4,
       name: 'Mike Murali',
       title: 'Chief Experience Officer',
-      image: bust('/images/AboutUs/MikeMuraliv2.webp'),
+      image: bust('/images/AboutUs/Mike_Murali1.jpg'),
       linkedin: 'https://www.linkedin.com/in/mike-murali-3428aa',
     },
     {
@@ -63,35 +62,42 @@ export default function Leaders() {
       id: 7,
       name: 'Srinath Raja',
       title: 'Chief Data Officer',
-      image: bust('/images/AboutUs/Srinath Raja.webp'),
+      image: bust('/images/AboutUs/Srinath_Raja1.jpg'),
       linkedin: 'https://www.linkedin.com/in/srinath-raja-8a5710115/',
     },
     {
       id: 8,
       name: 'Shashank Ravikumar',
       title: 'Chief Strategy Officer',
-      image: bust('/images/AboutUs/Shashank Ravikumar.webp'),
+      image: bust('/images/AboutUs/Shashank_Ravikumar1.jpg'),
       linkedin: 'https://www.linkedin.com/in/shashank-ravikumar-780649125/',
     },
     {
       id: 9,
+      name: 'Mohan Elango',
+      title: 'Chief Growth Officer',
+      image: bust('/images/AboutUs/mohan_elango.webp'),
+      linkedin: 'https://www.linkedin.com/in/mohanelango/',
+    },
+    {
+      id: 10,
       name: 'Sridhar Vediyappan',
       title: 'Chief Financial Officer',
       image: bust('/images/AboutUs/Sridhar Vediyappan.webp'),
       linkedin: 'https://www.linkedin.com/in/sridhar-vediyappan-943340b5/',
     },
     {
-      id: 10,
+      id: 11,
       name: 'Madhu Sudhanan',
       title: 'Vice President',
-      image: bust('/images/AboutUs/Madhu Sudhanan.webp'),
+      image: bust('/images/AboutUs/Madhu_Sudhanan1.jpg'),
       linkedin: 'https://www.linkedin.com/in/madhu-sudhanan-mahendran-a00b4477/',
     },
     {
-      id: 11,
+      id: 12,
       name: 'Santhosh Kumar',
       title: 'Chief Innovation Officer',
-      image: bust('/images/AboutUs/Santhosh Kumar.webp'),
+      image: bust('/images/AboutUs/Santhosh_Kumar1.jpg'),
       linkedin: 'https://www.linkedin.com/in/santhosh-kumar-5a3ba3121/',
     },
   ];
@@ -120,69 +126,90 @@ export default function Leaders() {
     },
   ];
 
-  // Preload all images via fetch() so the browser warms its HTTP cache
-  // before the carousel renders them. fetch() respects the ?v= cache-buster
-  // and works correctly with CDNs, unlike window.Image().
-  useEffect(() => {
-    leaders.forEach(leader => {
-      fetch(leader.image, { method: 'GET', cache: 'force-cache' }).catch(() => {});
+  // Animation duration must match the CSS transition duration below (420ms)
+  const TRANSITION_MS = 420;
+
+  // Gated navigation: ignores rapid clicks while a transition is in flight
+  const navigate = useCallback(newIndexOrUpdater => {
+    if (isAnimating.current) return;
+    isAnimating.current = true;
+    setActiveIndex(prev => {
+      if (typeof newIndexOrUpdater === 'function') return newIndexOrUpdater(prev);
+      return newIndexOrUpdater;
     });
+    setTimeout(() => {
+      isAnimating.current = false;
+    }, TRANSITION_MS);
   }, []);
 
-  const handlePrev = () => setActiveIndex(prev => (prev === 0 ? leaders.length - 1 : prev - 1));
-  const handleNext = () => setActiveIndex(prev => (prev === leaders.length - 1 ? 0 : prev + 1));
-  const handleDotClick = index => setActiveIndex(index);
+  const handlePrev = useCallback(
+    () => navigate(prev => (prev === 0 ? leaders.length - 1 : prev - 1)),
+    [navigate, leaders.length]
+  );
 
-  const getCardPositions = () => {
+  const handleNext = useCallback(
+    () => navigate(prev => (prev === leaders.length - 1 ? 0 : prev + 1)),
+    [navigate, leaders.length]
+  );
+
+  const handleDotClick = useCallback(index => navigate(index), [navigate]);
+
+  // Memoised: only recomputes when activeIndex or leaders.length changes
+  const cardPositions = useMemo(() => {
     const total = leaders.length;
     return leaders.map((_, i) => {
       let distance = (i - activeIndex + total) % total;
       if (distance > total / 2) distance -= total;
 
-      let translateX = 0;
-      let scale = 1;
-      let opacity = 1;
-      let zIndex = 0;
-      let visibility = 'visible';
+      if (distance === 0)
+        return { index: i, translateX: 0, scale: 1, opacity: 1, zIndex: 10, visibility: 'visible' };
+      if (distance === -1)
+        return {
+          index: i,
+          translateX: -150,
+          scale: 0.85,
+          opacity: 0.85,
+          zIndex: 5,
+          visibility: 'visible',
+        };
+      if (distance === 1)
+        return {
+          index: i,
+          translateX: 150,
+          scale: 0.85,
+          opacity: 0.85,
+          zIndex: 5,
+          visibility: 'visible',
+        };
+      if (distance === -2)
+        return {
+          index: i,
+          translateX: -280,
+          scale: 0.75,
+          opacity: 0.3,
+          zIndex: 2,
+          visibility: 'visible',
+        };
+      if (distance === 2)
+        return {
+          index: i,
+          translateX: 280,
+          scale: 0.75,
+          opacity: 0.3,
+          zIndex: 2,
+          visibility: 'visible',
+        };
 
-      if (distance === 0) {
-        translateX = 0;
-        scale = 1;
-        opacity = 1;
-        zIndex = 10;
-      } else if (distance === -1) {
-        translateX = -150;
-        scale = 0.85;
-        opacity = 1.5;
-        zIndex = 5;
-      } else if (distance === 1) {
-        translateX = 150;
-        scale = 0.85;
-        opacity = 1.5;
-        zIndex = 5;
-      } else if (distance === -2) {
-        translateX = -280;
-        scale = 0.75;
-        opacity = 0.3;
-        zIndex = 2;
-      } else if (distance === 2) {
-        translateX = 280;
-        scale = 0.75;
-        opacity = 0.3;
-        zIndex = 2;
-      } else {
-        translateX = distance < 0 ? -900 : 900;
-        scale = 0.6;
-        opacity = 0;
-        zIndex = 0;
-        visibility = 'hidden';
-      }
-
-      return { index: i, translateX, scale, opacity, zIndex, visibility };
+      return {
+        index: i,
+        translateX: distance < 0 ? -900 : 900,
+        scale: 0.6,
+        opacity: 0,
+        zIndex: 0,
+        visibility: 'hidden',
+      };
     });
-  };
-
-  const cardPositions = getCardPositions();
+  }, [activeIndex, leaders.length]);
 
   return (
     <section
@@ -196,10 +223,7 @@ export default function Leaders() {
     >
       {/*
         Hidden preload layer — 1×1px, invisible, aria-hidden.
-        Uses plain <img> (NOT next/image) with fetchpriority="high" and the
-        ?v= cache-buster. This forces the browser to fetch each real file on
-        first load, warming the cache before the carousel needs them.
-        Never serves a stale /_next/image optimized copy.
+        Uses plain <img> with fetchpriority="high" and the ?v= cache-buster.
       */}
       <div
         aria-hidden='true'
@@ -254,9 +278,9 @@ export default function Leaders() {
             <RiArrowRightSLine size={26} />
           </button>
 
-          <div className='flex justify-center items-center relative h-[600px] w-full perspective-[1000px]'>
+          <div className='flex justify-center items-center relative h-[600px] w-full'>
             {leaders.map((leader, index) => {
-              const pos = cardPositions.find(p => p.index === index);
+              const pos = cardPositions[index];
               const isActive = index === activeIndex;
 
               return (
@@ -270,39 +294,34 @@ export default function Leaders() {
                     visibility: pos.visibility,
                     width: '435px',
                     height: '485px',
+                    // GPU-composited properties only — no layout thrashing
                     willChange: 'transform, opacity',
-                    transition:
-                      'transform 420ms cubic-bezier(0.25,1,0.5,1), opacity 420ms cubic-bezier(0.25,1,0.5,1)',
+                    transition: `transform ${TRANSITION_MS}ms cubic-bezier(0.25,1,0.5,1), opacity ${TRANSITION_MS}ms cubic-bezier(0.25,1,0.5,1)`,
                     boxShadow: isActive
                       ? '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
                       : '0 10px 15px -3px rgba(0, 0, 0, 0.3)',
                   }}
-                  onClick={() => index !== activeIndex && handleDotClick(index)}
+                  onClick={() => !isActive && handleDotClick(index)}
                 >
                   <div className='relative h-[375px] bg-gray-100 rounded-xl overflow-hidden mb-4'>
-                    {/*
-                      unoptimized={true} — skips /_next/image entirely.
-                      The browser fetches /images/AboutUs/X.webp?v3 directly,
-                      never a server-cached optimized copy. This fixes the
-                      "wrong image after deploy" bug in incognito / new users.
-                    */}
                     <Image
                       src={leader.image}
                       alt={leader.name}
                       fill
                       unoptimized
-                      loading='eager'
+                      // Only eagerly load the visible cards (active + ±1 neighbours)
+                      loading={Math.abs(index - activeIndex) <= 1 ? 'eager' : 'lazy'}
                       sizes='435px'
                       className='object-cover'
                       style={{ objectPosition: 'center top' }}
                     />
 
-                    {/* Always-rendered overlay — fade via opacity only, never mount/unmount */}
+                    {/* Overlay: opacity-only transition, never re-mounted */}
                     <div
                       className='absolute inset-0 bg-black/40'
                       style={{
                         opacity: isActive ? 0 : 1,
-                        transition: 'opacity 420ms cubic-bezier(0.25,1,0.5,1)',
+                        transition: `opacity ${TRANSITION_MS}ms cubic-bezier(0.25,1,0.5,1)`,
                         willChange: 'opacity',
                       }}
                     />

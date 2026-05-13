@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://gwcdata.ai/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://gwcdata.ai/images/HomePage/agent1.webp</video:thumbnail_loc>
+      <video:title>Agent Hub - Collaborative AI Intelligence</video:title>
+      <video:description>See how intelligent agents collaborate to solve complex problems and streamline enterprise workflows with GWC DATA.AI.</video:description>
+      <video:content_loc>https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Agent_hub.mp4</video:content_loc>
+      <video:duration>53</video:duration>
+      <video:publication_date>2025-01-01T08:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:uploader info="https://gwcdata.ai/about">GWC DATA.AI</video:uploader>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://gwcdata.ai/images/HomePage/agent2.webp</video:thumbnail_loc>
+      <video:title>Agents Ecosystem - Connected Autonomous Landscapes</video:title>
+      <video:description>Exploring the interconnected landscape of autonomous AI agents and their impact on enterprise data management.</video:description>
+      <video:content_loc>https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Agents%20ecosystenm.mp4</video:content_loc>
+      <video:duration>105</video:duration>
+      <video:publication_date>2025-01-01T08:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:uploader info="https://gwcdata.ai/about">GWC DATA.AI</video:uploader>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://gwcdata.ai/images/HomePage/agent3.webp</video:thumbnail_loc>
+      <video:title>Amendment Agent - Precision Document Automation</video:title>
+      <video:description>Automating change requests and document amendments with precision using GWC's specialized AI agents.</video:description>
+      <video:content_loc>https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Amendment%20Agent.mp4</video:content_loc>
+      <video:duration>72</video:duration>
+      <video:publication_date>2025-01-01T08:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:uploader info="https://gwcdata.ai/about">GWC DATA.AI</video:uploader>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://gwcdata.ai/images/HomePage/agent4.webp</video:thumbnail_loc>
+      <video:title>Inventory Replenishment Agent - Supply Chain Optimization</video:title>
+      <video:description>Optimizing stock levels through intelligent predictive replenishment to drive smarter business growth.</video:description>
+      <video:content_loc>https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Inventory%20Replenishment.mp4</video:content_loc>
+      <video:duration>48</video:duration>
+      <video:publication_date>2025-01-01T08:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:uploader info="https://gwcdata.ai/about">GWC DATA.AI</video:uploader>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://gwcdata.ai/images/HomePage/agent5.webp</video:thumbnail_loc>
+      <video:title>Network Optimization Agent - Dynamic Resource Allocation</video:title>
+      <video:description>Maximizing network efficiency and resource allocation dynamically with autonomous AI agents.</video:description>
+      <video:content_loc>https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Network%20Optimization%20Agent.mp4</video:content_loc>
+      <video:duration>124</video:duration>
+      <video:publication_date>2025-01-01T08:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:uploader info="https://gwcdata.ai/about">GWC DATA.AI</video:uploader>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://gwcdata.ai/images/HomePage/agent6.webp</video:thumbnail_loc>
+      <video:title>Procurement Agent - Streamlined Sourcing to Settlement</video:title>
+      <video:description>Streamlining procurement processes from sourcing to settlement with intelligent AI automation.</video:description>
+      <video:content_loc>https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Procurement_Agent.mp4</video:content_loc>
+      <video:duration>90</video:duration>
+      <video:publication_date>2025-01-01T08:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:uploader info="https://gwcdata.ai/about">GWC DATA.AI</video:uploader>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://gwcdata.ai/images/HomePage/agent7.webp</video:thumbnail_loc>
+      <video:title>Store Performance Agent - Real-Time Retail Insights</video:title>
+      <video:description>Analyzing and improving retail performance with real-time insights driven by GWC DATA.AI.</video:description>
+      <video:content_loc>https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Store%20Performance.mp4</video:content_loc>
+      <video:duration>75</video:duration>
+      <video:publication_date>2025-01-01T08:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:uploader info="https://gwcdata.ai/about">GWC DATA.AI</video:uploader>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://gwcdata.ai/images/HomePage/agent8.webp</video:thumbnail_loc>
+      <video:title>Marketing Intelligence Agent - Data-Driven Growth</video:title>
+      <video:description>Driving growth through data-driven marketing decisions and intelligent automation.</video:description>
+      <video:content_loc>https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/marketing%20Intelligence%20agent.mp4</video:content_loc>
+      <video:duration>150</video:duration>
+      <video:publication_date>2025-01-01T08:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:uploader info="https://gwcdata.ai/about">GWC DATA.AI</video:uploader>
+    </video:video>
+  </url>
+</urlset>
