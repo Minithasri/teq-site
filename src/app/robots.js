@@ -7,9 +7,6 @@
  * - Which parts of your site they can crawl (Allow)
  * - Which parts to ignore (Disallow)
  * - Where to find your sitemap.xml
- *
- * ⚙️ Works with Next.js App Router
- * and supports static export (output: 'export').
  */
 
 // Tell Next.js to build this statically (no server needed)
@@ -20,17 +17,11 @@ export default function robots() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gwcdata.ai';
 
   return {
-    // ✅ Main crawling rules
+    // ✅ AI Crawler Rules - Restrictive Configuration
+    // Blocks AI crawlers from sensitive areas while allowing public content access
     rules: [
       {
-        // 🌐 Standard Search Engines
-        userAgent: '*',
-        allow: ['/', '/.well-known/llms.txt'],
-        disallow: ['/api/', '/admin/', '/private/'],
-      },
-      {
-        // 🤖 Major AI Crawlers (Restrictive Configuration)
-        // Allow access to public content while protecting sensitive paths
+        // 🤖 Major AI Crawlers (Allowed with restrictions)
         userAgent: [
           'GPTBot',
           'ChatGPT-User',
@@ -40,14 +31,20 @@ export default function robots() {
           'PerplexityBot',
           'FacebookBot',
         ],
-        allow: '/',
+        allow: ['/', '/llms.txt', '/.well-known/llms.txt'],
         disallow: ['/admin/', '/api/', '/private/', '/user/'],
       },
       {
         // 🚫 Blocked AI/Training Bots
-        // Prevent unauthorized data mining and large-scale model training
-        userAgent: ['CCBot', 'cohere-ai', 'Diffbot', 'omgili', 'YouBot', 'Bytespider'],
+        userAgent: ['CCBot', 'cohere-ai', 'Diffbot', 'omgili', 'Bytespider', 'YouBot'],
         disallow: '/',
+      },
+      {
+        // 🌐 Standard Search Engines & Default Rules
+        userAgent: '*',
+        allow: ['/', '/llms.txt', '/.well-known/llms.txt'],
+        disallow: ['/api/', '/admin/', '/private/'],
+        crawlDelay: 1,
       },
     ],
 
