@@ -98,67 +98,6 @@ const Cards = () => {
       description: 'Transforming Enterprise Knowledge Access with AI-Powered Retrieval',
       image: '/images/Templates/template10/hero10.webp',
     },
-    {
-      slug: 'style-bazaar',
-      title: 'Retail Data Warehouse & Business Intelligence Platform',
-      type: 'BI Solutions',
-      industry: 'Retail',
-      description:
-        'Optimizing retail operations through advanced data warehousing and business intelligence.',
-      image: '/images/Templates/style_bazaar/style_hero.png',
-    },
-    {
-      slug: 'style-union',
-      title: 'Transforming Retail Performance with Unified Analytics',
-      type: 'BI Solutions',
-      industry: 'Retail',
-      description:
-        'Omnichannel Data Warehouse & BI Platform enabling real-time business visibility for fashion retail.',
-      image: '/images/Templates/style_bazaar/style_hero.png',
-    },
-    {
-      slug: 'tez',
-      title: 'Unified Data Platform & Analytics for Smart Parking Operations',
-      type: 'AI Solutions',
-      industry: 'Travel and hospitality',
-      description:
-        'Achieving a 60% reduction in data processing time and unlocking AI-driven insights for smart parking.',
-      image: '/images/Templates/tez/tez1.png',
-    },
-    {
-      slug: 'custom-dashboard',
-      title: 'AI-Enabled Safety Analytics & Custom Dashboard Solution',
-      type: 'AI Solutions',
-      industry: 'Manufacturing',
-      description:
-        'Transforming complex safety data into actionable, AI-powered insights enabling faster decisions and proactive risk management.',
-      image: '/images/Templates/tez/tez1.png',
-    },
-    {
-      slug: 'aequs',
-      title: 'Transforming Parts Testing with End-to-End Digital Automation',
-      type: 'AI Solutions',
-      industry: 'Manufacturing',
-      description:
-        'Achieving 60–70% reduction in manual errors and ~50% faster testing cycles through a custom-built lifecycle management system.',
-      image: '/images/Templates/aequs/aequs1.png',
-    },
-    {
-      slug: 'centralized-marketing',
-      title: ' Centralized Marketing Dashboard and Automated Reporting',
-      type: 'AI Solutions',
-      industry: 'Manufacturing',
-      description: 'Turning Multi-Channel Marketing Data into One Real-Time Source of Truth',
-      image: '/images/Templates/templatez/z2.png',
-    },
-    {
-      slug: 'next-gen-sales',
-      title: 'Next-Gen Sales Campaign Infrastructure on GCP',
-      type: 'AI Solutions',
-      industry: 'Manufacturing',
-      description: 'Enabling data-driven sales strategies with cloud-native solutions',
-      image: '/images/Templates/templatez/z2sol.png',
-    },
   ];
 
   const cardsData = caseStudiesData.map((study, i) => {
