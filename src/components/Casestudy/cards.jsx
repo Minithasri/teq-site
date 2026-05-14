@@ -98,6 +98,58 @@ const Cards = () => {
       description: 'Transforming Enterprise Knowledge Access with AI-Powered Retrieval',
       image: '/images/Templates/template10/hero10.webp',
     },
+    {
+      slug: 'centralized-marketing',
+      title: 'Centralized Marketing Dashboard and Automated Reporting',
+      type: 'BI Solutions',
+      industry: 'Marketing',
+      description: 'Turning Multi-Channel Marketing Data into One Real-Time Source of Truth',
+      image: '/images/Templates/templatez/z2.png',
+    },
+    {
+      slug: 'next-gen-sales',
+      title: 'Next-Gen Sales Campaign Infrastructure on GCP',
+      type: 'Cloud Solutions',
+      industry: 'Sales',
+      description: 'Enabling data-driven sales strategies with cloud-native solutions',
+      image: '/images/Templates/templatez/z2sol.png',
+    },
+    {
+      slug: 'bay',
+      title: 'Product Authentication & Theft Monitoring Analytics Platform',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'A centralized analytics solution that transformed fragmented counterfeit monitoring into an automated intelligence platform delivering real-time threat detection and secure, role-based insights to 50+ stakeholders.',
+      image: '/images/Templates/z-bay/hero-bg.png',
+    },
+    {
+      slug: 'john-good-groups',
+      title: 'Unified Travel Analytics Platform Implementation',
+      type: 'BI Solutions',
+      industry: 'Travel and hospitality',
+      description:
+        'A global travel organization transformed its analytics ecosystem by migrating from Power BI to a scalable, centralized platform, enabling faster insights, improved accessibility, and consistent reporting across regions.',
+      image: '/images/Templates/z-john-good-groups/hero-bg.png',
+    },
+    {
+      slug: 'hy-24',
+      title: 'Automated Asset & Project Reporting Platform',
+      type: 'BI Solutions',
+      industry: 'Energy',
+      description:
+        'A global clean energy investment firm transformed its reporting ecosystem by replacing complex Excel-based processes with an automated, centralized BI platform enabling real-time portfolio insights, improved accuracy, and scalable decision-making.',
+      image: '/images/Templates/z-hy-24/sunset-sky-powers-wind.png',
+    },
+    {
+      slug: 'mahsing',
+      title: 'Driving Real Estate Excellence Through Customer Feedback Insights',
+      type: 'AI Solutions',
+      industry: 'Real Estate',
+      description:
+        'Transforming customer satisfaction tracking with data-driven insights to systematically analyze feedback across large-scale property development projects.',
+      image: '/images/Templates/mahsing/img1.png',
+    },
   ];
 
   const cardsData = caseStudiesData.map((study, i) => {
