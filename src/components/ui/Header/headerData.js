@@ -118,9 +118,21 @@ export const headerData = {
     {
       label: 'Domo Agentic AI',
       href: '/domo-agentic-ai',
-      megaMenu: false,
-      children: [],
-      megaMenuColumns: [],
+      megaMenu: true,
+      subtitle: 'Advanced AI solutions for your business',
+      children: [
+        { label: 'Domo', href: '/domo-agentic-ai' },
+        { label: 'Agentic AI', href: '/agentic-ai' },
+      ],
+      megaMenuColumns: [
+        {
+          title: 'EXPLORE AI',
+          links: [
+            { label: 'Domo', href: '/domo-agentic-ai' },
+            { label: 'Agentic AI', href: '/agentic-ai' },
+          ],
+        },
+      ],
     },
     {
       label: 'Boomi',

@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import Brain from '../assert/Brain.png';
 import Database from '../assert/Database.png';

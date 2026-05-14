@@ -1,8 +1,6 @@
-'use client';
 import Image from 'next/image';
 import { FiAward, FiGlobe, FiTrendingUp, FiUsers } from 'react-icons/fi';
 import AINativeImg from '../../../public/images/AINative.jpg';
-import { div } from 'three/src/nodes/math/OperatorNode';
 
 const AINative = () => {
   const stats = [
