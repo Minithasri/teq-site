@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
-import bg from '../../../public/images/background.png';
 
 function GradientHeading() {
   const lines = ['We Build Intelligent Agents', 'that work for you'];

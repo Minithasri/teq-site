@@ -7,9 +7,6 @@
  * - Which parts of your site they can crawl (Allow)
  * - Which parts to ignore (Disallow)
  * - Where to find your sitemap.xml
- *
- * ⚙️ Works with Next.js App Router
- * and supports static export (output: 'export').
  */
 
 // Tell Next.js to build this statically (no server needed)
@@ -20,22 +17,43 @@ export default function robots() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gwcdata.ai';
 
   return {
-    // ✅ Main crawling rules for all bots
+    // ✅ AI Crawler Rules - Restrictive Configuration
+    // Blocks AI crawlers from sensitive areas while allowing public content access
     rules: [
       {
-        userAgent: '*', // Applies to all bots (Google, Bing, etc.)
-        allow: '/', // Allow crawling of all public pages
-        disallow: [
-          // Disallow specific private sections
-          '/api/',
-          '/admin/',
-          '/private/',
+        // 🤖 Major AI Crawlers (Allowed with restrictions)
+        userAgent: [
+          'GPTBot',
+          'ChatGPT-User',
+          'ClaudeBot',
+          'Anthropic-AI',
+          'Google-Extended',
+          'PerplexityBot',
+          'FacebookBot',
         ],
+        allow: ['/', '/llms.txt', '/.well-known/llms.txt'],
+        disallow: ['/admin/', '/api/', '/private/', '/user/'],
+      },
+      {
+        // 🚫 Blocked AI/Training Bots
+        userAgent: ['CCBot', 'cohere-ai', 'Diffbot', 'omgili', 'Bytespider', 'YouBot'],
+        disallow: '/',
+      },
+      {
+        // 🌐 Standard Search Engines & Default Rules
+        userAgent: '*',
+        allow: ['/', '/llms.txt', '/.well-known/llms.txt'],
+        disallow: ['/api/', '/admin/', '/private/'],
+        crawlDelay: 1,
       },
     ],
 
-    // ✅ Tells bots where the sitemap is
-    sitemap: `${baseUrl}/sitemap.xml`,
+    // ✅ Tells bots where the sitemaps are
+    sitemap: [
+      `${baseUrl}/sitemap.xml`,
+      `${baseUrl}/image-sitemap.xml`,
+      `${baseUrl}/video-sitemap.xml`,
+    ],
 
     // ✅ Optionally specify the preferred domain
     host: baseUrl,

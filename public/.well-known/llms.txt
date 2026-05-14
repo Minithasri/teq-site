@@ -1,0 +1,19 @@
+# GWC DATA.AI - Enterprise AI Agents & Solutions
+
+> Enterprise AI agents and solutions for data management automation, compliance, and decision intelligence
+
+## Full Corpus
+- [/llms-full.txt](https://gwcdata.ai/llms-full.txt)
+
+## Key Pages
+- [/](https://gwcdata.ai/): Homepage - Enterprise AI Agents & Solutions overview
+- [/solutions](https://gwcdata.ai/solutions): AI Solutions for enterprise data management
+- [/products](https://gwcdata.ai/products): AI Agent products and capabilities
+- [/industries](https://gwcdata.ai/industries): Industry-specific AI implementations
+- [/resources](https://gwcdata.ai/resources): Case studies, whitepapers, and documentation
+- [/about](https://gwcdata.ai/about): Company information and expertise
+- [/contact](https://gwcdata.ai/contact): Get in touch with our team
+
+## Contact
+- Website: https://gwcdata.ai
+- Email: info@gwcdata.ai
