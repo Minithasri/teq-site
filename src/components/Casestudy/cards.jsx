@@ -76,6 +76,27 @@ const Cards = () => {
       description: 'Transforming Enterprise Knowledge Access with AI-Powered Retrieval',
       image: '/images/Templates/template10/hero10.webp',
     },
+    {
+      slug: 'bay',
+      title: 'Product Authentication & Theft Monitoring Analytics Platform',
+      description:
+        'A centralized analytics solution that transformed fragmented counterfeit monitoring into an automated intelligence platform delivering real-time threat detection and secure, role-based insights to 50+ stakeholders.',
+      image: '/images/Templates/z-bay/hero-bg.png',
+    },
+    {
+      slug: 'john-good-groups',
+      title: 'Unified Travel Analytics Platform Implementation',
+      description:
+        'A global travel organization transformed its analytics ecosystem by migrating from Power BI to a scalable, centralized platform, enabling faster insights, improved accessibility, and consistent reporting across regions.',
+      image: '/images/Templates/z-john-good-groups/hero-bg.png',
+    },
+    {
+      slug: 'hy-24',
+      title: 'Automated Asset & Project Reporting Platform',
+      description:
+        'A global clean energy investment firm transformed its reporting ecosystem by replacing complex Excel-based processes with an automated, centralized BI platform enabling real-time portfolio insights, improved accuracy, and scalable decision-making.',
+      image: '/images/Templates/z-hy-24/sunset-sky-powers-wind.png',
+    },
   ];
 
   const cardsData = caseStudiesData.map((study, i) => {
