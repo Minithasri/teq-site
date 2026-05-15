@@ -2,85 +2,24 @@
 
 import Image from 'next/image';
 
-const TrendIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-7 w-7'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2.2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <path d='M5 15l5-5 4 4 5-5' />
-    <path d='M14 9h5v5' />
-  </svg>
-);
-
-const BoltIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-6 w-6'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2.2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <path d='M13 2L4 14h6l-1 8 9-12h-6l1-8z' />
-  </svg>
-);
-
-const ShieldIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-6 w-6'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2.2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <path d='M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z' />
-    <path d='M9.5 12l1.5 1.5 3-3' />
-  </svg>
-);
-
-const GlobeIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-6 w-6'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2.2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <circle cx='12' cy='12' r='9' />
-    <path d='M3 12h18' />
-    <path d='M12 3a15 15 0 0 1 0 18' />
-    <path d='M12 3a15 15 0 0 0 0 18' />
-  </svg>
-);
-
 const impactCards = [
   {
-    icon: <TrendIcon />,
+    icon: '/images/Templates/z-john-good-groups/trend-up.svg',
     value: '70–80%',
     title: 'Reduction in Manual Data Preparation',
   },
   {
-    icon: <BoltIcon />,
+    icon: '/images/Templates/z-john-good-groups/boult.svg',
     value: '60%',
     title: 'Faster Report Refresh Time',
   },
   {
-    icon: <ShieldIcon />,
+    icon: '/images/Templates/z-john-good-groups/security.svg',
     value: '99%+',
     title: 'Data Accuracy After Validation',
   },
   {
-    icon: <GlobeIcon />,
+    icon: '/images/Templates/z-john-good-groups/internet.svg',
     value: '75%',
     title: 'Improvement in Global Reporting Accessibility',
   },
@@ -155,7 +94,15 @@ const BusinessImpactSection = () => {
                 className='rounded-3xl border-2 border-[#2BE14B] bg-white px-5 py-8 text-center'
               >
                 {/* ICON */}
-                <div className='flex justify-center text-[#19D219]'>{card.icon}</div>
+                <div className='flex justify-center text-[#19D219]'>
+                  <Image
+                    src={card.icon}
+                    alt={card.title}
+                    width={28}
+                    height={28}
+                    className='h-6 w-6 md:h-8 md:w-8 object-contain'
+                  />
+                </div>
 
                 {/* VALUE */}
                 <h3 className='mt-4 text-5xl font-semibold tracking-tight text-[#19D219]'>

@@ -17,23 +17,7 @@ const solutionCards = [
     description:
       'Built a centralized BI platform using Domo, consolidating all reporting into a single source of truth for the investment portfolio.',
     tag: 'Domo Platform',
-    icon: (
-      <svg width='24' height='24' viewBox='0 0 24 24' fill='none'>
-        <ellipse cx='12' cy='6' rx='5' ry='2.5' stroke='white' strokeWidth='1.8' />
-        <path
-          d='M7 6v4c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5V6'
-          stroke='white'
-          strokeWidth='1.8'
-          strokeLinecap='round'
-        />
-        <path
-          d='M7 10v4c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-4'
-          stroke='white'
-          strokeWidth='1.8'
-          strokeLinecap='round'
-        />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/centralized.svg',
   },
 
   {
@@ -42,30 +26,7 @@ const solutionCards = [
     description:
       'Developed a dynamic data input interface using JavaScript (Domo App Studio), enabling structured data capture with validation.',
     tag: 'Domo App Studio',
-    icon: (
-      <svg width='24' height='24' viewBox='0 0 24 24' fill='none'>
-        {/* LEFT BRACKET */}
-        <path
-          d='M10 8L6 12L10 16'
-          stroke='white'
-          strokeWidth='1.8'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        />
-
-        {/* BACKWARD SLASH */}
-        <path d='M13 7L11 17' stroke='white' strokeWidth='1.8' strokeLinecap='round' />
-
-        {/* RIGHT BRACKET */}
-        <path
-          d='M14 8L18 12L14 16'
-          stroke='white'
-          strokeWidth='1.8'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/dynamic.svg',
   },
 
   {
@@ -74,30 +35,7 @@ const solutionCards = [
     description:
       'Captured structured project and asset-level inputs via a guided questionnaire, replacing unstructured spreadsheet submissions.',
     tag: 'Standardized inputs',
-    icon: (
-      <svg width='24' height='24' viewBox='0 0 24 24' fill='none'>
-        <path
-          d='M12 5L6 8L12 11L18 8L12 5Z'
-          stroke='white'
-          strokeWidth='1.8'
-          strokeLinejoin='round'
-        />
-        <path
-          d='M6 12L12 15L18 12'
-          stroke='white'
-          strokeWidth='1.8'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        />
-        <path
-          d='M6 16L12 19L18 16'
-          stroke='white'
-          strokeWidth='1.8'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/structured.svg',
   },
 
   {
@@ -106,25 +44,7 @@ const solutionCards = [
     description:
       'Integrated with Domo Jupyter (Python) to fetch API-based JSON data from external systems, automating data collection.',
     tag: 'Python + Jupyter',
-    icon: (
-      <svg
-        viewBox='0 0 24 24'
-        className='h-5 w-5'
-        fill='none'
-        stroke='white'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      >
-        {/* FILE */}
-        <path d='M14 3H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9z' />
-        <path d='M14 3v6h6' />
-
-        {/* CODE BRACES */}
-        <path d='M10 13l-1.5 1.5L10 16' />
-        <path d='M14 13l1.5 1.5L14 16' />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/api.svg',
   },
   {
     number: '05',
@@ -132,21 +52,7 @@ const solutionCards = [
     description:
       'Designed ETL pipelines to cleanse and transform data, standardize calculations, and compute asset, project, and portfolio-level metrics.',
     tag: 'Magic ETL',
-    icon: (
-      <svg
-        viewBox='0 0 24 24'
-        className='h-4 w-4 rotate-180'
-        fill='none'
-        stroke='white'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      >
-        <circle cx='7' cy='7' r='3' />
-        <circle cx='17' cy='17' r='3' />
-        <path d='M10 7h4a3 3 0 0 1 3 3v4' />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/etl.svg',
   },
   {
     number: '06',
@@ -154,14 +60,7 @@ const solutionCards = [
     description:
       'Delivered 5 automated dashboards for unified reporting with real-time data flow, eliminating all manual dependencies.',
     tag: '5 dashboards deployed',
-    icon: (
-      <svg width='24' height='24' viewBox='0 0 24 24' fill='none'>
-        <rect x='5' y='5' width='5' height='5' rx='1' stroke='white' strokeWidth='1.8' />
-        <rect x='14' y='5' width='5' height='5' rx='1' stroke='white' strokeWidth='1.8' />
-        <rect x='5' y='14' width='5' height='5' rx='1' stroke='white' strokeWidth='1.8' />
-        <rect x='14' y='14' width='5' height='5' rx='1' stroke='white' strokeWidth='1.8' />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/automated.svg',
   },
 ];
 
@@ -267,8 +166,14 @@ const SolutionSection = () => {
                   </div>
 
                   {/* ICON */}
-                  <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-[#5146E5]'>
-                    {card.icon}
+                  <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#5146E5]'>
+                    <Image
+                      src={card.icon}
+                      alt={card.title}
+                      width={28}
+                      height={28}
+                      className='h-6 w-6 md:h-8 md:w-8 object-contain'
+                    />
                   </div>
 
                   {/* CONTENT */}

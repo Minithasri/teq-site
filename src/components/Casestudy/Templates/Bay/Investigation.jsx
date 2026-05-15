@@ -37,98 +37,30 @@ const tableData = [
   },
 ];
 
-const TrendDownIcon = () => (
-  <svg
-    xmlns='http://www.w3.org/2000/svg'
-    width='22'
-    height='22'
-    viewBox='0 0 24 24'
-    fill='none'
-    stroke='#20C05C'
-    strokeWidth='2.2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <path d='M3 7l6 6 4-4 7 7' />
-    <path d='M20 16v-6h-6' />
-  </svg>
-);
-
-const BoltIcon = () => (
-  <svg
-    xmlns='http://www.w3.org/2000/svg'
-    width='22'
-    height='22'
-    viewBox='0 0 24 24'
-    fill='none'
-    stroke='#20C05C'
-    strokeWidth='2.2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <path d='M13 2L4 14h7l-1 8 9-12h-7l1-8z' />
-  </svg>
-);
-
-const ShieldCheckIcon = () => (
-  <svg
-    xmlns='http://www.w3.org/2000/svg'
-    width='22'
-    height='22'
-    viewBox='0 0 24 24'
-    fill='none'
-    stroke='#20C05C'
-    strokeWidth='2.2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <path d='M12 22s7-4 7-10V5l-7-3-7 3v7c0 6 7 10 7 10z' />
-    <path d='M9 12l2 2 4-4' />
-  </svg>
-);
-
-const TargetIcon = () => (
-  <svg
-    xmlns='http://www.w3.org/2000/svg'
-    width='22'
-    height='22'
-    viewBox='0 0 24 24'
-    fill='none'
-    stroke='#20C05C'
-    strokeWidth='2.2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <circle cx='12' cy='12' r='8' />
-    <circle cx='12' cy='12' r='4' />
-    <circle cx='12' cy='12' r='1.5' fill='#20C05C' stroke='none' />
-  </svg>
-);
-
 const impactCards = [
   {
     value: '95%',
     title: 'Reduction in manual reporting',
     desc: 'Automated theft monitoring reports delivered to 50+ stakeholders.',
-    icon: <TrendDownIcon />,
+    icon: '/images/Templates/z-bay/trend-down.svg',
   },
   {
     value: '40%',
     title: 'Faster investigation response',
     desc: 'Through automated alerts and scheduled reporting workflows.',
-    icon: <BoltIcon />,
+    icon: '/images/Templates/z-bay/fast.svg',
   },
   {
     value: '100%',
     title: 'Secure access control coverage',
     desc: 'Role-based row-level permissions across all dashboards.',
-    icon: <ShieldCheckIcon />,
+    icon: '/images/Templates/z-bay/secure.svg',
   },
   {
     value: '75%',
     title: 'Faster high-risk SKU identification',
     desc: 'Enabling faster preventative actions against counterfeit products.',
-    icon: <TargetIcon />,
+    icon: '/images/Templates/z-bay/target.svg',
   },
 ];
 
@@ -310,7 +242,13 @@ const Investigation = () => {
                 {/* ICON */}
                 <div className='flex items-center gap-4 mb-5'>
                   <div className='w-10 md:w-12 h-10 md:h-12 rounded-lg md:rounded-xl border border-[#20C05C] flex items-center justify-center [&>svg]:w-5 md:[&>svg]:w-[22px] [&>svg]:h-5 md:[&>svg]:h-[22px]'>
-                    {card.icon}
+                    <Image
+                      src={card.icon}
+                      alt={card.title}
+                      width={28}
+                      height={28}
+                      className='h-6 w-6 md:h-8 md:w-8 object-contain'
+                    />
                   </div>
 
                   <h3 className='text-[36px] md:text-[44px] font-semibold text-[#20C05C]'>

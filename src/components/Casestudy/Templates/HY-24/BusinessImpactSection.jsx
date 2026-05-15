@@ -4,83 +4,25 @@ import Image from 'next/image';
 
 const impactStats = [
   {
-    icon: (
-      <svg
-        viewBox='0 0 24 24'
-        className='h-5 w-5'
-        fill='none'
-        stroke='#18D80F'
-        strokeWidth='2.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      >
-        <path d='M4 15L9 10L13 14L20 7' />
-        <path d='M15 7H20V12' />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/trend-up.svg',
     value: '85%',
     title: 'Reduction in Manual Reporting Effort',
   },
 
   {
-    icon: (
-      <svg
-        viewBox='0 0 24 24'
-        className='h-5 w-5'
-        fill='none'
-        stroke='#18D80F'
-        strokeWidth='2.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      >
-        <circle cx='12' cy='12' r='8' />
-        <circle cx='12' cy='12' r='4.5' />
-        <circle cx='12' cy='12' r='1' fill='#18D80F' stroke='none' />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/target.svg',
     value: '99%+',
     title: 'Improvement in Data Accuracy',
   },
 
   {
-    icon: (
-      <svg
-        viewBox='0 0 24 24'
-        className='h-5 w-5'
-        fill='none'
-        stroke='#18D80F'
-        strokeWidth='2.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      >
-        <path d='M10 3L4 12H11L9 21L20 10H13L15 3H10Z' />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/bolt.svg',
     value: '70%',
     title: 'Faster Report Generation Time',
   },
 
   {
-    icon: (
-      <svg
-        viewBox='0 0 24 24'
-        className='h-5 w-5'
-        fill='none'
-        stroke='#18D80F'
-        strokeWidth='2.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      >
-        {/* LEFT SIDE */}
-        <path d='M10 4C7.5 4 6 6 6 8C4.5 8.5 4 10 4 11.5C4 13.5 5.2 15 7 15.5C6.8 17.8 8.2 20 11 20' />
-
-        {/* RIGHT SIDE */}
-        <path d='M14 4C16.5 4 18 6 18 8C19.5 8.5 20 10 20 11.5C20 13.5 18.8 15 17 15.5C17.2 17.8 15.8 20 13 20' />
-
-        {/* CENTER LINE */}
-        <path d='M12 4V20' />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/brain.svg',
     value: '60%',
     title: 'Improvement in Decision-Making Speed',
   },
@@ -91,110 +33,35 @@ const capabilities = [
     title: 'Automated Data Collection & Ingestion',
     description:
       'Seamless data capture from multiple sources with automated validation and ingestion pipelines.',
-    icon: (
-      <svg
-        viewBox='0 0 24 24'
-        className='h-4 w-4'
-        fill='none'
-        stroke='#18D80F'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      >
-        <path d='M7 17a4 4 0 1 1 .8-7.9A5 5 0 0 1 17 11a3 3 0 1 1 0 6' />
-
-        <path d='M12 16V10' />
-        <path d='M9.5 12.5L12 10l2.5 2.5' />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/upload.svg',
   },
 
   {
     title: 'Centralized Portfolio Reporting',
     description:
       'Unified view across all assets and projects, replacing siloed spreadsheet-based reporting.',
-    icon: (
-      <svg
-        viewBox='0 0 24 24'
-        className='h-4 w-4'
-        fill='none'
-        stroke='#18D80F'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      >
-        <path d='M12 6V12H16' />
-        <circle cx='12' cy='12' r='7' />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/timer.svg',
   },
 
   {
     title: 'Real-Time Analytics Dashboards',
     description:
       'Interactive dashboards with live data refresh, enabling instant portfolio performance monitoring.',
-    icon: (
-      <svg
-        viewBox='0 0 24 24'
-        className='h-4 w-4'
-        fill='none'
-        stroke='#18D80F'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      >
-        <path d='M4 12H8L10 6L14 18L16 12H20' />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/real-time.svg',
   },
 
   {
     title: 'Scalable Architecture',
     description:
       'Platform designed for future expansion easily onboard new assets, projects, and data sources.',
-    icon: (
-      <svg
-        viewBox='0 0 24 24'
-        className='h-4 w-4'
-        fill='none'
-        stroke='#18D80F'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      >
-        <path d='M8 4H4V8' />
-        <path d='M16 4H20V8' />
-        <path d='M20 16V20H16' />
-        <path d='M4 16V20H8' />
-        <path d='M9 9L4 4' />
-        <path d='M15 9L20 4' />
-        <path d='M15 15L20 20' />
-        <path d='M9 15L4 20' />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/scalable.svg',
   },
 
   {
     title: 'Elimination of Excel Dependencies',
     description:
       'Complete removal of fragile spreadsheet workflows, reducing risk and manual effort across the organization.',
-    icon: (
-      <svg
-        viewBox='0 0 24 24'
-        className='h-4 w-4'
-        fill='none'
-        stroke='#18D80F'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      >
-        <path d='M8 3H14L18 7V20H8V3Z' />
-        <path d='M14 3V7H18' />
-
-        <path d='M10.5 12.5L13.5 15.5' />
-        <path d='M13.5 12.5L10.5 15.5' />
-      </svg>
-    ),
+    icon: '/images/Templates/z-hy-24/file.svg',
   },
 ];
 
@@ -222,7 +89,13 @@ const BusinessImpactSection = () => {
             >
               {/* ICON */}
               <div className='text-[18px] text-[#18D80F] items-center justify-center flex'>
-                {item.icon}
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  width={28}
+                  height={28}
+                  className='h-6 w-6 md:h-8 md:w-8 object-contain'
+                />
               </div>
 
               {/* VALUE */}
@@ -293,8 +166,14 @@ const BusinessImpactSection = () => {
                   {/* HEADER */}
                   <div className='flex items-start gap-3'>
                     {/* ICON */}
-                    <div className='flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-[10px] border border-[#18D80F]'>
-                      {item.icon}
+                    <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[10px] border border-[#18D80F]'>
+                      <Image
+                        src={item.icon}
+                        alt={item.title}
+                        width={28}
+                        height={28}
+                        className='h-6 w-6 md:h-8 md:w-8 object-contain'
+                      />
                     </div>
 
                     {/* TITLE */}
@@ -352,8 +231,14 @@ const BusinessImpactSection = () => {
                       {/* HEADER */}
                       <div className='flex items-start gap-3'>
                         {/* ICON */}
-                        <div className='flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-[10px] border border-[#18D80F]'>
-                          {item.icon}
+                        <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[10px] border border-[#18D80F]'>
+                          <Image
+                            src={item.icon}
+                            alt={item.title}
+                            width={28}
+                            height={28}
+                            className='h-6 w-6 md:h-8 md:w-8 object-contain'
+                          />
                         </div>
 
                         {/* TITLE */}

@@ -37,180 +37,14 @@ const challengeCards = [
 
 const flowItems = ['Excel / TMS', 'Magic ETL', 'Unified Model', 'Dashboards'];
 
-const WarningIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-4 w-4 text-[#FF3B30]'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2'
-  >
-    <path d='M12 3L2 21h20L12 3z' />
-    <path d='M12 9v4' />
-    <circle cx='12' cy='17' r='1' fill='currentColor' stroke='none' />
-  </svg>
-);
-
-const ClockIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-4 w-4 text-[#FF3B30]'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2'
-  >
-    <circle cx='12' cy='12' r='9' />
-    <path d='M12 7v5l3 2' />
-  </svg>
-);
-
-const GlobeIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-4 w-4 text-[#FF3B30]'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2'
-  >
-    <circle cx='12' cy='12' r='9' />
-    <path d='M3 12h18' />
-    <path d='M12 3a15 15 0 0 1 0 18' />
-    <path d='M12 3a15 15 0 0 0 0 18' />
-  </svg>
-);
-
-const LockIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-4 w-4 text-[#FF3B30]'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2'
-  >
-    <rect x='5' y='11' width='14' height='10' rx='2' />
-    <path d='M8 11V8a4 4 0 1 1 8 0v3' />
-  </svg>
-);
-
-const FileIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-4 w-4 text-[#FF3B30]'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2'
-  >
-    <path d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z' />
-    <path d='M14 2v6h6' />
-    <path d='M9 13h6' />
-    <path d='M9 17h4' />
-  </svg>
-);
-
 const cards = [
-  { icon: <WarningIcon />, ...challengeCards[0] },
-  { icon: <ClockIcon />, ...challengeCards[1] },
-  { icon: <GlobeIcon />, ...challengeCards[2] },
-  { icon: <LockIcon />, ...challengeCards[3] },
-  { icon: <FileIcon />, ...challengeCards[4] },
-  { icon: <WarningIcon />, ...challengeCards[5] },
+  { icon: '/images/Templates/z-john-good-groups/single-bi.svg', ...challengeCards[0] },
+  { icon: '/images/Templates/z-john-good-groups/data-loading.svg', ...challengeCards[1] },
+  { icon: '/images/Templates/z-john-good-groups/limited-global.svg', ...challengeCards[2] },
+  { icon: '/images/Templates/z-john-good-groups/lock.svg', ...challengeCards[3] },
+  { icon: '/images/Templates/z-john-good-groups/data-preperation.svg', ...challengeCards[4] },
+  { icon: '/images/Templates/z-john-good-groups/single-bi.svg', ...challengeCards[5] },
 ];
-
-const MigrationIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-4 w-4'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <ellipse cx='12' cy='5' rx='7' ry='3' />
-    <path d='M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5' />
-    <path d='M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6' />
-  </svg>
-);
-
-const ETLIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-4 w-4'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <path d='M12 3l7 4-7 4-7-4 7-4z' />
-    <path d='M5 12l7 4 7-4' />
-    <path d='M5 17l7 4 7-4' />
-  </svg>
-);
-
-const AutomationIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-4 w-4 rotate-180'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <circle cx='7' cy='7' r='3' />
-    <circle cx='17' cy='17' r='3' />
-    <path d='M10 7h4a3 3 0 0 1 3 3v4' />
-  </svg>
-);
-
-const ValidationIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-4 w-4'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <path d='M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z' />
-  </svg>
-);
-
-const UnifiedIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-4 w-4'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <path d='M4 12a8 8 0 0 1 13-6' />
-    <path d='M20 4v5h-5' />
-    <path d='M20 12a8 8 0 0 1-13 6' />
-    <path d='M4 20v-5h5' />
-  </svg>
-);
-
-const DashboardIcon = () => (
-  <svg
-    viewBox='0 0 24 24'
-    className='h-4 w-4'
-    fill='none'
-    stroke='currentColor'
-    strokeWidth='2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <rect x='3' y='3' width='7' height='7' rx='2' />
-    <rect x='14' y='3' width='7' height='7' rx='2' />
-    <rect x='3' y='14' width='7' height='7' rx='2' />
-    <rect x='14' y='14' width='7' height='7' rx='2' />
-  </svg>
-);
 
 const ChallengeSolutionSection = () => {
   return (
@@ -250,7 +84,15 @@ const ChallengeSolutionSection = () => {
             <div key={index} className='rounded-2xl border-l-4 border-[#FF6B6B] bg-white p-5'>
               {/* TOP */}
               <div className='flex items-start gap-3'>
-                <div className='mt-1'>{card.icon}</div>
+                <div className='mt-1'>
+                  <Image
+                    src={card.icon}
+                    alt={card.title}
+                    width={28}
+                    height={28}
+                    className='h-6 w-6 md:h-8 md:w-8 object-contain'
+                  />
+                </div>
                 <h3 className='text-lg font-semibold leading-snug text-[#FF3B30]'>{card.title}</h3>
               </div>
 
@@ -363,42 +205,42 @@ const ChallengeSolutionSection = () => {
           {[
             {
               id: '1',
-              icon: <MigrationIcon />,
+              icon: '/images/Templates/z-john-good-groups/db.svg',
               title: 'Report & Data Model Migration',
               desc: 'Systematic migration of Power BI reports and underlying data models to the Domo platform, ensuring feature parity and structural integrity.',
               tag: 'Power BI → Domo',
             },
             {
               id: '2',
-              icon: <ETLIcon />,
+              icon: '/images/Templates/z-john-good-groups/etl.svg',
               title: 'Dataset & ETL Pipeline Rebuild',
               desc: "Complete reconstruction of datasets and ETL pipelines optimized for Domo's architecture, leveraging Magic ETL for data transformation and standardization.",
               tag: 'Magic ETL',
             },
             {
               id: '3',
-              icon: <AutomationIcon />,
+              icon: '/images/Templates/z-john-good-groups/data-integration.svg',
               title: 'Automated Data Ingestion',
               desc: 'Implementation of automated data ingestion workflows from multiple source systems including TMS, Excel, and legacy report extracts.',
               tag: 'Multi-source automation',
             },
             {
               id: '4',
-              icon: <ValidationIcon />,
+              icon: '/images/Templates/z-john-good-groups/data-visualization.svg',
               title: 'Data Validation & Parity',
               desc: 'Rigorous validation processes cross-referencing new outputs against legacy reports. Validated against 4.2M historical records to ensure 99.9% parity.',
               tag: '4.2M records validated',
             },
             {
               id: '5',
-              icon: <UnifiedIcon />,
+              icon: '/images/Templates/z-john-good-groups/data-modal.svg',
               title: 'Unified Data Model',
               desc: 'Creation of a unified, normalized data model enabling consistent global travel analytics across all regions and business units.',
               tag: 'Global standardization',
             },
             {
               id: '6',
-              icon: <DashboardIcon />,
+              icon: '/images/Templates/z-john-good-groups/dashboard-delivery.svg',
               title: 'Interactive Dashboard Delivery',
               desc: 'Deployment of interactive dashboards with improved usability, performance, and self-service capabilities for distributed teams.',
               tag: 'Self-service analytics',
@@ -417,8 +259,14 @@ const ChallengeSolutionSection = () => {
                   </div>
 
                   {/* ICON */}
-                  <div className='flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#5C5CEB] text-white [&>svg]:h-4 [&>svg]:w-4'>
-                    {item.icon}
+                  <div className='flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#5C5CEB] text-white [&>svg]:h-4 [&>svg]:w-4'>
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={28}
+                      height={28}
+                      className='h-6 w-6 md:h-8 md:w-8 object-contain'
+                    />
                   </div>
 
                   {/* CONTENT */}

@@ -84,6 +84,7 @@ const Technology = () => {
                 h-[150px] md:h-[170px]
                 px-4 md:px-6
                 py-5 md:py-7
+                pb-6 md:pb-8
                 flex
                 flex-col
                 items-center

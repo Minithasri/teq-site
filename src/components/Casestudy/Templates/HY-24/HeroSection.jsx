@@ -2,146 +2,39 @@
 
 import Image from 'next/image';
 
-/* SVG ICONS */
-const ExcelIcon = () => (
-  <svg
-    width='18'
-    height='18'
-    viewBox='0 0 24 24'
-    fill='none'
-    stroke='#FF4B4B'
-    strokeWidth='2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    {/* FILE */}
-    <path d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z' />
-    <path d='M14 2v6h6' />
-
-    {/* THREE COLUMN DOTS */}
-    <circle cx='9' cy='12' r='0.8' fill='#FF4B4B' stroke='none' />
-    <circle cx='12' cy='12' r='0.8' fill='#FF4B4B' stroke='none' />
-
-    <circle cx='9' cy='15' r='0.8' fill='#FF4B4B' stroke='none' />
-    <circle cx='12' cy='15' r='0.8' fill='#FF4B4B' stroke='none' />
-  </svg>
-);
-
-const LayerIcon = () => (
-  <svg
-    width='18'
-    height='18'
-    viewBox='0 0 24 24'
-    fill='none'
-    stroke='#FF4B4B'
-    strokeWidth='2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <polygon points='12 2 3 7 12 12 21 7 12 2' />
-    <polyline points='3 12 12 17 21 12' />
-    <polyline points='3 17 12 22 21 17' />
-  </svg>
-);
-
-const AlertIcon = () => (
-  <svg
-    width='18'
-    height='18'
-    viewBox='0 0 24 24'
-    fill='none'
-    stroke='#FF4B4B'
-    strokeWidth='2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <path d='M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z' />
-    <line x1='12' y1='9' x2='12' y2='13' />
-    <line x1='12' y1='17' x2='12.01' y2='17' />
-  </svg>
-);
-
-const ClockIcon = () => (
-  <svg
-    width='18'
-    height='18'
-    viewBox='0 0 24 24'
-    fill='none'
-    stroke='#FF4B4B'
-    strokeWidth='2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <circle cx='12' cy='12' r='9' />
-    <polyline points='12 7 12 12 15 15' />
-  </svg>
-);
-
-const EyeIcon = () => (
-  <svg
-    width='18'
-    height='18'
-    viewBox='0 0 24 24'
-    fill='none'
-    stroke='#FF4B4B'
-    strokeWidth='2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <path d='M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z' />
-    <circle cx='12' cy='12' r='3' />
-  </svg>
-);
-
-const GraphIcon = () => (
-  <svg
-    width='18'
-    height='18'
-    viewBox='0 0 24 24'
-    fill='none'
-    stroke='#FF4B4B'
-    strokeWidth='2'
-    strokeLinecap='round'
-    strokeLinejoin='round'
-  >
-    <polyline points='3 7 9 13 13 9 21 17' />
-    <polyline points='14 17 21 17 21 10' />
-  </svg>
-);
-
 const challengeCards = [
   {
-    icon: <ExcelIcon />,
+    icon: '/images/Templates/z-hy-24/excel.svg',
     title: 'Excel Dependency',
     desc: 'Heavy reliance on Excel with complex formulas created fragile, error-prone reporting workflows across the organization.',
     note: '→ Single point of failure',
   },
   {
-    icon: <LayerIcon />,
+    icon: '/images/Templates/z-hy-24/manual.svg',
     title: 'Manual Consolidation',
     desc: 'Manual consolidation across five separate reports consumed significant analyst time and introduced data synchronization risks.',
     note: '→ 5 reports merged manually',
   },
   {
-    icon: <AlertIcon />,
+    icon: '/images/Templates/z-hy-24/calculation.svg',
     title: 'Calculation Errors',
     desc: 'High risk of calculation errors and inconsistencies due to complex nested formulas and manual data entry across spreadsheets.',
     note: '→ Undetected discrepancies',
   },
   {
-    icon: <ClockIcon />,
+    icon: '/images/Templates/z-hy-24/time.svg',
     title: 'Time-Consuming Updates',
     desc: 'Time-consuming updates and validation processes delayed critical investment decisions and quarterly reporting cycles.',
     note: '→ Days of manual validation',
   },
   {
-    icon: <EyeIcon />,
+    icon: '/images/Templates/z-hy-24/lack.svg',
     title: 'Lack of Visibility',
     desc: 'No centralized visibility across assets and projects made it impossible to get a unified view of portfolio performance.',
     note: '→ Siloed data views',
   },
   {
-    icon: <GraphIcon />,
+    icon: '/images/Templates/z-hy-24/portfolio.svg',
     title: 'Portfolio Tracking Gaps',
     desc: 'Difficulty in tracking portfolio-level performance metrics across diverse clean energy assets and investment projects.',
     note: '→ Incomplete portfolio view',
@@ -247,7 +140,13 @@ const HeroSection = () => {
             >
               {/* HEADER */}
               <div className='flex items-center gap-3'>
-                {card.icon}
+                <Image
+                  src={card.icon}
+                  alt={card.title}
+                  width={28}
+                  height={28}
+                  className='h-6 w-6 md:h-8 md:w-8 object-contain'
+                />
 
                 <h4 className='text-[16px] md:text-[18px] font-semibold text-[#FF4B4B]'>
                   {card.title}
