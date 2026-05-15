@@ -88,6 +88,40 @@ function injectTracker() {
         htaccess += '\n# Serve .php files for extensionless Next.js routes\nOptions -MultiViews\n';
       }
 
+      // ─── Injection: Security Headers ──────────────────────────────────────────
+      const securityHeaders = `
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set Content-Security-Policy "frame-ancestors 'self'"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<Files "llms.txt">
+  Header set Content-Type "text/plain; charset=utf-8"
+  Header set Cache-Control "public, max-age=86400"
+</Files>
+`;
+      if (!htaccess.includes('mod_rewrite.c')) {
+        const rewriteBlock = `
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+`;
+        htaccess += rewriteBlock;
+      } else {
+        if (!htaccess.includes('HTTPS off')) {
+          htaccess = htaccess.replace(
+            'RewriteEngine On',
+            'RewriteEngine On\n  RewriteCond %{HTTPS} off\n  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]'
+          );
+        }
+      }
+
       fs.writeFileSync(htaccessPath, htaccess, 'utf8');
       console.log(chalk.greenBright('✓ .htaccess patched (all existing rules preserved)'));
     } else {
@@ -98,6 +132,10 @@ function injectTracker() {
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
@@ -113,7 +151,15 @@ function injectTracker() {
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set X-Content-Type-Options "nosniff"
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set Content-Security-Policy "frame-ancestors 'self'"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+
+<Files "llms.txt">
+  Header set Content-Type "text/plain; charset=utf-8"
+  Header set Cache-Control "public, max-age=86400"
+</Files>
 `,
         'utf8'
       );

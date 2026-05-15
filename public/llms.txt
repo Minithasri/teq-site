@@ -2,6 +2,9 @@
 
 > Enterprise AI agents and solutions for data management automation, compliance, and decision intelligence
 
+## Essential Resources
+- [Sitemap](https://gwcdata.ai/sitemap.xml)
+
 ## Full Corpus
 - [/llms-full.txt](https://gwcdata.ai/llms-full.txt)
 

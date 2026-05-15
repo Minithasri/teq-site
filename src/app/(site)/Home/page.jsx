@@ -35,69 +35,6 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div>
-      {/* 🚀 ADVANCED SEO & AI CRAWLER OPTIMIZATION 
-          This section implements the exact heading structure required for 
-          premium SEO ranking and Generative Experience Optimization (GEO).
-      */}
-      <section className='sr-only' aria-hidden='true'>
-        <h1>Enterprise AI Agents & Data Solutions | GWC DATA.AI</h1>
-
-        <section>
-          <h2>Automate Complex Data Management with AI</h2>
-          <p>
-            GWC streamlines and automates complex data management, ensuring transparency,
-            compliance, and smarter, faster decision making across the organization.
-          </p>
-          <h3>Key Benefits</h3>
-          <ul>
-            <li>Automated data workflows</li>
-            <li>Enhanced compliance and transparency</li>
-            <li>Faster decision-making processes</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Our AI Agent Solutions</h2>
-          <h3>Data Management Automation</h3>
-          <p>
-            Leverage intelligent agents to unify disparate data sources, automate ETL processes, and
-            maintain a clean, actionable data ecosystem.
-          </p>
-          <h3>Compliance & Governance</h3>
-          <p>
-            Automated tracking and reporting tools that ensure data privacy, regulatory compliance,
-            and enterprise-wide governance standards.
-          </p>
-          <h3>Decision Intelligence</h3>
-          <p>
-            Advanced analytics and AI-driven insights that convert complex safety and operational
-            data into clear, decisive actions.
-          </p>
-        </section>
-
-        <section>
-          <h2>Why Choose GWC DATA.AI</h2>
-          <h3>Enterprise-Grade Security</h3>
-          <p>
-            Robust security protocols including end-to-end encryption and secure multi-cloud
-            deployments to protect your most sensitive data.
-          </p>
-          <h3>Seamless Integration</h3>
-          <p>
-            Native connectors and flexible APIs that integrate with your existing tech stack, from
-            Domo and Postgres to custom React applications.
-          </p>
-        </section>
-
-        <section>
-          <h2>Call to Action</h2>
-          <p>
-            Schedule a demo to see how GWC DATA.AI can automate your data management workflows and
-            accelerate enterprise decision-making.
-          </p>
-        </section>
-      </section>
-
       {/* 🧬 STRUCTURED DATA (JSON-LD) 
           This provides search engines and AI systems with explicit 
           metadata about the organization, improving brand authority.
