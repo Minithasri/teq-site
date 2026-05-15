@@ -17,12 +17,12 @@ export default function HeroSection() {
       </div>
 
       {/* Content Overlay */}
-      <div className='relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 py-20'>
-        <div className='max-w-[1400px]'>
-          <h1 className='text-white font-semibold leading-[1.1] md:leading-[111px] tracking-[-1.2px] text-[clamp(32px,5vw,64px)]'>
+      <div className='relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 py-16 md:py-24 lg:py-32'>
+        <div className='max-w-7xl text-center md:text-left'>
+          <h1 className='text-white font-semibold leading-tight md:leading-[1.1] tracking-[-0.5px] md:tracking-[-1.5px] text-3xl sm:text-4xl md:text-6xl lg:text-[74px]'>
             Retail <span className='text-[#47E028]'>Data Warehouse & Business</span>
-            <br />
-            <span style={{ color: '#47E028' }}>Intelligence</span> Platform
+            <br className='hidden md:block' />
+            <span className='text-[#47E028]'>Intelligence</span> Platform
           </h1>
         </div>
       </div>

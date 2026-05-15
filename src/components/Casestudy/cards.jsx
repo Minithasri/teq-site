@@ -150,6 +150,105 @@ const Cards = () => {
         'Transforming customer satisfaction tracking with data-driven insights to systematically analyze feedback across large-scale property development projects.',
       image: '/images/Templates/mahsing/img1.png',
     },
+    {
+      slug: 'style-bazaar',
+      title: 'Retail Data Warehouse & Business Intelligence Platform',
+      type: 'BI Solutions',
+      industry: 'Retail',
+      description:
+        'Optimizing retail operations through advanced data warehousing and business intelligence.',
+      image: '/images/Templates/style_bazaar/style_hero.png',
+    },
+    {
+      slug: 'style-union',
+      title: 'Transforming Retail Performance with Unified Analytics',
+      type: 'BI Solutions',
+      industry: 'Retail',
+      description:
+        'Omnichannel Data Warehouse & BI Platform enabling real-time business visibility for fashion retail.',
+      image: '/images/Templates/style_bazaar/style_hero.png',
+    },
+    {
+      slug: 'tez',
+      title: 'Unified Data Platform & Analytics for Smart Parking Operations',
+      type: 'AI Solutions',
+      industry: 'Travel and hospitality',
+      description:
+        'Achieving a 60% reduction in data processing time and unlocking AI-driven insights for smart parking.',
+      image: '/images/Templates/tez/tez1.png',
+    },
+    {
+      slug: 'custom-dashboard',
+      title: 'AI-Enabled Safety Analytics & Custom Dashboard Solution',
+      type: 'AI Solutions',
+      industry: 'Manufacturing',
+      description:
+        'Transforming complex safety data into actionable, AI-powered insights enabling faster decisions and proactive risk management.',
+      image: '/images/Templates/tez/tez1.png',
+    },
+    {
+      slug: 'aequs',
+      title: 'Transforming Parts Testing with End-to-End Digital Automation',
+      type: 'AI Solutions',
+      industry: 'Manufacturing',
+      description:
+        'Achieving 60–70% reduction in manual errors and ~50% faster testing cycles through a custom-built lifecycle management system.',
+      image: '/images/Templates/aequs/aequs1.png',
+    },
+    {
+      slug: 'centralized-marketing',
+      title: ' Centralized Marketing Dashboard and Automated Reporting',
+      type: 'AI Solutions',
+      industry: 'Manufacturing',
+      description: 'Turning Multi-Channel Marketing Data into One Real-Time Source of Truth',
+      image: '/images/Templates/templatez/z2.png',
+    },
+    {
+      slug: 'toyota',
+      title: 'Transforming Tool Lifecycle Management Through Intelligent Digitization',
+      type: 'AI Solutions',
+      industry: 'Automotive',
+      description:
+        'Streamlining tool management processes with intelligent digital solutions to enhance operational efficiency and lifecycle visibility.',
+      image: '/images/Templates/toyota/toyota1.png',
+    },
+    {
+      slug: 'toyota2',
+      title: 'Maintenance Management Digitization & Operational Analytics System',
+      type: 'AI Solutions',
+      industry: 'Automotive',
+      description:
+        'Transforming maintenance operations and enabling data-driven decision-making for a leading global automotive manufacturer.',
+      image: '/images/Templates/toyota2/toy1.png',
+    },
+    {
+      slug: 'gcon',
+      title: 'AI-Driven Submittal Extraction from Construction Specbooks',
+      type: 'AI Solutions',
+      industry: 'Real Estate',
+      description:
+        'How a leading construction company reduced document review effort by up to 85% and cut turnaround time from days to hours with an intelligent multi- agent AI workflow.',
+      image: '/images/Templates/gcon/hero-bg.png',
+    },
+
+    {
+      slug: 'style-union-2',
+      title: 'Store Manager Mobile Application for Retail Execution',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Empowering retail teams with real-time inventory intelligence and streamlined execution workflows to drive measurable business outcomes.',
+      image: '/images/Templates/style-union-2/hero-bg.png',
+    },
+    {
+      slug: 'bissell',
+      title: 'AI-Powered Executive Reporting & PPT Automation Platform',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Transforming dashboard data into executive-ready insights through intelligent automation and AI-driven reporting.',
+      image: '/images/Templates/bissell/hero-bg.png',
+    },
   ];
 
   const cardsData = caseStudiesData.map((study, i) => {
