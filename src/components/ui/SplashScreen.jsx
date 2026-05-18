@@ -141,7 +141,7 @@ export default function SplashScreen({ onComplete }) {
   return (
     <div
       ref={containerRef}
-      className='fixed inset-0 flex items-center justify-center text-black text-4xl font-bold z-50'
+      className='fixed inset-0 flex items-center justify-center text-black text-4xl font-bold z-[100000]'
       style={{ backgroundColor: '#f5f5f0' }}
     >
       <span ref={textRef} className='opacity-0'>
