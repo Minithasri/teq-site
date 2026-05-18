@@ -1,5 +1,5 @@
 # robots.txt for gwcdata.ai
-# Generated for GEO (Generative Experience Optimization) & AI Crawler Visibility
+# GEO (Generative Experience Optimization) & AI Crawler Visibility
 
 # 🌐 Default: allow all crawlers (must be first)
 User-agent: *
@@ -26,6 +26,12 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
 # ─── Anthropic / Claude ───────────────────────────────────────────────────────
 
 User-agent: ClaudeBot
@@ -47,24 +53,22 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# ─── Common Crawl (used by many AI training datasets) ─────────────────────────
+User-agent: Perplexity-User
+Allow: /
+
+# ─── Common Crawl ─────────────────────────────────────────────────────────────
 
 User-agent: CCBot
-Allow: /
-
-# ─── Cohere ───────────────────────────────────────────────────────────────────
-
-User-agent: cohere-ai
-Allow: /
-
-# ─── Meta AI ──────────────────────────────────────────────────────────────────
-
-User-agent: FacebookBot
 Allow: /
 
 # ─── ByteDance / TikTok AI ────────────────────────────────────────────────────
 
 User-agent: Bytespider
+Allow: /
+
+# ─── Meta AI ──────────────────────────────────────────────────────────────────
+
+User-agent: FacebookBot
 Allow: /
 
 # ─── Apple ────────────────────────────────────────────────────────────────────
@@ -75,9 +79,19 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-# ─── Amazon Alexa ─────────────────────────────────────────────────────────────
+# ─── Amazon ───────────────────────────────────────────────────────────────────
 
 User-agent: Amazonbot
+Allow: /
+
+# ─── Cohere ───────────────────────────────────────────────────────────────────
+
+User-agent: cohere-ai
+Allow: /
+
+# ─── Omgili / Webz.io ─────────────────────────────────────────────────────────
+
+User-agent: omgili
 Allow: /
 
 # ─── Sitemaps ─────────────────────────────────────────────────────────────────
