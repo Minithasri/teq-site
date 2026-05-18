@@ -1,0 +1,90 @@
+# robots.txt for gwcdata.ai
+# Generated for GEO (Generative Experience Optimization) & AI Crawler Visibility
+
+# 🌐 Default: allow all crawlers (must be first)
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# 🚫 Block aggressive scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# ─── Standard Search Engines ──────────────────────────────────────────────────
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# ─── OpenAI ───────────────────────────────────────────────────────────────────
+
+User-agent: GPTBot
+Allow: /
+
+# ─── Anthropic / Claude ───────────────────────────────────────────────────────
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# ─── Google Gemini ────────────────────────────────────────────────────────────
+
+User-agent: Google-Extended
+Allow: /
+
+# ─── Perplexity ───────────────────────────────────────────────────────────────
+
+User-agent: PerplexityBot
+Allow: /
+
+# ─── Common Crawl (used by many AI training datasets) ─────────────────────────
+
+User-agent: CCBot
+Allow: /
+
+# ─── Cohere ───────────────────────────────────────────────────────────────────
+
+User-agent: cohere-ai
+Allow: /
+
+# ─── Meta AI ──────────────────────────────────────────────────────────────────
+
+User-agent: FacebookBot
+Allow: /
+
+# ─── ByteDance / TikTok AI ────────────────────────────────────────────────────
+
+User-agent: Bytespider
+Allow: /
+
+# ─── Apple ────────────────────────────────────────────────────────────────────
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ─── Amazon Alexa ─────────────────────────────────────────────────────────────
+
+User-agent: Amazonbot
+Allow: /
+
+# ─── Sitemaps ─────────────────────────────────────────────────────────────────
+
+Sitemap: https://gwcdata.ai/sitemap.xml
+Sitemap: https://gwcdata.ai/image-sitemap.xml
+Sitemap: https://gwcdata.ai/video-sitemap.xml
+
+# AI Documentation
+# llms.txt: https://gwcdata.ai/llms.txt

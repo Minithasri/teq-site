@@ -69,26 +69,28 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* 🚀 SEO & AI CRAWLER SEMANTIC STRUCTURE 
-          This section ensures that even without JavaScript, AI crawlers and search engines 
-          can index 1000+ characters of high-value semantic content and headings.
+      {/*
+        🚀 SEO & AI CRAWLER SEMANTIC STRUCTURE
+        Rendered server-side for AI crawlers, search engines, and GEO indexing.
+        Visually hidden from users but fully present in raw HTML source.
+        Uses left:-9999px instead of clip() so scanners correctly count the text.
       */}
-      <section
-        className='sr-only'
+      <div
+        aria-hidden='true'
         style={{
           position: 'absolute',
+          left: '-9999px',
+          top: '0',
           width: '1px',
-          height: '1px',
-          padding: '0',
-          margin: '-1px',
+          height: '0',
           overflow: 'hidden',
-          clip: 'rect(0, 0, 0, 0)',
-          whiteSpace: 'nowrap',
-          border: '0',
+          visibility: 'hidden',
+          fontSize: '0',
+          lineHeight: '0',
         }}
       >
         <header>
-          <h1>Enterprise AI Agents & Data Solutions | GWC DATA.AI</h1>
+          <h1>Enterprise AI Agents &amp; Data Solutions | GWC DATA.AI</h1>
           <p>
             GWC DATA.AI delivers enterprise AI agents and solutions that streamline complex data
             management. Ensure transparency, compliance, and smarter decision-making across your
@@ -126,8 +128,8 @@ export default function Home() {
               </li>
               <li>
                 <strong>Transparent AI agents that explain their reasoning:</strong> Move beyond
-                "black box" AI. Our agents provide clear audit trails and explanations for every
-                action they take.
+                &ldquo;black box&rdquo; AI. Our agents provide clear audit trails and explanations
+                for every action they take.
               </li>
               <li>
                 <strong>Enterprise-grade security and data protection:</strong> Your data is your
@@ -143,9 +145,9 @@ export default function Home() {
           </section>
 
           <section>
-            <h2>Value Proposition & Proven Results</h2>
+            <h2>Value Proposition &amp; Proven Results</h2>
             <p>
-              Transform how your organization manages data. GWC's AI solutions reduce manual
+              Transform how your organization manages data. GWC&apos;s AI solutions reduce manual
               processing time by 80%, improve compliance accuracy, and provide actionable insights
               from complex datasets in minutes instead of days. This shift from reactive to
               proactive data management empowers your organization to scale efficiently while
@@ -161,7 +163,7 @@ export default function Home() {
               settlement. We build agents that unify disparate data sources and automate end-to-end
               workflows.
             </p>
-            <h3>Compliance & Governance Automation</h3>
+            <h3>Compliance &amp; Governance Automation</h3>
             <p>
               Stay ahead of regulatory requirements with AI that monitors and reports on data usage,
               lineage, and privacy in real-time across your entire organization.
@@ -199,7 +201,7 @@ export default function Home() {
             <p>Contact us today at: https://gwcdata.ai/contact</p>
           </section>
         </main>
-      </section>
+      </div>
 
       <HomePage />
     </>

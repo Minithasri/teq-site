@@ -249,6 +249,33 @@ const Cards = () => {
         'Transforming dashboard data into executive-ready insights through intelligent automation and AI-driven reporting.',
       image: '/images/Templates/bissell/hero-bg.png',
     },
+    {
+      slug: 'gsk',
+      title: 'Identity Access Management (IDAM) Reporting & License Optimization',
+      type: 'AI Solutions',
+      industry: 'Healthcare',
+      description:
+        'Enabling enterprise-grade governance, automation, and cost optimization through centralized identity and license management.',
+      image: '/images/Templates/gsk/gsk2.png',
+    },
+    {
+      slug: 'tess',
+      title: 'Enterprise Digital Transformation for Production, Quality & Supply Chain',
+      type: 'AI Solutions',
+      industry: 'Manufacturing',
+      description:
+        'Driving real-time visibility, operational efficiency, and data-driven decision-making across manufacturing operations through an integrated digital platform.',
+      image: '/images/Templates/tess/tess1.png',
+    },
+    {
+      slug: 'careabout',
+      title: 'Cloud-Based Data Platform & ETL Modernization for Payer Systems',
+      type: 'AI Solutions',
+      industry: 'Healthcare',
+      description:
+        'Enabling cloud modernization, scalable data infrastructure, and standardized analytics for a leading healthcare organization.',
+      image: '/images/Templates/careabout/care1.png',
+    },
   ];
 
   const cardsData = caseStudiesData.map((study, i) => {

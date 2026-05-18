@@ -5,22 +5,40 @@
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
 
-# Security Headers & Caching for HTML
-<FilesMatch "\.(html)$">
-  Header set Cache-Control "no-cache, no-store, must-revalidate"
+# ── Security Headers ─────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+  # Clickjacking protection
   Header always set X-Frame-Options "SAMEORIGIN"
-  Header always set Content-Security-Policy "frame-ancestors 'self'"
-  
-  # HSTS (Strict-Transport-Security) - 1 year
+
+  # MIME sniffing protection
+  Header always set X-Content-Type-Options "nosniff"
+
+  # HSTS - enforce HTTPS for 1 year
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Modern clickjacking protection (CSP)
+  Header always set Content-Security-Policy "frame-ancestors 'self'"
+
+  # XSS Filter
+  Header always set X-XSS-Protection "1; mode=block"
+
+  # Referrer privacy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ── HTML Files: no-cache so crawlers always see fresh SSR content ─────────────
+<FilesMatch "\.(html|php)$">
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Pragma "no-cache"
+  Header set Expires 0
 </FilesMatch>
 
-# Static Asset Caching
-<FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|webp|woff2)$">
+# ── Static Asset Caching ──────────────────────────────────────────────────────
+<FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|webp|woff2|woff|ttf|eot)$">
   Header set Cache-Control "public, max-age=31536000, immutable"
 </FilesMatch>
 
-# AI Guide (llms.txt) Headers
+# ── AI Guide (llms.txt) Headers ───────────────────────────────────────────────
 <Files "llms.txt">
   Header set Content-Type "text/plain; charset=utf-8"
   Header set Cache-Control "public, max-age=86400"

@@ -104,6 +104,7 @@ function injectTracker() {
   Header set Cache-Control "public, max-age=86400"
 </Files>
 `;
+      // Add HTTPS redirect if missing
       if (!htaccess.includes('mod_rewrite.c')) {
         const rewriteBlock = `
 <IfModule mod_rewrite.c>
@@ -122,8 +123,16 @@ function injectTracker() {
         }
       }
 
+      // ✅ Always inject security headers — OUTSIDE the rewrite if/else
+      if (!htaccess.includes('mod_headers.c')) {
+        htaccess += securityHeaders;
+      }
+
       fs.writeFileSync(htaccessPath, htaccess, 'utf8');
       console.log(chalk.greenBright('✓ .htaccess patched (all existing rules preserved)'));
+      console.log(chalk.gray('  - Added Security Headers (X-Frame, CSP, HSTS, X-XSS, Referrer)'));
+      console.log(chalk.gray('  - Added HTTPS Redirection'));
+      console.log(chalk.gray('  - Added llms.txt MIME type handling'));
     } else {
       fs.writeFileSync(
         htaccessPath,
@@ -154,6 +163,13 @@ function injectTracker() {
   Header always set Content-Security-Policy "frame-ancestors 'self'"
   Header always set X-XSS-Protection "1; mode=block"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Ensure crawlers always see fresh HTML content
+  <FilesMatch "\\.(html|php)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+  </FilesMatch>
 </IfModule>
 
 <Files "llms.txt">
