@@ -3,104 +3,194 @@
 import React from 'react';
 import Image from 'next/image';
 
-const impactData = [
+const impactCards = [
   {
-    number: '99.99%',
-    label: 'Integration Uptime',
-    description:
-      'Guaranteed zero downtime operations across R&D and clinical cloud-based databases.',
-    icon: '/images/Templates/tessera/tesssvg7.svg',
+    value: '~60%',
+    description: 'Reduction in manual data handling effort',
   },
   {
-    number: '75%',
-    label: 'Sync Latency Reduction',
-    description:
-      'Establishing near-instantaneous biological dataset updates between hybrid environments.',
-    icon: '/images/Templates/tessera/tesssvg8.svg',
+    value: '40–50%',
+    description: 'Faster forecasting and budgeting processes',
   },
   {
-    number: '40%',
-    label: 'Maintenance Savings',
-    description: 'Drastically cutting engineering overhead by replacing legacy custom middleware.',
-    icon: '/images/Templates/tessera/tesssvg9.svg',
+    value: '100%',
+    description: 'Automated data synchronization across platforms',
   },
   {
-    number: '10x',
-    label: 'Faster Deployment',
-    description: 'Enabling business groups to quickly build and launch new integration workflows.',
-    icon: '/images/Templates/tessera/tesssvg10.svg',
+    value: 'Enterprise',
+    description: 'Scalable and agile integration architecture',
   },
 ];
 
-const impactPoints = [
-  'Achieved absolute near zero-latency sync across biological testing pipelines and clinical registries.',
-  'Ensured 100% FDA 21 CFR Part 11 database compliance with automated trace logging.',
-  'Removed high developer dependencies by adopting Boomi’s intuitive low-code environment.',
-  'Automated error notifications to support instant diagnostics and resolve exceptions under 5 minutes.',
-  'Created a highly reusable enterprise connector template bank, saving future R&D pipeline integration effort.',
+const bullets = [
+  'Improved data accuracy and consistency across all enterprise systems',
+  'Enhanced financial reporting reliability and stakeholder confidence',
+  'Enabled a scalable, agile integration architecture for future growth',
+];
+
+const techPills = ['Boomi', 'SAP', 'Coupa', 'UKG'];
+
+const techLogos = [
+  '/images/Templates/tessera/tesssvg8.svg',
+  '/images/Templates/tessera/tesssvg9.svg',
+  '/images/Templates/tessera/tesssvg10.svg',
+  '/images/Templates/tessera/tesssvg11.svg',
 ];
 
 export default function BusinessImpact() {
   return (
-    <section className='w-full' style={{ backgroundColor: '#F3F4F7' }}>
-      <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-12 md:py-16'>
-        {/* Title */}
-        <h2 className='text-2xl md:text-3xl font-bold mb-8 md:mb-12' style={{ color: '#00B050' }}>
+    <section className='w-full py-16 md:py-8 lg:py-10' style={{ backgroundColor: '#F6F7F9' }}>
+      <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
+        {/* ── BUSINESS IMPACT HEADER ── */}
+        <h2
+          className='text-2xl md:text-3xl font-bold uppercase mb-8 tracking-wide'
+          style={{ color: '#62EE17' }}
+        >
           Business Impact
         </h2>
 
-        {/* 4-Card Metric Grid */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 md:mb-14'>
-          {impactData.map((item, i) => (
+        {/* ── 4-CARD METRIC GRID ── */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12'>
+          {impactCards.map((card, i) => (
             <div
               key={i}
-              className='bg-white p-6 md:p-8 rounded-[20px] border-2 transition-all duration-300 hover:shadow-lg'
-              style={{ borderColor: '#00B050' }}
+              className='p-6 md:p-8 rounded-[20px] transition-all duration-300 hover:shadow-lg text-center flex flex-col justify-center items-center min-h-[140px] md:min-h-[160px]'
+              style={{
+                border: '2px solid #62EE17',
+                backgroundColor: '#A3ADC20D',
+              }}
             >
-              {/* Icon + Metric */}
-              <div className='flex items-center gap-4 mb-4'>
-                <div
-                  className='w-10 h-10 rounded-[10px] flex items-center justify-center flex-shrink-0'
-                  style={{ backgroundColor: '#00B0501A' }}
-                >
-                  <Image
-                    src={item.icon}
-                    alt={item.label}
-                    width={22}
-                    height={22}
-                    className='object-contain'
-                  />
-                </div>
-                <span className='text-2xl md:text-3xl font-bold' style={{ color: '#00B050' }}>
-                  {item.number}
-                </span>
-              </div>
+              {/* Value Highlight */}
+              <span className='text-3xl md:text-4xl font-bold mb-3' style={{ color: '#62EE17' }}>
+                {card.value}
+              </span>
 
-              {/* Title & Desc */}
-              <h3 className='text-md font-bold mb-2' style={{ color: '#151C28' }}>
-                {item.label}
-              </h3>
-              <p className='text-[13px] md:text-[15px] leading-snug' style={{ color: '#000000' }}>
-                {item.description}
+              {/* Description */}
+              <p
+                className='text-sm md:text-[15px] leading-snug font-medium'
+                style={{ color: '#000000' }}
+              >
+                {card.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Bullet List */}
-        <div className='flex flex-col gap-4 max-w-5xl mt-6'>
-          {impactPoints.map((point, i) => (
-            <div key={i} className='flex items-start gap-4'>
-              {/* Green circle bullet */}
-              <span
-                className='flex-shrink-0 w-2.5 h-2.5 rounded-full mt-2'
-                style={{ backgroundColor: '#00B050' }}
-              />
-              <span className='text-sm md:text-[17px] leading-snug' style={{ color: '#000000' }}>
-                {point}
-              </span>
+        {/* ── LOWER SECTION (Bullets, Tech Pills, Logos & Lab Image) ── */}
+        <div className='grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 xl:gap-16 items-start'>
+          {/* Left Column: Bullet Points & Tech Stack pills */}
+          <div>
+            {/* Impact Bullets */}
+            <ul className='space-y-4 mb-12'>
+              {bullets.map((bullet, i) => (
+                <li key={i} className='flex items-start gap-3'>
+                  {/* Lime-Green Circular Bullet Dot (#62EE17) */}
+                  <span
+                    className='flex-shrink-0 w-2.5 h-2.5 rounded-full mt-2'
+                    style={{ backgroundColor: '#62EE17' }}
+                  />
+                  <span
+                    className='text-sm sm:text-base md:text-[17px] leading-snug font-medium'
+                    style={{ color: '#6A7181' }}
+                  >
+                    {bullet}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Technology Stack Sub-Section */}
+            <div>
+              <h2
+                className='text-2xl md:text-3xl font-bold uppercase mb-6 tracking-wide'
+                style={{ color: '#1791CF' }}
+              >
+                Technology Stack
+              </h2>
+
+              <div className='flex flex-wrap gap-4'>
+                {techPills.map((pill, i) => (
+                  <div
+                    key={i}
+                    className='px-6 py-2.5 rounded-full text-sm md:text-base font-bold shadow-sm transition-all duration-300 hover:scale-105 border-2 bg-white'
+                    style={{
+                      color: '#151C28',
+                      borderColor: '#1791CF',
+                    }}
+                  >
+                    {pill}
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+          </div>
+
+          {/* Right Column: Technology Brand Logos & Lab Scientist VR Image */}
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-6 items-center w-full mt-6 lg:mt-0'>
+            {/* 2x2 Grid of Brand Logos */}
+            <div className='grid grid-cols-2 gap-4 w-full justify-items-center items-center bg-white p-6 rounded-3xl border border-neutral-200/50 shadow-sm min-h-[180px]'>
+              {techLogos.map((logo, i) => (
+                <div
+                  key={i}
+                  className='relative w-[80px] h-[40px] flex items-center justify-center'
+                >
+                  <Image
+                    src={logo}
+                    alt={`Tech logo ${i + 8}`}
+                    fill
+                    className='object-contain'
+                    priority
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* VR Scientist Greenhouse Image (tessera4.png) */}
+            <div className='relative w-full aspect-[4/3] rounded-3xl overflow-hidden border border-black/10 shadow-lg hover:scale-[1.02] transition-transform duration-300 min-h-[180px]'>
+              <Image
+                src='/images/Templates/tessera/tessera4.png'
+                alt='Scientist wearing VR goggles in biotechnology greenhouse'
+                fill
+                className='object-cover object-center'
+                priority
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* ── VALUE DELIVERED ── */}
+        <div className='w-full lg:mt-20'>
+          <h2
+            className='text-2xl md:text-3xl font-bold uppercase mb-4 tracking-wide'
+            style={{ color: '#1791CF' }}
+          >
+            Value Delivered
+          </h2>
+          <h3
+            className='text-lg sm:text-xl md:text-[22px] font-bold mb-6'
+            style={{ color: '#151C28' }}
+          >
+            From Silos to Synergy
+          </h3>
+          <div className='space-y-6 max-w-7xl'>
+            <p
+              className='text-sm sm:text-base md:text-[17px] leading-relaxed font-medium'
+              style={{ color: '#6A7181' }}
+            >
+              By implementing a real-time, Boomi-powered integration framework, the organization
+              transformed its disconnected enterprise landscape into a unified, automated data
+              ecosystem. The solution delivered measurable reductions in manual effort, dramatically
+              faster forecasting cycles, and enterprise-grade data governance.
+            </p>
+            <p
+              className='text-sm sm:text-base md:text-[17px] leading-relaxed font-medium'
+              style={{ color: '#6A7181' }}
+            >
+              With a scalable architecture built for growth, the organization is now positioned to
+              onboard new systems, expand into new markets, and make data-driven decisions with
+              confidence—powered by real-time insights and seamless enterprise connectivity.
+            </p>
+          </div>
         </div>
       </div>
     </section>
