@@ -276,6 +276,15 @@ const Cards = () => {
         'Enabling cloud modernization, scalable data infrastructure, and standardized analytics for a leading healthcare organization.',
       image: '/images/Templates/careabout/care1.png',
     },
+    {
+      slug: 'tessera',
+      title: 'Real-Time Enterprise Data Integration using Boomi',
+      type: 'AI Solutions',
+      industry: 'Healthcare',
+      description:
+        'Enabling seamless data synchronization, automation, and enterprise connectivity for a leading biotechnology organization.',
+      image: '/images/Templates/tessera/tessera1.png',
+    },
   ];
 
   const cardsData = caseStudiesData.map((study, i) => {

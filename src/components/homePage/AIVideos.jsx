@@ -2,6 +2,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 // import { Link } from 'lucide-react';
 
@@ -116,13 +117,8 @@ const AIVideos = () => {
             </span>{' '}
             AI in Action
           </h2>
-          <button
-            onClick={() => {
-              const element = document.getElementById('agentic-blocks');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
-            }}
+          <Link
+            href='/agentic-ai'
             className='flex items-center gap-2 px-8 py-3 rounded-full text-white text-sm lg:text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl'
             style={{
               background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
@@ -132,7 +128,7 @@ const AIVideos = () => {
           >
             Explore All Agents
             <ArrowRight className='w-4 h-4' />
-          </button>
+          </Link>
         </div>
 
         {/* ── Main Display Area (Split Layout) ── */}

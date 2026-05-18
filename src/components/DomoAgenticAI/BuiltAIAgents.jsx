@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
 
 const BuiltAIAgents = () => {
@@ -53,7 +54,8 @@ const BuiltAIAgents = () => {
 
           <div className='z-10'>
             {/* Enhanced hover for button only */}
-            <button
+            <Link
+              href='/contact'
               className='group flex items-center gap-3 font-semibold transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg justify-center border-2 border-[#8c49bf] rounded-[30px] hover:bg-[#8c49bf] hover:text-white'
               style={{
                 color: '#8c49bf',
@@ -65,7 +67,7 @@ const BuiltAIAgents = () => {
             >
               Talk to our experts
               <FiArrowRight className='text-xl transition-transform duration-300 group-hover:translate-x-1' />
-            </button>
+            </Link>
           </div>
         </div>
 

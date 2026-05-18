@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
 
 const PlatformFeatures = () => {
@@ -60,13 +61,14 @@ const PlatformFeatures = () => {
           <div className='hidden sm:flex border-t-2 border-dashed border-[#1F1F1F] absolute left-[60px] right-[260px] top-1/2 transform -translate-y-1/2 opacity-20' />
 
           <div className='z-10'>
-            <button
+            <Link
+              href='/contact'
               className='group flex items-center gap-3 font-semibold transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg justify-center border-2 border-[#8c49bf] rounded-full px-8 py-3 text-[#8c49bf] hover:bg-[#8c49bf] hover:text-white'
               style={{ width: '250px', height: '48px', fontSize: '16px' }}
             >
               Talk to our experts
               <FiArrowRight className='text-xl transition-transform duration-300 group-hover:translate-x-1' />
-            </button>
+            </Link>
           </div>
         </div>
 

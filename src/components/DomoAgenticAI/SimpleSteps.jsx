@@ -1,5 +1,6 @@
 'use client';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const StepIcon = ({ stepNumber }) => {
   return (
@@ -177,9 +178,12 @@ const SimpleSteps = () => {
         </div>
 
         <div className='flex justify-center mt-12 md:mt-16 lg:mt-20'>
-          <button className='bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[150px] h-[45px] rounded-full font-medium text-base flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg'>
+          <Link
+            href='/contact'
+            className='bg-gradient-to-r from-[#7030B1] to-[#B56DD3] text-white w-[150px] h-[45px] rounded-full font-medium text-base flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg'
+          >
             Contact Us <ArrowRight className='w-5 h-5' />
-          </button>
+          </Link>
         </div>
       </div>
     </section>
