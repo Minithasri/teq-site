@@ -23,7 +23,7 @@ const Footer = () => {
   ];
 
   const solutions = [
-    { name: 'AI / Agentic AI', href: '/domo-agentic-ai' },
+    { name: 'AI / Agentic AI', href: '/domo-consulting' },
     { name: 'Data Governance', href: '/solutions/data-governance' },
     { name: 'Data Strategy & Engineering', href: '/solutions/data-strategy-engineering' },
     {

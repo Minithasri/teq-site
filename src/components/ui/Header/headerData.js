@@ -117,18 +117,18 @@ export const headerData = {
     },
     {
       label: 'Domo Agentic AI',
-      href: '/domo-agentic-ai',
+      href: '/domo-consulting',
       megaMenu: true,
       subtitle: 'Advanced AI solutions for your business',
       children: [
-        { label: 'Domo', href: '/domo-agentic-ai' },
+        { label: 'Domo', href: '/domo-consulting' },
         { label: 'Agentic AI', href: '/agentic-ai' },
       ],
       megaMenuColumns: [
         {
           title: 'EXPLORE AI',
           links: [
-            { label: 'Domo', href: '/domo-agentic-ai' },
+            { label: 'Domo', href: '/domo-consulting' },
             { label: 'Agentic AI', href: '/agentic-ai' },
           ],
         },
@@ -176,6 +176,6 @@ export const ctas = {
   Company: { text: 'Explore Company', href: '/company' },
   Partners: { text: 'Become a Partner', href: '/partners/join' },
   Careers: { text: 'Apply Now', href: '/careers/apply' },
-  'Domo Agentic AI': { text: 'Learn More', href: '/domo-agentic-ai/demo' },
+  'Domo Agentic AI': { text: 'Learn More', href: '/domo-consulting/demo' },
   Boomi: { text: 'Get Started', href: '/boomi-integration/contact' },
 };

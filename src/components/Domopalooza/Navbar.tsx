@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 
@@ -47,7 +47,7 @@ const navItems: NavItem[] = [
       { label: 'Boomi', href: 'https://gwcdata.ai/partners/boomi/' },
     ],
   },
-  { label: 'DOMO Agentic AI', href: 'https://gwcdata.ai/domo-agentic-ai/', internal: false },
+  { label: 'DOMO Agentic AI', href: 'https://gwcdata.ai/domo-consulting/', internal: false },
   { label: 'Boomi', href: 'https://gwcdata.ai/boomi-integration/', internal: false },
   { label: 'Careers', href: 'https://gwcdata.ai/careers/', internal: false },
 ];

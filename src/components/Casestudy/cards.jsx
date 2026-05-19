@@ -1,12 +1,37 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { FiArrowRight, FiSearch, FiSliders } from 'react-icons/fi';
+import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 
 const Cards = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState('AI Solutions');
   const [activeCategory, setActiveCategory] = useState('All');
+  const [activeDepartment, setActiveDepartment] = useState('Departments');
+  const [isDeptDropdownOpen, setIsDeptDropdownOpen] = useState(false);
+  const scrollContainerRef = useRef(null);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = event => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDeptDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const scroll = direction => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 200;
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   // New template-based case studies (add more as you create them)
   const caseStudiesData = [
@@ -121,7 +146,7 @@ const Cards = () => {
       industry: 'Retail',
       description:
         'A centralized analytics solution that transformed fragmented counterfeit monitoring into an automated intelligence platform delivering real-time threat detection and secure, role-based insights to 50+ stakeholders.',
-      image: '/images/Templates/z-bay/hero-bg.png',
+      image: '/images/Templates/z-bay/business-impact.png',
     },
     {
       slug: 'john-good-groups',
@@ -157,7 +182,7 @@ const Cards = () => {
       industry: 'Retail',
       description:
         'Optimizing retail operations through advanced data warehousing and business intelligence.',
-      image: '/images/Templates/style_bazaar/style_hero.png',
+      image: '/images/Templates/style_bazaar/style_i4.png',
     },
     {
       slug: 'style-union',
@@ -166,7 +191,7 @@ const Cards = () => {
       industry: 'Retail',
       description:
         'Omnichannel Data Warehouse & BI Platform enabling real-time business visibility for fashion retail.',
-      image: '/images/Templates/style_bazaar/style_hero.png',
+      image: '/images/Templates/style_bazaar/style_i5.png',
     },
     {
       slug: 'tez',
@@ -175,7 +200,7 @@ const Cards = () => {
       industry: 'Travel and hospitality',
       description:
         'Achieving a 60% reduction in data processing time and unlocking AI-driven insights for smart parking.',
-      image: '/images/Templates/tez/tez1.png',
+      image: '/images/Templates/tez/tez3.png',
     },
     {
       slug: 'custom-dashboard',
@@ -184,7 +209,7 @@ const Cards = () => {
       industry: 'Manufacturing',
       description:
         'Transforming complex safety data into actionable, AI-powered insights enabling faster decisions and proactive risk management.',
-      image: '/images/Templates/tez/tez1.png',
+      image: '/images/Templates/tez/tez2.png',
     },
     {
       slug: 'aequs',
@@ -193,7 +218,7 @@ const Cards = () => {
       industry: 'Manufacturing',
       description:
         'Achieving 60–70% reduction in manual errors and ~50% faster testing cycles through a custom-built lifecycle management system.',
-      image: '/images/Templates/aequs/aequs1.png',
+      image: '/images/Templates/aequs/aequs2.png',
     },
     {
       slug: 'centralized-marketing',
@@ -210,7 +235,7 @@ const Cards = () => {
       industry: 'Automotive',
       description:
         'Streamlining tool management processes with intelligent digital solutions to enhance operational efficiency and lifecycle visibility.',
-      image: '/images/Templates/toyota/toyota1.png',
+      image: '/images/Templates/toyota/toyota4.png',
     },
     {
       slug: 'toyota2',
@@ -219,7 +244,7 @@ const Cards = () => {
       industry: 'Automotive',
       description:
         'Transforming maintenance operations and enabling data-driven decision-making for a leading global automotive manufacturer.',
-      image: '/images/Templates/toyota2/toy1.png',
+      image: '/images/Templates/toyota2/toy2.png',
     },
     {
       slug: 'gcon',
@@ -274,7 +299,7 @@ const Cards = () => {
       industry: 'Healthcare',
       description:
         'Enabling cloud modernization, scalable data infrastructure, and standardized analytics for a leading healthcare organization.',
-      image: '/images/Templates/careabout/care1.png',
+      image: '/images/Templates/aequs/aequs3.png',
     },
     {
       slug: 'tessera',
@@ -283,7 +308,7 @@ const Cards = () => {
       industry: 'Healthcare',
       description:
         'Enabling seamless data synchronization, automation, and enterprise connectivity for a leading biotechnology organization.',
-      image: '/images/Templates/tessera/tessera1.png',
+      image: '/images/Templates/tessera/tessera3.png',
     },
     {
       slug: 'sephora',
@@ -337,7 +362,7 @@ const Cards = () => {
       industry: 'Banking',
       description:
         'How we connected workforce management and POS data into a single analytics platform enabling real-time insights for leadership decision-making.',
-      image: '/images/Templates/template11/bg-1.png',
+      image: '/images/Templates/template11/side-img.png',
     },
     {
       slug: 'ai-powered-hospitality',
@@ -435,7 +460,7 @@ const Cards = () => {
       industry: 'Retail',
       description:
         'A major player in the retail industry, needed a centralized solution to track and monitor sales, inventory, and operational performance. With multiple business units and high transaction volumes, leadership required real-time dashboards to support faster and more data-driven decisions.',
-      image: '/images/Templates/kamrt/hero-bg.png',
+      image: '/images/Templates/kamrt/overview.png',
     },
     {
       slug: 'accor',
@@ -545,6 +570,86 @@ const Cards = () => {
         'Enabling real-time visibility into sales, inventory, and customer behavior to drive smarter retail decisions and optimize  operations.',
       image: '/images/Templates/altimetrik/hero-float.png',
     },
+    {
+      slug: 'sales-intelligence',
+      title: 'Sales Intelligence Transformation & Time Based Reporting Standardization',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'How we rebuilt confidence in sales analytics by standardizing time- intelligence models and optimizing reporting workflows for a leading fashion retailer.',
+      image: '/images/Templates/templatez/salesIntelligence/sihead.png',
+    },
+    {
+      slug: 'real-time-workflow',
+      title: 'Real-Time Workforce & Operations Monitoring Dashboard',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description: 'Transforming Cleaning Operations with Real-Time Visibility',
+      image: '/images/Templates/templatez/rtwrokforce/rthero.png',
+    },
+    {
+      slug: 'centralizing-sales-performance',
+      title: 'Sales Performance & Time-Based Reporting Transformation',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Transforming Sales Performance & Time-Based Reporting with AI-Powered Analytics',
+      image: '/images/Templates/templatez/csperformance/cspbg.jpg',
+    },
+    {
+      slug: 'driving-entertainment-success',
+      title: 'Driving Entertainment Success with Artist and Performance Dashboards',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Transforming Entertainment Insights with Real-Time Artist and Performance Analytics',
+      image: '/images/Templates/templatez/jamm/jammbg.jpg',
+    },
+    {
+      slug: 'real-time-dashboard',
+      title: 'Centralizing Sales Performance with Real-Time Dashboards',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Redefining Retail Intelligence Through Real-Time Sales and Time-Based Analytics',
+      image: '/images/Templates/templatez/titan22/header.png',
+    },
+    {
+      slug: 'real-estate-performance',
+      title: 'Centralizing Real Estate Performance for Smarter Decision-Making',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Transforming Real Estate Insights with Centralized Performance Dashboards and Data-Driven Decision-Making',
+      image: '/images/Templates/templatez/realestate/header.png',
+    },
+    {
+      slug: 'driving-sales-excellence',
+      title: 'Driving Sales Excellence with Validated Data',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'How GWC transformed the client sales reporting with real - time insights and executive- level analytics',
+      image: '/images/Templates/templatez/drivingsales/head.png',
+    },
+    {
+      slug: 'real-time-portfolio',
+      title: 'Empowering Clean Hydrogen Investment with Real-Time Portfolio Intelligence',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        "How GWC transformed HY24's hydrogen investment management with real-time insights",
+      image: '/images/Templates/templatez/rtportfolio/head.png',
+    },
+    {
+      slug: 'retail-1',
+      title: 'Driving Sales Excellence Through Validated Data',
+      type: 'BI Solutions',
+      industry: 'Banking',
+      description:
+        'A unified reporting framework that transformed fragmented sales data into real-time executive intelligence enabling faster, evidence-based decisions across regions and channels.',
+      image: '/images/Templates/retail-1/hero-bg.png',
+    },
   ];
 
   const cardsData = caseStudiesData.map((study, i) => {
@@ -562,24 +667,197 @@ const Cards = () => {
 
   const categories = [
     'All',
-    'HR',
-    'Marketing',
-    'Sales',
+    'Travel',
+    'Smart mobility',
+    'Safety',
     'Retail',
     'Manufacturing',
-    'Supply chain and logistics',
-    'Travel and hospitality',
+    'Logistics',
+    'IT Services',
+    'IDAM licence',
+    'Hospitality',
+    'Healthcare',
+    'Finance',
+    'Energy',
+    'Education',
+    'Digital Marketing',
+    'Construction',
+    'Biotech',
+    'Banking',
   ];
 
-  // Filter cards based on tab, category and search query
+  // Filter cards based on tab, category, department and search query
   const filteredCards = cardsData.filter(card => {
     const matchesTab = card.type === activeTab;
-    const matchesCategory = activeCategory === 'All' || card.industry === activeCategory;
+
+    // Advanced category mapping based on user specifications
+    let matchesCategory = false;
+    if (activeCategory === 'All') {
+      matchesCategory = true;
+    } else {
+      const slug = card.slug?.toLowerCase() || '';
+      const title = card.title?.toLowerCase() || '';
+      const desc = card.description?.toLowerCase() || '';
+      const ind = card.industry?.toLowerCase() || '';
+      const cat = activeCategory.toLowerCase();
+
+      if (cat === 'travel management') {
+        matchesCategory =
+          slug.includes('john-good') || slug.includes('parisar') || slug.includes('take2eton');
+      } else if (cat === 'smart mobility') {
+        matchesCategory = slug.includes('esr') || slug.includes('tez');
+      } else if (cat === 'safety') {
+        matchesCategory =
+          slug.includes('mojo') ||
+          slug.includes('safety') ||
+          title.includes('safety') ||
+          desc.includes('safety') ||
+          slug.includes('custom-dashboard');
+      } else if (cat === 'retail') {
+        matchesCategory =
+          slug.includes('lskd') ||
+          slug.includes('lskg') ||
+          slug.includes('marry') ||
+          slug.includes('style-bazaar') ||
+          slug.includes('style-union') ||
+          slug.includes('titan') ||
+          slug.includes('altimetrik') ||
+          slug.includes('sephora') ||
+          slug.includes('tig-golf') ||
+          slug.includes('kamrt') ||
+          slug.includes('kmart') ||
+          slug.includes('sales-intelligence') ||
+          slug.includes('real-time-dashboard') ||
+          slug.includes('driving-sales') ||
+          slug.includes('rtwrokforce') ||
+          slug.includes('real-time-workflow') ||
+          slug.includes('centralizing-sales') ||
+          slug.includes('boosting-food');
+      } else if (cat === 'manufacturing') {
+        matchesCategory =
+          slug.includes('aequs') ||
+          slug.includes('alubee') ||
+          slug.includes('real-time-production') ||
+          slug.includes('tata') ||
+          slug.includes('toyota') ||
+          slug.includes('bissell') ||
+          slug.includes('tess') ||
+          slug.includes('yield') ||
+          slug.includes('quality') ||
+          slug.includes('predictive') ||
+          slug.includes('maintenance') ||
+          slug.includes('scrap') ||
+          slug.includes('sustainable') ||
+          slug.includes('tool-management') ||
+          title.includes('manufacturing') ||
+          ind.includes('manufacturing');
+      } else if (cat === 'logistics') {
+        matchesCategory =
+          slug.includes('bissell') ||
+          slug.includes('logistics') ||
+          title.includes('logistics') ||
+          desc.includes('logistics');
+      } else if (cat === 'it service') {
+        matchesCategory = slug.includes('connect-wise') || slug.includes('connectwise');
+      } else if (cat === 'idam licence') {
+        matchesCategory = slug.includes('gsk') || title.includes('idam') || desc.includes('idam');
+      } else if (cat === 'hospitality') {
+        matchesCategory =
+          slug.includes('accor') ||
+          slug.includes('anyday') ||
+          slug.includes('any-day') ||
+          slug.includes('hospitality');
+      } else if (cat === 'health care') {
+        matchesCategory =
+          slug.includes('careabout') ||
+          title.includes('healthcare') ||
+          title.includes('health care');
+      } else if (cat === 'finance') {
+        matchesCategory =
+          slug.includes('metro-one') ||
+          slug.includes('metroone') ||
+          slug.includes('finance-hr') ||
+          title.includes('finance');
+      } else if (cat === 'Energy') {
+        matchesCategory =
+          slug.includes('hy-24') ||
+          slug.includes('hy24') ||
+          slug.includes('wellstat') ||
+          slug.includes('portfolio') ||
+          title.includes('Energy');
+      } else if (cat === 'education') {
+        matchesCategory = slug.includes('curiculam') || title.includes('education');
+      } else if (cat === 'digital marketing') {
+        matchesCategory =
+          slug.includes('netrocon') ||
+          slug.includes('wpp') ||
+          slug.includes('henkel') ||
+          slug.includes('marketing') ||
+          title.includes('marketing');
+      } else if (cat === 'construction') {
+        matchesCategory = slug.includes('gcon') || title.includes('construction');
+      } else if (cat === 'biotech') {
+        matchesCategory = slug.includes('tessera') || title.includes('biotech');
+      } else if (cat === 'banking') {
+        matchesCategory = slug.includes('tavent') || slug.includes('banking');
+      } else {
+        matchesCategory = ind.includes(cat);
+      }
+    }
+
+    let matchesDept = false;
+    if (activeDepartment === 'Departments') {
+      matchesDept = true;
+    } else {
+      const dept = activeDepartment.toLowerCase();
+      const text = (card.title + ' ' + card.description).toLowerCase();
+      if (dept === 'hr') {
+        matchesDept =
+          text.includes('hr') ||
+          text.includes('workforce') ||
+          text.includes('employee') ||
+          text.includes('talent');
+      } else if (dept === 'marketing') {
+        matchesDept =
+          text.includes('marketing') ||
+          text.includes('campaign') ||
+          text.includes('funnel') ||
+          text.includes('guest') ||
+          text.includes('customer');
+      } else if (dept === 'sales') {
+        matchesDept =
+          text.includes('sales') ||
+          text.includes('revenue') ||
+          text.includes('pos') ||
+          text.includes('retail') ||
+          text.includes('store');
+      } else if (dept === 'operation') {
+        matchesDept =
+          text.includes('operation') ||
+          text.includes('production') ||
+          text.includes('yield') ||
+          text.includes('defect') ||
+          text.includes('logistics') ||
+          text.includes('inventory');
+      } else if (dept === 'it') {
+        matchesDept =
+          text.includes('it') ||
+          text.includes('software') ||
+          text.includes('platform') ||
+          text.includes('integration') ||
+          text.includes('cloud') ||
+          text.includes('tech') ||
+          text.includes('pipeline');
+      } else {
+        matchesDept = true;
+      }
+    }
+
     const query = searchQuery.toLowerCase();
     const matchesSearch =
       card.title.toLowerCase().includes(query) || card.description.toLowerCase().includes(query);
 
-    return matchesTab && matchesCategory && matchesSearch;
+    return matchesTab && matchesCategory && matchesDept && matchesSearch;
   });
 
   return (
@@ -643,36 +921,91 @@ const Cards = () => {
             </div>
           </div>
 
-          {/* Bottom Row: Industry + Categories */}
-          <div className='flex flex-col md:flex-row items-center gap-4 overflow-x-auto pb-2 scrollbar-hide'>
-            {/* Industry Filter Button */}
-            <div className='flex items-center gap-2 px-6 py-3 rounded-2xl border border-[#DBDBDB] bg-white text-[#6B7280] min-w-fit shadow-sm'>
-              <span className='text-sm font-medium'>Industry</span>
-              <img src='/images/Templates/filtersvg.svg' alt='filter' className='w-6 h-6' />
+          {/* Bottom Row: Industry + Categories Slider */}
+          <div className='w-full flex flex-col md:flex-row items-center justify-between gap-4'>
+            {/* Left/Right Slider with Pills */}
+            <div className='w-full md:flex-grow flex items-center gap-2.5 overflow-hidden'>
+              {/* Left Arrow */}
+              <button
+                onClick={() => scroll('left')}
+                className='w-10 h-10 rounded-full border border-[#E5E5E5] bg-white flex items-center justify-center text-gray-600 hover:text-[#7030B1] hover:border-[#7030B1] transition-all shadow-sm flex-shrink-0'
+                aria-label='Scroll left'
+              >
+                <ChevronLeft size={20} />
+              </button>
+
+              {/* Scrollable Container */}
+              <div
+                ref={scrollContainerRef}
+                className='flex-grow flex items-center gap-3 overflow-x-auto scroll-smooth [&::-webkit-scrollbar]:hidden py-1'
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {categories.map(category => (
+                  <button
+                    key={category}
+                    onClick={() => setActiveCategory(category)}
+                    className={`px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 border shadow-sm ${
+                      activeCategory === category
+                        ? 'border-transparent text-white'
+                        : 'bg-white border-[#E5E5E5] text-[#6B7280] hover:border-[#7030B1] hover:text-[#7030B1]'
+                    }`}
+                    style={
+                      activeCategory === category
+                        ? {
+                            background: 'linear-gradient(94.82deg, #B56DD3 22.28%, #7030B1 94.48%)',
+                          }
+                        : {}
+                    }
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+
+              {/* Right Arrow */}
+              <button
+                onClick={() => scroll('right')}
+                className='w-10 h-10 rounded-full border border-[#E5E5E5] bg-white flex items-center justify-center text-gray-600 hover:text-[#7030B1] hover:border-[#7030B1] transition-all shadow-sm flex-shrink-0'
+                aria-label='Scroll right'
+              >
+                <ChevronRight size={20} />
+              </button>
             </div>
 
-            {/* Category Pills */}
-            <div className='flex items-center gap-3 w-full'>
-              {categories.map(category => (
-                <button
-                  key={category}
-                  onClick={() => setActiveCategory(category)}
-                  className={`px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 border shadow-sm ${
-                    activeCategory === category
-                      ? 'border-transparent text-white'
-                      : 'bg-white border-[#E5E5E5] text-[#6B7280] hover:border-[#7030B1] hover:text-[#7030B1]'
+            {/* Departments Dropdown */}
+            <div className='relative w-full md:w-auto flex-shrink-0' ref={dropdownRef}>
+              <button
+                onClick={() => setIsDeptDropdownOpen(!isDeptDropdownOpen)}
+                className='w-full md:w-auto flex items-center justify-between gap-3 px-6 py-3 rounded-[12px] border border-[#E5E5E5] bg-white text-gray-700 md:min-w-[160px] text-sm font-medium hover:border-[#7030B1] transition-all shadow-sm'
+              >
+                <span>{activeDepartment}</span>
+                <ChevronDown
+                  size={16}
+                  className={`text-gray-400 transition-transform duration-200 ${
+                    isDeptDropdownOpen ? 'rotate-180' : ''
                   }`}
-                  style={
-                    activeCategory === category
-                      ? {
-                          background: 'linear-gradient(94.82deg, #B56DD3 22.28%, #7030B1 94.48%)',
-                        }
-                      : {}
-                  }
-                >
-                  {category}
-                </button>
-              ))}
+                />
+              </button>
+              {isDeptDropdownOpen && (
+                <div className='absolute right-0 mt-2 w-full md:w-48 bg-white border border-[#E5E5E5] rounded-xl shadow-lg py-1 z-50'>
+                  {['All departments', 'Sales', 'HR', 'Operation', 'Marketing', 'IT'].map(dept => (
+                    <button
+                      key={dept}
+                      onClick={() => {
+                        setActiveDepartment(dept);
+                        setIsDeptDropdownOpen(false);
+                      }}
+                      className={`w-full text-left px-4 py-2.5 text-sm transition-colors ${
+                        activeDepartment === dept
+                          ? 'bg-purple-50 text-[#7030B1] font-semibold'
+                          : 'text-gray-700 hover:bg-gray-50'
+                      }`}
+                    >
+                      {dept}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
