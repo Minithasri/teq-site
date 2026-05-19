@@ -22,7 +22,7 @@ const HeroSection = () => {
       {/* CONTENT */}
       <div className='relative z-10 mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
         {/* HEADING */}
-        <div className='mt-4 max-w-7xl'>
+        <div className='mt-12 max-w-7xl'>
           <h1 className='text-[38px] md:text-6xl leading-[1.05] font-semibold tracking-[-2px] text-white'>
             <span className='text-[#D7F04A]'>Store Manager Mobile Application</span> for Retail
             Execution
