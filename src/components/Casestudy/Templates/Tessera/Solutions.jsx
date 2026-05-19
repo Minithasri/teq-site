@@ -99,7 +99,7 @@ export default function Solutions() {
           </div>
 
           {/* Right Column: Layered Overlapping Images */}
-          <div className='relative flex justify-center items-center -right-[140px] top-[150px] h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[240px] w-full mt-6 lg:mt-0'>
+          <div className='relative flex justify-center items-center -right-[140px] top-[20px] h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[240px] w-full mt-6 lg:mt-0'>
             <div className='relative w-[85%] sm:w-[75%] md:w-[70%] lg:w-[90%] xl:w-[85%] h-full'>
               {/* Back Image (Opacity 0.4, Shifted down-left) */}
               <div className='absolute left-[-20px] bottom-[-20px] w-full h-[90%] rounded-3xl overflow-hidden border border-black/10 opacity-40 shadow-sm transition-transform duration-300 hover:scale-[1.02]'>

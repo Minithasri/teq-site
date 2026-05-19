@@ -128,7 +128,7 @@ export default function BusinessImpact() {
           {/* Right Column: Technology Brand Logos & Lab Scientist VR Image */}
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-6 items-center w-full mt-6 lg:mt-0'>
             {/* 2x2 Grid of Brand Logos */}
-            <div className='grid grid-cols-2 gap-4 w-full justify-items-center items-center bg-white p-6 rounded-3xl border border-neutral-200/50 shadow-sm min-h-[180px]'>
+            <div className='grid grid-cols-2 gap-4 w-full justify-items-center items-center p-6 min-h-[180px]'>
               {techLogos.map((logo, i) => (
                 <div
                   key={i}

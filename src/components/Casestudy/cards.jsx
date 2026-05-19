@@ -285,6 +285,51 @@ const Cards = () => {
         'Enabling seamless data synchronization, automation, and enterprise connectivity for a leading biotechnology organization.',
       image: '/images/Templates/tessera/tessera1.png',
     },
+    {
+      slug: 'sephora',
+      title: 'AI-Based Workforce Scheduling and Rostering Platform',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Transforming workforce management through AI-driven scheduling automation — delivering measurable efficiency gains across multi-location retail operations.',
+      image: '/images/Templates/sephora/sep1.png',
+    },
+    {
+      slug: 'curiculam1',
+      title: 'Digital Transformation & Data Platform Modernization',
+      type: 'AI Solutions',
+      industry: 'Education',
+      description:
+        'Showcasing cloud migration, data platform modernization, and reporting transformation initiatives that improved performance, scalability, and analytics capabilities.',
+      image: '/images/Templates/careabout/care1.png',
+    },
+    {
+      slug: 'curiculam2',
+      title: 'Domo to Snowflake Migration & Data Platform Modernization',
+      type: 'AI Solutions',
+      industry: 'Education',
+      description:
+        'Replacing constrained Magic ETL workflows with a scalable, cost-efficient Snowflake architecture.',
+      image: '/images/Templates/careabout/care2.png',
+    },
+    {
+      slug: 'curiculam3',
+      title: 'Tableau to Power BI Migration & Reporting Modernization',
+      type: 'AI Solutions',
+      industry: 'Education',
+      description:
+        'Unifying a fragmented reporting estate into a governed, high-performance Power BI environment.',
+      image: '/images/Templates/careabout/care3.png',
+    },
+    {
+      slug: 'tavent',
+      title: 'Loan, Deposit & Teller Performance Analytics Dashboard',
+      type: 'BI Solutions',
+      industry: 'Banking',
+      description:
+        'Delivering real-time visibility into banking operations through interactive dashboards and self-service analytics.',
+      image: '/images/Templates/tavent/t2.png',
+    },
   ];
 
   const cardsData = caseStudiesData.map((study, i) => {
@@ -350,7 +395,7 @@ const Cards = () => {
                     : 'text-[#6B7280] hover:text-[#404040]'
                 }`}
               >
-                AI Solutions
+                AI Intelligence
               </button>
               <button
                 onClick={() => setActiveTab('BI Solutions')}
@@ -360,7 +405,7 @@ const Cards = () => {
                     : 'text-[#6B7280] hover:text-[#7030B1]'
                 }`}
               >
-                BI Solutions
+                BI Intelligence
               </button>
             </div>
 
