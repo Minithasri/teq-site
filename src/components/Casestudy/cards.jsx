@@ -330,6 +330,221 @@ const Cards = () => {
         'Delivering real-time visibility into banking operations through interactive dashboards and self-service analytics.',
       image: '/images/Templates/tavent/t2.png',
     },
+    {
+      slug: 'unified-hr-finance-analytics',
+      title: 'Unified HR & Finance Analytics Integration',
+      type: 'BI Solutions',
+      industry: 'Banking',
+      description:
+        'How we connected workforce management and POS data into a single analytics platform enabling real-time insights for leadership decision-making.',
+      image: '/images/Templates/template11/bg-1.png',
+    },
+    {
+      slug: 'ai-powered-hospitality',
+      title: 'Enhancing Guest Experience with AI-Powered Hospitality',
+      type: 'BI Solutions',
+      industry: 'Banking',
+      description:
+        'How GWC partnered with the client to revolutionize hotel operations and deliver smarter, data-driven experiences for guests worldwide.',
+      image: '/images/Templates/template12/ai-bg.png',
+    },
+    {
+      slug: 'banking-analytics',
+      title: 'Driving Compliance and Performance with Banking Analytics',
+      type: 'BI Solutions',
+      industry: 'Banking',
+      description:
+        'How GWC transformed banking operations with real-time analytics, automated compliance monitoring, and centralized financial insights.',
+      image: '/images/Templates/template13/bg1.png',
+    },
+    {
+      slug: 'end-to-end-digitalization',
+      title: 'End-to-End Digitalization of Manufacturing Reports',
+      type: 'BI Solutions',
+      industry: 'Banking',
+      description:
+        'Transforming manufacturing reporting systems with automation, centralized dashboards, and real-time operational intelligence.',
+      image: '/images/Templates/template14/bg1.png',
+    },
+    {
+      slug: 'finance-hr-performance-insights',
+      title: 'Building Unified Finance & HR Performance Insights',
+      type: 'BI Solutions',
+      industry: 'Banking',
+      description:
+        'Transforming siloed finance and HR data into unified, real-time performance insights that drive strategic decision-making across global operations.',
+      image: '/images/Templates/template15/bg1.png',
+    },
+    {
+      slug: 'agentic-ai-data-center',
+      title: 'Transforming Data Center Operations with Agentic AI',
+      type: 'BI Solutions',
+      industry: 'Banking',
+      description:
+        'How GWC and Fekki built an AI-driven platform for predictive monitoring, automated response systems, and operational intelligence across data centers.',
+      image: '/images/Templates/template16/bg1.png',
+    },
+    {
+      slug: 'boosting-food-retail-performance',
+      title: 'Boosting Food Retail Performance with Real-Time Analytics',
+      type: 'BI Solutions',
+      industry: 'Banking',
+      description:
+        'How GWC transformed food retail operations using real-time analytics, outlet benchmarking, and executive performance reporting.',
+      image: '/images/Templates/template17/bg1.png',
+    },
+    {
+      slug: 'lskg',
+      title: 'Empowering Fashion Retail with Real-Time Sales & Inventory Insights',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'How a fashion and retail brand transformed decision-making with automated dashboards and real-time analytics',
+      image: '/images/Templates/lskg/img3.png',
+    },
+    {
+      slug: 'parisar',
+      title: 'Improving Public Transport Efficiency',
+      type: 'AI Solutions',
+      industry: 'Travel and hospitality',
+      description: 'Real-Time Operations Dashboards ',
+      image: '/images/Templates/parisar/img1.png',
+    },
+    {
+      slug: 'anyday',
+      title: 'Unlocking Restaurant Growth with Customer Trends Analytics',
+      type: 'AI Solutions',
+      industry: 'Restaurant',
+      description:
+        'How Anyday transformed customer engagement and sales strategy with real-time data insights',
+      image: '/images/Templates/anyday/img4.jpg',
+    },
+    {
+      slug: 'style-union-1',
+      title: 'Transforming Retail Performance with Unified Analytics',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'How Style Union achieved real-time visibility and data-driven growth through comprehensive retail analytics',
+      image: '/images/Templates/style-union-1/img3.png',
+    },
+    {
+      slug: 'kamrt',
+      title: 'Optimizing Retail Performance Through Data- Driven Dashboards',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'A major player in the retail industry, needed a centralized solution to track and monitor sales, inventory, and operational performance. With multiple business units and high transaction volumes, leadership required real-time dashboards to support faster and more data-driven decisions.',
+      image: '/images/Templates/kamrt/hero-bg.png',
+    },
+    {
+      slug: 'accor',
+      title: 'AI-Based Menu Analysis & Licensing Automation Platform',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Transforming manual menu review into an intelligent, automated pipeline powered by AI-driven document intelligence and classification.',
+      image: '/images/Templates/accor/hero.png',
+    },
+    {
+      slug: 'bissell-3',
+      title: 'Logistics Network Optimization & Cost Reduction Analytics',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Transforming supply chain performance through data-driven network optimization and strategic cost reduction.',
+      image: '/images/Templates/bissell-3/hero.png',
+    },
+    {
+      slug: 'wellstat',
+      title: 'Enterprise Data Integration & Automated Reporting Platform',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Transforming fragmented data ecosystems into a unified, automated intelligence layer — enabling real-time visibility and accelerated decision- making.',
+      image: '/images/Templates/wellstat/hero-bg.png',
+    },
+    {
+      slug: 'connect-wise',
+      title: 'End-to-End Enterprise Integration and Data Synchronization Platform',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Enabling real-time integration, seamless automation, and enterprise-grade data synchronization across mission-critical business systems.',
+      image: '/images/Templates/connect-wise/hero-bg.png',
+    },
+    {
+      slug: 'henkel',
+      title: 'Campaign Performance and Conversion Analytics Platform',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Empowering data-driven marketing decisions through unified analytics, end-to-end funnel visibility, and actionable campaign intelligence.',
+      image: '/images/Templates/henkel/hero-float.png',
+    },
+    {
+      slug: 'take2eton-1',
+      title: 'Digital Transformation for a Leading Global Travel Management Organization',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Showcasing AI, automation, data integration, and analytics-driven solutions that improved operational efficiency, financial accuracy, compliance visibility, and customer experience across travel management functions.',
+      image: '/images/Templates/take2eton-1/hero-float.png',
+    },
+    {
+      slug: 'take2eton-2',
+      title: 'Digital Transformation for a Leading Global Travel Management Organization',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Showcasing AI, automation, data integration, and analytics-driven solutions that improved operational efficiency, financial accuracy, compliance visibility, and customer experience across travel management functions.',
+      image: '/images/Templates/take2eton-2/challenge.png',
+    },
+    {
+      slug: 'take2eton-3',
+      title: 'Digital Transformation for a Leading Global Travel Management Organization',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Showcasing AI, automation, data integration, and analytics-driven solutions that improved operational efficiency, financial accuracy, compliance visibility, and customer experience across travel management functions.',
+      image: '/images/Templates/take2eton-3/challenge.png',
+    },
+    {
+      slug: 'take2eton-4',
+      title: 'Digital Transformation for a Leading Global Travel Management Organization',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Showcasing AI, automation, data integration, and analytics-driven solutions that improved operational efficiency, financial accuracy, compliance visibility, and customer experience across travel management functions.',
+      image: '/images/Templates/take2eton-4/challenge.png',
+    },
+    {
+      slug: 'take2eton-5',
+      title: 'Digital Transformation for a Leading Global Travel Management Organization',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Showcasing AI, automation, data integration, and analytics-driven solutions that improved operational efficiency, financial accuracy, compliance visibility, and customer experience across travel management functions.',
+      image: '/images/Templates/take2eton-5/challenge.png',
+    },
+    {
+      slug: 'tig-golf',
+      title: 'Automated Data Pipeline for Excel-Based Reporting',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Transforming semi-structured Excel data into scalable, automated, and analysis-ready datasets for real-time retail reporting.',
+      image: '/images/Templates/tig-golf/hero-float.png',
+    },
+    {
+      slug: 'altimetrik',
+      title: 'Sales, Inventory & Customer Analytics Platform',
+      type: 'AI Solutions',
+      industry: 'Retail',
+      description:
+        'Enabling real-time visibility into sales, inventory, and customer behavior to drive smarter retail decisions and optimize  operations.',
+      image: '/images/Templates/altimetrik/hero-float.png',
+    },
   ];
 
   const cardsData = caseStudiesData.map((study, i) => {
