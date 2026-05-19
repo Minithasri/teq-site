@@ -648,7 +648,7 @@ const Cards = () => {
       industry: 'Banking',
       description:
         'A unified reporting framework that transformed fragmented sales data into real-time executive intelligence enabling faster, evidence-based decisions across regions and channels.',
-      image: '/images/Templates/retail-1/hero-bg.png',
+      image: '/images/Templates/retail-1/solution.png',
     },
   ];
 
