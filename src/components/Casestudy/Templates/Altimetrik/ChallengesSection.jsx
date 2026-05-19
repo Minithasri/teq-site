@@ -5,31 +5,31 @@ import Image from 'next/image';
 const challenges = [
   {
     id: '01',
-    icon: 'images/Templates/altimetrik/lack.svg',
+    icon: '/images/Templates/altimetrik/lack.svg',
     title: 'Lack of Real-Time Visibility',
     description: 'Delayed insights into sales and inventory performance across channels.',
   },
   {
     id: '02',
-    icon: 'images/Templates/altimetrik/lack.svg',
+    icon: '/images/Templates/altimetrik/fragmented.svg',
     title: 'Fragmented Data Sources',
     description: 'Data spread across multiple channels, regions, and disconnected systems.',
   },
   {
     id: '03',
-    icon: 'images/Templates/altimetrik/lack.svg',
+    icon: '/images/Templates/altimetrik/inefficient.svg',
     title: 'Inefficient Inventory Planning',
     description: 'Stock imbalances affecting product availability and working capital.',
   },
   {
     id: '04',
-    icon: 'images/Templates/altimetrik/lack.svg',
+    icon: '/images/Templates/altimetrik/manual.svg',
     title: 'Manual Reporting Processes',
     description: 'Time-consuming, error-prone report generation cycles.',
   },
   {
     id: '05',
-    icon: 'images/Templates/altimetrik/lack.svg',
+    icon: '/images/Templates/altimetrik/limited.svg',
     title: 'Limited Customer Insights',
     description: 'Inability to analyze behavior across the omnichannel journey.',
   },
@@ -37,7 +37,7 @@ const challenges = [
 
 const ChallengesSection = () => {
   return (
-    <section className='relative w-full overflow-hidden bg-white'>
+    <section className='relative w-full overflow-visible bg-white'>
       <div className='relative mx-auto max-w-7xl px-4 md:px-6'>
         {/* TITLE */}
         <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#F03632]'>
@@ -56,22 +56,22 @@ const ChallengesSection = () => {
           <div
             className='
               absolute
-              right-[-30px]
-              bottom-[-20px]
+              right-[-90px]
+              -bottom-[386px]
               hidden
-              lg:block
+              md:block
               z-10
             '
           >
             <Image
-              src='/images/example-image.png'
+              src='/images/Templates/altimetrik/challenge.png'
               alt='Fashion'
               width={300}
               height={360}
               priority
               className='
-                h-[360px]
-                w-[300px]
+                h-[690px]
+                w-[550px]
                 object-contain
               '
             />
@@ -85,7 +85,6 @@ const ChallengesSection = () => {
                   key={index}
                   className='
                     relative
-                    min-h-[190px]
                     rounded-[14px]
                     border-2
                     border-[#FF3A35]
@@ -99,24 +98,26 @@ const ChallengesSection = () => {
                     {item.id}
                   </span>
 
-                  {/* ICON */}
-                  <div className='flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-[10px] bg-[#F03632]'>
-                    <Image
-                      src={item.icon}
-                      alt='Warning'
-                      width={16}
-                      height={16}
-                      className='h-[16px] w-[16px] object-contain'
-                    />
+                  <div className='flex items-center gap-4'>
+                    {/* ICON */}
+                    <div className='flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-[10px] bg-[#F03632]'>
+                      <Image
+                        src={item.icon}
+                        alt='Warning'
+                        width={16}
+                        height={16}
+                        className='h-[16px] w-[16px] object-contain'
+                      />
+                    </div>
+
+                    {/* TITLE */}
+                    <h3 className='text-[16px] md:text-[20px] leading-[1.4] font-semibold tracking-[-0.5px] text-[#F03632]'>
+                      {item.title}
+                    </h3>
                   </div>
 
-                  {/* TITLE */}
-                  <h3 className='mt-6 max-w-[240px] text-[20px] md:text-[24px] leading-[1.4] font-semibold tracking-[-0.5px] text-[#F03632]'>
-                    {item.title}
-                  </h3>
-
                   {/* DESCRIPTION */}
-                  <p className='mt-6 max-w-[260px] text-[13px] md:text-[15px] leading-[1.9] text-[#6F7787]'>
+                  <p className='mt-6 text-[13px] md:text-[15px] leading-[1.9] text-[#6F7787]'>
                     {item.description}
                   </p>
                 </div>

@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section className='w-full overflow-hidden bg-[#E2E8F0]/30'>
       {/* ================= HERO SECTION ================= */}
-      <div className='relative overflow-visible bg-[#051A36] pb-[90px] md:pb-[120px]'>
+      <div className='relative overflow-visible bg-[#051A36] pb-[40px] md:pb-[120px]'>
         {/* CONTENT */}
         <div className='relative mx-auto max-w-7xl px-4 md:px-6 pt-24'>
           {/* HEADING */}
