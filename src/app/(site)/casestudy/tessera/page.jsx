@@ -14,7 +14,7 @@ export default function TesseraCaseStudy() {
       <ClientOverview />
       <Solutions />
       <BusinessImpact />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-%20Tessera.pdf' />
     </main>
   );
 }

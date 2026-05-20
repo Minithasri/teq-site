@@ -19,7 +19,7 @@ export default function RealEstatePerformancePage() {
       <Solutions />
       <TechStack />
       <BusinessImpact />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/ESR.pdf' />
     </main>
   );
 }

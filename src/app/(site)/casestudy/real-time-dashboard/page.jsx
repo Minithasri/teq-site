@@ -15,7 +15,7 @@ export default function SalesPerformancePage() {
       <ObjectiveSolution />
       <TechnologyStack />
       <BusinessImpact />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Titan%2022-%20I.pdf' />
     </main>
   );
 }

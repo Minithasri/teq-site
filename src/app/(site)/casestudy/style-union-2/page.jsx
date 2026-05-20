@@ -17,7 +17,7 @@ export default function StyleUnion2CaseStudy() {
       <CapabilitiesSection />
       <BusinessImpactSection />
       <TechnologyStackSection />
-      <LastSection pdfUrl='/case-studies/GWC_Style_Union_2_Case_Study.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Style%20Union%202.pdf' />
     </main>
   );
 }

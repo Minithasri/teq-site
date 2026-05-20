@@ -26,7 +26,7 @@ const AequsCaseStudy = () => {
       <BusinessImpact />
       <TechnologyStack />
       <ValueDelivered />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/AEQUS.pdf' />
     </main>
   );
 };

@@ -14,7 +14,7 @@ const ParisarPage = () => {
       <TheChallenge />
       <TheSolution />
       <TechnologyStack />
-      <BusinessImpact />
+      <BusinessImpact pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-Parisar.pdf' />
     </main>
   );
 };

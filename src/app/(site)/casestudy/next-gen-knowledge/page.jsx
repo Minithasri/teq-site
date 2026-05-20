@@ -19,7 +19,7 @@ export default function Page() {
       <Technology />
       <Business />
       <Quantitative />
-      <LastSection pdfUrl='/case-studies/GWC_AI Chatbot for Enterprise Support.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/next-gen-knowledge.pdf' />
     </main>
   );
 }

@@ -21,7 +21,7 @@ export default function TezPage() {
       <BusinessImpact />
       <TechnologyStack />
       <ValueDelivered />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Tez.pdf' />
 
       {/* Additional sections for Tez will be added here */}
     </main>

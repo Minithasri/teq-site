@@ -19,7 +19,7 @@ export default function ToolManagementPage() {
       <Technology />
       <BusinessImpact />
       <Quantitative />
-      <LastSection pdfUrl='/case-studies/GWC_Tool Management & Utilization.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/tool-management.pdf' />
     </main>
   );
 }

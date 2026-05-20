@@ -27,7 +27,7 @@ export default function Curiculam1CaseStudy() {
       <BusinessImpact />
 
       {/* Elegant Standard footer CTA section */}
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-Curiculam%20Associates%20(1).pdf' />
     </main>
   );
 }

@@ -11,7 +11,7 @@ export default function AccorCaseStudy() {
       <HeroSection />
       <MenuChallengeSolutionSection />
       <MenuImpactTechSection />
-      <LastSection pdfUrl='/case-studies/GWC_ACCOR_Case_Study.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Accor.pdf' />
     </main>
   );
 }

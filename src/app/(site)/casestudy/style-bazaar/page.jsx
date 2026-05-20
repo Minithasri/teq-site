@@ -17,7 +17,7 @@ export default function StyleBazaarPage() {
       <Solutions />
       <BusinessImpact />
       <Technology />
-      <LastSection pdfUrl='/case-studies/Style Baazar.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Style%20Baazar.pdf' />
     </main>
   );
 }

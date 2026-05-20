@@ -6,6 +6,7 @@ import CurrentStateMetrics from '@/components/Casestudy/Templates/Anyday/Current
 import TheSolution from '@/components/Casestudy/Templates/Anyday/TheSolution';
 import TechnologyStack from '@/components/Casestudy/Templates/Anyday/TechnologyStack';
 import BusinessImpact from '@/components/Casestudy/Templates/Anyday/BusinessImpact';
+import LastSection from '@/components/Casestudy/Templates/Real Time Production/LastSection';
 
 const AnydayPage = () => {
   return (
@@ -17,6 +18,7 @@ const AnydayPage = () => {
       <TheSolution />
       <TechnologyStack />
       <BusinessImpact />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Anyday.pdf' />
     </main>
   );
 };

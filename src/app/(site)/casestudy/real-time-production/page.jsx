@@ -23,7 +23,7 @@ export default function RealTimeProductionPage() {
       <DrivenSolution />
       <RealBusiness />
       <TechnologyStack />
-      <LastSection pdfUrl='/case-studies/GWC_IoT-Driven Smart Factory.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Alubee.pdf' />
     </>
   );
 }

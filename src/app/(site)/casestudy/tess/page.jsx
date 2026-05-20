@@ -18,7 +18,7 @@ export default function TessCaseStudy() {
       <KeyCapabilities />
       <BusinessImpact />
       <TechnologyStack />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/TESS_TEPL.pdf' />
     </main>
   );
 }

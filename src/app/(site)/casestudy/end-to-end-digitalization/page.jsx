@@ -19,7 +19,7 @@ export default function ManufacturingReportsPage() {
       <Solutions />
       <TechnologyStack />
       <BusinessImpact />
-      <LastSection pdfUrl='/case-studies/Manufacturing_Reports.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/TATA%20Electronics%204.pdf' />
     </main>
   );
 }

@@ -22,7 +22,7 @@ export default function ToyotaCaseStudy() {
       <BusinessImpact />
       <TechnologyStack />
       <DrivingTransformation />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Toyota%202.pdf' />
     </main>
   );
 }

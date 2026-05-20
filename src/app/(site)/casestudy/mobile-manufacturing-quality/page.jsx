@@ -21,7 +21,7 @@ export default function MobileManufacturingQualityPage() {
       <Highlights />
       <Technology />
       <BusinessImpact />
-      <LastSection pdfUrl='/case-studies/GWC_Commonality & Traceability in Manufacturing.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/mobile-manufacturing.pdf' />
     </main>
   );
 }

@@ -15,7 +15,7 @@ export default function PredictiveMaintenancePage() {
       <Management />
       <Technology />
       <BusinessImpact />
-      <LastSection pdfUrl='/case-studies/GWC_Predictive Maintenance with AI & IoT.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/predictive-maintenance.pdf' />
     </main>
   );
 }

@@ -19,7 +19,7 @@ const Page = () => {
       <Technology />
       <KeyOutcomes />
       <Conclusion />
-      <LastSection pdfUrl='/case-studies/GWC_Maintenance Efficiency Improvement.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/smart-maintenance.pdf' />
     </>
   );
 };

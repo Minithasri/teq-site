@@ -7,6 +7,7 @@ import BusinessObjectives from '@/components/Casestudy/Templates/lskg/BusinessOb
 import TheSolution from '@/components/Casestudy/Templates/lskg/TheSolution';
 import TechnologyStack from '@/components/Casestudy/Templates/lskg/TechnologyStack';
 import BusinessImpact from '@/components/Casestudy/Templates/lskg/BusinessImpact';
+import LastSection from '@/components/Casestudy/Templates/Real Time Production/LastSection';
 
 export default function LSKGPage() {
   return (
@@ -18,6 +19,7 @@ export default function LSKGPage() {
       <TheSolution />
       <TechnologyStack />
       <BusinessImpact />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/LSKD.pdf' />
     </main>
   );
 }

@@ -16,7 +16,7 @@ export default function TaventCaseStudy() {
       <Solutions />
       <BusinessImpact />
       <TechnologyStack />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-%20Tavent.pdf' />
     </main>
   );
 }

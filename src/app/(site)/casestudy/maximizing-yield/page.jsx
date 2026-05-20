@@ -21,7 +21,7 @@ export default function MaximizingYieldPage() {
       <Technology />
       <Images />
       <BusinessImpact />
-      <LastSection pdfUrl='/case-studies/GWC_Production & Yield Analytics.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/maximizing-yield.pdf' />
     </main>
   );
 }

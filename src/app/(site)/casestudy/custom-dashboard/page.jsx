@@ -15,7 +15,7 @@ export default function CustomDashboardPage() {
       <KeyCapabilities />
       <BusinessImpact />
       <TechnologyStack />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Mojo.pdf' />
     </main>
   );
 }

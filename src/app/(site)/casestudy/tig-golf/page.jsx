@@ -15,7 +15,7 @@ export default function TigGolfCaseStudy() {
       <SolutionsSection />
       <BusinessImpactSection />
       <ValueDeliveredSection />
-      <LastSection pdfUrl='/case-studies/GWC_TIGGOLF_Case_Study.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-%20TIG%20Golf.pdf' />
     </main>
   );
 }

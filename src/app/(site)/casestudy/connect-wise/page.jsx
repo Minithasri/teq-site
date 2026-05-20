@@ -13,7 +13,7 @@ export default function ConnectWiseCaseStudy() {
       <ChallengeSection />
       <SolutionImpactSection />
       <TechnologyValueSection />
-      <LastSection pdfUrl='/case-studies/GWC_CONNECTWISE_Case_Study.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-%20Connectwise.pdf' />
     </main>
   );
 }

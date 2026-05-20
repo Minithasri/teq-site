@@ -13,7 +13,7 @@ export default function HenkelWiseCaseStudy() {
       <ChallengeSection />
       <SolutionSection />
       <BusinessImpactSection />
-      <LastSection pdfUrl='/case-studies/GWC_HENKEL_Case_Study.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-%20Henkel.pdf' />
     </main>
   );
 }

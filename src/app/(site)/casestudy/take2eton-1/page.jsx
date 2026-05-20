@@ -11,7 +11,7 @@ export default function Take2Eton1CaseStudy() {
       <HeroSection />
       <BusinessChallengesSection />
       <SolutionSection />
-      <LastSection pdfUrl='/case-studies/GWC_TAKE2ETON-1_Case_Study.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-Take2Eton%20(1).pdf' />
     </main>
   );
 }

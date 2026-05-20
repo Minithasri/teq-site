@@ -18,7 +18,7 @@ export default function GskCaseStudy() {
       <KeyCapabilities />
       <BusinessImpact />
       <TechnologyStack />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-%20GSK.pdf' />
     </main>
   );
 }

@@ -13,7 +13,7 @@ export default function ZHY24CaseStudy() {
       <SolutionSection />
       <BusinessImpactSection />
       <TechnologyStackSection />
-      <LastSection pdfUrl='/case-studies/GWC_Z-HY-24_Case_Study.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/HY%2024.pdf' />
     </main>
   );
 }

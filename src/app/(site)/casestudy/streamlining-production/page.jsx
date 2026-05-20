@@ -20,7 +20,7 @@ export default function StreamliningProductionPage() {
       <Architecture />
       <Technology />
       <BusinessImpact />
-      <LastSection pdfUrl='/case-studies/GWC_IE App for Downtime Optimization.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/streamlining-production.pdf' />
     </main>
   );
 }

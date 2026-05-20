@@ -13,7 +13,7 @@ export default function ZBayPage() {
       <Challenges />
       <Investigation />
       <Technology />
-      <LastSection pdfUrl='/case-studies/GWC_Z-Bay_Case_Study.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Ebay.pdf' />
     </main>
   );
 }

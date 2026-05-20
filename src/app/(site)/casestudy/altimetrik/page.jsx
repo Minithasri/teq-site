@@ -15,7 +15,7 @@ export default function AltimetrikCaseStudy() {
       <SolutionSection />
       <BusinessImpactSection />
       <TechnologyValueSection />
-      <LastSection pdfUrl='/case-studies/GWC_ALTIMETRIK_Case_Study.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-%20Altimetrik.pdf' />
     </main>
   );
 }

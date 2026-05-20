@@ -13,7 +13,7 @@ export default function GCONCaseStudy() {
       <OverviewSection />
       <BusinessImpactSection />
       <TechnologyValueSection />
-      <LastSection pdfUrl='/case-studies/GWC_GCON_Case_Study.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Gcon.pdf' />
     </main>
   );
 }

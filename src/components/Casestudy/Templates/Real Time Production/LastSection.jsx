@@ -65,7 +65,8 @@ const LastSection = ({ pdfUrl }) => {
             {/* Download Brochure Button */}
             <a
               href={pdfUrl || '#'}
-              download={pdfUrl ? pdfUrl.split('/').pop() : true}
+              target='_blank'
+              rel='noopener noreferrer'
               className='w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium text-[14px] sm:text-[16px] transition-transform hover:scale-105 shadow-md'
               style={{
                 background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',

@@ -652,14 +652,25 @@ const Cards = () => {
     },
   ];
 
+  const aiSlugs = [
+    'ai-powered-hospitality',
+    'agentic-ai-data-center',
+    'gcon',
+    'custom-dashboard',
+    'bissell',
+    'sephora',
+    'accor',
+  ];
+
   const cardsData = caseStudiesData.map((study, i) => {
+    const isAI = aiSlugs.includes(study.slug);
     return {
       id: i + 1,
       image: study.image,
       title: study.title,
       description: study.description,
       slug: study.slug,
-      type: study.type,
+      type: isAI ? 'AI Solutions' : 'BI Solutions',
       industry: study.industry,
       link: `/casestudy/${study.slug}`,
     };
@@ -888,7 +899,7 @@ const Cards = () => {
                     : 'text-[#6B7280] hover:text-[#404040]'
                 }`}
               >
-                AI Intelligence
+                Artificial Intelligence
               </button>
               <button
                 onClick={() => setActiveTab('BI Solutions')}
@@ -898,7 +909,7 @@ const Cards = () => {
                     : 'text-[#6B7280] hover:text-[#7030B1]'
                 }`}
               >
-                BI Intelligence
+                Business Intelligence
               </button>
             </div>
 

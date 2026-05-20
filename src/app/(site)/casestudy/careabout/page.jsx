@@ -18,7 +18,7 @@ export default function CareaboutCaseStudy() {
       <KeyCapabilities />
       <BusinessImpact />
       <TechnologyStack />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-%20Careabout.pdf' />
     </main>
   );
 }

@@ -17,7 +17,7 @@ export default function OptimizingProductionPage() {
       <Architecture />
       <Technology />
       <BusinessImpact />
-      <LastSection pdfUrl='/case-studies/GWC_Scrap Analytics for Quality Improvement.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/optimizing-production.pdf' />
     </main>
   );
 }

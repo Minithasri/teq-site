@@ -19,7 +19,7 @@ export default function FinanceHRPerformanceInsightsPage() {
       <SolutionSummary />
       <BusinessImpact />
       <TechnologyStack />
-      <LastSection pdfUrl='/case-studies/Finance_HR_Insights.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Metro%20one.pdf' />
     </main>
   );
 }

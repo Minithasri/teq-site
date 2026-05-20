@@ -13,7 +13,7 @@ export default function KamrtCaseStudy() {
       <ChallengeTransformationSection />
       <SolutionTechSection />
       <BusinessImpactSection />
-      <LastSection pdfUrl='/case-studies/GWC_KAMRT_Case_Study.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-Kmart.pdf' />
     </main>
   );
 }

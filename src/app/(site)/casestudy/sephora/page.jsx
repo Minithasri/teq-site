@@ -16,7 +16,7 @@ export default function SephoraCaseStudy() {
       <Solutions />
       <KeyCapabilities />
       <BusinessImpact />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Z-%20Sephora%20(1).pdf' />
     </main>
   );
 }

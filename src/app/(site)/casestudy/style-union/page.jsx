@@ -15,7 +15,7 @@ export default function StyleUnionPage() {
       <Solutions />
       <BusinessImpact />
       <Technology />
-      <LastSection pdfUrl='/case-studies/Style Union.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Style%20Union.pdf' />
     </main>
   );
 }

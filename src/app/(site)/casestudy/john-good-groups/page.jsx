@@ -11,7 +11,7 @@ export default function ZBayPage() {
       <HeroSection />
       <ChallengeSolutionSection />
       <BusinessImpactSection />
-      <LastSection pdfUrl='/case-studies/GWC_Z-John-Good-Groups_Case_Study.pdf' />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/John%20Good%20Groups.pdf' />
     </main>
   );
 }

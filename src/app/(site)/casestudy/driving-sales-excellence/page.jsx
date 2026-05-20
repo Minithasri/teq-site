@@ -15,7 +15,7 @@ export default function DrivingSalesExcellencePage() {
       <Strategic />
       <Solutions />
       <TechBus />
-      <LastSection />
+      <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/Titan%2022-%20II.pdf' />
     </main>
   );
 }
