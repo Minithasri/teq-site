@@ -22,13 +22,13 @@ export default function TechnologyStack() {
     >
       <div className='max-w-7xl mx-auto px-4 mb-10'>
         <h2
-          className='text-center font-semibold uppercase text-black text-[24px] md:text-[32px]'
+          className='text-center font-semibold text-black text-[24px] md:text-[32px]'
           style={{
             letterSpacing: '1.4px',
             lineHeight: '1.2',
           }}
         >
-          TECHNOLOGY STACK
+          Technology Stack
         </h2>
       </div>
 

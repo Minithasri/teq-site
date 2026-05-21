@@ -96,7 +96,7 @@ const Investigation = () => {
       <div className='max-w-6xl mx-auto px-4 md:px-6'>
         {/* TOP CONTENT */}
         <div className='text-center'>
-          <p className='text-[#2F63FF] text-[12px] md:text-[30px] font-semibold tracking-[2px] uppercase mb-4'>
+          <p className='text-[12px] md:text-[30px] font-semibold tracking-[2px] mb-4'>
             Investigation Intelligence
           </p>
 
@@ -218,7 +218,7 @@ const Investigation = () => {
         <div className='relative pt-24 md:pt-32'>
           {/* HEADING */}
           <div className='text-center'>
-            <p className='text-[#2F63FF] text-[16px] md:text-[30px] font-semibold tracking-[2px] uppercase'>
+            <p className='text-[16px] md:text-[30px] font-semibold tracking-[2px]'>
               Business Impact
             </p>
 
@@ -237,11 +237,11 @@ const Investigation = () => {
             {impactCards.map((card, index) => (
               <div
                 key={index}
-                className='bg-white border border-[#20C05C] rounded-[16px] md:rounded-[20px] p-6 md:p-7'
+                className='bg-white border-2 border-[#F5F5F5] rounded-[16px] md:rounded-[20px] p-6 md:p-7 shadow-[0_8px_22px_rgba(0,0,0,0.08)]'
               >
                 {/* ICON */}
                 <div className='flex items-center gap-4 mb-5'>
-                  <div className='w-10 md:w-12 h-10 md:h-12 rounded-lg md:rounded-xl border border-[#20C05C] flex items-center justify-center [&>svg]:w-5 md:[&>svg]:w-[22px] [&>svg]:h-5 md:[&>svg]:h-[22px]'>
+                  <div className='w-10 md:w-12 h-10 md:h-12 rounded-lg md:rounded-xl bg-green-100 flex items-center justify-center [&>svg]:w-5 md:[&>svg]:w-[22px] [&>svg]:h-5 md:[&>svg]:h-[22px]'>
                     <Image
                       src={card.icon}
                       alt={card.title}
@@ -251,14 +251,12 @@ const Investigation = () => {
                     />
                   </div>
 
-                  <h3 className='text-[36px] md:text-[44px] font-semibold text-[#20C05C]'>
+                  <h3 className='text-[36px] md:text-[44px] font-semibold text-[#0F1729]/80'>
                     {card.value}
                   </h3>
                 </div>
                 {/* TITLE */}
-                <h4 className='mt-4 text-base md:text-lg font-semibold text-[#20C05C]'>
-                  {card.title}
-                </h4>
+                <h4 className='mt-4 text-base md:text-lg font-semibold'>{card.title}</h4>
 
                 {/* DESC */}
                 <p className='mt-2 md:mt-3 text-[16px] md:text-xl text-[#7B8190]'>{card.desc}</p>

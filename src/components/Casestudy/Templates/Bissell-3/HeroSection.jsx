@@ -13,9 +13,9 @@ const HeroSection = () => {
           <div className='max-w-6xl'>
             {/* HEADING */}
             <h1 className='text-[32px] md:text-[66px] leading-[1.08] font-semibold tracking-[-2px] text-white'>
-              Logistics <span className='text-[#F1F64B]'>Network Optimization &</span>
+              Logistics Network Optimization &
               <br />
-              <span className='text-[#F1F64B]'>Cost Reduction</span> Analytics
+              Cost Reduction Analytics
             </h1>
 
             {/* DESCRIPTION */}
@@ -41,9 +41,9 @@ const HeroSection = () => {
 
       {/* ================= CLIENT OVERVIEW ================= */}
       <div className='relative z-10'>
-        <div className='mx-auto max-w-7xl px-4 md:px-6 pt-10 md:pt-14 pb-10 md:pb-14'>
+        <div className='mx-auto max-w-7xl px-4 md:px-6 pt-10 md:pt-14 pb-10 md:pb-14 text-center'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#22D5E2]'>
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
             Client Overview
           </h2>
 
@@ -53,14 +53,14 @@ const HeroSection = () => {
               mt-8
               max-w-6xl
               rounded-[18px]
-              border
-              border-[#E7EAF2]
+              border-2
+              border-[#F5F5F5]
               bg-white
               px-6
               md:px-8
               py-6
               md:py-8
-              shadow-[0px_10px_25px_rgba(0,0,0,0.06)]
+              shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
             '
           >
             <p className='text-[12px] md:text-[18px] leading-[1.9] text-[#7D8797]'>

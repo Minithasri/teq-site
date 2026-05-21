@@ -45,10 +45,8 @@ const BusinessChallenges = () => {
     <section className='py-20' style={{ backgroundColor: '#F3F5F7' }}>
       <div className='max-w-9xl mx-auto px-6 md:px-16 lg:px-24'>
         {/* Section Header */}
-        <div className='mb-16'>
-          <h2 className='text-4xl font-bold mb-6' style={{ color: '#ED1800' }}>
-            Business Challenges
-          </h2>
+        <div className='mb-16 text-center'>
+          <h2 className='text-4xl font-bold mb-6'>Business Challenges</h2>
           <p className='text-lg w-full' style={{ color: '#6A7181' }}>
             The organization faced critical operational gaps that hindered quality assurance
             outcomes and testing throughput.
@@ -60,14 +58,12 @@ const BusinessChallenges = () => {
           {challenges.map((item, index) => (
             <div
               key={index}
-              className='bg-white p-8 rounded-[20px] border-2 flex flex-col space-y-6 transition-all duration-300 hover:shadow-xl'
-              style={{ borderColor: '#ED1800' }}
+              className='bg-white p-8 rounded-[20px] border-2 flex flex-col space-y-6 transition-all duration-300 shadow-[0px_4px_12px_rgba(0,0,0,0.08)]'
             >
               {/* Icon Container */}
               <div
-                className='w-14 h-14 rounded-xl border-2 flex items-center justify-center'
+                className='w-14 h-14 rounded-xl flex items-center justify-center'
                 style={{
-                  borderColor: '#ED1800',
                   backgroundColor: '#ED180026',
                 }}
               >
@@ -76,9 +72,7 @@ const BusinessChallenges = () => {
 
               {/* Card Content */}
               <div className='space-y-3'>
-                <h3 className='text-xl font-bold' style={{ color: '#ED1800' }}>
-                  {item.title}
-                </h3>
+                <h3 className='text-xl font-bold text-[#0F1729]/80'>{item.title}</h3>
                 <p className='leading-relaxed' style={{ color: '#6A7181' }}>
                   {item.description}
                 </p>

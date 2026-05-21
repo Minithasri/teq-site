@@ -12,7 +12,7 @@ const ClientChallenges = () => {
           {/* Top Row: 3 Cards */}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>
             {/* Card 1 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-sm flex items-start gap-4 h-full'>
+            <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4 h-full'>
               <div className='w-10 h-10 rounded-full bg-[#EF44441A] flex items-center justify-center flex-shrink-0'>
                 <svg
                   width='20'
@@ -36,7 +36,7 @@ const ClientChallenges = () => {
             </div>
 
             {/* Card 2 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-sm flex items-start gap-4 h-full'>
+            <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4 h-full'>
               <div className='w-10 h-10 rounded-full bg-[#EF44441A] flex items-center justify-center flex-shrink-0'>
                 <svg
                   width='20'
@@ -58,7 +58,7 @@ const ClientChallenges = () => {
             </div>
 
             {/* Card 3 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-sm flex items-start gap-4 h-full'>
+            <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4 h-full'>
               <div className='w-10 h-10 rounded-full bg-[#EF44441A] flex items-center justify-center flex-shrink-0'>
                 <svg
                   width='20'
@@ -84,7 +84,7 @@ const ClientChallenges = () => {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 relative'>
             <div className='col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6'>
               {/* Card 4 */}
-              <div className='bg-white rounded-[12px] p-6 shadow-sm flex items-start gap-4 h-full'>
+              <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4 h-full'>
                 <div className='w-10 h-10 rounded-full bg-[#EF44441A] flex items-center justify-center flex-shrink-0'>
                   <svg
                     width='20'
@@ -107,7 +107,7 @@ const ClientChallenges = () => {
               </div>
 
               {/* Card 5 */}
-              <div className='bg-white rounded-[12px] p-6 shadow-sm flex items-start gap-4 h-full'>
+              <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4 h-full'>
                 <div className='w-10 h-10 rounded-full bg-[#EF44441A] flex items-center justify-center flex-shrink-0'>
                   <svg
                     width='20'

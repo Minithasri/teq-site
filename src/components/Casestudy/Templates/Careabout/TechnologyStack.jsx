@@ -21,14 +21,10 @@ export default function TechnologyStack() {
       <section className='w-full' style={{ backgroundColor: '#F6F7F9' }}>
         <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-10 md:py-12'>
           {/* Title row + inline tech icons */}
-          <div className='flex flex-wrap items-center gap-5 mb-5'>
-            <h2
-              className='text-2xl md:text-3xl font-bold whitespace-nowrap'
-              style={{ color: '#1452BC' }}
-            >
-              Technology Stack
-            </h2>
-
+          <h2 className='text-2xl md:text-3xl font-bold whitespace-nowrap text-center'>
+            Technology Stack
+          </h2>
+          <div className='mt-6 flex flex-wrap items-center justify-center gap-5 mb-5'>
             {/* Inline icons */}
             <div className='flex items-center gap-4 flex-wrap'>
               {techIcons.map((icon, i) => (
@@ -49,16 +45,11 @@ export default function TechnologyStack() {
           </div>
 
           {/* Pill tags */}
-          <div className='flex flex-wrap gap-3'>
+          <div className='flex flex-wrap items-center justify-center gap-3'>
             {techTags.map((tag, i) => (
               <span
                 key={i}
-                className='px-5 py-1.5 rounded-full text-sm md:text-[14px] font-medium whitespace-nowrap'
-                style={{
-                  border: '2px solid #4F7FF8',
-                  color: '#1452BC',
-                  backgroundColor: '#FFFFFF',
-                }}
+                className='px-5 py-1.5 rounded-full text-sm md:text-[14px] font-medium whitespace-nowrap border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
               >
                 {tag}
               </span>
@@ -69,11 +60,9 @@ export default function TechnologyStack() {
 
       {/* ── Value Delivered ───────────────────────────────────────────── */}
       <section className='w-full bg-white'>
-        <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-10 md:py-12'>
+        <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-10 md:py-12 text-center'>
           {/* Title */}
-          <h2 className='text-2xl md:text-3xl font-bold mb-5' style={{ color: '#1452BC' }}>
-            Value Delivered
-          </h2>
+          <h2 className='text-2xl md:text-3xl font-bold mb-5'>Value Delivered</h2>
 
           {/* Body */}
           <div className='space-y-4 max-w-7xl'>
@@ -92,11 +81,8 @@ export default function TechnologyStack() {
               style={{ color: '#6A7181' }}
             >
               This engagement exemplifies how thoughtful cloud transformation and engineering
-              excellence can drive measurable business outcomes from{' '}
-              <span style={{ color: '#56D73C' }}>reduced costs</span> and{' '}
-              <span style={{ color: '#56D73C' }}>
-                faster delivery to scalable, standardized data operations.
-              </span>
+              excellence can drive measurable business outcomes from reduced costs and faster
+              delivery to scalable, standardized data operations.
             </p>
           </div>
         </div>

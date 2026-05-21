@@ -38,35 +38,25 @@ const KeyCapabilities = () => {
 
   return (
     <section className='py-20' style={{ backgroundColor: '#F3F5F7' }}>
-      <div className='max-w-9xl mx-auto px-6 md:px-16 lg:px-24'>
+      <div className='max-w-9xl mx-auto px-6 md:px-16 lg:px-24 text-center'>
         {/* Section Header */}
-        <h2 className='text-4xl font-bold mb-12' style={{ color: '#131720' }}>
-          Key Capabilities Delivered
-        </h2>
+        <h2 className='text-4xl font-bold mb-12'>Key Capabilities Delivered</h2>
 
         {/* Capabilities List */}
         <div className='space-y-6'>
           {capabilities.map((item, index) => (
             <div
               key={index}
-              className='bg-white p-6 md:p-8 rounded-[20px] border-2 flex flex-col md:flex-row items-center gap-6 md:gap-8 transition-all duration-300 hover:shadow-lg'
-              style={{ borderColor: '#0336EF' }}
+              className='bg-white p-6 md:p-8 rounded-[20px] border-2 border-[#F5F5F5] flex flex-col md:flex-row items-center gap-6 md:gap-8 transition-all duration-300 shadow-[0px_8px_24px_rgba(0,0,0,0.12)]'
             >
               {/* Icon Container */}
-              <div
-                className='w-14 h-14 rounded-xl border-2 flex items-center justify-center flex-shrink-0'
-                style={{
-                  borderColor: '#0336EF',
-                }}
-              >
+              <div className='w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 bg-[#0336EF]/10'>
                 <img src={item.icon} alt={item.title} className='w-8 h-8' />
               </div>
 
               {/* Card Content */}
               <div className='space-y-2 text-center md:text-left'>
-                <h3 className='text-xl font-bold' style={{ color: '#0336EF' }}>
-                  {item.title}
-                </h3>
+                <h3 className='text-xl font-bold text-[#0F1729]/80'>{item.title}</h3>
                 <p className='text-base leading-relaxed' style={{ color: '#6A7181' }}>
                   {item.description}
                 </p>

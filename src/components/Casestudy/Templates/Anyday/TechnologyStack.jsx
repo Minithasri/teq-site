@@ -28,8 +28,8 @@ const TechnologyStack = () => {
         {/* Cards */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'>
           {/* Card 1 */}
-          <div className='bg-white rounded-[16px] py-10 px-6 text-center border border-[#DADFE780] shadow-sm flex flex-col items-center'>
-            <div className='w-14 h-14 rounded-[12px] bg-gradient-to-b from-[#3B82F6] to-[#2563EB] flex items-center justify-center mb-4'>
+          <div className='bg-white rounded-[16px] py-10 px-6 text-center border border-[#F5F5F5] shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex flex-col items-center'>
+            <div className='w-14 h-14 rounded-[12px] bg-[#0846AA]/60 flex items-center justify-center mb-4'>
               <svg
                 width='28'
                 height='28'
@@ -50,8 +50,8 @@ const TechnologyStack = () => {
           </div>
 
           {/* Card 2 */}
-          <div className='bg-white rounded-[16px] py-10 px-6 text-center border border-[#DADFE780] shadow-sm flex flex-col items-center'>
-            <div className='w-14 h-14 rounded-[12px] bg-gradient-to-b from-[#A855F7] to-[#9333EA] flex items-center justify-center mb-4'>
+          <div className='bg-white rounded-[16px] py-10 px-6 text-center border border-[#F5F5F5] shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex flex-col items-center'>
+            <div className='w-14 h-14 rounded-[12px] bg-[#0846AA]/60 flex items-center justify-center mb-4'>
               <svg
                 width='28'
                 height='28'
@@ -72,8 +72,8 @@ const TechnologyStack = () => {
           </div>
 
           {/* Card 3 */}
-          <div className='bg-white rounded-[16px] py-10 px-6 text-center border border-[#DADFE780] shadow-sm flex flex-col items-center'>
-            <div className='w-14 h-14 rounded-[12px] bg-gradient-to-b from-[#22C55E] to-[#16A34A] flex items-center justify-center mb-4'>
+          <div className='bg-white rounded-[16px] py-10 px-6 text-center border border-[#F5F5F5] shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex flex-col items-center'>
+            <div className='w-14 h-14 rounded-[12px] bg-[#0846AA]/60 flex items-center justify-center mb-4'>
               <svg
                 width='28'
                 height='28'

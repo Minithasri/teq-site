@@ -28,7 +28,7 @@ const ImpactStackSection = () => {
     <section className='w-full overflow-hidden mt-14'>
       {/* ================= BUSINESS IMPACT ================= */}
       <div className='bg-gradient-to-r from-[#0B1D56] to-[#123E67]'>
-        <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
+        <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14 text-center'>
           {/* TITLE */}
           <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-white'>
             Business Impact
@@ -55,14 +55,13 @@ const ImpactStackSection = () => {
 
       {/* ================= TECHNOLOGY STACK ================= */}
       <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-12'>
-        <div className='flex flex-col gap-8 md:flex-row md:items-center md:justify-between'>
+        {/* TITLE */}
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-center'>
+          Technology Stack
+        </h2>
+        <div className='mt-6 flex flex-col gap-8 md:flex-row md:items-center md:justify-center'>
           {/* LEFT CONTENT */}
           <div>
-            {/* TITLE */}
-            <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#1D1F28]'>
-              Technology Stack
-            </h2>
-
             <div className='flex flex-col md:flex-row gap-6'>
               {/* TAGS */}
               <div className='mt-8 flex flex-wrap gap-3'>
@@ -121,9 +120,9 @@ const ImpactStackSection = () => {
 
       {/* ================= VALUE DELIVERED ================= */}
       <div className='bg-[#F6F6F6]'>
-        <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-12'>
+        <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-12 text-center'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#1D1F28]'>
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
             Value Delivered
           </h2>
 
@@ -132,14 +131,14 @@ const ImpactStackSection = () => {
             className='
               mt-8
               rounded-[18px]
-              border
-              border-[#ECEEF3]
+              border-2
+              border-[#F5F5F5]
               bg-white
               px-6
               md:px-8
               py-7
               md:py-9
-              shadow-[0px_10px_24px_rgba(0,0,0,0.05)]
+              shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
             '
           >
             <p className='text-[14px] md:text-[20px] leading-[2] text-[#7E8797]'>

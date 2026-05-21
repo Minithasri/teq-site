@@ -42,7 +42,7 @@ export default function ChallengeSection() {
             <div>
               {/* Header section with your exact yellow star logo asset setup */}
               <div className='flex items-center gap-[16px] mb-[24px]'>
-                <div className='w-[48px] h-[48px] rounded-[10px] bg-[#ffb21a] flex items-center justify-center shrink-0'>
+                <div className='w-[48px] h-[48px] rounded-[10px] bg-[#ef4444]/10 flex items-center justify-center shrink-0'>
                   <Image
                     src='/images/Templates/template12/key.svg'
                     alt='Key Challenges'

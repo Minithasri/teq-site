@@ -44,7 +44,7 @@ export default function ExecutiveSummary() {
           Executive Summary
         </h2>
 
-        <div className='bg-white rounded-[8px] shadow-lg px-[40px] py-[34px] max-w-[970px] mx-auto'>
+        <div className='bg-white rounded-[8px] border-2 border-[#f5f5f5] shadow-[0_4px_24px_rgba(0,0,0,0.08)] px-[40px] py-[34px] max-w-[970px] mx-auto'>
           <p className='text-[17px] text-[#171717] leading-[1.32]'>
             A global leader in the hotel and hospitality industry, wanted to strengthen its guest
             experience strategy by leveraging AI and analytics. With customer expectations evolving
@@ -64,10 +64,10 @@ export default function ExecutiveSummary() {
           {cards.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-[8px] shadow-md px-[22px] py-[20px] min-h-[176px]'
+              className='bg-white rounded-[8px] border-2 border-[#f5f5f5] shadow-[0_4px_24px_rgba(0,0,0,0.08)] px-[22px] py-[20px] min-h-[176px]'
             >
               <div className='flex items-center gap-[20px] mb-[18px]'>
-                <div className='w-[48px] h-[48px] rounded-[10px] bg-[#ffb21a] flex items-center justify-center shrink-0'>
+                <div className='w-[48px] h-[48px] rounded-[10px] bg-[#0846AA]/10 flex items-center justify-center shrink-0'>
                   <Image src={item.icon} alt={item.title} width={24} height={24} />
                 </div>
 

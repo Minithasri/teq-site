@@ -22,10 +22,8 @@ const Solutions = () => {
     <section>
       {/* Header Section */}
       <div className='py-4 md:py-10' style={{ backgroundColor: '#FCFBF8' }}>
-        <div className='max-w-9xl mx-auto px-6 md:px-16 lg:px-24 text-left'>
-          <h2 className='text-4xl font-bold mb-6' style={{ color: '#0336EF' }}>
-            Our Solution
-          </h2>
+        <div className='max-w-9xl mx-auto px-6 md:px-16 lg:px-24 text-center'>
+          <h2 className='text-4xl font-bold mb-6'>Our Solution</h2>
           <p className='text-md md:text-lg max-w-9xl leading-relaxed' style={{ color: '#131720' }}>
             We designed and delivered a comprehensive ORT Lab Parts Testing Lifecycle Management
             System a purpose-built digital platform that replaced manual processes with intelligent
@@ -51,10 +49,7 @@ const Solutions = () => {
         <div className='relative z-10 max-w-9xl mx-auto px-6 md:px-16 lg:px-24 overflow-visible'>
           <div className='flex flex-col lg:flex-row items-center relative'>
             {/* Left Card with Points */}
-            <div
-              className='w-full lg:w-[80%] bg-white p-8 md:p-12 rounded-[30px] border-2 shadow-2xl relative z-10'
-              style={{ borderColor: '#0336EF' }}
-            >
+            <div className='w-full lg:w-[80%] bg-white p-8 md:p-12 rounded-[30px] border-2 border-[#F5F5F5] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] relative z-10'>
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6'>
                 {points.map((point, i) => (
                   <li key={i} className='flex items-start gap-4'>

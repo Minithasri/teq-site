@@ -61,10 +61,10 @@ export default function CurrentStateMetrics() {
             {metrics.map((item, index) => (
               <div
                 key={index}
-                className='bg-white rounded-[14px] border border-white/50 shadow-[0_4px_25px_rgba(0,0,0,0.01)] p-6 md:p-[28px] flex items-start gap-4 min-h-[120px] backdrop-blur-sm bg-white/95'
+                className='bg-white rounded-[14px] border-2 border-[#f5f5f5] shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-6 md:p-[28px] flex items-start gap-4 min-h-[120px] backdrop-blur-sm bg-white/95'
               >
                 {/* Soft Red Rounded Square Icon Wrapper Badge */}
-                <div className='w-[44px] h-[44px] rounded-[10px] bg-[#ffebee] border border-[#ffcdd2]/30 flex items-center justify-center shrink-0 select-none pointer-events-none'>
+                <div className='w-[44px] h-[44px] rounded-[10px] bg-[#ffebee] flex items-center justify-center shrink-0 select-none pointer-events-none'>
                   <img src={item.icon} alt='' className='w-[20px] h-[20px] object-contain' />
                 </div>
 

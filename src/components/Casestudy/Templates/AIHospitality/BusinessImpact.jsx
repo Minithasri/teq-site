@@ -4,7 +4,7 @@ export default function BusinessImpact() {
   const impacts = [
     {
       icon: '/images/Templates/template12/imp1.svg',
-      iconBg: 'bg-[#fef3c7]', // Light soft gold badge
+      iconBg: 'bg-[#f1f5f9]', // Light soft gold badge
       title: 'Guest Experience Impact',
       points: [
         'Enhanced personalization improved guest satisfaction and loyalty',
@@ -22,7 +22,7 @@ export default function BusinessImpact() {
     },
     {
       icon: '/images/Templates/template12/imp3.svg',
-      iconBg: 'bg-[#fef3c7]', // Light soft gold badge
+      iconBg: 'bg-[#f1f5f9]', // Light clean gray badge
       title: 'Strategic Impact',
       points: [
         'Positioned Accor as a hospitality innovator leveraging AI',
@@ -55,7 +55,7 @@ export default function BusinessImpact() {
           {impacts.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-[12px] shadow-2xl p-[28px] border border-gray-100 flex flex-col'
+              className='bg-white rounded-[12px] border-2 border-[#f5f5f5] shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-[28px] flex flex-col'
             >
               {/* Row Header alignment (Icon next to Text) */}
               <div className='flex items-center gap-[14px] mb-[24px]'>

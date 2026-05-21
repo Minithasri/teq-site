@@ -36,9 +36,9 @@ const MenuImpactTechSection = () => {
     <section className='w-full overflow-hidden bg-[#F7F7F7]'>
       <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
         {/* ================= BUSINESS IMPACT ================= */}
-        <div>
+        <div className='text-center'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#12C72E]'>
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
             Business Impact
           </h2>
 
@@ -60,15 +60,16 @@ const MenuImpactTechSection = () => {
                   justify-center
                   rounded-[18px]
                   border-2
-                  border-[#19D326]
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   py-6
                   text-center
+                  shadow-[0px_8px_22px_rgba(0,0,0,0.08)]
                 '
               >
                 {/* VALUE */}
-                <h3 className='text-[32px] md:text-[44px] leading-none font-semibold tracking-[-1px] text-[#19D326]'>
+                <h3 className='text-[32px] md:text-[44px] leading-none font-semibold tracking-[-1px] text-[#0F1729]/80'>
                   {item.value}
                 </h3>
 
@@ -82,13 +83,13 @@ const MenuImpactTechSection = () => {
         </div>
 
         {/* ================= TECHNOLOGY STACK ================= */}
-        <div className='mt-16'>
+        <div className='mt-16 text-center'>
           {/* TOP ROW */}
           <div className='flex flex-col gap-8 md:flex-row md:items-center md:justify-between'>
             {/* LEFT */}
             <div>
               {/* TITLE */}
-              <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#18B8F0]'>
+              <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
                 Technology Stack
               </h2>
 
@@ -100,8 +101,8 @@ const MenuImpactTechSection = () => {
                       key={index}
                       className='
                       rounded-full
-                      border
-                      border-[#7AD8FF]
+                      border-2
+                      border-[#F5F5F5]
                       bg-white
                       px-5
                       md:px-6
@@ -109,7 +110,8 @@ const MenuImpactTechSection = () => {
                       text-[11px]
                       md:text-[14px]
                       font-medium
-                      text-[#69CFFF]
+                      text-[#0F1729]/80
+                      shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                     '
                     >
                       {item}
@@ -137,9 +139,9 @@ const MenuImpactTechSection = () => {
         </div>
 
         {/* ================= VALUE DELIVERED ================= */}
-        <div className='mt-16'>
+        <div className='mt-16 text-center'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#2D85F6]'>
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
             Value Delivered
           </h2>
 

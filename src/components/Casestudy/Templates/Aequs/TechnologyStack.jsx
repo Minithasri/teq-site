@@ -34,13 +34,10 @@ const TechnologyStack = () => {
 
   return (
     <section className='py-20' style={{ backgroundColor: '#FCFBF8' }}>
-      <div className='max-w-9xl mx-auto px-6 md:px-16 lg:px-24'>
+      <div className='max-w-9xl mx-auto px-6 md:px-16 lg:px-24 text-center'>
         {/* Header Row: Title + Logos grouped together */}
-        <div className='flex flex-col lg:flex-row items-center justify-start gap-12 mb-16'>
-          <h2 className='text-4xl font-bold whitespace-nowrap' style={{ color: '#131720' }}>
-            Technology Stack
-          </h2>
-
+        <h2 className='text-4xl font-bold whitespace-nowrap'>Technology Stack</h2>
+        <div className='mt-6 flex flex-col lg:flex-row items-center justify-center gap-12 mb-16'>
           {/* Logo Row */}
           <div className='flex flex-wrap items-center justify-start gap-8'>
             {logos.map((logo, i) => (
@@ -59,8 +56,7 @@ const TechnologyStack = () => {
           {stack.map((item, index) => (
             <div
               key={index}
-              className='bg-white p-8 rounded-2xl border-2 flex flex-col items-center text-center space-y-4 transition-all duration-300 hover:border-[#0336EF]'
-              style={{ borderColor: '#8DA4BF' }}
+              className='bg-white p-8 rounded-2xl border-2 border-[#F5F5F5] flex flex-col items-center text-center space-y-4 transition-all duration-300 shadow-[0px_8px_24px_rgba(0,0,0,0.08)]'
             >
               <h3
                 className='text-xs font-black uppercase tracking-widest'

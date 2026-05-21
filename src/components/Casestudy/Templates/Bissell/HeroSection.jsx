@@ -37,9 +37,8 @@ const HeroSection = () => {
             <div className='mt-6 max-w-4xl'>
               {/* HEADING */}
               <h1 className='text-[38px] md:text-5xl leading-[1.05] font-semibold tracking-[-2px] text-white'>
-                AI-Powered <span className='text-[#E6ED48]'>Executive Reporting</span>
-                <br />
-                <span className='text-[#E6ED48]'>& PPT Automation</span> Platform
+                AI-Powered Executive Reporting
+                <br />& PPT Automation Platform
               </h1>
 
               {/* DESCRIPTION */}
@@ -65,10 +64,10 @@ const HeroSection = () => {
       </div>
 
       {/* ================= CONTENT SECTION ================= */}
-      <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
+      <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14 text-center'>
         <div>
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[1px] text-[#1EA4F3]'>
-            CLIENT OVERVIEW
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[1px]'>
+            Client Overview
           </h2>
 
           <p className='mt-6 text-[15px] md:text-[18px] leading-[1.9] text-[#707A8E]'>
@@ -80,8 +79,8 @@ const HeroSection = () => {
         </div>
 
         <div className='mt-10'>
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[1px] text-[#FF2E2E]'>
-            THE CHALLENGE
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[1px]'>
+            The Challenge
           </h2>
           <div className='mt-10'>
             <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
@@ -92,13 +91,14 @@ const HeroSection = () => {
                     min-h-[92px]
                     rounded-[14px]
                     border-2
-                    border-[#FF4A4A]
+                    border-[#F5F5F5]
                     bg-white
                     px-6
                     py-5
                     flex
                     items-center
                     gap-4
+                    shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                   '
                 >
                   <div className='h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#FF2E2E]' />
@@ -116,13 +116,14 @@ const HeroSection = () => {
                   min-h-[92px]
                   rounded-[14px]
                   border-2
-                  border-[#FF4A4A]
+                  border-[#F5F5F5]
                   bg-white
                   px-6
                   py-5
                   flex
                   items-center
                   gap-4
+                  shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                 '
               >
                 <div className='h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#FF2E2E]' />

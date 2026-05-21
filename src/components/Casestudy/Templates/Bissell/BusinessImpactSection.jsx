@@ -51,8 +51,8 @@ const BusinessImpactSection = () => {
         {/* CONTENT */}
         <div className='relative z-10 mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
           {/* LABEL */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[1px] text-[#24AE3A]'>
-            BUSINESS IMPACT
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[1px] text-center'>
+            Business Impact
           </h2>
 
           {/* IMPACT CARDS */}
@@ -64,17 +64,17 @@ const BusinessImpactSection = () => {
                   min-h-[170px]
                   rounded-[16px]
                   border-2
-                  border-[#2BB23F]
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   md:px-7
                   py-6
                   text-center
-                  shadow-[0px_10px_20px_rgba(0,0,0,0.08)]
+                  shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                 '
               >
                 {/* VALUE */}
-                <h3 className='text-[46px] md:text-[64px] leading-none font-semibold text-[#28AF39]'>
+                <h3 className='text-[46px] md:text-[64px] leading-none font-semibold text-[#0F1729]/80'>
                   {item.value}
                 </h3>
 
@@ -99,17 +99,14 @@ const BusinessImpactSection = () => {
                   gap-3
                   rounded-[12px]
                   border-2
-                  border-[#2BB23F]
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   md:px-7
                   py-4
-                  shadow-[0px_8px_18px_rgba(0,0,0,0.06)]
+                  shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                 '
               >
-                {/* DOT */}
-                <div className='h-2.5 w-2.5 rounded-full bg-[#28AF39]' />
-
                 {/* TEXT */}
                 <p className='text-[13px] md:text-[15px] leading-[1.6] text-[#4A5261]'>{item}</p>
               </div>
@@ -120,12 +117,11 @@ const BusinessImpactSection = () => {
 
       {/* ================= TECHNOLOGY STACK ================= */}
       <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
-        <div className='flex flex-col gap-10 md:flex-row md:items-center md:justify-start'>
-          {/* LABEL */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[1px] text-[#1495E7]'>
-            TECHNOLOGY STACK
-          </h2>
-
+        {/* LABEL */}
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[1px] text-center'>
+          Technology Stack
+        </h2>
+        <div className='mt-6 flex flex-col gap-10 md:flex-row md:items-center md:justify-center'>
           {/* ICONS */}
           <div className='flex flex-wrap items-center gap-5 md:gap-7'>
             <Image
@@ -163,22 +159,22 @@ const BusinessImpactSection = () => {
         </div>
 
         {/* TAGS */}
-        <div className='mt-8 flex flex-wrap items-center justify-start gap-4'>
+        <div className='mt-8 flex flex-wrap items-center justify-center gap-4'>
           {techStack.map((item, index) => (
             <div
               key={index}
               className='
                 rounded-full
-                border
-                border-[#B7DBF7]
-                bg-[#F4FAFF]
+                border-2
+                border-[#F5F5F5]
+                bg-white
                 px-7
                 md:px-10
                 py-2.5
                 text-[12px]
                 md:text-[14px]
                 font-medium
-                text-[#168FE1]
+                shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
               '
             >
               {item}
@@ -187,10 +183,10 @@ const BusinessImpactSection = () => {
         </div>
 
         {/* ================= VALUE DELIVERED ================= */}
-        <div className='mt-14'>
+        <div className='mt-14 text-center'>
           {/* LABEL */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[1px] text-[#1495E7]'>
-            VALUE DELIVERED
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[1px]'>
+            Value Delivered
           </h2>
 
           {/* DESCRIPTION */}

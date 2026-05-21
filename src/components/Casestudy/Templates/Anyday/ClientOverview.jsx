@@ -8,7 +8,7 @@ const ClientOverview = () => {
 
         <div className='relative max-w-5xl mx-auto'>
           {/* Main White Container Card */}
-          <div className='bg-white rounded-[16px] p-5 md:p-8 border border-[#DCE0E5] shadow-[0_4px_20px_rgb(0,0,0,0.06)] relative flex items-center min-h-[220px]'>
+          <div className='bg-white rounded-[16px] p-5 md:p-8 border-2 border-[#F5F5F5] shadow-[0_4px_20px_rgb(0,0,0,0.08)] relative flex items-center min-h-[220px]'>
             {/* Text Content */}
             <div className='w-full md:w-[65%] lg:w-[70%] relative z-10  '>
               <p className='text-[#0F1729] text-[16px] md:text-[18px] leading-relaxed'>

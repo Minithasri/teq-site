@@ -14,9 +14,7 @@ const HeroSection = () => {
             <h1 className='text-[38px] md:text-[72px] leading-[1.08] font-light tracking-[-2px] text-white'>
               AI-Based Menu Analysis &
               <br />
-              <span className='bg-gradient-to-r from-[#2D82FF] to-[#19E2D6] bg-clip-text text-transparent'>
-                Licensing Automation Platform
-              </span>
+              Licensing Automation Platform
             </h1>
 
             {/* DESCRIPTION */}
@@ -44,12 +42,12 @@ const HeroSection = () => {
       <div className='bg-[#F7F7F7]'>
         <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-16'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#2A86F7]'>
-            CLIENT OVERVIEW
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold text-center tracking-[-1px]'>
+            Client Overview
           </h2>
 
           {/* DESCRIPTION */}
-          <div className='mt-8'>
+          <div className='mt-8 text-center'>
             <p className='text-[11px] md:text-[18px] leading-[1.9] text-[#7A8495]'>
               A leading hospitality organization managing restaurant and bar operations, requiring
               efficient and scalable processes to analyze menu data and ensure compliance with

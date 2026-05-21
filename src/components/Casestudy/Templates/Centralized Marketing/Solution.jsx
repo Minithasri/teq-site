@@ -43,8 +43,8 @@ export default function SolutionSection() {
     >
       <div className='max-w-7xl mx-auto px-4 relative z-10'>
         {/* Section Title */}
-        <h2 className='text-[28px] md:text-[32px] font-semibold tracking-[1.4px] text-[#0565EE] text-center uppercase mb-12'>
-          THE SOLUTION
+        <h2 className='text-[28px] md:text-[32px] font-semibold tracking-[1.4px] text-center mb-12'>
+          The Solution
         </h2>
 
         <div className='flex flex-col lg:flex-row items-start justify-center lg:justify-start'>
@@ -65,7 +65,7 @@ export default function SolutionSection() {
 
                 {/* Icon Box */}
                 <div
-                  className='flex-shrink-0 w-11 h-11 rounded-xl bg-white border-[1px] border-[#0565EE] flex items-center justify-center z-10'
+                  className='flex-shrink-0 w-11 h-11 rounded-xl bg-[#0846AA]/20 flex items-center justify-center z-10'
                   style={{ boxShadow: '0px 1px 3px 0px rgba(29, 37, 48, 0.06)' }}
                 >
                   <div className='text-[#0565EE]'>{step.icon}</div>
@@ -81,7 +81,7 @@ export default function SolutionSection() {
                     borderTopWidth: '1.5px',
                   }}
                 >
-                  <h4 className='text-[16px] md:text-[18px] font-semibold text-[#0565EE] leading-tight mb-1 md:mb-2'>
+                  <h4 className='text-[16px] md:text-[18px] font-semibold text-[#0F1729]/80 leading-tight mb-1 md:mb-2'>
                     {step.title}
                   </h4>
                   <p className='text-[12px] md:text-[14px] font-normal text-[#1E2B3D] leading-tight opacity-90'>

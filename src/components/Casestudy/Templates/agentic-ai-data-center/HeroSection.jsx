@@ -26,8 +26,7 @@ export default function HeroSection() {
           <h1 className='text-white text-[32px] md:text-[46px] lg:text-[52px] font-extrabold leading-[1.2] max-w-[860px] tracking-tight text-left'>
             Transforming Data Center
             <br />
-            {/* FIXED: Applied specific yellow color #f1f519 here to match image reference */}
-            Operations with <span className='text-[#f1f519]'>Agentic AI</span>
+            Operations with Agentic AI
           </h1>
         </div>
       </div>

@@ -9,7 +9,7 @@ const BusinessImpact = () => {
         </div>
 
         {/* Outlined Container */}
-        <div className='border border-[#DCE0E5] shadow-sm rounded-[16px] p-8 md:p-12'>
+        <div className='border-2 border-[#F5F5F5] shadow-[0_4px_20px_rgb(0,0,0,0.08)] rounded-[16px] p-8 md:p-12'>
           {/* Table */}
           <div className='w-full mb-12'>
             <div className='grid grid-cols-12 gap-4 border-b border-gray-100 pb-4 mb-4'>
@@ -126,7 +126,7 @@ const BusinessImpact = () => {
 
           {/* Cards */}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            <div className='border border-gray-200 rounded-[8px] p-6 flex items-center gap-4'>
+            <div className='border-2 border-[#F5F5F5] shadow-[0_4px_20px_rgb(0,0,0,0.08)] rounded-[8px] p-6 flex items-center gap-4'>
               <svg
                 width='20'
                 height='20'
@@ -145,7 +145,7 @@ const BusinessImpact = () => {
                 Reduced reporting cycle from monthly → real-time
               </p>
             </div>
-            <div className='border border-gray-200 rounded-[8px] p-6 flex items-center gap-4'>
+            <div className='border-2 border-[#F5F5F5] shadow-[0_4px_20px_rgb(0,0,0,0.08)] rounded-[8px] p-6 flex items-center gap-4'>
               <svg
                 width='20'
                 height='20'
@@ -164,7 +164,7 @@ const BusinessImpact = () => {
                 Improved menu optimization and promotional planning
               </p>
             </div>
-            <div className='border border-gray-200 rounded-[8px] p-6 flex items-center gap-4'>
+            <div className='border-2 border-[#F5F5F5] shadow-[0_4px_20px_rgb(0,0,0,0.08)] rounded-[8px] p-6 flex items-center gap-4'>
               <svg
                 width='20'
                 height='20'
@@ -183,7 +183,7 @@ const BusinessImpact = () => {
                 Increased customer engagement with targeted offers
               </p>
             </div>
-            <div className='border border-gray-200 rounded-[8px] p-6 flex items-center gap-4'>
+            <div className='border-2 border-[#F5F5F5] shadow-[0_4px_20px_rgb(0,0,0,0.08)] rounded-[8px] p-6 flex items-center gap-4'>
               <svg
                 width='20'
                 height='20'

@@ -28,12 +28,11 @@ const ChallengesSection = () => {
         </div>
 
         {/* CONTENT */}
+        {/* TITLE */}
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-center'>
+          Business Challenges
+        </h2>
         <div className='relative z-10 max-w-4xl'>
-          {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#FF2E2E]'>
-            Business Challenges
-          </h2>
-
           {/* CHALLENGE LIST */}
           <div className='mt-10 space-y-5'>
             {challenges.map((item, index) => (
@@ -44,14 +43,14 @@ const ChallengesSection = () => {
                   items-center
                   gap-4
                   rounded-[14px]
-                  border
-                  border-[#FF5C5C]
+                  border-2
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   md:px-6
                   py-4
                   md:py-5
-                  shadow-[0px_4px_12px_rgba(0,0,0,0.03)]
+                  shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                 '
               >
                 {/* DOT */}

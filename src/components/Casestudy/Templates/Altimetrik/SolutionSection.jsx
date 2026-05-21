@@ -75,7 +75,7 @@ const SolutionSection = () => {
 
       <div className='relative mx-auto max-w-7xl px-4 md:px-6'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#4B53F1]'>
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[3px] text-center'>
           <span className='mr-3'>03</span>— Solution
         </h2>
 
@@ -94,16 +94,15 @@ const SolutionSection = () => {
                 relative
                 rounded-[18px]
                 border-2
-                border-[#4B53F1]
+                border-[#F5F5F5]
                 bg-white
                 px-7
                 py-7
+                shadow-[0px_8px_24px_rgba(0,0,0,0.08)]
               '
             >
               {/* NUMBER */}
-              <span className='absolute right-5 top-5 text-[12px] font-medium text-[#4B53F1]'>
-                {item.id}
-              </span>
+              <span className='absolute right-5 top-5 text-[12px] font-medium'>{item.id}</span>
 
               {/* HEADER */}
               <div className='flex items-center gap-5'>
@@ -117,9 +116,7 @@ const SolutionSection = () => {
                     items-center
                     justify-center
                     rounded-[12px]
-                    border
-                    border-[#4B53F1]
-                    bg-[#F7F8FF]
+                    bg-blue-100
                   '
                 >
                   <Image
@@ -132,7 +129,7 @@ const SolutionSection = () => {
                 </div>
 
                 {/* TITLE */}
-                <h3 className='text-[16px] md:text-[20px] leading-[1.35] font-semibold tracking-[-0.5px] text-[#4B53F1]'>
+                <h3 className='text-[16px] md:text-[20px] leading-[1.35] font-semibold tracking-[-0.5px] text-[#0F1729]/80'>
                   {item.title}
                 </h3>
               </div>

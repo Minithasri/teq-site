@@ -63,7 +63,7 @@ export default function TechnologyStack() {
           {tech.map((item, index) => (
             <div
               key={index}
-              className='rounded-[14px] border border-white/50 shadow-[0_10px_30px_rgba(0,0,0,0.015)] p-6 md:p-[32px] relative overflow-hidden bg-white'
+              className='rounded-[14px] border-2 border-[#f5f5f5] shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-6 md:p-[32px] relative overflow-hidden bg-white'
               style={{
                 backgroundImage:
                   'radial-gradient(circle at top right, rgba(224,242,254,0.4) 0%, rgba(255,255,255,1) 60%)',
@@ -71,7 +71,7 @@ export default function TechnologyStack() {
             >
               <div className='flex items-start gap-4 relative z-10'>
                 {/* Vibrant Accent Blue Icon Square */}
-                <div className='w-[44px] h-[44px] rounded-[10px] bg-[#0284c7] flex items-center justify-center shrink-0 shadow-[0_4px_12px_rgba(2,132,199,0.15)] select-none pointer-events-none'>
+                <div className='w-[44px] h-[44px] rounded-[10px] bg-[#0846AA]/60 flex items-center justify-center shrink-0 shadow-[0_4px_12px_rgba(2,132,199,0.2)] select-none pointer-events-none'>
                   <img
                     src={item.icon}
                     alt=''

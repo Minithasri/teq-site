@@ -62,7 +62,7 @@ const Technology = () => {
       <div className='max-w-6xl mx-auto px-4 md:px-6'>
         {/* HEADING */}
         <div className='text-center'>
-          <p className='text-[#2F63FF] text-[32px] md:text-[48px] font-semibold tracking-[2px] uppercase'>
+          <p className='text-[32px] md:text-[48px] font-semibold tracking-[2px]'>
             Technology Stack
           </p>
 
@@ -78,8 +78,8 @@ const Technology = () => {
               key={index}
               className='
                 bg-white
-                border
-                border-[#E7EAF3]
+                border-2
+                border-[#F5F5F5]
                 rounded-[18px]
                 h-[150px] md:h-[170px]
                 px-4 md:px-6
@@ -90,10 +90,7 @@ const Technology = () => {
                 items-center
                 justify-center
                 text-center
-                transition-all
-                duration-300
-                hover:shadow-lg
-                hover:-translate-y-1
+                shadow-[0px_8px_22px_rgba(0,0,0,0.08)]
               '
             >
               {/* LOGO */}

@@ -53,10 +53,10 @@ const SolutionSection = () => {
       {/* CONTENT */}
       <div className='relative z-10 mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
         {/* TOP CONTENT */}
-        <div className='max-w-7xl'>
+        <div className='max-w-7xl text-center'>
           {/* LABEL */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[1px] text-[#2F2BEA]'>
-            OUR SOLUTION
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[1px]'>
+            Our Solution
           </h2>
 
           {/* DESCRIPTION */}
@@ -80,8 +80,8 @@ const SolutionSection = () => {
         {/* CAPABILITIES */}
         <div className='mt-16'>
           {/* HEADING */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[1px] text-[#2F2BEA]'>
-            KEY CAPABILITIES DELIVERED
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[1px] text-center'>
+            Key Capabilities Delivered
           </h2>
 
           {/* FIRST ROW */}
@@ -93,17 +93,17 @@ const SolutionSection = () => {
                   min-h-[240px]
                   rounded-[18px]
                   border-2
-                  border-[#361D98]
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   md:px-6
                   py-5
                   md:py-6
-                  shadow-[0px_6px_18px_rgba(0,0,0,0.1)]
+                  shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                 '
               >
                 {/* HEADER */}
-                <div className='flex items-start gap-4'>
+                <div className='flex items-center gap-4'>
                   {/* ICON */}
                   <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-[10px] bg-[#EEF0FF]'>
                     <Image
@@ -116,7 +116,7 @@ const SolutionSection = () => {
                   </div>
 
                   {/* TITLE */}
-                  <h3 className='text-sm md:text-lg leading-[1.4] font-semibold text-[#2F2BEA]'>
+                  <h3 className='text-sm md:text-lg leading-[1.4] font-semibold text-[#0F1729]/80'>
                     {item.title}
                   </h3>
                 </div>
@@ -140,17 +140,16 @@ const SolutionSection = () => {
                   min-h-[210px]
                   rounded-[18px]
                   border-2
-                  border-[#361D98]
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   md:px-6
                   py-5
                   md:py-6
-                  shadow-[#000000_0px_8px_rgba(0,0,0,0.06)]
-                '
+                  shadow-[0px_4px_12px_rgba(0,0,0,0.08)]'
               >
                 {/* HEADER */}
-                <div className='flex items-start gap-4'>
+                <div className='flex items-center gap-4'>
                   {/* ICON */}
                   <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-[10px] bg-[#EEF0FF]'>
                     <Image
@@ -163,7 +162,7 @@ const SolutionSection = () => {
                   </div>
 
                   {/* TITLE */}
-                  <h3 className='text-sm md:text-lg leading-[1.4] font-semibold text-[#2F2BEA]'>
+                  <h3 className='text-sm md:text-lg leading-[1.4] font-semibold text-[#0F1729]/80'>
                     {item.title}
                   </h3>
                 </div>

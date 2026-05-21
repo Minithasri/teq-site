@@ -41,7 +41,7 @@ export default function HeroSection() {
         {/* Main Highlight Heading */}
         <h1
           className='
-            text-[#E6FF1F]
+            text-white
             font-extrabold
             text-[32px]
             md:text-[42px]

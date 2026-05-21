@@ -67,10 +67,10 @@ const MenuChallengeSolutionSection = () => {
         <div className='relative z-10 mx-auto max-w-7xl px-4 md:px-6'>
           <div className='flex flex-col gap-10'>
             {/* LEFT CONTENT */}
-            <div className='max-w-7xl'>
+            <div className='max-w-7xl text-center'>
               {/* LABEL */}
-              <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#FF2323]'>
-                THE CHALLENGE
+              <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
+                The Challenge
               </h2>
 
               {/* LIST */}
@@ -98,8 +98,8 @@ const MenuChallengeSolutionSection = () => {
 
               {/* SOLUTION HEADING */}
               <div className='mt-14'>
-                <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#1B24F4]'>
-                  OUR SOLUTION
+                <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
+                  Our Solution
                 </h2>
 
                 <p className='mt-7 text-[13px] md:text-[19px] leading-[1.8] text-[#7C8696]'>
@@ -148,20 +148,20 @@ const MenuChallengeSolutionSection = () => {
                   key={index}
                   className='
                   rounded-[18px]
-                  border-2
-                  border-[#2639F5]
                   bg-white
+                  border-2
+                  border-[#F5F5F5]
                   px-5
                   md:px-6
                   py-5
                   md:py-6
-                  shadow-[0px_8px_22px_rgba(0,0,0,0.06)]
+                  shadow-[0px_8px_22px_rgba(0,0,0,0.08)]
                 '
                 >
                   {/* HEADER */}
-                  <div className='flex items-start gap-4'>
+                  <div className='flex items-center gap-4'>
                     {/* ICON */}
-                    <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[12px] bg-gradient-to-br from-[#31C9E9] to-[#26C1B7]'>
+                    <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[12px] bg-[#0846AA]/60'>
                       <Image
                         src={item.icon}
                         alt={item.title}
@@ -172,7 +172,7 @@ const MenuChallengeSolutionSection = () => {
                     </div>
 
                     {/* TITLE */}
-                    <h3 className='text-[14px] md:text-[20px] leading-[1.4] font-semibold tracking-[-0.5px] text-[#1C2AE3]'>
+                    <h3 className='text-[14px] md:text-[20px] leading-[1.4] font-semibold tracking-[-0.5px] text-[#0F1729]/80'>
                       {item.title}
                     </h3>
                   </div>

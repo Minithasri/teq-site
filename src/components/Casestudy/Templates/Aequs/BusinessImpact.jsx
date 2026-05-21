@@ -39,11 +39,9 @@ const BusinessImpact = () => {
     <section className='py-20 bg-white overflow-hidden'>
       <div className='max-w-9xl mx-auto px-6 md:px-16 lg:px-24'>
         {/* Section Header */}
-        <div className='mb-16'>
-          <h2 className='text-4xl font-bold mb-6' style={{ color: '#45DE54' }}>
-            Business Impact
-          </h2>
-          <p className='text-lg max-w-4xl' style={{ color: '#7B899D' }}>
+        <div className='mb-16 text-center'>
+          <h2 className='text-4xl font-bold mb-6'>Business Impact</h2>
+          <p className='text-lg' style={{ color: '#7B899D' }}>
             Measurable outcomes that demonstrate the power of intelligent digital transformation.
           </p>
         </div>
@@ -54,23 +52,14 @@ const BusinessImpact = () => {
             {impacts.map((item, index) => (
               <div
                 key={index}
-                className='bg-white p-8 rounded-[24px] border-2 flex flex-col space-y-5 transition-all duration-300 hover:shadow-lg'
-                style={{ borderColor: '#45DE54' }}
+                className='bg-white p-8 rounded-[24px] border-2 border-[#F5F5F5] flex flex-col space-y-5 transition-all duration-300 shadow-[0px_4px_12px_rgba(0,0,0,0.08)]'
               >
                 {/* Header Row: Icon + Stat */}
                 <div className='flex items-center gap-6'>
-                  <div
-                    className='w-12 h-12 rounded-xl border-2 flex items-center justify-center flex-shrink-0'
-                    style={{
-                      borderColor: '#45DE54',
-                      backgroundColor: '#A9DCB333',
-                    }}
-                  >
+                  <div className='w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-[#E6F9E8]'>
                     <img src={item.icon} alt={item.stat} className='w-7 h-7' />
                   </div>
-                  <h3 className='text-3xl font-black' style={{ color: '#45DE54' }}>
-                    {item.stat}
-                  </h3>
+                  <h3 className='text-3xl font-black text-[#0F1729]/80'>{item.stat}</h3>
                 </div>
 
                 {/* Content */}

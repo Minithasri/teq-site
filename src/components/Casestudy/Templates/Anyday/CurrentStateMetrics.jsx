@@ -13,8 +13,8 @@ const CurrentStateMetrics = () => {
           {/* Left side Cards */}
           <div className='w-full grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10'>
             {/* Card 1 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-sm border border-[#DADFE780] flex items-start gap-4'>
-              <div className='w-12 h-12 rounded-[8px] bg-[#FA5A5A] flex items-center justify-center flex-shrink-0 shadow-sm'>
+            <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4'>
+              <div className='w-12 h-12 rounded-[8px] bg-[#0846AA]/60 flex items-center justify-center flex-shrink-0 shadow-sm'>
                 <svg
                   width='24'
                   height='24'
@@ -38,8 +38,8 @@ const CurrentStateMetrics = () => {
             </div>
 
             {/* Card 2 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-sm border border-[#DADFE780] flex items-start gap-4'>
-              <div className='w-12 h-12 rounded-[8px] bg-[#FA5A5A] flex items-center justify-center flex-shrink-0 shadow-sm'>
+            <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4'>
+              <div className='w-12 h-12 rounded-[8px] bg-[#0846AA]/60 flex items-center justify-center flex-shrink-0 shadow-sm'>
                 <svg
                   width='24'
                   height='24'
@@ -61,8 +61,8 @@ const CurrentStateMetrics = () => {
             </div>
 
             {/* Card 3 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-sm border border-[#DADFE780] flex items-start gap-4'>
-              <div className='w-12 h-12 rounded-[8px] bg-[#FA5A5A] flex items-center justify-center flex-shrink-0 shadow-sm'>
+            <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4'>
+              <div className='w-12 h-12 rounded-[8px] bg-[#0846AA]/60 flex items-center justify-center flex-shrink-0 shadow-sm'>
                 <svg
                   width='24'
                   height='24'
@@ -86,8 +86,8 @@ const CurrentStateMetrics = () => {
             </div>
 
             {/* Card 4 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-sm border border-[#DADFE780] flex items-start gap-4'>
-              <div className='w-12 h-12 rounded-[8px] bg-[#FA5A5A] flex items-center justify-center flex-shrink-0 shadow-sm'>
+            <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4'>
+              <div className='w-12 h-12 rounded-[8px] bg-[#0846AA]/60 flex items-center justify-center flex-shrink-0 shadow-sm'>
                 <svg
                   width='24'
                   height='24'

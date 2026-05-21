@@ -21,9 +21,9 @@ export default function HeroSection() {
       <div className='relative z-10 px-4 text-center md:px-8'>
         {/* Heading */}
         <h1 className='font-poppins text-[42px] font-semibold leading-[56px] tracking-normal text-black md:text-[64px] md:leading-[80px]'>
-          Product Authentication & <span className='text-[#2F2CFF]'>Theft</span>
+          Product Authentication & Theft
           <br className='hidden md:block' />
-          <span className='text-[#2F2CFF]'>Monitoring</span> Analytics Platform
+          Monitoring Analytics Platform
         </h1>
 
         {/* Description */}

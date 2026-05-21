@@ -38,9 +38,9 @@ const challenges = [
 const ChallengesSection = () => {
   return (
     <section className='relative w-full overflow-visible bg-white'>
-      <div className='relative mx-auto max-w-7xl px-4 md:px-6'>
+      <div className='relative mx-auto max-w-7xl px-4 md:px-6 text-center'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#F03632]'>
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[3px]'>
           <span className='mr-3'>02</span>— Challenges
         </h2>
 
@@ -87,20 +87,19 @@ const ChallengesSection = () => {
                     relative
                     rounded-[14px]
                     border-2
-                    border-[#FF3A35]
+                    border-[#F5F5F5]
                     bg-white
                     px-6
                     py-6
+                    shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                   '
                 >
                   {/* NUMBER */}
-                  <span className='absolute right-5 top-5 text-[12px] font-medium text-[#FF3A35]'>
-                    {item.id}
-                  </span>
+                  <span className='absolute right-5 top-5 text-[12px] font-medium'>{item.id}</span>
 
                   <div className='flex items-center gap-4'>
                     {/* ICON */}
-                    <div className='flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-[10px] bg-[#F03632]'>
+                    <div className='flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-[10px] bg-[#0846AA]/60'>
                       <Image
                         src={item.icon}
                         alt='Warning'
@@ -111,7 +110,7 @@ const ChallengesSection = () => {
                     </div>
 
                     {/* TITLE */}
-                    <h3 className='text-[16px] md:text-[20px] leading-[1.4] font-semibold tracking-[-0.5px] text-[#F03632]'>
+                    <h3 className='text-[16px] md:text-[20px] leading-[1.4] font-semibold tracking-[-0.5px] text-[#0F1729]/80'>
                       {item.title}
                     </h3>
                   </div>

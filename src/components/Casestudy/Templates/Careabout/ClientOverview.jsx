@@ -14,16 +14,11 @@ const challenges = [
 export default function ClientOverview() {
   return (
     <section className='w-full' style={{ backgroundColor: '#F3F4F7' }}>
-      <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
+      <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 text-center'>
         {/* ── CLIENT OVERVIEW ─────────────────────────────────────────── */}
         {/* Extra top padding to clear the overlapping care1 image from HeroSection */}
         <div className='pt-20 md:pt-24 lg:pt-20 pb-8 md:pb-10'>
-          <h2
-            className='text-2xl md:text-3xl font-bold mb-5'
-            style={{ color: 'rgba(21, 28, 40, 0.88)' }}
-          >
-            Client Overview
-          </h2>
+          <h2 className='text-2xl md:text-3xl font-bold mb-5'>Client Overview</h2>
           <p
             className='text-sm sm:text-[15px] md:text-[17px] leading-relaxed max-w-7xl'
             style={{ color: '#6A7181' }}
@@ -52,20 +47,14 @@ export default function ClientOverview() {
           </div>
 
           {/* Title */}
-          <h2 className='text-2xl md:text-3xl font-bold mb-6 md:mb-8' style={{ color: '#EF4444' }}>
-            Business Challenges
-          </h2>
+          <h2 className='text-2xl md:text-3xl font-bold mb-6 md:mb-8'>Business Challenges</h2>
 
           {/* Numbered challenge cards — leave right space for the image */}
           <div className='flex flex-col gap-3 lg:pr-[260px] xl:pr-[300px]'>
             {challenges.map((item, i) => (
               <div
                 key={i}
-                className='flex items-center gap-4 px-4 py-3 rounded-xl'
-                style={{
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid #E2E4E9',
-                }}
+                className='flex items-center gap-4 px-4 py-3 rounded-xl border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
               >
                 {/* Number badge */}
                 <span

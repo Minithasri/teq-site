@@ -15,14 +15,13 @@ const TechnologyValueSection = () => {
   return (
     <section className='w-full overflow-hidden bg-[#FCFBF8]'>
       {/* ================= TECHNOLOGY STACK ================= */}
-      <div className='mx-auto max-w-7xl px-4 md:px-6 pt-12 md:pt-16 pb-10'>
+      <div className='mx-auto max-w-7xl px-4 md:px-6 pt-12 md:pt-16 pb-10 text-center'>
+        {/* TITLE */}
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[3px]'>
+          <span className='mr-3'>05</span>— Technology
+        </h2>
         {/* HEADER */}
-        <div className='flex flex-col gap-8 md:flex-row md:items-center'>
-          {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#3659F3]'>
-            <span className='mr-3'>05</span>— Technology
-          </h2>
-
+        <div className='mt-6 flex flex-col gap-8 md:flex-row md:items-center md:justify-center'>
           {/* ICONS */}
           <div className='flex flex-wrap items-center gap-5 md:gap-7'>
             <Image
@@ -76,7 +75,7 @@ const TechnologyValueSection = () => {
         </div>
 
         {/* TAGS */}
-        <div className='mt-10 flex flex-wrap gap-4'>
+        <div className='mt-10 flex flex-wrap justify-center gap-4'>
           {technologies.map((item, index) => (
             <div
               key={index}
@@ -85,12 +84,12 @@ const TechnologyValueSection = () => {
                 items-center
                 gap-3
                 rounded-[8px]
-                border
-                border-[#D9DEE8]
+                border-2
+                border-[#F5F5F5]
                 bg-white
                 px-5
                 py-3
-                shadow-[0px_2px_6px_rgba(0,0,0,0.03)]
+                shadow-[0px_2px_12px_rgba(0,0,0,0.08)]
               '
             >
               {/* DOT */}
@@ -105,9 +104,9 @@ const TechnologyValueSection = () => {
 
       {/* ================= VALUE DELIVERED ================= */}
       <div className='bg-[#1654AC] py-14 md:py-20'>
-        <div className='mx-auto max-w-7xl px-4 md:px-6'>
+        <div className='mx-auto max-w-7xl px-4 md:px-6 text-center'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#FF8E8A]'>
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[3px]'>
             <span className='mr-3'>06</span>— Value Delivered
           </h2>
 

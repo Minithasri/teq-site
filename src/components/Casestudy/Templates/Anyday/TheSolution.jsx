@@ -13,8 +13,8 @@ const TheSolution = () => {
           {/* Top 3 Cards */}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>
             {/* Card 1 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-sm flex items-start gap-4'>
-              <div className='w-12 h-12 rounded-[8px] bg-[#2DD4BF] flex items-center justify-center flex-shrink-0 shadow-sm'>
+            <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4'>
+              <div className='w-12 h-12 rounded-[8px] bg-[#2DD4BF]/60 flex items-center justify-center flex-shrink-0 shadow-sm'>
                 <svg
                   width='24'
                   height='24'
@@ -38,8 +38,8 @@ const TheSolution = () => {
               </div>
             </div>
             {/* Card 2 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-sm flex items-start gap-4'>
-              <div className='w-12 h-12 rounded-[8px] bg-[#2DD4BF] flex items-center justify-center flex-shrink-0 shadow-sm'>
+            <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4'>
+              <div className='w-12 h-12 rounded-[8px] bg-[#2DD4BF]/60 flex items-center justify-center flex-shrink-0 shadow-sm'>
                 <svg
                   width='24'
                   height='24'
@@ -66,8 +66,8 @@ const TheSolution = () => {
               </div>
             </div>
             {/* Card 3 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-sm flex items-start gap-4'>
-              <div className='w-12 h-12 rounded-[8px] bg-[#2DD4BF] flex items-center justify-center flex-shrink-0 shadow-sm'>
+            <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4'>
+              <div className='w-12 h-12 rounded-[8px] bg-[#2DD4BF]/60 flex items-center justify-center flex-shrink-0 shadow-sm'>
                 <svg
                   width='24'
                   height='24'
@@ -96,8 +96,8 @@ const TheSolution = () => {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>
             <div className='md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6'>
               {/* Card 4 */}
-              <div className='bg-white rounded-[12px] p-6 shadow-sm flex items-start gap-4'>
-                <div className='w-12 h-12 rounded-[8px] bg-[#2DD4BF] flex items-center justify-center flex-shrink-0 shadow-sm'>
+              <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4'>
+                <div className='w-12 h-12 rounded-[8px] bg-[#2DD4BF]/60 flex items-center justify-center flex-shrink-0 shadow-sm'>
                   <svg
                     width='24'
                     height='24'
@@ -121,8 +121,8 @@ const TheSolution = () => {
                 </div>
               </div>
               {/* Card 5 */}
-              <div className='bg-white rounded-[12px] p-6 shadow-sm flex items-start gap-4'>
-                <div className='w-12 h-12 rounded-[8px] bg-[#2DD4BF] flex items-center justify-center flex-shrink-0 shadow-sm'>
+              <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.08)] flex items-start gap-4'>
+                <div className='w-12 h-12 rounded-[8px] bg-[#2DD4BF]/60 flex items-center justify-center flex-shrink-0 shadow-sm'>
                   <svg
                     width='24'
                     height='24'
@@ -152,7 +152,7 @@ const TheSolution = () => {
           </div>
 
           {/* Highlights Box with Image */}
-          <div className='bg-white rounded-[16px] p-10 shadow-sm relative mt-36'>
+          <div className='bg-white rounded-[16px] border-2 border-[#F5F5F5] p-10 shadow-[0_4px_20px_rgb(0,0,0,0.08)] relative mt-36'>
             <div className='w-full md:w-[55%]'>
               <h3 className='text-[22px] font-bold text-[#0F1729] mb-6'>Solution Highlights</h3>
               <ul className='space-y-4'>

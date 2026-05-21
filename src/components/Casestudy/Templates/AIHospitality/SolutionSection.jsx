@@ -57,7 +57,7 @@ export default function SolutionSection() {
           {topCards.map((card, index) => (
             <div
               key={index}
-              className='bg-white rounded-[10px] shadow-md px-[24px] py-[28px] min-h-[170px]'
+              className='bg-white rounded-[10px] border-2 border-[#f5f5f5] shadow-[0_4px_24px_rgba(0,0,0,0.08)] px-[24px] py-[28px] min-h-[170px]'
             >
               <div className='flex items-center gap-[14px] mb-[16px]'>
                 <div className='w-[44px] h-[44px] rounded-[8px] bg-[#e2e8f0] flex items-center justify-center shrink-0'>

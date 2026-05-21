@@ -32,11 +32,9 @@ export default function Solutions() {
         </div>
 
         {/* Text content — padded right to clear the image */}
-        <div className=''>
+        <div className='text-center'>
           {/* Our Solution */}
-          <h2 className='text-2xl md:text-3xl font-bold mb-4' style={{ color: '#4250EE' }}>
-            Our Solution
-          </h2>
+          <h2 className='text-2xl md:text-3xl font-bold mb-4'>Our Solution</h2>
           <p
             className='text-sm sm:text-[15px] md:text-[17px] leading-relaxed mb-8'
             style={{ color: '#6A7181' }}
@@ -47,9 +45,7 @@ export default function Solutions() {
           </p>
 
           {/* Key Implementation Details */}
-          <h3 className='text-lg md:text-2xl font-bold mb-5' style={{ color: '#4250EE' }}>
-            Key Implementation Details
-          </h3>
+          <h3 className='text-lg md:text-2xl font-bold mb-5'>Key Implementation Details</h3>
 
           <ul className='space-y-3'>
             {implementationPoints.map((point, i) => (

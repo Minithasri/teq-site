@@ -23,10 +23,7 @@ export default function HeroSection() {
             Cloud-Based Data Platform &amp; ETL
           </span>
           {/* Line 2 — yellow */}
-          <span
-            className='block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[52px]'
-            style={{ color: '#D1C21E', lineHeight: '1.15' }}
-          >
+          <span className='block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[52px] text-white'>
             Modernization for Payer Systems
           </span>
         </h1>

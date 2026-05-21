@@ -44,7 +44,7 @@ export default function ArchitectureOverview() {
           {steps.map((item, index) => (
             <div key={index} className='flex flex-col items-center w-full'>
               {/* Architecture Core Block Card */}
-              <div className='bg-white w-full rounded-[12px] border border-purple-200/40 shadow-[0_4px_25px_rgba(168,85,247,0.02)] px-6 py-5 md:px-[32px] md:py-[24px] text-left flex flex-col justify-center'>
+              <div className='bg-white w-full rounded-[12px] border border-purple-200/40 shadow-[0_4px_25px_rgba(168,85,247,0.02)] px-6 py-5 md:px-[32px] md:py-[24px] text-left flex flex-col justify-center items-center'>
                 <h3 className='text-[15.5px] md:text-[17px] font-extrabold text-[#071326] tracking-tight leading-snug'>
                   {item.title}
                 </h3>

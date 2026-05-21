@@ -13,7 +13,7 @@ const HeroSection = () => {
           <h1 className='text-[34px] md:text-[72px] leading-[1.02] font-semibold tracking-[-2px] text-white'>
             Sales, Inventory & Customer
             <br />
-            <span className='text-[#D9E63D]'>Analytics Platform</span>
+            Analytics Platform
           </h1>
 
           {/* DESCRIPTION */}
@@ -52,10 +52,10 @@ const HeroSection = () => {
       </div>
 
       {/* ================= CONTEXT SECTION ================= */}
-      <div className='mx-auto max-w-7xl px-4 md:px-6 pt-10 md:pt-14 pb-10 md:pb-14'>
+      <div className='mx-auto max-w-7xl px-4 md:px-6 pt-10 md:pt-14 pb-10 md:pb-14 text-center'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#E0572D]'>
-          <span className='mr-3'>01</span>— CONTEXT
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[3px]'>
+          <span className='mr-3'>01</span>— Context
         </h2>
 
         {/* CONTENT */}

@@ -73,11 +73,11 @@ export default function SolutionSection() {
             {solutions.map((item, index) => (
               <div
                 key={index}
-                className='bg-white rounded-[14px] border border-white/60 shadow-[0_8px_30px_rgba(0,0,0,0.015)] p-6 md:p-[32px] flex flex-col justify-start min-h-[190px] backdrop-blur-sm bg-white/95 transition-transform duration-200 hover:-translate-y-1'
+                className='bg-white rounded-[14px] border-2 border-[#f5f5f5] shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-6 md:p-[32px] flex flex-col justify-start min-h-[190px] backdrop-blur-sm bg-white/95 transition-transform duration-200 hover:-translate-y-1'
               >
                 {/* FIXED ROW HEADER GROUP: Icon and Heading inline side-by-side */}
                 <div className='flex items-center gap-4 w-full justify-start mb-4 text-left'>
-                  <div className='w-[44px] h-[44px] rounded-[10px] bg-[#0284c7] flex items-center justify-center shrink-0 shadow-[0_4px_12px_rgba(2,132,199,0.2)] select-none pointer-events-none'>
+                  <div className='w-[44px] h-[44px] rounded-[10px] bg-[#0846AA]/60 flex items-center justify-center shrink-0 shadow-[0_4px_12px_rgba(2,132,199,0.2)] select-none pointer-events-none'>
                     <img
                       src={item.icon}
                       alt=''

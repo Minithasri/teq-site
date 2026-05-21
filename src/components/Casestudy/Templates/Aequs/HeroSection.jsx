@@ -30,11 +30,7 @@ const HeroSection = () => {
             <span
               style={{ color: '#F3F5F7', fontSize: 'clamp(32px, 5vw, 56px)', display: 'block' }}
             >
-              Transforming Parts Testing with
-            </span>
-            <span
-              style={{ color: '#BCD728', fontSize: 'clamp(32px, 5vw, 64px)', display: 'block' }}
-            >
+              Transforming Parts Testing with <br />
               End-to-End Digital Automation
             </span>
           </h1>

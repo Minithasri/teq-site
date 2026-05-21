@@ -58,7 +58,7 @@ export default function KeyCapabilities() {
     <section className='w-full bg-white'>
       <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-10 md:py-14'>
         {/* Title */}
-        <h2 className='text-2xl md:text-3xl font-bold mb-8 md:mb-10' style={{ color: '#4250EE' }}>
+        <h2 className='text-2xl md:text-3xl font-bold mb-8 md:mb-10 text-center'>
           Capabilities Delivered
         </h2>
 
@@ -67,18 +67,11 @@ export default function KeyCapabilities() {
           {capabilities.map((cap, i) => (
             <div
               key={i}
-              className='rounded-2xl p-5 flex flex-col gap-3'
-              style={{
-                border: '2px solid #4250EE',
-                backgroundColor: '#FFFFFF',
-              }}
+              className='rounded-2xl p-5 flex flex-col gap-3 border border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
             >
               {/* Icon + title row */}
               <div className='flex items-center gap-3'>
-                <div
-                  className='flex-shrink-0 w-9 h-9 rounded-[10px] flex items-center justify-center'
-                  style={{ backgroundColor: '#1AA2E61A' }}
-                >
+                <div className='flex-shrink-0 w-9 h-9 rounded-[10px] flex items-center justify-center bg-[#0846AA]/5'>
                   <Image
                     src={cap.icon}
                     alt={cap.title}
@@ -87,10 +80,7 @@ export default function KeyCapabilities() {
                     className='object-contain'
                   />
                 </div>
-                <h3
-                  className='text-sm md:text-[16px] font-bold leading-snug'
-                  style={{ color: '#4250EE' }}
-                >
+                <h3 className='text-sm md:text-[16px] font-bold leading-snug text-[#0F1729]/80'>
                   {cap.title}
                 </h3>
               </div>

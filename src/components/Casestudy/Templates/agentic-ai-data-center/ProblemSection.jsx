@@ -33,7 +33,7 @@ export default function ProblemSection() {
           {problems.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-[10px] border border-white/40 shadow-[0_4px_20px_rgba(0,0,0,0.015)] px-6 py-4 md:py-[18px] flex items-center gap-4'
+              className='bg-white rounded-[10px] border-2 border-[#f5f5f5] shadow-[0_4px_24px_rgba(0,0,0,0.08)] px-6 py-4 md:py-[18px] flex items-center gap-4'
             >
               {/* Proportioned Circle Step Number Indicator */}
               <div className='w-[26px] h-[26px] rounded-full bg-[#ef4444] text-white flex items-center justify-center text-[12.5px] font-extrabold shrink-0 select-none pointer-events-none shadow-sm'>

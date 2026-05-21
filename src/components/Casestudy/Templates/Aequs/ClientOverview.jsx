@@ -9,7 +9,7 @@ const ClientOverview = () => {
       <div className='max-w-9xl mx-auto px-6 md:px-16 lg:px-24'>
         <div className='flex flex-col lg:flex-row items-start justify-between'>
           {/* Left Content */}
-          <div className='w-full space-y-6'>
+          <div className='w-full space-y-6 text-center'>
             <h2 className='text-3xl md:text-4xl font-bold' style={{ color: '#131720' }}>
               Client Overview
             </h2>

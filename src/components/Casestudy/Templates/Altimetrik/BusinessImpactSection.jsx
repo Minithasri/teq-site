@@ -1,40 +1,34 @@
 'use client';
 
-import Image from 'next/image';
-
 const impacts = [
   {
     value: '~50%',
     title: 'Decision-Making Efficiency',
     description: 'Faster, evidence-based decisions across merchandising and operations.',
-    highlighted: true,
   },
   {
     value: '20–30%',
     title: 'Inventory Optimization',
     description: 'Reduced stockouts and overstock through demand-aligned planning.',
-    highlighted: false,
   },
   {
     value: '~60%',
     title: 'Reduction in Manual Reporting',
     description: 'Reclaimed analyst hours redirected to higher-value insight work.',
-    highlighted: false,
   },
   {
     value: '↑',
     title: 'Data Accuracy & Reliability',
     description: 'Enterprise-grade governance and validation across the data estate.',
-    highlighted: true,
   },
 ];
 
 const BusinessImpactSection = () => {
   return (
     <section className='w-full overflow-hidden'>
-      <div className='mx-auto max-w-7xl px-4 md:px-6'>
+      <div className='mx-auto max-w-7xl px-4 md:px-6 text-center'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#18B81E]'>
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[3px]'>
           <span className='mr-3'>04</span>— Business Impact
         </h2>
 
@@ -47,29 +41,19 @@ const BusinessImpactSection = () => {
                 relative
                 rounded-[6px]
                 border-2
-                border-[#15B615]
+                border-[#F5F5F5]
                 px-8
                 md:px-10
                 py-8
                 md:py-10
                 transition-all
                 duration-300
-                ${item.highlighted ? 'bg-[#9FFBAA]' : 'bg-white'}
+                shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
+                bg-white
               `}
             >
-              {/* TOP RIGHT ICON */}
-              <div className='absolute right-8 top-8'>
-                <Image
-                  src='/images/Templates/altimetrik/up-arrow.svg'
-                  alt={item.title}
-                  width={22}
-                  height={22}
-                  className='h-[22px] w-[22px] object-contain'
-                />
-              </div>
-
               {/* VALUE */}
-              <h3 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-2px] text-[#18B81E]'>
+              <h3 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-2px] text-[#0F1729]/80'>
                 {item.value}
               </h3>
 
@@ -85,7 +69,7 @@ const BusinessImpactSection = () => {
                   text-[14px]
                   md:text-[18px]
                   leading-[1.9]
-                  ${item.highlighted ? 'text-[#16981B]' : 'text-[#6B7280]'}
+                  text-[#6B7280]
                 `}
               >
                 {item.description}

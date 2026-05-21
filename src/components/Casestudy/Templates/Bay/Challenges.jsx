@@ -68,9 +68,7 @@ export default function ChallengeSolutionSection() {
       <div className='relative z-10 mx-auto max-w-7xl px-4 py-16'>
         {/* Challenge */}
         <div className='text-center'>
-          <p className='font-poppins text-[28px] font-semibold uppercase text-[#FF4747] md:text-[40px]'>
-            THE CHALLENGE
-          </p>
+          <p className='font-poppins text-[28px] font-semibold md:text-[40px]'>The Challenge</p>
 
           <h2 className='mt-4 font-poppins text-[34px] font-semibold text-[#111827] md:text-[56px]'>
             Key operational & analytical gaps
@@ -88,10 +86,10 @@ export default function ChallengeSolutionSection() {
             return (
               <div
                 key={index}
-                className='rounded-[24px] border border-[#FF6B6B] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1'
+                className='rounded-[24px] border border-[#F5F5F5] bg-white p-7 shadow-[0px_8px_22px_rgba(0,0,0,0.08)] transition-all duration-300'
               >
-                <div className='flex items-start gap-4'>
-                  <div className='flex h-12 md:h-14 w-12 md:w-14 items-center justify-center rounded-xl md:rounded-2xl border-2 border-[#FF4B4B]'>
+                <div className='flex items-center gap-4'>
+                  <div className='flex h-12 md:h-14 w-12 md:w-14 items-center justify-center rounded-xl md:rounded-2xl bg-[#FF4B4B]/10'>
                     <Image
                       src={card.icon}
                       alt={card.title}
@@ -102,7 +100,7 @@ export default function ChallengeSolutionSection() {
                   </div>
 
                   <div>
-                    <h3 className='font-poppins text-[18px] md:text-[22px] font-semibold leading-[28px] md:leading-[34px] text-[#FF4B4B]'>
+                    <h3 className='font-poppins text-[18px] md:text-[22px] font-semibold leading-[28px] md:leading-[34px] text-[#0F1729]/80'>
                       {card.title}
                     </h3>
                   </div>
@@ -129,8 +127,8 @@ export default function ChallengeSolutionSection() {
 
         {/* SOLUTION */}
         <div className='mt-28 text-center'>
-          <p className='font-poppins text-[28px] font-semibold uppercase tracking-[0.08em] text-[#2F63FF] md:text-[40px]'>
-            THE SOLUTION
+          <p className='font-poppins text-[28px] font-semibold tracking-[0.08em] md:text-[40px]'>
+            The Solution
           </p>
 
           <h2 className='font-poppins text-3xl font-semibold leading-[48px] md:text-5xl md:leading-[72px]'>
@@ -161,10 +159,10 @@ export default function ChallengeSolutionSection() {
               return (
                 <div
                   key={index}
-                  className='rounded-[24px] border border-[#4C6FFF] bg-white p-7 shadow-md'
+                  className='rounded-[24px] border border-[#F5F5F5] bg-white p-7 shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
                 >
-                  <div className='flex items-start gap-4'>
-                    <div className='flex h-12 md:h-14 w-12 md:w-14 items-center justify-center rounded-xl md:rounded-2xl border border-[#4C6FFF] text-[#2F63FF]'>
+                  <div className='flex items-center gap-4'>
+                    <div className='flex h-12 md:h-14 w-12 md:w-14 items-center justify-center rounded-xl md:rounded-2xl bg-[#4C6FFF]/10'>
                       <Image
                         src={card.icon}
                         alt={card.title}
@@ -174,7 +172,7 @@ export default function ChallengeSolutionSection() {
                       />
                     </div>
 
-                    <h3 className='font-poppins text-[18px] md:text-[20px] font-semibold text-[#2F63FF]'>
+                    <h3 className='font-poppins text-[18px] md:text-[20px] font-semibold text-[#0F1729]/80'>
                       {card.title}
                     </h3>
                   </div>
@@ -189,8 +187,8 @@ export default function ChallengeSolutionSection() {
 
           {/* FLOW SECTION */}
           <div className=' mt-10 rounded-[36px] border border-white/30 bg-white/80 p-8 shadow-xl md:p-12'>
-            <h3 className='text-center font-poppins text-[28px] font-semibold uppercase tracking-[0.05em] text-[#2F63FF] md:text-[38px]'>
-              DATA INTEGRATION FLOW
+            <h3 className='text-center font-poppins text-[28px] font-semibold tracking-[0.05em] md:text-[38px]'>
+              Data Integration Flow
             </h3>
 
             <div className='grid gap-10 md:grid-cols-[1fr_auto_1fr] md:items-center'>

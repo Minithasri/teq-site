@@ -11,7 +11,7 @@ export default function HeroSection() {
         <h1 className='text-[32px] md:text-[58px] font-extrabold text-white leading-tight'>
           Enhancing Guest Experience with
           <br />
-          <span className='text-[#eaff22]'>AI-Powered Hospitality</span>
+          AI-Powered Hospitality
         </h1>
 
         <p className='text-white/90 text-[15px] md:text-[15px] mt-5 max-w-[560px] leading-relaxed'>

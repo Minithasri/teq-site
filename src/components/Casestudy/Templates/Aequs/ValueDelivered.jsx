@@ -15,7 +15,7 @@ const ValueDelivered = () => {
     <section className='py-20' style={{ backgroundColor: '#F3F5F7' }}>
       <div className='max-w-9xl mx-auto px-6 md:px-16 lg:px-24'>
         {/* Section Header */}
-        <div className='mb-12'>
+        <div className='mb-12 text-center'>
           <h2 className='text-4xl font-bold mb-6' style={{ color: '#131720' }}>
             Value Delivered
           </h2>
@@ -31,12 +31,7 @@ const ValueDelivered = () => {
           {values.map((item, index) => (
             <div
               key={index}
-              className='px-4 py-6 rounded-[20px] border flex items-center justify-center text-center transition-all duration-300 hover:shadow-md'
-              style={{
-                borderColor: '#0B5BCB33',
-                backgroundColor: '#0B5BCB1A',
-                color: '#0B5BCB',
-              }}
+              className='px-4 py-6 rounded-[20px] border-2 border-[#F5F5F5] flex items-center justify-center text-center transition-all duration-300 shadow-[0px_2px_24px_rgba(0,0,0,0.08)]'
             >
               <span className='text-[14px] md:text-[16px] font-bold leading-tight uppercase tracking-wide'>
                 {item}
