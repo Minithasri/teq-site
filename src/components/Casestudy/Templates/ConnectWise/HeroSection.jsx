@@ -25,7 +25,7 @@ const HeroSection = () => {
             <h1 className='text-[26px] md:text-[62px] leading-[1.08] font-semibold tracking-[-2px] text-white'>
               End-to-End Enterprise Integration
               <br />
-              <span className='text-[#E9F04A]'>and Data Synchronization Platform</span>
+              and Data Synchronization Platform
             </h1>
 
             {/* DESCRIPTION */}
@@ -38,10 +38,10 @@ const HeroSection = () => {
       </div>
 
       {/* ================= CLIENT OVERVIEW ================= */}
-      <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
+      <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14 text-center'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#17489B]'>
-          CLIENT OVERVIEW
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
+          Client Overview
         </h2>
 
         {/* DESCRIPTION */}

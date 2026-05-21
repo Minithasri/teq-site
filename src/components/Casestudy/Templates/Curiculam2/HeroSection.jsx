@@ -21,7 +21,7 @@ export default function HeroSection() {
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           <span style={{ color: '#EDF3F7' }}>Data Platform Modernization & </span>
-          <span style={{ color: '#009D9E' }}>Domo to Snowflake Migration</span>
+          <span style={{ color: '#EDF3F7' }}>Domo to Snowflake Migration</span>
           <span style={{ color: '#EDF3F7' }}> for a Leading Organization</span>
         </h1>
 

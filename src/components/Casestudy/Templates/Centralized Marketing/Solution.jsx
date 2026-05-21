@@ -73,7 +73,7 @@ export default function SolutionSection() {
 
                 {/* Card - Width is fixed on LG but auto on Mobile/Tab for responsiveness */}
                 <div
-                  className='ml-4 md:ml-6 bg-white border-[1px] border-[#0565EE] rounded-[10px] px-4 md:px-6 flex flex-col justify-center shadow-sm flex-grow'
+                  className='ml-4 md:ml-6 bg-white border-2 border-[#F5F5F5] rounded-[10px] px-4 md:px-6 flex flex-col justify-center shadow-[0px_8px_22px_rgba(0,0,0,0.08)] flex-grow'
                   style={{
                     width: '100%',
                     maxWidth: '630px',

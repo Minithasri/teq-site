@@ -39,9 +39,8 @@ export default function Solutions() {
       <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 relative z-10'>
         {/* ── SECTION HEADER ── */}
         <h2
-          className='text-2xl md:text-3xl font-bold uppercase mb-10 tracking-wide'
+          className='text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide'
           style={{
-            color: '#4B52E4',
             fontFamily: 'Poppins, sans-serif',
           }}
         >
@@ -53,10 +52,7 @@ export default function Solutions() {
           {solutionCards.map((card, i) => (
             <div
               key={i}
-              className='p-6 sm:p-8 rounded-[24px] bg-white shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-md hover:scale-[1.01]'
-              style={{
-                border: '2px solid #4B52E4',
-              }}
+              className='p-6 sm:p-8 rounded-[24px] bg-white shadow-sm flex flex-col justify-between border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
             >
               <div>
                 {/* Header Row: Number Squircle Box + Title */}
@@ -65,8 +61,6 @@ export default function Solutions() {
                   <div
                     className='w-10 h-10 rounded-xl flex items-center justify-center border font-bold text-sm bg-white'
                     style={{
-                      borderColor: '#4B52E4',
-                      color: '#4B52E4',
                       fontFamily: 'Poppins, sans-serif',
                     }}
                   >
@@ -75,9 +69,8 @@ export default function Solutions() {
 
                   {/* Title */}
                   <h4
-                    className='text-base sm:text-[17px] font-bold'
+                    className='text-base sm:text-[17px] font-bold text-[#0F1729]/80'
                     style={{
-                      color: '#4B52E4',
                       fontFamily: 'Poppins, sans-serif',
                     }}
                   >

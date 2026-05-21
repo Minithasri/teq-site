@@ -24,7 +24,7 @@ const HeroSection = () => {
             style={{ color: '#E8EAEE', fontSize: '56px' }}
           >
             AI-Enabled Safety Analytics & <br />
-            <span style={{ color: '#CFE222' }}>Custom Dashboard</span> Solution
+            <span style={{ color: '#E8EAEE' }}>Custom Dashboard</span> Solution
           </h1>
 
           <p className='w-full leading-relaxed' style={{ color: '#E8EAEEB2', fontSize: '18px' }}>

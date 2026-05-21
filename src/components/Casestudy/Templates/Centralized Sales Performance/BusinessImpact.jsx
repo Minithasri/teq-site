@@ -36,8 +36,6 @@ export default function BusinessImpact() {
             fontSize: '32px',
             lineHeight: '20px',
             letterSpacing: '1.4px',
-            textTransform: 'uppercase',
-            color: '#4DCD07',
             marginBottom: '28px',
           }}
         >
@@ -63,16 +61,16 @@ export default function BusinessImpact() {
           {outcomes.map((item, index) => (
             <div
               key={index}
-              className='bg-[#EDFBF0] border-[1px] border-[#16C203] rounded-[15px] p-8 flex flex-col items-start text-left transition-all hover:shadow-md'
+              className='bg-white border-2 border-[#F5F5F5] rounded-[15px] p-8 flex flex-col items-start text-left transition-all shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
               style={{ minHeight: '260px' }}
             >
               {/* Icon Container (Rounded Square) */}
-              <div className='bg-[#16C203] text-white p-3 rounded-[12px] mb-6 flex items-center justify-center'>
+              <div className='bg-[#0846AA]/60 text-white p-3 rounded-[12px] mb-6 flex items-center justify-center'>
                 {item.icon}
               </div>
 
               {/* Title */}
-              <h4 className='text-[#16C203] font-bold text-[22px] md:text-[24px] leading-tight mb-4'>
+              <h4 className='text-[#0F1729]/80 font-bold text-[22px] md:text-[24px] leading-tight mb-4'>
                 {item.title}
               </h4>
 

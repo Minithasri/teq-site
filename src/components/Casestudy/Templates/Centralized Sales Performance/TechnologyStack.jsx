@@ -83,7 +83,7 @@ export default function TechnologyStack() {
               height: '154px',
               borderRadius: '12px',
               borderTop: '1px solid #E0E5EB',
-              boxShadow: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)',
+              boxShadow: '0px 1px 2px 0px rgba(0, 0, 0, 0.08)',
             }}
           >
             {/* Top Text label */}

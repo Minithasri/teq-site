@@ -64,10 +64,10 @@ const SolutionImpactSection = () => {
     <section className='w-full overflow-hidden'>
       <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
         {/* ================= OUR SOLUTION ================= */}
-        <div>
+        <div className='text-center'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#214CD9]'>
-            OUR SOLUTION
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
+            Our Solution
           </h2>
 
           {/* DESCRIPTION */}
@@ -133,19 +133,19 @@ const SolutionImpactSection = () => {
                 className='
                   rounded-[20px]
                   border-2
-                  border-[#2B58E6]
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   md:px-6
                   py-5
                   md:py-6
-                  shadow-[0px_8px_18px_rgba(0,0,0,0.06)]
+                  shadow-[0px_8px_12px_rgba(0,0,0,0.08)]
                 '
               >
                 {/* HEADER */}
                 <div className='flex items-center gap-4'>
                   {/* ICON */}
-                  <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[14px] border border-[#2B58E6] bg-[#F5F8FF]'>
+                  <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[14px] bg-[#F5F8FF]'>
                     <Image
                       src={item.icon}
                       alt={item.title}
@@ -156,7 +156,7 @@ const SolutionImpactSection = () => {
                   </div>
 
                   {/* TITLE */}
-                  <h3 className='text-[15px] md:text-[20px] leading-[1.45] font-semibold tracking-[-0.5px] text-[#214CD9]'>
+                  <h3 className='text-[15px] md:text-[20px] leading-[1.45] font-semibold tracking-[-0.5px] text-[#0F1729]/80'>
                     {item.title}
                   </h3>
                 </div>
@@ -183,9 +183,9 @@ const SolutionImpactSection = () => {
         </div>
 
         {/* ================= BUSINESS IMPACT ================= */}
-        <div className='mt-16'>
+        <div className='mt-16 text-center'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#11C82E]'>
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
             Business Impact
           </h2>
 
@@ -208,15 +208,16 @@ const SolutionImpactSection = () => {
                   justify-center
                   rounded-[20px]
                   border-2
-                  border-[#14C82F]
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   py-6
                   text-center
+                  shadow-[0px_8px_12px_rgba(0,0,0,0.08)]
                 '
               >
                 {/* VALUE */}
-                <h3 className='whitespace-pre-line text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#14C82F]'>
+                <h3 className='whitespace-pre-line text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#0F1729]/80'>
                   {item.value}
                 </h3>
 

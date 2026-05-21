@@ -40,13 +40,11 @@ export default function SolutionSection() {
             fontSize: '32px',
             fontWeight: 600,
             letterSpacing: '1.4px',
-            color: '#002471',
-            textTransform: 'uppercase',
             transform: 'rotate(-0.32deg)',
             marginBottom: '10px',
           }}
         >
-          THE SOLUTION
+          The Solution
         </h2>
 
         <h3
@@ -133,14 +131,11 @@ export default function SolutionSection() {
 
               {/* Card Container - Adjusted width and spacing to match requirement */}
               <div
-                className='ml-8 bg-white/95 backdrop-blur-sm flex-grow lg:flex-grow-0'
+                className='ml-8 bg-white/95 backdrop-blur-sm flex-grow lg:flex-grow-0 border border-[#E5E7EB] shadow-[0px_8px_22px_rgba(0,0,0,0.08)] rounded-[15px]'
                 style={{
                   width: '100%',
                   maxWidth: '850px',
                   minHeight: '124.75px',
-                  borderRadius: '12px',
-                  border: '1.5px solid #0935E4',
-                  boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.05)',
                   padding: '16px 28px',
                   display: 'flex',
                   flexDirection: 'column',

@@ -19,8 +19,6 @@ export default function DataArchitecture() {
               fontSize: '32px',
               fontWeight: 600,
               letterSpacing: '1.4px',
-              color: '#002471',
-              textTransform: 'uppercase',
               transform: 'rotate(-0.32deg)', // Exactly -0.32 deg from requirements
             }}
           >
@@ -35,7 +33,7 @@ export default function DataArchitecture() {
             {sources.map((source, idx) => (
               <div
                 key={idx}
-                className='w-[220px] h-[120px] border-2 border-[#1E88E5] rounded-xl flex flex-col items-center justify-center bg-white'
+                className='w-[220px] h-[120px] border-2 border-[#F5F5F5] rounded-xl flex flex-col items-center justify-center bg-white shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
               >
                 <h3 className='text-[22px] font-bold text-[#1D2530]'>{source.title}</h3>
                 <p className='text-[14px] font-semibold text-[#1D2530] mt-1'>{source.sub}</p>
@@ -50,7 +48,7 @@ export default function DataArchitecture() {
           </div>
 
           {/* 2. UNIFIED DATA MODEL (The Center Piece) */}
-          <div className='w-[320px] h-[160px] border-[5px] border-black rounded-xl flex flex-col items-center justify-center bg-white shadow-lg'>
+          <div className='w-[320px] h-[160px] border-2 border-[#F5F5F5] rounded-xl flex flex-col items-center justify-center bg-white shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'>
             <h3 className='text-[24px] font-bold text-[#1D2530]'>Unified Data Model</h3>
             <p className='text-[14px] font-semibold text-[#1D2530] mt-2'>Standardized KPIs</p>
           </div>
@@ -62,8 +60,8 @@ export default function DataArchitecture() {
           </div>
 
           {/* 3. DOMO DASHBOARDS (The End Goal) */}
-          <div className='w-[320px] h-[160px] border-2 border-[#2E7D32] rounded-xl flex flex-col items-center justify-center bg-[#E8F5E9]'>
-            <h3 className='text-[24px] font-bold text-[#2E7D32]'>Domo Dashboards</h3>
+          <div className='w-[320px] h-[160px] border-2 border-[#F5F5F5] rounded-xl flex flex-col items-center justify-center shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'>
+            <h3 className='text-[24px] font-bold'>Domo Dashboards</h3>
             <p className='text-[14px] font-semibold text-[#1D2530] mt-2'>Real-time & Drill-down</p>
           </div>
         </div>

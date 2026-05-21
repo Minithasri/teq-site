@@ -5,12 +5,11 @@ import React from 'react';
 export default function ClientOverview() {
   return (
     <section className='w-full py-6 md:py-8 lg:py-10' style={{ backgroundColor: '#FCFBF8' }}>
-      <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
+      <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 text-center'>
         {/* Section Header */}
         <h2
-          className='text-2xl md:text-3xl font-bold uppercase mb-6 tracking-wide'
+          className='text-2xl md:text-3xl font-bold mb-6 tracking-wide '
           style={{
-            color: '#009D9E',
             fontFamily: 'Poppins, sans-serif',
           }}
         >

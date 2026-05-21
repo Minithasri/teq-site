@@ -16,9 +16,9 @@ const Challenges = () => {
     <section className='py-20 px-6 md:px-16 lg:px-24 bg-[#F0F1F5]'>
       <div className='max-w-7xl mx-auto'>
         {/* Client Overview Section */}
-        <div className='mb-12'>
+        <div className='mb-12 text-center'>
           <h2 className='font-bold mb-6' style={{ color: '#000000', fontSize: '32px' }}>
-            CLIENT OVERVIEW
+            Client Overview
           </h2>
           <p className='leading-relaxed max-w-7xl' style={{ color: '#151C28CC', fontSize: '18px' }}>
             A leading safety management platform provider supporting industries such as construction
@@ -30,12 +30,9 @@ const Challenges = () => {
         </div>
 
         {/* The Challenge Section */}
-        <div className='mb-10'>
-          <h2
-            className='font-bold mb-6 uppercase tracking-wider'
-            style={{ color: '#F23520', fontSize: '32px' }}
-          >
-            THE CHALLENGE
+        <div className='mb-10 text-center'>
+          <h2 className='font-bold mb-6 tracking-wider' style={{ fontSize: '32px' }}>
+            The Challenge
           </h2>
           <p className='mb-2' style={{ color: '#6A7181', fontSize: '18px' }}>
             The client faced critical barriers preventing their safety data from driving meaningful
@@ -48,14 +45,11 @@ const Challenges = () => {
           {challenges.map((challenge, index) => (
             <div
               key={index}
-              className='flex items-center gap-6 py-4 px-6 bg-white rounded-xl border-2 transition-all hover:shadow-md'
-              style={{ borderColor: '#F23520', minHeight: '80px' }}
+              className='flex items-center gap-6 py-4 px-6 bg-white rounded-xl border-2 border-[#F5F5F5] shadow-[0px_4px_12px_rgba(0,0,0,0.05)]'
+              style={{ minHeight: '80px' }}
             >
               <div className='flex-shrink-0'>
-                <div
-                  className='w-12 h-12 rounded-2xl border-2 flex items-center justify-center overflow-hidden'
-                  style={{ borderColor: '#F23520' }}
-                >
+                <div className='w-12 h-12 rounded-2xl bg-red-100 flex items-center justify-center overflow-hidden'>
                   <Image
                     src='/images/Templates/customdashboard/cdsvg1.svg'
                     alt='Challenge Icon'

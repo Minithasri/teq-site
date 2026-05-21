@@ -29,9 +29,8 @@ export default function BusinessImpact() {
           {/* Left: Business Impact cards list */}
           <div>
             <h2
-              className='text-2xl md:text-3xl font-bold uppercase mb-8 tracking-wide'
+              className='text-2xl md:text-3xl font-bold text-center mb-8 tracking-wide'
               style={{
-                color: '#15B615',
                 fontFamily: 'Poppins, sans-serif',
               }}
             >
@@ -42,10 +41,7 @@ export default function BusinessImpact() {
               {impactPoints.map((point, i) => (
                 <div
                   key={i}
-                  className='flex items-center gap-4 p-5 rounded-2xl bg-white shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.005]'
-                  style={{
-                    border: '2px solid #15B615',
-                  }}
+                  className='flex items-center gap-4 p-5 rounded-2xl bg-white border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
                 >
                   {/* Tick Icon (casvg13.svg) */}
                   <div className='relative w-6 h-6 flex-shrink-0 flex items-center justify-center'>
@@ -80,25 +76,23 @@ export default function BusinessImpact() {
 
         {/* ── BOTTOM BLOCK: TECHNOLOGY STACK header + horizontal logos & horizontal pills ── */}
         <div className='mt-10 md:mt-12 pt-8 border-t border-black/5'>
+          {/* Header */}
+          <h2
+            className='text-2xl md:text-3xl font-bold text-center tracking-wide'
+            style={{
+              fontFamily: 'Poppins, sans-serif',
+            }}
+          >
+            Technology Stack
+          </h2>
           {/* Header & Horizontal Logos Row */}
-          <div className='flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-10 w-full mb-8'>
-            {/* Header */}
-            <h2
-              className='text-2xl md:text-3xl font-bold uppercase tracking-wide'
-              style={{
-                color: '#535F6C',
-                fontFamily: 'Poppins, sans-serif',
-              }}
-            >
-              Technology Stack
-            </h2>
-
+          <div className='mt-6 flex flex-col md:flex-row md:items-center justify-center gap-6 md:gap-10 w-full mb-8'>
             {/* Horizontal Logos List */}
             <div className='flex items-center gap-4 sm:gap-6 flex-wrap'>
               {techLogos.map((logo, i) => (
                 <div
                   key={i}
-                  className='relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center hover:scale-105 transition-transform duration-300'
+                  className='relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center'
                 >
                   <Image
                     src={logo}
@@ -113,15 +107,12 @@ export default function BusinessImpact() {
           </div>
 
           {/* Horizontal Pills list */}
-          <div className='flex items-center gap-4 flex-wrap mt-6 justify-start'>
+          <div className='flex items-center gap-4 flex-wrap mt-6 justify-center'>
             {techPills.map((pill, i) => (
               <div
                 key={i}
-                className='flex items-center justify-center py-2.5 px-6 rounded-full border font-medium text-xs sm:text-sm transition-all duration-300 hover:scale-[1.02] cursor-default'
+                className='flex items-center justify-center py-2.5 px-6 rounded-full border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)] font-medium text-xs sm:text-sm cursor-default'
                 style={{
-                  borderColor: '#0976C8',
-                  color: '#0976C8',
-                  backgroundColor: '#FFFFFF96',
                   fontFamily: 'Poppins, sans-serif',
                 }}
               >

@@ -24,7 +24,7 @@ const TechnologyStack = () => {
     <section className='py-12 px-6 md:px-16 lg:px-24 bg-[#F0F1F5]'>
       <div className='max-w-7xl mx-auto'>
         {/* Technology Stack Heading */}
-        <h2 className='font-bold mb-12' style={{ color: '#151C28', fontSize: '36px' }}>
+        <h2 className='font-bold mb-12 text-center' style={{ fontSize: '36px' }}>
           Technology Stack
         </h2>
 
@@ -33,10 +33,10 @@ const TechnologyStack = () => {
           {/* Analytics Platform */}
           <div>
             <h3
-              className='font-bold mb-6 uppercase tracking-wider'
+              className='font-bold mb-6 tracking-wider'
               style={{ color: '#6A7181', fontSize: '18px' }}
             >
-              ANALYTICS PLATFORM
+              Analytics Platform
             </h3>
             <div className='flex flex-wrap gap-3 items-center'>
               {stack.analytics.map((item, i) => (
@@ -78,10 +78,10 @@ const TechnologyStack = () => {
           {/* Custom Development */}
           <div>
             <h3
-              className='font-bold mb-6 uppercase tracking-wider'
+              className='font-bold mb-6 tracking-wider'
               style={{ color: '#6A7181', fontSize: '18px' }}
             >
-              CUSTOM DEVELOPMENT
+              Custom Development
             </h3>
             <div className='flex flex-wrap gap-3 items-center'>
               {stack.development.map((item, i) => (
@@ -111,10 +111,10 @@ const TechnologyStack = () => {
           {/* Data & Integration */}
           <div>
             <h3
-              className='font-bold mb-6 uppercase tracking-wider'
+              className='font-bold mb-6 tracking-wider'
               style={{ color: '#6A7181', fontSize: '18px' }}
             >
-              DATA & INTEGRATION
+              Data & Integration
             </h3>
             <div className='flex flex-wrap gap-3 items-center'>
               {stack.integration.map((item, i) => (
@@ -148,7 +148,7 @@ const TechnologyStack = () => {
         </div>
 
         {/* Value Delivered Section */}
-        <div className=''>
+        <div className='text-center'>
           <h2 className='font-bold mb-10' style={{ color: '#151C28', fontSize: '36px' }}>
             Value Delivered
           </h2>

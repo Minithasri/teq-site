@@ -44,7 +44,6 @@ export default function BusinessChallenges() {
           <span
             className='text-4xl sm:text-5xl md:text-6xl font-extrabold leading-none select-none mt-1'
             style={{
-              color: '#2813B5',
               fontFamily: 'Poppins, sans-serif',
             }}
           >
@@ -54,7 +53,6 @@ export default function BusinessChallenges() {
           <h2
             className='text-2xl sm:text-3xl md:text-[36px] font-bold leading-tight w-full mt-4 max-w-none'
             style={{
-              color: '#2813B5',
               fontFamily: 'Poppins, sans-serif',
             }}
           >
@@ -76,9 +74,8 @@ export default function BusinessChallenges() {
 
         {/* ── BUSINESS CHALLENGES SUB-HEADER ── */}
         <h3
-          className='text-xl md:text-2xl font-bold uppercase mb-8 tracking-wide'
+          className='text-xl md:text-2xl font-bold mb-8 tracking-wide text-center'
           style={{
-            color: '#E73030',
             fontFamily: 'Poppins, sans-serif',
           }}
         >
@@ -90,10 +87,7 @@ export default function BusinessChallenges() {
           {challengeCards.map((card, i) => (
             <div
               key={i}
-              className='p-6 sm:p-8 rounded-[24px] bg-[#FFFFFF] shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-md hover:scale-[1.01]'
-              style={{
-                border: '2px solid #E73030',
-              }}
+              className='p-6 sm:p-8 rounded-[24px] bg-[#FFFFFF] flex flex-col justify-between border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
             >
               <div>
                 {/* Header Row: Squircled Number Box + Title */}
@@ -102,8 +96,6 @@ export default function BusinessChallenges() {
                   <div
                     className='w-10 h-10 rounded-xl flex items-center justify-center border font-bold text-sm bg-[#FFFFFF]'
                     style={{
-                      borderColor: '#E73030',
-                      color: '#E73030',
                       fontFamily: 'Poppins, sans-serif',
                     }}
                   >
@@ -112,9 +104,8 @@ export default function BusinessChallenges() {
 
                   {/* Card Title */}
                   <h4
-                    className='text-base sm:text-[17px] font-bold'
+                    className='text-base sm:text-[17px] font-bold text-[#0F1729]/80'
                     style={{
-                      color: '#E73030',
                       fontFamily: 'Poppins, sans-serif',
                     }}
                   >

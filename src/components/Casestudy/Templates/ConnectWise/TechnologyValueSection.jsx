@@ -10,13 +10,12 @@ const TechnologyValueSection = () => {
       <div className='mx-auto max-w-7xl px-4 md:px-6'>
         {/* ================= TECHNOLOGY STACK ================= */}
         <div>
+          {/* TITLE */}
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-center'>
+            Technology Stack
+          </h2>
           {/* TOP ROW */}
-          <div className='flex flex-col gap-6 md:flex-row md:items-start'>
-            {/* TITLE */}
-            <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#1D4A97]'>
-              Technology Stack
-            </h2>
-
+          <div className='mt-6 flex flex-col gap-6 md:flex-row md:items-center md:justify-center'>
             {/* LOGOS */}
             <div className='flex flex-wrap items-center gap-5 md:gap-6'>
               <Image
@@ -62,14 +61,14 @@ const TechnologyValueSection = () => {
           </div>
 
           {/* TAGS */}
-          <div className='mt-8 flex flex-wrap items-center gap-4 md:gap-5'>
+          <div className='mt-8 flex flex-wrap items-center justify-center gap-4 md:gap-5'>
             {techTags.map((item, index) => (
               <div
                 key={index}
                 className='
                   rounded-full
                   border-2
-                  border-[#2A67C7]
+                  border-[#F5F5F5]
                   bg-white
                   px-7
                   md:px-10
@@ -77,7 +76,8 @@ const TechnologyValueSection = () => {
                   text-[13px]
                   md:text-[15px]
                   font-medium
-                  text-[#2A67C7]
+                  text-[#0F1729]/80
+                  shadow-[0px_8px_22px_rgba(0,0,0,0.08)]
                 '
               >
                 {item}
@@ -87,10 +87,10 @@ const TechnologyValueSection = () => {
         </div>
 
         {/* ================= VALUE DELIVERED ================= */}
-        <div className='mt-14'>
+        <div className='mt-14 text-center'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[1px] uppercase text-[#183F87]'>
-            VALUE DELIVERED
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[1px] uppercase'>
+            Value Delivered
           </h2>
 
           {/* DESCRIPTION */}

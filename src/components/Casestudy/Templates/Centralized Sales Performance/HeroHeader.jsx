@@ -45,8 +45,7 @@ export default function SalesPerformanceHero() {
             marginBottom: '20px',
           }}
         >
-          Centralizing <span style={{ color: '#FFFF00' }}>Sales Performance</span> with Real-Time
-          Dashboards
+          Centralizing Sales Performance with Real-Time Dashboards
         </h1>
 
         {/* Description Subtext */}

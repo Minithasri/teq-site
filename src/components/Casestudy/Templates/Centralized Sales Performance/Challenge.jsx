@@ -57,7 +57,6 @@ export default function BusinessContextAndChallenge() {
               fontWeight: 600,
               letterSpacing: '1.4px',
               color: '#333333',
-              textTransform: 'uppercase',
               marginBottom: '28px',
             }}
           >
@@ -102,7 +101,6 @@ export default function BusinessContextAndChallenge() {
                     width: '72px',
                     height: '57px',
                     backgroundColor: '#BFCAFB',
-                    border: '1px solid #5951FD',
                     borderRadius: '10px',
                     display: 'flex',
                     alignItems: 'center',
@@ -136,8 +134,6 @@ export default function BusinessContextAndChallenge() {
               fontSize: '32px',
               fontWeight: 600,
               letterSpacing: '1.4px',
-              color: '#FF6B6B',
-              textTransform: 'uppercase',
               marginBottom: '16px',
               transform: 'rotate(-0.32deg)',
             }}
@@ -198,25 +194,18 @@ export default function BusinessContextAndChallenge() {
         {challenges.map((item, index) => (
           <div
             key={index}
-            className='bg-white flex flex-col p-8'
+            className='bg-white flex flex-col p-8 border border-[#F5F5F5] rounded-[15px] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
             style={{
               maxWidth: '540px',
               height: '190px',
-              borderRadius: '12px',
-              border: '1px solid #F90606',
             }}
           >
             <div className='flex items-center gap-4 mb-5'>
-              <div className='flex-shrink-0 w-11 h-11 rounded-xl bg-[#FDE0E0] flex items-center justify-center border border-[#FD5151]'>
+              <div className='flex-shrink-0 w-11 h-11 rounded-xl bg-[#FDE0E0] flex items-center justify-center'>
                 {item.icon}
               </div>
 
-              <h4
-                className='font-bold text-[#FC3030]'
-                style={{ fontSize: '24px', lineHeight: '1.2' }}
-              >
-                {item.title}
-              </h4>
+              <h4 className='font-bold text-[#0F1729]/80'>{item.title}</h4>
             </div>
 
             <p

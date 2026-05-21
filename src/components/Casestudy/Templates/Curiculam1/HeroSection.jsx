@@ -21,7 +21,7 @@ export default function HeroSection() {
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           <span style={{ color: '#EDF3F7' }}>Digital Transformation & </span>
-          <span style={{ color: '#009D9E' }}>Data Platform Modernization</span>
+          <span style={{ color: '#EDF3F7' }}>Data Platform Modernization</span>
           <span style={{ color: '#EDF3F7' }}> for a Leading Education Organization</span>
         </h1>
 

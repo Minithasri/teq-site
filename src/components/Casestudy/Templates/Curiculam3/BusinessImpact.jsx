@@ -28,9 +28,8 @@ export default function BusinessImpact() {
           <div>
             {/* Header */}
             <h2
-              className='text-2xl md:text-3xl font-bold uppercase mb-8 tracking-wide'
+              className='text-2xl md:text-3xl font-bold text-center mb-8 tracking-wide'
               style={{
-                color: '#15B615',
                 fontFamily: 'Poppins, sans-serif',
               }}
             >
@@ -42,10 +41,7 @@ export default function BusinessImpact() {
               {impactPoints.map((point, i) => (
                 <div
                   key={i}
-                  className='flex items-center gap-4 p-5 rounded-2xl bg-white shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.005]'
-                  style={{
-                    border: '2px solid #15B615',
-                  }}
+                  className='flex items-center gap-4 p-5 rounded-2xl bg-white border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
                 >
                   {/* Tick Icon (casvg13.svg) */}
                   <div className='relative w-6 h-6 flex-shrink-0 flex items-center justify-center'>
@@ -78,9 +74,8 @@ export default function BusinessImpact() {
           <div>
             {/* Header */}
             <h2
-              className='text-2xl md:text-3xl font-bold uppercase mb-8 tracking-wide'
+              className='text-2xl md:text-3xl font-bold text-center mb-8 tracking-wide'
               style={{
-                color: '#535F6C',
                 fontFamily: 'Poppins, sans-serif',
               }}
             >
@@ -94,10 +89,8 @@ export default function BusinessImpact() {
                 {techPills.map((pill, i) => (
                   <div
                     key={i}
-                    className='flex items-center justify-center py-2.5 px-5 rounded-full border bg-white font-medium text-xs sm:text-sm transition-all duration-300 hover:scale-[1.02] cursor-default'
+                    className='flex items-center justify-center py-2.5 px-5 rounded-full border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)] bg-white font-medium text-xs sm:text-sm cursor-default'
                     style={{
-                      borderColor: '#0976C8',
-                      color: '#0976C8',
                       fontFamily: 'Poppins, sans-serif',
                     }}
                   >

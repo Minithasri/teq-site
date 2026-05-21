@@ -21,7 +21,7 @@ export default function HeroSection() {
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           <span style={{ color: '#EDF3F7' }}>Reporting Modernization & </span>
-          <span style={{ color: '#009D9E' }}>Tableau to Power BI Migration</span>
+          <span style={{ color: '#EDF3F7' }}>Tableau to Power BI Migration</span>
           <span style={{ color: '#EDF3F7' }}> for a Leading Organization</span>
         </h1>
 

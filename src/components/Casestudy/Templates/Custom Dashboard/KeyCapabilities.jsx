@@ -40,7 +40,7 @@ const KeyCapabilities = () => {
     <section className='py-16 px-6 md:px-16 lg:px-24 bg-[#F0F1F5]'>
       <div className='max-w-7xl mx-auto'>
         {/* Section Heading */}
-        <h2 className='font-bold mb-16' style={{ color: '#151C28', fontSize: '36px' }}>
+        <h2 className='font-bold mb-16 text-center' style={{ fontSize: '36px' }}>
           Key Capabilities Delivered
         </h2>
 
@@ -49,7 +49,7 @@ const KeyCapabilities = () => {
           {capabilities.map((item, index) => (
             <div
               key={index}
-              className='bg-white p-8 rounded-xl shadow-sm border-l-4 flex items-start gap-8 transition-transform hover:-translate-y-1'
+              className='bg-white p-8 rounded-xl border-l-4 flex items-start gap-8 shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
               style={{ borderLeftColor: '#2EC2B3' }}
             >
               {/* Icon Container */}

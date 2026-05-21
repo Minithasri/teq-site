@@ -34,14 +34,13 @@ const challengeCards = [
 export default function BusinessChallenges() {
   return (
     <section className='relative w-full py-6 md:py-8 lg:py-10 overflow-visible bg-[#FCFBF8]'>
-      <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 relative z-10'>
+      <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 relative z-10 '>
         {/* ── SECTION HEADER: 01 SSIS to Snowflake... ── */}
         <div className='flex items-start gap-4 md:gap-6 mb-6 max-w-5xl'>
           {/* Large Number '01' */}
           <span
             className='text-4xl sm:text-5xl md:text-6xl font-extrabold leading-none select-none mt-1'
             style={{
-              color: '#2813B5',
               fontFamily: 'Poppins, sans-serif',
             }}
           >
@@ -51,7 +50,6 @@ export default function BusinessChallenges() {
           <h2
             className='text-2xl sm:text-3xl md:text-[36px] font-bold leading-tight'
             style={{
-              color: '#2813B5',
               fontFamily: 'Poppins, sans-serif',
             }}
           >
@@ -73,9 +71,8 @@ export default function BusinessChallenges() {
 
         {/* ── BUSINESS CHALLENGES SUB-HEADER ── */}
         <h3
-          className='text-xl md:text-2xl font-bold uppercase mb-8 tracking-wide'
+          className='text-xl md:text-2xl font-bold mb-8 tracking-wide text-center'
           style={{
-            color: '#E73030',
             fontFamily: 'Poppins, sans-serif',
           }}
         >
@@ -87,10 +84,7 @@ export default function BusinessChallenges() {
           {challengeCards.map((card, i) => (
             <div
               key={i}
-              className='p-6 sm:p-8 rounded-[24px] bg-[#FFFFFF] shadow-md flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:scale-[1.01]'
-              style={{
-                border: '2px solid #E73030',
-              }}
+              className='p-6 sm:p-8 rounded-[24px] bg-[#FFFFFF] border-2 border-[#F5F5F5] shadow-[0_8px_12px_rgba(0,0,0,0.08)] flex flex-col justify-between'
             >
               <div>
                 {/* Header Row: Squircled Number Box + Title */}
@@ -99,9 +93,6 @@ export default function BusinessChallenges() {
                   <div
                     className='w-10 h-10 rounded-xl flex items-center justify-center border font-bold text-sm'
                     style={{
-                      borderColor: '#E73030',
-                      backgroundColor: '#E7303026',
-                      color: '#E73030',
                       fontFamily: 'Poppins, sans-serif',
                     }}
                   >
@@ -110,9 +101,8 @@ export default function BusinessChallenges() {
 
                   {/* Card Title */}
                   <h4
-                    className='text-base sm:text-[17px] font-bold'
+                    className='text-base sm:text-[17px] font-bold text-[#0F1729]/80'
                     style={{
-                      color: '#E73030',
                       fontFamily: 'Poppins, sans-serif',
                     }}
                   >
