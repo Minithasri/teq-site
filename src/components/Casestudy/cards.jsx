@@ -41,7 +41,7 @@ const Cards = () => {
       type: 'BI Solutions',
       industry: 'Manufacturing',
       description:
-        'How Alubee Die Casters achieved 10-15% productivity boost and 90% reduction in manual effort through connected factory automation.',
+        'How a leading die caster achieved 10-15% productivity boost and 90% reduction in manual effort through connected factory automation.',
       image: '/images/Templates/template1/casebg1.webp',
     },
     {
@@ -406,7 +406,7 @@ const Cards = () => {
       type: 'BI Solutions',
       industry: 'Banking',
       description:
-        'How GWC and Fekki built an AI-driven platform for predictive monitoring, automated response systems, and operational intelligence across data centers.',
+        'How GWC and the client built an AI-driven platform for predictive monitoring, automated response systems, and operational intelligence across data centers.',
       image: '/images/Templates/template16/bg1.png',
     },
     {
@@ -441,7 +441,7 @@ const Cards = () => {
       type: 'AI Solutions',
       industry: 'Restaurant',
       description:
-        'How Anyday transformed customer engagement and sales strategy with real-time data insights',
+        'How a hospitality brand transformed customer engagement and sales strategy with real-time data insights',
       image: '/images/Templates/anyday/img4.jpg',
     },
     {
@@ -450,7 +450,7 @@ const Cards = () => {
       type: 'AI Solutions',
       industry: 'Retail',
       description:
-        'How Style Union achieved real-time visibility and data-driven growth through comprehensive retail analytics',
+        'How a leading apparel brand achieved real-time visibility and data-driven growth through comprehensive retail analytics',
       image: '/images/Templates/style-union-1/img3.png',
     },
     {
@@ -638,7 +638,7 @@ const Cards = () => {
       type: 'AI Solutions',
       industry: 'Retail',
       description:
-        "How GWC transformed HY24's hydrogen investment management with real-time insights",
+        'How GWC transformed clean energy investment management with real-time insights for a leading clean hydrogen firm.',
       image: '/images/Templates/templatez/rtportfolio/head.png',
     },
     {
@@ -697,172 +697,221 @@ const Cards = () => {
     'Banking',
   ];
 
+  const checkCategoryMatch = (card, categoryName) => {
+    if (categoryName === 'All') return true;
+    const slug = card.slug?.toLowerCase() || '';
+    const title = card.title?.toLowerCase() || '';
+    const desc = card.description?.toLowerCase() || '';
+    const ind = card.industry?.toLowerCase() || '';
+    const cat = categoryName.toLowerCase();
+
+    if (cat === 'travel management' || cat === 'travel') {
+      return slug.includes('john-good') || slug.includes('parisar') || slug.includes('take2eton');
+    } else if (cat === 'smart mobility') {
+      return slug.includes('esr') || slug.includes('tez');
+    } else if (cat === 'safety') {
+      return (
+        slug.includes('mojo') ||
+        slug.includes('safety') ||
+        title.includes('safety') ||
+        desc.includes('safety') ||
+        slug.includes('custom-dashboard')
+      );
+    } else if (cat === 'retail') {
+      return (
+        slug.includes('lskd') ||
+        slug.includes('lskg') ||
+        slug.includes('marry') ||
+        slug.includes('style-bazaar') ||
+        slug.includes('style-union') ||
+        slug.includes('titan') ||
+        slug.includes('altimetrik') ||
+        slug.includes('sephora') ||
+        slug.includes('tig-golf') ||
+        slug.includes('kamrt') ||
+        slug.includes('kmart') ||
+        slug.includes('sales-intelligence') ||
+        slug.includes('real-time-dashboard') ||
+        slug.includes('driving-sales') ||
+        slug.includes('rtwrokforce') ||
+        slug.includes('real-time-workflow') ||
+        slug.includes('centralizing-sales') ||
+        slug.includes('boosting-food')
+      );
+    } else if (cat === 'manufacturing') {
+      return (
+        slug.includes('aequs') ||
+        slug.includes('alubee') ||
+        slug.includes('real-time-production') ||
+        slug.includes('tata') ||
+        slug.includes('toyota') ||
+        slug.includes('bissell') ||
+        slug.includes('tess') ||
+        slug.includes('yield') ||
+        slug.includes('quality') ||
+        slug.includes('predictive') ||
+        slug.includes('maintenance') ||
+        slug.includes('scrap') ||
+        slug.includes('sustainable') ||
+        slug.includes('tool-management') ||
+        title.includes('manufacturing') ||
+        ind.includes('manufacturing')
+      );
+    } else if (cat === 'logistics') {
+      return (
+        slug.includes('bissell') ||
+        slug.includes('logistics') ||
+        title.includes('logistics') ||
+        desc.includes('logistics')
+      );
+    } else if (cat === 'it services' || cat === 'it service') {
+      return slug.includes('connect-wise') || slug.includes('connectwise');
+    } else if (cat === 'idam licence') {
+      return slug.includes('gsk') || title.includes('idam') || desc.includes('idam');
+    } else if (cat === 'hospitality') {
+      return (
+        slug.includes('accor') ||
+        slug.includes('anyday') ||
+        slug.includes('any-day') ||
+        slug.includes('hospitality')
+      );
+    } else if (cat === 'healthcare' || cat === 'health care') {
+      return (
+        slug.includes('careabout') || title.includes('healthcare') || title.includes('health care')
+      );
+    } else if (cat === 'finance') {
+      return (
+        slug.includes('metro-one') ||
+        slug.includes('metroone') ||
+        slug.includes('finance-hr') ||
+        title.includes('finance')
+      );
+    } else if (cat === 'energy') {
+      return (
+        slug.includes('hy-24') ||
+        slug.includes('hy24') ||
+        slug.includes('wellstat') ||
+        slug.includes('portfolio') ||
+        title.includes('energy')
+      );
+    } else if (cat === 'education') {
+      return slug.includes('curiculam') || title.includes('education');
+    } else if (cat === 'digital marketing') {
+      return (
+        slug.includes('netrocon') ||
+        slug.includes('wpp') ||
+        slug.includes('henkel') ||
+        slug.includes('marketing') ||
+        title.includes('marketing')
+      );
+    } else if (cat === 'construction') {
+      return slug.includes('gcon') || title.includes('construction');
+    } else if (cat === 'biotech') {
+      return slug.includes('tessera') || title.includes('biotech');
+    } else if (cat === 'banking') {
+      return slug.includes('tavent') || slug.includes('banking');
+    }
+    return ind.includes(cat);
+  };
+
+  const checkDeptMatch = (card, deptName) => {
+    if (deptName === 'Departments' || deptName === 'All departments') return true;
+    const dept = deptName.toLowerCase();
+    const text = (card.title + ' ' + card.description).toLowerCase();
+    if (dept === 'hr') {
+      return (
+        text.includes('hr') ||
+        text.includes('workforce') ||
+        text.includes('employee') ||
+        text.includes('talent')
+      );
+    } else if (dept === 'marketing') {
+      return (
+        text.includes('marketing') ||
+        text.includes('campaign') ||
+        text.includes('funnel') ||
+        text.includes('guest') ||
+        text.includes('customer')
+      );
+    } else if (dept === 'sales') {
+      return (
+        text.includes('sales') ||
+        text.includes('revenue') ||
+        text.includes('pos') ||
+        text.includes('retail') ||
+        text.includes('store')
+      );
+    } else if (dept === 'operation') {
+      return (
+        text.includes('operation') ||
+        text.includes('production') ||
+        text.includes('yield') ||
+        text.includes('defect') ||
+        text.includes('logistics') ||
+        text.includes('inventory')
+      );
+    } else if (dept === 'it') {
+      return (
+        text.includes('it') ||
+        text.includes('software') ||
+        text.includes('platform') ||
+        text.includes('integration') ||
+        text.includes('cloud') ||
+        text.includes('tech') ||
+        text.includes('pipeline')
+      );
+    }
+    return true;
+  };
+
+  // Auto-reset category when activeTab changes if the selected category has no case studies in that tab
+  useEffect(() => {
+    if (activeCategory !== 'All') {
+      const categoryExists = cardsData.some(
+        card => card.type === activeTab && checkCategoryMatch(card, activeCategory)
+      );
+      if (!categoryExists) {
+        setActiveCategory('All');
+      }
+    }
+  }, [activeTab]);
+
+  // Auto-reset department when tab or category changes if the selected department has no case studies in the combination
+  useEffect(() => {
+    if (activeDepartment !== 'Departments' && activeDepartment !== 'All departments') {
+      const deptExists = cardsData.some(
+        card =>
+          card.type === activeTab &&
+          checkCategoryMatch(card, activeCategory) &&
+          checkDeptMatch(card, activeDepartment)
+      );
+      if (!deptExists) {
+        setActiveDepartment('Departments');
+      }
+    }
+  }, [activeTab, activeCategory]);
+
+  const visibleCategories = categories.filter(cat => {
+    if (cat === 'All') return true;
+    return cardsData.some(card => card.type === activeTab && checkCategoryMatch(card, cat));
+  });
+
+  const allDepts = ['Departments', 'Sales', 'HR', 'Operation', 'Marketing', 'IT'];
+  const visibleDepts = allDepts.filter(dept => {
+    if (dept === 'Departments' || dept === 'All departments') return true;
+    return cardsData.some(
+      card =>
+        card.type === activeTab &&
+        checkCategoryMatch(card, activeCategory) &&
+        checkDeptMatch(card, dept)
+    );
+  });
+
   // Filter cards based on tab, category, department and search query
   const filteredCards = cardsData.filter(card => {
     const matchesTab = card.type === activeTab;
-
-    // Advanced category mapping based on user specifications
-    let matchesCategory = false;
-    if (activeCategory === 'All') {
-      matchesCategory = true;
-    } else {
-      const slug = card.slug?.toLowerCase() || '';
-      const title = card.title?.toLowerCase() || '';
-      const desc = card.description?.toLowerCase() || '';
-      const ind = card.industry?.toLowerCase() || '';
-      const cat = activeCategory.toLowerCase();
-
-      if (cat === 'travel management') {
-        matchesCategory =
-          slug.includes('john-good') || slug.includes('parisar') || slug.includes('take2eton');
-      } else if (cat === 'smart mobility') {
-        matchesCategory = slug.includes('esr') || slug.includes('tez');
-      } else if (cat === 'safety') {
-        matchesCategory =
-          slug.includes('mojo') ||
-          slug.includes('safety') ||
-          title.includes('safety') ||
-          desc.includes('safety') ||
-          slug.includes('custom-dashboard');
-      } else if (cat === 'retail') {
-        matchesCategory =
-          slug.includes('lskd') ||
-          slug.includes('lskg') ||
-          slug.includes('marry') ||
-          slug.includes('style-bazaar') ||
-          slug.includes('style-union') ||
-          slug.includes('titan') ||
-          slug.includes('altimetrik') ||
-          slug.includes('sephora') ||
-          slug.includes('tig-golf') ||
-          slug.includes('kamrt') ||
-          slug.includes('kmart') ||
-          slug.includes('sales-intelligence') ||
-          slug.includes('real-time-dashboard') ||
-          slug.includes('driving-sales') ||
-          slug.includes('rtwrokforce') ||
-          slug.includes('real-time-workflow') ||
-          slug.includes('centralizing-sales') ||
-          slug.includes('boosting-food');
-      } else if (cat === 'manufacturing') {
-        matchesCategory =
-          slug.includes('aequs') ||
-          slug.includes('alubee') ||
-          slug.includes('real-time-production') ||
-          slug.includes('tata') ||
-          slug.includes('toyota') ||
-          slug.includes('bissell') ||
-          slug.includes('tess') ||
-          slug.includes('yield') ||
-          slug.includes('quality') ||
-          slug.includes('predictive') ||
-          slug.includes('maintenance') ||
-          slug.includes('scrap') ||
-          slug.includes('sustainable') ||
-          slug.includes('tool-management') ||
-          title.includes('manufacturing') ||
-          ind.includes('manufacturing');
-      } else if (cat === 'logistics') {
-        matchesCategory =
-          slug.includes('bissell') ||
-          slug.includes('logistics') ||
-          title.includes('logistics') ||
-          desc.includes('logistics');
-      } else if (cat === 'it service') {
-        matchesCategory = slug.includes('connect-wise') || slug.includes('connectwise');
-      } else if (cat === 'idam licence') {
-        matchesCategory = slug.includes('gsk') || title.includes('idam') || desc.includes('idam');
-      } else if (cat === 'hospitality') {
-        matchesCategory =
-          slug.includes('accor') ||
-          slug.includes('anyday') ||
-          slug.includes('any-day') ||
-          slug.includes('hospitality');
-      } else if (cat === 'health care') {
-        matchesCategory =
-          slug.includes('careabout') ||
-          title.includes('healthcare') ||
-          title.includes('health care');
-      } else if (cat === 'finance') {
-        matchesCategory =
-          slug.includes('metro-one') ||
-          slug.includes('metroone') ||
-          slug.includes('finance-hr') ||
-          title.includes('finance');
-      } else if (cat === 'Energy') {
-        matchesCategory =
-          slug.includes('hy-24') ||
-          slug.includes('hy24') ||
-          slug.includes('wellstat') ||
-          slug.includes('portfolio') ||
-          title.includes('Energy');
-      } else if (cat === 'education') {
-        matchesCategory = slug.includes('curiculam') || title.includes('education');
-      } else if (cat === 'digital marketing') {
-        matchesCategory =
-          slug.includes('netrocon') ||
-          slug.includes('wpp') ||
-          slug.includes('henkel') ||
-          slug.includes('marketing') ||
-          title.includes('marketing');
-      } else if (cat === 'construction') {
-        matchesCategory = slug.includes('gcon') || title.includes('construction');
-      } else if (cat === 'biotech') {
-        matchesCategory = slug.includes('tessera') || title.includes('biotech');
-      } else if (cat === 'banking') {
-        matchesCategory = slug.includes('tavent') || slug.includes('banking');
-      } else {
-        matchesCategory = ind.includes(cat);
-      }
-    }
-
-    let matchesDept = false;
-    if (activeDepartment === 'Departments') {
-      matchesDept = true;
-    } else {
-      const dept = activeDepartment.toLowerCase();
-      const text = (card.title + ' ' + card.description).toLowerCase();
-      if (dept === 'hr') {
-        matchesDept =
-          text.includes('hr') ||
-          text.includes('workforce') ||
-          text.includes('employee') ||
-          text.includes('talent');
-      } else if (dept === 'marketing') {
-        matchesDept =
-          text.includes('marketing') ||
-          text.includes('campaign') ||
-          text.includes('funnel') ||
-          text.includes('guest') ||
-          text.includes('customer');
-      } else if (dept === 'sales') {
-        matchesDept =
-          text.includes('sales') ||
-          text.includes('revenue') ||
-          text.includes('pos') ||
-          text.includes('retail') ||
-          text.includes('store');
-      } else if (dept === 'operation') {
-        matchesDept =
-          text.includes('operation') ||
-          text.includes('production') ||
-          text.includes('yield') ||
-          text.includes('defect') ||
-          text.includes('logistics') ||
-          text.includes('inventory');
-      } else if (dept === 'it') {
-        matchesDept =
-          text.includes('it') ||
-          text.includes('software') ||
-          text.includes('platform') ||
-          text.includes('integration') ||
-          text.includes('cloud') ||
-          text.includes('tech') ||
-          text.includes('pipeline');
-      } else {
-        matchesDept = true;
-      }
-    }
+    const matchesCategory = checkCategoryMatch(card, activeCategory);
+    const matchesDept = checkDeptMatch(card, activeDepartment);
 
     const query = searchQuery.toLowerCase();
     const matchesSearch =
@@ -951,7 +1000,7 @@ const Cards = () => {
                 className='flex-grow flex items-center gap-3 overflow-x-auto scroll-smooth [&::-webkit-scrollbar]:hidden py-1'
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
-                {categories.map(category => (
+                {visibleCategories.map(category => (
                   <button
                     key={category}
                     onClick={() => setActiveCategory(category)}
@@ -999,7 +1048,7 @@ const Cards = () => {
               </button>
               {isDeptDropdownOpen && (
                 <div className='absolute right-0 mt-2 w-full md:w-48 bg-white border border-[#E5E5E5] rounded-xl shadow-lg py-1 z-50'>
-                  {['All departments', 'Sales', 'HR', 'Operation', 'Marketing', 'IT'].map(dept => (
+                  {visibleDepts.map(dept => (
                     <button
                       key={dept}
                       onClick={() => {
