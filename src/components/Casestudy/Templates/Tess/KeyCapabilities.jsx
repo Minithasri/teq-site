@@ -59,8 +59,8 @@ export default function KeyCapabilities() {
       <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-10 md:py-14'>
         {/* Title — leave right space for the overlapping image on desktop */}
         <h2
-          className='text-xl md:text-2xl lg:text-3xl font-bold uppercase tracking-wide mb-8 md:mb-10 lg:pr-[260px] xl:pr-[280px]'
-          style={{ color: '#0B64F4' }}
+          className='text-xl md:text-2xl lg:text-3xl font-bold tracking-wide mb-8 md:mb-10 lg:pr-[260px] xl:pr-[280px]'
+          style={{ color: '#262626' }}
         >
           Key Capabilities Delivered
         </h2>

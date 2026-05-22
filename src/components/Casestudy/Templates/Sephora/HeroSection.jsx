@@ -13,16 +13,8 @@ export default function HeroSection() {
         <div className='max-w-6xl'>
           {/* Main Title */}
           <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-[58px] xl:text-[64px] font-bold leading-[1.15] mb-6 md:mb-8 tracking-tight'>
-            <span style={{ color: '#F8FAFC' }}>AI-Based Workforce Scheduling and</span>
-            <br />
-            <span
-              style={{
-                background: 'linear-gradient(98.47deg, #25AFF4 0%, #86D2F9 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}
-            >
-              Rostering Platform
+            <span style={{ color: '#F8FAFC' }}>
+              AI-Based Workforce Scheduling and Rostering Platform
             </span>
           </h1>
 

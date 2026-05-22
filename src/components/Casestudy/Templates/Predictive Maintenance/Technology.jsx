@@ -42,7 +42,7 @@ export default function Technology() {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className='bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow flex items-start gap-6 border border-gray-100'
+              className='bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow flex items-start gap-6 mb-4 border border-gray-100'
             >
               {/* Icon Container with Gradient Border & BG */}
               <div

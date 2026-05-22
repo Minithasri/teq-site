@@ -29,7 +29,7 @@ export default function HeroSection() {
 
         {/* Main Heading */}
         <h1 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
-          <span className='text-[#EDEA39]'>Sustainable</span> Impact in Manufacturing
+          <span>Sustainable</span> Impact in Manufacturing
         </h1>
 
         {/* Subheading */}

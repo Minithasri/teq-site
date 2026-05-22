@@ -10,7 +10,7 @@ const ClientContext = () => {
         </div>
 
         {/* Content Box */}
-        <div className='relative bg-white rounded-[24px] shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#E1E7EF] p-8 md:p-14 md:w-[85%] mt-12'>
+        <div className='relative bg-white rounded-[24px] shadow-lg border border-[#E1E7EF] p-8 md:p-14 md:w-[85%] mt-12'>
           <div className='md:w-[95%] space-y-6'>
             <p className='text-[#0F1729] text-[16px] md:text-[22px] leading-relaxed'>
               Style Union, a retail brand with growing operations, needed real-time visibility into

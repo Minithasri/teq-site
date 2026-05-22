@@ -53,7 +53,7 @@ const CapabilitiesSection = () => {
       {/* CONTENT */}
       <div className='relative z-10 mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
         {/* HEADING */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#2E45F5]'>
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#262626]'>
           Key Capabilities Delivered
         </h2>
 
@@ -68,12 +68,13 @@ const CapabilitiesSection = () => {
                   min-h-[230px]
                   rounded-[18px]
                   border-2
-                  border-[#2E45F5]
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   md:px-6
                   py-5
                   md:py-6
+                  shadow-lg
                 '
               >
                 {/* ICON + TITLE */}
@@ -116,12 +117,13 @@ const CapabilitiesSection = () => {
                       min-h-[230px]
                       rounded-[18px]
                       border-2
-                      border-[#2E45F5]
+                      border-[#F5F5F5]
                       bg-white
                       px-5
                       md:px-6
                       py-5
                       md:py-6
+                      shadow-lg
                     '
                   >
                     {/* ICON + TITLE */}

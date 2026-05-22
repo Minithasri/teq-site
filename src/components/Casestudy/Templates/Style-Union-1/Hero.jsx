@@ -26,7 +26,7 @@ const Hero = () => {
       <div className='relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <h1 className='text-4xl md:text-[56px] font-bold text-[#000000] mb-6 leading-tight tracking-tight'>
           Transforming Retail Performance <br />
-          with <span className='text-[#673AF8]'>Unified Analytics</span>
+          with Unified Analytics
         </h1>
         <p className='text-[18px] md:text-[22px] text-[#000000] max-w-3xl mx-auto font-medium'>
           How Style Union achieved real-time visibility and data-driven growth through comprehensive

@@ -6,10 +6,10 @@ const ClientOverview = () => {
       <div className='max-w-7xl mx-auto'>
         {/* Heading */}
         <h2
-          className='font-bold uppercase tracking-wider mb-10'
-          style={{ color: '#288A82', fontSize: '32px' }}
+          className='font-bold text-center tracking-wider mb-10'
+          style={{ color: '#262626', fontSize: '32px' }}
         >
-          CLIENT OVERVIEW
+          Client Overview
         </h2>
 
         {/* Content */}

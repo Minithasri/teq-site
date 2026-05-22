@@ -42,12 +42,12 @@ const SolutionSection = () => {
             md:text-[48px]
             leading-none
             font-semibold
-            uppercase
+            
             tracking-[3px]
-            text-[#163D95]
+            text-[#262626]
           '
         >
-          THE SOLUTION
+          The Solution
         </h2>
 
         {/* DESCRIPTION */}

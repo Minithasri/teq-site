@@ -18,8 +18,8 @@ const OverviewSection = () => {
         {/* ================= CLIENT OVERVIEW ================= */}
         <div>
           {/* LABEL */}
-          <h2 className='text-[28px] md:text-[48px] leading-none font-semibold uppercase tracking-[1px] text-[#27B6AF]'>
-            CLIENT OVERVIEW
+          <h2 className='text-[28px] md:text-[48px] leading-none font-semibold tracking-[1px] text-[#262626]'>
+            Client Overview
           </h2>
 
           {/* DESCRIPTION */}
@@ -34,8 +34,8 @@ const OverviewSection = () => {
         {/* ================= CHALLENGE SECTION ================= */}
         <div className='mt-12 md:mt-14'>
           {/* LABEL */}
-          <h2 className='text-[28px] md:text-[48px] leading-none font-semibold uppercase tracking-[1px] text-[#FF3131]'>
-            THE CHALLENGE
+          <h2 className='text-[28px] md:text-[48px] leading-none font-semibold tracking-[1px] text-[#262626]'>
+            The Challenge
           </h2>
 
           {/* GRID */}
@@ -47,7 +47,7 @@ const OverviewSection = () => {
                   min-h-[82px]
                   rounded-[12px]
                   border
-                  border-[#FF4B4B]
+                  border-[#F5F5F5]
                   bg-white
                   px-4
                   md:px-5
@@ -55,6 +55,7 @@ const OverviewSection = () => {
                   flex
                   items-start
                   gap-3
+                  shadow-lg
                 '
               >
                 {/* ICON */}

@@ -42,10 +42,10 @@ export default function Solutions() {
         {/* Section Header */}
         <div className='w-full mb-12 max-w-4xl'>
           <h2
-            className='text-2xl md:text-3xl font-extrabold uppercase mb-6 tracking-wide'
-            style={{ color: '#4B52E4', fontFamily: 'Poppins, sans-serif' }}
+            className='text-2xl md:text-3xl font-extrabold mb-6 tracking-wide'
+            style={{ color: '#262626', fontFamily: 'Poppins, sans-serif' }}
           >
-            SOLUTION IMPLEMENTED
+            Solution Implemented
           </h2>
           <h3
             className='text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-bold mb-3 leading-tight'
@@ -69,15 +69,15 @@ export default function Solutions() {
             {solutionCards.slice(0, 2).map((card, i) => (
               <div
                 key={i}
-                className='relative p-6 sm:p-8 rounded-[24px] bg-[#FFFFFF] flex flex-col justify-between transition-all duration-300 hover:shadow-md hover:scale-[1.01]'
+                className='relative p-6 sm:p-8 rounded-[24px] bg-[#FFFFFF] flex flex-col justify-between shadow-lg transition-all duration-300 hover:shadow-md hover:scale-[1.01]'
                 style={{
-                  border: '2px solid #4B52E4',
+                  border: '2px solid #F5F5F5',
                 }}
               >
                 {/* Card Number on top right */}
                 <span
                   className='absolute top-6 right-8 text-xs font-bold'
-                  style={{ color: '#4B52E4', fontFamily: 'Poppins, sans-serif' }}
+                  style={{ color: '#262626' }}
                 >
                   {card.num}
                 </span>
@@ -96,8 +96,7 @@ export default function Solutions() {
                     <h4
                       className='text-base sm:text-[18px] font-bold'
                       style={{
-                        color: '#4B52E4',
-                        fontFamily: 'Poppins, sans-serif',
+                        color: '#262626',
                       }}
                     >
                       {card.title}
@@ -124,15 +123,15 @@ export default function Solutions() {
             {solutionCards.slice(2).map((card, i) => (
               <div
                 key={i}
-                className='relative p-6 sm:p-8 rounded-[24px] bg-[#FFFFFF] flex flex-col justify-between transition-all duration-300 hover:shadow-md hover:scale-[1.01]'
+                className='relative p-6 sm:p-8 rounded-[24px] bg-[#FFFFFF] flex flex-col justify-between shadow-lg transition-all duration-300 hover:shadow-md hover:scale-[1.01]'
                 style={{
-                  border: '2px solid #4B52E4',
+                  border: '2px solid #F5F5F5',
                 }}
               >
                 {/* Card Number on top right */}
                 <span
                   className='absolute top-6 right-8 text-xs font-bold'
-                  style={{ color: '#4B52E4', fontFamily: 'Poppins, sans-serif' }}
+                  style={{ color: '#262626' }}
                 >
                   {card.num}
                 </span>
@@ -151,7 +150,7 @@ export default function Solutions() {
                     <h4
                       className='text-base sm:text-[18px] font-bold'
                       style={{
-                        color: '#4B52E4',
+                        color: '#262626',
                         fontFamily: 'Poppins, sans-serif',
                       }}
                     >

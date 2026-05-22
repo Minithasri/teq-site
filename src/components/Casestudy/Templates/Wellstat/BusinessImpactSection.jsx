@@ -50,7 +50,7 @@ const BusinessImpactSection = () => {
       {/* ================= BUSINESS IMPACT ================= */}
       <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#12C92E]'>
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#262626]'>
           Business Impact
         </h2>
 
@@ -62,7 +62,8 @@ const BusinessImpactSection = () => {
               className='
                 rounded-[18px]
                 border-2
-                border-[#12C92E]
+                border-[#F5F5F5]
+                shadow-xl
                 bg-white
                 px-5
                 md:px-6
@@ -73,7 +74,7 @@ const BusinessImpactSection = () => {
               {/* HEADER */}
               <div className='flex items-center gap-4'>
                 {/* ICON */}
-                <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#12C92E]'>
+                <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#000000]'>
                   <Image
                     src={item.icon}
                     alt={item.value}
@@ -117,7 +118,7 @@ const BusinessImpactSection = () => {
           {/* TOP ROW */}
           <div className='flex flex-col gap-8 md:flex-row md:items-center items-start'>
             {/* LEFT TITLE */}
-            <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#168DF7]'>
+            <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#262626]'>
               Technology Stack
             </h2>
 
@@ -165,7 +166,8 @@ const BusinessImpactSection = () => {
                 className='
                   rounded-[18px]
                   border-2
-                  border-[#8BB8FF]
+                  border-[#F5F5F5]
+                  shadow-xl
                   bg-white
                   px-5
                   py-6
@@ -173,7 +175,7 @@ const BusinessImpactSection = () => {
                 '
               >
                 {/* TITLE */}
-                <h3 className='text-[14px] md:text-[20px] leading-none font-semibold tracking-[-0.5px] text-[#168DF7]'>
+                <h3 className='text-[14px] md:text-[20px] leading-none font-semibold tracking-[-0.5px] text-[#262626]'>
                   {item.title}
                 </h3>
 
@@ -191,7 +193,7 @@ const BusinessImpactSection = () => {
       <div className='bg-[#F4F7FA]'>
         <div className='mx-auto max-w-7xl px-4 md:px-6'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#22C62F]'>
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#262626F]'>
             Value Delivered
           </h2>
 

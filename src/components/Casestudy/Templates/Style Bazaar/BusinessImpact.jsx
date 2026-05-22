@@ -38,10 +38,10 @@ export default function BusinessImpact() {
       <div className='w-full bg-white py-12 md:py-16'>
         <div className='max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24'>
           <div className='mb-0'>
-            <h2 className='font-semibold uppercase mb-4 tracking-[1.32px] text-2xl md:text-3xl text-[#18C612]'>
-              BUSINESS IMPACT
+            <h2 className='font-semibold mb-4 tracking-[1.32px] text-2xl md:text-3xl text-[#262626]'>
+              Business Impact
             </h2>
-            <h3 className='font-medium mb-6 text-3xl md:text-4xl text-[#131720]'>
+            <h3 className='font-medium mb-6 text-xl md:text-2xl text-[#262626]'>
               Measurable Business Outcomes
             </h3>
             <p className='max-w-5xl text-lg leading-relaxed text-[#6B7280]'>
@@ -72,7 +72,7 @@ export default function BusinessImpact() {
               {impacts.map((item, index) => (
                 <div
                   key={index}
-                  className='bg-white border-2 border-[#18C612] rounded-[24px] p-6 md:p-8 flex flex-col shadow-sm'
+                  className='bg-white border-2 border-[#F5F5F5] rounded-[24px] p-6 md:p-8 flex flex-col shadow-sm'
                 >
                   <div className='flex items-center gap-4 mb-4'>
                     <div className='p-2 rounded-full border border-[#18C612] flex items-center justify-center'>
@@ -88,7 +88,7 @@ export default function BusinessImpact() {
                       {item.stat}
                     </span>
                   </div>
-                  <h4 className='font-medium mb-6 text-sm md:text-base text-[#18C612]'>
+                  <h4 className='font-medium mb-6 text-sm md:text-base text-[#262626]'>
                     {item.label}
                   </h4>
                   <p className='text-xs md:text-sm leading-relaxed text-[#6B7280]'>

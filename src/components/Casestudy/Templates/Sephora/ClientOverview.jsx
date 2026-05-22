@@ -19,8 +19,8 @@ export default function ClientOverview() {
       <div className='w-full py-12 md:py-16'>
         <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
           <h2
-            className='text-2xl md:text-3xl font-bold uppercase mb-5 tracking-wide'
-            style={{ color: '#0B95DA' }}
+            className='text-2xl md:text-3xl font-bold mb-5 tracking-wide'
+            style={{ color: '#262626' }}
           >
             Client Overview
           </h2>
@@ -42,8 +42,8 @@ export default function ClientOverview() {
         <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
           {/* Section Header */}
           <h2
-            className='text-2xl md:text-3xl font-bold uppercase mb-4 tracking-wide'
-            style={{ color: '#E64040' }}
+            className='text-2xl md:text-3xl font-bold mb-4 tracking-wide'
+            style={{ color: '#262626' }}
           >
             Business Challenges
           </h2>
@@ -79,9 +79,9 @@ export default function ClientOverview() {
             {challenges.map((challenge, i) => (
               <div
                 key={i}
-                className='flex items-center gap-4 px-6 py-5 rounded-2xl shadow-md border-2 hover:shadow-lg transition-all duration-300 min-h-[84px] hover:scale-[1.01]'
+                className='flex items-center gap-4 px-6 py-5 rounded-2xl shadow-lg border-2  transition-all duration-300 min-h-[84px] hover:scale-[1.01]'
                 style={{
-                  borderColor: '#E64040',
+                  borderColor: '#F5F5F5',
                   backgroundColor: '#FFFFFF',
                 }}
               >

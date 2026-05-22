@@ -38,7 +38,7 @@ const KeyCapabilities = () => {
         {/* Section Heading */}
         <h2
           className='text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16'
-          style={{ color: '#1F59DC' }}
+          style={{ color: '#262626' }}
         >
           Key Capabilities Delivered
         </h2>
@@ -50,7 +50,7 @@ const KeyCapabilities = () => {
               {/* Icon Container with Gradient Background */}
               <div
                 className='flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg transition-transform group-hover:scale-110 duration-300'
-                style={{ background: 'linear-gradient(135deg, #1481B8 0%, #2BD4BD 100%)' }}
+                style={{ background: '#487492ff' }}
               >
                 <img src={item.icon} alt='Capability Icon' className='w-6 h-6 md:w-8 md:h-8' />
               </div>
@@ -59,7 +59,7 @@ const KeyCapabilities = () => {
               <div className='flex-grow pt-1'>
                 <h3
                   className='text-xl md:text-2xl font-bold mb-2 md:mb-3'
-                  style={{ color: '#1F59DC' }}
+                  style={{ color: '#262626' }}
                 >
                   {item.title}
                 </h3>

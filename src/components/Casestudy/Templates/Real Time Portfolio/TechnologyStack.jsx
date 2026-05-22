@@ -38,7 +38,7 @@ export default function TechnologyStack() {
           {/* Domo Corporate Branding Logo */}
           <div className='relative w-[100px] h-[53px] md:w-[121px] md:h-[64px] shrink-0'>
             <Image
-              src='/images/Templates/templatez/tcdomo.png'
+              src='/images/Templates/style_union/unionsvg20.svg'
               alt='Domo Corporate Platform Branding Logo'
               fill
               className='object-cover'

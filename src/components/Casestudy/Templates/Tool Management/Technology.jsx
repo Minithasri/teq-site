@@ -72,7 +72,7 @@ export default function Technology() {
 
               {/* Content */}
               <div>
-                <h3 className='text-xl font-bold text-blue-600 mb-2'>{item.title}</h3>
+                <h3 className='text-xl font-bold text-[#262626] mb-2'>{item.title}</h3>
                 <p className='text-gray-600 text-sm leading-relaxed'>{item.description}</p>
               </div>
             </div>

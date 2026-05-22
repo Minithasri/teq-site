@@ -14,7 +14,7 @@ export default function HeroSection() {
         {/* Main Headline */}
         <h1 className='text-[#F8FAFC] font-bold text-[32px] md:text-[48px] lg:text-[54px] leading-[1.2] max-w-7xl'>
           Transforming Retail Performance <br className='hidden md:block' />
-          with <span className='text-[#E0E84D]'>Unified Analytics</span>
+          with Unified Analytics
         </h1>
 
         {/* Subheadline */}

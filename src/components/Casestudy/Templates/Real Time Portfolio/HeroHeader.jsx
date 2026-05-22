@@ -55,8 +55,7 @@ export default function CleanHydrogenHero() {
         {/* Left Side: Headlines and Subtext (Moved higher up) */}
         <div className='lg:col-span-8 flex flex-col text-white self-start lg:self-auto'>
           <h1 className='font-bold text-[54px] max-w-full lg:min-w-[1150px] leading-[44px] md:text-[46px] md:leading-[54px] lg:text-[52px] lg:leading-[62px] tracking-tight'>
-            Empowering Clean Hydrogen Investment with{' '}
-            <span style={{ color: '#ECE254' }}>Real-Time Portfolio Intelligence</span>
+            Empowering Clean Hydrogen Investment with Real-Time Portfolio Intelligence
           </h1>
 
           <p className='mt-5 text-[15px] md:text-[17px] leading-[26px] opacity-90 max-w-[75%] font-light'>

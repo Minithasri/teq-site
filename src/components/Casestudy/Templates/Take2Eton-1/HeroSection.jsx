@@ -26,7 +26,7 @@ const HeroSection = () => {
           <div className='max-w-7xl'>
             {/* HEADING */}
             <h1 className='text-[28px] md:text-[58px] leading-[1.08] font-semibold tracking-[-2px] text-[#07111F]'>
-              <span className='text-[#FFE13A]'>Digital Transformation</span> for a Leading Global
+              <span>Digital Transformation</span> for a Leading Global
               <br />
               Travel Management Organization
             </h1>
@@ -70,8 +70,8 @@ const HeroSection = () => {
       {/* ================= CLIENT CONTEXT ================= */}
       <div className='mx-auto max-w-7xl px-4 md:px-6 pt-12 pb-10'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[2px] text-[#163D76]'>
-          CLIENT CONTEXT
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[2px] text-[#262626]'>
+          Client Context
         </h2>
 
         {/* DESCRIPTION */}

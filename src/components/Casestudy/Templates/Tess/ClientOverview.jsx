@@ -17,8 +17,8 @@ export default function ClientOverview() {
       {/* ── CLIENT OVERVIEW ───────────────────────────────────────────── */}
       <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 pt-10 md:pt-14 pb-10 md:pb-12'>
         <h2
-          className='text-xl md:text-2xl lg:text-3xl font-bold uppercase tracking-wide mb-4'
-          style={{ color: '#0B64F4' }}
+          className='text-xl md:text-2xl lg:text-3xl font-bold tracking-wide mb-4'
+          style={{ color: '#262626' }}
         >
           Client Overview
         </h2>
@@ -40,8 +40,8 @@ export default function ClientOverview() {
             {/* Left — title + sub text + bullets */}
             <div className='flex-1 min-w-0'>
               <h2
-                className='text-xl md:text-2xl lg:text-3xl font-bold uppercase tracking-wide mb-5'
-                style={{ color: '#F40B0B' }}
+                className='text-xl md:text-2xl lg:text-3xl font-bold tracking-wide mb-5'
+                style={{ color: '#262626' }}
               >
                 The Challenge
               </h2>

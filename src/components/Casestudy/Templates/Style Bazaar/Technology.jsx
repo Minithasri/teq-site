@@ -31,10 +31,10 @@ export default function Technology() {
       <div className='max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 text-center'>
         {/* Header */}
         <div className='mb-16'>
-          <h2 className='font-semibold uppercase mb-4 tracking-[1.32px] text-3xl md:text-4xl text-[#0A85FF]'>
-            TECHNOLOGY STACK
+          <h2 className='font-semibold mb-4 tracking-[1.32px] text-3xl md:text-4xl text-[#262626]'>
+            Technology Stack
           </h2>
-          <h3 className='font-medium text-2xl md:text-3xl text-[#131720]'>Tools & Platforms</h3>
+          <h3 className='font-medium text-2xl md:text-3xl text-[#262626]'>Tools & Platforms</h3>
         </div>
 
         {/* Tech Cards Grid */}
@@ -42,7 +42,7 @@ export default function Technology() {
           {techs.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-[20px] p-8 border-[2px] border-[#0B44B8] shadow-sm hover:shadow-md transition-all flex flex-col items-center'
+              className='bg-white rounded-[20px] p-8 border-[2px] border-[#F5F5F5] shadow-lg hover:shadow-md transition-all flex flex-col items-center'
             >
               <div className='mb-6 w-16 h-16 relative flex items-center justify-center'>
                 <Image

@@ -53,7 +53,7 @@ const TechnologyStack = () => {
           {stack.map((item, index) => (
             <div
               key={index}
-              className='bg-white p-6 rounded-xl border border-[#4182F2] flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md transition-shadow'
+              className='bg-white p-6 rounded-xl border border-[#F5F5F5] flex flex-col items-center justify-center text-center shadow-md hover:shadow-xl transition-shadow'
               style={{ minHeight: '120px' }}
             >
               <span

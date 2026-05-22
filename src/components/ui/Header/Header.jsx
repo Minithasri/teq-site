@@ -111,6 +111,14 @@ export default function Header({
                 const allLinks = item.megaMenuColumns?.flatMap(column => column.links) || [];
                 // Check if this is Solutions or Partners section
                 const shouldOpenInNewTab = item.label === 'Solutions' || item.label === 'Partners';
+                const isActive =
+                  pathname === item.href ||
+                  (item.href !== '/' && pathname.startsWith('/' + item.href.split('/')[1]));
+
+                const indicatorBase =
+                  "after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-[3px] after:bg-[#6F2B8B] after:rounded-full";
+                const indicatorOpen =
+                  "data-[state=open]:after:content-[''] data-[state=open]:after:absolute data-[state=open]:after:bottom-1 data-[state=open]:after:left-1/2 data-[state=open]:after:-translate-x-1/2 data-[state=open]:after:w-6 data-[state=open]:after:h-[3px] data-[state=open]:after:bg-[#6F2B8B] data-[state=open]:after:rounded-full";
 
                 return (
                   <div key={item.label} className='relative '>
@@ -118,8 +126,8 @@ export default function Header({
                       <DropdownMenu modal={false}>
                         <DropdownMenuTrigger asChild>
                           <button
-                            className={`flex items-center gap-0 text-[10px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
-                              pathname === item.href ? '' : 'hover:opacity-80'
+                            className={`relative flex items-center gap-0 text-[10px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap focus:outline-none ${indicatorOpen} ${
+                              isActive ? indicatorBase : 'hover:opacity-80'
                             }`}
                           >
                             {item.label}
@@ -153,8 +161,8 @@ export default function Header({
                     ) : (
                       <Link
                         href={item.href}
-                        className={`text-[10px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap ${
-                          pathname === item.href ? '' : 'hover:opacity-80'
+                        className={`relative text-[10px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap focus:outline-none ${
+                          isActive ? indicatorBase : 'hover:opacity-80'
                         }`}
                         onClick={handleLinkClick}
                       >

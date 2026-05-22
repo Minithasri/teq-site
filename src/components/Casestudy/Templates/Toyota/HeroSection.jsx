@@ -30,10 +30,7 @@ const HeroSection = () => {
         <div className='max-w-full lg:max-w-7xl'>
           <h1 className='text-white text-3xl md:text-5xl lg:text-6xl font-bold leading-snug md:leading-[1.4] lg:leading-[1.6] tracking-tight'>
             Transforming Tool Lifecycle Management <br className='hidden md:block' />
-            Through{' '}
-            <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#1481B8] to-[#2BD4BD]'>
-              Intelligent Digitization
-            </span>
+            Through <span className='text-white'>Intelligent Digitization</span>
           </h1>
         </div>
       </div>

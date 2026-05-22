@@ -67,8 +67,8 @@ const ChallengesSection = () => {
         {/* CONTENT WRAPPER */}
         <div className='relative z-20'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#F03232]'>
-            <span className='mr-3'>02</span>· BUSINESS CHALLENGES
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold text-[#262626]'>
+            <span className='mr-3'>02</span>· Business Challenges
           </h2>
 
           {/* DESCRIPTION */}
@@ -86,21 +86,21 @@ const ChallengesSection = () => {
                   relative
                   rounded-[22px]
                   border-2
-                  border-[#FF4444]
+                  border-[#F5F5F5]
                   bg-white
                   px-6
                   py-6
-                  shadow-[0px_10px_24px_rgba(0,0,0,0.04)]
+                  shadow-xl
                 '
               >
                 {/* NUMBER */}
-                <span className='absolute right-5 top-5 text-[12px] font-semibold text-[#FF4444]'>
+                <span className='absolute right-5 top-5 text-[12px] font-semibold text-[#262626]'>
                   {item.id}
                 </span>
 
                 <div className='flex flex-row gap-6 items-center'>
                   {/* ICON */}
-                  <div className='flex h-[54px] w-[54px] items-center justify-center rounded-[14px] bg-[#E73030]'>
+                  <div className='flex h-[54px] w-[54px] items-center justify-center rounded-[14px] bg-[#FC7979]'>
                     <Image
                       src={item.icon}
                       alt={item.title}
@@ -111,7 +111,7 @@ const ChallengesSection = () => {
                   </div>
 
                   {/* TITLE */}
-                  <h3 className='text-[20px] md:text-[20px] leading-[1.4] font-semibold text-[#F03232]'>
+                  <h3 className='text-[20px] md:text-[20px] leading-[1.4] font-semibold text-[#262626]'>
                     {item.title}
                   </h3>
                 </div>

@@ -83,12 +83,12 @@ const ChallengesSection = () => {
         {/* ================= TOP HEADING ================= */}
         <div className='flex flex-col gap-3 md:flex-row md:items-center md:gap-6'>
           {/* NUMBER */}
-          <div className='text-[58px] md:text-[82px] leading-none font-bold tracking-[-4px] text-[#2F24D2]'>
+          <div className='text-[58px] md:text-[82px] leading-none font-bold tracking-[-4px] text-[#262626]'>
             02
           </div>
 
           {/* TITLE */}
-          <h1 className='text-[28px] md:text-[42px] leading-[1.15] font-semibold tracking-[-1.5px] text-[#2F24D2]'>
+          <h1 className='text-[28px] md:text-[42px] leading-[1.15] font-semibold tracking-[-1.5px] text-[#262626]'>
             Travel Compliance & Tax Reporting Tracking Platform
           </h1>
         </div>
@@ -96,8 +96,8 @@ const ChallengesSection = () => {
         {/* ================= BUSINESS CHALLENGES ================= */}
         <div className='mt-10'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[2px] text-[#FF3030]'>
-            BUSINESS CHALLENGES
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[2px] text-[#262626]'>
+            Business Challenges
           </h2>
 
           {/* CHALLENGE AREA */}
@@ -110,12 +110,12 @@ const ChallengesSection = () => {
                   className='
                     rounded-[16px]
                     border-2
-                    border-[#FF4A4A]
+                    border-[#F5F5F5]
                     bg-white
                     px-5
                     md:px-6
                     py-5
-                    shadow-[0px_6px_18px_rgba(0,0,0,0.04)]
+                    shadow-lg
                   '
                 >
                   {/* HEADER */}
@@ -132,7 +132,7 @@ const ChallengesSection = () => {
                     </div>
 
                     {/* TITLE */}
-                    <h3 className='text-[15px] md:text-[18px] leading-[1.4] font-semibold text-[#FF4040]'>
+                    <h3 className='text-[15px] md:text-[18px] leading-[1.4] font-semibold text-[#262626]'>
                       {item.title}
                     </h3>
                   </div>
@@ -162,8 +162,8 @@ const ChallengesSection = () => {
         {/* ================= SOLUTION IMPLEMENTED ================= */}
         <div className='mt-14'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[2px] text-[#5A54F8]'>
-            SOLUTION IMPLEMENTED
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[2px] text-[#262626]'>
+            Solution Implemented
           </h2>
 
           {/* GRID */}
@@ -174,18 +174,18 @@ const ChallengesSection = () => {
                 className='
                   rounded-[16px]
                   border-2
-                  border-[#4B52E4]
+                  border-[#F5F5F5]
                   bg-[#EFF2F5]
                   px-5
                   md:px-6
                   py-5
-                  shadow-[0px_6px_18px_rgba(0,0,0,0.04)]
+                  shadow-lg
                 '
               >
                 {/* HEADER */}
                 <div className='flex items-center gap-3'>
                   {/* ICON */}
-                  <div className='flex h-9 w-9 flex-shrink-0 items-center justify-center border border-[#4B52E4] rounded-[10px] bg-[#E8E9FF]'>
+                  <div className='flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-[10px] bg-[#E8E9FF]'>
                     <Image
                       src={item.icon}
                       alt='Check'
@@ -196,7 +196,7 @@ const ChallengesSection = () => {
                   </div>
 
                   {/* TITLE */}
-                  <h3 className='text-[15px] md:text-[18px] leading-[1.4] font-semibold text-[#5A54F8]'>
+                  <h3 className='text-[15px] md:text-[18px] leading-[1.4] font-semibold text-[#262626]'>
                     {item.title}
                   </h3>
                 </div>

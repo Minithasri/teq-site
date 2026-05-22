@@ -10,28 +10,28 @@ export default function BusinessImpact() {
       sub: 'Faster',
       title: 'Real-Time Reporting',
       desc: 'Reduced from weekly → real-time',
-      icon: <Clock size={26} className='text-[#FFFFFF]' />,
+      icon: <Clock size={26} className='text-[#262626]' />,
     },
     {
       value: '360°',
       sub: 'View',
       title: 'Enhanced Visibility',
       desc: 'Improved customer and product trend insights',
-      icon: <TrendingUp size={26} className='text-[#FFFFFF]' />,
+      icon: <TrendingUp size={26} className='text-[#262626]' />,
     },
     {
       value: 'Instant',
       sub: 'Response',
       title: 'Faster Decisions',
       desc: 'Leadership responds to market changes immediately',
-      icon: <Gauge size={26} className='text-[#FFFFFF]' />,
+      icon: <Gauge size={26} className='text-[#262626]' />,
     },
     {
       value: 'Built',
       sub: 'to Scale',
       title: 'Scalable Foundation',
       desc: 'Established platform for future growth',
-      icon: <Target size={26} className='text-[#FFFFFF]' />,
+      icon: <Target size={26} className='text-[#262626]' />,
     },
   ];
 
@@ -71,7 +71,7 @@ export default function BusinessImpact() {
           {metricCards.map((card, idx) => (
             <div
               key={idx}
-              className='relative w-full max-w-[264px] min-h-[210px] mx-auto bg-[#2814DE]/75 border border-white/20 rounded-[16px] px-5 pt-5 pb-6 shadow-lg backdrop-blur-[4px] flex flex-col'
+              className='relative w-full max-w-[264px] min-h-[210px] mx-auto bg-white/10 border border-white/20 rounded-[16px] px-5 pt-5 pb-6 shadow-lg backdrop-blur-[4px] flex flex-col'
             >
               {/* Top Section */}
               <div className='flex items-start gap-3 m-3'>
@@ -80,11 +80,11 @@ export default function BusinessImpact() {
 
                 {/* Value + Sub */}
                 <div className='flex flex-col'>
-                  <span className='font-bold text-[32px] leading-none text-white'>
+                  <span className='font-bold text-[32px] leading-none text-[#262626]'>
                     {card.value}
                   </span>
 
-                  <span className='font-semibold text-[15px] leading-none text-[#ECE254] mt-2'>
+                  <span className='font-semibold text-[15px] leading-none text-[#262626] mt-2'>
                     {card.sub}
                   </span>
                 </div>
@@ -92,11 +92,11 @@ export default function BusinessImpact() {
 
               {/* Bottom Content */}
               <div className='mt-auto w-[200px]'>
-                <h4 className='font-bold text-[16px] leading-[30px] text-white mb-1'>
+                <h4 className='font-bold text-[16px] leading-[30px] text-[#262626] mb-1'>
                   {card.title}
                 </h4>
 
-                <p className='font-normal text-[13.5px] leading-[20px] text-white/80'>
+                <p className='font-normal text-[13.5px] leading-[20px] text-[#262626]'>
                   {card.desc}
                 </p>
               </div>
@@ -107,8 +107,8 @@ export default function BusinessImpact() {
         {/* 5. Bottom Containers Splitting Achievements & Long-Term Value */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 w-full'>
           {/* Box Left Side: Key Achievements */}
-          <div className='w-full max-w-[564px] min-h-[290px] bg-[#2814DE]/75 border border-white/20 rounded-[16px] p-6 flex flex-col justify-start shadow-lg backdrop-blur-[4px] mx-auto'>
-            <h3 className='font-bold text-[22px] text-white mb-6'>Key Achievements</h3>
+          <div className='w-full max-w-[564px] min-h-[290px] bg-white/10 border border-white/20 rounded-[16px] p-6 flex flex-col justify-start shadow-lg backdrop-blur-[4px] mx-auto'>
+            <h3 className='font-bold text-[22px] text-[#262626] mb-6'>Key Achievements</h3>
             <div className='flex flex-col gap-4'>
               {keyAchievements.map((text, index) => (
                 <div key={index} className='flex items-start gap-3'>
@@ -117,7 +117,7 @@ export default function BusinessImpact() {
                     className='text-[#F91F23] shrink-0 mt-1'
                     strokeWidth={2}
                   />
-                  <p className='font-normal text-[18px] lg:text-[18px] text-white/90 leading-relaxed'>
+                  <p className='font-normal text-[18px] lg:text-[18px] text-[#262626] leading-relaxed'>
                     {text}
                   </p>
                 </div>
@@ -126,18 +126,18 @@ export default function BusinessImpact() {
           </div>
 
           {/* Box Right Side: Long-Term Value with Performance Metric Indicators */}
-          <div className='w-full max-w-[564px] min-h-[290px] bg-[#2814DE]/75 border border-white/20 rounded-[16px] p-6 flex flex-col justify-start shadow-lg backdrop-blur-[4px] mx-auto'>
-            <h3 className='font-bold text-[22px] text-white mb-6'>Long-Term Value</h3>
+          <div className='w-full max-w-[564px] min-h-[290px] bg-white/10 border border-white/20 rounded-[16px] p-6 flex flex-col justify-start shadow-lg backdrop-blur-[4px] mx-auto'>
+            <h3 className='font-bold text-[22px] text-[#262626] mb-6'>Long-Term Value</h3>
 
             <div className='flex flex-col gap-5 w-full mt-2'>
               {/* Metric Row 1 */}
               <div className='w-full'>
                 <div className='flex justify-between items-center mb-2'>
-                  <span className='font-normal text-[18px] lg:text-[16px] text-white/90'>
+                  <span className='font-normal text-[18px] lg:text-[16px] text-[#262626]'>
                     Operational Efficiency
                   </span>
                 </div>
-                <div className='w-full h-[8px] bg-white/20 rounded-full overflow-hidden'>
+                <div className='w-full h-[8px] bg-black/10 rounded-full overflow-hidden'>
                   <div className='h-full bg-[#F92020] rounded-full w-[91%]' />
                 </div>
               </div>
@@ -145,11 +145,11 @@ export default function BusinessImpact() {
               {/* Metric Row 2 */}
               <div className='w-full'>
                 <div className='flex justify-between items-center mb-2'>
-                  <span className='font-normal text-[18px] lg:text-[16px] text-white/90'>
+                  <span className='font-normal text-[18px] lg:text-[16px] text-[#262626]'>
                     Data Accuracy
                   </span>
                 </div>
-                <div className='w-full h-[8px] bg-white/20 rounded-full overflow-hidden'>
+                <div className='w-full h-[8px] bg-black/10 rounded-full overflow-hidden'>
                   <div className='h-full bg-[#F92020] rounded-full w-[100%]' />
                 </div>
               </div>
@@ -157,11 +157,11 @@ export default function BusinessImpact() {
               {/* Metric Row 3 */}
               <div className='w-full'>
                 <div className='flex justify-between items-center mb-2'>
-                  <span className='font-normal text-[18px] lg:text-[16px] text-white/90'>
+                  <span className='font-normal text-[18px] lg:text-[16px] text-[#262626]'>
                     Strategic Insights
                   </span>
                 </div>
-                <div className='w-full h-[8px] bg-white/20 rounded-full overflow-hidden'>
+                <div className='w-full h-[8px] bg-black/10 rounded-full overflow-hidden'>
                   <div className='h-full bg-[#F92020] rounded-full w-[87%]' />
                 </div>
               </div>

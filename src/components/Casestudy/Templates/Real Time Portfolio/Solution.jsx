@@ -103,7 +103,7 @@ export default function SolutionSection() {
                 borderColor: '#DADFE7',
                 borderLeftColor: '#1DC928',
                 background: '#FFFFFF',
-                boxShadow: '0px 4px 14px rgba(0, 0, 0, 0.01)',
+                boxShadow: '8px 4px 14px rgba(0, 0, 0, 0.01)',
               }}
             >
               {/* Card Header Title and Circle Icon Wrap */}

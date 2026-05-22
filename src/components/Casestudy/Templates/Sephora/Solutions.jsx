@@ -24,8 +24,8 @@ export default function Solutions() {
         <div className='w-full mb-8 md:mb-12'>
           {/* Section Category */}
           <h2
-            className='text-2xl md:text-3xl font-bold uppercase mb-4 tracking-wide'
-            style={{ color: '#2A14CD' }}
+            className='text-2xl md:text-3xl font-bold mb-4 tracking-wide'
+            style={{ color: '#262626' }}
           >
             Our Solution
           </h2>
@@ -54,7 +54,7 @@ export default function Solutions() {
           {/* LEFT COLUMN: Key Components Title & Bullets */}
           <div>
             {/* Key Solution Components Header */}
-            <h4 className='text-lg md:text-[24px] font-bold mb-6' style={{ color: '#2A14CD' }}>
+            <h4 className='text-lg md:text-[24px] font-bold mb-6' style={{ color: '#262626' }}>
               Key Solution Components
             </h4>
 

@@ -38,11 +38,11 @@ export default function ChallengeSection() {
       {/* Header Section */}
       <div className='relative z-10 flex flex-col items-center text-center px-6 mb-[20px]'>
         <h2
-          className='font-bold uppercase mb-[10px] text-[24px] sm:text-[30px] md:text-[36px]'
+          className='font-bold mb-[10px] text-[24px] sm:text-[30px] md:text-[36px]'
           style={{
             fontFamily: 'Inter, sans-serif',
             letterSpacing: '1.4px',
-            color: '#FF4343',
+            color: '#262626',
           }}
         >
           The Challenge
@@ -88,8 +88,8 @@ export default function ChallengeSection() {
                   minHeight: '140px', // Changed height to minHeight for text expansion
                   borderRadius: '12px',
                   background: '#FFFAFA',
-                  border: '1px solid #FF4343',
-                  boxShadow: '0px 4px 15px rgba(255, 67, 67, 0.05)',
+                  border: '1px solid #F5F5F5',
+                  boxShadow: '10px 4px 15px rgba(255, 67, 67, 0.05)',
                   gap: '16px', // Slightly reduced gap for mobile
                 }}
               >

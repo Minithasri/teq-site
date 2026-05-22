@@ -20,8 +20,8 @@ export default function TechnologyStack() {
           {/* Title row + inline icons */}
           <div className='flex flex-wrap items-center gap-6 mb-6'>
             <h2
-              className='text-xl md:text-2xl lg:text-3xl font-bold uppercase tracking-wide whitespace-nowrap'
-              style={{ color: '#0B64F4' }}
+              className='text-xl md:text-2xl lg:text-3xl font-bold tracking-wide whitespace-nowrap'
+              style={{ color: '#262626' }}
             >
               Technology Stack
             </h2>
@@ -69,8 +69,8 @@ export default function TechnologyStack() {
         <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-10 md:py-14'>
           {/* Title */}
           <h2
-            className='text-xl md:text-2xl lg:text-3xl font-bold uppercase tracking-wide mb-5'
-            style={{ color: '#0B64F4' }}
+            className='text-xl md:text-2xl lg:text-3xl font-bold tracking-wide mb-5'
+            style={{ color: '#262626' }}
           >
             Value Delivered
           </h2>

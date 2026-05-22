@@ -58,9 +58,9 @@ export default function Challenges() {
                     flexDirection: 'column',
                     padding: '24px',
                     borderRadius: '16px',
-                    border: '2px solid #EA2727',
+                    border: '2px solid #F5F5F5',
                     boxSizing: 'border-box',
-                    boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
+                    boxShadow: '1px 1px 4px 2px #F5F5F5',
                     transition: 'box-shadow 0.2s',
                   }}
                 >
@@ -84,7 +84,7 @@ export default function Challenges() {
                     </div>
                     <h3
                       style={{
-                        color: '#EA2727',
+                        color: '#262626',
                         fontWeight: 600,
                         fontSize: '16px',
                         lineHeight: '1.3',

@@ -59,8 +59,8 @@ export default function Solutions() {
         {/* ── OUR SOLUTION (Full Width Header & Intro) ── */}
         <div className='w-full mb-8'>
           <h2
-            className='text-2xl md:text-3xl font-bold uppercase mb-4 tracking-wide'
-            style={{ color: '#1525DA' }}
+            className='text-2xl md:text-3xl font-bold mb-4 tracking-wide'
+            style={{ color: '#262626' }}
           >
             Our Solution
           </h2>
@@ -131,9 +131,9 @@ export default function Solutions() {
           {cards.map((card, i) => (
             <div
               key={i}
-              className='bg-white p-6 md:p-8 rounded-[20px] transition-all duration-300 hover:shadow-xl flex flex-col justify-between'
+              className='bg-white p-6 md:p-8 rounded-[20px] transition-all duration-300 shadow-md hover:shadow-xl flex flex-col justify-between'
               style={{
-                border: '2px solid #858EE9',
+                border: '2px solid #F5F5F5',
               }}
             >
               <div>
@@ -142,7 +142,7 @@ export default function Solutions() {
                   <div
                     className='flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center border'
                     style={{
-                      borderColor: '#1525DA',
+                      borderColor: '#F5F5F5',
                       backgroundColor: '#1791CF1A',
                     }}
                   >
@@ -158,7 +158,7 @@ export default function Solutions() {
                   {/* Card Title */}
                   <h3
                     className='text-base md:text-[18px] font-bold leading-snug'
-                    style={{ color: '#1764E8' }}
+                    style={{ color: '#262626' }}
                   >
                     {card.title}
                   </h3>

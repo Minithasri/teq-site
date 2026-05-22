@@ -43,8 +43,8 @@ export default function BusinessImpact() {
       <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
         {/* ── BUSINESS IMPACT HEADER ── */}
         <h2
-          className='text-2xl md:text-3xl font-bold uppercase mb-8 tracking-wide'
-          style={{ color: '#62EE17' }}
+          className='text-2xl md:text-3xl font-bold mb-8 tracking-wide'
+          style={{ color: '#262626' }}
         >
           Business Impact
         </h2>
@@ -54,14 +54,14 @@ export default function BusinessImpact() {
           {impactCards.map((card, i) => (
             <div
               key={i}
-              className='p-6 md:p-8 rounded-[20px] transition-all duration-300 hover:shadow-lg text-center flex flex-col justify-center items-center min-h-[140px] md:min-h-[160px]'
+              className='p-6 md:p-8 rounded-[20px] transition-all duration-300 shadow-md hover:shadow-xl text-center flex flex-col justify-center items-center min-h-[140px] md:min-h-[160px]'
               style={{
-                border: '2px solid #62EE17',
-                backgroundColor: '#A3ADC20D',
+                border: '2px solid #F5F5F5',
+                backgroundColor: '#FFFFFF',
               }}
             >
               {/* Value Highlight */}
-              <span className='text-3xl md:text-4xl font-bold mb-3' style={{ color: '#62EE17' }}>
+              <span className='text-3xl md:text-4xl font-bold mb-3' style={{ color: '#262626' }}>
                 {card.value}
               </span>
 
@@ -102,8 +102,8 @@ export default function BusinessImpact() {
             {/* Technology Stack Sub-Section */}
             <div>
               <h2
-                className='text-2xl md:text-3xl font-bold uppercase mb-6 tracking-wide'
-                style={{ color: '#1791CF' }}
+                className='text-2xl md:text-3xl font-bold mb-6 tracking-wide'
+                style={{ color: '#262626' }}
               >
                 Technology Stack
               </h2>
@@ -161,8 +161,8 @@ export default function BusinessImpact() {
         {/* ── VALUE DELIVERED ── */}
         <div className='w-full lg:mt-20'>
           <h2
-            className='text-2xl md:text-3xl font-bold uppercase mb-4 tracking-wide'
-            style={{ color: '#1791CF' }}
+            className='text-2xl md:text-3xl font-bold mb-4 tracking-wide'
+            style={{ color: '#262626' }}
           >
             Value Delivered
           </h2>

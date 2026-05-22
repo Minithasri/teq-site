@@ -32,24 +32,9 @@ const solutions = [
 
 export default function SolutionSection() {
   return (
-    <section
-      className="relative mt-[-70px] overflow-hidden font-['Poppins'] flex flex-col items-center"
-      style={{
-        width: '100%',
-        height: '648px',
-        background: 'rgba(243, 244, 246, 1)',
-      }}
-    >
-      {/* 4. Background Image Container */}
-      <div
-        className='absolute z-0 overflow-hidden'
-        style={{
-          width: '100%',
-          height: '430px',
-          top: '180px',
-          borderRadius: '33px',
-        }}
-      >
+    <section className='relative w-full overflow-hidden bg-[#F3F4F6] py-16 md:py-24'>
+      {/* Background Image Container */}
+      <div className='absolute inset-x-0 bottom-0 top-[280px] md:top-[320px] lg:top-[220px] z-0 overflow-hidden'>
         <Image
           src='/images/Templates/templatez/salesintelligence/sisol.png'
           alt='Solution Background'
@@ -60,79 +45,34 @@ export default function SolutionSection() {
       </div>
 
       {/* Main Content Wrapper */}
-      <div className='relative z-20 w-full max-w-[1420px] pt-[60px] px-4 flex flex-col items-center'>
-        {/* Header Section Aligned to Grid Start */}
-        <div className='w-full mb-[40px] text-left'>
-          <h2
-            className='font-semibold uppercase mb-[20px]'
-            style={{
-              fontSize: '36px',
-              lineHeight: '1',
-              letterSpacing: '1.4px',
-              color: 'rgba(2, 15, 254, 1)',
-            }}
-          >
+      <div className='relative z-20 w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
+        {/* Header Section */}
+        <div className='w-full mb-10 text-left'>
+          <h2 className='text-2xl md:text-3xl font-bold mb-4 tracking-wide text-[#262626]'>
             Our Solution
           </h2>
-          <h3
-            className='font-semibold text-[#0F1729]'
-            style={{
-              fontSize: '30px',
-              lineHeight: '1.2',
-            }}
-          >
+          <h3 className='text-md md:text-lg lg:text-xl font-semibold text-[#0F1729] max-w-4xl'>
             A structured approach to rebuild reporting integrity from the ground up
           </h3>
         </div>
 
-        {/* 5. Solution Cards Grid - Perfectly Centered */}
-        <div className='grid grid-cols-2 gap-y-[20px] gap-x-[40px] mt-[24px] w-full'>
+        {/* Solution Cards Grid */}
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 pt-24 w-full'>
           {solutions.map((item, index) => (
             <div
               key={index}
-              className='relative bg-white flex flex-col justify-center'
-              style={{
-                width: '700px',
-                height: '180px',
-                borderRadius: '12px',
-                border: '1px solid rgba(229, 231, 235, 1)',
-                boxShadow: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)',
-                paddingLeft: '100px',
-                paddingRight: '40px',
-              }}
+              className='relative bg-white rounded-2xl border border-gray-200 shadow-md p-6 md:p-8 lg:pl-28 transition-all duration-300 hover:shadow-lg min-h-[160px] flex flex-col justify-center'
             >
               {/* Icon Container */}
-              <div
-                className='absolute left-[33px] top-[33px] flex items-center justify-center'
-                style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '12px',
-                  background: 'linear-gradient(135deg, #034BE1, #022DA1)',
-                }}
-              >
+              <div className='mb-6 lg:mb-0 lg:absolute lg:left-8 lg:top-1/2 lg:-translate-y-1/2 flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#034BE1] to-[#022DA1] flex-shrink-0'>
                 {item.icon}
               </div>
 
-              <h4
-                className='font-semibold text-[#020FFE] mb-2'
-                style={{
-                  fontSize: '24px',
-                  lineHeight: '1.1',
-                }}
-              >
+              <h4 className='text-xl md:text-2xl font-semibold text-[#020FFE] mb-3'>
                 {item.title}
               </h4>
 
-              <p
-                className='font-regular text-[#4B5563]'
-                style={{
-                  fontSize: '16px',
-                  lineHeight: '1.4',
-                }}
-              >
-                {item.description}
-              </p>
+              <p className='text-base text-gray-600 leading-relaxed'>{item.description}</p>
             </div>
           ))}
         </div>

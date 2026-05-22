@@ -18,7 +18,7 @@ const BusinessImpact = () => {
         {/* Cards Container */}
         <div className='max-w-6xl mx-auto space-y-6'>
           {/* Card 1: Operational Impact */}
-          <div className='bg-white rounded-[16px] border border-[#E1E7EF] shadow-[0_4px_20px_rgba(0,0,0,0.03)] p-8 md:p-10'>
+          <div className='bg-white rounded-[16px] border border-[#E1E7EF] shadow-lg p-8 md:p-10'>
             <div className='flex items-center gap-4 mb-6'>
               <div className='w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0'>
                 <svg
@@ -35,7 +35,7 @@ const BusinessImpact = () => {
                   <polyline points='16 7 22 7 22 13'></polyline>
                 </svg>
               </div>
-              <h3 className='font-bold text-[24px] text-[#2463EB]'>Operational Impact</h3>
+              <h3 className='font-bold text-[24px] text-[#262626]'>Operational Impact</h3>
             </div>
             <ul className='space-y-4 ml-2'>
               <li className='flex items-center gap-4'>
@@ -60,7 +60,7 @@ const BusinessImpact = () => {
           </div>
 
           {/* Card 2: Financial Impact */}
-          <div className='bg-white rounded-[16px] border border-[#E1E7EF] shadow-[0_4px_20px_rgba(0,0,0,0.03)] p-8 md:p-10'>
+          <div className='bg-white rounded-[16px] border border-[#E1E7EF] shadow-lg p-8 md:p-10'>
             <div className='flex items-center gap-4 mb-6'>
               <div className='w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center flex-shrink-0'>
                 <svg
@@ -77,7 +77,7 @@ const BusinessImpact = () => {
                   <path d='M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'></path>
                 </svg>
               </div>
-              <h3 className='font-bold text-[24px] text-[#16A34A]'>Financial Impact</h3>
+              <h3 className='font-bold text-[24px] text-[#262626]'>Financial Impact</h3>
             </div>
             <ul className='space-y-4 ml-2'>
               <li className='flex items-center gap-4'>
@@ -96,7 +96,7 @@ const BusinessImpact = () => {
           </div>
 
           {/* Card 3: Strategic Impact */}
-          <div className='bg-white rounded-[16px] border border-[#E1E7EF] shadow-[0_4px_20px_rgba(0,0,0,0.03)] p-8 md:p-10'>
+          <div className='bg-white rounded-[16px] border border-[#E1E7EF] shadow-lg p-8 md:p-10'>
             <div className='flex items-center gap-4 mb-6'>
               <div className='w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center flex-shrink-0'>
                 <svg
@@ -114,7 +114,7 @@ const BusinessImpact = () => {
                   <circle cx='12' cy='12' r='2'></circle>
                 </svg>
               </div>
-              <h3 className='font-bold text-[24px] text-[#A855F7]'>Strategic Impact</h3>
+              <h3 className='font-bold text-[24px] text-[#262626]'>Strategic Impact</h3>
             </div>
             <ul className='space-y-4 ml-2'>
               <li className='flex items-center gap-4'>

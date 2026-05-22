@@ -40,8 +40,7 @@ export default function RealTimeWorkforceHero() {
           }}
         >
           <span className='text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] block max-w-[1100px] mb-4 md:mb-6'>
-            Real-Time Workforce & Operations Monitoring{' '}
-            <span style={{ color: '#DFFF00' }}>Dashboard</span>
+            Real-Time Workforce & Operations Monitoring Dashboard
           </span>
         </h1>
 

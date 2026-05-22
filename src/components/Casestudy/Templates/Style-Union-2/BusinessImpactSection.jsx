@@ -33,9 +33,9 @@ const impactCards = [
 const BusinessImpactSection = () => {
   return (
     <section className='w-full overflow-hidden'>
-      <div className='mx-auto max-w-7xl px-4 md:px-6 pb-6'>
+      <div className='mx-auto max-w-7xl px-4 md:px-6 pb-6 pt-10'>
         {/* HEADING */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#39B42A]'>
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#262626]'>
           Business Impact
         </h2>
 
@@ -52,6 +52,7 @@ const BusinessImpactSection = () => {
                 px-6
                 py-8
                 text-center
+                shadow-lg
               '
             >
               {/* ICON */}
@@ -79,7 +80,7 @@ const BusinessImpactSection = () => {
         </div>
 
         {/* BOTTOM ROW */}
-        <div className='mt-5 flex flex-col items-center gap-5 md:flex-row md:justify-center'>
+        <div className='mt-5 flex flex-col mb-10 items-center gap-5 md:flex-row md:justify-center'>
           {impactCards.slice(3, 5).map((item, index) => (
             <div
               key={index}
@@ -91,6 +92,7 @@ const BusinessImpactSection = () => {
                 px-6
                 py-8
                 text-center
+                shadow-lg
               '
             >
               {/* ICON */}

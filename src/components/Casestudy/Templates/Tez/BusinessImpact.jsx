@@ -37,10 +37,13 @@ const BusinessImpact = () => {
       <div className='max-w-7xl mx-auto'>
         {/* Heading Section */}
         <div className='mb-16'>
-          <h2 className='font-bold mb-6' style={{ color: '#29CF04', fontSize: '36px' }}>
+          <h2 className='font-bold mb-6 text-center' style={{ color: '#262626', fontSize: '36px' }}>
             Business Impact
           </h2>
-          <p className='max-w-4xl' style={{ color: '#6C7993', fontSize: '18px' }}>
+          <p
+            className='max-w-5xl mx-auto text-center'
+            style={{ color: '#6C7993', fontSize: '18px' }}
+          >
             Measurable outcomes that transformed how the client operates, reports, and makes
             strategic decisions.
           </p>
@@ -51,7 +54,7 @@ const BusinessImpact = () => {
           {impacts.map((item, index) => (
             <div
               key={index}
-              className='p-10 rounded-xl border border-[#29CF04] flex flex-col items-start gap-4 hover:shadow-lg transition-all bg-white'
+              className='p-10 rounded-xl border border-[#F5F5F5] flex flex-col items-start gap-4 shadow-md hover:shadow-xl transition-all bg-white'
               style={{ minHeight: '220px' }}
             >
               <div className='flex items-center gap-4 mb-2'>

@@ -42,12 +42,15 @@ const Challenges = () => {
         {/* Heading Section */}
         <div className='mb-16'>
           <h2
-            className='font-bold uppercase tracking-wider mb-6'
-            style={{ color: '#F41B1F', fontSize: '32px' }}
+            className='font-bold text-center tracking-wider mb-6'
+            style={{ color: '#262626', fontSize: '32px' }}
           >
-            THE CHALLENGE
+            The Challenge
           </h2>
-          <p className='max-w-4xl' style={{ color: '#6C7993', fontSize: '18px' }}>
+          <p
+            className='max-w-4xl mx-auto text-center'
+            style={{ color: '#6C7993', fontSize: '18px' }}
+          >
             Rapid growth exposed critical gaps in the client’s data infrastructure, threatening
             operational efficiency and strategic agility.
           </p>
@@ -58,10 +61,10 @@ const Challenges = () => {
           {challenges.map((item, index) => (
             <div
               key={index}
-              className='bg-white p-8 rounded-xl border-2 border-[#F41B1F] flex items-start gap-6 shadow-sm hover:shadow-md transition-shadow'
+              className='bg-white p-8 rounded-xl border-2 border-[#F5F5F5] flex items-start gap-6 shadow-md hover:shadow-xl transition-shadow'
             >
               {/* Icon with Border */}
-              <div className='flex-shrink-0 p-2 rounded-lg border-2 border-[#F41B1F] flex items-center justify-center w-12 h-12'>
+              <div className='flex-shrink-0 p-2 rounded-lg flex items-center justify-center w-12 h-12'>
                 <Image src={item.icon} alt='' width={24} height={24} className='object-contain' />
               </div>
 

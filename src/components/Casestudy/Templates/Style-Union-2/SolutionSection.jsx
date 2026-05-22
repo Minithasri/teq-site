@@ -31,8 +31,8 @@ const SolutionSection = () => {
       {/* CONTENT */}
       <div className='relative z-10 mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
         {/* LABEL */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[1px] text-[#2E45F5]'>
-          OUR SOLUTION
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[1px] text-[#262626]'>
+          Our Solution
         </h2>
 
         {/* DESCRIPTION */}

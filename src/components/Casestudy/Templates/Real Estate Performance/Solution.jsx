@@ -99,13 +99,11 @@ export default function SolutionSection() {
           {solutionCards.map((card, idx) => (
             <div
               key={idx}
-              className='bg-white p-5 md:p-6 flex flex-col justify-start border border-[#F3F4F6] w-full'
+              className='bg-white p-5 md:p-6 flex flex-col justify-start border border-[#F3F4F6] w-full shadow-lg'
               style={{
                 maxWidth: '400px',
-                height: '150px',
+                minHeight: '150px',
                 borderRadius: '12px',
-                boxShadow:
-                  '0px 4px 20px 0px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(255, 255, 255, 1)',
               }}
             >
               {/* Card Title & Icon Header Line */}

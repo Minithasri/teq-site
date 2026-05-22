@@ -63,11 +63,11 @@ export default function BusinessImpactSection() {
         {/* 1. Business Impact Header */}
         <div className='text-center mb-[40px]'>
           <h2
-            className='font-bold uppercase text-[28px] md:text-[36px] mb-2'
+            className='font-bold text-[28px] md:text-[36px] mb-2'
             style={{
               fontFamily: 'Inter, sans-serif',
               letterSpacing: '1.4px',
-              color: '#34BF0D',
+              color: '#262626',
             }}
           >
             Business Impact
@@ -94,7 +94,7 @@ export default function BusinessImpactSection() {
                 borderRadius: '12px',
                 background: '#EDFEE9',
                 border: '1px solid #34BF0D',
-                boxShadow: '0px 1px 3px 0px rgba(29, 37, 48, 0.06)',
+                boxShadow: '10px 4px 15px rgba(29, 37, 48, 0.06)',
               }}
             >
               <div className='flex items-center gap-4 mb-3'>
@@ -110,7 +110,7 @@ export default function BusinessImpactSection() {
                   {item.icon}
                 </div>
                 <span
-                  className='font-bold text-[#34BF0D] text-[22px] md:text-[24px] leading-none'
+                  className='font-bold text-[#262626] text-[22px] md:text-[24px] leading-none'
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   {item.title}

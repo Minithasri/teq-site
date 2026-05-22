@@ -33,12 +33,11 @@ const DataArchitectureSection = () => {
             md:text-[48px]
             leading-none
             font-semibold
-            uppercase
             tracking-[3px]
-            text-[#123B8F]
+            text-[#262626]
           '
         >
-          DATA ARCHITECTURE
+          Data Architecture
         </h2>
 
         {/* ================= ARCHITECTURE FLOW ================= */}
@@ -229,12 +228,11 @@ const DataArchitectureSection = () => {
               md:text-5xl
               leading-none
               font-semibold
-              uppercase
               tracking-[2px]
-              text-[#18B425]
+              text-[#262626]
             '
           >
-            BUSINESS IMPACT
+            Business Impact
           </h2>
 
           {/* SUBTITLE */}
@@ -242,8 +240,8 @@ const DataArchitectureSection = () => {
             className='
               mt-6
               text-center
-              text-2xl
-              md:text-5xl
+              text-[16px]
+              md:text-[24px]
               font-semibold
               text-[#1F2532]
             '
@@ -266,13 +264,14 @@ const DataArchitectureSection = () => {
                 <div
                   key={index}
                   className='
-                    rounded-[16px]
+                    rounded-[12px]
                     border-2
-                    border-[#39D353]
+                    border-[#F5F5F5]
                     bg-[#EEFCF1]
                     px-6
                     md:px-8
                     py-7
+                    shadow-lg
                   '
                 >
                   {/* HEADER */}
@@ -308,7 +307,7 @@ const DataArchitectureSection = () => {
                         leading-[1.2]
                         font-semibold
                         tracking-[-0.5px]
-                        text-[#18B425]
+                        text-[#262626]
                       '
                     >
                       {item.title}

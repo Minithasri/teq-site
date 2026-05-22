@@ -46,8 +46,8 @@ export default function Challenges() {
     <section className='relative w-full bg-white pt-16 pb-0 overflow-hidden'>
       {/* Top Header Section */}
       <div className='max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 text-center mb-16'>
-        <h2 className='text-[#EF492B] font-bold text-lg md:text-2xl lg:text-3xl uppercase tracking-widest mb-4'>
-          THE CHALLENGE
+        <h2 className='text-[#262626] font-bold text-lg md:text-2xl lg:text-3xl tracking-widest mb-4'>
+          The Challenge
         </h2>
         <h3 className='text-[#131720] text-xl md:text-2xl lg:text-3xl mb-8 leading-tight'>
           Fragmented Data, Delayed Decisions
@@ -77,11 +77,11 @@ export default function Challenges() {
             {challenges.map((item, index) => (
               <div
                 key={index}
-                className='bg-white rounded-[20px] p-8 border-[2px] border-[#FC7979] border-opacity-50 shadow-lg flex flex-col h-full hover:shadow-xl transition-all duration-300'
+                className='bg-white rounded-[20px] p-8 border-[2px] border-[#F5F5F5] flex flex-col h-full shadow-lg hover:shadow-xl transition-all duration-300'
               >
                 {/* Header: Icon + Title */}
                 <div className='flex items-center gap-5 mb-6'>
-                  <div className='flex-shrink-0 w-12 h-12 rounded-xl border-[1px] border-[#FC7979] flex items-center justify-center bg-[#FFF5F5]'>
+                  <div className='flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center bg-[#FFF5F5]'>
                     <Image
                       src={item.icon}
                       alt=''
@@ -90,7 +90,7 @@ export default function Challenges() {
                       className='object-contain'
                     />
                   </div>
-                  <h4 className='text-[#EE462A] font-bold text-lg md:text-xl leading-snug'>
+                  <h4 className='text-[#262626] font-bold text-lg md:text-xl leading-snug'>
                     {item.title}
                   </h4>
                 </div>

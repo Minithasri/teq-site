@@ -26,20 +26,7 @@ export default function RealEstatePerformanceHero() {
             }}
             className='text-white mb-2'
           >
-            Centralizing Real Estate Performance for
-            <span
-              style={{
-                fontFamily: "'Poppins', sans-serif",
-                fontWeight: 700,
-                fontSize: 'clamp(32px, 4.5vw, 55.1px)',
-                lineHeight: '100%',
-                letterSpacing: '-1.5px',
-                color: '#FACC15',
-              }}
-            >
-              {' '}
-              Smarter Decision-Making
-            </span>
+            Centralizing Real Estate Performance for Smarter Decision-Making
           </h1>
         </div>
 

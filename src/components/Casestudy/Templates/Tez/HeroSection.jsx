@@ -24,7 +24,7 @@ const HeroSection = () => {
             className='text-white font-bold leading-[1.5] mb-8 w-full'
             style={{ fontSize: '56px' }}
           >
-            <span style={{ color: '#F8C735E8' }}>Unified Data Platform & Analytics</span> for Smart
+            <span>Unified Data Platform & Analytics</span> for Smart
             <br className='hidden md:block' /> Parking Operations
           </h1>
 

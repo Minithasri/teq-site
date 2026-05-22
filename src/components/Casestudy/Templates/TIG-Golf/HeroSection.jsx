@@ -35,7 +35,7 @@ const HeroSection = () => {
 
           {/* HEADING */}
           <h1 className='text-[34px] md:text-[74px] leading-[1.05] font-semibold tracking-[-2px] text-white'>
-            <span className='text-[#E7F241]'>Automated Data Pipeline</span> for Excel-Based
+            <span className='text-[#ffffff]'>Automated Data Pipeline</span> for Excel Based
             Reporting
           </h1>
 
@@ -50,9 +50,7 @@ const HeroSection = () => {
       {/* ================= CLIENT CONTEXT ================= */}
       <div className='relative mx-auto max-w-7xl px-4 md:px-6 pt-14 md:pt-20 pb-10 md:pb-16'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#0E8BE8]'>
-          <span className='mr-3'>01</span>· CLIENT CONTEXT
-        </h2>
+        <h2 className='text-2xl md:text-5xl font-semibold text-[#262626]'>Client Context</h2>
 
         {/* CONTENT CARD */}
         <div

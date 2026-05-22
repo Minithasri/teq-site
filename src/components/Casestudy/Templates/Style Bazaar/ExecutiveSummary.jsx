@@ -21,12 +21,12 @@ export default function ExecutiveSummary() {
           <div className='w-full lg:w-[75%] flex flex-col z-20'>
             {/* Executive Summary Section */}
             <div className='mb-16 relative'>
-              <h2 className='text-[#1D2530] font-medium uppercase mb-6 tracking-[1.32px] text-3xl md:text-4xl'>
-                EXECUTIVE SUMMARY
+              <h2 className='text-[#262626] font-medium mb-6 tracking-[1.32px] text-3xl md:text-4xl'>
+                Executive Summary
               </h2>
 
-              <div className='border-2 border-[#E0D4D4] rounded-[20px] p-8 md:p-10 bg-white shadow-sm lg:w-[115%] relative z-10'>
-                <p className='text-[#1D2530] font-normal text-base md:text-lg leading-relaxed'>
+              <div className='border-2 border-[#F5F5F5] rounded-[20px] p-8 md:p-10 bg-white shadow-lg lg:w-[115%] relative z-10'>
+                <p className='text-[#262626] font-normal text-base md:text-lg leading-relaxed'>
                   A leading retail organization required a modern analytics platform to replace
                   manual reporting and improve visibility into business performance. By implementing
                   a centralized data warehouse and BI environment, the organization transformed
@@ -39,11 +39,11 @@ export default function ExecutiveSummary() {
             {/* Business Challenge Section */}
             <div className='w-full lg:w-[125%] relative z-10'>
               <div className='space-y-6 pr-4 lg:pr-12'>
-                <h3 className='text-[#FF5F5F] font-medium uppercase tracking-[1.32px] text-3xl md:text-4xl'>
-                  BUSINESS CHALLENGE
+                <h3 className='text-[#262626] font-bold mb-6 tracking-[1.32px] text-3xl md:text-4xl'>
+                  Business Challenge
                 </h3>
 
-                <h4 className='text-[#1D2530] font-medium text-2xl md:text-3xl'>
+                <h4 className='text-[#262626] font-medium text-2xl md:text-3xl'>
                   Fragmented Reporting Across the Enterprise
                 </h4>
 

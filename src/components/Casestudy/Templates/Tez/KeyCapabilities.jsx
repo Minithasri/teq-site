@@ -47,10 +47,13 @@ const KeyCapabilities = () => {
       <div className='max-w-7xl mx-auto'>
         {/* Heading Section */}
         <div className='mb-16'>
-          <h2 className='font-bold mb-6' style={{ color: '#FCFBF8', fontSize: '36px' }}>
+          <h2 className='font-bold mb-6 text-center' style={{ color: '#FCFBF8', fontSize: '36px' }}>
             Key Capabilities Delivered
           </h2>
-          <p className='max-w-4xl' style={{ color: '#FAFAFAA6', fontSize: '18px' }}>
+          <p
+            className='max-w-5xl mx-auto text-center'
+            style={{ color: '#FAFAFAA6', fontSize: '18px' }}
+          >
             A comprehensive suite of capabilities designed to drive operational excellence and
             strategic insight.
           </p>

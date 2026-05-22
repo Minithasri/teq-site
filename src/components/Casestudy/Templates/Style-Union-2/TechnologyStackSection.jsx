@@ -37,7 +37,7 @@ const TechnologyStackSection = () => {
       {/* TOP SECTION */}
       <div className='mx-auto max-w-7xl px-4 md:px-6 pt-10 md:pt-14'>
         {/* HEADING */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#1D2433]'>
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#262626]'>
           Technology Stack
         </h2>
       </div>
@@ -67,12 +67,12 @@ const TechnologyStackSection = () => {
                 className='
             rounded-[14px]
             border
-            border-[#9EF27D]
+            border-[#F5F5F5]
             bg-white
             px-5
             py-5
             text-center
-            shadow-[0px_4px_10px_rgba(0,0,0,0.03)]
+            shadow-lg
           '
               >
                 {/* TITLE */}
@@ -93,8 +93,8 @@ const TechnologyStackSection = () => {
       {/* VALUE DELIVERED */}
       <div className='mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
         {/* LABEL */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[1px] uppercase text-[#31B8A9]'>
-          VALUE DELIVERED
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[1px]text-[#262626]'>
+          Value Delivered
         </h2>
 
         {/* DESCRIPTION */}

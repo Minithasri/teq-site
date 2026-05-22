@@ -23,8 +23,8 @@ const ValueDeliveredSection = () => {
       {/* ================= TECHNOLOGY STACK ================= */}
       <div className='mx-auto max-w-7xl px-4 md:px-6 pt-10 md:pt-14'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#1495E7]'>
-          <span className='mr-3'>05</span>· TECHNOLOGY STACK
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold text-[#262626]'>
+          <span className='mr-3'>05</span>· Technology Stack
         </h2>
 
         {/* CONTENT */}
@@ -37,11 +37,11 @@ const ValueDeliveredSection = () => {
                 className='
                   rounded-[20px]
                   border-2
-                  border-[#0099F0]
+                  border-[#F5F5F5]
                   bg-white
                   px-6
                   py-7
-                  shadow-[0px_6px_18px_rgba(0,0,0,0.04)]
+                  shadow-md
                 '
               >
                 {/* TITLE */}
@@ -89,8 +89,8 @@ const ValueDeliveredSection = () => {
       {/* ================= VALUE DELIVERED ================= */}
       <div className='mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#1495E7]'>
-          <span className='mr-3'>06</span>· VALUE DELIVERED
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold text-[#262626]'>
+          <span className='mr-3'>06</span>· Value Delivered
         </h2>
 
         {/* MAIN CARD */}

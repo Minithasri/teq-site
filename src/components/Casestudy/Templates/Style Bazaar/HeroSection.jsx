@@ -20,9 +20,9 @@ export default function HeroSection() {
       <div className='relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 py-16 md:py-24 lg:py-32'>
         <div className='max-w-7xl text-center md:text-left'>
           <h1 className='text-white font-semibold leading-tight md:leading-[1.1] tracking-[-0.5px] md:tracking-[-1.5px] text-3xl sm:text-4xl md:text-6xl lg:text-[74px]'>
-            Retail <span className='text-[#47E028]'>Data Warehouse & Business</span>
+            Retail Data Warehouse & Business
             <br className='hidden md:block' />
-            <span className='text-[#47E028]'>Intelligence</span> Platform
+            Intelligence Platform
           </h1>
         </div>
       </div>

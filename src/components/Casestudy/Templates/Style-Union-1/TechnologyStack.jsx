@@ -50,7 +50,7 @@ const TechnologyStack = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto'>
           {/* Card 1 */}
           <div className='bg-white rounded-[16px] border border-[#E1E7EF] shadow-sm p-6'>
-            <h3 className='font-bold text-[24px] text-[#2463EB] mb-6'>
+            <h3 className='font-bold text-[24px] text-[#262626] mb-6'>
               Dashboards & Visualization
             </h3>
             <div className='flex flex-wrap gap-3'>
@@ -68,7 +68,7 @@ const TechnologyStack = () => {
 
           {/* Card 2 */}
           <div className='bg-white rounded-[16px] border border-[#E1E7EF] shadow-sm p-6'>
-            <h3 className='font-bold text-[24px] text-[#2463EB] mb-6'>Data Integration</h3>
+            <h3 className='font-bold text-[24px] text-[#262626] mb-6'>Data Integration</h3>
             <div className='flex flex-wrap gap-3'>
               <span className='bg-[#344256] text-white rounded-full px-3 py-0.5 text-[18px] font-medium'>
                 SQL
@@ -81,7 +81,7 @@ const TechnologyStack = () => {
 
           {/* Card 3 */}
           <div className='bg-white rounded-[16px] border border-[#E1E7EF] shadow-sm p-6'>
-            <h3 className='font-bold text-[24px] text-[#2463EB] mb-6'>Automation</h3>
+            <h3 className='font-bold text-[24px] text-[#262626] mb-6'>Automation</h3>
             <div className='flex flex-wrap gap-3'>
               <span className='bg-[#344256] text-white rounded-full px-3 py-0.5 text-[18px] font-medium'>
                 ETL Tools

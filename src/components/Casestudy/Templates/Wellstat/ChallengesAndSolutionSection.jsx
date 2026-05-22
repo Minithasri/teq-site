@@ -75,8 +75,8 @@ const ChallengesAndSolutionSection = () => {
         {/* ================= THE CHALLENGE ================= */}
         <div>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#FF2B2B]'>
-            THE CHALLENGE
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#262626]'>
+            The Challenge
           </h2>
 
           {/* CHALLENGE GRID */}
@@ -87,7 +87,7 @@ const ChallengesAndSolutionSection = () => {
                 className='
                   rounded-[18px]
                   border-2
-                  border-[#FF4545]
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   md:px-6
@@ -109,7 +109,7 @@ const ChallengesAndSolutionSection = () => {
                   </div>
 
                   {/* TITLE */}
-                  <h3 className='text-[12px] md:text-[18px] leading-[1.4] font-semibold tracking-[-0.5px] text-[#FF2B2B]'>
+                  <h3 className='text-[12px] md:text-[18px] leading-[1.4] font-semibold tracking-[-0.5px] text-[#262626]'>
                     {item.title}
                   </h3>
                 </div>
@@ -126,7 +126,7 @@ const ChallengesAndSolutionSection = () => {
         {/* ================= SOLUTION IMPLEMENTED ================= */}
         <div className='mt-16'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#2C63F0]'>
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#0F1729]'>
             Solution Implemented
           </h2>
 
@@ -164,7 +164,7 @@ const ChallengesAndSolutionSection = () => {
                 className='
                   rounded-[18px]
                   border-2
-                  border-[#2C63F0]
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   md:px-6
@@ -176,7 +176,7 @@ const ChallengesAndSolutionSection = () => {
                 {/* HEADER */}
                 <div className='flex items-center gap-4'>
                   {/* ICON */}
-                  <div className='flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-[12px] border border-[#2C63F0] bg-[#F5F8FF]'>
+                  <div className='flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-[12px] bg-[#F5F8FF]'>
                     <Image
                       src={item.icon}
                       alt={item.title}

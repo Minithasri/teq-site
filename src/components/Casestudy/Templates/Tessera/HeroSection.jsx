@@ -26,7 +26,7 @@ const HeroSection = () => {
       <div className='relative z-20 w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 flex flex-col justify-center h-full text-left'>
         <div className='max-w-7xl'>
           <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-bold leading-[1.15] mb-6 tracking-tight'>
-            <span style={{ color: '#F2F916' }}>Real-Time Enterprise</span>
+            <span className='text-white'>Real-Time Enterprise</span>
             <br />
             <span className='text-white'>Data Integration using Boomi</span>
           </h1>

@@ -54,8 +54,8 @@ export default function KeyCapabilities() {
       <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
         {/* Section Header */}
         <h2
-          className='text-2xl md:text-3xl font-bold uppercase mb-10 md:mb-14 tracking-wide'
-          style={{ color: '#2A14CD' }}
+          className='text-2xl md:text-3xl font-bold mb-10 md:mb-14 tracking-wide'
+          style={{ color: '#262626' }}
         >
           Capabilities Delivered
         </h2>
@@ -65,9 +65,9 @@ export default function KeyCapabilities() {
           {capabilities.map((cap, i) => (
             <div
               key={i}
-              className='p-6 md:p-8 rounded-[20px] transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-white flex flex-col justify-between min-h-[220px]'
+              className='p-6 md:p-8 rounded-[20px] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] bg-white flex flex-col justify-between min-h-[220px]'
               style={{
-                border: '2px solid #2A14CD',
+                border: '2px solid #F5F5F5',
               }}
             >
               <div>
@@ -75,7 +75,7 @@ export default function KeyCapabilities() {
                 <div className='flex items-center gap-4 mb-5'>
                   {/* Custom Icon Box */}
                   <div
-                    className='flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center border'
+                    className='flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center'
                     style={{
                       borderColor: '#2A14CD',
                       backgroundColor: '#0B95DA1A',

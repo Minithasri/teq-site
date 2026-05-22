@@ -30,8 +30,8 @@ const BusinessImpactSection = () => {
     <section className='w-full overflow-x-hidden'>
       <div className='mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#16B91E]'>
-          <span className='mr-3'>04</span>· BUSINESS IMPACT
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold text-[#262626]'>
+          <span className='mr-3'>04</span>· Business Impact
         </h2>
 
         {/* GRID */}
@@ -44,12 +44,13 @@ const BusinessImpactSection = () => {
                 overflow-hidden
                 rounded-[28px]
                 border-2
-                border-[#16B91E]
+                border-[#F5F5F5]
                 bg-white
                 px-7
                 md:px-8
                 py-7
                 md:py-8
+                shadow-md
               '
             >
               {/* GREEN GLOW */}
@@ -92,12 +93,12 @@ const BusinessImpactSection = () => {
               </div>
 
               {/* VALUE */}
-              <h3 className='relative z-10 text-2xl md:text-5xl leading-none font-bold tracking-[-2px] text-[#16B91E]'>
+              <h3 className='relative z-10 text-2xl md:text-5xl leading-none font-bold tracking-[-2px] text-[#262626]'>
                 {item.value}
               </h3>
 
               {/* DESCRIPTION */}
-              <p className='relative z-10 mt-8 max-w-[420px] text-[14px] md:text-[17px] leading-[1.8] text-[#16B91E]'>
+              <p className='relative z-10 mt-8 max-w-[420px] text-[14px] md:text-[17px] leading-[1.8] text-[#262626]'>
                 {item.description}
               </p>
 

@@ -42,9 +42,9 @@ export default function HeroSection() {
         </div>
 
         {/* Title */}
-        <div className='max-w-4xl'>
+        <div className='max-w-7xl'>
           <h1 className='text-[32px] md:text-[40px] lg:text-[48px] xl:text-[56px] font-bold text-white mb-6 leading-[1.2]'>
-            Real-Time Production Monitoring with <span className='text-yellow-400'>IoT</span>
+            Real-Time Production Monitoring with IoT
           </h1>
         </div>
         {/* Subtitle */}

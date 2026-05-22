@@ -19,8 +19,8 @@ export default function ClientOverview() {
       <div className='w-full bg-white py-8 md:py-10'>
         <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
           <h2
-            className='text-2xl md:text-3xl font-bold uppercase mb-5 tracking-wide'
-            style={{ color: '#1791CF' }}
+            className='text-2xl md:text-3xl font-bold text-center mb-5 tracking-wide'
+            style={{ color: '#262626' }}
           >
             Client Overview
           </h2>
@@ -54,8 +54,8 @@ export default function ClientOverview() {
         <div className='relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
           {/* Section Header */}
           <h2
-            className='text-2xl md:text-3xl font-bold uppercase mb-4 tracking-wide'
-            style={{ color: '#CB0707' }}
+            className='text-2xl md:text-3xl font-bold mb-4 tracking-wide'
+            style={{ color: '#262626' }}
           >
             Business Challenges
           </h2>
@@ -73,9 +73,9 @@ export default function ClientOverview() {
             {challenges.map((item, i) => (
               <div
                 key={i}
-                className='flex items-start gap-4 px-6 py-5 bg-white rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md'
+                className='flex items-start gap-4 px-6 py-5 bg-white rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl'
                 style={{
-                  border: '2px solid #EB2B2B',
+                  border: '2px solid #F5F5F5',
                 }}
               >
                 {/* Custom arrow icon (tesssvg1) */}

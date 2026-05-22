@@ -18,8 +18,8 @@ export default function HeroSection() {
         <h1 className='font-bold mb-5 md:mb-6'>
           {/* Yellow first line */}
           <span
-            className='block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px]'
-            style={{ color: '#EEE017', lineHeight: '1.1' }}
+            className='block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] text-white'
+            style={{ lineHeight: '1.1' }}
           >
             Enterprise Digital Transformation for
           </span>

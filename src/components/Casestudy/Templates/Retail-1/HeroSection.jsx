@@ -52,7 +52,7 @@ const HeroSection = () => {
         <div className='relative mx-auto max-w-7xl px-4 md:px-6 pt-24 pb-12 md:py-28 text-center'>
           {/* HEADING */}
           <h1 className='text-[34px] md:text-[72px] leading-[1.12] font-semibold tracking-[-2px] text-white'>
-            Driving <span className='text-[#FFE73A]'>Sales Excellence</span> Through
+            Driving Sales Excellence Through
             <br />
             Validated Data
           </h1>
@@ -69,8 +69,8 @@ const HeroSection = () => {
       {/* ================= CHALLENGE SECTION ================= */}
       <div className='mx-auto max-w-7xl px-4 md:px-6 py-14 md:py-20'>
         {/* TITLE */}
-        <h2 className='text-center text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[3px] text-[#FF5C5C]'>
-          THE CHALLENGE
+        <h2 className='text-center text-2xl md:text-5xl leading-none font-semibold tracking-[3px] text-[#262626]'>
+          The Challenge
         </h2>
 
         {/* SUBTEXT */}
@@ -98,10 +98,11 @@ const HeroSection = () => {
               className='
         rounded-[18px]
         border-2
-        border-[#FF5A5A]
+        border-[#F5F5F5]
         bg-white
         px-6
         py-6
+        shadow-lg
       '
             >
               {/* HEADER */}
@@ -116,8 +117,6 @@ const HeroSection = () => {
             items-center
             justify-center
             rounded-[12px]
-            border
-            border-[#FF5A5A]
             bg-[#FDE0E0]
           '
                 >
@@ -131,7 +130,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* TITLE */}
-                <h3 className='text-[18px] md:text-[24px] leading-[1.3] font-semibold tracking-[-0.5px] text-[#FF3E3E]'>
+                <h3 className='text-[18px] md:text-[24px] leading-[1.3] font-semibold tracking-[-0.5px] text-[#262626]'>
                   {item.title}
                 </h3>
               </div>

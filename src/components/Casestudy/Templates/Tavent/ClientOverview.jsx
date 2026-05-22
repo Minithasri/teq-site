@@ -43,10 +43,10 @@ export default function ClientOverview() {
       <div className='w-full bg-[#FFFFFF] pt-8 pb-16 md:pt-14 md:pb-10'>
         <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
           <h2
-            className='text-2xl md:text-3xl font-extrabold uppercase mb-5 tracking-wide'
-            style={{ color: '#E73030', fontFamily: 'Poppins, sans-serif' }}
+            className='text-2xl md:text-3xl font-extrabold mb-5 tracking-wide'
+            style={{ color: '#262626' }}
           >
-            CLIENT CONTEXT
+            Client Context
           </h2>
           <p
             className='text-sm sm:text-[16px] md:text-[18px] leading-relaxed max-w-7xl font-normal'
@@ -72,16 +72,16 @@ export default function ClientOverview() {
         <div className='relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
           {/* Section Header */}
           <h2
-            className='text-2xl md:text-3xl font-extrabold uppercase mb-4 tracking-wide'
-            style={{ color: '#E73030', fontFamily: 'Poppins, sans-serif' }}
+            className='text-2xl md:text-3xl font-extrabold mb-4 tracking-wide'
+            style={{ color: '#262626' }}
           >
-            BUSINESS CHALLENGES
+            Business Challenges
           </h2>
 
           {/* Subheading */}
           <h3
             className='text-[14px] sm:text-[16px] md:text-[18px] lg:text-[22px] font-bold mb-3 leading-tight'
-            style={{ color: '#040E1A', fontFamily: 'Poppins, sans-serif' }}
+            style={{ color: '#1C2230' }}
           >
             Reporting friction was slowing the business down
           </h3>
@@ -101,13 +101,13 @@ export default function ClientOverview() {
                 key={i}
                 className='relative p-6 sm:p-8 rounded-[24px] bg-[#FFFFFF] flex flex-col justify-between transition-all duration-300 hover:shadow-md hover:scale-[1.01]'
                 style={{
-                  border: '2px solid #E73030',
+                  border: '2px solid #F5F5F5',
                 }}
               >
                 {/* Card Number on top right */}
                 <span
                   className='absolute top-6 right-8 text-xs font-bold'
-                  style={{ color: '#E73030', fontFamily: 'Poppins, sans-serif' }}
+                  style={{ color: '#262626', fontFamily: 'Poppins, sans-serif' }}
                 >
                   {card.num}
                 </span>
@@ -115,7 +115,7 @@ export default function ClientOverview() {
                 <div>
                   {/* Header Row: Rounded Icon Box + Title */}
                   <div className='flex items-center gap-4 mb-4 pr-6'>
-                    <div className='w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-[#E73030]'>
+                    <div className='w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-[#f27474]'>
                       <img
                         src={card.icon}
                         alt={card.title}
@@ -128,7 +128,7 @@ export default function ClientOverview() {
                     <h4
                       className='text-base sm:text-[18px] font-bold'
                       style={{
-                        color: '#E73030',
+                        color: '#262626',
                         fontFamily: 'Poppins, sans-serif',
                       }}
                     >

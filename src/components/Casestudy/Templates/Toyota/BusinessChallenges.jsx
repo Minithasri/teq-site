@@ -31,7 +31,7 @@ const BusinessChallenges = () => {
         {/* Heading */}
         <h2
           className='text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16'
-          style={{ color: '#F02E14' }}
+          style={{ color: '#262626' }}
         >
           Business Challenges
         </h2>
@@ -42,13 +42,13 @@ const BusinessChallenges = () => {
             <div
               key={index}
               className='flex items-start md:items-center gap-4 md:gap-6 bg-white p-5 md:p-6 rounded-2xl border-2 transition-transform hover:scale-[1.01] duration-300'
-              style={{ borderColor: '#F02E14' }}
+              style={{ borderColor: '#F5F5F5' }}
             >
               {/* Icon Container */}
               <div
-                className='flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl border-2 flex items-center justify-center'
+                className='flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center'
                 style={{
-                  borderColor: '#F02E14',
+                  borderColor: '#262626',
                   backgroundColor: '#EF44441A',
                 }}
               >

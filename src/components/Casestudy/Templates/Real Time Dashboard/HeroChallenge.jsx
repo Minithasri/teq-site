@@ -64,7 +64,7 @@ export default function SalesPerformanceChallenge() {
         <div className='relative z-10 w-full max-w-[1327px] mx-auto text-center md:text-left pt-12 md:pt-0'>
           <h1 className='font-bold text-[32px] sm:text-[42px] md:text-[56px] lg:text-[65px] leading-[120%] text-white drop-shadow-sm'>
             Centralizing Sales Performance with <br className='hidden md:block' />
-            <span className='text-[#ECE254]'>Real-Time Dashboards</span>
+            Real-Time Dashboards
           </h1>
         </div>
       </section>
@@ -117,14 +117,14 @@ overflow-hidden'
             return (
               <div
                 key={card.id}
-                className='bg-white rounded-[12px] border border-[#DADFE7] p-5 md:p-6 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.08)] min-h-[190px] flex flex-col gap-4'
+                className='bg-white rounded-[12px] border border-[#DADFE7] p-5 md:p-6 shadow-lg min-h-[190px] flex flex-col gap-4'
               >
                 <div className='flex items-start gap-4'>
                   <div className='w-[48px] h-[48px] rounded-[12px] bg-[#F92020] flex items-center justify-center text-white shrink-0'>
                     <Icon size={24} strokeWidth={2.5} />
                   </div>
 
-                  <h3 className='font-bold text-[20px] md:text-[24px] leading-[130%] text-[#1D2530]'>
+                  <h3 className='font-bold text-[20px] md:text-[24px] leading-[130%] pt-2 text-[#1D2530]'>
                     {card.title}
                   </h3>
                 </div>
@@ -145,14 +145,14 @@ overflow-hidden'
             return (
               <div
                 key={card.id}
-                className='bg-white rounded-[12px] border border-[#DADFE7] p-5 md:p-6 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.08)] min-h-[190px] flex flex-col gap-4'
+                className='bg-white rounded-[12px] border border-[#DADFE7] p-5 md:p-6 shadow-lg min-h-[190px] flex flex-col gap-4'
               >
                 <div className='flex items-start gap-4'>
                   <div className='w-[48px] h-[48px] rounded-[12px] bg-[#F92020] flex items-center justify-center text-white shrink-0'>
                     <Icon size={24} strokeWidth={2.5} />
                   </div>
 
-                  <h3 className='font-bold text-[20px] md:text-[24px] leading-[130%] text-[#1D2530]'>
+                  <h3 className='font-bold text-[20px] md:text-[24px] leading-[130%] pt-2 text-[#1D2530]'>
                     {card.title}
                   </h3>
                 </div>

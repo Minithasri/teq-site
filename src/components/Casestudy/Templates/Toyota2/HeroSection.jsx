@@ -22,28 +22,9 @@ const HeroSection = () => {
 
       <div className='relative z-10 max-w-[98%] lg:max-w-none mx-auto px-6 md:px-12'>
         <h1 className='text-3xl md:text-5xl lg:text-[64px] font-bold leading-tight md:leading-tight lg:leading-[72px]'>
-          <span className='text-[#FFFFFF]'>Maintenance Management </span>
-          <span
-            className='bg-clip-text text-transparent'
-            style={{
-              backgroundImage: 'linear-gradient(98.89deg, #2258C3 0%, #1AA2E6 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
-            Digitization
-          </span>
+          <span className='text-[#FFFFFF]'>Maintenance Management Digitization </span>
           <br />
-          <span
-            className='bg-clip-text text-transparent'
-            style={{
-              backgroundImage: 'linear-gradient(98.89deg, #2258C3 0%, #1AA2E6 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
-            & Operational Analytics System
-          </span>
+          <span className='text-[#FFFFFF]'>& Operational Analytics System</span>
         </h1>
         <p className='text-[#FFFFFFB2] text-sm mt-10 md:text-md lg:text-lg font-light max-w-9xl mx-auto'>
           Optimizing maintenance operations and enabling data-driven decision-making for a leading

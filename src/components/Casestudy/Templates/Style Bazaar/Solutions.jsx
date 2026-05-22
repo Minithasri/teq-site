@@ -54,10 +54,10 @@ export default function Solutions() {
       <div className='w-full bg-[#E9ECF9] py-16'>
         <div className='max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24'>
           <div className='mb-0'>
-            <h2 className='font-semibold uppercase mb-4 tracking-[1.32px] text-4xl text-[#0A85FF]'>
-              SOLUTION APPROACH
+            <h2 className='font-semibold mb-4 tracking-[1.32px] text-4xl text-[#262626]'>
+              Solution Approach
             </h2>
-            <h3 className='font-medium mb-6 text-3xl md:text-4xl text-[#131720]'>
+            <h3 className='font-medium mb-6 text-xl md:text-2xl text-[#262626]'>
               Centralized Retail Analytics Platform
             </h3>
             <p className='max-w-9xl text-lg leading-relaxed text-[#6B7280]'>
@@ -88,7 +88,7 @@ export default function Solutions() {
               {solutionSteps.map((step, index) => (
                 <div
                   key={index}
-                  className='bg-white border border-[#2260EC] rounded-xl p-5 flex items-start gap-5 shadow-sm w-full'
+                  className='bg-white border border-[#F5F5F5] rounded-xl p-5 flex items-start gap-5 shadow-lg w-full'
                 >
                   <div className='flex-shrink-0 mt-1'>
                     <Image
@@ -113,14 +113,14 @@ export default function Solutions() {
 
             {/* Architecture Visualization */}
             <div className='bg-white border-[3px] border-[#5869F1] rounded-3xl p-6 lg:p-8 w-full mt-8 shadow-sm'>
-              <h3 className='text-left font-bold mb-8 uppercase tracking-wider text-2xl md:text-3xl text-[#0A85FF]'>
-                DATA PLATFORM ARCHITECTURE
+              <h3 className='text-left font-bold mb-8 tracking-wider text-2xl md:text-3xl text-[#262626]'>
+                Data Platform Architecture
               </h3>
 
               <div className='flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 w-full'>
                 {/* Source Systems */}
                 <div className='flex flex-col gap-3 w-[220px] flex-shrink-0 mx-auto lg:mx-0'>
-                  <span className='text-[#18C612] font-semibold text-sm mb-1 uppercase text-left'>
+                  <span className='text-[#262626] font-semibold text-sm mb-1 uppercase text-left'>
                     SOURCE SYSTEMS
                   </span>
                   <div className='bg-white border border-[#A78BFA] rounded-[12px] py-2.5 px-4 text-[#A78BFA] text-[13px] md:text-sm text-center w-[240px] shadow-sm'>
@@ -169,7 +169,7 @@ export default function Solutions() {
 
                 {/* Outputs */}
                 <div className='flex flex-col gap-3 w-[240px] flex-shrink-0 mx-auto lg:mx-0'>
-                  <span className='text-[#18C612] font-semibold text-sm mb-1 uppercase text-left'>
+                  <span className='text-[#262626] font-semibold text-sm mb-1 uppercase text-left'>
                     OUTPUTS
                   </span>
                   <div className='bg-white border border-[#18C612] rounded-[12px] py-2.5 px-4 text-[#18C612] text-[13px] md:text-sm text-center w-[240px] shadow-sm'>

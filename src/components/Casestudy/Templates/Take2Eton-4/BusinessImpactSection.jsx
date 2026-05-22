@@ -50,8 +50,8 @@ const BusinessImpactSection = () => {
         <div>
           {/* TITLE */}
           <div className='flex flex-col md:flex-row gap-6'>
-            <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[2px] text-[#4A4F5D]'>
-              TECHNOLOGY STACK
+            <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[2px] text-[#4A4F5D]'>
+              Technology Stack
             </h2>
 
             <div className='flex flex-wrap gap-6'>
@@ -81,7 +81,7 @@ const BusinessImpactSection = () => {
                 className='
                     rounded-[8px]
                     border-2
-                    border-[#3B82F6]
+                    border-[#F5F5F5]
                     bg-[#EFF2F5]
                     px-10
                     py-2
@@ -89,7 +89,7 @@ const BusinessImpactSection = () => {
                     md:text-[20px]
                     font-medium
                     text-[#143C62]
-                    shadow-[0px_4px_10px_rgba(0,0,0,0.03)]
+                    shadow-lg
                   '
               >
                 {item}
@@ -101,8 +101,8 @@ const BusinessImpactSection = () => {
         {/* ================= BUSINESS IMPACT ================= */}
         <div className='mt-16'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[2px] text-[#10B81F]'>
-            BUSINESS IMPACT
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[2px] text-[#262626]'>
+            Business Impact
           </h2>
 
           {/* LIST */}

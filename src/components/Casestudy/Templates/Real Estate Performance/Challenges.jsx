@@ -93,12 +93,12 @@ export default function Challenges() {
             {challengeItems.slice(0, 3).map((card, idx) => (
               <div
                 key={idx}
-                className='flex items-top p-5 md:p-6 transition-all duration-300 mx-auto w-full max-w-[368px]'
+                className='flex items-top p-5 md:p-6 transition-all duration-300 mx-auto w-full shadow-lg max-w-[368px]'
                 style={{
                   height: '133px',
                   borderRadius: '12px',
                   background: '#FFFAFA',
-                  boxShadow: '0px 1px 2px 0px rgba(255, 255, 255, 1)',
+
                   border: '1px solid rgba(239, 67, 67, 0.08)',
                 }}
               >
@@ -136,12 +136,12 @@ export default function Challenges() {
             {challengeItems.slice(3, 5).map((card, idx) => (
               <div
                 key={idx + 3}
-                className='flex items-top p-5 md:p-6 mx-auto w-full max-w-[368px]'
+                className='flex items-top p-5 md:p-6 mx-auto w-full shadow-lg max-w-[368px]'
                 style={{
                   height: '133px',
                   borderRadius: '12px',
                   background: '#FFFAFA',
-                  boxShadow: '0px 1px 2px 0px rgba(255, 255, 255, 1)',
+
                   border: '1px solid rgba(239, 67, 67, 0.08)',
                 }}
               >

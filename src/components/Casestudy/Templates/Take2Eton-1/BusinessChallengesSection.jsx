@@ -37,12 +37,12 @@ const BusinessChallengesSection = () => {
         {/* ================= TOP HEADING ================= */}
         <div className='flex flex-col gap-4 md:flex-row md:items-start md:gap-8'>
           {/* NUMBER */}
-          <div className='leading-none text-[#2A1EC8] text-[58px] md:text-[88px] font-bold tracking-[-4px]'>
+          <div className='leading-none text-[#262626] text-[58px] md:text-[88px] font-bold tracking-[-4px]'>
             01
           </div>
 
           {/* TITLE */}
-          <h1 className='text-2xl md:text-5xl leading-[1.2] font-semibold leading-[1.2] text-[#2A1EC8]'>
+          <h1 className='text-2xl md:text-5xl leading-[1.2] font-semibold leading-[1.2] text-[#262626]'>
             Hotel Commission Reconciliation & Revenue
             <br />
             Forecasting Platform
@@ -51,26 +51,26 @@ const BusinessChallengesSection = () => {
 
         {/* ================= SECTION TITLE ================= */}
         <div className='mt-10 md:mt-14'>
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[2px] text-[#FF2A2A]'>
-            BUSINESS CHALLENGES
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[2px] text-[#262626]'>
+            Business Challenges
           </h2>
         </div>
 
         {/* ================= CARDS ================= */}
-        <div className='mt-8 grid grid-cols-1 gap-4 md:mt-10 md:grid-cols-3 md:gap-5'>
+        <div className='mt-8 grid grid-cols-1 gap-4 md:mt-10 mb-10 md:grid-cols-3 md:gap-5'>
           {challengeCards.map((item, index) => (
             <div
               key={index}
               className='
                 rounded-[16px]
                 border-2
-                border-[#FF3B3B]
+                border-[#F5F5F5]
                 bg-white
                 px-5
                 md:px-6
                 py-5
                 md:py-6
-                shadow-[0px_6px_18px_rgba(0,0,0,0.04)]
+                shadow-lg
               '
             >
               {/* HEADER */}
@@ -87,7 +87,7 @@ const BusinessChallengesSection = () => {
                 </div>
 
                 {/* TITLE */}
-                <h3 className='text-[16px] md:text-[20px] leading-[1.35] font-semibold text-[#FF2A2A]'>
+                <h3 className='text-[16px] md:text-[20px] leading-[1.35] font-semibold text-[#262626]'>
                   {item.title}
                 </h3>
               </div>

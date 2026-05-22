@@ -65,14 +65,14 @@ export default function SolutionSection() {
         {/* Header Section */}
         <div className='text-center mb-[30px] md:mb-[50px]'>
           <h2
-            className='font-bold uppercase mb-[10px] text-[28px] md:text-[36px]'
+            className='font-bold mb-[10px] text-[28px] md:text-[36px]'
             style={{
               fontFamily: 'Inter, sans-serif',
               letterSpacing: '1.4px',
-              color: '#1811F8',
+              color: '#262626',
             }}
           >
-            THE SOLUTION
+            The Solution
           </h2>
 
           <h3
@@ -102,7 +102,7 @@ export default function SolutionSection() {
               className='bg-white flex flex-col sm:flex-row items-center sm:items-start p-[20px] md:p-[25px] w-full max-w-[768px]'
               style={{
                 borderRadius: '12px',
-                border: '1px solid #4F4AF7',
+                border: '1px solid #F5F5F5',
                 boxShadow: '0px 1px 2px -1px rgba(29, 37, 48, 0.04)',
                 backdropFilter: 'blur(4px)',
               }}
@@ -113,8 +113,9 @@ export default function SolutionSection() {
                 style={{
                   width: '44px',
                   height: '44px',
-                  borderRadius: '8px',
+                  borderRadius: '10px',
                   background: '#4F4AF7',
+                  boxShadow: '10px 4px 15px rgba(255, 67, 67, 0.05)',
                 }}
               >
                 {item.icon}
@@ -129,7 +130,7 @@ export default function SolutionSection() {
                   {item.step}
                 </span>
                 <h4
-                  className='font-bold text-[#1811F8] text-[18px] md:text-[20px] leading-tight mb-1'
+                  className='font-bold text-[#262626] text-[18px] md:text-[20px] leading-tight mb-1'
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   {item.title}

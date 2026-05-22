@@ -45,13 +45,13 @@ export default function Challenges() {
           {challenges.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all relative'
+              className='bg-white rounded-xl p-6 shadow-lg hover:shadow-md transition-all relative'
             >
               <div className='flex justify-between items-start mb-4'>
                 <h3 className='text-xl font-bold text-[#1D2530] pr-12 leading-tight'>
                   {item.title}
                 </h3>
-                <div className='w-10 h-10 relative bg-[#FEF2F2] rounded-lg p-2'>
+                <div className='w-10 h-10 relative bg-[#FEF2F2] rounded-xl p-2'>
                   <Image src={item.icon} alt='Icon' fill className='object-contain p-1' />
                 </div>
               </div>

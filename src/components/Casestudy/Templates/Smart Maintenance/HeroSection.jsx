@@ -31,7 +31,7 @@ const HeroSection = () => {
         <h1 className='text-[38px] md:text-[44px] lg:text-[54px] font-bold text-white mb-2 tracking-tight'>
           Smart Maintenance
         </h1>
-        <h2 className='text-[38px] md:text-[44px] lg:text-[54px] font-bold text-[#E5C810] mb-6 tracking-tight'>
+        <h2 className='text-[38px] md:text-[44px] lg:text-[54px] font-bold text-white mb-6 tracking-tight'>
           Solution for Manufacturing
         </h2>
 

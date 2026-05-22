@@ -74,11 +74,11 @@ export default function Management() {
           {features.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]'
+              className='bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow flex items-start gap-4 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]'
             >
               {/* Icon Container - Purple Gradient */}
               <div
-                className='flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center'
+                className='flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center'
                 style={{ background: 'linear-gradient(180deg, #363FEC 0%, #B642F0 100%)' }}
               >
                 <div className='relative w-7 h-7'>

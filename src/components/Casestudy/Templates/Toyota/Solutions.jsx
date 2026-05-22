@@ -35,7 +35,7 @@ const Solutions = () => {
     <section className='pt-10 bg-white overflow-hidden'>
       <div className='max-w-7xl mx-auto text-center px-6 md:px-12 mb-10 md:mb-16'>
         {/* Header Section */}
-        <h2 className='text-3xl md:text-4xl font-bold mb-6 md:mb-8' style={{ color: '#1F59DC' }}>
+        <h2 className='text-3xl md:text-4xl font-bold mb-6 md:mb-8' style={{ color: '#262626' }}>
           Solution Implemented
         </h2>
         <p
@@ -69,7 +69,7 @@ const Solutions = () => {
             <div
               key={index}
               className='bg-white p-6 md:p-8 rounded-[1.5rem] border-2 text-left shadow-lg hover:shadow-xl transition-all duration-300'
-              style={{ borderColor: '#1F59DC' }}
+              style={{ borderColor: '#F5F5F5' }}
             >
               <div className='flex items-start gap-4 md:gap-5'>
                 {/* Icon Container with Gradient */}
@@ -88,7 +88,7 @@ const Solutions = () => {
                 <div>
                   <h3
                     className='text-lg md:text-xl font-bold mb-2 md:mb-3'
-                    style={{ color: '#1F59DC' }}
+                    style={{ color: '#262626' }}
                   >
                     {card.title}
                   </h3>

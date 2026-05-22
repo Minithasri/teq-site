@@ -75,7 +75,7 @@ export default function Architecture() {
               <div
                 className='w-14 h-14 rounded-xl flex items-center justify-center mb-6'
                 style={{
-                  background: 'linear-gradient(135deg, #156BC1 0%, #C11FD6 100%)',
+                  background: '#286baeff',
                   boxShadow:
                     '0 4px 6px -1px rgba(21, 107, 193, 0.1), 0 2px 4px -1px rgba(21, 107, 193, 0.06)',
                 }}

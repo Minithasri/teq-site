@@ -38,10 +38,10 @@ export default function BusinessImpact() {
     <section className='relative w-full bg-white pt-20 overflow-hidden'>
       {/* Header Section */}
       <div className='max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 text-center mb-16'>
-        <h2 className='text-[#23DD12] font-bold text-lg md:text-2xl lg:text-3xl uppercase tracking-widest mb-4'>
-          BUSINESS IMPACT
+        <h2 className='text-[#262626] font-bold text-lg md:text-2xl lg:text-5xl tracking-widest mb-4'>
+          Business Impact
         </h2>
-        <h3 className='text-[#000000] font-bold text-3xl md:text-4xl lg:text-5xl mb-8'>
+        <h3 className='text-[#000000] font-medium text-lg md:text-xl lg:text-2xl mb-8'>
           Measurable Business Transformation
         </h3>
         <p className='text-[#6B7280] text-sm md:text-base lg:text-lg max-w-4xl mx-auto leading-relaxed'>
@@ -69,12 +69,12 @@ export default function BusinessImpact() {
             {impacts.map((item, index) => (
               <div
                 key={index}
-                className='bg-white/95 backdrop-blur-sm rounded-[24px] p-8 md:p-10 border-[2px] border-[#23DD12] border-opacity-30 shadow-xl flex flex-col h-full transition-all duration-300 hover:scale-[1.02]'
+                className='bg-white/95 backdrop-blur-sm rounded-[24px] p-8 md:p-10 border-[2px] border-[#F5F5F5] border-opacity-30 shadow-xl flex flex-col h-full transition-all duration-300 hover:scale-[1.02]'
               >
                 {/* Card Header: Icon + Title + Stat */}
                 <div className='flex justify-between items-start mb-8'>
                   <div className='flex gap-5 items-center'>
-                    <div className='w-14 h-14 rounded-xl border border-[#23DD12] flex items-center justify-center bg-[#F0FFF0]'>
+                    <div className='w-14 h-14 rounded-xl border border-[#F5F5F5] flex items-center justify-center bg-[#F0FFF0]'>
                       <Image
                         src={item.icon}
                         alt=''

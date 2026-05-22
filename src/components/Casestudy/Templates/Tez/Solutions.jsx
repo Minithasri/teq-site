@@ -58,13 +58,13 @@ const Solutions = () => {
         {/* Heading Section */}
         <div className='mb-20'>
           <h2
-            className='font-bold uppercase tracking-wider mb-8'
-            style={{ color: '#0E25D3', fontSize: '32px' }}
+            className='font-bold text-center tracking-wider mb-8'
+            style={{ color: '#262626', fontSize: '32px' }}
           >
-            OUR APPROACH
+            Our Approach
           </h2>
           <p
-            className='w-full font-medium leading-relaxed'
+            className='w-full font-medium leading-relaxed text-center mx-auto'
             style={{ color: '#000000', fontSize: '18px' }}
           >
             We delivered a comprehensive, end-to-end data transformation from fragmented silos to a
@@ -77,7 +77,7 @@ const Solutions = () => {
           {/* Vertical Line */}
           <div
             className='absolute left-[20px] top-4 bottom-4 w-[1px] hidden md:block'
-            style={{ backgroundColor: '#0E25D3' }}
+            style={{ backgroundColor: '#262626' }}
           />
 
           <div className='space-y-12'>
@@ -93,7 +93,7 @@ const Solutions = () => {
 
                 {/* Text Content */}
                 <div className='pt-1'>
-                  <h3 className='font-bold mb-3' style={{ color: '#0E25D3', fontSize: '20px' }}>
+                  <h3 className='font-bold mb-3' style={{ color: '#262626', fontSize: '20px' }}>
                     {step.title}
                   </h3>
                   <p

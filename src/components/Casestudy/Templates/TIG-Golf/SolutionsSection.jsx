@@ -37,11 +37,11 @@ const solutions = [
 
 const SolutionsSection = () => {
   return (
-    <section className='relative w-full overflow-hidden'>
+    <section className='relative w-full pt-6 overflow-hidden bg-[#F6F6F6]'>
       <div className='mx-auto max-w-7xl px-4 md:px-6'>
         {/* TITLE */}
-        <h2 className='text-[28px] md:text-[54px] leading-none font-semibold uppercase tracking-[3px] text-[#5758F0]'>
-          <span className='mr-3'>03</span>· SOLUTION IMPLEMENTED
+        <h2 className='text-[28px] md:text-[54px] leading-none font-semibold text-[#262626]'>
+          <span className='mr-3'>03</span>· Solution Implemented
         </h2>
       </div>
 
@@ -91,10 +91,11 @@ const SolutionsSection = () => {
                   min-h-[240px]
                   rounded-[22px]
                   border-2
-                  border-[#5758F0]
+                  border-[##F5F5F5]
                   bg-white
                   px-6
                   py-6
+                  shadow-md
                 '
                 >
                   {/* TOP */}
@@ -111,7 +112,7 @@ const SolutionsSection = () => {
                     </div>
 
                     {/* TITLE */}
-                    <h3 className='pt-2 text-[14px] md:text-[18px] leading-[1.5] font-semibold text-[#5758F0]'>
+                    <h3 className='pt-2 text-[14px] md:text-[18px] leading-[1.5] font-semibold text-[#262626]'>
                       {item.title}
                     </h3>
                   </div>

@@ -86,9 +86,9 @@ export default function BusinessImpact() {
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20'>
         {/* Header */}
-        <div className='text-center mb-16 text-white'>
+        <div className='text-center mb-16 text-[#262626]'>
           <h2 className='text-3xl md:text-4xl font-bold mb-4'>Business Impact</h2>
-          <p className='text-gray-200 text-lg'>Measurable improvements across operations</p>
+          <p className='text-[#262626] text-lg'>Measurable improvements across operations</p>
         </div>
 
         {/* Impact Cards */}

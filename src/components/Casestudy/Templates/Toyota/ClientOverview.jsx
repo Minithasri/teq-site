@@ -22,7 +22,7 @@ const ClientOverview = () => {
         <div className='flex flex-col items-center text-center max-w-9xl mx-auto space-y-6 md:space-y-8'>
           <h2
             className='text-xl md:text-3xl font-bold uppercase tracking-widest'
-            style={{ color: '#1481B8' }}
+            style={{ color: '#262626' }}
           >
             Client Overview
           </h2>

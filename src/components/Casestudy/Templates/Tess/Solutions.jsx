@@ -31,8 +31,8 @@ export default function Solutions() {
       <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-10 md:py-14'>
         {/* Title */}
         <h2
-          className='text-xl md:text-2xl lg:text-3xl font-bold uppercase tracking-wide mb-5'
-          style={{ color: '#0B64F4' }}
+          className='text-xl md:text-2xl lg:text-3xl font-bold tracking-wide mb-5'
+          style={{ color: '#262626' }}
         >
           Our Solution
         </h2>
@@ -54,10 +54,10 @@ export default function Solutions() {
           {cards.map((card, i) => (
             <div
               key={i}
-              className='rounded-2xl p-6 flex flex-col gap-4'
+              className='rounded-2xl p-6 flex flex-col gap-4 shadow-md'
               style={{
                 backgroundColor: '#FFFFFF',
-                border: '1.5px solid #0B64F4',
+                border: '1.5px solid #F5F5F5',
               }}
             >
               {/* Icon + title row */}

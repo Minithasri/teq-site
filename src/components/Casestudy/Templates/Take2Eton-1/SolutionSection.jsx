@@ -54,26 +54,26 @@ const impacts = [
 const SolutionSection = () => {
   return (
     <section className='w-full overflow-hidden'>
-      <div className='relative mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-14'>
+      <div className='relative mx-auto max-w-7xl px-4 md:px-6 py-10 md:py-18'>
         {/* ================= SOLUTION TITLE ================= */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[2px] text-[#5A54F8]'>
-          SOLUTION IMPLEMENTED
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[2px] text-[#262626]'>
+          Solution Implemented
         </h2>
 
         {/* ================= SOLUTION CARDS ================= */}
-        <div className='mt-8 grid grid-cols-1 gap-4 md:mt-10 md:grid-cols-3 md:gap-5'>
+        <div className='mt-8 grid grid-cols-1 gap-4 md:mt-10 mb-10 md:grid-cols-3 md:gap-5'>
           {solutionCards.map((item, index) => (
             <div
               key={index}
               className='
                 rounded-[16px]
                 border-2
-                border-[#5A54F8]
+                border-[#F5F5F5]
                 bg-[#EFF2F5]
                 px-5
                 md:px-6
                 py-5
-                shadow-[0px_6px_18px_rgba(0,0,0,0.04)]
+                shadow-lg
               '
             >
               {/* HEADER */}
@@ -90,7 +90,7 @@ const SolutionSection = () => {
                 </div>
 
                 {/* TITLE */}
-                <h3 className='text-[13px] md:text-[17px] leading-[1.4] font-semibold text-[#5A54F8]'>
+                <h3 className='text-[13px] md:text-[17px] leading-[1.4] font-semibold text-[#262626]'>
                   {item.title}
                 </h3>
               </div>
@@ -120,8 +120,8 @@ const SolutionSection = () => {
           {/* LEFT CONTENT */}
           <div className='flex flex-col gap-6 md:flex-row md:items-center'>
             {/* TITLE */}
-            <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[2px] text-[#4B4F5A]'>
-              TECHNOLOGY STACK
+            <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[2px] text-[#262626]'>
+              Technology Stack
             </h2>
 
             {/* ICONS */}
@@ -160,7 +160,7 @@ const SolutionSection = () => {
                 className='
                     rounded-[10px]
                     border-2
-                    border-[#5A54F8]
+                    border-[#F5F5F5]
                     bg-[#143C6214]
                     px-5
                     py-2.5
@@ -168,6 +168,7 @@ const SolutionSection = () => {
                     md:text-[18px]
                     font-medium
                     text-[#5A54F8]
+                    shadow-md
                   '
               >
                 {item}
@@ -178,8 +179,8 @@ const SolutionSection = () => {
           {/* ================= BUSINESS IMPACT ================= */}
           <div className='mt-8'>
             {/* TITLE */}
-            <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-[2px] text-[#12B51D]'>
-              BUSINESS IMPACT
+            <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[2px] text-[#262626]'>
+              Business Impact
             </h2>
 
             {/* LIST */}

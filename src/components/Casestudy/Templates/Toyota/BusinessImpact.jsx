@@ -43,7 +43,7 @@ const BusinessImpact = () => {
         {/* Section Heading */}
         <h2
           className='text-3xl md:text-4xl font-bold text-center mb-12 md:mb-20'
-          style={{ color: '#24B91A' }}
+          style={{ color: '#262626' }}
         >
           Business Impact
         </h2>
@@ -75,19 +75,19 @@ const BusinessImpact = () => {
 
 const ImpactCard = ({ item }) => (
   <div
-    className='bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl border-2 transition-all duration-300 hover:shadow-xl group h-full'
-    style={{ borderColor: '#24B91A' }}
+    className='bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-xl  border-2 transition-all duration-300 hover:shadow-xl group h-full'
+    style={{ borderColor: '#F5F5F5' }}
   >
     <div className='flex items-center gap-4 mb-4 md:mb-6'>
       {/* Icon Container */}
       <div
         className='w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center flex-shrink-0'
-        style={{ background: '#24B91A' }}
+        style={{ background: '#88be84ff' }}
       >
         <img src={item.icon} alt='Impact Icon' className='w-5 h-5 md:w-6 md:h-6' />
       </div>
       {/* Metric */}
-      <span className='text-2xl md:text-3xl font-bold' style={{ color: '#24B91A' }}>
+      <span className='text-2xl md:text-3xl font-bold' style={{ color: '#262626' }}>
         {item.metric}
       </span>
     </div>

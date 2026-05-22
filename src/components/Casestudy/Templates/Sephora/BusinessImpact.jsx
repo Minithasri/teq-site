@@ -58,8 +58,8 @@ export default function BusinessImpact() {
         <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
           {/* Business Impact Header */}
           <h2
-            className='text-2xl md:text-3xl font-bold uppercase mb-4 tracking-wide'
-            style={{ color: '#1CC80C' }}
+            className='text-2xl md:text-3xl font-bold mb-4 tracking-wide'
+            style={{ color: '#262626' }}
           >
             Business Impact
           </h2>
@@ -106,7 +106,7 @@ export default function BusinessImpact() {
                   key={i}
                   className='p-8 rounded-3xl bg-white shadow-lg flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl min-h-[180px] hover:scale-[1.01]'
                   style={{
-                    border: '2px solid #1CC80C',
+                    border: '2px solid #F5F5F5',
                   }}
                 >
                   {/* Top Arrow/User Icon */}
@@ -124,7 +124,7 @@ export default function BusinessImpact() {
                   {/* Percentage Value */}
                   <span
                     className='text-3xl sm:text-4xl md:text-5xl font-extrabold mb-3 tracking-tight'
-                    style={{ color: '#1CC80C' }}
+                    style={{ color: '#262626' }}
                   >
                     {card.value}
                   </span>
@@ -152,9 +152,9 @@ export default function BusinessImpact() {
               {bottomListCards.map((card, i) => (
                 <div
                   key={i}
-                  className='flex items-center gap-5 px-6 py-5 rounded-2xl bg-white shadow-md transition-all duration-300 hover:shadow-lg min-h-[72px] hover:scale-[1.005]'
+                  className='flex items-center gap-5 px-6 py-5 rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-lg min-h-[72px] hover:scale-[1.005]'
                   style={{
-                    border: '2px solid #1CC80C',
+                    border: '2px solid #F5F5F5',
                   }}
                 >
                   {/* Icon Box with translucent green bg (#1FAD7E1A) */}
@@ -198,8 +198,8 @@ export default function BusinessImpact() {
         <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
           {/* Technology Stack Header */}
           <h2
-            className='text-2xl md:text-3xl font-bold uppercase mb-8 tracking-wide'
-            style={{ color: '#0B95DA' }}
+            className='text-2xl md:text-3xl font-bold mb-8 tracking-wide'
+            style={{ color: '#262626' }}
           >
             Technology Stack
           </h2>
@@ -240,8 +240,8 @@ export default function BusinessImpact() {
         <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24'>
           {/* Header */}
           <h2
-            className='text-2xl md:text-3xl font-bold uppercase mb-4 tracking-wide'
-            style={{ color: '#47B9F2' }}
+            className='text-2xl md:text-3xl font-bold mb-4 tracking-wide'
+            style={{ color: '#262626' }}
           >
             Value Delivered
           </h2>

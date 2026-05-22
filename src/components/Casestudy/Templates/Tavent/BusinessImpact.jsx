@@ -32,14 +32,14 @@ export default function BusinessImpact() {
         {/* Section Header */}
         <div className='w-full mb-12'>
           <h2
-            className='text-2xl md:text-3xl font-extrabold uppercase mb-4 tracking-wide'
-            style={{ color: '#15B615', fontFamily: 'Poppins, sans-serif' }}
+            className='text-2xl md:text-3xl font-extrabold mb-4 tracking-wide'
+            style={{ color: '#262626' }}
           >
-            BUSINESS IMPACT
+            Business Impact
           </h2>
           <h3
             className='text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-bold leading-tight'
-            style={{ color: '#000000', fontFamily: 'Poppins, sans-serif' }}
+            style={{ color: '#262626', fontFamily: 'Poppins, sans-serif' }}
           >
             Measurable outcomes across the organization
           </h3>
@@ -50,10 +50,10 @@ export default function BusinessImpact() {
           {metrics.map((item, i) => (
             <div
               key={i}
-              className='rounded-[24px] p-6 md:p-8 flex flex-col items-center text-center transition-all duration-300 hover:shadow-md hover:scale-[1.01]'
+              className='rounded-[24px] p-6 md:p-8 flex flex-col items-center shadow-lg text-center transition-all duration-300 hover:shadow-md hover:scale-[1.01]'
               style={{
                 backgroundColor: '#FFFFFF',
-                border: '2px solid #15B615',
+                border: '2px solid #F5F5F5',
               }}
             >
               {/* Metric Percentage */}

@@ -31,7 +31,7 @@ const HeroSection = () => {
           {/* Text Left Column */}
           <div className='flex-1 max-w-5xl'>
             <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-[56px] xl:text-[54px] font-bold leading-tight md:leading-[1.15] mb-6 tracking-tight text-white'>
-              <span style={{ color: '#F6F941' }}>Loan, Deposit & Teller Performance </span>
+              Loan, Deposit & Teller Performance <br />
               Analytics Dashboard
             </h1>
 

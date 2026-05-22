@@ -144,7 +144,7 @@ export default function BusinessObjectivesAndSolution() {
               {solutionCards.map((card, index) => (
                 <div
                   key={index}
-                  className='bg-white rounded-[12px] border border-[#DADFE7] p-6 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.09)] min-h-[198px] flex flex-col gap-4'
+                  className='bg-white rounded-[12px] border border-[#DADFE7] p-6 shadow-lg min-h-[198px] flex flex-col gap-4'
                 >
                   <div className='flex items-center gap-4'>
                     <div className='w-[44px] h-[44px] rounded-[12px] bg-[#1162D4] flex items-center justify-center shrink-0 shadow-sm'>
@@ -164,7 +164,7 @@ export default function BusinessObjectivesAndSolution() {
             </div>
 
             {/* Highlights Panel */}
-            <div className='w-full bg-white rounded-[12px] border border-[#DADFE7] shadow-[0px_4px_10px_rgba(0,0,0,0.1)] p-8 md:p-10 mt-12'>
+            <div className='w-full bg-white rounded-[12px] border border-[#DADFE7] shadow-lg p-8 md:p-10 mt-12 mb-12'>
               <h3 className='font-bold text-[28px] leading-[36px] text-[#1D2530] mb-8'>
                 Solution Highlights
               </h3>

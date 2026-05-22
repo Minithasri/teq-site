@@ -16,7 +16,6 @@ export default function HeroSection() {
             alt='Predictive Maintenance Background'
             fill
             className='object-cover object-center'
-            priority
           />
         </div>
       </div>
