@@ -65,9 +65,9 @@ export default function Technology() {
           {techStack.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all'
+              className='bg-white rounded-xl p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)]'
             >
-              <h3 className='text-xl font-bold text-[#1D2530] mb-2'>{item.title}</h3>
+              <h3 className='text-xl font-bold text-[#0F1729]/80 mb-2'>{item.title}</h3>
               <p className='text-[#64748B] text-base'>{item.desc}</p>
             </div>
           ))}

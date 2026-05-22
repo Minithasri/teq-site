@@ -32,8 +32,8 @@ const TechnologyValueSection = () => {
         {/* ================= TECHNOLOGY STACK ================= */}
         <div className='text-center'>
           {/* LABEL */}
-          <h2 className='text-3xl md:text-5xl leading-none font-poppins font-semibold uppercase tracking-[2px] text-[#28C7B7]'>
-            TECHNOLOGY STACK
+          <h2 className='text-3xl md:text-5xl leading-none font-poppins font-semibold tracking-[2px]'>
+            Technology Stack
           </h2>
 
           {/* HEADING */}
@@ -49,8 +49,9 @@ const TechnologyValueSection = () => {
               key={index}
               className='
                 rounded-[10px]
-                border
-                border-[#28C7B7]
+                border-2
+                border-[#F5F5F5]
+                shadow-[0_4px_12px_rgba(0,0,0,0.08)]
                 bg-white
                 px-5
                 md:px-7
@@ -69,8 +70,8 @@ const TechnologyValueSection = () => {
         {/* ================= VALUE DELIVERED ================= */}
         <div className='relative mt-16 md:mt-20 text-center'>
           {/* LABEL */}
-          <h2 className='text-3xl md:text-5xl leading-none font-semibold uppercase tracking-[2px] text-[#28C7B7]'>
-            VALUE DELIVERED
+          <h2 className='text-3xl md:text-5xl leading-none font-semibold tracking-[2px]'>
+            Value Delivered
           </h2>
 
           {/* HEADING */}

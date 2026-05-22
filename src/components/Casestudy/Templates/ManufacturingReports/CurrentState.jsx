@@ -58,7 +58,7 @@ export default function OperationalOverview() {
             {states.map((item, index) => (
               <div
                 key={index}
-                className='bg-white rounded-[12px] border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-5 md:p-[24px] flex flex-col items-center text-center justify-between min-h-[190px] md:min-h-[210px]'
+                className='bg-white rounded-[12px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-5 md:p-[24px] flex flex-col items-center text-center justify-between min-h-[190px] md:min-h-[210px]'
               >
                 <div className='w-[36px] h-[36px] relative shrink-0 mb-3 flex items-center justify-center'>
                   <img src={item.icon} alt='' className='w-full h-full object-contain' />
@@ -105,7 +105,7 @@ export default function OperationalOverview() {
           {/* Centered Content Container Box */}
           <div className='w-full lg:max-w-[820px] xl:max-w-[860px] mr-0 lg:mr-[160px] xl:mr-[200px] relative z-10'>
             {/* List Card Panel */}
-            <div className='bg-white rounded-[12px] shadow-[0_15px_45px_rgba(0,0,0,0.04)] border border-gray-100/80 p-6 sm:p-8 md:p-[40px] w-full'>
+            <div className='bg-white rounded-[12px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-6 sm:p-8 md:p-[40px] w-full'>
               <div className='space-y-[16px] md:space-y-[20px]'>
                 {objectives.map((point, index) => (
                   <div key={index} className='flex gap-[14px] items-start w-full'>

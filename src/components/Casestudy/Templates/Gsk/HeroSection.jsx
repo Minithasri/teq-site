@@ -25,7 +25,7 @@ export default function HeroSection() {
           {/* Yellow accent line */}
           <span
             className='block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[52px]'
-            style={{ color: '#E1FD57', lineHeight: '1.1' }}
+            style={{ color: '#FFF', lineHeight: '1.1' }}
           >
             Identity Access Management (IDAM)
           </span>

@@ -42,7 +42,7 @@ export default function ChallengeSection() {
           {challenges.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-r-[12px] rounded-l-[4px] border border-gray-100 border-l-[5px] border-l-[#ef4444] shadow-[0_4px_16px_rgba(0,0,0,0.03)] p-4 sm:p-5 md:px-[24px] md:py-[18px] flex items-center gap-4 md:gap-[20px]'
+              className='bg-white rounded-r-[12px] rounded-l-[4px] border-2 border-[#F5F5F5] border-l-[5px] border-l-[#ef4444] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-4 sm:p-5 md:px-[24px] md:py-[18px] flex items-center gap-4 md:gap-[20px]'
             >
               {/* Number Circle Badge Indicator */}
               <div className='w-[32px] h-[32px] md:w-[36px] md:h-[36px] shrink-0 flex items-center justify-center bg-[#ef4444] text-white rounded-full font-bold text-[14px] md:text-[15px] shadow-sm shadow-red-500/10'>

@@ -63,10 +63,10 @@ export default function Solutions() {
           {solutions.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300'
+              className='bg-white rounded-3xl p-8 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-md transition-all duration-300'
             >
               <div
-                className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${item.bgColor}`}
+                className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 ${item.bgColor}`}
               >
                 <Image src={item.icon} alt={item.title} width={28} height={28} />
               </div>

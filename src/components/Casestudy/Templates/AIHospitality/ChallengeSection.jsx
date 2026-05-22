@@ -27,9 +27,7 @@ export default function ChallengeSection() {
       <div className='max-w-[1080px] mx-auto px-6'>
         {/* Header Block */}
         <div className='text-center mb-[32px]'>
-          <h2 className='text-[26px] font-extrabold text-[#071d3a] tracking-tight'>
-            The Challenge
-          </h2>
+          <h2 className='text-[26px] font-extrabold tracking-tight'>The Challenge</h2>
           <p className='text-[16px] font-extrabold text-[#071326] mt-2'>
             Fragmented Guest Insights Hindering Experience Excellence
           </p>

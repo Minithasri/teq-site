@@ -92,7 +92,7 @@ const BusinessImpact = () => {
           </h3>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'>
             {/* Card 1 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-md border border-[#3C83F633]'>
+            <div className='bg-white rounded-[12px] p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
               <div className='flex items-center gap-2 mb-3'>
                 <svg
                   width='20'
@@ -107,14 +107,14 @@ const BusinessImpact = () => {
                   <path d='M22 11.08V12a10 10 0 1 1-5.93-9.14'></path>
                   <polyline points='22 4 12 14.01 9 11.01'></polyline>
                 </svg>
-                <h4 className='font-bold text-[#16A249] text-[16px]'>Real-Time</h4>
+                <h4 className='font-bold text-[#0F1729]/80 text-[16px]'>Real-Time</h4>
               </div>
               <p className='text-[#0F1729] text-[14px] leading-relaxed'>
                 Reduced sales reporting cycle from weekly ➔ daily/real-time
               </p>
             </div>
             {/* Card 2 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-md border border-[#3C83F633]'>
+            <div className='bg-white rounded-[12px] p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
               <div className='flex items-center gap-2 mb-3'>
                 <svg
                   width='20'
@@ -129,14 +129,14 @@ const BusinessImpact = () => {
                   <path d='M22 11.08V12a10 10 0 1 1-5.93-9.14'></path>
                   <polyline points='22 4 12 14.01 9 11.01'></polyline>
                 </svg>
-                <h4 className='font-bold text-[#16A249] text-[16px]'>Optimized</h4>
+                <h4 className='font-bold text-[#0F1729]/80 text-[16px]'>Optimized</h4>
               </div>
               <p className='text-[#0F1729] text-[14px] leading-relaxed'>
                 Improved inventory management, reducing stockouts and overstocks
               </p>
             </div>
             {/* Card 3 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-md border border-[#3C83F633]'>
+            <div className='bg-white rounded-[12px] p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
               <div className='flex items-center gap-2 mb-3'>
                 <svg
                   width='20'
@@ -151,7 +151,7 @@ const BusinessImpact = () => {
                   <path d='M22 11.08V12a10 10 0 1 1-5.93-9.14'></path>
                   <polyline points='22 4 12 14.01 9 11.01'></polyline>
                 </svg>
-                <h4 className='font-bold text-[#16A249] text-[16px]'>Connected</h4>
+                <h4 className='font-bold text-[#0F1729]/80 text-[16px]'>Connected</h4>
               </div>
               <p className='text-[#0F1729] text-[14px] leading-relaxed'>
                 Linked customer engagement to sales outcomes for actionable insights
@@ -167,7 +167,7 @@ const BusinessImpact = () => {
           </h3>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto'>
             {/* Card 1 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-md border border-[#3C83F633]'>
+            <div className='bg-white rounded-[12px] p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
               <div className='flex items-center gap-2 mb-3'>
                 <svg
                   width='20'
@@ -182,14 +182,14 @@ const BusinessImpact = () => {
                   <polyline points='23 6 13.5 15.5 8.5 10.5 1 18'></polyline>
                   <polyline points='17 6 23 6 23 12'></polyline>
                 </svg>
-                <h4 className='font-bold text-[#0F1729] text-[16px]'>Revenue Growth</h4>
+                <h4 className='font-bold text-[#0F1729]/80 text-[16px]'>Revenue Growth</h4>
               </div>
               <p className='text-[#0F1729] text-[14px] leading-relaxed'>
                 Improved sales planning accuracy, increasing revenue opportunities
               </p>
             </div>
             {/* Card 2 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-md border border-[#3C83F633]'>
+            <div className='bg-white rounded-[12px] p-6 shadow-md border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
               <div className='flex items-center gap-2 mb-3'>
                 <svg
                   width='20'
@@ -204,7 +204,7 @@ const BusinessImpact = () => {
                   <polyline points='23 6 13.5 15.5 8.5 10.5 1 18'></polyline>
                   <polyline points='17 6 23 6 23 12'></polyline>
                 </svg>
-                <h4 className='font-bold text-[#0F1729] text-[16px]'>Cost Reduction</h4>
+                <h4 className='font-bold text-[#0F1729]/80 text-[16px]'>Cost Reduction</h4>
               </div>
               <p className='text-[#0F1729] text-[14px] leading-relaxed'>
                 Reduced costs from inefficient inventory management
@@ -220,7 +220,7 @@ const BusinessImpact = () => {
           </h3>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto'>
             {/* Card 1 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-md border border-[#3C83F633]'>
+            <div className='bg-white rounded-[12px] p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
               <div className='flex items-center gap-2 mb-3'>
                 <svg
                   width='20'
@@ -236,14 +236,14 @@ const BusinessImpact = () => {
                   <circle cx='12' cy='12' r='6'></circle>
                   <circle cx='12' cy='12' r='2'></circle>
                 </svg>
-                <h4 className='font-bold text-[#0F1729] text-[16px]'>Data-Driven Culture</h4>
+                <h4 className='font-bold text-[#0F1729]/80 text-[16px]'>Data-Driven Culture</h4>
               </div>
               <p className='text-[#0F1729] text-[14px] leading-relaxed'>
                 Established a data-driven culture in decision-making across the organization
               </p>
             </div>
             {/* Card 2 */}
-            <div className='bg-white rounded-[12px] p-6 shadow-md border border-[#3C83F633]'>
+            <div className='bg-white rounded-[12px] p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
               <div className='flex items-center gap-2 mb-3'>
                 <svg
                   width='20'
@@ -258,7 +258,7 @@ const BusinessImpact = () => {
                   <line x1='5' y1='12' x2='19' y2='12'></line>
                   <polyline points='12 5 19 12 12 19'></polyline>
                 </svg>
-                <h4 className='font-bold text-[#0F1729] text-[16px]'>Scalable Foundation</h4>
+                <h4 className='font-bold text-[#0F1729]/80 text-[16px]'>Scalable Foundation</h4>
               </div>
               <p className='text-[#0F1729] text-[14px] leading-relaxed'>
                 Positioned LSKD to scale operations with real-time retail analytics

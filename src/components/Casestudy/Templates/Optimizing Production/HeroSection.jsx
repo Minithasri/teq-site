@@ -33,8 +33,8 @@ export default function HeroSection() {
         {/* Title */}
         <h1 className='font-bold text-white mb-6 drop-shadow-md leading-tight'>
           <span className='block text-3xl lg:text-5xl mb-2'>Optimizing Production Efficiency</span>
-          <span className='block text-4xl lg:text-5xl'>
-            Through <span className='text-[#FFD700] text-4xl lg:text-6xl'>Scrap Analytics</span>
+          <span className='block text-3xl lg:text-5xl'>
+            Through <span className='text-white text-3xl lg:text-5xl'>Scrap Analytics</span>
           </span>
         </h1>
 

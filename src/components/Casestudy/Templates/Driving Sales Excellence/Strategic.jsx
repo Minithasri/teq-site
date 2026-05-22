@@ -52,11 +52,9 @@ export default function StrategicRequirements() {
             {strategicRequirements.slice(0, 4).map(item => (
               <div
                 key={item.id}
-                className='bg-white flex items-center px-4 sm:px-5 md:px-6 py-4 sm:py-5 w-full'
+                className='bg-white flex items-center px-4 sm:px-5 md:px-6 py-4 sm:py-5 w-full border-2 border-[#F5F5F5] rounded-[12px] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
                 style={{
                   minHeight: '94px',
-                  borderRadius: '12px',
-                  boxShadow: '0px 10px 25px -5px rgba(0, 0, 0, 0.3)',
                 }}
               >
                 <div className='flex items-start gap-3 sm:gap-4 w-full'>
@@ -80,11 +78,9 @@ export default function StrategicRequirements() {
           {/* Bottom Center Card */}
           <div className='w-full md:max-w-[513px]'>
             <div
-              className='bg-white flex items-center px-4 sm:px-5 md:px-6 py-4 sm:py-5 w-full'
+              className='bg-white flex items-center px-4 sm:px-5 md:px-6 py-4 sm:py-5 w-full border-2 border-[#F5F5F5] rounded-[12px] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
               style={{
                 minHeight: '94px',
-                borderRadius: '12px',
-                boxShadow: '0px 10px 25px -5px rgba(0, 0, 0, 0.3)',
               }}
             >
               <div className='flex items-start gap-3 sm:gap-4 w-full'>

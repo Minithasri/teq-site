@@ -15,7 +15,7 @@ export default function HeroSection() {
         <h1 className='text-white text-[32px] md:text-[46px] lg:text-[52px] font-extrabold leading-[1.15] tracking-tight'>
           Building Unified Finance & HR
           <br />
-          <span className='text-[#fff236] block mt-1 md:mt-2'>Performance Insights</span>
+          Performance Insights
         </h1>
 
         {/* Subtitle Description */}

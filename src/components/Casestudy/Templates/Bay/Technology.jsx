@@ -62,11 +62,11 @@ const Technology = () => {
       <div className='max-w-6xl mx-auto px-4 md:px-6'>
         {/* HEADING */}
         <div className='text-center'>
-          <p className='text-[32px] md:text-[48px] font-semibold tracking-[2px]'>
+          <p className='text-[32px] md:text-[42px] font-semibold tracking-[2px]'>
             Technology Stack
           </p>
 
-          <h2 className='text-[32px] md:text-[48px] font-semibold text-[#161C2D]'>
+          <h2 className='text-[32px] md:text-[38px] font-semibold text-[#0F1729]/80'>
             Tools & technologies
           </h2>
         </div>

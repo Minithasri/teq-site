@@ -76,18 +76,15 @@ export default function Technology() {
   return (
     <section className='w-full py-8 px-4 pb-12 md:px-8' style={{ backgroundColor: '#F6F6F6' }}>
       <div className='max-w-7xl mx-auto'>
+        <div className='text-center'>
+          <h2 className='text-3xl font-bold text-[#1D2530] mb-2'>Technology Stack</h2>
+          <p className='text-gray-500'>Enterprise-grade technologies and Azure-native services</p>
+        </div>
         {/* Header */}
-        <div className='flex flex-col md:flex-row items-center mb-12 gap-16'>
-          <div>
-            <h2 className='text-3xl font-bold text-[#1D2530] mb-2'>Technology Stack</h2>
-            <p className='text-gray-500'>Enterprise-grade technologies and Azure-native services</p>
-          </div>
+        <div className='mt-6 flex flex-col md:flex-row items-center justify-center mb-12 gap-16'>
           <div className='flex items-center gap-12'>
             {topIcons.map((icon, index) => (
-              <div
-                key={index}
-                className='w-12 h-12 relative flex items-center justify-center transition-transform hover:-translate-y-1'
-              >
+              <div key={index} className='w-12 h-12 relative flex items-center justify-center'>
                 <Image
                   src={icon}
                   alt={`Technology ${index}`}
@@ -107,9 +104,9 @@ export default function Technology() {
             {coreTechnologies.map((tech, index) => (
               <div
                 key={index}
-                className='bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow'
+                className='bg-white rounded-xl p-6 sborder-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)]'
               >
-                <h4 className='font-bold text-[#0073E6] text-lg mb-2'>{tech.title}</h4>
+                <h4 className='font-bold text-[#0F1729]/80 text-lg mb-2'>{tech.title}</h4>
                 <p className='text-gray-500 text-sm leading-relaxed'>{tech.description}</p>
               </div>
             ))}
@@ -123,7 +120,7 @@ export default function Technology() {
             {azureServices.map((service, index) => (
               <div
                 key={index}
-                className='bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-100 grid grid-cols-1 md:grid-cols-12 gap-6 items-center'
+                className='bg-white rounded-xl p-4 md:p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] grid grid-cols-1 md:grid-cols-12 gap-6 items-center'
               >
                 {/* Category Badge */}
                 <div className='md:col-span-3'>

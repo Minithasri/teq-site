@@ -28,20 +28,20 @@ const TechnologyStack = () => {
         {/* Cards */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'>
           {/* Card 1 */}
-          <div className='bg-white rounded-[12px] py-8 px-6 border border-[#DCE0E5] text-center shadow-sm'>
-            <h3 className='font-bold text-[#107AC6] text-[20px] mb-2'>Domo</h3>
+          <div className='bg-white rounded-[12px] py-8 px-6 border-2 border-[#F5F5F5] text-center shadow-[0px_4px_12px_rgba(0,0,0,0.08)]'>
+            <h3 className='font-bold text-[#0F1729]/80 text-[20px] mb-2'>Domo</h3>
             <p className='text-[#64748B] text-[15px]'>Dashboards & Visualization</p>
           </div>
 
           {/* Card 2 */}
-          <div className='bg-white rounded-[12px] py-8 px-6 border border-[#DCE0E5] text-center shadow-sm'>
-            <h3 className='font-bold text-[#107AC6] text-[20px] mb-2'>PDF</h3>
+          <div className='bg-white rounded-[12px] py-8 px-6 border-2 border-[#F5F5F5] text-center shadow-[0px_4px_12px_rgba(0,0,0,0.08)]'>
+            <h3 className='font-bold text-[#0F1729]/80 text-[20px] mb-2'>PDF</h3>
             <p className='text-[#64748B] text-[15px]'>Data Integration from Fleet Systems</p>
           </div>
 
           {/* Card 3 */}
-          <div className='bg-white rounded-[12px] py-8 px-6 border border-[#DCE0E5] text-center shadow-sm'>
-            <h3 className='font-bold text-[#107AC6] text-[20px] mb-2'>ETL Tools</h3>
+          <div className='bg-white rounded-[12px] py-8 px-6 border-2 border-[#F5F5F5] text-center shadow-[0px_4px_12px_rgba(0,0,0,0.08)]'>
+            <h3 className='font-bold text-[#0F1729]/80 text-[20px] mb-2'>ETL Tools</h3>
             <p className='text-[#64748B] text-[15px]'>Data Cleaning & Automation Pipelines</p>
           </div>
         </div>

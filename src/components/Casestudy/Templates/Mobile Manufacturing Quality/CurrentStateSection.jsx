@@ -24,7 +24,7 @@ export default function CurrentStateSection() {
             {gaps.map((gap, index) => (
               <div
                 key={index}
-                className='bg-white rounded-xl p-5 shadow-sm flex items-start gap-4 hover:shadow-md transition-shadow w-full'
+                className='bg-white rounded-xl p-5 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-start gap-4 w-full'
               >
                 <div className='flex-shrink-0 mt-1'>
                   <svg

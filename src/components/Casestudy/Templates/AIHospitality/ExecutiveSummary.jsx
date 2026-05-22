@@ -40,9 +40,7 @@ export default function ExecutiveSummary() {
 
       {/* Main Content stays relative so it sits beautifully on top */}
       <div className='relative max-w-[1080px] mx-auto px-6'>
-        <h2 className='text-center text-[26px] font-extrabold text-[#071d3a] mb-[34px]'>
-          Executive Summary
-        </h2>
+        <h2 className='text-center text-[26px] font-extrabold mb-[34px]'>Executive Summary</h2>
 
         <div className='bg-white rounded-[8px] border-2 border-[#f5f5f5] shadow-[0_4px_24px_rgba(0,0,0,0.08)] px-[40px] py-[34px] max-w-[970px] mx-auto'>
           <p className='text-[17px] text-[#171717] leading-[1.32]'>

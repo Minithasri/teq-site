@@ -96,11 +96,11 @@ const Investigation = () => {
       <div className='max-w-6xl mx-auto px-4 md:px-6'>
         {/* TOP CONTENT */}
         <div className='text-center'>
-          <p className='text-[12px] md:text-[30px] font-semibold tracking-[2px] mb-4'>
+          <p className='text-[24px] md:text-[42px] font-bold tracking-[2px] mb-4'>
             Investigation Intelligence
           </p>
 
-          <h2 className='text-[30px] md:text-[48px] leading-tight font-semibold text-[#161C2D]'>
+          <h2 className='text-[30px] md:text-[48px] leading-tight font-semibold text-[#0F1729]/80'>
             From anomaly to case in seconds
           </h2>
 
@@ -218,11 +218,9 @@ const Investigation = () => {
         <div className='relative pt-24 md:pt-32'>
           {/* HEADING */}
           <div className='text-center'>
-            <p className='text-[16px] md:text-[30px] font-semibold tracking-[2px]'>
-              Business Impact
-            </p>
+            <p className='text-[24px] md:text-[42px] font-bold tracking-[2px]'>Business Impact</p>
 
-            <h2 className='text-[30px] md:text-[44px] font-semibold text-[#161C2D]'>
+            <h2 className='text-[30px] md:text-[38px] font-semibold text-[#0F1729]/80'>
               Measurable outcomes
             </h2>
 

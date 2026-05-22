@@ -131,9 +131,9 @@ const TheSolution = () => {
           {solutions.map((solution, index) => (
             <div
               key={index}
-              className='bg-white rounded-[16px] shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 p-4 md:p-6 flex flex-col md:flex-row items-start md:items-center gap-6 transition-all duration-300 hover:shadow-lg'
+              className='bg-white rounded-[16px] shadow-[0_4px_12px_rgb(0,0,0,0.08)] border-2 border-[#F5F5F5] p-4 md:p-6 flex flex-col md:flex-row items-start md:items-center gap-6 transition-all duration-300 hover:shadow-lg'
             >
-              <div className='w-[56px] h-[56px] rounded-[12px] bg-[#6652D7] flex items-center justify-center shrink-0 shadow-sm'>
+              <div className='w-[56px] h-[56px] rounded-[12px] bg-[#0846AA]/60 flex items-center justify-center shrink-0 shadow-sm'>
                 {solution.icon}
               </div>
               <div className='flex flex-col'>

@@ -39,11 +39,11 @@ export default function OverviewCards() {
           {cards.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-[14px] border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] p-6 min-h-[145px] flex flex-col justify-between'
+              className='bg-white rounded-[14px] border-2 border-[#F5F5F5] shadow-[0_8px_12px_rgba(0,0,0,0.08)] p-6 min-h-[145px] flex flex-col justify-between'
             >
               {/* TOP */}
               <div className='flex items-center gap-3'>
-                <div className='w-[48px] h-[48px] rounded-[14px] bg-gradient-to-br from-[#3b82f6] to-[#7c3aed] flex items-center justify-center shadow-[0_6px_18px_rgba(99,102,241,0.25)]'>
+                <div className='w-[48px] h-[48px] rounded-[14px] bg-[#0846AA]/40 flex items-center justify-center shadow-[0_6px_18px_rgba(99,102,241,0.25)]'>
                   <img
                     src={item.icon}
                     alt={item.label}

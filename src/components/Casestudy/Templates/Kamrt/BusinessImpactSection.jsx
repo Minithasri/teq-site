@@ -63,11 +63,14 @@ const BusinessImpactSection = () => {
               key={index}
               className='
                 rounded-[20px]
+                border-2
+                border-[#F5F5F5]
                 bg-white
                 px-5
                 md:px-6
                 py-7
                 text-center
+                shadow-[0px_8px_22px_rgba(0,0,0,0.08)]
               '
             >
               {/* ICON */}
@@ -88,14 +91,11 @@ const BusinessImpactSection = () => {
                 <div
                   className='
                   rounded-[12px]
-                  bg-gradient-to-r
-                  from-[#7ED742]
-                  to-[#29BA5E]
                   px-7
                   py-2.5
                 '
                 >
-                  <p className='text-sm md:text-xl leading-none font-semibold text-white'>
+                  <p className='text-sm md:text-xl leading-none font-semibold text-[#0F1729]/80'>
                     {item.value}
                   </p>
                 </div>
@@ -116,17 +116,19 @@ const BusinessImpactSection = () => {
             mt-10
             max-w-4xl
             rounded-[24px]
+            border-2
+            border-[#F5F5F5]
             bg-white/75
             px-6
             md:px-12
             py-8
             md:py-10
             backdrop-blur-[2px]
-            shadow-[0px_10px_35px_rgba(0,0,0,0.08)]
+            shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
           '
         >
           {/* TITLE */}
-          <h3 className='text-lg md:text-3xl leading-none font-semibold tracking-[-1px] text-[#171B24]'>
+          <h3 className='text-lg md:text-3xl leading-none font-semibold tracking-[-1px] text-center'>
             Key Achievements
           </h3>
 

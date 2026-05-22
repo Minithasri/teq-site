@@ -34,22 +34,18 @@ const TechnologyStackSection = () => {
   return (
     <section className='w-full overflow-hidden bg-[#F5F5F5]'>
       <div className='mx-auto max-w-7xl px-4 md:px-6 py-8 md:py-10'>
+        {/* LABEL */}
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-tight text-center'>
+          Technology Stack
+        </h2>
         {/* TOP CONTENT */}
-        <div className='flex flex-col gap-6 md:flex-row md:items-start md:justify-between'>
+        <div className='mt-6 flex flex-col gap-6 md:flex-row md:items-center md:justify-center'>
           {/* LEFT SECTION */}
-          <div className='flex items-start gap-8'>
-            {/* TEXT CONTENT */}
-            <div>
-              {/* LABEL */}
-              <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-tight text-[#2B2B2B]'>
-                TECHNOLOGY STACK
-              </h2>
-
-              {/* HEADING */}
-              <h3 className='mt-4 text-2xl md:text-5xl leading-[1.1] tracking-[-2px] text-[#111827]'>
-                Tools & Technologies
-              </h3>
-            </div>
+          <div className='flex items-center gap-8'>
+            {/* HEADING */}
+            <h3 className='mt-4 text-2xl md:text-5xl leading-[1.1] tracking-[-2px] text-[#111827]'>
+              Tools & Technologies
+            </h3>
 
             {/* LOGOS */}
             <div className='hidden md:flex items-center gap-4 pt-1'>
@@ -86,11 +82,11 @@ const TechnologyStackSection = () => {
         </div>
 
         {/* TECHNOLOGY TAGS */}
-        <div className='mt-8 flex flex-wrap gap-3 md:gap-4'>
+        <div className='mt-8 flex flex-wrap gap-3 md:gap-3'>
           {technologies.map((item, index) => (
             <div
               key={index}
-              className='flex items-center gap-2 rounded-2xl border border-[#9D9D9D] bg-white px-4 py-3'
+              className='flex items-center gap-2 rounded-2xl border-2 border-[#F5F5F5] shadow-[0_4px_12px_0px_rgba(0,0,0,0.08)] bg-white px-4 py-3'
             >
               {/* TITLE */}
               <p className='text-[13px] md:text-[14px] font-semibold text-[#111827]'>{item.name}</p>

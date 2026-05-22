@@ -5,7 +5,7 @@ const TheSolution = () => {
     <section className='w-full py-24 bg-[#F8FAFC]'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='text-center mb-16'>
-          <h2 className='text-[32px] font-bold text-[#0F1729] mb-3'>GWC's Solution</h2>
+          <h2 className='text-[32px] font-bold text-[#0F1729] mb-3'>GWC&apos;s Solution</h2>
           <p className='text-[#64748B] text-[18px]'>
             A comprehensive analytics solution designed for real-time operational excellence
           </p>
@@ -14,7 +14,7 @@ const TheSolution = () => {
         {/* Top Grid of 3 Cards */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-3 max-w-7xl mx-auto mb-6'>
           {/* Card 1 */}
-          <div className='bg-white rounded-[12px] p-6 border border-gray-200 border-l-[4px] border-l-[#107AC6] shadow-sm flex flex-col h-full'>
+          <div className='bg-white rounded-[12px] p-6 border border-gray-200 border-l-[4px] border-l-[#107AC6] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] flex flex-col h-full'>
             <div className='flex items-center gap-3 mb-4'>
               <svg
                 width='26'
@@ -29,7 +29,9 @@ const TheSolution = () => {
                 <path d='m12 14 4-4' />
                 <path d='M3.34 16a10 10 0 1 1 17.32 0' />
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>Fleet Utilization Dashboards</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>
+                Fleet Utilization Dashboards
+              </h3>
             </div>
             <p className='text-[#64748B] text-[15px] leading-relaxed'>
               Real-time tracking of vehicle usage across the entire network
@@ -37,7 +39,7 @@ const TheSolution = () => {
           </div>
 
           {/* Card 2 */}
-          <div className='bg-white rounded-[12px] p-6 border border-gray-200 border-l-[4px] border-l-[#107AC6] shadow-sm flex flex-col h-full'>
+          <div className='bg-white rounded-[12px] p-6 border border-gray-200 border-l-[4px] border-l-[#107AC6] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] flex flex-col h-full'>
             <div className='flex items-center gap-3 mb-4'>
               <svg
                 width='26'
@@ -54,7 +56,7 @@ const TheSolution = () => {
                 <line x1='8' y1='2' x2='8' y2='6'></line>
                 <line x1='3' y1='10' x2='21' y2='10'></line>
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>
                 Scheduling & Operations Views
               </h3>
             </div>
@@ -64,7 +66,7 @@ const TheSolution = () => {
           </div>
 
           {/* Card 3 */}
-          <div className='bg-white rounded-[12px] p-6 border border-gray-200 border-l-[4px] border-l-[#107AC6] shadow-sm flex flex-col h-full'>
+          <div className='bg-white rounded-[12px] p-6 border border-gray-200 border-l-[4px] border-l-[#107AC6] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] flex flex-col h-full'>
             <div className='flex items-center gap-3 mb-4'>
               <svg
                 width='26'
@@ -80,7 +82,7 @@ const TheSolution = () => {
                 <circle cx='12' cy='12' r='6'></circle>
                 <circle cx='12' cy='12' r='2'></circle>
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>KPI Tracking</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>KPI Tracking</h3>
             </div>
             <p className='text-[#64748B] text-[15px] leading-relaxed'>
               Monitoring key performance indicators like on-time performance and downtime
@@ -91,7 +93,7 @@ const TheSolution = () => {
         {/* Middle Grid of 2 Cards */}
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16'>
           {/* Card 4 */}
-          <div className='bg-white rounded-[12px] p-6 border border-gray-200 border-l-[4px] border-l-[#107AC6] shadow-sm flex flex-col h-full'>
+          <div className='bg-white rounded-[12px] p-6 border border-gray-200 border-l-[4px] border-l-[#107AC6] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] flex flex-col h-full'>
             <div className='flex items-center gap-3 mb-4'>
               <svg
                 width='26'
@@ -107,7 +109,7 @@ const TheSolution = () => {
                 <rect x='10' y='10' width='4' height='11'></rect>
                 <rect x='17' y='3' width='4' height='18'></rect>
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>Executive Dashboards</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>Executive Dashboards</h3>
             </div>
             <p className='text-[#64748B] text-[15px] leading-relaxed'>
               High-level summaries with drill-down into route and vehicle-level metrics
@@ -115,7 +117,7 @@ const TheSolution = () => {
           </div>
 
           {/* Card 5 */}
-          <div className='bg-white rounded-[12px] p-6 border border-gray-200 border-l-[4px] border-l-[#107AC6] shadow-sm flex flex-col h-full'>
+          <div className='bg-white rounded-[12px] p-6 border border-gray-200 border-l-[4px] border-l-[#107AC6] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] flex flex-col h-full'>
             <div className='flex items-center gap-3 mb-4'>
               <svg
                 width='26'
@@ -129,7 +131,7 @@ const TheSolution = () => {
               >
                 <polygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'></polygon>
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>Automation</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>Automation</h3>
             </div>
             <p className='text-[#64748B] text-[15px] leading-relaxed'>
               Eliminated manual reporting through scheduled data refreshes
@@ -138,8 +140,8 @@ const TheSolution = () => {
         </div>
 
         {/* Solution Highlights Box */}
-        <div className='bg-white rounded-[16px] p-10 max-w-6xl mx-auto border border-gray-200 shadow-sm'>
-          <h3 className='text-[22px] font-bold text-[#0F1729] mb-6'>Solution Highlights</h3>
+        <div className='bg-white rounded-[16px] p-10 max-w-6xl mx-auto border-2 border-[#F5F5F5] shadow-[0px_4px_12px_rgba(0,0,0,0.08)]'>
+          <h3 className='text-[22px] font-bold text-[#0F1729]/80 mb-6'>Solution Highlights</h3>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-5'>
             {/* Left Column */}

@@ -68,15 +68,14 @@ const SolutionSection = () => {
   return (
     <section className='w-full overflow-hidden bg-[#F5F5F5]'>
       <div className='mx-auto max-w-7xl mx-auto max-w-7xl px-4 md:px-6 pt-8 md:pt-10 pb-10 md:pb-12'>
+        {/* LABEL */}
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-tight text-center'>
+          The Solution
+        </h2>
         {/* TOP CONTENT */}
         <div className='flex items-start justify-between gap-8'>
           {/* LEFT CONTENT */}
           <div>
-            {/* LABEL */}
-            <h2 className='text-2xl md:text-5xl leading-none font-semibold uppercase tracking-tight text-[#3E43F0]'>
-              THE SOLUTION
-            </h2>
-
             {/* HEADING */}
             <h3 className='mt-5 text-2xl md:text-5xl leading-[1.1] tracking-[-2px] text-[#111827]'>
               Solution Architecture
@@ -97,7 +96,7 @@ const SolutionSection = () => {
               width={180}
               height={220}
               priority
-              className='h-[220px] w-[180px] object-contain'
+              className='h-[180px] w-[180px] object-contain'
             />
           </div>
         </div>
@@ -115,7 +114,7 @@ const SolutionSection = () => {
         </div>
 
         {/* FLOW BOX */}
-        <div className='rounded-2xl border border-[#4D56E2] bg-[#F8F8F8] px-5 md:px-10 py-5 md:py-7'>
+        <div className='rounded-2xl border-2 border-[#F5F5F5] shadow-[0_4px_12px_0px_rgba(0,0,0,0.08)] px-5 md:px-10 py-5 md:py-7'>
           <div className='flex flex-col items-center justify-between gap-4 md:flex-row'>
             {solutionSteps.map((step, index) => (
               <div key={step} className='flex items-center gap-4'>
@@ -157,16 +156,16 @@ const SolutionSection = () => {
             {solutionCards.map(card => (
               <div
                 key={card.number}
-                className='rounded-2xl border border-[#4A5BFF] bg-white px-4 md:px-5 py-4 md:py-5'
+                className='rounded-2xl border-2 border-[#F5F5F5] shadow-[0_4px_12px_0px_rgba(0,0,0,0.08)] bg-white px-4 md:px-5 py-4 md:py-5'
               >
                 <div className='flex items-start gap-4 md:gap-5'>
                   {/* NUMBER */}
-                  <div className='pt-1 text-2xl md:text-[38px] font-semibold leading-none text-[#3E78F0]'>
+                  <div className='pt-1 text-2xl md:text-[38px] font-semibold leading-none text-[#0846AA]'>
                     {card.number}
                   </div>
 
                   {/* ICON */}
-                  <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#5146E5]'>
+                  <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#0846AA]/60'>
                     <Image
                       src={card.icon}
                       alt={card.title}
@@ -180,7 +179,7 @@ const SolutionSection = () => {
                   <div className='flex-1'>
                     {/* TITLE */}
                     <div className='flex flex-col gap-2 md:flex-row md:items-center md:justify-between'>
-                      <h3 className='text-[15px] md:text-[18px] font-semibold text-[#2451D1]'>
+                      <h3 className='text-[15px] md:text-[18px] font-semibold text-[#0F1729]/80'>
                         {card.title}
                       </h3>
 

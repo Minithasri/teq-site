@@ -34,7 +34,7 @@ export default function SolutionSection() {
   return (
     <div className="w-full bg-white py-10 px-4 md:py-12 md:px-8 flex flex-col items-center gap-10 font-['Poppins'] select-none">
       {/* ================= CONTAINER 1: GWC'S SOLUTION ================= */}
-      <section className='relative w-full max-w-[1368px] bg-white rounded-[16px] border border-[#19BD2C] p-5 sm:p-8 lg:p-[33px] flex flex-col justify-between min-h-[338px] gap-6'>
+      <section className='relative w-full max-w-[1368px] bg-white rounded-[16px] border-2 border-[#F5F5F5] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] p-5 sm:p-8 lg:p-[33px] flex flex-col justify-between min-h-[338px] gap-6'>
         <div className='z-10 w-full lg:max-w-[75%]'>
           {/* Header Block: Icon + Title */}
           <div className='flex items-center gap-[12px] mb-4 md:mb-5'>
@@ -45,7 +45,7 @@ export default function SolutionSection() {
                 width: '36px',
                 height: '36px',
                 borderRadius: '12px',
-                background: '#129929',
+                background: '#6249DF',
               }}
             >
               {/* Lightbulb SVG */}
@@ -84,7 +84,7 @@ export default function SolutionSection() {
           <ul className='flex flex-col gap-3 w-full list-none p-0 m-0'>
             {solutionPoints.map((pt, i) => (
               <li key={i} className='flex items-start gap-2'>
-                <span className='text-[#129929] text-[24px] sm:text-[30px] leading-none mt-[-4px] sm:mt-[-2px]'>
+                <span className='text-[24px] sm:text-[30px] leading-none mt-[-4px] sm:mt-[-2px]'>
                   •
                 </span>
                 <p className='m-0 text-[15px] leading-[22px] sm:text-[16px] sm:leading-[24px] lg:text-[18px] lg:leading-[24px]'>
@@ -118,7 +118,7 @@ export default function SolutionSection() {
       </section>
 
       {/* ================= CONTAINER 2: SOLUTION HIGHLIGHTS ================= */}
-      <section className='w-full max-w-[1368px] bg-white rounded-[16px] border border-[#19BD2C] p-5 sm:p-8 lg:p-[33px] flex flex-col min-h-[338px]'>
+      <section className='w-full max-w-[1368px] bg-white rounded-[16px] border-2 border-[#F5F5F5] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] p-5 sm:p-8 lg:p-[33px] flex flex-col min-h-[338px]'>
         {/* Header Block: Wrench Icon + Title */}
         <div className='flex items-center gap-[12px] mb-6 lg:mb-8'>
           <div
@@ -127,7 +127,7 @@ export default function SolutionSection() {
               width: '36px',
               height: '36px',
               borderRadius: '12px',
-              background: '#129929',
+              background: '#6249DF',
             }}
           >
             {/* Wrench / Maintenance SVG icon */}
@@ -156,10 +156,8 @@ export default function SolutionSection() {
           {highlights.map((text, idx) => (
             <div
               key={idx}
-              className='flex items-center pl-4 pr-3 w-full h-auto min-h-[58px] py-3 rounded-[12px]'
+              className='flex items-center pl-4 pr-3 w-full h-auto min-h-[58px] py-3 border-2 border-[#F5F5F5] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] rounded-[12px]'
               style={{
-                background: '#1299291A', // 10% opacity green fill tint
-                border: '1px solid #12992966', // 40% opacity green stroke border
                 boxSizing: 'border-box',
               }}
             >

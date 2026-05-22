@@ -55,7 +55,7 @@ export default function ApproachSection() {
           {steps.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-[12px] border border-gray-100 shadow-[0_4px_25px_rgba(0,0,0,0.015)] p-5 md:p-[24px] flex flex-col justify-start min-h-[220px]'
+              className='bg-white rounded-[12px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-5 md:p-[24px] flex flex-col justify-start min-h-[220px]'
             >
               {/* Row Layout: Big Number Badge on Left, Heading text tracking natively on Right */}
               <div className='flex items-start gap-3 w-full mb-3 justify-start text-left'>

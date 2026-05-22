@@ -37,7 +37,7 @@ export default function SolutionSection() {
       <div className='max-w-[1120px] mx-auto px-6'>
         {/* Module Headers */}
         <div className='text-center mb-[34px]'>
-          <h2 className='text-[28px] font-extrabold text-[#071326] tracking-tight'>The Solution</h2>
+          <h2 className='text-[28px] font-extrabold tracking-tight'>The Solution</h2>
           <p className='text-[16px] text-[#60708a] font-semibold mt-1'>
             AI-Powered Hospitality Platform
           </p>

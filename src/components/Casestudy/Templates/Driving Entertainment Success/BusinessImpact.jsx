@@ -98,7 +98,7 @@ export default function BusinessImpact() {
                     <Calendar className='w-5 h-5 md:w-[22px] md:h-[22px]' />
                   </div>
 
-                  <h4 className='text-[18px] md:text-[22px] font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#2509B1] to-[#B93EF6]'>
+                  <h4 className='text-[18px] md:text-[22px] font-bold tracking-tight text-[#0F1729]/80'>
                     Real-time
                   </h4>
                 </div>
@@ -127,7 +127,7 @@ export default function BusinessImpact() {
                     <BarChart3 className='w-5 h-5 md:w-[22px] md:h-[22px]' />
                   </div>
 
-                  <h4 className='text-[18px] md:text-[22px] font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#2509B1] to-[#B93EF6]'>
+                  <h4 className='text-[18px] md:text-[22px] font-bold tracking-tight text-[#0F1729]/80'>
                     Consistent
                   </h4>
                 </div>
@@ -156,7 +156,7 @@ export default function BusinessImpact() {
                     <TrendingUp className='w-5 h-5 md:w-[22px] md:h-[22px]' />
                   </div>
 
-                  <h4 className='text-[18px] md:text-[22px] font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#2509B1] to-[#B93EF6]'>
+                  <h4 className='text-[18px] md:text-[22px] font-bold tracking-tight text-[#0F1729]/80'>
                     Improved
                   </h4>
                 </div>
@@ -209,12 +209,12 @@ export default function BusinessImpact() {
 
           <ul className='space-y-3 pl-1 text-[#21242C] text-[16px] md:text-[20px] font-medium opacity-90 list-none'>
             <li className='flex items-start gap-3'>
-              <span className='w-2 h-2 rounded-full bg-[#6249DF] inline-block shrink-0 mt-2.5'></span>
+              <span className='w-2 h-2 rounded-full bg-black inline-block shrink-0 mt-2.5'></span>
               <span>Optimized event planning led to higher ticket sales and ROI</span>
             </li>
 
             <li className='flex items-start gap-3'>
-              <span className='w-2 h-2 rounded-full bg-[#6249DF] inline-block shrink-0 mt-2.5'></span>
+              <span className='w-2 h-2 rounded-full bg-black inline-block shrink-0 mt-2.5'></span>
               <span>Improved talent allocation based on performance data</span>
             </li>
           </ul>
@@ -256,12 +256,12 @@ export default function BusinessImpact() {
 
           <ul className='space-y-3 pl-1 text-[#21242C] text-[16px] md:text-[20px] font-medium opacity-90 list-none'>
             <li className='flex items-start gap-3'>
-              <span className='w-2 h-2 rounded-full bg-[#6249DF] inline-block shrink-0 mt-2.5'></span>
+              <span className='w-2 h-2 rounded-full bg-black inline-block shrink-0 mt-2.5'></span>
               <span>Positioned as a data-driven entertainment company</span>
             </li>
 
             <li className='flex items-start gap-3'>
-              <span className='w-2 h-2 rounded-full bg-[#6249DF] inline-block shrink-0 mt-2.5'></span>
+              <span className='w-2 h-2 rounded-full bg-black inline-block shrink-0 mt-2.5'></span>
               <span>
                 Strengthened ability to attract and retain top talent with transparent performance
                 metrics
@@ -269,7 +269,7 @@ export default function BusinessImpact() {
             </li>
 
             <li className='flex items-start gap-3'>
-              <span className='w-2 h-2 rounded-full bg-[#6249DF] inline-block shrink-0 mt-2.5'></span>
+              <span className='w-2 h-2 rounded-full bg-black inline-block shrink-0 mt-2.5'></span>
               <span>Created a scalable framework for future events and digital engagement</span>
             </li>
           </ul>

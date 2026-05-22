@@ -87,12 +87,9 @@ export default function Solution() {
           {solutions.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-xl p-6 shadow-sm border border-gray-100 ring-1 ring-gray-100/50 flex flex-col items-start'
+              className='bg-white rounded-xl p-6 border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)] flex flex-col items-start'
             >
-              <div
-                className='w-12 h-12 rounded-xl flex items-center justify-center mb-4'
-                style={{ backgroundColor: '#0A58D6' }}
-              >
+              <div className='w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-[#0846AA]/60'>
                 <div className='relative w-6 h-6'>
                   <Image
                     src={item.icon}
@@ -102,7 +99,7 @@ export default function Solution() {
                   />
                 </div>
               </div>
-              <h3 className='text-lg font-bold text-[#1D2530] mb-2'>{item.title}</h3>
+              <h3 className='text-lg font-bold text-[#0F1729]/80 mb-2'>{item.title}</h3>
               <p className='text-[#64748B]'>{item.description}</p>
             </div>
           ))}

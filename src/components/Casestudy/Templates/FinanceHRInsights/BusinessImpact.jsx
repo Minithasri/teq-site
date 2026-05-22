@@ -55,7 +55,7 @@ export default function BusinessImpact() {
         </div>
 
         {/* DATA MATRIX PLACEMENT LAYER */}
-        <div className='rounded-[12px] overflow-hidden border border-[#3b82f6] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.03)] mb-8'>
+        <div className='rounded-[12px] overflow-hidden border-2 border-[#F5F5F5] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.03)] mb-8'>
           {/* Header Row split across a custom 12-column grid layout */}
           <div className='grid grid-cols-12 bg-gradient-to-r from-[#3b82f6] to-[#6366f1] text-white font-extrabold text-[13.5px] md:text-[14.5px] tracking-tight select-none'>
             <div className='col-span-4 p-4 md:p-[18px] text-left pl-6'>Dimension</div>
@@ -91,10 +91,10 @@ export default function BusinessImpact() {
           {impactCards.map((item, index) => (
             <div
               key={index}
-              className='bg-white border-2 border-[#3b82f6] rounded-[12px] shadow-[0_4px_25px_rgba(0,0,0,0.01)] p-5 md:p-[24px] flex items-start gap-4 transition-transform duration-200'
+              className='bg-white border-2 border-[#F5F5F5] rounded-[12px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-5 md:p-[24px] flex items-start gap-4 transition-transform duration-200'
             >
               {/* Left Column: Proportioned Gradient Icon Wrapper */}
-              <div className='w-[44px] h-[44px] shrink-0 rounded-[10px] bg-gradient-to-br from-[#3b82f6] to-[#6366f1] flex items-center justify-center shadow-[0_4px_12px_rgba(59,130,246,0.2)] select-none pointer-events-none'>
+              <div className='w-[44px] h-[44px] shrink-0 rounded-[10px] bg-[#0846AA]/60 flex items-center justify-center shadow-[0_4px_12px_rgba(59,130,246,0.2)] select-none pointer-events-none'>
                 <img
                   src={item.icon}
                   alt=''
@@ -107,10 +107,10 @@ export default function BusinessImpact() {
                 <p className='text-[12px] md:text-[12.5px] text-[#64748b] font-bold tracking-tight mb-1'>
                   {item.label}
                 </p>
-                <h3 className='text-[15px] md:text-[16.5px] font-black text-[#071326] tracking-tight leading-tight mb-1.5'>
+                <h3 className='text-[15px] md:text-[16.5px] font-black text-[#0F1729]/80 tracking-tight leading-tight mb-1.5'>
                   {item.title}
                 </h3>
-                <p className='text-[12.5px] md:text-[13px] text-[#10b981] font-extrabold tracking-tight leading-none'>
+                <p className='text-[12.5px] md:text-[13px] font-extrabold tracking-tight leading-none'>
                   {item.text}
                 </p>
               </div>

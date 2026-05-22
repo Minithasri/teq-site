@@ -89,7 +89,7 @@ export default function TechnologyStack() {
           {tags.map((item, index) => (
             <div
               key={index}
-              className='inline-flex items-center gap-2.5 px-4 md:px-5 py-2 rounded-full bg-gradient-to-r from-[#5046e5] to-[#7c3ff2] text-white text-[12.5px] md:text-[13px] font-bold tracking-tight shadow-[0_2px_10px_rgba(124,63,242,0.15)] hover:opacity-95'
+              className='inline-flex items-center gap-2 px-4 md:px-5 py-2 rounded-full text-[12.5px] md:text-[13px] font-bold tracking-tight border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:opacity-95'
             >
               {/* Dynamic rendering using your specific uploaded SVG asset indicators */}
               <img

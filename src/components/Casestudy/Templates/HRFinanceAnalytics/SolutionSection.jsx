@@ -27,9 +27,9 @@ export default function SolutionSection() {
   return (
     <section className='border-b border-[#e5e7eb]'>
       <div className='bg-white py-9'>
-        <div className='max-w-[1120px] mx-auto px-5 sm:px-8'>
-          <h2 className='text-[#001eff] text-[20px] sm:text-[24px] md:text-[28px] font-extrabold tracking-widest uppercase'>
-            THE SOLUTION
+        <div className='max-w-[1120px] mx-auto px-5 sm:px-8 text-center'>
+          <h2 className='text-[20px] sm:text-[24px] md:text-[28px] font-extrabold tracking-widest'>
+            The Solution
           </h2>
 
           <h3 className='text-[#111827] text-[24px] sm:text-[28px] md:text-[30px] mt-3 font-normal tracking-tight'>
@@ -57,7 +57,7 @@ export default function SolutionSection() {
 
             {steps.map((step, index) => (
               <div key={index} className='relative z-10 flex flex-col items-center'>
-                <div className='w-[62px] h-[62px] rounded-full bg-[#001eff] flex items-center justify-center shadow-md'>
+                <div className='w-[62px] h-[62px] rounded-full bg-[#0846AA]/60 flex items-center justify-center shadow-md'>
                   <Image
                     src={step.icon}
                     alt=''
@@ -69,7 +69,7 @@ export default function SolutionSection() {
 
                 <p className='text-[12px] font-normal text-black mt-4 text-center'>{step.title}</p>
 
-                <div className='bg-white border border-[#001eff] rounded-[6px] mt-5 lg:mt-7 p-4 min-h-[115px] w-full shadow-sm'>
+                <div className='bg-white border-2 border-[#F5F5F5] rounded-[6px] mt-5 lg:mt-7 p-4 min-h-[115px] w-full shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'>
                   <p className='text-[12px] leading-[1.6] text-[#6b7280] font-normal'>
                     {step.text}
                   </p>

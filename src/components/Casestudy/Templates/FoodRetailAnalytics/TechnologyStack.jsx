@@ -58,11 +58,11 @@ export default function TechnologyStack() {
         </div>
 
         {/* Outer Tech Tags Container Box */}
-        <div className='bg-white border border-[#e2e8f0]/80 rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.015)] p-8 md:p-10 flex flex-wrap justify-center items-center gap-x-8 gap-y-6'>
+        <div className='bg-white border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] rounded-[16px] p-8 md:p-10 flex flex-wrap justify-center items-center gap-x-8 gap-y-6'>
           {technologies.map((item, index) => (
             <div key={index} className='flex flex-col items-center min-w-[125px]'>
               {/* Tag Pill Badge */}
-              <span className='px-6 py-2.5 bg-[#edf4fe] text-[#0d4eb9] rounded-full text-[13.5px] font-extrabold tracking-wide border border-[#dbecfe]/50 text-center w-full block shadow-[0_2px_6px_rgba(13,78,185,0.02)]'>
+              <span className='px-6 py-2.5 rounded-full text-[13.5px] font-extrabold tracking-wide text-center w-full block border-2 border-[#F5F5F5] text-[#0F1729]/80 shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
                 {item.tag}
               </span>
 

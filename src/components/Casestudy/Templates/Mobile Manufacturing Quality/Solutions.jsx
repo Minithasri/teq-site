@@ -41,13 +41,10 @@ export default function Solutions() {
           {solutions.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100'
+              className='bg-white rounded-2xl p-8 border-2 border-[#F5F5F5] shadow-[0_8px_22px_rgba(0,0,0,0.08)]'
             >
               {/* Icon Container with Gradient */}
-              <div
-                className='w-14 h-14 rounded-xl flex items-center justify-center mb-6 shadow-md'
-                style={{ background: 'linear-gradient(180deg, #3182ED 0%, #0E65D8 100%)' }}
-              >
+              <div className='w-14 h-14 rounded-xl flex items-center justify-center mb-6 shadow-md bg-[#0846AA]/60'>
                 <div className='relative w-8 h-8'>
                   <Image
                     src={item.icon}
@@ -58,7 +55,7 @@ export default function Solutions() {
                 </div>
               </div>
 
-              <h3 className='text-xl font-bold text-[#1D2530] mb-6'>{item.title}</h3>
+              <h3 className='text-xl font-bold text-[#0F1729]/80 mb-6'>{item.title}</h3>
 
               <div className='flex flex-col gap-4'>
                 {item.points.map((point, idx) => (

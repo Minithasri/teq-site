@@ -137,7 +137,7 @@ const ContextAndChallenge = () => {
             </p>
           </div>
           <div className='flex justify-center'>
-            <div className='bg-white rounded-[16px] shadow-[0_8px_40px_rgb(0,0,0,0.08)] border border-gray-100 p-8 md:p-10 w-full max-w-5xl'>
+            <div className='bg-white rounded-[16px] shadow-[0_4px_12px_rgb(0,0,0,0.08)] border-2 border-[#F5F5F5] p-8 md:p-10 w-full max-w-5xl'>
               <p className='text-[#000000] leading-[1.8] text-[15px] md:text-[16px] mb-6'>
                 A fast-growing fashion and apparel brand, needed a modern reporting framework to
                 stay competitive in the dynamic retail industry. With expanding product lines and
@@ -177,13 +177,15 @@ const ContextAndChallenge = () => {
             {challenges.map((challenge, index) => (
               <div
                 key={index}
-                className='bg-white rounded-[16px] shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-[#E2E8F0] p-6 flex items-start gap-4 transition-transform hover:-translate-y-1 duration-300'
+                className='bg-white rounded-[16px] shadow-[0_4px_12px_rgb(0,0,0,0.08)] border-2 border-[#F5F5F5] p-6 flex items-start gap-4'
               >
-                <div className='w-11 h-11 rounded-[10px] bg-[#FB5959] flex items-center justify-center shrink-0 mt-1 shadow-sm'>
+                <div className='w-11 h-11 rounded-[10px] bg-[#0846AA]/60 flex items-center justify-center shrink-0 mt-1'>
                   {challenge.icon}
                 </div>
                 <div className='flex flex-col'>
-                  <h4 className='font-bold text-[#0F1729] text-[16px] mb-2'>{challenge.title}</h4>
+                  <h4 className='font-bold text-[#0F1729]/80 text-[16px] mb-2'>
+                    {challenge.title}
+                  </h4>
                   <p className='text-[#64748B] text-[14px] leading-relaxed'>{challenge.desc}</p>
                 </div>
               </div>

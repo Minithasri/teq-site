@@ -40,12 +40,11 @@ export default function BusinessChallengeAndMetrics() {
       <div className='max-w-[1346px] mx-auto flex flex-col gap-10 md:gap-14'>
         {/* ================= 1. THE CHALLENGE CONTAINER ================= */}
         <div
-          className='relative overflow-hidden w-full p-6 md:p-8 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-8 min-h-[294px]'
+          className='relative overflow-hidden w-full p-6 md:p-8 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-8 min-h-[294px] border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
           style={{
             borderRadius: '16px',
             background:
               'linear-gradient(269.85deg, rgba(255, 255, 255, 0.15) 3.39%, rgba(246, 22, 26, 0.15) 67.96%)',
-            border: '1px solid rgba(98, 73, 223, 0.2)',
           }}
         >
           {/* Left Text Block */}
@@ -54,7 +53,7 @@ export default function BusinessChallengeAndMetrics() {
             <div className='flex items-center gap-3 mb-4 md:mb-6'>
               {/* 2. Icon Container */}
               <div
-                className='flex items-center justify-center text-white shrink-0'
+                className='flex items-center justify-center text-white shrink-0 '
                 style={{
                   width: '36px',
                   height: '36px',
@@ -137,12 +136,9 @@ export default function BusinessChallengeAndMetrics() {
             {metricCards.map((card, idx) => (
               <div
                 key={idx}
-                className='relative p-6 flex flex-col justify-between w-full max-w-[340px] sm:max-w-none h-[144px]'
+                className='relative p-6 flex flex-col justify-between w-full max-w-[340px] sm:max-w-none h-[144px] border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
                 style={{
                   borderRadius: '12px',
-                  background: 'linear-gradient(180deg, #FEE8E8 0%, #FFFFFF 100%)',
-                  border: '1px solid rgba(220, 223, 229, 1)',
-                  boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.02)',
                 }}
               >
                 {/* Card Header Top Row */}
@@ -154,7 +150,7 @@ export default function BusinessChallengeAndMetrics() {
 
                   {/* 8. Gradient Text Heading */}
                   <h3
-                    className='font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-[#300FD3] to-[#C254F8]'
+                    className='font-bold text-xl bg-clip-text text-[#0F1729]/80'
                     style={{
                       fontFamily: 'Poppins, sans-serif',
                     }}

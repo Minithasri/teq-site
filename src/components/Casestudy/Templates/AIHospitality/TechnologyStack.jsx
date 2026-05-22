@@ -29,9 +29,7 @@ export default function TechnologyStack() {
         <div className='bg-white rounded-[12px] shadow-lg p-[36px] max-w-[970px] mx-auto'>
           {/* Header & Logo Container */}
           <div className='flex flex-wrap items-center gap-[24px] mb-[28px]'>
-            <h2 className='text-[26px] font-extrabold text-[#071326] tracking-tight'>
-              Technology Stack
-            </h2>
+            <h2 className='text-[26px] font-extrabold tracking-tight'>Technology Stack</h2>
 
             <div className='flex items-center gap-[18px]'>
               {logos.map((logo, index) => (

@@ -7,8 +7,8 @@ const BusinessImpactSection = () => {
         {/* HEADER */}
         <div className='text-center'>
           {/* LABEL */}
-          <h2 className='text-3xl md:text-5xl leading-none font-semibold uppercase tracking-[1px] text-[#21D4C3]'>
-            BUSINESS IMPACT
+          <h2 className='text-3xl md:text-5xl leading-none font-semibold text-white tracking-[1px]'>
+            Business Impact
           </h2>
 
           {/* HEADING */}

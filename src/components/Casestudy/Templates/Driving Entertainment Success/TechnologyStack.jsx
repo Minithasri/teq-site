@@ -85,7 +85,7 @@ export default function TechnologyStack() {
             >
               {/* Card Title Layout */}
               <div className='flex items-center gap-3 mb-1'>
-                <span className='w-2 h-2 rounded-full bg-[#6249DF] shrink-0' />
+                <span className='w-2 h-2 rounded-full bg-black shrink-0' />
                 <h3
                   className='text-[18px] leading-[24px] md:text-[22px] md:leading-[30px] font-bold text-[#21242C]'
                   style={{ fontFamily: 'Poppins, sans-serif' }}

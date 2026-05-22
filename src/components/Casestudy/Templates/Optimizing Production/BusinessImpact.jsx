@@ -85,13 +85,13 @@ export default function BusinessImpact() {
           {impacts.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between'
+              className='bg-white rounded-xl p-6 border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)] flex flex-col justify-between'
             >
               <div className='flex items-center gap-3 mb-4'>
                 <div className='w-8 h-8 relative'>
                   <Image src={item.icon} alt={item.title} fill className='object-contain' />
                 </div>
-                <h3 className='text-lg font-bold text-[#1D2530]'>{item.title}</h3>
+                <h3 className='text-lg font-bold text-[#0F1729]/80'>{item.title}</h3>
               </div>
               <div className='space-y-2'>
                 <p className='text-sm text-[#64748B]'>
@@ -106,10 +106,7 @@ export default function BusinessImpact() {
         </div>
 
         {/* Key Outcomes Box */}
-        <div
-          className='relative bg-[#D4F5E2] rounded-3xl p-8 lg:p-12 border-2 shadow-lg'
-          style={{ borderColor: '#DAE0E7' }}
-        >
+        <div className='relative bg-[#D4F5E2] rounded-3xl p-8 lg:p-12 border-1 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'>
           <h3 className='text-2xl font-bold text-[#1D2530] mb-8 relative z-10'>Key Outcomes</h3>
           <div className='relative z-10 grid grid-cols-1 gap-6 max-w-3xl'>
             {outcomes.map((outcome, i) => (

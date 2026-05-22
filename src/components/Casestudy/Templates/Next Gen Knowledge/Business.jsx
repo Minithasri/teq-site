@@ -43,9 +43,9 @@ export default function Business() {
 
       <div className='max-w-7xl mx-auto relative z-10'>
         {/* Header Section */}
-        <div className='flex items-center justify-between mb-16'>
+        <div className='flex items-center justify-center mb-16'>
           <div>
-            <div className='flex items-center gap-3 mb-2'>
+            <div className='flex items-center gap-3 mb-2 justify-center text-center'>
               <Image
                 src='/images/Templates/template10/bustitle.svg'
                 alt='Business Impact Icon'
@@ -89,7 +89,7 @@ export default function Business() {
           {businessImpacts.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-xl p-6 shadow-sm border border-gray-100 grid grid-cols-1 md:grid-cols-12 gap-6 items-center hover:shadow-md transition-shadow'
+              className='bg-white rounded-xl p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] grid grid-cols-1 md:grid-cols-12 gap-6 items-center'
             >
               {/* Metric */}
               <div className='md:col-span-4 font-bold text-[#1D2530] text-lg'>{item.metric}</div>

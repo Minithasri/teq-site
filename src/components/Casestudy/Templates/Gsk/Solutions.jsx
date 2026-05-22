@@ -17,11 +17,9 @@ export default function Solutions() {
     <section className='w-full bg-white'>
       <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-8 md:py-10'>
         {/* Full-width title + description */}
-        <h2 className='text-2xl md:text-3xl font-bold mb-5' style={{ color: '#3E2FE2' }}>
-          Our Solution
-        </h2>
+        <h2 className='text-2xl md:text-3xl font-bold mb-5 text-center'>Our Solution</h2>
         <p
-          className='text-sm sm:text-[15px] lg:text-[16px] leading-relaxed mb-8 w-full'
+          className='text-sm sm:text-[15px] lg:text-[16px] leading-relaxed mb-8 w-full text-center'
           style={{ color: '#6C7C93' }}
         >
           We designed and delivered a comprehensive data engineering solution that automated

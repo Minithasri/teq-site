@@ -45,7 +45,7 @@ export default function EntertainmentSuccessHero() {
             className='font-bold text-[22px] leading-[28px] md:text-[32px] md:leading-[40px] lg:text-[45px] lg:leading-[45px] tracking-normal'
             style={{
               fontFamily: 'Poppins, sans-serif',
-              color: '#ECE254',
+              color: '#FFFFFF',
             }}
           >
             with Artist and Performance Dashboards
@@ -87,10 +87,9 @@ export default function EntertainmentSuccessHero() {
 
             {/* 4. Client Context Title */}
             <h3
-              className='font-bold text-[24px] leading-[28px] md:text-[30px] md:leading-[34px] lg:text-[34px] lg:leading-[32px] tracking-normal'
+              className='font-bold text-[24px] leading-[28px] md:text-[30px] md:leading-[34px] lg:text-[34px] lg:leading-[32px] tracking-normal text-center'
               style={{
                 fontFamily: 'Poppins, sans-serif',
-                color: '#21242C',
               }}
             >
               Client Context

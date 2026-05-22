@@ -80,8 +80,8 @@ const OverviewSection = () => {
         {/* ================= CLIENT OVERVIEW ================= */}
         <div className='text-center'>
           {/* LABEL */}
-          <h2 className='text-3xl md:text-6xl leading-none font-semibold uppercase tracking-[1px] text-[#35CDBD]'>
-            CLIENT OVERVIEW
+          <h2 className='text-3xl md:text-6xl leading-none font-semibold tracking-[1px]'>
+            Client Overview
           </h2>
 
           {/* DESCRIPTION */}
@@ -98,8 +98,8 @@ const OverviewSection = () => {
           {/* CENTER CONTENT */}
           <div className='mx-auto max-w-[720px] text-center'>
             {/* LABEL */}
-            <h2 className='text-3xl md:text-5xl leading-none font-semibold uppercase tracking-[1px] text-[#FF3131]'>
-              THE CHALLENGE
+            <h2 className='text-3xl md:text-5xl leading-none font-semibold tracking-[1px]'>
+              The Challenge
             </h2>
 
             {/* HEADING */}
@@ -109,7 +109,7 @@ const OverviewSection = () => {
           </div>
 
           {/* CHALLENGE BOX */}
-          <div className='relative z-10 mx-auto mt-8 w-full max-w-[680px] md:max-w-[800px] rounded-[10px] border-2 border-[#FF3B3B] bg-white px-5 md:px-7 py-5 md:py-6'>
+          <div className='relative z-10 mx-auto mt-8 w-full max-w-[680px] md:max-w-[800px] rounded-[10px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-white px-5 md:px-7 py-5 md:py-6'>
             <div className='space-y-5'>
               {challenges.map((item, index) => (
                 <div key={index} className='flex items-start gap-3'>
@@ -135,8 +135,8 @@ const OverviewSection = () => {
         {/* ================= SOLUTION SECTION ================= */}
         <div className='mt-16 md:mt-24 text-center'>
           {/* LABEL */}
-          <h2 className='text-3xl md:text-5xl leading-none font-semibold uppercase tracking-[1px] text-[#6A4DFF]'>
-            OUR SOLUTION
+          <h2 className='text-3xl md:text-5xl leading-none font-semibold tracking-[1px]'>
+            Our Solution
           </h2>
 
           {/* HEADING */}
@@ -156,12 +156,12 @@ const OverviewSection = () => {
           {solutionCards.map((card, index) => (
             <div
               key={index}
-              className='min-h-[220px] rounded-[12px] border border-[#6A4DFF] bg-white px-6 py-6'
+              className='min-h-[220px] rounded-[12px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-white px-6 py-6'
             >
               {/* TOP */}
               <div className='flex items-center gap-4'>
                 {/* ICON */}
-                <div className='flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-[10px] border border-[#6A4DFF]'>
+                <div className='flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-[10px]  bg-violet-100'>
                   <Image
                     src={card.icon}
                     alt={card.title}
@@ -172,7 +172,7 @@ const OverviewSection = () => {
                 </div>
 
                 {/* TITLE */}
-                <h4 className='text-md md:text-xl font-medium leading-[1.5] text-[#6A4DFF]'>
+                <h4 className='text-md md:text-xl font-medium leading-[1.5] text-[#0F1729]/80'>
                   {card.title}
                 </h4>
               </div>

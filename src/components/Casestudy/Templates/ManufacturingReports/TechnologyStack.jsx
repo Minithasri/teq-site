@@ -38,7 +38,7 @@ export default function TechnologyStack() {
           {techStack.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-[12px] border border-gray-100 shadow-[0_4px_25px_rgba(0,0,0,0.02)] p-6 md:p-[32px] flex flex-col items-center text-center justify-start min-h-[240px]'
+              className='bg-white rounded-[12px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-6 md:p-[32px] flex flex-col items-center text-center justify-start min-h-[240px]'
             >
               {/* Blue Colored Icon Wrapper Box */}
               <div className='w-[64px] h-[64px] shrink-0 mb-4 flex items-center justify-center select-none pointer-events-none'>

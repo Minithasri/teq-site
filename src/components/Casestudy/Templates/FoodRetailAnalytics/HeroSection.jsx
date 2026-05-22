@@ -7,7 +7,7 @@ export default function HeroSection() {
           <h1 className='text-white text-[32px] sm:text-[38px] md:text-[46px] lg:text-[46px] font-extrabold leading-[1.15] tracking-tight'>
             Boosting Food Retail Performance
             <br />
-            with <span className='text-[#fff02a]'>Real-Time Analytics</span>
+            with Real-Time Analytics
           </h1>
         </div>
 

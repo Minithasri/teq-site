@@ -49,7 +49,7 @@ export default function Technology() {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className='bg-white rounded-2xl p-6 border border-[#E5E7EB] transition-transform duration-300 flex flex-col justify-between group h-full'
+              className='bg-white rounded-2xl p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex flex-col justify-between group h-full'
             >
               <div className='flex justify-between items-start mb-4'>
                 <span className='inline-block px-4 py-2 bg-[#11B7D4] text-white text-sm font-semibold rounded-full self-start'>

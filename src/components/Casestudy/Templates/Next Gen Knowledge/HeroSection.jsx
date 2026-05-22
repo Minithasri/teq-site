@@ -29,12 +29,7 @@ const HeroSection = () => {
         </div>
 
         {/* Title */}
-        <h1
-          className='text-[44px] md:text-[52px] lg:text-[56px] font-bold mb-2 tracking-tight leading-tight text-transparent bg-clip-text'
-          style={{
-            backgroundImage: 'linear-gradient(90deg, #A2D0FF 0%, #00C0FF 100%)',
-          }}
-        >
+        <h1 className='text-[44px] md:text-[52px] lg:text-[56px] font-bold mb-2 tracking-tight leading-tight text-white'>
           Next-Gen Knowledge
           <br />
           Engine on Azure

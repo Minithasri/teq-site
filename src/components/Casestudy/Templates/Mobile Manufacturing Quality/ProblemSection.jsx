@@ -71,7 +71,7 @@ export default function ProblemSection() {
           {challenges.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-xl p-6 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow'
+              className='bg-white rounded-xl p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center gap-4 '
             >
               <div className='flex-shrink-0 w-12 h-12 relative'>
                 <Image src={item.icon} alt='Icon' fill className='object-contain' />

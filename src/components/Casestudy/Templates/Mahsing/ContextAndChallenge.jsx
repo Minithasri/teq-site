@@ -11,8 +11,8 @@ const ContextAndChallenge = () => {
     <section className='w-full flex flex-col'>
       {/* Client Context Section */}
       <div className='bg-white py-20 w-full relative'>
-        <div className='max-w-8xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <h2 className='text-[32px] font-bold text-[#1e3a8a] mb-4'>Client Context</h2>
+        <div className='max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-[32px] font-bold mb-4'>Client Context</h2>
 
           <div className='flex flex-col lg:flex-row items-center relative'>
             {/* Text Box */}
@@ -79,7 +79,7 @@ const ContextAndChallenge = () => {
               {painPoints.slice(0, 3).map((point, index) => (
                 <div
                   key={index}
-                  className='bg-white rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-50 p-5 flex items-start gap-4 w-full md:w-[32%]'
+                  className='bg-white rounded-xl border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-5 flex items-start gap-4 w-full md:w-[32%]'
                 >
                   <div className='w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-0.5'>
                     <svg
@@ -107,7 +107,7 @@ const ContextAndChallenge = () => {
               {painPoints.slice(3, 5).map((point, index) => (
                 <div
                   key={index + 3}
-                  className='bg-white rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-50 p-6 flex items-start gap-4 w-full md:w-[50%]'
+                  className='bg-white rounded-xl border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-6 flex items-start gap-4 w-full md:w-[50%]'
                 >
                   <div className='w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-0.5'>
                     <svg

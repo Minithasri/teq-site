@@ -12,7 +12,7 @@ const HeroSection = () => {
           <div>
             {/* TITLE */}
             <h1 className='max-w-5xl text-4xl font-semibold leading-tight tracking-tight text-white md:text-5xl'>
-              Unified <span className='text-[#E4F11A]'>Travel Analytics</span> Platform
+              Unified Travel Analytics Platform
               <br />
               Implementation
             </h1>

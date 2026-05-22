@@ -25,8 +25,7 @@ const HeroSection = () => {
         <div className='relative z-20 mx-auto max-w-7xl px-4 md:px-6 pt-24 pb-16 text-center'>
           {/* TITLE */}
           <h1 className='mx-auto max-w-7xl text-3xl md:text-6xl leading-[1.1] font-semibold tracking-[-2px] text-white'>
-            AI-Driven Submittal Extraction from{' '}
-            <span className='text-[#F4E63D]'>Construction Specbooks</span>
+            AI-Driven Submittal Extraction from Construction Specbooks
           </h1>
 
           {/* DESCRIPTION */}

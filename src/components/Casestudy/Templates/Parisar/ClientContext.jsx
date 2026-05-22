@@ -16,13 +16,13 @@ const ClientContext = () => {
         <div className='text-center mb-16'>
           <h2 className='text-[32px] font-bold text-[#0F1729] mb-3'>Client Context</h2>
           <p className='text-[#64748B] text-[18px]'>
-            Understanding the client's operational landscape
+            Understanding the client&rsquo;s operational landscape
           </p>
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto'>
           {/* Card 1 */}
-          <div className='bg-white/90 backdrop-blur-md rounded-[12px] p-8 border border-[#DCE0E5] shadow-sm h-full flex flex-col'>
+          <div className='bg-white/90 backdrop-blur-md rounded-[12px] p-8 border-2 border-[#F5F5F5] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] h-full flex flex-col'>
             <div className='flex items-center gap-4 mb-4'>
               <svg
                 width='28'
@@ -41,7 +41,7 @@ const ClientContext = () => {
                 <path d='M9 13v.01'></path>
                 <path d='M9 17v.01'></path>
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>Large Fleet Network</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>Large Fleet Network</h3>
             </div>
             <p className='text-[#64748B] text-[14px] leading-relaxed'>
               Client manages an extensive network of vehicles and routes across the region.
@@ -49,7 +49,7 @@ const ClientContext = () => {
           </div>
 
           {/* Card 2 */}
-          <div className='bg-white/90 backdrop-blur-md rounded-[12px] p-8 border border-[#DCE0E5] shadow-sm h-full flex flex-col'>
+          <div className='bg-white/90 backdrop-blur-md rounded-[12px] p-8 border-2 border-[#F5F5F5] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] h-full flex flex-col'>
             <div className='flex items-center gap-4 mb-4'>
               <svg
                 width='28'
@@ -66,7 +66,7 @@ const ClientContext = () => {
                 <path d='M22 21v-2a4 4 0 0 0-3-3.87'></path>
                 <path d='M16 3.13a4 4 0 0 1 0 7.75'></path>
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>Service Reliability Focus</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>Service Reliability Focus</h3>
             </div>
             <p className='text-[#64748B] text-[14px] leading-relaxed'>
               Leadership needed better visibility into fleet performance to maintain reliable
@@ -75,7 +75,7 @@ const ClientContext = () => {
           </div>
 
           {/* Card 3 */}
-          <div className='bg-white/90 backdrop-blur-md rounded-[12px] p-8 border border-[#DCE0E5] shadow-sm h-full flex flex-col'>
+          <div className='bg-white/90 backdrop-blur-md rounded-[12px] p-8 border-2 border-[#F5F5F5] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] h-full flex flex-col'>
             <div className='flex items-center gap-4 mb-4'>
               <svg
                 width='28'
@@ -90,7 +90,9 @@ const ClientContext = () => {
                 <path d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'></path>
                 <circle cx='12' cy='10' r='3'></circle>
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>Static Reporting Challenge</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>
+                Static Reporting Challenge
+              </h3>
             </div>
             <p className='text-[#64748B] text-[14px] leading-relaxed'>
               Historical performance tracking relied on manual updates and static reports.

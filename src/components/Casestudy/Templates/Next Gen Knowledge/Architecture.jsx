@@ -58,7 +58,7 @@ export default function Architecture() {
       <div className='max-w-7xl mx-auto relative z-10'>
         {/* Header */}
         <div className='mb-12'>
-          <div className='flex items-center gap-3 mb-4'>
+          <div className='flex items-center gap-3 mb-4 justify-center text-center'>
             <Image
               src='/images/Templates/template10/archicon.svg'
               alt='Architecture'
@@ -67,7 +67,7 @@ export default function Architecture() {
             />
             <h2 className='text-3xl font-bold text-gray-900'>Architecture Overview</h2>
           </div>
-          <p className='text-gray-500 text-lg'>
+          <p className='text-gray-500 text-lg text-center'>
             A comprehensive multi-layer architecture built on Azure-native services
           </p>
         </div>
@@ -87,15 +87,17 @@ export default function Architecture() {
                   height={24}
                 />
               </div>
-              <h3 className='font-bold text-gray-900 text-lg mb-3 pr-8'>{step.title}</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-lg mb-3 pr-8'>{step.title}</h3>
               <p className='text-gray-500 text-sm leading-relaxed'>{step.description}</p>
             </div>
           ))}
         </div>
 
         {/* Core Solution Highlights Card */}
-        <div className='bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100 relative'>
-          <h3 className='text-2xl font-bold text-gray-900 mb-8'>Core Solution Highlights</h3>
+        <div className='bg-white rounded-2xl p-8 md:p-12 shadow-sm border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)] relative'>
+          <h3 className='text-2xl font-bold text-gray-900 mb-8 text-center'>
+            Core Solution Highlights
+          </h3>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12 relative z-10'>
             {highlights.map((highlight, idx) => (

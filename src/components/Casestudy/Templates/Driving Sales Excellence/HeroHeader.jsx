@@ -31,14 +31,7 @@ export default function SalesExcellenceHero() {
           }}
           className='text-white mb-10 sm:mb-14 md:mb-20 tracking-tight text-[32px] sm:text-[42px] md:text-[56.1px]'
         >
-          Driving Sales Excellence with{' '}
-          <span
-            style={{
-              color: '#EFFF3C',
-            }}
-          >
-            Validated Data
-          </span>
+          Driving Sales Excellence with Validated Data
         </h1>
 
         {/* Subheadline Description */}

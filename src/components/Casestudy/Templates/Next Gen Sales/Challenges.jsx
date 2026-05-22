@@ -43,10 +43,9 @@ export default function Challenges() {
         {/* 2. Title - THE CHALLENGE */}
         <div className='mb-10'>
           <h2
-            className='font-bold text-center uppercase'
+            className='font-bold text-center '
             style={{
-              fontSize: '32px',
-              color: '#FC3030C2',
+              fontSize: '42px',
               letterSpacing: '1.4px',
               lineHeight: '20px',
             }}
@@ -57,7 +56,7 @@ export default function Challenges() {
 
         {/* 3. Subtitle - A Fragmented Campaign Ecosystem */}
         <h3
-          className='font-bold text-[#1D2530] text-center mb-4'
+          className='font-bold text-[#0F1729]/80 text-center mb-4'
           style={{
             fontSize: '30px',
             lineHeight: '36px',
@@ -87,24 +86,22 @@ export default function Challenges() {
           {challenges.map((item, index) => (
             <div
               key={index}
-              className='bg-white flex flex-col p-8'
+              className='bg-white flex flex-col p-8 rounded-[12px] shadow-[0px_8px_22px_rgba(0,0,0,0.08)] border-2 border-[#F5F5F5]'
               style={{
                 width: '100%',
                 maxWidth: '454px',
                 minHeight: '183.5px',
-                borderRadius: '12px',
-                border: '1px solid #F90606', // Softened the red border to match image
                 margin: '0 auto',
               }}
             >
               <div className='flex items-start gap-4 mb-3'>
                 {/* Icon Container with light background */}
-                <div className='flex-shrink-0 w-10 h-10 rounded-xl bg-[#FDE0E0]  flex items-center justify-center border border-[#FD5151]'>
+                <div className='flex-shrink-0 w-10 h-10 rounded-xl bg-[#FDE0E0]  flex items-center justify-center'>
                   {item.icon}
                 </div>
 
                 <h4
-                  className='font-bold text-[#FC3030] pt-1'
+                  className='font-bold text-[#0F1729]/80 pt-1'
                   style={{ fontSize: '22px', lineHeight: '1.2' }}
                 >
                   {item.title}

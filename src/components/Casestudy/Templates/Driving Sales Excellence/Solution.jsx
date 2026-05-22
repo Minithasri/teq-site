@@ -91,17 +91,14 @@ export default function SolutionSection() {
           {solutionCards.slice(0, 3).map((card, idx) => (
             <div
               key={idx}
-              className='bg-white p-5 sm:p-6 flex flex-col justify-start'
+              className='bg-white p-5 sm:p-6 flex flex-col justify-start border-2 border-[#F5F5F5] rounded-[12px] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
               style={{
                 minHeight: '190px',
-                borderRadius: '12px',
-                boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.01), 0px 2px 6px rgba(0, 0, 0, 0.02)',
-                border: '1px solid #F1F5F9',
               }}
             >
               <div className='flex items-start gap-3 sm:gap-4 mb-3'>
                 <div
-                  className='flex items-center justify-center rounded-lg shrink-0'
+                  className='flex items-center justify-center rounded-lg shrink-0 rounded-[12px]'
                   style={{
                     width: '42px',
                     height: '42px',
@@ -116,9 +113,8 @@ export default function SolutionSection() {
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: 700,
                     lineHeight: '26px',
-                    color: '#0F172A',
                   }}
-                  className='tracking-tight pt-1 text-[20px] sm:text-[22px] md:text-[24px] w-full md:w-[60%]'
+                  className='tracking-tight pt-1 text-[20px] sm:text-[22px] md:text-[24px] w-full md:w-[60%] text-[#0F1729]/80'
                 >
                   {card.title}
                 </h4>
@@ -143,17 +139,14 @@ export default function SolutionSection() {
           {solutionCards.slice(3, 5).map((card, idx) => (
             <div
               key={idx + 3}
-              className='bg-white p-5 sm:p-6 flex flex-col justify-start'
+              className='bg-white p-5 sm:p-6 flex flex-col justify-start border-2 border-[#F5F5F5] rounded-[12px] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
               style={{
                 minHeight: '190px',
-                borderRadius: '12px',
-                boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.01), 0px 2px 6px rgba(0, 0, 0, 0.02)',
-                border: '1px solid #F1F5F9',
               }}
             >
               <div className='flex items-start gap-3 sm:gap-4 mb-3'>
                 <div
-                  className='flex items-center justify-center rounded-lg shrink-0'
+                  className='flex items-center justify-center rounded-lg shrink-0 rounded-[12px]'
                   style={{
                     width: '40px',
                     height: '40px',
@@ -170,7 +163,7 @@ export default function SolutionSection() {
                     lineHeight: '26px',
                     color: '#0F172A',
                   }}
-                  className='tracking-tight pt-1 text-[20px] sm:text-[22px] md:text-[24px]'
+                  className='tracking-tight pt-1 text-[20px] sm:text-[22px] md:text-[24px] text-[#0F1729]/80'
                 >
                   {card.title}
                 </h4>

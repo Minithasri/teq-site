@@ -48,8 +48,8 @@ const HeroSection = () => {
       <div className='bg-[#477DDA]'>
         <div className='mx-auto max-w-7xl px-4 md:px-6 pt-24 pb-10 md:pb-12'>
           {/* TITLE */}
-          <h1 className='max-w-6xl text-3xl md:text-5xl leading-[1.05] font-semibold tracking-[-2px] text-[#0B1020]'>
-            Automated <span className='text-[#7DF45B]'>Asset & Project Reporting</span> Platform
+          <h1 className='max-w-6xl text-3xl md:text-5xl leading-[1.05] font-semibold tracking-[-2px] text-white'>
+            Automated Asset & Project Reporting Platform
           </h1>
 
           {/* SUBTITLE */}
@@ -69,14 +69,13 @@ const HeroSection = () => {
       {/* BOTTOM SECTION */}
       <div className='relative mx-auto max-w-7xl px-4 md:px-6 pt-8 md:pt-10 pb-10 md:pb-12'>
         {/* TOP CONTENT */}
+        {/* LABEL */}
+        <h2 className='font-poppins text-[28px] md:text-[42px] leading-none font-bold tracking-tight text-center'>
+          The Challenge
+        </h2>
         <div className='flex items-start justify-between'>
           {/* LEFT SIDE */}
           <div>
-            {/* LABEL */}
-            <h2 className='font-poppins text-[28px] md:text-[42px] leading-none font-bold uppercase tracking-tight text-[#FF2020]'>
-              THE CHALLENGE
-            </h2>
-
             {/* HEADING */}
             <h3 className='mt-6 font-poppins max-w-4xl text-2xl md:text-4xl leading-[1.1] tracking-[-2px] text-[#111827]'>
               From Spreadsheet Complexity to Portfolio Intelligence
@@ -86,7 +85,7 @@ const HeroSection = () => {
           {/* DESKTOP IMAGE */}
           <div className='relative hidden md:block w-[320px] flex-shrink-0'>
             {/* BACK IMAGE */}
-            <div className='absolute -top-10 -right-48 overflow-hidden opacity-90'>
+            <div className='absolute -top-20 -right-48 overflow-hidden opacity-90'>
               <Image
                 src='/images/Templates/z-hy-24/sunset-sky-powers-wind.png'
                 alt='Background Energy'
@@ -98,7 +97,7 @@ const HeroSection = () => {
             </div>
 
             {/* FRONT IMAGE */}
-            <div className='relative -top-6 -right-[200px] overflow-hidden rounded-2xl'>
+            <div className='relative -top-10 -right-[200px] overflow-hidden rounded-2xl'>
               <Image
                 src='/images/Templates/z-hy-24/sunset-sky-powers-wind.png'
                 alt='Energy'
@@ -126,7 +125,7 @@ const HeroSection = () => {
         </div>
 
         {/* DESCRIPTION */}
-        <p className='font-poppins leading-[1.6] text-[#7A7F8C]'>
+        <p className='font-poppins leading-[1.6] text-[#7A7F8C] text-center'>
           The firm&apos;s reporting infrastructure relied on fragile Excel-based workflows, creating
           systemic risks across its clean energy investment portfolio.
         </p>
@@ -136,7 +135,7 @@ const HeroSection = () => {
           {challengeCards.map((card, index) => (
             <div
               key={index}
-              className='rounded-[16px] border-l-[3px] border-[#FF4B4B] bg-[#FAFAFA] px-6 py-5'
+              className='rounded-[16px] border-l-[3px] border-[#FF4B4B] shadow-[0_4px_12px_0px_rgba(0,0,0,0.08)] px-6 py-5'
             >
               {/* HEADER */}
               <div className='flex items-center gap-3'>
@@ -148,7 +147,7 @@ const HeroSection = () => {
                   className='h-6 w-6 md:h-8 md:w-8 object-contain'
                 />
 
-                <h4 className='text-[16px] md:text-[18px] font-semibold text-[#FF4B4B]'>
+                <h4 className='text-[16px] md:text-[18px] font-semibold text-[#0F1729]/80'>
                   {card.title}
                 </h4>
               </div>
@@ -159,7 +158,7 @@ const HeroSection = () => {
               </p>
 
               {/* FOOT NOTE */}
-              <p className='mt-8 text-[13px] text-[#FF4B4B]'>{card.note}</p>
+              <p className='mt-8 text-[13px] text-[#0F1729]/80'>{card.note}</p>
             </div>
           ))}
         </div>

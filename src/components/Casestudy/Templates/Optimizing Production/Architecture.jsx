@@ -43,9 +43,7 @@ export default function Architecture() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
         {/* Header */}
         <div className='text-center mb-16'>
-          <h2 className='text-3xl lg:text-4xl font-bold text-[#1D2530] mb-4'>
-            Architecture Overview
-          </h2>
+          <h2 className='text-3xl lg:text-4xl font-bold mb-4'>Architecture Overview</h2>
           <p className='text-[#64748B] text-lg lg:text-xl max-w-4xl mx-auto'>
             A comprehensive data pipeline from collection to actionable insights.
           </p>
@@ -56,7 +54,7 @@ export default function Architecture() {
           {steps.map((step, index) => (
             <div key={index} className='flex flex-col lg:flex-row items-center w-full'>
               {/* Card */}
-              <div className='bg-white rounded-xl p-6 shadow-sm border border-gray-100 w-full lg:w-[290px] h-[230px] flex flex-col'>
+              <div className='bg-white rounded-xl p-6 border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)] w-full lg:w-[290px] h-[230px] flex flex-col'>
                 <div
                   className='w-14 h-14 rounded-xl flex items-center justify-center mb-6'
                   style={{ backgroundColor: step.bgColor }}
@@ -65,7 +63,9 @@ export default function Architecture() {
                     <Image src={step.icon} alt={step.title} fill className='object-contain' />
                   </div>
                 </div>
-                <h3 className='text-lg font-bold text-[#1D2530] mb-3 leading-snug'>{step.title}</h3>
+                <h3 className='text-lg font-bold text-[#0F1729]/80 mb-3 leading-snug'>
+                  {step.title}
+                </h3>
                 <p className='text-[#64748B] text-sm leading-relaxed'>{step.description}</p>
               </div>
 

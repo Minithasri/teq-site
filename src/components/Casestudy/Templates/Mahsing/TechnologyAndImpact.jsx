@@ -39,9 +39,9 @@ const TechnologyAndImpact = () => {
         {/* Tech Cards */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 max-w-5xl mx-auto'>
           {/* Card 1 */}
-          <div className='bg-white rounded-[16px] p-6 shadow-[0_4px_24px_rgb(0,0,0,0.04)] border border-gray-200 flex flex-col items-start shadow-[0_4px_24px_rgb(0,0,0,0.04)] hover:shadow-lg transition-all duration-300'>
+          <div className='bg-white rounded-[16px] p-6 border-2 border-[#F5F5F5] flex flex-col items-start shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-lg transition-all duration-300'>
             <div className='flex items-center gap-4 mb-4'>
-              <div className='w-[50px] h-[50px] rounded-[10px] bg-gradient-to-b from-[#0B2E79] to-[#00DAE6] flex items-center justify-center shrink-0'>
+              <div className='w-[50px] h-[50px] rounded-[10px] bg-[#0846AA]/60 flex items-center justify-center shrink-0'>
                 <svg
                   width='20'
                   height='20'
@@ -63,9 +63,9 @@ const TechnologyAndImpact = () => {
             <p className='text-gray-500 text-[20px]'>Dashboards & visualization</p>
           </div>
           {/* Card 2 */}
-          <div className='bg-white rounded-[16px] p-6 shadow-[0_4px_24px_rgb(0,0,0,0.04)] border border-gray-200 flex flex-col items-start shadow-[0_4px_24px_rgb(0,0,0,0.04)] hover:shadow-lg transition-all duration-300'>
+          <div className='bg-white rounded-[16px] p-6 border-2 border-[#F5F5F5] flex flex-col items-start shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-lg transition-all duration-300'>
             <div className='flex items-center gap-4 mb-4'>
-              <div className='w-[50px] h-[50px] rounded-[10px] bg-gradient-to-b from-[#0B2E79] to-[#00DAE6] flex items-center justify-center shrink-0'>
+              <div className='w-[50px] h-[50px] rounded-[10px] bg-[#0846AA]/60 flex items-center justify-center shrink-0'>
                 <svg
                   width='20'
                   height='20'
@@ -86,9 +86,9 @@ const TechnologyAndImpact = () => {
             <p className='text-gray-500 text-[15px]'>Survey data integration</p>
           </div>
           {/* Card 3 */}
-          <div className='bg-white rounded-[16px] p-6 shadow-[0_4px_24px_rgb(0,0,0,0.04)] border border-gray-200 flex flex-col items-start shadow-[0_4px_24px_rgb(0,0,0,0.04)] hover:shadow-lg transition-all duration-300'>
+          <div className='bg-white rounded-[16px] p-6 border-2 border-[#F5F5F5] flex flex-col items-start shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-lg transition-all duration-300'>
             <div className='flex items-center gap-4 mb-4'>
-              <div className='w-[50px] h-[50px] rounded-[10px] bg-gradient-to-b from-[#0B2E79] to-[#00DAE6] flex items-center justify-center shrink-0'>
+              <div className='w-[50px] h-[50px] rounded-[10px] bg-[#0846AA]/60 flex items-center justify-center shrink-0'>
                 <svg
                   width='20'
                   height='20'
@@ -123,10 +123,10 @@ const TechnologyAndImpact = () => {
         {/* Impact Cards */}
         <div className='flex flex-col gap-6 max-w-5xl mx-auto mb-12'>
           {/* Operational Impact */}
-          <div className='bg-white rounded-[16px] p-8 shadow-[0_4px_24px_rgb(0,0,0,0.06)] border border-gray-100 flex flex-col md:flex-row items-start md:items-center gap-8 hover:shadow-lg transition-all duration-300'>
+          <div className='bg-white rounded-[16px] p-8 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex flex-col md:flex-row items-start md:items-center gap-8 hover:shadow-lg transition-all duration-300'>
             {/* Left Header */}
             <div className='flex items-center gap-4 w-full md:w-[260px] shrink-0'>
-              <div className='w-[44px] h-[44px] rounded-[12px] bg-[#00DAE6] flex items-center justify-center shrink-0'>
+              <div className='w-[44px] h-[44px] rounded-[12px] bg-[#0846AA]/60 flex items-center justify-center shrink-0'>
                 <svg
                   width='20'
                   height='20'
@@ -145,19 +145,19 @@ const TechnologyAndImpact = () => {
             {/* Right Bullets */}
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 w-full'>
               <div className='flex items-start gap-2'>
-                <div className='w-1.5 h-1.5 rounded-full bg-[#00DAE6] mt-2 shrink-0'></div>
+                <div className='w-1.5 h-1.5 rounded-full bg-black mt-2 shrink-0'></div>
                 <p className='text-[#151515] text-[14px] leading-snug'>
                   Reduced feedback reporting cycle from weeks → near real-time
                 </p>
               </div>
               <div className='flex items-start gap-2'>
-                <div className='w-1.5 h-1.5 rounded-full bg-[#00DAE6] mt-2 shrink-0'></div>
+                <div className='w-1.5 h-1.5 rounded-full bg-black mt-2 shrink-0'></div>
                 <p className='text-[#151515] text-[14px] leading-snug'>
                   Improved defect resolution time through early visibility
                 </p>
               </div>
               <div className='flex items-start gap-2'>
-                <div className='w-1.5 h-1.5 rounded-full bg-[#00DAE6] mt-2 shrink-0'></div>
+                <div className='w-1.5 h-1.5 rounded-full bg-black mt-2 shrink-0'></div>
                 <p className='text-[#151515] text-[14px] leading-snug'>
                   Enhanced handover experience with data-driven insights
                 </p>
@@ -166,10 +166,10 @@ const TechnologyAndImpact = () => {
           </div>
 
           {/* Customer Impact */}
-          <div className='bg-white rounded-[16px] p-8 shadow-[0_4px_24px_rgb(0,0,0,0.06)] border border-gray-100 flex flex-col md:flex-row items-start md:items-center gap-8 hover:shadow-lg transition-all duration-300'>
+          <div className='bg-white rounded-[16px] p-8 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex flex-col md:flex-row items-start md:items-center gap-8 hover:shadow-lg transition-all duration-300'>
             {/* Left Header */}
             <div className='flex items-center gap-4 w-full md:w-[260px] shrink-0'>
-              <div className='w-[44px] h-[44px] rounded-[12px] bg-[#21C45D] flex items-center justify-center shrink-0'>
+              <div className='w-[44px] h-[44px] rounded-[12px] bg-[#0846AA]/60 flex items-center justify-center shrink-0'>
                 <svg
                   width='20'
                   height='20'
@@ -191,19 +191,19 @@ const TechnologyAndImpact = () => {
             {/* Right Bullets */}
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 w-full'>
               <div className='flex items-start gap-2'>
-                <div className='w-1.5 h-1.5 rounded-full bg-[#00DAE6] mt-2 shrink-0'></div>
+                <div className='w-1.5 h-1.5 rounded-full bg-black mt-2 shrink-0'></div>
                 <p className='text-[#151515] text-[14px] leading-snug'>
                   Strengthened customer trust by acting on survey results faster
                 </p>
               </div>
               <div className='flex items-start gap-2'>
-                <div className='w-1.5 h-1.5 rounded-full bg-[#00DAE6] mt-2 shrink-0'></div>
+                <div className='w-1.5 h-1.5 rounded-full bg-black mt-2 shrink-0'></div>
                 <p className='text-[#151515] text-[14px] leading-snug'>
                   Improved transparency in defect and refund management
                 </p>
               </div>
               <div className='flex items-start gap-2'>
-                <div className='w-1.5 h-1.5 rounded-full bg-[#00DAE6] mt-2 shrink-0'></div>
+                <div className='w-1.5 h-1.5 rounded-full bg-black mt-2 shrink-0'></div>
                 <p className='text-[#151515] text-[14px] leading-snug'>
                   Higher satisfaction during property handovers
                 </p>
@@ -212,10 +212,10 @@ const TechnologyAndImpact = () => {
           </div>
 
           {/* Strategic Impact */}
-          <div className='bg-white rounded-[16px] p-8 shadow-[0_4px_24px_rgb(0,0,0,0.06)] border border-gray-100 flex flex-col md:flex-row items-start md:items-center gap-8 hover:shadow-lg transition-all duration-300'>
+          <div className='bg-white rounded-[16px] p-8 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex flex-col md:flex-row items-start md:items-center gap-8 hover:shadow-lg transition-all duration-300'>
             {/* Left Header */}
             <div className='flex items-center gap-4 w-full md:w-[260px] shrink-0'>
-              <div className='w-[44px] h-[44px] rounded-[12px] bg-[#0B2E79] flex items-center justify-center shrink-0'>
+              <div className='w-[44px] h-[44px] rounded-[12px] bg-[#0846AA]/60 flex items-center justify-center shrink-0'>
                 <svg
                   width='20'
                   height='20'
@@ -236,19 +236,19 @@ const TechnologyAndImpact = () => {
             {/* Right Bullets */}
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 w-full'>
               <div className='flex items-start gap-2'>
-                <div className='w-1.5 h-1.5 rounded-full bg-[#00DAE6] mt-2 shrink-0'></div>
+                <div className='w-1.5 h-1.5 rounded-full bg-black mt-2 shrink-0'></div>
                 <p className='text-[#151515] text-[14px] leading-snug'>
                   Established a data-driven culture in customer satisfaction tracking
                 </p>
               </div>
               <div className='flex items-start gap-2'>
-                <div className='w-1.5 h-1.5 rounded-full bg-[#00DAE6] mt-2 shrink-0'></div>
+                <div className='w-1.5 h-1.5 rounded-full bg-black mt-2 shrink-0'></div>
                 <p className='text-[#151515] text-[14px] leading-snug'>
                   Positioned Mah Sing as a customer-first property developer
                 </p>
               </div>
               <div className='flex items-start gap-2'>
-                <div className='w-1.5 h-1.5 rounded-full bg-[#00DAE6] mt-2 shrink-0'></div>
+                <div className='w-1.5 h-1.5 rounded-full bg-black mt-2 shrink-0'></div>
                 <p className='text-[#151515] text-[14px] leading-snug'>
                   Created a foundation for continuous improvement across projects
                 </p>
@@ -260,18 +260,18 @@ const TechnologyAndImpact = () => {
         {/* Stats Row */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'>
           {/* Stat 1 */}
-          <div className='bg-[#E0F2FE] border border-[#00DAE61A] rounded-[12px] py-10 flex flex-col items-center justify-center text-center shadow-sm'>
-            <h4 className='text-[40px] font-bold text-[#00DAE6] mb-2 leading-none'>18</h4>
+          <div className='bg-white border-2 border-[#F5F5F5] rounded-[12px] py-10 flex flex-col items-center justify-center text-center shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
+            <h4 className='text-[40px] font-bold text-[#0F1729]/80 mb-2 leading-none'>18</h4>
             <p className='text-[#0F1729] text-[15px]'>Months of Data Analyzed</p>
           </div>
           {/* Stat 2 */}
-          <div className='bg-[#ECFDF5] border border-[#21C45D0D] rounded-[12px] py-10 flex flex-col items-center justify-center text-center shadow-sm'>
-            <h4 className='text-[40px] font-bold text-[#21C45D] mb-2 leading-none'>Real-time</h4>
+          <div className='bg-white border-2 border-[#F5F5F5] rounded-[12px] py-10 flex flex-col items-center justify-center text-center shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
+            <h4 className='text-[40px] font-bold text-[#0F1729]/80 mb-2 leading-none'>Real-time</h4>
             <p className='text-[#0F1729] text-[15px]'>Feedback Reporting</p>
           </div>
           {/* Stat 3 */}
-          <div className='bg-[#EEF2FF] border border-[#0B2E791A] rounded-[12px] py-10 flex flex-col items-center justify-center text-center shadow-sm'>
-            <h4 className='text-[40px] font-bold text-[#0B2E79] mb-2 leading-none'>100%</h4>
+          <div className='bg-white border-2 border-[#F5F5F5] rounded-[12px] py-10 flex flex-col items-center justify-center text-center shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
+            <h4 className='text-[40px] font-bold text-[#0F1729]/80 mb-2 leading-none'>100%</h4>
             <p className='text-[#0F1729] text-[15px]'>Data Visibility</p>
           </div>
         </div>

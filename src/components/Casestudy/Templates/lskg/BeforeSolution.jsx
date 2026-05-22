@@ -47,9 +47,9 @@ const BeforeSolution = () => {
           {painPoints.map((point, index) => (
             <div
               key={index}
-              className='bg-[#FFFFFF] rounded-[12px] p-[25px] border border-[#3C83F633] flex flex-col items-start transition-transform hover:-translate-y-1 duration-300'
+              className='bg-[#FFFFFF] rounded-[12px] p-[25px] border-2 border-[#F5F5F5] flex flex-col items-start shadow-[0px_4px_12px_rgba(0,0,0,0.08)]'
             >
-              <h4 className='text-[#3C83F6] font-bold text-[20px] mb-3'>{point.title}</h4>
+              <h4 className='text-[#0F1729]/80 font-bold text-[20px] mb-3'>{point.title}</h4>
               <p className='text-[#0F1729] text-[15px] leading-relaxed'>{point.desc}</p>
             </div>
           ))}

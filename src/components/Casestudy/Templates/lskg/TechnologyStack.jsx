@@ -63,20 +63,24 @@ const TechnologyStack = () => {
 
         {/* Cards */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'>
-          <div className='bg-white rounded-[12px] p-6 border border-[#3C83F633] shadow-md flex flex-col justify-center transition-all hover:shadow-md'>
-            <h4 className='font-bold text-[#0F1729] text-[16px] mb-2'>
+          <div className='bg-white rounded-[12px] p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex flex-col justify-center transition-all hover:shadow-md'>
+            <h4 className='font-bold text-[#0F1729]/80 text-[16px] mb-2'>
               Dashboards & visualization
             </h4>
             <p className='text-[#64748B] text-[14px] leading-relaxed'>Domo</p>
           </div>
-          <div className='bg-white rounded-[12px] p-6 border border-[#3C83F633] shadow-md flex flex-col justify-center transition-all hover:shadow-md'>
-            <h4 className='font-bold text-[#0F1729] text-[16px] mb-2'>Data integration systems</h4>
+          <div className='bg-white rounded-[12px] p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex flex-col justify-center transition-all hover:shadow-md'>
+            <h4 className='font-bold text-[#0F1729]/80 text-[16px] mb-2'>
+              Data integration systems
+            </h4>
             <p className='text-[#64748B] text-[14px] leading-relaxed'>
               Shopify/Meta /TikTok/Google Analytics/Kepler/ Airwallex
             </p>
           </div>
-          <div className='bg-white rounded-[12px] p-6 border border-[#3C83F633] shadow-md flex flex-col justify-center transition-all hover:shadow-md'>
-            <h4 className='font-bold text-[#0F1729] text-[16px] mb-2'>Automated transformations</h4>
+          <div className='bg-white rounded-[12px] p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex flex-col justify-center transition-all hover:shadow-md'>
+            <h4 className='font-bold text-[#0F1729]/80 text-[16px] mb-2'>
+              Automated transformations
+            </h4>
             <p className='text-[#64748B] text-[14px] leading-relaxed'>ETL Tools</p>
           </div>
         </div>

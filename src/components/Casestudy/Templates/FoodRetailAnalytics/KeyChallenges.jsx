@@ -20,7 +20,7 @@ export default function KeyChallenges() {
           {challenges.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-[12px] shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-[#f5dede] p-5 flex gap-4 items-start'
+              className='bg-white rounded-[12px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-5 flex gap-4 items-start'
             >
               {/* Softer number bubble style matching target template */}
               <div className='w-7 h-7 rounded-full bg-[#fff0f0] text-[#ff4d4d] flex items-center justify-center text-[13px] font-extrabold shrink-0 mt-0.5'>

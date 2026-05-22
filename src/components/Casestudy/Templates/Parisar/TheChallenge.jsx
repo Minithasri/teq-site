@@ -30,7 +30,7 @@ const TheChallenge = () => {
                 <path d='M21 12c0 1.66-4 3-9 3s-9-1.34-9-3'></path>
                 <path d='M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5'></path>
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>Scattered Data</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>Scattered Data</h3>
             </div>
             <p className='text-[#64748B] text-[15px] leading-relaxed'>
               Fleet usage and scheduling data were fragmented across multiple systems
@@ -54,7 +54,7 @@ const TheChallenge = () => {
                 <line x1='12' y1='8' x2='12' y2='12'></line>
                 <line x1='12' y1='16' x2='12.01' y2='16'></line>
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>No Central Dashboard</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>No Central Dashboard</h3>
             </div>
             <p className='text-[#64748B] text-[15px] leading-relaxed'>
               Lack of centralized visibility into real-time operations
@@ -77,7 +77,7 @@ const TheChallenge = () => {
                 <rect x='3' y='3' width='18' height='18' rx='2' ry='2'></rect>
                 <polyline points='12 7 12 12 16 12'></polyline>
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>Manual Reporting</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>Manual Reporting</h3>
             </div>
             <p className='text-[#64748B] text-[15px] leading-relaxed'>
               Manual processes caused significant delays in decision-making
@@ -103,7 +103,7 @@ const TheChallenge = () => {
                 <polyline points='23 18 13.5 8.5 8.5 13.5 1 6'></polyline>
                 <polyline points='17 18 23 18 23 12'></polyline>
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>Limited Insights</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>Limited Insights</h3>
             </div>
             <p className='text-[#64748B] text-[15px] leading-relaxed'>
               Difficulty identifying underutilized vehicles and inefficient routes
@@ -128,7 +128,7 @@ const TheChallenge = () => {
                 <line x1='9' y1='15' x2='15' y2='9'></line>
                 <line x1='9' y1='9' x2='15' y2='15'></line>
               </svg>
-              <h3 className='font-bold text-[#0F1729] text-[18px]'>Poor KPI Tracking</h3>
+              <h3 className='font-bold text-[#0F1729]/80 text-[18px]'>Poor KPI Tracking</h3>
             </div>
             <p className='text-[#64748B] text-[15px] leading-relaxed'>
               Limited ability to monitor operational efficiency metrics
@@ -146,25 +146,25 @@ const TheChallenge = () => {
             {/* Metric 1 */}
             <div className='bg-white rounded-[8px] py-6 px-4 text-center shadow-sm'>
               <p className='text-[#64748B] text-[13px] mb-1'>Reporting Cycle</p>
-              <p className='text-[#EB6060] font-bold text-[18px] mb-1'>Weekly</p>
+              <p className='text-[#0F1729]/80 font-bold text-[18px] mb-1'>Weekly</p>
               <p className='text-[#64748B] text-[12px]'>Instead of real-time</p>
             </div>
             {/* Metric 2 */}
             <div className='bg-white rounded-[8px] py-6 px-4 text-center shadow-sm'>
               <p className='text-[#64748B] text-[13px] mb-1'>Data Quality</p>
-              <p className='text-[#EB6060] font-bold text-[18px] mb-1'>Fragmented</p>
+              <p className='text-[#0F1729]/80 font-bold text-[18px] mb-1'>Fragmented</p>
               <p className='text-[#64748B] text-[12px]'>Inconsistent across systems</p>
             </div>
             {/* Metric 3 */}
             <div className='bg-white rounded-[8px] py-6 px-4 text-center shadow-sm'>
               <p className='text-[#64748B] text-[13px] mb-1'>Route Optimization</p>
-              <p className='text-[#EB6060] font-bold text-[18px] mb-1'>None</p>
+              <p className='text-[#0F1729]/80 font-bold text-[18px] mb-1'>None</p>
               <p className='text-[#64748B] text-[12px]'>No automated insights</p>
             </div>
             {/* Metric 4 */}
             <div className='bg-white rounded-[8px] py-6 px-4 text-center shadow-sm'>
               <p className='text-[#64748B] text-[13px] mb-1'>Manual Work</p>
-              <p className='text-[#EB6060] font-bold text-[18px] mb-1'>High</p>
+              <p className='text-[#0F1729]/80 font-bold text-[18px] mb-1'>High</p>
               <p className='text-[#64748B] text-[12px]'>Required for all reports</p>
             </div>
           </div>

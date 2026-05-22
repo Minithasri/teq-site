@@ -42,14 +42,11 @@ export default function SolutionSection() {
     >
       {/* Header Content */}
       <div className='flex flex-col items-center text-center px-4 mb-16 relative z-20'>
-        <h2
-          className='font-bold uppercase mb-4'
-          style={{ fontSize: '32px', color: '#002471', letterSpacing: '1.4px' }}
-        >
+        <h2 className='font-bold mb-4' style={{ fontSize: '42px', letterSpacing: '1.4px' }}>
           The Solution
         </h2>
         <h3
-          className='font-bold text-black mb-4'
+          className='font-bold text-[#0F1729]/80 mb-4'
           style={{
             fontSize: '30px',
             lineHeight: '36px',
@@ -119,19 +116,16 @@ export default function SolutionSection() {
 
                   {/* Card with requested box-shadow */}
                   <div
-                    className='bg-white p-6 md:p-8 w-full flex flex-col justify-center transition-all duration-300'
+                    className='bg-white p-6 md:p-8 w-full flex flex-col justify-center transition-all duration-300 shadow-[0px_4px_12px_rgba(0,0,0,0.08)] rounded-[12px] border-2 border-[#F5F5F5]'
                     style={{
                       maxWidth: '912px',
                       minHeight: '124.75px',
-                      borderRadius: '12px',
-                      border: '1px solid #0935E430',
-                      boxShadow: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)', // EXACT Requirement
                     }}
                   >
                     <span className='text-[#0935E4] font-bold text-[12px] tracking-widest mb-1 uppercase'>
                       {item.step}
                     </span>
-                    <h4 className='text-black font-bold text-[20px] mb-1'>{item.title}</h4>
+                    <h4 className='text-[#0F1729]/80 font-bold text-[20px] mb-1'>{item.title}</h4>
                     <p className='text-[#575757] text-[15px] leading-relaxed'>{item.description}</p>
                   </div>
                 </div>

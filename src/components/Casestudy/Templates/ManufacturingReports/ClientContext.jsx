@@ -17,7 +17,7 @@ export default function ClientContext() {
           </h2>
 
           {/* Floating Description Block Layer */}
-          <div className='bg-white rounded-[16px] sm:rounded-[20px] shadow-[0_12px_36px_rgba(0,0,0,0.04)] p-5 sm:p-8 md:p-[50px] border border-gray-100/80 w-full sm:max-w-[640px] md:max-w-[780px] relative z-10'>
+          <div className='bg-white rounded-[16px] sm:rounded-[20px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-5 sm:p-8 md:p-[50px] border-2 border-[#F5F5F5] w-full sm:max-w-[640px] md:max-w-[780px] relative z-10'>
             <div className='space-y-[16px] sm:space-y-[26px] text-[14.5px] sm:text-[15px] md:text-[16px] text-[#475569] font-medium leading-[1.65] sm:leading-[1.8] md:leading-[2] tracking-tight text-left'>
               <p>
                 A leader in manufacturing and electronics, manages highly complex production

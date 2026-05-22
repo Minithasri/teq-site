@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className='absolute inset-0 bg-gradient-to-r from-[#061a36]/70 to-[#061a36]/75'></div>
       <div className='relative z-10 max-w-[1080px] mx-auto h-full px-8 flex flex-col justify-center'>
         <h1 className='text-[28px] md:text-[44px] font-extrabold text-white leading-tight tracking-wide'>
-          Unified <span className='text-[#efff25]'>HR & Finance Analytics</span> Integration
+          Unified HR & Finance Analytics Integration
         </h1>
 
         <p className='text-white text-[10px] md:text-[16px] mt-4 max-w-[1100px] leading-relaxed opacity-90'>

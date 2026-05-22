@@ -33,7 +33,7 @@ export default function Quantitative() {
         <div className='relative mb-12'>
           {/* Abstract Background graph/chart if needed, keeping it simple as per color request */}
 
-          <div className='flex items-center gap-3 mb-4'>
+          <div className='flex items-center gap-3 mb-4 justify-center text-center'>
             <Image
               src='/images/Templates/template10/quant.svg'
               alt='Quantitative Icon'
@@ -42,7 +42,7 @@ export default function Quantitative() {
             />
             <h2 className='text-3xl font-bold text-gray-900'>Quantitative Outcomes</h2>
           </div>
-          <p className='text-gray-500 text-lg'>
+          <p className='text-gray-500 text-lg text-center'>
             Significant, measurable improvements in enterprise knowledge management
           </p>
         </div>
@@ -52,11 +52,9 @@ export default function Quantitative() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className='bg-white rounded-xl p-8 py-10 shadow-sm text-center border border-gray-100'
+              className='bg-white rounded-xl p-8 py-10 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] text-center'
             >
-              <div className='text-5xl font-bold mb-4' style={{ color: '#0073E6' }}>
-                {stat.value}
-              </div>
+              <div className='text-5xl font-bold mb-4 text-[#0F1729]/80'>{stat.value}</div>
               <h3 className='font-bold text-gray-900 text-lg mb-2'>{stat.title}</h3>
               <p className='text-gray-400 text-sm'>{stat.description}</p>
             </div>
@@ -70,7 +68,9 @@ export default function Quantitative() {
             background: 'linear-gradient(90deg, #0073E6 0%, #13B6EC 100%)',
           }}
         >
-          <h3 className='text-xl md:text-2xl font-bold mb-6'>Additional Key Achievements</h3>
+          <h3 className='text-xl md:text-2xl font-bold mb-6 text-center'>
+            Additional Key Achievements
+          </h3>
           <div className='space-y-4'>
             {additionalAchievements.map((item, index) => (
               <div key={index} className='flex items-start gap-3'>

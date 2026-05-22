@@ -39,10 +39,10 @@ const ChallengeSection = () => {
   return (
     <section className='w-full overflow-hidden'>
       {/* TOP CONTENT */}
-      <div className='mx-auto max-w-7xl px-4 md:px-6 pt-10 md:pt-14'>
+      <div className='mx-auto max-w-7xl px-4 md:px-6 pt-10 md:pt-14 text-center'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#FF2323]'>
-          THE CHALLENGE
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
+          The Challenge
         </h2>
 
         {/* DESCRIPTION */}
@@ -78,7 +78,7 @@ const ChallengeSection = () => {
                 className='
                   rounded-[22px]
                   border-2
-                  border-[#FF3434]
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   md:px-6
@@ -90,7 +90,7 @@ const ChallengeSection = () => {
                 {/* HEADER */}
                 <div className='flex items-center gap-4'>
                   {/* ICON BOX */}
-                  <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[14px] border border-[#FF3A3A] bg-[#FFF6F6]'>
+                  <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[14px] bg-red-500/10 '>
                     <Image
                       src={item.icon}
                       alt={item.title}
@@ -101,7 +101,7 @@ const ChallengeSection = () => {
                   </div>
 
                   {/* TITLE */}
-                  <h3 className='text-[12px] md:text-[16px] leading-[1.45] font-semibold tracking-[-0.4px] text-[#FF2B2B]'>
+                  <h3 className='text-[12px] md:text-[16px] leading-[1.45] font-semibold tracking-[-0.4px] text-[#0F1729]/80'>
                     {item.title}
                   </h3>
                 </div>

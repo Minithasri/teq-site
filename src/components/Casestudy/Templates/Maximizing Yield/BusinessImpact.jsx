@@ -80,7 +80,7 @@ export default function BusinessImpact() {
         </div>
 
         {/* Quantitative Outcomes */}
-        <div className='bg-white rounded-xl p-8 shadow-sm border-l-4 border-[#21C45D]'>
+        <div className='bg-white rounded-xl p-8 shadow-[0_4px_12px_rgba(0,0,0,0.08)] border-l-4 border-[#21C45D]'>
           <h3 className='text-2xl font-bold text-[#1D2530] mb-6'>Quantitative Outcomes</h3>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8'>
             {outcomes.map((item, index) => (
@@ -98,7 +98,7 @@ export default function BusinessImpact() {
 
 function StatCard({ stat }) {
   return (
-    <div className='bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300'>
+    <div className='bg-white rounded-xl p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-300'>
       <div className='flex justify-between items-start mb-6'>
         <div className='relative w-10 h-10'>
           <Image src={stat.icon} alt={stat.title} fill className='object-contain' />

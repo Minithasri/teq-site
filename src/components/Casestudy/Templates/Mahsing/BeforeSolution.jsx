@@ -97,13 +97,15 @@ const BeforeSolution = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className='bg-white rounded-[16px] p-6 shadow-[0_4px_24px_rgb(0,0,0,0.04)] border border-gray-200 flex flex-col items-start hover:shadow-lg transition-all duration-300'
+              className='bg-white rounded-[16px] p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] border-2 border-[#F5F5F5] flex flex-col items-start hover:shadow-lg transition-all duration-300'
             >
               <div className='flex items-center gap-4 mb-3'>
                 <div className='w-[50px] h-[50px] rounded-full bg-[#E0F2FE] flex items-center justify-center shrink-0'>
                   {card.icon}
                 </div>
-                <h3 className='font-bold text-gray-900 text-[18px] leading-snug'>{card.title}</h3>
+                <h3 className='font-bold text-[#0F1729]/80 text-[18px] leading-snug'>
+                  {card.title}
+                </h3>
               </div>
               <p className='text-gray-500 text-[16px] leading-relaxed'>{card.text}</p>
             </div>

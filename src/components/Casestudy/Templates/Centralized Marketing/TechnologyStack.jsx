@@ -56,7 +56,7 @@ export default function TechnologyStack() {
               return (
                 <div
                   key={index}
-                  className='bg-white rounded-[10px] flex items-center justify-center transition-transform hover:scale-105'
+                  className='bg-white rounded-[10px] flex items-center justify-center'
                   style={{
                     width: '100%',
                     maxWidth: '229px',

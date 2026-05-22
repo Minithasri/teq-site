@@ -65,7 +65,7 @@ const SolutionTechSection = () => {
         <div>
           {/* HEADING */}
           <div className='text-center'>
-            <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#171B24]'>
+            <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
               GWC&apos;s Solution
             </h2>
 
@@ -82,16 +82,15 @@ const SolutionTechSection = () => {
                 <div
                   key={index}
                   className='
-                    min-h-[170px]
                     rounded-[18px]
-                    border
-                    border-[#52D45B]
+                    border-2
+                    border-[#F5F5F5]
                     bg-white
                     px-5
                     md:px-6
                     py-5
                     md:py-6
-                    shadow-[0px_8px_20px_rgba(0,0,0,0.05)]
+                    shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                   '
                 >
                   {/* HEADER */}
@@ -108,7 +107,7 @@ const SolutionTechSection = () => {
                     </div>
 
                     {/* TITLE */}
-                    <h3 className='max-w-[220px] text-sm md:text-lg leading-[1.3] font-semibold tracking-[-0.5px] text-[#20242C]'>
+                    <h3 className='max-w-[220px] text-sm md:text-lg leading-[1.3] font-semibold tracking-[-0.5px] text-[#0F1729]/80'>
                       {item.title}
                     </h3>
                   </div>
@@ -127,16 +126,15 @@ const SolutionTechSection = () => {
                 <div
                   key={index}
                   className='
-                    min-h-[170px]
                     rounded-[18px]
-                    border
-                    border-[#52D45B]
+                    border-2
+                    border-[#F5F5F5]
                     bg-white
                     px-5
                     md:px-6
                     py-5
                     md:py-6
-                    shadow-[0px_8px_20px_rgba(0,0,0,0.05)]
+                    shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                   '
                 >
                   {/* HEADER */}
@@ -153,7 +151,7 @@ const SolutionTechSection = () => {
                     </div>
 
                     {/* TITLE */}
-                    <h3 className='max-w-[240px] text-sm md:text-lg leading-[1.3] font-semibold tracking-[-0.5px] text-[#20242C]'>
+                    <h3 className='max-w-[240px] text-sm md:text-lg leading-[1.3] font-semibold tracking-[-0.5px] text-[#0F1729]/80'>
                       {item.title}
                     </h3>
                   </div>
@@ -170,20 +168,19 @@ const SolutionTechSection = () => {
 
         {/* ================= TECHNOLOGY STACK ================= */}
         <div className='mt-20'>
-          <div className='flex flex-col gap-8 md:flex-row'>
-            {/* LEFT */}
-            <div>
-              <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#171B24]'>
-                Technology Stack
-              </h2>
+          {/* LEFT */}
+          <div className='text-center'>
+            <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
+              Technology Stack
+            </h2>
 
-              <p className='mt-5 text-sm md:text-lg leading-[1.6] text-[#7B818E]'>
-                Enterprise-grade tools for retail analytics
-              </p>
-            </div>
-
+            <p className='mt-5 text-sm md:text-lg leading-[1.6] text-[#7B818E]'>
+              Enterprise-grade tools for retail analytics
+            </p>
+          </div>
+          <div className='mt-6 flex flex-col gap-8 md:flex-row items-center justify-center'>
             {/* LOGOS */}
-            <div className='flex flex-wrap items-center gap-6 md:gap-10'>
+            <div className='flex flex-wrap gap-6 md:gap-10'>
               {technologies.map((item, index) => (
                 <Image
                   key={index}
@@ -209,10 +206,10 @@ const SolutionTechSection = () => {
                   items-center
                   justify-center
                   rounded-[18px]
-                  border
-                  border-[#ECECEC]
+                  border-2
+                  border-[#F5F5F5]
                   bg-[#F7F7F7]
-                  shadow-[0px_8px_22px_rgba(0,0,0,0.05)]
+                  shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                 '
               >
                 {/* GRADIENT BUTTON */}

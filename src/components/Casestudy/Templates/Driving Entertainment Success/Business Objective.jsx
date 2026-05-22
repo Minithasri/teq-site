@@ -13,7 +13,7 @@ export default function BusinessObjectives() {
   return (
     <div className="relative w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 lg:px-[90px] py-10 md:py-12 font-['Poppins']">
       {/* ── Main Card ── */}
-      <div className='relative w-full bg-white border border-[#DCDFE5] rounded-[16px] shadow-[0px_2px_8px_rgba(0,0,0,0.04)] p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:min-h-[258px]'>
+      <div className='relative w-full bg-white border-2 border-[#F5F5F5] rounded-[16px] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:min-h-[258px]'>
         {/* Left/Content Layout */}
         <div className='flex flex-col z-10 w-full lg:max-w-[60%]'>
           {/* ── Header Components (Icon + Title) ── */}
@@ -49,9 +49,7 @@ export default function BusinessObjectives() {
                 className='flex items-start gap-3 text-[15px] leading-[22px] sm:text-[16px] sm:leading-[24px] lg:text-[18px] lg:leading-[24px] font-normal text-[#21242CE5]'
               >
                 {/* Bullet Point Spot Marker */}
-                <span className='text-[#6249DF] text-[22px] leading-[22px] shrink-0 mt-[1px] select-none'>
-                  •
-                </span>
+                <span className=' text-[22px] leading-[22px] shrink-0 mt-[1px] select-none'>•</span>
                 <span>{point}</span>
               </li>
             ))}

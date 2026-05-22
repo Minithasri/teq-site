@@ -13,7 +13,7 @@ const HeroSection = () => {
 
           {/* HEADING */}
           <h1 className='text-[38px] md:text-[60px] leading-[1.05] font-semibold tracking-[-2px] text-white'>
-            Campaign <span className='text-[#FFD83D]'>Performance and Conversion</span>
+            Campaign <span className='text-[#FFF]'>Performance and Conversion</span>
             <br />
             Analytics Platform
           </h1>
@@ -74,10 +74,10 @@ const HeroSection = () => {
       </div>
 
       {/* ================= CLIENT OVERVIEW ================= */}
-      <div className='mx-auto max-w-7xl px-4 md:px-6 pt-10 md:pt-16'>
+      <div className='mx-auto max-w-7xl px-4 md:px-6 pt-10 md:pt-16 text-center'>
         {/* TITLE */}
-        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#163F89]'>
-          CLIENT OVERVIEW
+        <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
+          Client Overview
         </h2>
 
         {/* DESCRIPTION */}

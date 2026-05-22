@@ -86,7 +86,7 @@ export default function BusinessImpact() {
         </div>
 
         {/* Quantitative Outcomes White Card */}
-        <div className='bg-white rounded-2xl p-8 lg:p-12 shadow-xl max-w-7xl'>
+        <div className='bg-white rounded-2xl p-8 lg:p-12 shadow-xl max-w-7xl border-2 border-[#F5F5F5] shadow-[0_8px_24px_rgba(0,0,0,0.08)]'>
           <h3 className='text-2xl font-bold text-[#1D2530] mb-6'>Quantitative Outcomes</h3>
           <div className='flex flex-col gap-4'>
             {outcomes.map((outcome, idx) => (

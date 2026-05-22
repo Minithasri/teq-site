@@ -59,16 +59,17 @@ const BusinessImpactSection = () => {
       <div className='mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20'>
         {/* HEADER */}
         <div>
-          <p className='text-2xl font-semibold uppercase tracking-wide text-[#19D219] md:text-4xl'>
+          <p className='text-2xl font-semibold tracking-wide text-center md:text-4xl'>
             Business Impact
           </p>
 
-          <h2 className='mt-4 text-xl font-medium text-[#161C2D] md:text-3xl'>
+          <h2 className='mt-4 text-xl font-medium text-[#161C2D] md:text-3xl text-center'>
             Measurable Transformation
           </h2>
 
-          <p className='mt-6 max-w-4xl text-base leading-relaxed text-[#737887] md:text-lg'>
-            Quantifiable outcomes delivered through systematic platform migration and optimization.
+          <p className='mt-6 text-base leading-relaxed text-[#737887] md:text-lg text-center'>
+            Quantifiable outcomes delivered through systematic platform <br />
+            migration and optimization.
           </p>
         </div>
 
@@ -91,10 +92,10 @@ const BusinessImpactSection = () => {
             {impactCards.map((card, index) => (
               <div
                 key={index}
-                className='rounded-3xl border-2 border-[#2BE14B] bg-white px-5 py-8 text-center'
+                className='rounded-3xl border-2 border-[#F5F5F5] bg-white px-5 py-8 text-center shadow-[0_4px_12px_rgba(0,0,0,0.08)]'
               >
                 {/* ICON */}
-                <div className='flex justify-center text-[#19D219]'>
+                <div className='flex w-12 h-12 flex-shrink-0 items-center justify-center text-[#19D219] bg-green-500/10 rounded-[12px] mx-auto'>
                   <Image
                     src={card.icon}
                     alt={card.title}
@@ -105,7 +106,7 @@ const BusinessImpactSection = () => {
                 </div>
 
                 {/* VALUE */}
-                <h3 className='mt-4 text-5xl font-semibold tracking-tight text-[#19D219]'>
+                <h3 className='mt-4 text-5xl font-semibold tracking-tight text-[#0F1729]/80'>
                   {card.value}
                 </h3>
 
@@ -120,19 +121,18 @@ const BusinessImpactSection = () => {
 
         {/* TECHNOLOGY STACK */}
         <div className='relative z-20 mt-20 bg-[#F8F8F8] pt-6'>
+          {/* LEFT CONTENT */}
+          <div>
+            <h2 className='text-2xl font-semibold tracking-wide text-center md:text-4xl'>
+              Technology Stack
+            </h2>
+
+            <p className='mt-6 text-xl font-medium text-[#161C2D] md:text-3xl text-center'>
+              Tools & Technologies
+            </p>
+          </div>
           {/* TOP SECTION */}
-          <div className='flex flex-col gap-10 lg:flex-row items-center'>
-            {/* LEFT CONTENT */}
-            <div>
-              <h2 className='text-2xl font-semibold uppercase tracking-wide text-[#202124] md:text-4xl'>
-                Technology Stack
-              </h2>
-
-              <p className='mt-6 text-xl font-medium text-[#161C2D] md:text-3xl'>
-                Tools & Technologies
-              </p>
-            </div>
-
+          <div className='mt-6 flex flex-col gap-10 lg:flex-row items-center justify-center'>
             {/* RIGHT LOGOS */}
             <div className='flex flex-wrap items-center gap-6'>
               {technologies.map((tech, index) => (
@@ -151,7 +151,7 @@ const BusinessImpactSection = () => {
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className='flex items-center gap-4 rounded-2xl border border-[#BDBDBD] bg-white px-6 py-3'
+                className='flex items-center gap-4 rounded-2xl border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-white px-6 py-3'
               >
                 <p className='text-sm font-semibold text-[#202124]'>{tech.name}</p>
 

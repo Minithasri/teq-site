@@ -134,13 +134,13 @@ const BusinessObjectives = () => {
           {objectives.map((objective, index) => (
             <div
               key={index}
-              className='bg-[#F8FAFC] rounded-[16px] border border-[#E2E8F0] p-6 flex items-start gap-4 transition-all duration-300 hover:shadow-md'
+              className='bg-[#F8FAFC] rounded-[16px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-6 flex items-start gap-4 transition-all duration-300 hover:shadow-md'
             >
               <div className='w-11 h-11 rounded-[10px] bg-[#E1E7EF] flex items-center justify-center shrink-0 shadow-sm'>
                 {objective.icon}
               </div>
               <div className='flex flex-col'>
-                <h4 className='font-bold text-[#0F1729] text-[16px] mb-2'>{objective.title}</h4>
+                <h4 className='font-bold text-[#0F1729]/80 text-[16px] mb-2'>{objective.title}</h4>
                 <p className='text-[#64748B] text-[14px] leading-relaxed'>{objective.desc}</p>
               </div>
             </div>

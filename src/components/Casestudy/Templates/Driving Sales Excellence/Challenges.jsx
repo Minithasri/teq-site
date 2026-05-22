@@ -100,14 +100,7 @@ export default function ExecutiveSummaryAndProblem() {
           </p>
 
           {/* White Card Bullet Container */}
-          <div
-            className='w-full max-w-[820px] px-5 sm:px-8 md:px-12 py-8 sm:py-9 md:py-10 bg-white'
-            style={{
-              borderRadius: '16px',
-              boxShadow:
-                '0px 10px 30px 5px rgba(0, 0, 0, 0.06), 0px 4px 12px 2px rgba(0, 0, 0, 0.04)',
-            }}
-          >
+          <div className='w-full max-w-[820px] px-5 sm:px-8 md:px-12 py-8 sm:py-9 md:py-10 bg-white  rounded-[18px] shadow-[0px_8px_22px_rgba(0,0,0,0.08)] border-2 border-[#F5F5F5]'>
             <ul className='flex flex-col gap-4 sm:gap-5 m-0 p-0 list-none'>
               {problemItems.map((item, index) => (
                 <li key={index} className='flex items-start gap-3 sm:gap-4'>

@@ -69,15 +69,15 @@ const BusinessImpactSection = () => {
   return (
     <section className='w-full overflow-hidden bg-[#F5F5F5]'>
       <div className='mx-auto max-w-7xl px-4 md:px-6 py-8 md:py-10'>
-        <h2 className='text-[28px] md:text-[42px] leading-none font-semibold uppercase tracking-tight text-[#18D80F]'>
-          BUSINESS IMPACT
+        <h2 className='text-[28px] md:text-[42px] leading-none font-semibold tracking-tight text-center'>
+          Business Impact
         </h2>
 
-        <h3 className='mt-4 text-2xl md:text-5xl leading-[1.1] tracking-[-2px] text-[#111827]'>
+        <h3 className='mt-4 text-2xl md:text-5xl leading-[1.1] tracking-[-2px] text-[#111827] text-center'>
           Measurable Transformation
         </h3>
 
-        <p className='mt-4 max-w-4xl text-[14px] md:text-[18px] leading-[1.6] text-[#7A7F8C]'>
+        <p className='mt-4 max-w-4xl text-[14px] md:text-[18px] leading-[1.6] text-[#7A7F8C] text-center'>
           Quantifiable outcomes delivered through automation and platform modernization.
         </p>
 
@@ -85,21 +85,21 @@ const BusinessImpactSection = () => {
           {impactStats.map((item, index) => (
             <div
               key={index}
-              className='rounded-[18px] border border-[#18D80F] bg-white px-5 py-7 text-center'
+              className='rounded-[18px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_0px_rgba(0,0,0,0.08)] bg-white px-5 py-7 text-center'
             >
               {/* ICON */}
-              <div className='text-[18px] text-[#18D80F] items-center justify-center flex'>
+              <div className='text-[18px] items-center justify-center flex'>
                 <Image
                   src={item.icon}
                   alt={item.title}
                   width={28}
                   height={28}
-                  className='h-6 w-6 md:h-8 md:w-8 object-contain'
+                  className='h-10 w-10 object-contain bg-[#18D80F]/20 rounded-[12px] p-1'
                 />
               </div>
 
               {/* VALUE */}
-              <div className='mt-3 text-4xl md:text-[48px] font-semibold leading-none text-[#18D80F]'>
+              <div className='mt-3 text-4xl md:text-[48px] font-semibold leading-none text-[#0F1729]/80'>
                 {item.value}
               </div>
 
@@ -111,14 +111,13 @@ const BusinessImpactSection = () => {
           ))}
         </div>
 
-        <div className='mt-14 relative'>
+        <h2 className='mt-14 text-[28px] md:text-[42px] leading-none font-semibold tracking-tight text-center'>
+          Key Capabilities
+        </h2>
+        <div className='relative'>
           {/* TOP CONTENT */}
           <div className='flex items-start justify-between gap-6'>
             <div>
-              <h2 className='text-[28px] md:text-[42px] leading-none font-semibold uppercase tracking-tight text-[#18D80F]'>
-                KEY CAPABILITIES
-              </h2>
-
               <h3 className='mt-4 text-2xl md:text-5xl leading-[1.1] tracking-[-2px] text-[#111827]'>
                 Capabilities Delivered
               </h3>
@@ -130,7 +129,7 @@ const BusinessImpactSection = () => {
             </div>
 
             {/* LEAF IMAGE */}
-            <div className='hidden md:block absolute right-52 -top-6'>
+            <div className='hidden md:block absolute right-0 -top-6'>
               <Image
                 src='/images/Templates/z-hy-24/plugWithLeaf.png'
                 alt='Leaf'
@@ -161,12 +160,12 @@ const BusinessImpactSection = () => {
               {capabilities.slice(0, 3).map((item, index) => (
                 <div
                   key={index}
-                  className='min-h-[150px] rounded-[18px] border border-[#18D80F] bg-white px-5 py-5'
+                  className='min-h-[150px] rounded-[18px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_0px_rgba(0,0,0,0.08)] bg-white px-5 py-5'
                 >
                   {/* HEADER */}
                   <div className='flex items-start gap-3'>
                     {/* ICON */}
-                    <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[10px] border border-[#18D80F]'>
+                    <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[10px] bg-[#18D80F]/20'>
                       <Image
                         src={item.icon}
                         alt={item.title}
@@ -177,7 +176,7 @@ const BusinessImpactSection = () => {
                     </div>
 
                     {/* TITLE */}
-                    <h4 className='max-w-[240px] text-[15px] md:text-[16px] font-semibold leading-[1.5] text-[#111827]'>
+                    <h4 className='max-w-[240px] text-[15px] md:text-[16px] font-semibold leading-[1.5] text-[#0F1729]/80'>
                       {item.title}
                     </h4>
                   </div>
@@ -226,12 +225,12 @@ const BusinessImpactSection = () => {
                   {capabilities.slice(3, 5).map((item, index) => (
                     <div
                       key={index}
-                      className='min-h-[150px] rounded-[18px] border border-[#18D80F] bg-white px-5 py-5'
+                      className='min-h-[150px] rounded-[18px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_0px_rgba(0,0,0,0.08)] bg-white px-5 py-5'
                     >
                       {/* HEADER */}
                       <div className='flex items-start gap-3'>
                         {/* ICON */}
-                        <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[10px] border border-[#18D80F]'>
+                        <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[10px] bg-[#18D80F]/20'>
                           <Image
                             src={item.icon}
                             alt={item.title}
@@ -242,7 +241,7 @@ const BusinessImpactSection = () => {
                         </div>
 
                         {/* TITLE */}
-                        <h4 className='max-w-[240px] text-[15px] md:text-[16px] font-semibold leading-[1.5] text-[#111827]'>
+                        <h4 className='max-w-[240px] text-[15px] md:text-[16px] font-semibold leading-[1.5] text-[#0F1729]/80'>
                           {item.title}
                         </h4>
                       </div>

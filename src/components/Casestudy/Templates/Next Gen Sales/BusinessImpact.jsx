@@ -35,9 +35,9 @@ export default function BusinessImpact() {
       <div className='max-w-[1200px] w-full mx-auto px-4 text-center'>
         {/* 1. Header Section */}
         <h2
-          className='uppercase font-bold text-[#16C203] mb-6'
+          className='font-bold mb-6'
           style={{
-            fontSize: '32px',
+            fontSize: '42px',
             letterSpacing: '1.4px',
             lineHeight: '20px',
           }}
@@ -46,7 +46,7 @@ export default function BusinessImpact() {
         </h2>
 
         <h3
-          className='font-bold text-[#1D2530] mb-6'
+          className='font-bold text-[#0F1729]/80 mb-6'
           style={{ fontSize: '30px', lineHeight: '36px', letterSpacing: '-0.75px' }}
         >
           Measurable Outcomes
@@ -65,19 +65,16 @@ export default function BusinessImpact() {
           {impacts.map((item, index) => (
             <div
               key={index}
-              className='flex flex-col items-start p-8 text-left shadow-sm'
+              className='flex flex-col items-start p-8 text-left border-2 border-[#F5F5F5] rounded-[12px] shadow-[0px_4px_12px_rgba(0,0,0,0.08)]'
               style={{
                 width: '312px',
                 minHeight: '207px',
-                backgroundColor: 'rgba(238, 252, 241, 1)',
-                border: '1px solid rgba(5, 248, 58, 1)',
-                borderRadius: '12px',
               }}
             >
               {/* Card Header: Icon + Stat + Label */}
               <div className='flex items-start gap-4 mb-4'>
                 <div
-                  className='flex items-center justify-center rounded-xl bg-[#16C203] text-white'
+                  className='flex items-center justify-center rounded-xl bg-[#0846AA]/60 text-white'
                   style={{ width: '44px', height: '44px' }}
                 >
                   {item.icon}
@@ -87,7 +84,7 @@ export default function BusinessImpact() {
                   <span className='font-bold text-[#1D2530] text-[24px] leading-tight'>
                     {item.stat}
                   </span>
-                  <span className='font-bold text-[#16C203] text-[13px] uppercase'>
+                  <span className='font-bold text-[#0F1729]/80 text-[13px] uppercase'>
                     {item.label}
                   </span>
                 </div>

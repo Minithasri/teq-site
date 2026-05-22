@@ -43,12 +43,12 @@ export default function SolutionSummary() {
           {solutions.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-[14px] border border-gray-100 shadow-[0_10px_35px_rgba(0,0,0,0.02)] p-6 md:p-[32px] flex flex-col justify-start min-h-[140px]'
+              className='bg-white rounded-[14px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-6 md:p-[32px] flex flex-col justify-start min-h-[140px]'
             >
               {/* HORIZONTAL HEADER GROUP: Icon on Left, Title Inline on Right */}
               <div className='flex items-center gap-4 w-full justify-start mb-4'>
                 {/* Proportioned gradient badge box matching the template accent precisely */}
-                <div className='w-[48px] h-[48px] shrink-0 rounded-[12px] bg-gradient-to-br from-[#3b82f6] to-[#6366f1] flex items-center justify-center shadow-[0_4px_14px_rgba(59,130,246,0.25)] select-none pointer-events-none'>
+                <div className='w-[48px] h-[48px] shrink-0 rounded-[12px] bg-[#0846AA]/60 flex items-center justify-center shadow-[0_4px_14px_rgba(59,130,246,0.25)] select-none pointer-events-none'>
                   <img
                     src={item.icon}
                     alt={item.title}
@@ -57,7 +57,7 @@ export default function SolutionSummary() {
                 </div>
 
                 {/* Main Heading Text Title */}
-                <h3 className='text-[16.5px] md:text-[18.5px] font-extrabold text-[#071326] tracking-tight'>
+                <h3 className='text-[16.5px] md:text-[18.5px] font-extrabold text-[#0F1729]/80 tracking-tight'>
                   {item.title}
                 </h3>
               </div>

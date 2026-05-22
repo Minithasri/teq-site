@@ -49,7 +49,7 @@ export default function Highlights() {
           {highlights.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow'
+              className='bg-white rounded-lg p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)]'
             >
               <p className='text-[#4B5563] text-[16px] lg:text-[16px]'>
                 <span className='font-semibold text-[#1D2530]'>{item.bold}</span> {item.text}

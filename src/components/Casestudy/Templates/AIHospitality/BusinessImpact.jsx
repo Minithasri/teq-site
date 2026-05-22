@@ -42,9 +42,7 @@ export default function BusinessImpact() {
       <div className='max-w-[1120px] mx-auto px-6'>
         {/* Main Section Header */}
         <div className='text-center mb-[40px]'>
-          <h2 className='text-[28px] font-extrabold text-[#071326] tracking-tight'>
-            Business Impact
-          </h2>
+          <h2 className='text-[28px] font-extrabold tracking-tight'>Business Impact</h2>
           <p className='text-[16px] text-[#1e293b] font-medium mt-2'>
             Transformative results across guest experience, operations, and strategy
           </p>

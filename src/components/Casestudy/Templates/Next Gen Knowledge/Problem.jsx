@@ -32,7 +32,7 @@ export default function Problem() {
     <section className='w-full py-12 px-4 sm:px-6 lg:px-8' style={{ backgroundColor: '#F6F6F6' }}>
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
-        <div className='flex items-center gap-3 mb-6'>
+        <div className='flex items-center gap-3 mb-6 text-center justify-center'>
           <Image
             src='/images/Templates/template10/icon1.svg'
             alt='Problem'
@@ -43,7 +43,7 @@ export default function Problem() {
           <h2 className='text-3xl font-bold text-gray-900'>Problem Statement</h2>
         </div>
 
-        <p className='text-gray-600 text-lg mb-12 max-w-5xl leading-relaxed'>
+        <p className='text-gray-600 text-lg mb-12 max-w-5xl leading-relaxed mx-auto text-center'>
           A leading manufacturing enterprise managed over{' '}
           <span className='text-[#0073E6] font-bold'>80,000+ documents</span> in multiple
           formats—PDFs, Word, Excel, and image-based records. However, retrieving accurate,
@@ -55,7 +55,7 @@ export default function Problem() {
           {problemCards.map((card, index) => (
             <div
               key={index}
-              className='bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative min-h-[140px]'
+              className='bg-white rounded-xl p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] relative min-h-[140px]'
             >
               <div className='pr-12'>
                 <h3 className='font-bold text-gray-900 text-lg mb-2'>{card.title}</h3>
@@ -106,10 +106,10 @@ export default function Problem() {
 
         {/* Current State & Operational Gaps */}
         <div className='mt-20'>
-          <h2 className='text-3xl font-bold text-gray-900 mb-2'>
+          <h2 className='text-3xl font-bold text-gray-900 mb-2 text-center'>
             Current State & Operational Gaps
           </h2>
-          <p className='text-gray-500 text-lg mb-10'>
+          <p className='text-gray-500 text-lg mb-10 text-center'>
             Analysis revealed critical inefficiencies in the existing knowledge management system
           </p>
 
@@ -117,7 +117,7 @@ export default function Problem() {
             {currentStateGaps.map((item, index) => (
               <div
                 key={index}
-                className='bg-white rounded-xl p-4 flex items-center gap-4 shadow-sm border border-gray-100'
+                className='bg-white rounded-xl p-4 flex items-center gap-4 shadow-sm border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)]'
               >
                 <div className='shrink-0'>
                   <Image

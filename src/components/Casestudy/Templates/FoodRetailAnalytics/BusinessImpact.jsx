@@ -21,7 +21,7 @@ export default function BusinessImpact() {
         </h2>
 
         {/* Elevated Main Card Container housing the clean table structure */}
-        <div className='bg-white rounded-[16px] border border-[#e2e8f0]/80 shadow-[0_4px_24px_rgba(0,0,0,0.02)] p-8 md:p-10 mb-8'>
+        <div className='bg-white rounded-[16px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-8 md:p-10 mb-8'>
           {/* 4-Column Balanced Grid Header row */}
           <div className='grid grid-cols-[1.5fr_1.2fr_0.4fr_1.2fr] text-[14px] font-extrabold text-[#091124] pb-4 border-b border-[#f1f5f9]'>
             <div>Dimension</div>
@@ -64,7 +64,7 @@ export default function BusinessImpact() {
           {outcomes.map((item, index) => (
             <div
               key={index}
-              className='bg-[#edfdf0] border border-[#d1fad7]/60 rounded-[12px] px-5 py-4 flex gap-4 items-start shadow-[0_2px_8px_rgba(0,0,0,0.01)]'
+              className='bg-white rounded-[12px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-5 flex gap-4 items-start'
             >
               <img
                 src='/images/Templates/template17/tick.svg'

@@ -64,27 +64,30 @@ const ChallengeSolutionSection = () => {
             </div>
           </div>
 
-          <p className='text-2xl font-semibold uppercase tracking-wide text-[#FF1F1F] md:text-3xl'>
+          <p className='text-2xl font-semibold tracking-wide text-center md:text-3xl'>
             The Challenge
           </p>
 
-          <h2 className='mt-4 max-w-4xl text-3xl font-medium leading-tight text-[#111827] md:text-3xl'>
+          <h2 className='mt-4 text-center text-3xl font-medium leading-tight text-[#111827] md:text-3xl'>
             From Fragmented Data to Global Intelligence
           </h2>
 
-          <p className='mt-6 max-w-4xl text-[#737887]'>
-            The organization faced critical bottlenecks that hindered data-driven decision making
-            across its global operations.
+          <p className='mt-6 text-center text-[#737887]'>
+            The organization faced critical bottlenecks that hindered data-driven <br /> decision
+            making across its global operations.
           </p>
         </div>
 
         {/* CHALLENGE CARDS */}
         <div className='mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3'>
           {cards.map((card, index) => (
-            <div key={index} className='rounded-2xl border-l-4 border-[#FF6B6B] bg-white p-5'>
+            <div
+              key={index}
+              className='rounded-2xl border-2 border-[#F5F5F5] bg-white p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)]'
+            >
               {/* TOP */}
-              <div className='flex items-start gap-3'>
-                <div className='mt-1'>
+              <div className='flex items-center gap-4'>
+                <div className='flex mt-1 w-12 h-12 flex-shrink-0 items-center justify-center bg-red-500/10 rounded-[12px]'>
                   <Image
                     src={card.icon}
                     alt={card.title}
@@ -93,14 +96,16 @@ const ChallengeSolutionSection = () => {
                     className='h-6 w-6 md:h-8 md:w-8 object-contain'
                   />
                 </div>
-                <h3 className='text-lg font-semibold leading-snug text-[#FF3B30]'>{card.title}</h3>
+                <h3 className='text-lg font-semibold leading-snug text-[#0F1729]/80'>
+                  {card.title}
+                </h3>
               </div>
 
               {/* DESC */}
               <p className='mt-5 text-sm leading-7 text-[#737887]'>{card.desc}</p>
 
               {/* POINT */}
-              <p className='mt-4 flex items-center gap-2 text-sm text-[#FF3B30]'>
+              <p className='mt-4 flex items-center gap-2 text-sm'>
                 <span>→</span>
                 {card.point}
               </p>
@@ -115,7 +120,7 @@ const ChallengeSolutionSection = () => {
             {['Travel management systems', 'Excel files', 'Existing report extracts'].map(item => (
               <div
                 key={item}
-                className='rounded-full border border-[#FF6B6B] bg-white px-5 py-2 text-sm text-[#737887]'
+                className='rounded-full border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-white px-5 py-2 text-sm text-[#737887]'
               >
                 {item}
               </div>
@@ -137,21 +142,21 @@ const ChallengeSolutionSection = () => {
             </div>
           </div>
 
-          <p className='text-2xl font-semibold uppercase tracking-wide text-[#2F45FF] md:text-4xl'>
+          <p className='text-2xl font-semibold tracking-wide text-center md:text-4xl'>
             The Solution
           </p>
 
-          <h2 className='mt-4 text-xl font-medium text-[#111827] md:text-3xl'>
+          <h2 className='mt-4 text-xl font-medium text-[#111827] text-center md:text-3xl'>
             Architecture & Transformation
           </h2>
 
-          <p className='mt-6 leading-relaxed text-[#737887]'>
+          <p className='mt-6 leading-relaxed text-[#737887] text-center'>
             A phased migration approach ensuring zero disruption to ongoing operations while
             systematically rebuilding the analytics foundation.
           </p>
 
           {/* FLOW */}
-          <div className='mt-12 rounded-xl border border-[#2023F0] bg-white p-5'>
+          <div className='mt-12 rounded-xl border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-white p-5'>
             <div className='grid gap-5 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] md:items-center'>
               {flowItems.map((item, index) => (
                 <div key={item} className='contents'>
@@ -248,7 +253,7 @@ const ChallengeSolutionSection = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className='mx-auto max-w-6xl mb-4 rounded-2xl border border-[#4C57FF] bg-white px-4 py-5 shadow-sm last:mb-0 md:px-6'
+              className='mx-auto max-w-6xl mb-4 rounded-2xl border-2 border-[#F5F5F5] bg-white px-4 py-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] last:mb-0 md:px-6'
             >
               <div className='flex flex-col gap-5 md:flex-row md:items-center md:justify-start'>
                 {/* LEFT */}
@@ -259,7 +264,7 @@ const ChallengeSolutionSection = () => {
                   </div>
 
                   {/* ICON */}
-                  <div className='flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#5C5CEB] text-white [&>svg]:h-4 [&>svg]:w-4'>
+                  <div className='flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0846AA]/60 text-white [&>svg]:h-4 [&>svg]:w-4'>
                     <Image
                       src={item.icon}
                       alt={item.title}
@@ -271,7 +276,7 @@ const ChallengeSolutionSection = () => {
 
                   {/* CONTENT */}
                   <div>
-                    <h3 className='text-lg font-semibold text-[#2436F5]'>{item.title}</h3>
+                    <h3 className='text-lg font-semibold text-[#0F1729]/80'>{item.title}</h3>
                     <p className='mt-2 max-w-3xl text-sm leading-7 text-[#737887]'>{item.desc}</p>
                   </div>
                 </div>

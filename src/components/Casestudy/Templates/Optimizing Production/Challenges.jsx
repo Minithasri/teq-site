@@ -41,12 +41,9 @@ export default function Challenges() {
           {challenges.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-xl p-6 shadow-sm border border-gray-100 ring-1 ring-gray-100/50 flex items-start gap-4 relative z-20'
+              className='bg-white rounded-xl p-6 border-1 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)] flex items-start gap-4 relative z-20'
             >
-              <div
-                className='w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0'
-                style={{ backgroundColor: '#F42121D9' }}
-              >
+              <div className='w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-[#0846AA]/60'>
                 <div className='relative w-6 h-6'>
                   <Image
                     src={item.icon}
@@ -57,7 +54,7 @@ export default function Challenges() {
                 </div>
               </div>
               <div>
-                <h3 className='text-xl font-bold text-[#1D2530] mb-2'>{item.title}</h3>
+                <h3 className='text-xl font-bold text-[#0F1729]/80 mb-2'>{item.title}</h3>
                 <p className='text-[#64748B]'>{item.description}</p>
               </div>
             </div>
@@ -67,7 +64,7 @@ export default function Challenges() {
         {/* Bottom Section: Impact & Image */}
         <div className='relative'>
           {/* Impact Box */}
-          <div className='w-full lg:w-[60%] bg-white rounded-xl p-8 shadow-sm border border-gray-100 ring-1 ring-gray-100/50 relative z-10'>
+          <div className='w-full lg:w-[60%] bg-white rounded-xl p-8 border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)] relative z-10'>
             <h3 className='text-xl font-bold text-[#1D2530] mb-6'>Impact on Operations</h3>
             <ul className='space-y-4'>
               {[

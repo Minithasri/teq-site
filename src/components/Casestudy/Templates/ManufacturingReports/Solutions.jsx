@@ -59,7 +59,7 @@ export default function Solutions() {
             {solutionCards.map((card, index) => (
               <div
                 key={index}
-                className='bg-[#22C3C30D] rounded-[12px] border border-[#e0f2fe] p-5 md:p-[24px] flex flex-col justify-start'
+                className='bg-[#22C3C30D] rounded-[12px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-5 md:p-[24px] flex flex-col justify-start'
               >
                 <h4 className='text-[16px] md:text-[17px] font-bold text-[#071326] tracking-tight mb-2'>
                   {card.title}
@@ -73,7 +73,7 @@ export default function Solutions() {
 
           {/* Baseline Centralized Access Card */}
           <div className='mt-5 md:mt-[24px] max-w-[470px] md:max-w-[408px] lg:max-w-[408px]'>
-            <div className='bg-[#22C3C30D] rounded-[12px] border border-[#e0f2fe] p-5 md:p-[24px] flex flex-col justify-start'>
+            <div className='bg-[#22C3C30D] rounded-[12px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-5 md:p-[24px] flex flex-col justify-start'>
               <h4 className='text-[16px] md:text-[17px] font-bold text-[#071326] tracking-tight mb-2'>
                 Centralized Access
               </h4>
@@ -85,7 +85,7 @@ export default function Solutions() {
         </div>
 
         {/* CONTAINER SHELL 2: BOTTOM SOLUTION HIGHLIGHTS CARDS */}
-        <div className='bg-white rounded-[16px] border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] p-6 sm:p-8 md:p-[48px] w-full relative z-10'>
+        <div className='bg-white rounded-[16px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-6 sm:p-8 md:p-[48px] w-full relative z-10'>
           <h3 className='text-[18px] md:text-[20px] font-extrabold text-[#071326] tracking-tight mb-6'>
             Solution Highlights
           </h3>

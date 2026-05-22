@@ -12,7 +12,7 @@ const HeroSection = () => {
         <div className='max-w-5xl'>
           <h1 className='text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-8 leading-[1.2]'>
             Empowering Fashion Retail with
-            <span className='text-[#EDB96F] mt-5 block'>Real-Time Sales & Inventory Insights</span>
+            <span className='text-white mt-5 block'>Real-Time Sales & Inventory Insights</span>
           </h1>
           <p className='text-lg md:text-[18px] text-white/90 font-light tracking-wide max-w-3xl leading-relaxed'>
             How a fashion and retail brand transformed decision-making with automated dashboards and

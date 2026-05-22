@@ -18,9 +18,9 @@ export default function ChallengeSection() {
 
   return (
     <section className='bg-[#f4f5f7] py-10 md:py-12 border-b border-[#e5e7eb] overflow-hidden'>
-      <div className='max-w-[1120px] mx-auto px-5 sm:px-8'>
-        <h2 className='text-[#ff3030] text-[20px] sm:text-[24px] md:text-[28px] font-extrabold tracking-[1.7px] uppercase'>
-          THE CHALLENGE
+      <div className='max-w-[1120px] mx-auto px-5 sm:px-8 text-center'>
+        <h2 className='text-[20px] sm:text-[24px] md:text-[28px] font-extrabold tracking-[1.7px]'>
+          The Challenge
         </h2>
 
         <h3 className='text-[#111827] text-[24px] sm:text-[28px] md:text-[30px] mt-4 md:mt-5 font-normal tracking-[-0.6px] leading-tight'>
@@ -40,9 +40,9 @@ export default function ChallengeSection() {
               {cards.map((card, index) => (
                 <div
                   key={index}
-                  className='min-h-[100px] md:h-[116px] bg-[#fffafb] border border-[#ff3030] rounded-[8px] px-4 flex items-center gap-4'
+                  className='min-h-[100px] md:h-[116px] bg-[#fffafb] border-2 border-[#F5F5F5] rounded-[8px] px-4 flex items-center gap-4 shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
                 >
-                  <div className='w-[34px] h-[34px] shrink-0 bg-[#ff1010] rounded-[6px] flex items-center justify-center'>
+                  <div className='w-[34px] h-[34px] shrink-0 bg-[#0846AA]/60 rounded-[6px] flex items-center justify-center'>
                     <Image
                       src={card.icon}
                       alt=''

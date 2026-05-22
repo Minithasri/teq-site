@@ -15,7 +15,7 @@ export default function ClientOverview() {
   return (
     <section className='w-full bg-white'>
       {/* ── Client Overview ─────────────────────────────────────────── */}
-      <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 pt-8 md:pt-10 pb-10 md:pb-14'>
+      <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 pt-8 md:pt-10 pb-10 md:pb-14 text-center'>
         <h2 className='text-2xl md:text-3xl font-bold mb-5 md:mb-6' style={{ color: '#1D2530' }}>
           Client Overview
         </h2>
@@ -33,17 +33,13 @@ export default function ClientOverview() {
 
       {/* ── Business Challenges ──────────────────────────────────────── */}
       <div className='w-full' style={{ backgroundColor: '#F3F5F7' }}>
+        <h2 className='text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center'>
+          Business Challenges
+        </h2>
         <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-14 md:py-10'>
           <div className='flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16'>
             {/* Left — title + bullet list */}
             <div className='flex-1 min-w-0'>
-              <h2
-                className='text-2xl md:text-3xl font-bold mb-6 md:mb-8'
-                style={{ color: '#F32719' }}
-              >
-                Business Challenges
-              </h2>
-
               <ul className='space-y-4'>
                 {challenges.map((item, i) => (
                   <li key={i} className='flex items-start gap-3'>

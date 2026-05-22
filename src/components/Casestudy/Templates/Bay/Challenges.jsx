@@ -68,9 +68,9 @@ export default function ChallengeSolutionSection() {
       <div className='relative z-10 mx-auto max-w-7xl px-4 py-16'>
         {/* Challenge */}
         <div className='text-center'>
-          <p className='font-poppins text-[28px] font-semibold md:text-[40px]'>The Challenge</p>
+          <p className='font-poppins text-[28px] font-bold md:text-[42px]'>The Challenge</p>
 
-          <h2 className='mt-4 font-poppins text-[34px] font-semibold text-[#111827] md:text-[56px]'>
+          <h2 className='mt-4 font-poppins text-[34px] font-semibold text-[#0F1729]/80 md:text-[56px]'>
             Key operational & analytical gaps
           </h2>
 
@@ -127,11 +127,11 @@ export default function ChallengeSolutionSection() {
 
         {/* SOLUTION */}
         <div className='mt-28 text-center'>
-          <p className='font-poppins text-[28px] font-semibold tracking-[0.08em] md:text-[40px]'>
+          <p className='font-poppins text-[28px] font-bold tracking-[0.08em] md:text-[42px]'>
             The Solution
           </p>
 
-          <h2 className='font-poppins text-3xl font-semibold leading-[48px] md:text-5xl md:leading-[72px]'>
+          <h2 className='font-poppins text-3xl font-semibold leading-[48px] md:text-5xl md:leading-[72px] text-[#0F1729]/80'>
             Centralized analytics platform
           </h2>
 

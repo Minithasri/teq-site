@@ -51,12 +51,12 @@ export default function CurrentState() {
             {gapItems.slice(0, 3).map((item, index) => (
               <div
                 key={index}
-                className='bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300'
+                className='bg-white rounded-xl p-8 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-md transition-shadow duration-300'
               >
                 <div className='w-12 h-12 mb-6'>
                   <Image src={item.icon} alt={item.title} width={48} height={48} />
                 </div>
-                <h3 className='text-xl font-bold text-[#1D2530] mb-2'>{item.title}</h3>
+                <h3 className='text-xl font-bold text-[#0F1729]/80 mb-2'>{item.title}</h3>
                 <p className='text-[#65758B] text-base leading-relaxed'>{item.description}</p>
               </div>
             ))}
@@ -77,12 +77,12 @@ export default function CurrentState() {
             {gapItems.slice(3, 5).map((item, index) => (
               <div
                 key={index}
-                className='bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300'
+                className='bg-white rounded-xl p-8 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-md transition-shadow duration-300'
               >
                 <div className='w-12 h-12 mb-6'>
                   <Image src={item.icon} alt={item.title} width={48} height={48} />
                 </div>
-                <h3 className='text-xl font-bold text-[#1D2530] mb-2'>{item.title}</h3>
+                <h3 className='text-xl font-bold text-[#0F1729]/80 mb-2'>{item.title}</h3>
                 <p className='text-[#65758B] text-base leading-relaxed'>{item.description}</p>
               </div>
             ))}

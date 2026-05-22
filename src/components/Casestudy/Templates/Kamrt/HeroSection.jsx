@@ -27,7 +27,7 @@ const HeroSection = () => {
           <h1 className='mx-auto max-w-7xl text-3xl md:text-5xl font-semibold tracking-[-2px] text-white mt-8'>
             Optimizing Retail Performance Through
             <br />
-            <span className='text-[#F4EB17]'>Data-Driven Dashboards</span>
+            Data-Driven Dashboards
           </h1>
         </div>
       </div>
@@ -79,7 +79,7 @@ const HeroSection = () => {
               </div>
 
               {/* TITLE */}
-              <h2 className='text-2xl md:text-5xl leading-none font-bold tracking-[-1px] text-[#1B1E28]'>
+              <h2 className='text-2xl md:text-5xl leading-none font-bold tracking-[-1px]'>
                 Client Overview
               </h2>
             </div>

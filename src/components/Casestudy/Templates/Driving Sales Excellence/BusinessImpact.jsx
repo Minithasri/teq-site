@@ -74,11 +74,7 @@ export default function BusinessImpact() {
         {impactSections.map((section, idx) => (
           <div
             key={idx}
-            className='bg-white p-5 sm:p-6 md:p-8 flex flex-col justify-start border border-[#F3F4F6] h-full min-h-[320px] md:min-h-[350px]'
-            style={{
-              borderRadius: '16px',
-              boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.01), 0px 1px 3px rgba(0, 0, 0, 0.02)',
-            }}
+            className='bg-white p-5 sm:p-6 md:p-8 flex flex-col justify-start border border-[#F3F4F6] h-full min-h-[320px] md:min-h-[350px] border-2 border-[#F5F5F5] rounded-[18px] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
           >
             {/* Header Layout: Icon Box + Sub-section Title */}
             <div className='flex items-center gap-4 mb-6 md:mb-8'>
@@ -97,7 +93,6 @@ export default function BusinessImpact() {
                 style={{
                   fontFamily: "'Poppins', sans-serif",
                   fontWeight: 700,
-                  color: '#0F1729',
                   letterSpacing: '-0.5px',
                 }}
                 className='text-[20px] sm:text-[21px] md:text-[22px]'

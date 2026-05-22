@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 w-full h-full flex items-center justify-between'>
         <div className=''>
           <h1 className='text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-6 leading-[1.2] tracking-tight'>
-            Improving Public <span className='text-[#FFED00]'>Transport Efficiency</span>
+            Improving Public <span className='text-white'>Transport Efficiency</span>
           </h1>
           <p className='text-lg md:text-[22px] text-white/90 font-medium tracking-wide'>
             Real-Time Operations Dashboards

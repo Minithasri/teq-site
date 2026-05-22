@@ -35,19 +35,12 @@ export default function TechnologyStack() {
       </div>
 
       <div className='relative z-10 flex flex-col items-center justify-center min-h-[497px] max-w-[1450px] mx-auto px-4'>
-        <h2
-          className='text-white font-bold uppercase text-center mb-1 text-[24px] md:text-[32px]'
-          style={{
-            letterSpacing: '1.4px',
-            lineHeight: '1.2',
-            transform: 'rotate(-0.32deg)',
-          }}
-        >
+        <h2 className='text-white font-bold text-center mb-1 text-[42px] md:text-[32px]'>
           Technology Stack
         </h2>
 
         <h3
-          className='text-white font-bold text-center mb-8 md:mb-12 text-[22px] md:text-[30px]'
+          className='text-white font-bold text-center my-8 md:my-8 text-[22px] md:text-[30px]'
           style={{
             lineHeight: '1.2',
             letterSpacing: '-0.75px',
@@ -64,12 +57,7 @@ export default function TechnologyStack() {
             return (
               <div
                 key={index}
-                className='bg-white flex flex-col items-center justify-center p-4 transition-transform hover:scale-105 w-[160px] h-[120px] md:w-[229px] md:h-[154px]'
-                style={{
-                  borderRadius: '12px',
-                  border: '1px solid rgba(224, 229, 235, 1)',
-                  boxShadow: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)',
-                }}
+                className='bg-white flex flex-col items-center justify-center p-4 w-[160px] h-[120px] md:w-[229px] md:h-[154px] border-2 border-[#F5F5F5] rounded-[12px] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
               >
                 <div className='relative w-full h-[40px] md:h-[60px] mb-2 md:mb-3 overflow-hidden'>
                   <Image

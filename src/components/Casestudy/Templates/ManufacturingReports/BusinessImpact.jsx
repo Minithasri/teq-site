@@ -73,12 +73,12 @@ export default function BusinessImpact() {
             {metricCards.map((item, index) => (
               <div
                 key={index}
-                className='bg-white rounded-[14px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.015)] p-6 md:p-[32px] flex flex-col justify-between min-h-[200px] md:min-h-[220px] items-center md:items-start text-center md:text-left'
+                className='bg-white rounded-[14px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-6 md:p-[32px] flex flex-col justify-between min-h-[200px] md:min-h-[220px] items-center md:items-start text-center md:text-left'
               >
                 {/* Horizontal Header Group */}
                 <div className='flex items-center gap-4 w-full justify-center md:justify-start mb-3'>
                   {/* Clean rounded icon badge matched with precise dimensions */}
-                  <div className='w-[42px] h-[42px] shrink-0 flex items-center justify-center rounded-full bg-[#e8f5e9] border border-[#c8e6c9] text-[#2e7d32]'>
+                  <div className='w-[42px] h-[42px] shrink-0 flex items-center justify-center rounded-full bg-[#e8f5e9] text-[#2e7d32]'>
                     <img src={item.icon} alt='' className='w-[20px] h-[20px] object-contain' />
                   </div>
 

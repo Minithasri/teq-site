@@ -78,13 +78,13 @@ export default function OurSolutions() {
             {architectureSteps.map((step, index) => (
               <div
                 key={index}
-                className='bg-[#F8FAFC] rounded-xl p-6 border border-gray-200 flex items-start gap-4 hover:shadow-md transition-shadow'
+                className='bg-[#F8FAFC] rounded-xl p-6 border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-start gap-4'
               >
                 <div className='flex-shrink-0 w-10 h-10 relative bg-[#E0F2FE] rounded-xl p-2'>
                   <Image src={step.icon} alt={step.title} fill className='object-contain p-1' />
                 </div>
                 <div>
-                  <h4 className='text-lg font-bold text-[#1D2530] mb-1'>{step.title}</h4>
+                  <h4 className='text-lg font-bold text-[#0F1729]/80 mb-1'>{step.title}</h4>
                   <p className='text-[#64748B] text-[15px] leading-relaxed'>{step.description}</p>
                 </div>
               </div>

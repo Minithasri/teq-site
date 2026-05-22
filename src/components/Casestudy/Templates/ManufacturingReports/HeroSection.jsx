@@ -14,7 +14,7 @@ export default function HeroSection() {
         {/* Main Heading styled with tight tracking and a soft golden yellow accent */}
         <h1 className='text-[32px] sm:text-[42px] md:text-[46px] font-extrabold text-white leading-[1.2] max-w-[800px] tracking-tight'>
           End-to-End Digitalization of{' '}
-          <span className='text-[#f0e665] inline-block mt-1 sm:mt-0'>Manufacturing Reports</span>
+          <span className='text-white inline-block mt-1 sm:mt-0'>Manufacturing Reports</span>
         </h1>
       </div>
     </section>

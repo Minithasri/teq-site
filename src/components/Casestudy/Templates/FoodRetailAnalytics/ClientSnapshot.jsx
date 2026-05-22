@@ -33,7 +33,7 @@ export default function ClientSnapshot() {
           {cards.map((item, index) => (
             <div
               key={index}
-              className='bg-white border border-[#e2e8f0]/70 rounded-[12px] shadow-[0_2px_12px_rgba(0,0,0,0.02)] p-6 flex gap-4 items-start'
+              className='bg-white border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] rounded-[12px] p-6 flex gap-4 items-start'
             >
               {/* Icon Container with precise blue accent background and border radius */}
               <div className='w-11 h-11 rounded-[10px] bg-[#eef4ff] flex items-center justify-center shrink-0 mt-0.5'>
@@ -42,7 +42,7 @@ export default function ClientSnapshot() {
 
               {/* Text Block matching the exact weight and clean text structure */}
               <div className='flex flex-col justify-start pt-0.5'>
-                <h3 className='text-[15px] font-extrabold text-[#091124] leading-tight'>
+                <h3 className='text-[15px] font-extrabold text-[#091124] leading-tight text-[#0F1729]/80'>
                   {item.title}
                 </h3>
                 <p className='text-[13px] text-[#374151] font-medium mt-1 leading-[1.4] max-w-[95%]'>

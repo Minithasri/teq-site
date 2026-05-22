@@ -84,15 +84,14 @@ const MenuImpactTechSection = () => {
 
         {/* ================= TECHNOLOGY STACK ================= */}
         <div className='mt-16 text-center'>
+          {/* TITLE */}
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
+            Technology Stack
+          </h2>
           {/* TOP ROW */}
           <div className='flex flex-col gap-8 md:flex-row md:items-center md:justify-between'>
             {/* LEFT */}
             <div>
-              {/* TITLE */}
-              <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
-                Technology Stack
-              </h2>
-
               <div className='flex flex-col md:flex-row items-center gap-5 md:gap-6 mt-8'>
                 {/* TAGS */}
                 <div className='mt-8 flex flex-wrap gap-3'>

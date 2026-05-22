@@ -36,11 +36,9 @@ export default function BusinessImpact() {
       className='w-full'
       style={{ background: 'linear-gradient(180deg, #FCFBF8 0%, #F3F5F7 100%)' }}
     >
-      <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-8 md:py-10'>
+      <div className='w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-8 md:py-10 text-center'>
         {/* Title */}
-        <h2 className='text-2xl md:text-3xl font-bold mb-3' style={{ color: '#3FC91C' }}>
-          Business Impact
-        </h2>
+        <h2 className='text-2xl md:text-3xl font-bold mb-3'>Business Impact</h2>
 
         {/* Description */}
         <p
@@ -57,16 +55,12 @@ export default function BusinessImpact() {
           {impacts.map((item, i) => (
             <div
               key={i}
-              className='bg-white rounded-2xl p-6 flex flex-col gap-3'
-              style={{ border: '2px solid #3FC91C' }}
+              className='bg-white rounded-2xl p-6 flex flex-col gap-3 border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
             >
               {/* Icon + metric row */}
               <div className='flex items-center gap-3'>
                 {/* Icon box */}
-                <div
-                  className='flex-shrink-0 w-10 h-10 rounded-[10px] flex items-center justify-center'
-                  style={{ backgroundColor: '#3FC91C' }}
-                >
+                <div className='flex-shrink-0 w-10 h-10 rounded-[10px] flex items-center justify-center bg-[#0846AA]/60'>
                   <Image
                     src={item.icon}
                     alt={item.metric}
@@ -77,10 +71,7 @@ export default function BusinessImpact() {
                 </div>
 
                 {/* Metric / keyword */}
-                <span
-                  className='text-xl md:text-2xl font-bold leading-none'
-                  style={{ color: '#3FC91C' }}
-                >
+                <span className='text-xl md:text-2xl font-bold leading-none text-[#0F1729]/80'>
                   {item.metric}
                 </span>
               </div>

@@ -21,7 +21,7 @@ const HeroSection = () => {
         <div className='max-w-7xl mt-16'>
           <h1 className='text-4xl md:text-5xl lg:text-5xl font-bold text-[#F8FAFC] mb-3 leading-[1.15]'>
             Driving Real Estate Excellence Through <br />
-            <span className='text-[#FBFF1F] mt-7 block'>Customer Feedback Insights</span>
+            <span className='text-white mt-7 block'>Customer Feedback Insights</span>
           </h1>
           <p className='mt-8 text-lg md:text-xl text-[#F8FAFC]/90 font-light tracking-wide '>
             How Mah Sing transformed customer satisfaction tracking with data- driven insights

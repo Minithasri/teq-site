@@ -128,13 +128,13 @@ const TheSolution = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className='bg-white rounded-[10px] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 flex items-start gap-5 hover:shadow-lg transition-shadow'
+              className='bg-white rounded-[10px] p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)] border-2 border-[#F5F5F5] flex items-start gap-5 hover:shadow-lg transition-shadow'
             >
-              <div className='w-[44px] h-[44px] rounded-[14px] bg-[#2BFA10] flex items-center justify-center shrink-0'>
+              <div className='w-[44px] h-[44px] rounded-[14px] bg-[#0846AA]/60 flex items-center justify-center shrink-0'>
                 {card.icon}
               </div>
               <div>
-                <h4 className='font-bold text-[#0F1729] text-[18px] mb-2'>{card.title}</h4>
+                <h4 className='font-bold text-[#0F1729]/80 text-[18px] mb-2'>{card.title}</h4>
                 <p className='text-gray-500 text-[15px] leading-relaxed'>{card.text}</p>
               </div>
             </div>
@@ -146,7 +146,7 @@ const TheSolution = () => {
           <h3 className='text-[28px] font-bold text-center text-[#0F1729] mb-8'>
             Solution Highlights
           </h3>
-          <div className='rounded-[24px] border border-[#00DAE633] p-10 shadow-sm'>
+          <div className='rounded-[24px] border-2 border-[#F5F5F5] p-10 shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6'>
               {/* Left Column */}
               <div className='flex flex-col gap-6'>

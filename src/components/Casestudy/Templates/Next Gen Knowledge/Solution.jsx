@@ -38,7 +38,7 @@ export default function Solution() {
         {/* Header Section with Blue Banner and Bulb Image */}
         <div className='relative mb-16 pt-8'>
           {/* Section Title */}
-          <div className='flex items-center gap-3 mb-8'>
+          <div className='flex items-center gap-3 mb-8 text-center justify-center'>
             <div className='w-8 h-8 relative'>
               <Image
                 src='/images/Templates/template10/solu1.svg'
@@ -83,14 +83,16 @@ export default function Solution() {
 
         {/* Strategic Requirements Grid */}
         <div>
-          <h3 className='text-2xl font-bold text-gray-900 mb-8'>Strategic Requirements</h3>
+          <h3 className='text-2xl font-bold text-gray-900 mb-8 text-center'>
+            Strategic Requirements
+          </h3>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
             {requirements.map((req, index) => (
               <div
                 key={index}
-                className='bg-white rounded-2xl p-8 shadow-sm border border-gray-100'
+                className='bg-white rounded-2xl p-8 border-2 border-[#F5F5F5] shadow-[0px_8px_22px_rgba(0,0,0,0.08)]'
               >
-                <h4 className='text-xl font-bold mb-6 text-[#0073E6]'>{req.title}</h4>
+                <h4 className='text-xl font-bold mb-6 text-[#0F1729]/80'>{req.title}</h4>
                 <div className='space-y-4'>
                   {req.points.map((point, idx) => (
                     <div key={idx} className='flex items-start gap-3'>

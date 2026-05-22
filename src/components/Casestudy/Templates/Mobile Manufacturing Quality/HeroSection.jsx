@@ -58,7 +58,7 @@ export default function HeroSection() {
           </h2>
 
           <h1 className='text-[28px] lg:text-[36px] font-semibold text-white leading-tight mb-6'>
-            Analysis for <span className='font-extrabold'>Mobile Manufacturing Quality</span>
+            Analysis for Mobile Manufacturing Quality
           </h1>
 
           <p className='text-[16px] lg:text-[20px] text-white/90 max-w-6xl'>

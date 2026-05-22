@@ -49,9 +49,9 @@ export default function HeroSection() {
         {/* Heading Section - Replicating image_bec31d.png text */}
         <div className='max-w-4xl'>
           <h1 className='text-white font-extrabold text-[40px] md:text-[54px] lg:text-[64px] leading-[1.1] tracking-[-1px] mb-8'>
-            Next-Gen <span className='text-[#E6FF1F]'>Sales Campaign</span>
+            Next-Gen <span className='text-white'>Sales Campaign</span>
             <br />
-            <span className='text-[#E6FF1F]'>Infrastructure</span> on GCP
+            <span className='text-white'>Infrastructure</span> on GCP
           </h1>
 
           {/* Subtitle / Footer Text */}

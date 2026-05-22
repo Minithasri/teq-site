@@ -68,14 +68,14 @@ const ChallengeTransformationSection = () => {
         {/* CONTENT */}
         <div className='relative z-10 mx-auto max-w-7xl px-4 md:px-6 py-6 md:py-10'>
           {/* TITLE */}
-          <div className='max-w-4xl'>
-            <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#161922]'>
+          <div className='max-w-7xl'>
+            <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-center'>
               Client Challenges
             </h2>
 
-            <p className='mt-5 text-[15px] md:text-[24px] leading-[1.5] text-[#777D8B]'>
-              Client faced significant obstacles in achieving real-time visibility and data-driven
-              decision making
+            <p className='mt-5 text-[15px] md:text-[24px] leading-[1.5] text-[#777D8B] text-center'>
+              Client faced significant obstacles in achieving real-time visibility <br /> and
+              data-driven decision making
             </p>
           </div>
 
@@ -86,17 +86,17 @@ const ChallengeTransformationSection = () => {
                 key={index}
                 className='
                   rounded-[18px]
-                  border
-                  border-[#FF6A6A]
+                  border-2
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   py-5
-                  shadow-[0px_8px_20px_rgba(0,0,0,0.05)]
+                  shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                 '
               >
                 <div className='flex items-start gap-4'>
                   {/* ICON */}
-                  <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#FFE9E9]'>
+                  <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-[12px] bg-[#FFE9E9]'>
                     <Image
                       src={item.icon}
                       alt='Icon'
@@ -121,19 +121,18 @@ const ChallengeTransformationSection = () => {
               <div
                 key={index}
                 className='
-                  min-h-[120px]
                   rounded-[18px]
-                  border
-                  border-[#FF6A6A]
+                  border-2
+                  border-[#F5F5F5]
                   bg-white
                   px-5
                   py-5
-                  shadow-[0px_8px_20px_rgba(0,0,0,0.05)]
+                  shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                 '
               >
                 <div className='flex items-start gap-4'>
                   {/* ICON */}
-                  <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#FFE9E9]'>
+                  <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-[12px] bg-[#FFE9E9]'>
                     <Image
                       src={item.icon}
                       alt='Icon'
@@ -199,7 +198,7 @@ const ChallengeTransformationSection = () => {
                   md:px-7
                   py-5
                   md:py-6
-                  shadow-[0px_10px_24px_rgba(0,0,0,0.08)]
+                  shadow-[0px_4px_12px_rgba(0,0,0,0.08)]
                 '
               >
                 {/* TITLE */}

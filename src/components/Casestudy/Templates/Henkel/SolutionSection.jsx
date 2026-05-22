@@ -40,10 +40,10 @@ const SolutionSection = () => {
     <section className='w-full overflow-hidden'>
       <div className='mx-auto max-w-7xl px-4 md:px-6 py-10'>
         {/* ================= HEADER ================= */}
-        <div>
+        <div className='text-center'>
           {/* TITLE */}
-          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px] text-[#1E49D8]'>
-            OUR SOLUTION
+          <h2 className='text-2xl md:text-5xl leading-none font-semibold tracking-[-1px]'>
+            Our Solution
           </h2>
 
           {/* DESCRIPTION */}
@@ -62,7 +62,7 @@ const SolutionSection = () => {
               className='
                 rounded-[24px]
                 border-2
-                border-[#2450E3]
+                border-[#F5F5F5]
                 bg-white
                 px-5
                 md:px-6
@@ -74,7 +74,7 @@ const SolutionSection = () => {
               {/* HEADER */}
               <div className='flex items-center gap-4'>
                 {/* ICON */}
-                <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[14px] border border-[#2450E3] bg-[#F4F7FF]'>
+                <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-[14px] bg-blue-500/10 '>
                   <Image
                     src={item.icon}
                     alt={item.title}
@@ -85,7 +85,7 @@ const SolutionSection = () => {
                 </div>
 
                 {/* TITLE */}
-                <h3 className='text-[12px] md:text-[17px] leading-[1.45] font-semibold tracking-[-0.4px] text-[#2148D8]'>
+                <h3 className='text-[12px] md:text-[17px] leading-[1.45] font-semibold tracking-[-0.4px] text-[#0F1729]/80'>
                   {item.title}
                 </h3>
               </div>

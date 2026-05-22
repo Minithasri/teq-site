@@ -35,7 +35,7 @@ export default function KeyChallenges() {
           {challenges.map((challenge, index) => (
             <div
               key={index}
-              className={`bg-white border border-[#e5e7eb] rounded-[12px] px-[20px] py-[18px] flex items-start gap-[16px] shadow-[0_2px_8px_rgba(0,0,0,0.03)] ${
+              className={`bg-white border-2 border-[#F5F5F5] rounded-[12px] px-[20px] py-[18px] flex items-start gap-[16px] shadow-[0_2px_12px_rgba(0,0,0,0.08)] ${
                 index === 4 ? 'md:col-span-2 md:max-w-[440px] md:mx-auto' : ''
               }`}
             >
