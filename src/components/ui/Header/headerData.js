@@ -28,6 +28,7 @@ export const headerData = {
         { label: 'Vision & Mission', href: '/company/vision-mission' },
         { label: 'Leadership', href: '/company/leadership' },
         { label: 'Work From Hometown', href: '/company/work-from-hometown' },
+        { label: 'Careers', href: '/careers' },
       ],
       megaMenuColumns: [
         {
@@ -44,6 +45,7 @@ export const headerData = {
           links: [
             { label: 'Work From Hometown', href: '/company/work-from-hometown' },
             // { label: 'Core Values', href: '/company/values' },
+            { label: 'Careers', href: '/careers' },
           ],
         },
       ],
@@ -129,13 +131,13 @@ export const headerData = {
       children: [],
       megaMenuColumns: [],
     },
-    {
-      label: 'Careers',
-      href: '/careers',
-      megaMenu: false,
-      children: [],
-      megaMenuColumns: [],
-    },
+    // {
+    //   label: 'Careers',
+    //   href: '/careers',
+    //   megaMenu: false,
+    //   children: [],
+    //   megaMenuColumns: [],
+    // },
   ],
 
   ctaButton: {
