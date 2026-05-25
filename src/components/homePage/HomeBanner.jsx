@@ -16,12 +16,12 @@ function GradientHeading() {
     with: ['#975bc4', '#7c3db7', '#8b4ebf'],
     AI: ['#7333b2', '#bc83d7'],
     agents: ['#7333b2', '#bc83d7'],
-    that: ['#1f1f1f', '#1f1f1f'],
-    automate: ['#1f1f1f', '#1f1f1f'],
-    complexity: ['#1f1f1f', '#1f1f1f'],
-    and: ['#1f1f1f', '#1f1f1f'],
-    accelerate: ['#1f1f1f', '#1f1f1f'],
-    growth: ['#1f1f1f', '#1f1f1f'],
+    that: ['#404040', '#404040'],
+    automate: ['#404040', '#404040'],
+    complexity: ['#404040', '#404040'],
+    and: ['#404040', '#404040'],
+    accelerate: ['#404040', '#404040'],
+    growth: ['#404040', '#404040'],
   };
 
   return (
@@ -31,8 +31,8 @@ function GradientHeading() {
           <span
             className='responsive-heading'
             style={{
-              fontSize: li === 0 ? 'clamp(22px, 5.5vw, 60px)' : 'clamp(18px, 4vw, 40px)',
-              fontWeight: 700,
+              fontSize: li === 0 ? 'clamp(22px, 5.5vw, 60px)' : 'clamp(18px, 3vw, 34px)',
+              fontWeight: li === 0 ? 700 : 600,
               lineHeight: 1.25,
               letterSpacing: '-0.01em',
               display: 'inline-block',
