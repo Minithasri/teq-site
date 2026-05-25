@@ -47,8 +47,8 @@ const navItems: NavItem[] = [
       { label: 'Boomi', href: 'https://gwcdata.ai/partners/boomi/' },
     ],
   },
-  { label: 'DOMO Agentic AI', href: 'https://gwcdata.ai/domo-consulting/', internal: false },
-  { label: 'Boomi', href: 'https://gwcdata.ai/boomi-integration/', internal: false },
+  { label: 'Domo', href: 'https://gwcdata.ai/domo-consulting/', internal: false },
+  { label: 'Agentic AI', href: 'https://gwcdata.ai/boomi-integration/', internal: false },
   { label: 'Careers', href: 'https://gwcdata.ai/careers/', internal: false },
 ];
 

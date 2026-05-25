@@ -4,17 +4,24 @@ import { useEffect, useRef, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 
 function GradientHeading() {
-  const lines = ['We Build Intelligent Agents', 'that work for you'];
+  const lines = [
+    'Elevate your business with AI agents',
+    'that automate complexity and accelerate growth',
+  ];
 
   const wordGradients = {
-    We: ['#1f1f1f', '#1f1f1f'],
-    Build: ['#bc83d7', '#7333b2', '#bc83d7'],
-    Intelligent: ['#975bc4', '#7c3db7', '#8b4ebf'],
-    Agents: ['#7333b2', '#bc83d7'],
+    Elevate: ['#1f1f1f', '#1f1f1f'],
+    your: ['#bc83d7', '#7333b2', '#bc83d7'],
+    business: ['#975bc4', '#7c3db7', '#8b4ebf'],
+    with: ['#975bc4', '#7c3db7', '#8b4ebf'],
+    AI: ['#7333b2', '#bc83d7'],
+    agents: ['#7333b2', '#bc83d7'],
     that: ['#1f1f1f', '#1f1f1f'],
-    work: ['#1f1f1f', '#1f1f1f'],
-    for: ['#1f1f1f', '#1f1f1f'],
-    you: ['#1f1f1f', '#1f1f1f'],
+    automate: ['#1f1f1f', '#1f1f1f'],
+    complexity: ['#1f1f1f', '#1f1f1f'],
+    and: ['#1f1f1f', '#1f1f1f'],
+    accelerate: ['#1f1f1f', '#1f1f1f'],
+    growth: ['#1f1f1f', '#1f1f1f'],
   };
 
   return (
@@ -24,7 +31,7 @@ function GradientHeading() {
           <span
             className='responsive-heading'
             style={{
-              fontSize: 'clamp(22px, 5.5vw, 60px)',
+              fontSize: li === 0 ? 'clamp(22px, 5.5vw, 60px)' : 'clamp(18px, 4vw, 40px)',
               fontWeight: 700,
               lineHeight: 1.25,
               letterSpacing: '-0.01em',
