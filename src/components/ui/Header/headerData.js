@@ -125,8 +125,8 @@ export const headerData = {
       megaMenuColumns: [],
     },
     {
-      label: 'Agentic AI',
-      href: '/boomi-integration',
+      label: 'Agentic Domo',
+      href: '/agentic-ai',
       megaMenu: false,
       children: [],
       megaMenuColumns: [],
