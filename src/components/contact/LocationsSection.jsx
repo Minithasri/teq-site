@@ -70,14 +70,14 @@ export default function LocationsSection() {
       image: '/images/ContactUs/tirupattur.webp',
       mapLink: 'https://maps.app.goo.gl/1os8Q2QZyW6CtS939',
     },
-    {
-      id: 5,
-      name: 'Coimbatore',
-      address:
-        'Mayflower Signature, 923b, 7TH FLOOR, Avinashi Road, Peelamedu, (opp PSG Tech), Coimbatore – 641004',
-      image: '/images/ContactUs/Coimbatore.webp',
-      mapLink: 'https://maps.app.goo.gl/f79uBSkC9DV36cs76',
-    },
+    // {
+    //   id: 5,
+    //   name: 'Coimbatore',
+    //   address:
+    //     'Mayflower Signature, 923b, 7TH FLOOR, Avinashi Road, Peelamedu, (opp PSG Tech), Coimbatore – 641004',
+    //   image: '/images/ContactUs/Coimbatore.webp',
+    //   mapLink: 'https://maps.app.goo.gl/f79uBSkC9DV36cs76',
+    // },
   ];
 
   return (
