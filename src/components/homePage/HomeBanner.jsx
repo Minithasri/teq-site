@@ -4,24 +4,17 @@ import { useEffect, useRef, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 
 function GradientHeading() {
-  const lines = [
-    'Elevate your business with AI agents',
-    'that automate complexity and accelerate growth',
-  ];
+  const lines = ['We Build Intelligent Agents', 'that work for you'];
 
   const wordGradients = {
-    Elevate: ['#1f1f1f', '#1f1f1f'],
-    your: ['#bc83d7', '#7333b2', '#bc83d7'],
-    business: ['#975bc4', '#7c3db7', '#8b4ebf'],
-    with: ['#975bc4', '#7c3db7', '#8b4ebf'],
-    AI: ['#7333b2', '#bc83d7'],
-    agents: ['#7333b2', '#bc83d7'],
-    that: ['#404040', '#404040'],
-    automate: ['#404040', '#404040'],
-    complexity: ['#404040', '#404040'],
-    and: ['#404040', '#404040'],
-    accelerate: ['#404040', '#404040'],
-    growth: ['#404040', '#404040'],
+    We: ['#1f1f1f', '#1f1f1f'],
+    Build: ['#bc83d7', '#7333b2', '#bc83d7'],
+    Intelligent: ['#975bc4', '#7c3db7', '#8b4ebf'],
+    Agents: ['#7333b2', '#bc83d7'],
+    that: ['#1f1f1f', '#1f1f1f'],
+    work: ['#1f1f1f', '#1f1f1f'],
+    for: ['#1f1f1f', '#1f1f1f'],
+    you: ['#1f1f1f', '#1f1f1f'],
   };
 
   return (
@@ -31,8 +24,8 @@ function GradientHeading() {
           <span
             className='responsive-heading'
             style={{
-              fontSize: li === 0 ? 'clamp(22px, 5.5vw, 60px)' : 'clamp(18px, 3vw, 34px)',
-              fontWeight: li === 0 ? 700 : 600,
+              fontSize: 'clamp(22px, 5.5vw, 60px)',
+              fontWeight: 700,
               lineHeight: 1.25,
               letterSpacing: '-0.01em',
               display: 'inline-block',
@@ -149,11 +142,10 @@ const HomeBanner = () => {
 
             {/* Description */}
             <p
-              className='text-[20px] mb-6 sm:text-base lg:text-[16px] max-w-4xl mx-auto mt-4 sm:mt-6 px-2'
+              className='text-[20px] mb-6 sm:text-base lg:text-[20px] max-w-2xl mx-auto mt-4 sm:mt-6 px-2'
               style={{ lineHeight: '1.5' }}
             >
-              We design AI agents that automate support and workflows so <br /> your team can focus
-              on what matters
+              Elevate your business with AI agents that automate complexity and accelerate growth.
             </p>
 
             {/* CTA Button */}
