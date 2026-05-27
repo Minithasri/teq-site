@@ -121,8 +121,136 @@ export default function Header({
                   "data-[state=open]:after:content-[''] data-[state=open]:after:absolute data-[state=open]:after:bottom-1 data-[state=open]:after:left-1/2 data-[state=open]:after:-translate-x-1/2 data-[state=open]:after:w-6 data-[state=open]:after:h-[3px] data-[state=open]:after:bg-[#6F2B8B] data-[state=open]:after:rounded-full";
 
                 return (
-                  <div key={item.label} className='relative '>
-                    {item.megaMenu ? (
+                  <div key={item.label} className='relative group/nav'>
+                    {item.agenticMegaMenu ? (
+                      /* ── Agentic Domo: Wide multi-column mega panel ── */
+                      <>
+                        <button
+                          className={`relative flex items-center gap-0.5 text-[10px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap focus:outline-none ${
+                            isActive ? indicatorBase : 'hover:opacity-80'
+                          }`}
+                        >
+                          {item.label}
+                          <ChevronDown
+                            size={14}
+                            className='transition-transform duration-200 group-hover/nav:rotate-180'
+                          />
+                        </button>
+
+                        {/* Mega Panel */}
+                        <div
+                          className='invisible opacity-0 group-hover/nav:visible group-hover/nav:opacity-100 transition-all duration-200 fixed left-0 right-0 z-[9999] mt-2'
+                          style={{ top: '72px' }}
+                        >
+                          <div className='mx-auto max-w-[1400px] px-4'>
+                            <div className='bg-white rounded-[24px] shadow-2xl border border-gray-100 p-6 max-h-[calc(100vh-100px)] overflow-y-auto custom-scrollbar'>
+                              {/* Panel Header */}
+                              <div className='flex items-center justify-between mb-4'>
+                                <div className='flex items-center gap-3'>
+                                  <span className='w-6 h-[2px] bg-[#7030B1] inline-block rounded-full' />
+                                  <h3 className='text-[16px] font-bold text-[#7030B1]'>
+                                    Agentic AI
+                                  </h3>
+                                </div>
+                              </div>
+
+                              {/* Categories Grid */}
+                              <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 items-start'>
+                                {(() => {
+                                  const cats = item.agenticCategories || [];
+                                  const getCat = id => cats.find(c => c.id === id);
+
+                                  const marketing = getCat('marketing');
+                                  const retail = getCat('retail-merchandising');
+                                  const manufacturing = getCat('manufacturing-maintenance');
+
+                                  const customerSupport = getCat('customer-support');
+                                  const procurement = getCat('procurement');
+                                  const hr = getCat('human-resources');
+                                  const sales = getCat('sales');
+                                  const operations = getCat('operations');
+
+                                  const finance = getCat('finance-risk');
+                                  const realEstate = getCat('real-estate');
+
+                                  // Helper to render a single card
+                                  const renderCard = (cat, spanClass, innerCols) => {
+                                    if (!cat) return null;
+                                    return (
+                                      <div
+                                        key={cat.id}
+                                        className={`bg-[#F9F9FB] rounded-xl p-4 border border-transparent hover:border-purple-100 transition-colors ${spanClass}`}
+                                      >
+                                        <h4
+                                          className={`text-[11px] font-bold text-[#171717] uppercase tracking-wider mb-3 flex items-center gap-2 ${spanClass.includes('col-span-1') ? 'whitespace-nowrap' : ''}`}
+                                        >
+                                          <span className='w-3 h-[2px] bg-[#7030B1] inline-block rounded-full flex-shrink-0' />
+                                          <span className='truncate'>{cat.label}</span>
+                                        </h4>
+                                        <ul className={`grid gap-x-4 gap-y-2 ${innerCols}`}>
+                                          {cat.agents.map(agent => (
+                                            <li key={agent.href}>
+                                              <Link
+                                                href={agent.href}
+                                                onClick={handleLinkClick}
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                                className='block text-[12.5px] text-gray-500 hover:text-[#7030B1] font-medium leading-tight transition-colors'
+                                                title={agent.label}
+                                              >
+                                                {agent.label}
+                                              </Link>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    );
+                                  };
+
+                                  return (
+                                    <>
+                                      {/* Row 1: Marketing(2), Retail(3), Manufacturing(2) -> 7 cols total */}
+                                      {renderCard(
+                                        marketing,
+                                        'xl:col-span-2 md:col-span-2',
+                                        'grid-cols-1 md:grid-cols-2'
+                                      )}
+                                      {renderCard(
+                                        retail,
+                                        'xl:col-span-3 md:col-span-2',
+                                        'grid-cols-1 md:grid-cols-2 xl:grid-cols-3'
+                                      )}
+                                      {renderCard(
+                                        manufacturing,
+                                        'xl:col-span-2 md:col-span-2',
+                                        'grid-cols-1 md:grid-cols-2'
+                                      )}
+
+                                      {/* Row 2: Support(2), Procure(1), HR(1), Sales(1), Ops(1), Finance+RealEstate(1) -> 7 cols total */}
+                                      {renderCard(
+                                        customerSupport,
+                                        'xl:col-span-2 md:col-span-2',
+                                        'grid-cols-1 md:grid-cols-2'
+                                      )}
+                                      {renderCard(procurement, 'xl:col-span-1', 'grid-cols-1')}
+                                      {renderCard(hr, 'xl:col-span-1', 'grid-cols-1')}
+                                      {renderCard(sales, 'xl:col-span-1', 'grid-cols-1')}
+                                      {renderCard(operations, 'xl:col-span-1', 'grid-cols-1')}
+
+                                      {/* Combined Column for Finance and Real Estate */}
+                                      <div className='flex flex-col gap-4 xl:col-span-1 h-full'>
+                                        {renderCard(finance, 'w-full', 'grid-cols-1')}
+                                        {renderCard(realEstate, 'w-full', 'grid-cols-1')}
+                                      </div>
+                                    </>
+                                  );
+                                })()}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    ) : item.megaMenu ? (
                       <DropdownMenu modal={false}>
                         <DropdownMenuTrigger asChild>
                           <button
@@ -209,12 +337,12 @@ export default function Header({
               {navItems.map(item => {
                 const allLinks = item.megaMenuColumns?.flatMap(column => column.links) || [];
                 const shouldOpenInNewTab = item.label === 'Solutions' || item.label === 'Partners';
-                const hasDropdown = allLinks.length > 0;
+                const hasDropdown = allLinks.length > 0 || item.agenticMegaMenu;
 
                 return (
                   <div key={item.href} className='border-b border-gray-200 py-2'>
                     <div className='flex items-center justify-between'>
-                      {item.megaMenu ? (
+                      {item.megaMenu || item.agenticMegaMenu ? (
                         <button
                           onClick={e => toggleMobileItem(item.label, e)}
                           className='block py-2.5 text-[14px] font-medium flex-1 text-left text-gray-800 whitespace-nowrap'
@@ -240,21 +368,50 @@ export default function Header({
                         </button>
                       )}
                     </div>
-                    {hasDropdown && openMobileItems.includes(item.label) && (
-                      <div className='pl-6 border-l-2 border-gray-200 ml-2.5 mb-2.5'>
-                        {allLinks.map(link => (
-                          <Link
-                            key={link.href}
-                            href={link.href}
-                            className='block py-1.5 text-[13px] font-medium text-gray-700 whitespace-nowrap'
-                            onClick={handleLinkClick}
-                            {...(shouldOpenInNewTab && {
-                              target: '_blank',
-                              rel: 'noopener noreferrer',
-                            })}
-                          >
-                            {link.label}
-                          </Link>
+                    {/* Standard megaMenu mobile links */}
+                    {hasDropdown &&
+                      !item.agenticMegaMenu &&
+                      openMobileItems.includes(item.label) && (
+                        <div className='pl-6 border-l-2 border-gray-200 ml-2.5 mb-2.5'>
+                          {allLinks.map(link => (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              className='block py-1.5 text-[13px] font-medium text-gray-700 whitespace-nowrap'
+                              onClick={handleLinkClick}
+                              {...(shouldOpenInNewTab && {
+                                target: '_blank',
+                                rel: 'noopener noreferrer',
+                              })}
+                            >
+                              {link.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    {/* Agentic Domo mobile: categories with nested agents */}
+                    {item.agenticMegaMenu && openMobileItems.includes(item.label) && (
+                      <div className='ml-2.5 mb-2.5 space-y-3'>
+                        {item.agenticCategories?.map(cat => (
+                          <div key={cat.id}>
+                            <p className='text-[10px] font-bold text-[#7030B1] uppercase tracking-wider px-2 py-1'>
+                              {cat.label}
+                            </p>
+                            <div className='pl-4 border-l-2 border-purple-100'>
+                              {cat.agents.map(agent => (
+                                <Link
+                                  key={agent.href}
+                                  href={agent.href}
+                                  className='block py-1 text-[12px] text-gray-700 hover:text-[#7030B1]'
+                                  onClick={handleLinkClick}
+                                  target='_blank'
+                                  rel='noopener noreferrer'
+                                >
+                                  {agent.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
                         ))}
                       </div>
                     )}

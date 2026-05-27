@@ -128,8 +128,285 @@ export const headerData = {
       label: 'Agentic Domo',
       href: '/agentic-ai',
       megaMenu: false,
+      agenticMegaMenu: true,
       children: [],
       megaMenuColumns: [],
+      agenticCategories: [
+        {
+          id: 'customer-support',
+          label: 'Customer Support',
+          agents: [
+            {
+              label: 'Voice Call Quality Evaluation & Compliance Agent',
+              href: '/agentic-ai/voice-call-quality-evaluation-compliance-agent',
+            },
+            {
+              label: 'Chat Quality Evaluation & Compliance Agent',
+              href: '/agentic-ai/chat-quality-evaluation-compliance-agent',
+            },
+            {
+              label: 'Email Quality Evaluation & Compliance Agent',
+              href: '/agentic-ai/email-quality-evaluation-compliance-agent',
+            },
+            { label: 'Warranty Management Agent', href: '/agentic-ai/warranty-management-agent' },
+            {
+              label: 'Sierra – Customer Support Analytics Agent',
+              href: '/agentic-ai/sierra-customer-support-analytics-agent',
+            },
+            {
+              label: 'AAI – IT Service Ticket Agent',
+              href: '/agentic-ai/aai-it-service-ticket-agent',
+            },
+            {
+              label: 'Tenant Sentiment Intelligence Agent',
+              href: '/agentic-ai/tenant-sentiment-intelligence-agent',
+            },
+          ],
+        },
+        {
+          id: 'procurement',
+          label: 'Procurement',
+          agents: [
+            { label: 'Procurement Agent', href: '/agentic-ai/procurement-agent' },
+            {
+              label: 'Manufacturing Procurement Agent',
+              href: '/agentic-ai/manufacturing-procurement-agent',
+            },
+            { label: 'Supplier Catalog Agent', href: '/agentic-ai/supplier-catalog-agent' },
+            {
+              label: 'Supplier Performance Intelligence Agent',
+              href: '/agentic-ai/supplier-performance-intelligence-agent',
+            },
+            {
+              label: 'Invoice Anomaly Detection Agent',
+              href: '/agentic-ai/invoice-anomaly-detection-agent',
+            },
+            { label: 'Price Guard', href: '/agentic-ai/price-guard' },
+          ],
+        },
+        {
+          id: 'human-resources',
+          label: 'Human Resources',
+          agents: [
+            { label: 'AI Resume Screening', href: '/agentic-ai/ai-resume-screening' },
+            { label: 'AI Candidate Screening', href: '/agentic-ai/ai-candidate-screening' },
+            { label: 'AI Hiring Assistant', href: '/agentic-ai/ai-hiring-assistant' },
+            {
+              label: 'Recruitment Intelligence Agent',
+              href: '/agentic-ai/recruitment-intelligence-agent',
+            },
+            { label: 'Magic Rostering', href: '/agentic-ai/magic-rostering' },
+          ],
+        },
+        {
+          id: 'sales',
+          label: 'Sales',
+          agents: [
+            { label: 'Sales Agent App', href: '/agentic-ai/sales-agent-app' },
+            {
+              label: 'Intelligent Sales Productivity App',
+              href: '/agentic-ai/intelligent-sales-productivity-app',
+            },
+            { label: 'Lead Distribution Agent', href: '/agentic-ai/lead-distribution-agent' },
+            { label: 'Analyst Chatbot', href: '/agentic-ai/analyst-chatbot' },
+          ],
+        },
+        {
+          id: 'marketing',
+          label: 'Marketing',
+          agents: [
+            {
+              label: 'SEO Opportunity Mapper Agent',
+              href: '/agentic-ai/seo-opportunity-mapper-agent',
+            },
+            {
+              label: 'Influencer Fit Assessment Agent',
+              href: '/agentic-ai/influencer-fit-assessment-agent',
+            },
+            {
+              label: 'D2C Upsell/Cross-sell Agent',
+              href: '/agentic-ai/d2c-upsell-cross-sell-agent',
+            },
+            {
+              label: 'Multi Agent Digital Marketing & AdTech',
+              href: '/agentic-ai/multi-agent-digital-marketing-adtech',
+            },
+            {
+              label: 'Digital Marketing Interactive Workflow',
+              href: '/agentic-ai/digital-marketing-interactive-workflow',
+            },
+            { label: 'Budget Allocation Agent', href: '/agentic-ai/budget-allocation-agent' },
+            { label: 'Campaign Performance Agent', href: '/agentic-ai/campaign-performance-agent' },
+            {
+              label: 'Email & CRM Optimization Agent',
+              href: '/agentic-ai/email-crm-optimization-agent',
+            },
+            {
+              label: 'Personalized Product & Color Palette Recommender',
+              href: '/agentic-ai/personalized-product-color-palette-recommender',
+            },
+            {
+              label: 'Marketing Campaign Performance & Alert Agent',
+              href: '/agentic-ai/marketing-campaign-performance-alert-agent',
+            },
+            {
+              label: 'AI Marketing & Recommendation Agent',
+              href: '/agentic-ai/ai-marketing-recommendation-agent',
+            },
+            {
+              label: 'Real Estate Marketing Agent',
+              href: '/agentic-ai/real-estate-marketing-agent',
+            },
+            {
+              label: 'Real Estate Search History Marketing',
+              href: '/agentic-ai/real-estate-search-history-marketing',
+            },
+          ],
+        },
+        {
+          id: 'operations',
+          label: 'Operations',
+          agents: [
+            { label: 'Dashboard Summary Agent', href: '/agentic-ai/dashboard-summary-agent' },
+            {
+              label: 'Booking Amendment Detection Agent',
+              href: '/agentic-ai/booking-amendment-detection-agent',
+            },
+            {
+              label: 'AutoFulfill AI Intelligent Exception Handling',
+              href: '/agentic-ai/autofulfill-ai-intelligent-exception-handling',
+            },
+            {
+              label: 'Capacity Conflict Resolver Agent',
+              href: '/agentic-ai/capacity-conflict-resolver-agent',
+            },
+            {
+              label: 'Listing Freshness & Expiry Agent',
+              href: '/agentic-ai/listing-freshness-expiry-agent',
+            },
+          ],
+        },
+        {
+          id: 'retail-merchandising',
+          label: 'Retail & Merchandising',
+          agents: [
+            { label: 'Store to Store Allocation', href: '/agentic-ai/store-to-store-allocation' },
+            {
+              label: 'First Allocation Product Planner',
+              href: '/agentic-ai/first-allocation-product-planner',
+            },
+            {
+              label: 'Smart Pricing Allocation Agent',
+              href: '/agentic-ai/smart-pricing-allocation-agent',
+            },
+            {
+              label: 'Product Review Intelligence Agent',
+              href: '/agentic-ai/product-review-intelligence-agent',
+            },
+            {
+              label: 'Cart Abandonment Recovery Agent',
+              href: '/agentic-ai/cart-abandonment-recovery-agent',
+            },
+            {
+              label: 'Cart Abandonment Reasoning Agent',
+              href: '/agentic-ai/cart-abandonment-reasoning-agent',
+            },
+            { label: 'Discount Suggestion Agent', href: '/agentic-ai/discount-suggestion-agent' },
+            {
+              label: 'Retail Inventory Optimization & Personalized Marketing Agent',
+              href: '/agentic-ai/retail-inventory-optimization-personalized-marketing-agent',
+            },
+            {
+              label: 'Return Abuse Detection Agent',
+              href: '/agentic-ai/return-abuse-detection-agent',
+            },
+            {
+              label: 'Sales Floor Allocation Agent',
+              href: '/agentic-ai/sales-floor-allocation-agent',
+            },
+            {
+              label: 'Product Planogram Navigator Agent',
+              href: '/agentic-ai/product-planogram-navigator-agent',
+            },
+            {
+              label: 'Retail Promotion Effectiveness Agent',
+              href: '/agentic-ai/retail-promotion-effectiveness-agent',
+            },
+            {
+              label: 'Customer Segmentation Analysis',
+              href: '/agentic-ai/customer-segmentation-analysis',
+            },
+            { label: 'Retail Optimization', href: '/agentic-ai/retail-optimization' },
+          ],
+        },
+        {
+          id: 'manufacturing-maintenance',
+          label: 'Manufacturing & Maintenance',
+          agents: [
+            {
+              label: 'Manufacturing Production Planning & Predictive Maintenance Agent',
+              href: '/agentic-ai/manufacturing-production-planning-predictive-maintenance-agent',
+            },
+            {
+              label: 'AI-Driven Downtime Root Cause Agent',
+              href: '/agentic-ai/ai-driven-downtime-root-cause-agent',
+            },
+            {
+              label: 'Auto-Approve Maintenance Agent',
+              href: '/agentic-ai/auto-approve-maintenance-agent',
+            },
+            {
+              label: 'Hazard Alert Prioritization Agent',
+              href: '/agentic-ai/hazard-alert-prioritization-agent',
+            },
+            {
+              label: 'AI-Driven Inventory Disposal Agent',
+              href: '/agentic-ai/ai-driven-inventory-disposal-agent',
+            },
+            { label: 'Manufacturing Consumable', href: '/agentic-ai/manufacturing-consumable' },
+            {
+              label: 'Risk Forecasting & Safety Intelligence Agent',
+              href: '/agentic-ai/risk-forecasting-safety-intelligence-agent',
+            },
+            {
+              label: 'Supply Chain Efficiency Agents',
+              href: '/agentic-ai/supply-chain-efficiency-agents',
+            },
+          ],
+        },
+        {
+          id: 'finance-risk',
+          label: 'Finance & Risk',
+          agents: [
+            {
+              label: 'Risk & Fraudulent Transactions Analysis',
+              href: '/agentic-ai/risk-fraudulent-transactions-analysis',
+            },
+            {
+              label: 'Lease Agreement Extraction Agent',
+              href: '/agentic-ai/lease-agreement-extraction-agent',
+            },
+            {
+              label: 'Menu Compliance Validation Agent',
+              href: '/agentic-ai/menu-compliance-validation-agent',
+            },
+          ],
+        },
+        {
+          id: 'real-estate',
+          label: 'Real Estate & Property Management',
+          agents: [
+            {
+              label: 'Real Estate Property Comparison Agent',
+              href: '/agentic-ai/real-estate-property-comparison-agent',
+            },
+            {
+              label: 'Real Estate Suggestion Agent',
+              href: '/agentic-ai/real-estate-suggestion-agent',
+            },
+          ],
+        },
+      ],
     },
     // {
     //   label: 'Careers',
