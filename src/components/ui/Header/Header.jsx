@@ -10,7 +10,7 @@ import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { FiMinus, FiPlus } from 'react-icons/fi';
+import { FiMinus, FiPlus, FiArrowUpRight } from 'react-icons/fi';
 import { headerData } from './headerData';
 export default function Header({
   animate = false,
@@ -143,9 +143,9 @@ export default function Header({
                           style={{ top: '72px' }}
                         >
                           <div className='mx-auto max-w-[1400px] px-4'>
-                            <div className='bg-white rounded-[24px] shadow-2xl border border-gray-100 p-6 max-h-[calc(100vh-100px)] overflow-y-auto custom-scrollbar'>
+                            <div className='bg-white rounded-[24px] shadow-2xl border border-gray-100 p-4 lg:p-5 max-h-[calc(100vh-80px)] overflow-y-auto custom-scrollbar'>
                               {/* Panel Header */}
-                              <div className='flex items-center justify-between mb-4'>
+                              <div className='flex items-center justify-between mb-3'>
                                 <div className='flex items-center gap-3'>
                                   <span className='w-6 h-[2px] bg-[#7030B1] inline-block rounded-full' />
                                   <h3 className='text-[16px] font-bold text-[#7030B1]'>
@@ -154,51 +154,52 @@ export default function Header({
                                 </div>
                               </div>
 
-                              {/* Categories Grid */}
-                              <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 items-start'>
+                              {/* Categories Grid - 4 Columns for balanced vertical height */}
+                              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 items-start w-full'>
                                 {(() => {
                                   const cats = item.agenticCategories || [];
                                   const getCat = id => cats.find(c => c.id === id);
 
-                                  const marketing = getCat('marketing');
                                   const retail = getCat('retail-merchandising');
+                                  const marketing = getCat('marketing');
                                   const manufacturing = getCat('manufacturing-maintenance');
-
                                   const customerSupport = getCat('customer-support');
                                   const procurement = getCat('procurement');
                                   const hr = getCat('human-resources');
-                                  const sales = getCat('sales');
                                   const operations = getCat('operations');
-
+                                  const sales = getCat('sales');
                                   const finance = getCat('finance-risk');
                                   const realEstate = getCat('real-estate');
 
-                                  // Helper to render a single card
-                                  const renderCard = (cat, spanClass, innerCols) => {
+                                  // Helper to render a single category block
+                                  const renderCard = cat => {
                                     if (!cat) return null;
                                     return (
                                       <div
                                         key={cat.id}
-                                        className={`bg-[#F9F9FB] rounded-xl p-4 border border-transparent hover:border-purple-100 transition-colors ${spanClass}`}
+                                        className='bg-[#F9F9FB] rounded-xl p-3 border border-transparent hover:border-purple-100 transition-colors w-full'
                                       >
-                                        <h4
-                                          className={`text-[11px] font-bold text-[#171717] uppercase tracking-wider mb-3 flex items-center gap-2 ${spanClass.includes('col-span-1') ? 'whitespace-nowrap' : ''}`}
-                                        >
-                                          <span className='w-3 h-[2px] bg-[#7030B1] inline-block rounded-full flex-shrink-0' />
-                                          <span className='truncate'>{cat.label}</span>
+                                        <h4 className='text-[11px] font-bold text-[#171717] uppercase tracking-wider mb-2.5 flex items-start gap-2 leading-tight'>
+                                          <span className='w-3 h-[2px] bg-[#7030B1] inline-block rounded-full flex-shrink-0 mt-1.5' />
+                                          <span>{cat.label}</span>
                                         </h4>
-                                        <ul className={`grid gap-x-4 gap-y-2 ${innerCols}`}>
+                                        <ul className='flex flex-col gap-y-1.5'>
                                           {cat.agents.map(agent => (
-                                            <li key={agent.href}>
+                                            <li key={agent.href} className='min-w-0'>
                                               <Link
                                                 href={agent.href}
                                                 onClick={handleLinkClick}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
-                                                className='block text-[12.5px] text-gray-500 hover:text-[#7030B1] font-medium leading-tight transition-colors'
-                                                title={agent.label}
+                                                className='group flex items-center justify-between text-[12px] text-gray-500 hover:bg-[#F3F4F6] font-medium leading-tight transition-all rounded px-1 -mx-1 truncate'
                                               >
-                                                {agent.label}
+                                                <span className='truncate group-hover:bg-gradient-to-b group-hover:from-[#7030B1] group-hover:to-[#B56DD3] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-200'>
+                                                  {agent.label}
+                                                </span>
+                                                <FiArrowUpRight
+                                                  className='opacity-0 group-hover:opacity-100 flex-shrink-0 text-[#7030B1] transition-opacity ml-1'
+                                                  size={14}
+                                                />
                                               </Link>
                                             </li>
                                           ))}
@@ -209,38 +210,30 @@ export default function Header({
 
                                   return (
                                     <>
-                                      {/* Row 1: Marketing(2), Retail(3), Manufacturing(2) -> 7 cols total */}
-                                      {renderCard(
-                                        marketing,
-                                        'xl:col-span-2 md:col-span-2',
-                                        'grid-cols-1 md:grid-cols-2'
-                                      )}
-                                      {renderCard(
-                                        retail,
-                                        'xl:col-span-3 md:col-span-2',
-                                        'grid-cols-1 md:grid-cols-2 xl:grid-cols-3'
-                                      )}
-                                      {renderCard(
-                                        manufacturing,
-                                        'xl:col-span-2 md:col-span-2',
-                                        'grid-cols-1 md:grid-cols-2'
-                                      )}
+                                      {/* Column 1 */}
+                                      <div className='flex flex-col gap-3 w-full min-w-0'>
+                                        {renderCard(retail)}
+                                        {renderCard(operations)}
+                                      </div>
 
-                                      {/* Row 2: Support(2), Procure(1), HR(1), Sales(1), Ops(1), Finance+RealEstate(1) -> 7 cols total */}
-                                      {renderCard(
-                                        customerSupport,
-                                        'xl:col-span-2 md:col-span-2',
-                                        'grid-cols-1 md:grid-cols-2'
-                                      )}
-                                      {renderCard(procurement, 'xl:col-span-1', 'grid-cols-1')}
-                                      {renderCard(hr, 'xl:col-span-1', 'grid-cols-1')}
-                                      {renderCard(sales, 'xl:col-span-1', 'grid-cols-1')}
-                                      {renderCard(operations, 'xl:col-span-1', 'grid-cols-1')}
+                                      {/* Column 2 */}
+                                      <div className='flex flex-col gap-3 w-full min-w-0'>
+                                        {renderCard(marketing)}
+                                        {renderCard(customerSupport)}
+                                      </div>
 
-                                      {/* Combined Column for Finance and Real Estate */}
-                                      <div className='flex flex-col gap-4 xl:col-span-1 h-full'>
-                                        {renderCard(finance, 'w-full', 'grid-cols-1')}
-                                        {renderCard(realEstate, 'w-full', 'grid-cols-1')}
+                                      {/* Column 3 */}
+                                      <div className='flex flex-col gap-3 w-full min-w-0'>
+                                        {renderCard(manufacturing)}
+                                        {renderCard(procurement)}
+                                        {renderCard(realEstate)}
+                                      </div>
+
+                                      {/* Column 4 */}
+                                      <div className='flex flex-col gap-3 w-full min-w-0'>
+                                        {renderCard(hr)}
+                                        {renderCard(sales)}
+                                        {renderCard(finance)}
                                       </div>
                                     </>
                                   );

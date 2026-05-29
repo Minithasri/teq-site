@@ -28,33 +28,26 @@ export default function Section2({ data }) {
             <span className='font-light italic'>Driving Operational Excellence</span>
           </h2>
 
-          {/* Pills wrapped in a white card — stretched to full width */}
-          <div
-            className='w-full max-w-7xl rounded-xl px-2 py-2 flex flex-col md:flex-row justify-between shadow-[0_4px_24px_rgba(0,0,0,0.04)] gap-2 mx-auto'
-            style={{
-              backgroundColor: '#FFFFFF',
-              border: '1px solid #F0F0F0',
-            }}
-          >
+          {/* 3 Floating Cards (no outer white container) */}
+          <div className='w-full max-w-7xl flex flex-col md:flex-row justify-between gap-6 mx-auto'>
             {audience.map((item, i) => (
-              // Outer = gradient bg with 1px padding
               <div
                 key={i}
                 className='flex-1 w-full'
                 style={{
                   background: 'linear-gradient(262.35deg, #E67582 2.92%, #7785F4 99.45%)',
                   padding: '1px',
-                  borderRadius: '10px',
+                  borderRadius: '12px',
                   display: 'flex',
                 }}
               >
-                {/* Inner — pastel gradient fill only */}
+                {/* Inner — original subtle gradient fill and bigger padding */}
                 <div
-                  className='flex flex-1 justify-center items-center gap-3 px-4 md:px-8 py-4 text-[15px] font-medium w-full text-center'
+                  className='flex flex-1 justify-center items-center gap-3 px-6 md:px-10 py-4 md:py-6 text-[15px] font-medium w-full text-center'
                   style={{
                     background:
                       'linear-gradient(258.79deg, rgba(255,250,252,1) 0%, rgba(252,250,255,1) 100%)',
-                    borderRadius: '9px',
+                    borderRadius: '11px',
                     color: '#262626',
                   }}
                 >
@@ -86,29 +79,29 @@ export default function Section2({ data }) {
             </p>
           </div>
 
-          {/* 3 Bottom Cards — grid makes equal row height; flex-1 on inner card fills space evenly */}
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 w-full'>
+          {/* 3 Bottom Items — no cards, just text and dividers */}
+          <div className='flex flex-col md:flex-row justify-between items-stretch w-full mt-6'>
             {challenges.map((item, i) => (
-              <div
-                key={i}
-                className='rounded-xl p-4 flex flex-col shadow-xl gap-4 h-full border-2 border-[#F5F5F5]'
-                style={{ backgroundColor: '#FFFFFF' }}
-              >
-                {/* Card Heading */}
-                <h3
-                  className='text-lg px-4 pt-2 font-semibold leading-snug'
-                  style={{ color: '#171717' }}
-                >
-                  {item.title}
-                </h3>
-
-                {/* Inner Content Card — flex-1 stretches to fill remaining height equally */}
-                <div
-                  className='rounded-2xl px-4 pb-2 text-md leading-relaxed flex-1'
-                  style={{ backgroundColor: '#FAFAFA', color: '#737373' }}
-                >
-                  {item.description}
+              <div key={i} className='flex flex-col md:flex-row flex-1'>
+                <div className='flex flex-col gap-3 text-center px-2 md:px-6 w-full'>
+                  <h3 className='text-lg font-semibold leading-snug' style={{ color: '#171717' }}>
+                    {item.title}
+                  </h3>
+                  <p
+                    className='text-[14px] md:text-[15px] leading-relaxed'
+                    style={{ color: '#737373' }}
+                  >
+                    {item.description}
+                  </p>
                 </div>
+                {i < challenges.length - 1 && (
+                  <>
+                    {/* Vertical Divider for Desktop */}
+                    <div className='hidden md:block w-[1px] bg-[#E5E5E5] my-2'></div>
+                    {/* Horizontal Divider for Mobile */}
+                    <div className='md:hidden h-[1px] bg-[#E5E5E5] mx-10 my-6'></div>
+                  </>
+                )}
               </div>
             ))}
           </div>
