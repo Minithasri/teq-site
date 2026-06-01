@@ -43,9 +43,9 @@ export const headerData = {
         {
           title: 'WORK CULTURE',
           links: [
+            { label: 'Careers', href: '/careers' },
             { label: 'Work From Hometown', href: '/company/work-from-hometown' },
             // { label: 'Core Values', href: '/company/values' },
-            { label: 'Careers', href: '/careers' },
           ],
         },
       ],

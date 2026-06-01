@@ -26,6 +26,7 @@ export default function Header({
   const { navItems, ctaButton } = headerData;
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [forceCloseAgentic, setForceCloseAgentic] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -121,11 +122,21 @@ export default function Header({
                   "data-[state=open]:after:content-[''] data-[state=open]:after:absolute data-[state=open]:after:bottom-1 data-[state=open]:after:left-1/2 data-[state=open]:after:-translate-x-1/2 data-[state=open]:after:w-6 data-[state=open]:after:h-[3px] data-[state=open]:after:bg-[#6F2B8B] data-[state=open]:after:rounded-full";
 
                 return (
-                  <div key={item.label} className='relative group/nav'>
+                  <div
+                    key={item.label}
+                    className='relative group/nav'
+                    onMouseLeave={() => {
+                      if (item.agenticMegaMenu) setForceCloseAgentic(false);
+                    }}
+                  >
                     {item.agenticMegaMenu ? (
                       /* ── Agentic Domo: Wide multi-column mega panel ── */
                       <>
                         <button
+                          onClick={e => {
+                            e.preventDefault();
+                            setForceCloseAgentic(!forceCloseAgentic);
+                          }}
                           className={`relative flex items-center gap-0.5 text-[10px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap focus:outline-none ${
                             isActive ? indicatorBase : 'hover:opacity-80'
                           }`}
@@ -139,11 +150,15 @@ export default function Header({
 
                         {/* Mega Panel */}
                         <div
-                          className='invisible opacity-0 group-hover/nav:visible group-hover/nav:opacity-100 transition-all duration-200 fixed left-0 right-0 z-[9999] mt-2'
-                          style={{ top: '72px' }}
+                          className={`transition-all duration-200 fixed left-0 right-0 z-[9999] pt-2 ${
+                            forceCloseAgentic
+                              ? 'hidden'
+                              : 'invisible opacity-0 group-hover/nav:visible group-hover/nav:opacity-100'
+                          }`}
+                          style={{ top: '60px' }}
                         >
                           <div className='mx-auto max-w-[1400px] px-4'>
-                            <div className='bg-white rounded-[24px] shadow-2xl border border-gray-100 p-4 lg:p-5 max-h-[calc(100vh-80px)] overflow-y-auto custom-scrollbar'>
+                            <div className='bg-white rounded-[24px] shadow-2xl border border-gray-100 pt-4 lg:pt-5 px-3 lg:px-3 pb-3 lg:pb-3 max-h-[calc(100vh-80px)] overflow-y-auto custom-scrollbar'>
                               {/* Panel Header */}
                               <div className='flex items-center justify-between mb-3'>
                                 <div className='flex items-center gap-3'>
@@ -154,8 +169,8 @@ export default function Header({
                                 </div>
                               </div>
 
-                              {/* Categories Grid - 4 Columns for balanced vertical height */}
-                              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 items-start w-full'>
+                              {/* Categories Grid */}
+                              <div className='flex flex-col gap-3 lg:gap-4 w-full'>
                                 {(() => {
                                   const cats = item.agenticCategories || [];
                                   const getCat = id => cats.find(c => c.id === id);
@@ -172,18 +187,69 @@ export default function Header({
                                   const realEstate = getCat('real-estate');
 
                                   // Helper to render a single category block
-                                  const renderCard = cat => {
+                                  const renderCard = (cat, extraClass = '', isRow1 = false) => {
                                     if (!cat) return null;
+                                    const isTwoCol =
+                                      cat.id === 'retail-merchandising' || cat.id === 'marketing';
+
+                                    const catIconMap = {
+                                      'manufacturing-maintenance': 'aasvg1.svg',
+                                      'customer-support': 'aasvg2.svg',
+                                      procurement: 'aasvg3.svg',
+                                      operations: 'aasvg4.svg',
+                                      'human-resources': 'aasvg5.svg',
+                                      'retail-merchandising': 'aasvg6.svg',
+                                      marketing: 'aasvg7.svg',
+                                      sales: 'aasvg8.svg',
+                                      'real-estate': 'aasvg9.svg',
+                                      'finance-risk': 'aasvg9.svg',
+                                      others: 'aasvg9.svg',
+                                    };
+                                    const iconFile = catIconMap[cat.id] || 'aasvg1.svg';
+                                    const bgClass = isTwoCol ? 'bg-[#FAF8FC]' : 'bg-white';
+
+                                    const displayLabel =
+                                      {
+                                        'manufacturing-maintenance': 'MANUFACTURING',
+                                        'customer-support': 'CUSTOMER SUPPORT',
+                                        procurement: 'PROCUREMENT',
+                                        operations: 'OPERATION',
+                                        'human-resources': 'HR',
+                                        'retail-merchandising': 'RETAIL',
+                                        marketing: 'MARKETING',
+                                        sales: 'SALES',
+                                        others: 'OTHERS',
+                                      }[cat.id] || cat.label;
+
                                     return (
                                       <div
                                         key={cat.id}
-                                        className='bg-[#F9F9FB] rounded-xl p-3 border border-transparent hover:border-purple-100 transition-colors w-full'
+                                        className={
+                                          isRow1
+                                            ? `w-full h-full flex flex-col ${extraClass}`
+                                            : `${bgClass} rounded-[16px] p-3 lg:p-4 border border-[#E5E5E5] transition-colors w-full h-full flex flex-col ${
+                                                isTwoCol ? 'md:col-span-2 lg:col-span-2' : ''
+                                              } ${extraClass}`
+                                        }
                                       >
-                                        <h4 className='text-[11px] font-bold text-[#171717] uppercase tracking-wider mb-2.5 flex items-start gap-2 leading-tight'>
-                                          <span className='w-3 h-[2px] bg-[#7030B1] inline-block rounded-full flex-shrink-0 mt-1.5' />
-                                          <span>{cat.label}</span>
+                                        <h4
+                                          className='text-[12px] xl:text-[13px] font-bold text-[#262626] uppercase tracking-wider mb-2 flex items-center gap-2.5 leading-tight'
+                                          style={{ fontFamily: '"Poppins", sans-serif' }}
+                                        >
+                                          <img
+                                            src={`/images/${iconFile}`}
+                                            alt={displayLabel}
+                                            className='w-[18px] h-[18px] object-contain flex-shrink-0'
+                                          />
+                                          <span>{displayLabel}</span>
                                         </h4>
-                                        <ul className='flex flex-col gap-y-1.5'>
+                                        <ul
+                                          className={
+                                            isTwoCol
+                                              ? 'grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1'
+                                              : 'flex flex-col gap-y-1'
+                                          }
+                                        >
                                           {cat.agents.map(agent => (
                                             <li key={agent.href} className='min-w-0'>
                                               <Link
@@ -191,7 +257,8 @@ export default function Header({
                                                 onClick={handleLinkClick}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
-                                                className='group flex items-center justify-between text-[12px] text-gray-500 hover:bg-[#F3F4F6] font-medium leading-tight transition-all rounded px-1 -mx-1 truncate'
+                                                className='group flex items-center justify-between text-[11px] xl:text-[12px] text-[#525252] hover:bg-gray-50/80 font-regular leading-tight transition-all rounded px-1.5 py-1 -mx-1.5 truncate'
+                                                style={{ fontFamily: '"Poppins", sans-serif' }}
                                               >
                                                 <span className='truncate group-hover:bg-gradient-to-b group-hover:from-[#7030B1] group-hover:to-[#B56DD3] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-200'>
                                                   {agent.label}
@@ -210,30 +277,30 @@ export default function Header({
 
                                   return (
                                     <>
-                                      {/* Column 1 */}
-                                      <div className='flex flex-col gap-3 w-full min-w-0'>
+                                      {/* Row 1 (Single wrapper card) */}
+                                      <div className='bg-white rounded-[16px] border border-[#E5E5E5] p-4 lg:p-5 w-full'>
+                                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-1 lg:gap-2 w-full'>
+                                          {renderCard(manufacturing, '', true)}
+                                          {renderCard(customerSupport, '', true)}
+                                          {renderCard(procurement, '', true)}
+                                          {renderCard(operations, '', true)}
+                                          {renderCard(hr, '', true)}
+                                        </div>
+                                      </div>
+
+                                      {/* Row 2 (6 columns) */}
+                                      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-2 lg:gap-3 w-full'>
                                         {renderCard(retail)}
-                                        {renderCard(operations)}
-                                      </div>
-
-                                      {/* Column 2 */}
-                                      <div className='flex flex-col gap-3 w-full min-w-0'>
                                         {renderCard(marketing)}
-                                        {renderCard(customerSupport)}
-                                      </div>
-
-                                      {/* Column 3 */}
-                                      <div className='flex flex-col gap-3 w-full min-w-0'>
-                                        {renderCard(manufacturing)}
-                                        {renderCard(procurement)}
-                                        {renderCard(realEstate)}
-                                      </div>
-
-                                      {/* Column 4 */}
-                                      <div className='flex flex-col gap-3 w-full min-w-0'>
-                                        {renderCard(hr)}
                                         {renderCard(sales)}
-                                        {renderCard(finance)}
+                                        {renderCard({
+                                          id: 'others',
+                                          label: 'OTHERS',
+                                          agents: [
+                                            ...(realEstate?.agents || []),
+                                            ...(finance?.agents || []),
+                                          ],
+                                        })}
                                       </div>
                                     </>
                                   );
