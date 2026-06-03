@@ -32,7 +32,7 @@ export default function ApproachSection() {
         {/* Timeline Wrapper Container */}
         <div className='relative space-y-8 pl-2 md:pl-6'>
           {/* Vertical Trace Line - Perfectly aligned directly beneath center of the 44px step bubbles */}
-          <div className='absolute left-[24px] md:left-[40px] top-4 bottom-4 w-[1.5px] bg-[#dbe8fe] z-0' />
+          <div className='absolute left-[24px] md:left-[44px] top-4 bottom-4 w-[1.5px] bg-[#dbe8fe] z-0' />
 
           {steps.map((item, index) => (
             <div key={index} className='flex gap-6 items-start relative z-10'>

@@ -17,8 +17,8 @@ export default function FoodRetailAnalyticsPage() {
       <KeyChallenges />
       <ApproachSection />
       <SolutionSummary />
-      <BusinessImpact />
       <TechnologyStack />
+      <BusinessImpact />
       <LastSection pdfUrl='https://storage.googleapis.com/casestudy-pdf-download/CaseStuides/MarryBrown_z.pdf' />
     </main>
   );

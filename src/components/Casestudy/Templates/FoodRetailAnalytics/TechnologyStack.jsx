@@ -1,77 +1,45 @@
-// Left wing logos grouped exactly as shown in the target image from left to right
-const leftLogos = [
-  '/images/Templates/template17/tech-4.svg', // Tableau
-  '/images/Templates/template17/tech1.svg', // Domo
-  '/images/Templates/template17/tech2.svg', // Power BI
-];
-
-// Right wing logos grouped exactly as shown in the target image from left to right
-const rightLogos = [
-  '/images/Templates/template17/tech3.svg', // SQL
-  '/images/Templates/template17/tech5.svg', // ETL Pipelines
-  '/images/Templates/template17/erp.svg', // ERP
-];
-
-const technologies = [
-  { tag: 'Power BI', sub: 'Visualization' },
-  { tag: 'Tableau', sub: 'Visualization' },
-  { tag: 'Domo', sub: 'Dashboards' },
-  { tag: 'POS Systems', sub: 'Data Source' },
-  { tag: 'SQL', sub: 'Data Integration' },
-  { tag: 'ETL Pipelines', sub: 'Automation' },
-];
-
 export default function TechnologyStack() {
   return (
     <section className='bg-white py-16 w-full'>
-      <div className='max-w-[1140px] mx-auto px-6'>
-        {/* Fixed Header Layout: Keeps everything strictly on a single horizontal axis */}
-        <div className='flex items-center justify-center gap-4 md:gap-7 mb-12 w-full select-none'>
-          {/* Left Wing Logos */}
-          <div className='flex items-center gap-3 md:gap-5 shrink-0'>
-            {leftLogos.map((logo, index) => (
-              <img
-                key={index}
-                src={logo}
-                alt='Tech Left'
-                className='h-7 sm:h-8 md:h-[38px] w-auto object-contain vertical-middle'
-              />
-            ))}
-          </div>
+      <div className='max-w-[850px] mx-auto px-6'>
+        {/* Centered Heading Title Text */}
+        <h2 className='text-center text-[26px] font-extrabold text-[#091124] mb-12 tracking-tight'>
+          Key Technologies Used
+        </h2>
 
-          {/* Centered Heading Title Text - Perfectly centered */}
-          <h2 className='text-[20px] sm:text-[24px] md:text-[28px] font-extrabold text-[#091124] tracking-tight shrink-0 text-center px-1 font-sans leading-none'>
-            Key Technologies Used
-          </h2>
-
-          {/* Right Wing Logos */}
-          <div className='flex items-center gap-3 md:gap-5 shrink-0'>
-            {rightLogos.map((logo, index) => (
-              <img
-                key={index}
-                src={logo}
-                alt='Tech Right'
-                className='h-7 sm:h-8 md:h-[38px] w-auto object-contain vertical-middle'
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Outer Tech Tags Container Box */}
-        <div className='bg-white border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] rounded-[16px] p-8 md:p-10 flex flex-wrap justify-center items-center gap-x-8 gap-y-6'>
-          {technologies.map((item, index) => (
-            <div key={index} className='flex flex-col items-center min-w-[125px]'>
-              {/* Tag Pill Badge */}
-              <span className='px-6 py-2.5 rounded-full text-[13.5px] font-extrabold tracking-wide text-center w-full block border-2 border-[#F5F5F5] text-[#0F1729]/80 shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
-                {item.tag}
+        {/* 2-Column Grid for the 2 Cards */}
+        <div className='grid md:grid-cols-2 gap-6'>
+          {/* Card 1: Domo */}
+          <div className='bg-white rounded-[16px] border border-[#E1E7EF] p-8 flex justify-start items-center gap-10 shadow-[0_4px_12px_rgba(0,0,0,0.02)] min-h-[140px]'>
+            <div className='flex flex-col items-start gap-3'>
+              {/* Tag Pill */}
+              <span className='px-6 py-2 rounded-full text-[13.5px] font-extrabold tracking-wide bg-[#0846AA1A] text-[#0846AA]'>
+                Domo
               </span>
+              {/* Role Subtitle */}
+              <span className='text-[13.5px] text-[#55607a] font-semibold pl-1'>Visualization</span>
+            </div>
+            {/* Domo Logo */}
+            <img
+              src='/images/Templates/template17/tech1.svg'
+              alt='Domo'
+              className='h-12 w-auto object-contain'
+            />
+          </div>
 
-              {/* Functional Subtitle Role Label */}
-              <span className='text-[11px] text-[#718096] font-medium mt-2 tracking-normal text-center'>
-                {item.sub}
+          {/* Card 2: Xilnex */}
+          <div className='bg-white rounded-[16px] border border-[#E1E7EF] p-8 flex justify-start items-center gap-10 shadow-[0_4px_12px_rgba(0,0,0,0.02)] min-h-[140px]'>
+            <div className='flex flex-col items-start gap-3'>
+              {/* Tag Pill */}
+              <span className='px-6 py-2 rounded-full text-[13.5px] font-extrabold tracking-wide bg-[#0846AA1A] text-[#0846AA]'>
+                Xilnex
+              </span>
+              {/* Role Subtitle */}
+              <span className='text-[13.5px] text-[#55607a] font-semibold pl-1'>
+                API Integration
               </span>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

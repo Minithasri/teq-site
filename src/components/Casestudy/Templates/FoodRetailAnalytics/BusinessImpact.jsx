@@ -21,9 +21,9 @@ export default function BusinessImpact() {
         </h2>
 
         {/* Elevated Main Card Container housing the clean table structure */}
-        <div className='bg-white rounded-[16px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-8 md:p-10 mb-8'>
+        <div className='bg-[#F5FCF5] rounded-[16px] border border-[#e2e8f0]/40 shadow-[0_4px_12px_rgba(0,0,0,0.03)] p-8 md:p-10 mb-8'>
           {/* 4-Column Balanced Grid Header row */}
-          <div className='grid grid-cols-[1.5fr_1.2fr_0.4fr_1.2fr] text-[14px] font-extrabold text-[#091124] pb-4 border-b border-[#f1f5f9]'>
+          <div className='grid grid-cols-[1.5fr_1.2fr_0.4fr_1.2fr] text-[14px] font-extrabold text-[#091124] pb-4 border-b border-[#e2e8f0]/50'>
             <div>Dimension</div>
             <div>Before</div>
             <div></div> {/* Empty spacer cell for arrow alignment */}
@@ -31,7 +31,7 @@ export default function BusinessImpact() {
           </div>
 
           {/* Table Data Rows */}
-          <div className='divide-y divide-[#f1f5f9]'>
+          <div className='divide-y divide-[#e2e8f0]/50'>
             {rows.map((row, index) => (
               <div
                 key={index}
@@ -64,14 +64,14 @@ export default function BusinessImpact() {
           {outcomes.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-[12px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-5 flex gap-4 items-start'
+              className='bg-[#C2F9A445] rounded-[12px] shadow-[0_4px_12px_rgba(0,0,0,0.02)] p-5 flex gap-4 items-start'
             >
               <img
                 src='/images/Templates/template17/tick.svg'
                 alt='Success Check'
                 className='w-[18px] h-[18px] shrink-0 mt-0.5'
               />
-              <p className='text-[13.5px] text-[#14532d] font-medium leading-relaxed'>{item}</p>
+              <p className='text-[13.5px] text-[#0F1729] font-medium leading-relaxed'>{item}</p>
             </div>
           ))}
         </div>

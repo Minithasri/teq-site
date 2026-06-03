@@ -30,8 +30,9 @@ export default function SolutionSummary() {
           <h2 className='text-[26px] font-extrabold text-[#091124] tracking-tight'>
             Solution Summary
           </h2>
-          <p className='text-[13.5px] text-[#55607a] font-medium mt-2'>
-            GWC designed and delivered a Sales & Operations Analytics Framework for Marrybrown
+          <p className='text-[15px] text-[#55607a] font-normal mt-2 max-w-[500px] mx-auto leading-relaxed'>
+            GWC designed and delivered a Sales & Operations Analytics{' '}
+            <br className='hidden sm:block' /> Framework for Marrybrown
           </p>
         </div>
 
@@ -40,16 +41,16 @@ export default function SolutionSummary() {
           {solutions.map((item, index) => (
             <div
               key={index}
-              className='bg-white rounded-[16px] border-2 border-[#F5F5F5] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex gap-5 items-start'
+              className='bg-white rounded-[16px] border border-[#4EF55C] shadow-[0_4px_12px_rgba(0,0,0,0.03)] p-7 flex gap-5 items-start'
             >
               {/* Vibrant neon-green icon block aligned neatly to the left side */}
-              <div className='w-12 h-12 rounded-[12px] bg-[#0846AA]/60 flex items-center justify-center shrink-0 mt-0.5 shadow-sm'>
+              <div className='w-12 h-12 rounded-[12px] bg-[#36F446E0] flex items-center justify-center shrink-0 mt-0.5 shadow-sm'>
                 <img src={item.icon} alt={item.title} className='w-6 h-6 invert-0 brightness-100' />
               </div>
 
               {/* Text contents grouped tightly to build a horizontal description layout */}
               <div className='pt-0.5'>
-                <h3 className='text-[16px] font-extrabold text-[#0F1729]/80 leading-snug'>
+                <h3 className='text-[16px] font-extrabold text-[#0F1729] leading-snug'>
                   {item.title}
                 </h3>
                 <p className='text-[13.5px] text-[#556175] font-medium leading-[1.5] mt-1.5'>
