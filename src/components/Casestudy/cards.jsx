@@ -44,24 +44,24 @@ const Cards = () => {
         'How a leading die caster achieved 10-15% productivity boost and 90% reduction in manual effort through connected factory automation.',
       image: '/images/Templates/template1/casebg1.webp',
     },
-    {
-      slug: 'maximizing-yield',
-      title: 'Maximizing Yield with Intelligent Production Analytics',
-      type: 'BI Solutions',
-      industry: 'Manufacturing',
-      description:
-        'Driving packaging efficiency through real-time visibility and predictive insights.',
-      image: '/images/Templates/template1/hero1.webp',
-    },
-    {
-      slug: 'mobile-manufacturing-quality',
-      title: 'Commonality & Traceability Analysis for Mobile Manufacturing Quality',
-      type: 'AI Solutions',
-      industry: 'Manufacturing',
-      description:
-        'Enabling end-to-end visibility and data-driven quality governance in phone manufacturing.',
-      image: '/images/Templates/template3/heroimage1.webp',
-    },
+    // {
+    //   slug: 'maximizing-yield',
+    //   title: 'Maximizing Yield with Intelligent Production Analytics',
+    //   type: 'BI Solutions',
+    //   industry: 'Manufacturing',
+    //   description:
+    //     'Driving packaging efficiency through real-time visibility and predictive insights.',
+    //   image: '/images/Templates/template1/hero1.webp',
+    // },
+    // {
+    //   slug: 'mobile-manufacturing-quality',
+    //   title: 'Commonality & Traceability Analysis for Mobile Manufacturing Quality',
+    //   type: 'AI Solutions',
+    //   industry: 'Manufacturing',
+    //   description:
+    //     'Enabling end-to-end visibility and data-driven quality governance in phone manufacturing.',
+    //   image: '/images/Templates/template3/heroimage1.webp',
+    // },
     {
       slug: 'predictive-maintenance',
       title: 'Predictive Maintenance Powered by Advanced Analytics',
