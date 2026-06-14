@@ -22,32 +22,6 @@ export default function CleanHydrogenHero() {
             className='object-contain object-left'
           />
         </div>
-
-        {/* 'X' Separator */}
-        <span className='text-white font-light text-xl mx-1'>X</span>
-
-        {/* HY24 Logo Container with exact specs requested */}
-        <div
-          className='flex items-center justify-center relative overflow-hidden'
-          style={{
-            width: '156px',
-            height: '46px',
-            transform: 'rotate(-0.2deg)',
-            opacity: 1,
-            gap: '10px',
-            borderRadius: '10000px',
-            background: '#000000',
-          }}
-        >
-          <div className='relative w-4/5 h-3/5'>
-            <Image
-              src='/images/Templates/templatez/rtportfolio/hy24.svg'
-              alt='H2y24'
-              fill
-              className='object-contain'
-            />
-          </div>
-        </div>
       </div>
 
       {/* Main Layout Section split into Texts and Visual Preview */}

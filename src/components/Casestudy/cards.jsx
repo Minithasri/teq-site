@@ -6,7 +6,6 @@ import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 
 const Cards = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState('AI Solutions');
   const [activeCategory, setActiveCategory] = useState('All');
   const [activeDepartment, setActiveDepartment] = useState('Departments');
   const [isDeptDropdownOpen, setIsDeptDropdownOpen] = useState(false);
@@ -62,75 +61,75 @@ const Cards = () => {
     //     'Enabling end-to-end visibility and data-driven quality governance in phone manufacturing.',
     //   image: '/images/Templates/template3/heroimage1.webp',
     // },
-    {
-      slug: 'predictive-maintenance',
-      title: 'Predictive Maintenance Powered by Advanced Analytics',
-      type: 'AI Solutions',
-      industry: 'Manufacturing',
-      description: 'Minimizing unplanned downtime through proactive maintenance intelligence.',
-      image: '/images/Templates/template4/herobg.webp',
-    },
-    {
-      slug: 'streamlining-production',
-      title: 'Streamlining Production Through Data-Driven IE Applications',
-      type: 'BI Solutions',
-      industry: 'Manufacturing',
-      description:
-        'Digitizing maintenance operations for improved equipment reliability and performance.',
-      image: '/images/Templates/template5/herobgmain.webp',
-    },
-    {
-      slug: 'optimizing-production',
-      title: 'Optimizing Production Efficiency Through Scrap Analytics',
-      type: 'BI Solutions',
-      industry: 'Manufacturing',
-      description:
-        'Reducing material waste through real-time scrap tracking and data-driven insights.',
-      image: '/images/Templates/template6/hero6.webp',
-    },
-    {
-      slug: 'sustainable-impact',
-      title: 'Sustainable Impact in Manufacturing',
-      type: 'BI Solutions',
-      industry: 'Manufacturing',
-      description:
-        'Driving sustainability, compliance, and operational efficiency through Power Platform automation.',
-      image: '/images/Templates/template7/bg7.webp',
-    },
-    {
-      slug: 'tool-management',
-      title: 'Tool Management Solution for Manufacturing',
-      type: 'BI Solutions',
-      industry: 'Manufacturing',
-      description:
-        'Driving efficiency, traceability, and operational excellence through Power Platform automation.',
-      image: '/images/Templates/template8/temp888.webp',
-    },
-    {
-      slug: 'smart-maintenance',
-      title: 'Smart Maintenance Solution for Manufacturing',
-      type: 'AI Solutions',
-      industry: 'Manufacturing',
-      description:
-        'Modernizing traditional maintenance processes with Microsoft Power Platform, enabling predictive analytics and preventive maintenance strategies',
-      image: '/images/Templates/template9/9hero.webp',
-    },
-    {
-      slug: 'next-gen-knowledge',
-      title: 'Next-Gen Knowledge Engine on Azure',
-      type: 'AI Solutions',
-      industry: 'HR',
-      description: 'Transforming Enterprise Knowledge Access with AI-Powered Retrieval',
-      image: '/images/Templates/template10/hero10.webp',
-    },
-    {
-      slug: 'centralized-marketing',
-      title: 'Centralized Marketing Dashboard and Automated Reporting',
-      type: 'BI Solutions',
-      industry: 'Marketing',
-      description: 'Turning Multi-Channel Marketing Data into One Real-Time Source of Truth',
-      image: '/images/Templates/templatez/z2.png',
-    },
+    // {
+    //   slug: 'predictive-maintenance',
+    //   title: 'Predictive Maintenance Powered by Advanced Analytics',
+    //   type: 'AI Solutions',
+    //   industry: 'Manufacturing',
+    //   description: 'Minimizing unplanned downtime through proactive maintenance intelligence.',
+    //   image: '/images/Templates/template4/herobg.webp',
+    // },
+    // {
+    //   slug: 'streamlining-production',
+    //   title: 'Streamlining Production Through Data-Driven IE Applications',
+    //   type: 'BI Solutions',
+    //   industry: 'Manufacturing',
+    //   description:
+    //     'Digitizing maintenance operations for improved equipment reliability and performance.',
+    //   image: '/images/Templates/template5/herobgmain.webp',
+    // },
+    // {
+    //   slug: 'optimizing-production',
+    //   title: 'Optimizing Production Efficiency Through Scrap Analytics',
+    //   type: 'BI Solutions',
+    //   industry: 'Manufacturing',
+    //   description:
+    //     'Reducing material waste through real-time scrap tracking and data-driven insights.',
+    //   image: '/images/Templates/template6/hero6.webp',
+    // },
+    // {
+    //   slug: 'sustainable-impact',
+    //   title: 'Sustainable Impact in Manufacturing',
+    //   type: 'BI Solutions',
+    //   industry: 'Manufacturing',
+    //   description:
+    //     'Driving sustainability, compliance, and operational efficiency through Power Platform automation.',
+    //   image: '/images/Templates/template7/bg7.webp',
+    // },
+    // {
+    //   slug: 'tool-management',
+    //   title: 'Tool Management Solution for Manufacturing',
+    //   type: 'BI Solutions',
+    //   industry: 'Manufacturing',
+    //   description:
+    //     'Driving efficiency, traceability, and operational excellence through Power Platform automation.',
+    //   image: '/images/Templates/template8/temp888.webp',
+    // },
+    // {
+    //   slug: 'smart-maintenance',
+    //   title: 'Smart Maintenance Solution for Manufacturing',
+    //   type: 'AI Solutions',
+    //   industry: 'Manufacturing',
+    //   description:
+    //     'Modernizing traditional maintenance processes with Microsoft Power Platform, enabling predictive analytics and preventive maintenance strategies',
+    //   image: '/images/Templates/template9/9hero.webp',
+    // },
+    // {
+    //   slug: 'next-gen-knowledge',
+    //   title: 'Next-Gen Knowledge Engine on Azure',
+    //   type: 'AI Solutions',
+    //   industry: 'HR',
+    //   description: 'Transforming Enterprise Knowledge Access with AI-Powered Retrieval',
+    //   image: '/images/Templates/template10/hero10.webp',
+    // },
+    // {
+    //   slug: 'centralized-marketing',
+    //   title: 'Centralized Marketing Dashboard and Automated Reporting',
+    //   type: 'BI Solutions',
+    //   industry: 'Marketing',
+    //   description: 'Turning Multi-Channel Marketing Data into One Real-Time Source of Truth',
+    //   image: '/images/Templates/templatez/z2.png',
+    // },
     {
       slug: 'next-gen-sales',
       title: 'Next-Gen Sales Campaign Infrastructure on GCP',
@@ -166,15 +165,15 @@ const Cards = () => {
         'A global clean energy investment firm transformed its reporting ecosystem by replacing complex Excel-based processes with an automated, centralized BI platform enabling real-time portfolio insights, improved accuracy, and scalable decision-making.',
       image: '/images/Templates/z-hy-24/sunset-sky-powers-wind.png',
     },
-    {
-      slug: 'mahsing',
-      title: 'Driving Real Estate Excellence Through Customer Feedback Insights',
-      type: 'AI Solutions',
-      industry: 'Real Estate',
-      description:
-        'Transforming customer satisfaction tracking with data-driven insights to systematically analyze feedback across large-scale property development projects.',
-      image: '/images/Templates/mahsing/img1.png',
-    },
+    // {
+    //   slug: 'mahsing',
+    //   title: 'Driving Real Estate Excellence Through Customer Feedback Insights',
+    //   type: 'AI Solutions',
+    //   industry: 'Real Estate',
+    //   description:
+    //     'Transforming customer satisfaction tracking with data-driven insights to systematically analyze feedback across large-scale property development projects.',
+    //   image: '/images/Templates/mahsing/img1.png',
+    // },
     {
       slug: 'style-bazaar',
       title: 'Retail Data Warehouse & Business Intelligence Platform',
@@ -220,14 +219,14 @@ const Cards = () => {
         'Achieving 60–70% reduction in manual errors and ~50% faster testing cycles through a custom-built lifecycle management system.',
       image: '/images/Templates/aequs/aequs2.png',
     },
-    {
-      slug: 'centralized-marketing',
-      title: ' Centralized Marketing Dashboard and Automated Reporting',
-      type: 'AI Solutions',
-      industry: 'Manufacturing',
-      description: 'Turning Multi-Channel Marketing Data into One Real-Time Source of Truth',
-      image: '/images/Templates/templatez/z2.png',
-    },
+    // {
+    //   slug: 'centralized-marketing',
+    //   title: 'Centralized Marketing Dashboard and Automated Reporting',
+    //   type: 'AI Solutions',
+    //   industry: 'Manufacturing',
+    //   description: 'Turning Multi-Channel Marketing Data into One Real-Time Source of Truth',
+    //   image: '/images/Templates/templatez/z2.png',
+    // },
     {
       slug: 'toyota',
       title: 'Transforming Tool Lifecycle Management Through Intelligent Digitization',
@@ -355,33 +354,33 @@ const Cards = () => {
         'Delivering real-time visibility into banking operations through interactive dashboards and self-service analytics.',
       image: '/images/Templates/tavent/t2.png',
     },
-    {
-      slug: 'unified-hr-finance-analytics',
-      title: 'Unified HR & Finance Analytics Integration',
-      type: 'BI Solutions',
-      industry: 'Banking',
-      description:
-        'How we connected workforce management and POS data into a single analytics platform enabling real-time insights for leadership decision-making.',
-      image: '/images/Templates/template11/side-img.png',
-    },
-    {
-      slug: 'ai-powered-hospitality',
-      title: 'Enhancing Guest Experience with AI-Powered Hospitality',
-      type: 'BI Solutions',
-      industry: 'Banking',
-      description:
-        'How GWC partnered with the client to revolutionize hotel operations and deliver smarter, data-driven experiences for guests worldwide.',
-      image: '/images/Templates/template12/ai-bg.png',
-    },
-    {
-      slug: 'banking-analytics',
-      title: 'Driving Compliance and Performance with Banking Analytics',
-      type: 'BI Solutions',
-      industry: 'Banking',
-      description:
-        'How GWC transformed banking operations with real-time analytics, automated compliance monitoring, and centralized financial insights.',
-      image: '/images/Templates/template13/bg1.png',
-    },
+    // {
+    //   slug: 'unified-hr-finance-analytics',
+    //   title: 'Unified HR & Finance Analytics Integration',
+    //   type: 'BI Solutions',
+    //   industry: 'Banking',
+    //   description:
+    //     'How we connected workforce management and POS data into a single analytics platform enabling real-time insights for leadership decision-making.',
+    //   image: '/images/Templates/template11/side-img.png',
+    // },
+    // {
+    //   slug: 'ai-powered-hospitality',
+    //   title: 'Enhancing Guest Experience with AI-Powered Hospitality',
+    //   type: 'BI Solutions',
+    //   industry: 'Banking',
+    //   description:
+    //     'How GWC partnered with the client to revolutionize hotel operations and deliver smarter, data-driven experiences for guests worldwide.',
+    //   image: '/images/Templates/template12/ai-bg.png',
+    // },
+    // {
+    //   slug: 'banking-analytics',
+    //   title: 'Driving Compliance and Performance with Banking Analytics',
+    //   type: 'BI Solutions',
+    //   industry: 'Banking',
+    //   description:
+    //     'How GWC transformed banking operations with real-time analytics, automated compliance monitoring, and centralized financial insights.',
+    //   image: '/images/Templates/template13/bg1.png',
+    // },
     {
       slug: 'end-to-end-digitalization',
       title: 'End-to-End Digitalization of Manufacturing Reports',
@@ -400,24 +399,24 @@ const Cards = () => {
         'Transforming siloed finance and HR data into unified, real-time performance insights that drive strategic decision-making across global operations.',
       image: '/images/Templates/template15/bg1.png',
     },
-    {
-      slug: 'agentic-ai-data-center',
-      title: 'Transforming Data Center Operations with Agentic AI',
-      type: 'BI Solutions',
-      industry: 'Banking',
-      description:
-        'How GWC and the client built an AI-driven platform for predictive monitoring, automated response systems, and operational intelligence across data centers.',
-      image: '/images/Templates/template16/bg1.png',
-    },
-    {
-      slug: 'boosting-food-retail-performance',
-      title: 'Boosting Food Retail Performance with Real-Time Analytics',
-      type: 'BI Solutions',
-      industry: 'Banking',
-      description:
-        'How GWC transformed food retail operations using real-time analytics, outlet benchmarking, and executive performance reporting.',
-      image: '/images/Templates/template17/bg1.png',
-    },
+    // {
+    //   slug: 'agentic-ai-data-center',
+    //   title: 'Transforming Data Center Operations with Agentic AI',
+    //   type: 'BI Solutions',
+    //   industry: 'Banking',
+    //   description:
+    //     'How GWC and the client built an AI-driven platform for predictive monitoring, automated response systems, and operational intelligence across data centers.',
+    //   image: '/images/Templates/template16/bg1.png',
+    // },
+    // {
+    //   slug: 'boosting-food-retail-performance',
+    //   title: 'Boosting Food Retail Performance with Real-Time Analytics',
+    //   type: 'BI Solutions',
+    //   industry: 'Banking',
+    //   description:
+    //     'How GWC transformed food retail operations using real-time analytics, outlet benchmarking, and executive performance reporting.',
+    //   image: '/images/Templates/template17/bg1.png',
+    // },
     {
       slug: 'lskg',
       title: 'Empowering Fashion Retail with Real-Time Sales & Inventory Insights',
@@ -570,41 +569,41 @@ const Cards = () => {
         'Enabling real-time visibility into sales, inventory, and customer behavior to drive smarter retail decisions and optimize  operations.',
       image: '/images/Templates/altimetrik/hero-float.png',
     },
-    {
-      slug: 'sales-intelligence',
-      title: 'Sales Intelligence Transformation & Time Based Reporting Standardization',
-      type: 'AI Solutions',
-      industry: 'Retail',
-      description:
-        'How we rebuilt confidence in sales analytics by standardizing time- intelligence models and optimizing reporting workflows for a leading fashion retailer.',
-      image: '/images/Templates/templatez/salesIntelligence/sihead.png',
-    },
-    {
-      slug: 'real-time-workflow',
-      title: 'Real-Time Workforce & Operations Monitoring Dashboard',
-      type: 'AI Solutions',
-      industry: 'Retail',
-      description: 'Transforming Cleaning Operations with Real-Time Visibility',
-      image: '/images/Templates/templatez/rtwrokforce/rthero.png',
-    },
-    {
-      slug: 'centralizing-sales-performance',
-      title: 'Sales Performance & Time-Based Reporting Transformation',
-      type: 'AI Solutions',
-      industry: 'Retail',
-      description:
-        'Transforming Sales Performance & Time-Based Reporting with AI-Powered Analytics',
-      image: '/images/Templates/templatez/csperformance/cspbg.jpg',
-    },
-    {
-      slug: 'driving-entertainment-success',
-      title: 'Driving Entertainment Success with Artist and Performance Dashboards',
-      type: 'AI Solutions',
-      industry: 'Retail',
-      description:
-        'Transforming Entertainment Insights with Real-Time Artist and Performance Analytics',
-      image: '/images/Templates/templatez/jamm/jammbg.jpg',
-    },
+    // {
+    //   slug: 'sales-intelligence',
+    //   title: 'Sales Intelligence Transformation & Time Based Reporting Standardization',
+    //   type: 'AI Solutions',
+    //   industry: 'Retail',
+    //   description:
+    //     'How we rebuilt confidence in sales analytics by standardizing time- intelligence models and optimizing reporting workflows for a leading fashion retailer.',
+    //   image: '/images/Templates/templatez/salesIntelligence/sihead.png',
+    // },
+    // {
+    //   slug: 'real-time-workflow',
+    //   title: 'Real-Time Workforce & Operations Monitoring Dashboard',
+    //   type: 'AI Solutions',
+    //   industry: 'Retail',
+    //   description: 'Transforming Cleaning Operations with Real-Time Visibility',
+    //   image: '/images/Templates/templatez/rtwrokforce/rthero.png',
+    // },
+    // {
+    //   slug: 'centralizing-sales-performance',
+    //   title: 'Sales Performance & Time-Based Reporting Transformation',
+    //   type: 'AI Solutions',
+    //   industry: 'Retail',
+    //   description:
+    //     'Transforming Sales Performance & Time-Based Reporting with AI-Powered Analytics',
+    //   image: '/images/Templates/templatez/csperformance/cspbg.jpg',
+    // },
+    // {
+    //   slug: 'driving-entertainment-success',
+    //   title: 'Driving Entertainment Success with Artist and Performance Dashboards',
+    //   type: 'AI Solutions',
+    //   industry: 'Retail',
+    //   description:
+    //     'Transforming Entertainment Insights with Real-Time Artist and Performance Analytics',
+    //   image: '/images/Templates/templatez/jamm/jammbg.jpg',
+    // },
     {
       slug: 'real-time-dashboard',
       title: 'Centralizing Sales Performance with Real-Time Dashboards',
@@ -632,24 +631,24 @@ const Cards = () => {
         'How GWC transformed the client sales reporting with real - time insights and executive- level analytics',
       image: '/images/Templates/templatez/drivingsales/head.png',
     },
-    {
-      slug: 'real-time-portfolio',
-      title: 'Empowering Clean Hydrogen Investment with Real-Time Portfolio Intelligence',
-      type: 'AI Solutions',
-      industry: 'Retail',
-      description:
-        'How GWC transformed clean energy investment management with real-time insights for a leading clean hydrogen firm.',
-      image: '/images/Templates/templatez/rtportfolio/head.png',
-    },
-    {
-      slug: 'retail-1',
-      title: 'Driving Sales Excellence Through Validated Data',
-      type: 'BI Solutions',
-      industry: 'Banking',
-      description:
-        'A unified reporting framework that transformed fragmented sales data into real-time executive intelligence enabling faster, evidence-based decisions across regions and channels.',
-      image: '/images/Templates/retail-1/solution.png',
-    },
+    // {
+    //   slug: 'real-time-portfolio',
+    //   title: 'Empowering Clean Hydrogen Investment with Real-Time Portfolio Intelligence',
+    //   type: 'AI Solutions',
+    //   industry: 'Retail',
+    //   description:
+    //     'How GWC transformed clean energy investment management with real-time insights for a leading clean hydrogen firm.',
+    //   image: '/images/Templates/templatez/rtportfolio/head.png',
+    // },
+    // {
+    //   slug: 'retail-1',
+    //   title: 'Driving Sales Excellence Through Validated Data',
+    //   type: 'BI Solutions',
+    //   industry: 'Banking',
+    //   description:
+    //     'A unified reporting framework that transformed fragmented sales data into real-time executive intelligence enabling faster, evidence-based decisions across regions and channels.',
+    //   image: '/images/Templates/retail-1/solution.png',
+    // },
   ];
 
   const aiSlugs = [
@@ -864,52 +863,21 @@ const Cards = () => {
     return true;
   };
 
-  // Auto-reset category when activeTab changes if the selected category has no case studies in that tab
-  useEffect(() => {
-    if (activeCategory !== 'All') {
-      const categoryExists = cardsData.some(
-        card => card.type === activeTab && checkCategoryMatch(card, activeCategory)
-      );
-      if (!categoryExists) {
-        setActiveCategory('All');
-      }
-    }
-  }, [activeTab]);
-
-  // Auto-reset department when tab or category changes if the selected department has no case studies in the combination
-  useEffect(() => {
-    if (activeDepartment !== 'Departments' && activeDepartment !== 'All departments') {
-      const deptExists = cardsData.some(
-        card =>
-          card.type === activeTab &&
-          checkCategoryMatch(card, activeCategory) &&
-          checkDeptMatch(card, activeDepartment)
-      );
-      if (!deptExists) {
-        setActiveDepartment('Departments');
-      }
-    }
-  }, [activeTab, activeCategory]);
-
   const visibleCategories = categories.filter(cat => {
     if (cat === 'All') return true;
-    return cardsData.some(card => card.type === activeTab && checkCategoryMatch(card, cat));
+    return cardsData.some(card => checkCategoryMatch(card, cat));
   });
 
   const allDepts = ['Departments', 'Sales', 'HR', 'Operation', 'Marketing', 'IT'];
   const visibleDepts = allDepts.filter(dept => {
     if (dept === 'Departments' || dept === 'All departments') return true;
     return cardsData.some(
-      card =>
-        card.type === activeTab &&
-        checkCategoryMatch(card, activeCategory) &&
-        checkDeptMatch(card, dept)
+      card => checkCategoryMatch(card, activeCategory) && checkDeptMatch(card, dept)
     );
   });
 
-  // Filter cards based on tab, category, department and search query
+  // Filter cards based on category, department and search query
   const filteredCards = cardsData.filter(card => {
-    const matchesTab = card.type === activeTab;
     const matchesCategory = checkCategoryMatch(card, activeCategory);
     const matchesDept = checkDeptMatch(card, activeDepartment);
 
@@ -917,7 +885,7 @@ const Cards = () => {
     const matchesSearch =
       card.title.toLowerCase().includes(query) || card.description.toLowerCase().includes(query);
 
-    return matchesTab && matchesCategory && matchesDept && matchesSearch;
+    return matchesCategory && matchesDept && matchesSearch;
   });
 
   return (
@@ -936,47 +904,24 @@ const Cards = () => {
 
         {/* Filter Controls Container */}
         <div className='flex flex-col gap-6 mb-12'>
-          {/* Top Row: Toggle + Search */}
-          <div className='flex flex-col md:flex-row items-center gap-6'>
-            {/* AI/BI Toggle */}
-            <div className='flex items-center p-1.5 bg-[#F5F5F5] rounded-full w-full md:w-auto'>
-              <button
-                onClick={() => setActiveTab('AI Solutions')}
-                className={`flex-1 md:flex-none px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
-                  activeTab === 'AI Solutions'
-                    ? 'bg-white text-[#404040] shadow-sm'
-                    : 'text-[#6B7280] hover:text-[#404040]'
-                }`}
-              >
-                Artificial Intelligence
-              </button>
-              <button
-                onClick={() => setActiveTab('BI Solutions')}
-                className={`flex-1 md:flex-none px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
-                  activeTab === 'BI Solutions'
-                    ? 'bg-white text-[#7030B1] shadow-sm'
-                    : 'text-[#6B7280] hover:text-[#7030B1]'
-                }`}
-              >
-                Business Intelligence
-              </button>
-            </div>
-
-            {/* Search Bar */}
-            <div className='flex-1 relative w-full'>
+          {/* Top Row: Search Bar Centered */}
+          <div className='flex justify-center w-full'>
+            <div
+              className='relative w-full max-w-2xl flex items-center bg-white rounded-full border border-[#DBDBDB] pl-6 pr-2 py-1.5 transition-all duration-300 focus-within:ring-2 focus-within:ring-purple-500 focus-within:border-transparent'
+              style={{
+                boxShadow:
+                  '0px 1.34px 4.15px 0px #D2D0E111, 0px 3.23px 9.98px 0px #D2D0E119, 0px 6.08px 18.8px 0px #D2D0E11F, 0px 10.85px 33.53px 0px #D2D0E124, 0px 20.3px 62.72px 0px #D2D0E12C',
+              }}
+            >
               <input
                 type='text'
                 placeholder='Search Case Studies'
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
-                className='w-full pl-6 pr-16 py-4 rounded-full border border-[#DBDBDB] text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all'
-                style={{
-                  boxShadow:
-                    '0px 1.34px 4.15px 0px #D2D0E111, 0px 3.23px 9.98px 0px #D2D0E119, 0px 6.08px 18.8px 0px #D2D0E11F, 0px 10.85px 33.53px 0px #D2D0E124, 0px 20.3px 62.72px 0px #D2D0E12C',
-                }}
+                className='w-full bg-transparent text-gray-900 placeholder-gray-400 focus:outline-none py-2.5 text-sm md:text-base'
               />
-              <button className='absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gradient-to-b from-[#7030B1] to-[#B56DD3] flex items-center justify-center text-white shadow-md hover:scale-105 transition-transform'>
-                <FiSearch size={22} />
+              <button className='flex-shrink-0 w-11 h-11 rounded-full bg-gradient-to-b from-[#7030B1] to-[#B56DD3] flex items-center justify-center text-white shadow-md hover:scale-105 transition-transform'>
+                <FiSearch size={20} />
               </button>
             </div>
           </div>

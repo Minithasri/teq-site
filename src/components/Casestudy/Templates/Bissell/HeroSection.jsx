@@ -30,7 +30,7 @@ const HeroSection = () => {
         <div className='absolute inset-0 bg-gradient-to-r from-[#08254A]/5 via-[#0D2F5D]/5 to-[#113A6A]/10 z-0' />
 
         {/* CONTENT */}
-        <div className='relative z-10 mx-auto max-w-7xl px-4 md:px-6 py-14 md:py-16'>
+        <div className='relative z-10 mx-auto max-w-7xl px-4 md:px-6 py-14 md:py-20'>
           {/* CONTENT */}
           <div className='relative'>
             {/* LEFT CONTENT */}
@@ -49,16 +49,6 @@ const HeroSection = () => {
             </div>
 
             {/* RIGHT IMAGE */}
-            <div className='absolute -bottom-52 -right-20 hidden md:block z-20'>
-              <Image
-                src='/images/Templates/bissell/vaccum.png'
-                alt='Machine'
-                width={340}
-                height={420}
-                priority
-                className='h-[420px] w-[340px] object-contain'
-              />
-            </div>
           </div>
         </div>
       </div>

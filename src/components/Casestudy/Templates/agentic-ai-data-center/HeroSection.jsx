@@ -16,7 +16,7 @@ export default function HeroSection() {
           {/* BRAND PARTNERSHIP LOGO HEADER (Assembled logo asset) */}
           <div className='flex items-center gap-3.5 mb-6 md:mb-8 justify-start select-none pointer-events-none'>
             <img
-              src='/images/Templates/template16/gwc.png'
+              src='/images/Templates/template16/gwclogohero.svg'
               alt='GWC Data.AI X Fekki'
               className='h-[42px] md:h-[48px] object-contain'
             />
@@ -36,12 +36,12 @@ export default function HeroSection() {
         <div className='max-w-[1140px] mx-auto px-4 md:px-6 relative'>
           {/* Left Description Column Block */}
           <div className='max-w-[760px] lg:max-w-[780px] space-y-5 text-left pr-4'>
-            <p className='text-[14.5px] md:text-[15.5px] text-[#4a5568] font-medium leading-relaxed tracking-tight'>
+            <p className='text-[16.5px] md:text-[16.5px] text-[#4a5568] font-medium leading-relaxed tracking-tight'>
               Fekki, a data center solutions provider, needed a real-time monitoring and
               optimization system to ensure continuous uptime, efficient energy use, and proactive
               incident management.
             </p>
-            <p className='text-[14.5px] md:text-[15.5px] text-[#4a5568] font-medium leading-relaxed tracking-tight'>
+            <p className='text-[16.5px] md:text-[16.5px] text-[#4a5568] font-medium leading-relaxed tracking-tight'>
               GWC partnered with Fekki to build{' '}
               <strong className='text-[#071326] font-bold'>Agentic AI for Data Centers</strong> — a
               solution combining real-time monitoring, predictive insights, and automated responses

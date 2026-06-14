@@ -1,9 +1,10 @@
-'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiArrowRight, FiPlay } from 'react-icons/fi';
+import { useState } from 'react';
+import { FiArrowRight } from 'react-icons/fi';
 
 export default function HeroSection({ data }) {
+  const [isOpen, setIsOpen] = useState(false);
   const {
     title = 'Agent Title',
     description = 'Agent description goes here.',
@@ -15,8 +16,21 @@ export default function HeroSection({ data }) {
     ctaHref = '/contact',
     videoLabel = 'Agentic Ecosystem',
     videoSubtitle = 'Powering the Next Generation of AI Systems',
-    videoHref = '#',
+    videoHref = 'https://youtu.be/C3q0SFpHo4c?si=YdRPujO07_l23F4A',
   } = data || {};
+
+  const getYoutubeEmbedUrl = url => {
+    if (!url) return '';
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    if (match && match[2].length === 11) {
+      return `https://www.youtube.com/embed/${match[2]}?autoplay=1`;
+    }
+    return url;
+  };
+
+  const isYoutube =
+    videoHref && (videoHref.includes('youtube.com') || videoHref.includes('youtu.be'));
 
   return (
     <section
@@ -58,45 +72,69 @@ export default function HeroSection({ data }) {
         </div>
 
         {/* ── RIGHT COLUMN — Thumbnail Card ── */}
-        <div className='flex-1 flex justify-center lg:justify-end w-full max-w-[520px]'>
-          <div
-            className='relative w-full rounded-2xl overflow-hidden'
-            style={{ aspectRatio: '16/9' }}
-          >
-            {/* Background Image */}
-            <Image
-              src='/images/thumbnail_agentic.png'
-              alt='Agentic Ecosystem'
-              fill
-              className='object-cover'
-              priority
-            />
-
-            {/* Dark overlay */}
-            <div className='absolute inset-0 bg-black/40 rounded-2xl' />
-
-            {/* Card Content */}
-            <div className='absolute inset-0 flex flex-col justify-between p-5 md:p-6'>
-              {/* Top labels */}
-              <div>
-                <p className='text-white font-bold text-base md:text-lg leading-snug'>
-                  {videoLabel}
-                </p>
-                <p className='text-white/80 text-sm mt-0.5'>{videoSubtitle}</p>
+        <div className='flex-1 flex justify-center lg:justify-end w-full max-w-[570px]'>
+          <div className='relative w-full rounded-2xl overflow-hidden shadow-lg border border-[#2D1B18]/10 flex flex-col bg-[#1E110F] text-white'>
+            {/* Custom Top Header */}
+            <div className='flex items-center justify-between px-6 py-2.5 bg-white text-xs font-semibold select-none border-b border-gray-200'>
+              <div className='flex items-center gap-2'>
+                <span className='w-2 h-2 rounded-full bg-[#EF4444] animate-pulse' />
+                <span className='text-[#262626] tracking-wide font-sans text-[11px]'>
+                  Experience the Platform
+                </span>
               </div>
+              <a
+                href={videoHref}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='flex items-center gap-1.5 text-neutral-500 hover:text-black transition-colors text-[10px]'
+              >
+                <span className='w-1.5 h-1.5 rounded-full border border-neutral-300' />
+                <span className='tracking-widest uppercase'>WATCH ON YOUTUBE</span>
+              </a>
+            </div>
 
-              {/* Watch Button */}
-              <div className='flex items-center justify-center flex-1'>
-                <Link
-                  href={videoHref}
-                  className='flex items-center gap-3 bg-white text-[#262626] font-semibold text-sm px-5 py-2.5 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-200'
+            {/* Middle Content */}
+            <div className='w-full bg-black relative' style={{ aspectRatio: '16/9' }}>
+              {isOpen ? (
+                isYoutube ? (
+                  <iframe
+                    src={getYoutubeEmbedUrl(videoHref)}
+                    title={videoLabel}
+                    frameBorder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                    allowFullScreen
+                    className='w-full h-full absolute inset-0'
+                  />
+                ) : (
+                  <video
+                    src={videoHref}
+                    controls
+                    autoPlay
+                    className='w-full h-full absolute inset-0'
+                  />
+                )
+              ) : (
+                <div
+                  className='w-full h-full relative cursor-pointer'
+                  onClick={() => setIsOpen(true)}
                 >
-                  <span className='w-7 h-7 flex items-center justify-center bg-[#262626] rounded-full'>
-                    <FiPlay className='text-white text-xs ml-0.5' />
-                  </span>
-                  Watch
-                </Link>
-              </div>
+                  <Image
+                    src='/images/thumbnail_agentic.png'
+                    alt='Agentic Ecosystem'
+                    fill
+                    className='object-cover'
+                    priority
+                  />
+                  <div className='absolute inset-0 bg-black/40' />
+
+                  {/* YouTube style play button overlay */}
+                  <div className='absolute inset-0 flex items-center justify-center'>
+                    <div className='w-16 h-11 bg-[#FF0000] rounded-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-200 shadow-lg'>
+                      <div className='w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[14px] border-l-white ml-1' />
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

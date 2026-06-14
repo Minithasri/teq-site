@@ -29,6 +29,7 @@ export const headerData = {
         { label: 'Leadership', href: '/company/leadership' },
         { label: 'Work From Hometown', href: '/company/work-from-hometown' },
         { label: 'Careers', href: '/careers' },
+        { label: 'Blogs', href: '/blogs' },
       ],
       megaMenuColumns: [
         {
@@ -37,13 +38,14 @@ export const headerData = {
             { label: 'About Us', href: '/company/about' },
             // { label: 'Vision & Mission', href: '/company/vision-mission' },
             // { label: 'Leadership Team', href: '/company/leadership' },
-            { label: 'Case Study', href: '/casestudy' },
           ],
         },
         {
           title: 'WORK CULTURE',
           links: [
             { label: 'Careers', href: '/careers' },
+            { label: 'Case Study', href: '/casestudy' },
+            { label: 'Blogs', href: '/blogs' },
             { label: 'Work From Hometown', href: '/company/work-from-hometown' },
             // { label: 'Core Values', href: '/company/values' },
           ],

@@ -1,9 +1,10 @@
-'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiArrowRight, FiPlay } from 'react-icons/fi';
+import { useState } from 'react';
+import { FiArrowRight } from 'react-icons/fi';
 
 export default function HeroSection({ data }) {
+  const [isOpen, setIsOpen] = useState(false);
   const {
     title = 'Agent Title',
     description = 'Agent description goes here.',
@@ -15,7 +16,7 @@ export default function HeroSection({ data }) {
     ctaHref = '/contact',
     videoLabel = 'Agentic Ecosystem',
     videoSubtitle = 'Powering the Next Generation of AI Systems',
-    videoHref = '#',
+    videoHref = 'https://youtu.be/C3q0SFpHo4c?si=YdRPujO07_l23F4A',
   } = data || {};
 
   // Split title to color the last two words purple (e.g. "Detection Agent")
@@ -23,6 +24,19 @@ export default function HeroSection({ data }) {
   const splitIndex = Math.max(0, titleWords.length - 2);
   const titleStart = titleWords.slice(0, splitIndex).join(' ');
   const titleEnd = titleWords.slice(splitIndex).join(' ');
+
+  const getYoutubeEmbedUrl = url => {
+    if (!url) return '';
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    if (match && match[2].length === 11) {
+      return `https://www.youtube.com/embed/${match[2]}?autoplay=1`;
+    }
+    return url;
+  };
+
+  const isYoutube =
+    videoHref && (videoHref.includes('youtube.com') || videoHref.includes('youtu.be'));
 
   return (
     <section className='w-full py-10 px-4 mt-20 md:px-8 lg:px-16 xl:px-24 bg-white'>
@@ -62,43 +76,68 @@ export default function HeroSection({ data }) {
         </div>
 
         {/* ── BOTTOM THUMBNAIL CARD ── */}
-        <div
-          className='w-full rounded-[24px] overflow-hidden relative shadow-[0_8px_32px_rgba(0,0,0,0.1)]'
-          style={{ aspectRatio: '16/5' }}
-        >
-          {/* Background Image */}
-          <Image
-            src='/images/thumbnail_agentic.png'
-            alt={videoLabel}
-            fill
-            className='object-cover'
-            priority
-          />
-
-          {/* Dark overlay */}
-          <div className='absolute inset-0 bg-black/60' />
-
-          {/* Top-Left Labels */}
-          <div className='absolute top-6 left-6 md:top-10 md:left-10 text-left z-10'>
-            <h3 className='text-white text-xl md:text-[28px] font-bold mb-1'>{videoLabel}</h3>
-            <p className='text-white/80 text-sm md:text-base mt-1'>{videoSubtitle}</p>
+        <div className='w-full max-w-[650px] mx-auto rounded-[24px] overflow-hidden relative shadow-[0_8px_32px_rgba(0,0,0,0.1)] border border-[#2D1B18]/10 flex flex-col bg-[#1E110F] text-white'>
+          {/* Custom Top Header */}
+          <div className='flex items-center justify-between px-6 py-2.5 bg-white text-xs font-semibold select-none border-b border-gray-200'>
+            <div className='flex items-center gap-2'>
+              <span className='w-2.5 h-2.5 rounded-full bg-[#EF4444] animate-pulse' />
+              <span className='text-[#262626] tracking-wide font-sans text-[11px]'>
+                Experience the Platform
+              </span>
+            </div>
+            <a
+              href={videoHref}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex items-center gap-1.5 text-neutral-500 hover:text-black transition-colors text-[10px]'
+            >
+              <span className='w-1.5 h-1.5 rounded-full border border-neutral-300' />
+              <span className='tracking-widest uppercase'>WATCH ON YOUTUBE</span>
+            </a>
           </div>
 
-          {/* Center Watch Button */}
-          <div className='absolute inset-0 flex flex-col items-center justify-center gap-2 z-10'>
-            <Link
-              href={videoHref}
-              className='w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-[0_0_24px_rgba(0,212,216,0.3)]'
-              style={{ background: '#00D4D8' }}
-            >
-              <FiArrowRight className='text-[#171717] text-xl md:text-2xl' />
-            </Link>
-            <span
-              className='text-[10px] md:text-xs font-bold tracking-widest mt-1'
-              style={{ color: '#00D4D8' }}
-            >
-              WATCH NOW
-            </span>
+          {/* Middle Content */}
+          <div className='w-full bg-black relative' style={{ aspectRatio: '16/9' }}>
+            {isOpen ? (
+              isYoutube ? (
+                <iframe
+                  src={getYoutubeEmbedUrl(videoHref)}
+                  title={videoLabel}
+                  frameBorder='0'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                  allowFullScreen
+                  className='w-full h-full absolute inset-0'
+                />
+              ) : (
+                <video
+                  src={videoHref}
+                  controls
+                  autoPlay
+                  className='w-full h-full absolute inset-0'
+                />
+              )
+            ) : (
+              <div
+                className='w-full h-full relative cursor-pointer'
+                onClick={() => setIsOpen(true)}
+              >
+                <Image
+                  src='/images/thumbnail_agentic.png'
+                  alt={videoLabel}
+                  fill
+                  className='object-cover'
+                  priority
+                />
+                <div className='absolute inset-0 bg-black/40' />
+
+                {/* YouTube style play button overlay */}
+                <div className='absolute inset-0 flex items-center justify-center'>
+                  <div className='w-16 h-11 bg-[#FF0000] rounded-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-200 shadow-lg'>
+                    <div className='w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[14px] border-l-white ml-1' />
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
