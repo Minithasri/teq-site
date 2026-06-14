@@ -1,9 +1,9 @@
 // src/app/(site)/blogs/page.jsx
 'use client';
 
-import React, { useState } from 'react';
-import Link from 'next/link';
 import { blogsData } from '@/data/blogsData';
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function BlogsPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -73,15 +73,15 @@ export default function BlogsPage() {
 
         {/* Grid of Blog/Agent Cards */}
         {filteredBlogs.length > 0 ? (
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full'>
+          <div className='flex flex-col gap-6 w-full max-w-[840px] mx-auto'>
             {filteredBlogs.map(blog => (
               <Link
                 key={blog.slug}
                 href={`/blogs/${blog.slug}`}
-                className='group flex flex-col bg-white rounded-3xl p-3 shadow-[0_8px_32px_rgba(0,0,0,0.03)] border border-[#ECEAE6] hover:shadow-xl hover:border-gray-300 transition-all duration-300'
+                className='group flex flex-col md:flex-row bg-white rounded-[24px] p-5 shadow-[0_8px_32px_rgba(0,0,0,0.03)] border border-[#ECEAE6] hover:shadow-xl hover:border-gray-300 transition-all duration-300 gap-6 items-stretch md:min-h-[220px]'
               >
                 {/* Thumbnail Wrapper with Overlay */}
-                <div className='relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-gray-50'>
+                <div className='relative aspect-[16/10] w-full md:w-[300px] lg:w-[340px] shrink-0 overflow-hidden rounded-2xl bg-gray-50'>
                   {/* Cards image is blog2.png */}
                   <img
                     src='/images/blogs/blog2.png'
@@ -99,23 +99,32 @@ export default function BlogsPage() {
                 </div>
 
                 {/* Card Info */}
-                <div className='pt-5 px-3 flex flex-col flex-grow'>
-                  {/* Metadata Row */}
-                  <div className='flex items-center justify-between text-[11px] font-medium text-[#737373] mb-3 select-none'>
-                    <div className='flex items-center gap-1.5'>
-                      <span className='w-2.5 h-2.5 rounded-full bg-[#22C55E]' />
-                      <span>{blog.readTime || '4 mins read'}</span>
+                <div className='pt-2 md:pt-0 pb-1 flex flex-col flex-grow justify-between'>
+                  <div>
+                    {/* Metadata Row */}
+                    <div className='flex items-center justify-between text-[11px] font-medium text-[#737373] mb-3 select-none'>
+                      <div className='flex items-center gap-1.5'>
+                        <span className='w-2.5 h-2.5 rounded-full bg-[#22C55E]' />
+                        <span>{blog.readTime || '4 mins read'}</span>
+                      </div>
+                      <span>{blog.date || 'June 11, 2026'}</span>
                     </div>
-                    <span>{blog.date || 'June 11, 2026'}</span>
+
+                    {/* Title */}
+                    <h3 className='text-[#262626] font-medium text-[15px] md:text-[18px] mb-2 leading-snug hover:text-[#7030B1] transition-colors duration-200'>
+                      {blog.title}
+                    </h3>
+
+                    {/* Subtitle / Excerpt */}
+                    {blog.subtitle && (
+                      <p className='text-[#737373] text-[13px] md:text-[14px] leading-relaxed line-clamp-2 mb-4 font-sans'>
+                        {blog.subtitle}
+                      </p>
+                    )}
                   </div>
 
-                  {/* Title */}
-                  <h3 className='text-[#262626] font-medium text-[14px] md:text-[16px] mb-2 leading-snug line-clamp-2 min-h-[48px]'>
-                    {blog.title}
-                  </h3>
-
                   {/* Read More button */}
-                  <div className='mt-auto pt-2 flex items-center gap-1.5 select-none border-t border-gray-100'>
+                  <div className='pt-2 flex items-center gap-1.5 select-none border-t border-gray-100 w-full'>
                     <span
                       style={{
                         background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
