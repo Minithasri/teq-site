@@ -13,7 +13,7 @@ export default function GovernanceImperative({ governanceData }) {
         <h2 className='text-3xl md:text-4xl font-medium text-[#404040] mb-6 font-sans tracking-tight'>
           {governanceData.title}
         </h2>
-        <p className='text-[#404040]/80 font-sans font-light text-base md:text-lg leading-relaxed max-w-2xl mx-auto'>
+        <p className='text-[#404040] font-sans font-regular text-base md:text-lg leading-relaxed max-w-3xl mx-auto'>
           {governanceData.description}
         </p>
       </div>
@@ -44,7 +44,7 @@ export default function GovernanceImperative({ governanceData }) {
             </h3>
 
             {/* Card Description */}
-            <p className='text-gray-600 font-sans font-light text-sm md:text-base leading-relaxed'>
+            <p className='text-[#404040] font-sans font-regular text-sm md:text-base leading-relaxed'>
               {card.description}
             </p>
           </div>

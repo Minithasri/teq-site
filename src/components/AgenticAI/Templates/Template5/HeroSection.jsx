@@ -19,7 +19,7 @@ export default function HeroSection({ data }) {
     videoHref: rawVideoHref,
   } = data || {};
 
-  const videoHref = rawVideoHref || 'https://youtu.be/C3q0SFpHo4c?si=YdRPujO07_l23F4A';
+  const videoHref = rawVideoHref || 'https://youtu.be/IkPFwxKLgVE?si=RNeomaYO_bnH96JR';
 
   // Split title to color the last two words purple (e.g. "Detection Agent")
   const titleWords = title.split(' ');

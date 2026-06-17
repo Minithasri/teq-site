@@ -105,6 +105,7 @@ export const headerData = {
         { label: 'Databricks', href: '/partners/databricks' },
         { label: 'Google Cloud', href: '/partners/google-cloud' },
         { label: 'Boomi', href: '/partners/boomi' },
+        { label: 'Claude', href: '/partners/claude' },
       ],
       megaMenuColumns: [
         {
@@ -115,6 +116,7 @@ export const headerData = {
             { label: 'Databricks', href: '/partners/databricks' },
             { label: 'Google Cloud', href: '/partners/google-cloud' },
             { label: 'Boomi', href: '/partners/boomi' },
+            { label: 'Claude', href: '/partners/claude' },
           ],
         },
       ],

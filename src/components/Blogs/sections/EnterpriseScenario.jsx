@@ -51,7 +51,7 @@ export default function EnterpriseScenario({ scenarioData }) {
                   {card.bullets.map((bullet, bIdx) => (
                     <li
                       key={bIdx}
-                      className='text-sm md:text-base text-gray-700 font-sans font-light flex items-start gap-2'
+                      className='text-sm md:text-base text-[#737373] font-sans font-regular flex items-start gap-2'
                     >
                       <span className='text-[#404040]'>•</span>
                       <span>
@@ -72,7 +72,7 @@ export default function EnterpriseScenario({ scenarioData }) {
                   ))}
                 </ul>
               ) : (
-                <p className='text-sm md:text-base text-gray-600 leading-relaxed font-sans font-light'>
+                <p className='text-sm md:text-base text-[#737373] leading-relaxed font-sans font-regular'>
                   {card.text}
                 </p>
               )}
@@ -82,7 +82,7 @@ export default function EnterpriseScenario({ scenarioData }) {
 
         {/* Bottom Card Quote (spans full-bleed row) */}
         <div className='bg-[#FFFFFF] rounded-2xl p-8 md:p-10 shadow-sm border border-[#ECEAE6] text-center'>
-          <p className='text-base md:text-xl text-gray-700 italic font-sans font-light max-w-4xl mx-auto leading-relaxed'>
+          <p className='text-base md:text-xl text-[#404040] italic font-sans font-medium max-w-4xl mx-auto leading-relaxed'>
             {scenarioData.quote}
           </p>
         </div>

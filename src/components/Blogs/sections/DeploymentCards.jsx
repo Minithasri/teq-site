@@ -18,7 +18,7 @@ export default function DeploymentCards({ deploymentData }) {
         {deploymentData.cards.map((card, index) => (
           <div
             key={index}
-            className='bg-[#FFFFFF] border border-[#f3f4f6] rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden flex flex-col justify-between'
+            className='bg-[#FFFFFF] border-2 border-[#f3f4f6] rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200 overflow-hidden flex flex-col justify-between'
           >
             {/* Top Area: Icon & Title */}
             <div className='p-8 flex flex-col items-start gap-6'>
@@ -38,7 +38,7 @@ export default function DeploymentCards({ deploymentData }) {
               style={{
                 background: 'linear-gradient(90deg, #FFF7EB 0%, #FAE0FA 100%)',
               }}
-              className='py-4 px-8 flex items-center gap-3 border-t border-gray-100'
+              className='py-4 px-8 flex items-center justify-center gap-3 border-t border-gray-100'
             >
               {/* Star icon blog8.svg */}
               <img
@@ -46,7 +46,7 @@ export default function DeploymentCards({ deploymentData }) {
                 alt='Star icon'
                 className='w-4 h-4 object-contain flex-shrink-0'
               />
-              <span className='text-sm text-[#404040] font-sans font-light leading-none'>
+              <span className='text-sm text-[#404040] font-sans font-medium leading-none'>
                 {card.statText}
               </span>
             </div>
