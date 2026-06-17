@@ -16,8 +16,10 @@ export default function HeroSection({ data }) {
     ctaHref = '/contact',
     videoLabel = 'Agentic Ecosystem',
     videoSubtitle = 'Powering the Next Generation of AI Systems',
-    videoHref = 'https://youtu.be/C3q0SFpHo4c?si=YdRPujO07_l23F4A',
+    videoHref: rawVideoHref,
   } = data || {};
+
+  const videoHref = rawVideoHref || 'https://youtu.be/C3q0SFpHo4c?si=YdRPujO07_l23F4A';
 
   // Split title to color the last two words purple (e.g. "Detection Agent")
   const titleWords = title.split(' ');
@@ -92,7 +94,7 @@ export default function HeroSection({ data }) {
               className='flex items-center gap-1.5 text-neutral-500 hover:text-black transition-colors text-[10px]'
             >
               <span className='w-1.5 h-1.5 rounded-full border border-neutral-300' />
-              <span className='tracking-widest uppercase'>WATCH ON YOUTUBE</span>
+              <span className='tracking-widest uppercase'>watch us live</span>
             </a>
           </div>
 
@@ -130,10 +132,10 @@ export default function HeroSection({ data }) {
                 />
                 <div className='absolute inset-0 bg-black/40' />
 
-                {/* YouTube style play button overlay */}
+                {/* Premium play button overlay */}
                 <div className='absolute inset-0 flex items-center justify-center'>
-                  <div className='w-16 h-11 bg-[#FF0000] rounded-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-200 shadow-lg'>
-                    <div className='w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[14px] border-l-white ml-1' />
+                  <div className='w-16 h-16 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.3)] border border-white/20 group/play'>
+                    <div className='w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[18px] border-l-[#7030B1] ml-1.5' />
                   </div>
                 </div>
               </div>

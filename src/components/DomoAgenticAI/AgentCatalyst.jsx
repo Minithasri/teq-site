@@ -40,97 +40,63 @@ const AgentCatalyst = () => {
                 {/* PILL 1 */}
                 <div className='w-[85px] h-[32px] sm:w-[95px] sm:h-[38px] md:w-[110px] md:h-[45px] bg-white rounded-full flex items-center justify-center shrink-0'>
                   <span className='text-[#F16B66] font-bold text-[13px] sm:text-[15px] md:text-[18px] lg:text-[20px]'>
-                    Build
+                    BUILD
                   </span>
                 </div>
 
-                {/* CONNECTOR 1 - Mobile */}
-                <div className='flex items-center shrink-0 sm:hidden'>
-                  <svg width='16' height='8'>
-                    <line
-                      x1='0'
-                      y1='4'
-                      x2='14'
-                      y2='4'
-                      stroke='white'
-                      strokeWidth='2'
-                      strokeDasharray='3 2'
-                      opacity='0.9'
-                    />
-                  </svg>
-                  <svg width='5' height='8' className='ml-0'>
-                    <polygon points='0,0 5,4 0,8' fill='white' opacity='0.9' />
-                  </svg>
-                </div>
-
-                {/* CONNECTOR 1 - Tablet+ */}
-                <div className='hidden sm:flex items-center shrink-0'>
-                  <svg width='30' height='8' className='md:w-[45px] md:h-[10px]'>
-                    <line
-                      x1='0'
-                      y1='4'
-                      x2='28'
-                      y2='4'
-                      stroke='white'
-                      strokeWidth='2'
-                      strokeDasharray='4 3'
-                      opacity='0.9'
-                    />
-                  </svg>
-                  <svg width='7' height='8' className='ml-0 md:w-[9px] md:h-[10px]'>
-                    <polygon points='0,0 7,4 0,8' fill='white' opacity='0.9' />
-                  </svg>
-                </div>
+                {/* CONNECTOR 1 */}
+                <svg
+                  viewBox='0 0 50 12'
+                  className='w-8 sm:w-10 md:w-12 h-2.5 sm:h-3 shrink-0'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <line
+                    x1='0'
+                    y1='6'
+                    x2='40'
+                    y2='6'
+                    stroke='white'
+                    strokeWidth='3.5'
+                    strokeDasharray='0 8'
+                    opacity='0.95'
+                    strokeLinecap='round'
+                  />
+                  <polygon points='39,1 50,6 39,11' fill='white' opacity='0.95' />
+                </svg>
 
                 {/* PILL 2 */}
                 <div className='w-[85px] h-[32px] sm:w-[95px] sm:h-[38px] md:w-[110px] md:h-[45px] bg-white rounded-full flex items-center justify-center shrink-0'>
                   <span className='text-[#F16B66] font-bold text-[13px] sm:text-[15px] md:text-[18px] lg:text-[20px]'>
-                    Deploy
+                    DEPLOY
                   </span>
                 </div>
 
-                {/* CONNECTOR 2 - Mobile */}
-                <div className='flex items-center shrink-0 sm:hidden'>
-                  <svg width='16' height='8'>
-                    <line
-                      x1='0'
-                      y1='4'
-                      x2='14'
-                      y2='4'
-                      stroke='white'
-                      strokeWidth='2'
-                      strokeDasharray='3 2'
-                      opacity='0.9'
-                    />
-                  </svg>
-                  <svg width='5' height='8' className='ml-0'>
-                    <polygon points='0,0 5,4 0,8' fill='white' opacity='0.9' />
-                  </svg>
-                </div>
-
-                {/* CONNECTOR 2 - Tablet+ */}
-                <div className='hidden sm:flex items-center shrink-0'>
-                  <svg width='30' height='8' className='md:w-[45px] md:h-[10px]'>
-                    <line
-                      x1='0'
-                      y1='4'
-                      x2='28'
-                      y2='4'
-                      stroke='white'
-                      strokeWidth='2'
-                      strokeDasharray='4 3'
-                      opacity='0.9'
-                    />
-                  </svg>
-                  <svg width='7' height='8' className='ml-0 md:w-[9px] md:h-[10px]'>
-                    <polygon points='0,0 7,4 0,8' fill='white' opacity='0.9' />
-                  </svg>
-                </div>
+                {/* CONNECTOR 2 */}
+                <svg
+                  viewBox='0 0 50 12'
+                  className='w-8 sm:w-10 md:w-12 h-2.5 sm:h-3 shrink-0'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <line
+                    x1='0'
+                    y1='6'
+                    x2='40'
+                    y2='6'
+                    stroke='white'
+                    strokeWidth='3.5'
+                    strokeDasharray='0 8'
+                    opacity='0.95'
+                    strokeLinecap='round'
+                  />
+                  <polygon points='39,1 50,6 39,11' fill='white' opacity='0.95' />
+                </svg>
 
                 {/* PILL 3 */}
                 <div className='w-[85px] h-[32px] sm:w-[95px] sm:h-[38px] md:w-[110px] md:h-[45px] bg-white rounded-full flex items-center justify-center shrink-0'>
                   <span className='text-[#F16B66] font-bold text-[13px] sm:text-[15px] md:text-[18px] lg:text-[20px]'>
-                    Scale
+                    SCALE
                   </span>
                 </div>
               </div>

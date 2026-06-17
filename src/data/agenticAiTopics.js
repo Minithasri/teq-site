@@ -2592,6 +2592,8 @@ export const agenticAiTopics = [
     slug: 'product-planogram-navigator-agent',
     template: 'template5',
     title: 'Planogram Navigator Agent',
+    videoHref:
+      'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Procurement_Agent.mp4',
     category: 'Retail',
     categoryHref: '/agentic-ai',
     description:
@@ -2669,6 +2671,8 @@ export const agenticAiTopics = [
     slug: 'seo-opportunity-mapper-agent',
     template: 'template4',
     title: 'SEO Mapper Agent',
+    videoHref:
+      'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/SEO4.mp4',
     category: 'Marketing',
     categoryHref: '/agentic-ai',
     description:
@@ -3110,6 +3114,8 @@ export const agenticAiTopics = [
     template: 'template1',
     title: 'Inventory Disposal Agent',
     category: 'Manufacturing',
+    videoHref:
+      'https://storage.googleapis.com/agentic_ai_motion_graphics/Agentic%20AI%20-%20Motion%20Graphics/Inventory%20Agent2.mp4',
     categoryHref: '/agentic-ai',
     description:
       'AI-powered inventory optimization solution that identifies aging stock, predicts obsolescence risks, and recommends disposal, reuse, or redistribution actions.',
