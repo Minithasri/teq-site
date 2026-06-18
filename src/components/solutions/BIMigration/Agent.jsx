@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Agent() {
   return (
-    <div className='w-full mb-20 mt-6 lg:mt-6'>
+    <div className='w-full mb-12 mt-6 lg:mt-12'>
       <div className='max-w-[1200px] mx-auto px-4 md:px-6 lg:px-6 xl:px-4'>
         <div className='w-full rounded-3xl relative overflow-hidden bg-gradient-to-r from-purple-50 via-pink-50 to-purple-100'>
           {/* BACKGROUND IMAGE */}
@@ -18,11 +18,12 @@ export default function Agent() {
           <div className='relative z-20 flex flex-col items-center justify-center text-center py-16 px-8'>
             {/* TITLE */}
             <h2 className='text-3xl sm:text-4xl font-semibold text-gray-800 mb-2'>
-              Ready to modernize your BI <span style={{ color: '#6F2B8B' }}>Infrastructure</span>
+              Ready to modernize your <span style={{ color: '#6F2B8B' }}>BI Infrastructure ?</span>
             </h2>
-            <h2 className='text-3xl sm:text-4xl font-semibold text-gray-800 mb-8'>
-              with seamless migration?
-            </h2>
+
+            <p className='text-sm sm:text-base text-[#404040] mb-6'>
+              Contact a GWC expert for a tailored assessment.
+            </p>
 
             {/* BUTTONS */}
             <div className='flex flex-col sm:flex-row gap-4 items-center justify-center'>

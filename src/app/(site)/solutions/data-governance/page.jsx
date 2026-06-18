@@ -7,16 +7,17 @@ import Cards from '../../../../components/solutions/dataGovernance/Cards';
 import DataGovernanceSection from '../../../../components/solutions/dataGovernance/DataGovernanceSection';
 import SectionGwc from '../../../../components/solutions/dataGovernance/SectionGwc';
 import Technology from '../../../../components/solutions/dataGovernance/Technology';
-// import Dummy from '../../../../components/solutions/dataGovernance/dummy';
+import FAQ from '../../../../components/solutions/dataGovernance/FAQ';
+
 function Solutionpage() {
   return (
     <div>
       <BannerSection />
       <SectionGwc />
-      {/* <Dummy /> */}
       <DataGovernanceSection />
       <Technology />
       <Cards />
+      <FAQ />
       <Agent />
     </div>
   );

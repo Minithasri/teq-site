@@ -69,9 +69,7 @@ const HowWeDeliver = () => {
                 key={idx}
                 className={`flex flex-col justify-between min-h-[300px] relative transition-all duration-500 cursor-pointer ${
                   idx !== 3 ? 'md:border-r border-[#0000001A]' : ''
-                } pt-8 pb-2 rounded-2xl ${
-                  isActive ? 'bg-neutral-50/40 scale-[1.01] z-10' : 'bg-transparent'
-                }`}
+                } pt-8 pb-2 bg-transparent`}
                 onClick={() => setActiveStep(idx)}
               >
                 {/* Text Block with internal padding */}
@@ -111,19 +109,7 @@ const HowWeDeliver = () => {
                         <stop offset='0%' stopColor='#6F2B8B' />
                         <stop offset='100%' stopColor='#ED7200' />
                       </linearGradient>
-                      <linearGradient id='lightGlow' x1='50%' y1='0%' x2='50%' y2='100%'>
-                        <stop offset='0%' stopColor='#FEE2A66B' />
-                        <stop offset='100%' stopColor='#FFFFFF00' />
-                      </linearGradient>
                     </defs>
-
-                    {/* Glowing light overlay inside the arc (Active only) */}
-                    <path
-                      d='M 0,143 A 145,145 0 0,1 290,143 Z'
-                      fill='url(#lightGlow)'
-                      className='transition-opacity duration-700'
-                      style={{ opacity: isActive ? 1 : 0 }}
-                    />
 
                     {/* Dotted semicircle path */}
                     <path

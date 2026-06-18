@@ -74,7 +74,7 @@ const AgenticCapabilities = () => {
         <div className='flex items-center gap-2 mb-10 px-4 text-center justify-center flex-wrap z-10'>
           <div className='w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0 relative'>
             <Image
-              src='/images/partners/claude/star.png'
+              src='/images/partners/claude/Icon.svg'
               alt='Claude Spark Star'
               fill
               className='object-contain'

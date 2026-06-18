@@ -7,6 +7,7 @@ import Cards from '../../../../components/solutions/BIMigration/Cards';
 import DataGovernanceSection from '../../../../components/solutions/BIMigration/DataGovernanceSection';
 import SectionGwc from '../../../../components/solutions/BIMigration/SectionGwc';
 import Technology from '../../../../components/solutions/BIMigration/Technology';
+import FAQ from '../../../../components/solutions/BIMigration/FAQ';
 
 function Solutionpage() {
   return (
@@ -16,6 +17,7 @@ function Solutionpage() {
       <DataGovernanceSection />
       <Technology />
       <Cards />
+      <FAQ />
       <Agent />
     </div>
   );

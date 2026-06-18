@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Agent() {
   return (
-    <section aria-labelledby='gwc-atlan-alation' className='w-full mb-20 mt-6 lg:mt-6'>
+    <section aria-labelledby='gwc-atlan-alation' className='w-full mb-12 mt-6 lg:mt-12'>
       <div className='max-w-[1200px] mx-auto px-4 md:px-6 lg:px-6 xl:px-4'>
         <div className='w-full rounded-3xl relative overflow-hidden bg-[#0A1628]'>
           {/* BACKGROUND IMAGE (decorative) */}

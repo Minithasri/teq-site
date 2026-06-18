@@ -8,6 +8,7 @@ const PartnerLogo = ({ partner }) => {
   else if (partner.name === 'Snowflake') imgHeight = '38px';
   else if (partner.name === 'Boomi') imgHeight = '30px';
   else if (partner.name === 'Lyzr') imgHeight = '34px';
+  else if (partner.name === 'Claude') imgHeight = '18px';
 
   return (
     <div className='bg-white rounded-full flex items-center justify-center md:px-6 shadow-[0_2px_15px_rgba(0,0,0,0.04)] border border-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] h-[50px] md:h-[56px]'>
@@ -25,6 +26,7 @@ const PartnerLogo = ({ partner }) => {
 const TechnologyPartner = () => {
   const partners = [
     { name: 'Domo', image: '/images/Domo.png' },
+    { name: 'Claude', image: '/images/claudelogo.png' },
     { name: 'GCP', image: '/images/GCP.png' },
     { name: 'Databricks', image: '/images/Databricks.png' },
     { name: 'Snowflake', image: '/images/Snowflake.png' },
@@ -56,16 +58,16 @@ const TechnologyPartner = () => {
           ))}
         </div>
 
-        {/* ≡ MEDIUM SCREENS: 3 top, 3 bottom ≡ */}
+        {/* ≡ MEDIUM SCREENS: 4 top, 3 bottom ≡ */}
         <div className='hidden md:block lg:hidden'>
           <div className='flex justify-center items-center gap-6 mb-8'>
-            {partners.slice(0, 3).map((partner, index) => (
+            {partners.slice(0, 4).map((partner, index) => (
               <PartnerLogo key={index} partner={partner} />
             ))}
           </div>
           <div className='flex justify-center items-center gap-6'>
-            {partners.slice(3).map((partner, index) => (
-              <PartnerLogo key={index + 3} partner={partner} />
+            {partners.slice(4).map((partner, index) => (
+              <PartnerLogo key={index + 4} partner={partner} />
             ))}
           </div>
         </div>

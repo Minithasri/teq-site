@@ -7,6 +7,7 @@ import Cards from '../../../../components/solutions/cloudTrans/Cards';
 import DataGovernanceSection from '../../../../components/solutions/cloudTrans/DataGovernanceSection';
 import SectionGwc from '../../../../components/solutions/cloudTrans/SectionGwc';
 import Technology from '../../../../components/solutions/cloudTrans/Technology';
+import FAQ from '../../../../components/solutions/cloudTrans/FAQ';
 
 function Solutionpage() {
   return (
@@ -16,6 +17,7 @@ function Solutionpage() {
       <DataGovernanceSection />
       <Technology />
       <Cards />
+      <FAQ />
       <Agent />
     </div>
   );

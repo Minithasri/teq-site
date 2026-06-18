@@ -35,15 +35,20 @@ const AutomateFunctions = () => {
         <div
           className='w-full rounded-[32px] py-16 px-6 sm:px-12 md:px-16 overflow-hidden relative flex flex-col items-center shadow-lg'
           style={{
-            backgroundImage: `
-              linear-gradient(rgba(215, 108, 72, 0.21), rgba(215, 108, 72, 0.21)),
-              url('/images/partners/claude/bgclaude2.jpg')
-            `,
-            backgroundSize: 'cover, cover',
-            backgroundPosition: 'center, center',
-            backgroundRepeat: 'no-repeat, no-repeat',
+            backgroundColor: 'rgba(215, 108, 72, 0.21)',
           }}
         >
+          {/* Background Image with 20% opacity */}
+          <div
+            className='absolute inset-0 pointer-events-none'
+            style={{
+              backgroundImage: "url('/images/partners/claude/bgclaude2.jpg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              opacity: 0.2,
+            }}
+          />
           {/* Headings */}
           <div className='text-center max-w-5xl mb-16 px-4 relative z-10'>
             <h2

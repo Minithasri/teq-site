@@ -50,14 +50,21 @@ const DemoToProduction = () => {
         <div
           className='w-full rounded-[32px] overflow-hidden border border-[#FAFAFA]/40 shadow-xl relative flex flex-col lg:flex-row items-center justify-between p-8 sm:p-12 md:p-16 gap-12'
           style={{
-            backgroundImage: `
-              linear-gradient(135deg, rgba(110, 43, 139, 0) 0%, rgba(217, 109, 66, 0.4) 100%),
-              url('/images/partners/claude/bgclaude.png')
-            `,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            background:
+              'linear-gradient(135deg, rgba(110, 43, 139, 0) 0%, rgba(217, 109, 66, 0.4) 100%)',
           }}
         >
+          {/* Background Image with 20% opacity */}
+          <div
+            className='absolute inset-0 pointer-events-none'
+            style={{
+              backgroundImage: "url('/images/partners/claude/bgclaude.png')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              opacity: 0.2,
+            }}
+          />
           {/* Left Side: 3D Tile Graphic */}
           <div className='relative w-[280px] sm:w-[320px] md:w-[360px] aspect-square flex-shrink-0 transition-transform duration-500 hover:scale-105'>
             <Image

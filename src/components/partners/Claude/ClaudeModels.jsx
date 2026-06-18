@@ -80,11 +80,10 @@ const ClaudeModels = () => {
           {cards.map((card, idx) => (
             <div
               key={idx}
-              className='rounded-[24px] p-8 shadow-[0_8px_30px_rgba(0,0,0,0.01)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_12px_40px_rgba(112,48,177,0.05)]'
+              className='rounded-[24px] p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_12px_40px_rgba(112,48,177,0.05)]'
               style={{
-                background:
-                  'linear-gradient(white, white) padding-box, linear-gradient(135deg, #B56DD3 0%, #7030B1 100%) border-box',
-                border: '1.5px solid transparent',
+                background: '#FFFFFF',
+                border: '2px solid #E5E5E5',
               }}
             >
               {/* Category Header with line */}

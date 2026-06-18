@@ -12,7 +12,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className='relative w-full min-h-[600px] flex items-center justify-center pt-24 pb-4 px-4 sm:px-6 md:px-8 overflow-hidden'
+      className='relative w-full min-h-[700px] flex items-center justify-center pt-24 pb-4 px-4 sm:px-6 md:px-8 overflow-hidden'
       style={{
         background: `
           radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%),

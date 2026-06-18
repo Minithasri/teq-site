@@ -7,6 +7,7 @@ import Cards from '../../../../components/solutions/BIAnalytics/Cards';
 import DataGovernanceSection from '../../../../components/solutions/BIAnalytics/DataGovernanceSection';
 import SectionGwc from '../../../../components/solutions/BIAnalytics/SectionGwc';
 import Technology from '../../../../components/solutions/BIAnalytics/Technology';
+import FAQ from '../../../../components/solutions/BIAnalytics/FAQ';
 
 function Solutionpage() {
   return (
@@ -16,6 +17,7 @@ function Solutionpage() {
       <DataGovernanceSection />
       <Technology />
       <Cards />
+      <FAQ />
       <Agent />
     </div>
   );
