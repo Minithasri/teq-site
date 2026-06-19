@@ -112,9 +112,17 @@ export default function Header({
                 const allLinks = item.megaMenuColumns?.flatMap(column => column.links) || [];
                 // Check if this is Solutions or Partners section
                 const shouldOpenInNewTab = item.label === 'Solutions' || item.label === 'Partners';
-                const isActive =
-                  pathname === item.href ||
-                  (item.href !== '/' && pathname.startsWith('/' + item.href.split('/')[1]));
+                const isClaudePath = pathname.startsWith('/partners/claude');
+                let isActive = false;
+                if (item.label === 'Claude') {
+                  isActive = isClaudePath;
+                } else if (item.label === 'Partners') {
+                  isActive = pathname.startsWith('/partners') && !isClaudePath;
+                } else {
+                  isActive =
+                    pathname === item.href ||
+                    (item.href !== '/' && pathname.startsWith('/' + item.href.split('/')[1]));
+                }
 
                 const indicatorBase =
                   "after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-[3px] after:bg-[#6F2B8B] after:rounded-full";

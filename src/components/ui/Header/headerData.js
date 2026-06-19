@@ -129,6 +129,13 @@ export const headerData = {
       megaMenuColumns: [],
     },
     {
+      label: 'Claude',
+      href: '/partners/claude',
+      megaMenu: false,
+      children: [],
+      megaMenuColumns: [],
+    },
+    {
       label: 'Agentic Domo',
       href: '/agentic-ai',
       megaMenu: false,
