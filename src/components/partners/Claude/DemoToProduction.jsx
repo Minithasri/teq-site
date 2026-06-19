@@ -27,18 +27,22 @@ const DemoToProduction = () => {
             “
           </span>
 
-          <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-medium italic leading-relaxed text-[#404040] z-10 relative px-6'>
-            Most pilots stall before production.{' '}
-            <span
-              style={{
-                backgroundImage: 'linear-gradient(90deg, #6F2B8B 0%, #ED7200 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}
-            >
-              We build for what comes after the demo.
-            </span>
-          </h2>
+          <div className='relative z-10 px-6'>
+            {' '}
+            {/* Left purple border line */}
+            <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-medium italic leading-relaxed text-[#404040] pl-4'>
+              Most AI pilots stop at proof of concept. <span className='text-[#ED7200]'>We</span>{' '}
+              <span
+                style={{
+                  backgroundImage: 'linear-gradient(90deg, #6F2B8B 0%, #ED7200 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                build systems ready for real world impact.
+              </span>
+            </h2>
+          </div>
 
           {/* Right Large Quote */}
           <span className='absolute right-24 -bottom-16 text-[80px] sm:text-[100px] font-serif text-[#F0EAE5]/60 leading-none select-none pointer-events-none'>

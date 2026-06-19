@@ -1,7 +1,7 @@
 'use client';
-import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 
 const HowWeDeliver = () => {
@@ -178,28 +178,25 @@ const HowWeDeliver = () => {
                     <button
                       key={idx}
                       onClick={() => handleTabClick(idx)}
-                      className={`w-full text-left p-6 rounded-2xl relative overflow-hidden transition-all duration-300 border border-[#ECEAE6]/60 flex items-center gap-4 ${
+                      className={`w-full text-left p-6 relative overflow-hidden transition-all duration-300 flex items-center gap-4 ${
                         isActive
-                          ? 'shadow-sm text-gray-800 font-semibold'
-                          : 'bg-transparent hover:bg-gray-50/50 text-gray-500 font-medium'
+                          ? 'shadow-sm text-gray-800 font-semibold rounded-r-2xl'
+                          : 'bg-transparent hover:bg-gray-50/50 text-gray-500 font-medium rounded-2xl'
                       }`}
                       style={{
                         background: isActive
                           ? 'linear-gradient(0deg, rgba(245, 240, 250, 0.38), rgba(245, 240, 250, 0.38)), linear-gradient(258.87deg, rgba(229, 170, 102, 0.126) -3.67%, rgba(255, 165, 129, 0.126) -3.67%, rgba(221, 161, 108, 0.126) 22.35%, rgba(230, 242, 246, 0.126) 51.33%, rgba(202, 185, 246, 0.126) 82.6%, rgba(112, 48, 177, 0.126) 105.33%)'
                           : 'transparent',
+                        borderTop: isActive ? '1px solid rgba(236, 234, 230, 0.6)' : 'none',
+                        borderBottom: isActive ? '1px solid rgba(236, 234, 230, 0.6)' : 'none',
+                        borderRight: isActive ? '1px solid rgba(236, 234, 230, 0.6)' : 'none',
+                        borderLeft: isActive ? '4px solid #7030B1' : 'none',
                       }}
                     >
                       {/* Linear Gradient Left Border Line for Active Tab */}
-                      {isActive && (
-                        <div
-                          className='absolute left-0 top-0 bottom-0 w-[4px]'
-                          style={{
-                            background: 'linear-gradient(180deg, #6F2B8B 0%, #ED7200 100%)',
-                          }}
-                        />
-                      )}
+                      {isActive && <div className='absolute left-0 top-0 bottom-0 w-[4px]' />}
 
-                      <span className={`text-sm sm:text-base leading-relaxed max-w-[90%]`}>
+                      <span className={'text-sm sm:text-base leading-relaxed min-w-[90%]'}>
                         {step.tabTitle}
                       </span>
                     </button>
@@ -241,20 +238,29 @@ const HowWeDeliver = () => {
                     </p>
 
                     {/* Line above points */}
-                    <div className='h-[1.5px] w-full bg-[#F9EAE1] mb-6' />
+                    <div
+                      className='h-[0.5px] w-full mb-6'
+                      style={{
+                        background:
+                          'linear-gradient(258.79deg, rgba(229, 170, 102, 0.3) -13.56%, rgba(255, 165, 129, 0.3) -13.56%, rgba(221, 161, 108, 0.3) 18.23%, rgba(202, 185, 246, 0.3) 91.85%, rgba(112, 48, 177, 0.3) 119.62%)',
+                      }}
+                    />
 
                     {/* Points with unique SVGs (svg1 to svg4) */}
                     <div className='flex flex-col gap-4 mb-6'>
                       {activeData.points.map((point, pIdx) => (
                         <div key={pIdx} className='flex items-start gap-4'>
-                          <div className='w-6 h-6 flex-shrink-0 relative mt-0.5'>
+                          <div
+                            className='w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl mt-0.5'
+                            style={{ backgroundColor: 'rgba(112, 48, 177, 0.08)' }}
+                          >
                             <img
                               src={`/images/partners/claude/svg${pIdx + 1}.svg`}
                               alt=''
-                              className='w-full h-full object-contain'
+                              className='w-5 h-5 object-contain'
                             />
                           </div>
-                          <span className='text-sm sm:text-base text-gray-700 font-medium leading-normal'>
+                          <span className='text-[14px] sm:text-base text-gray-700 font-medium leading-normal'>
                             {point}
                           </span>
                         </div>

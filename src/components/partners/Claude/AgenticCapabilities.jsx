@@ -43,21 +43,40 @@ const AgenticCapabilities = () => {
   ];
 
   return (
-    <section className='relative w-full py-10 sm:py-20 px-4 sm:px-6 md:px-8 bg-white overflow-visible'>
-      {/* Background Graphic that overflows into the next section in web view */}
+    <section className='relative w-full pt-32 sm:pt-48 pb-10 sm:pb-20 px-4 sm:px-6 md:px-8 bg-white overflow-visible'>
+      {/* Background Graphic with seamless top edge blur fading into the previous section */}
       <div
         className='absolute inset-0 pointer-events-none z-0 overflow-visible hidden md:block'
-        style={{ bottom: '-300px' }}
+        style={{ bottom: '-200px' }}
       >
         <div
-          className='w-full h-full'
+          className='absolute top-0 left-0 right-0 pointer-events-none z-20'
           style={{
-            backgroundImage: `url('/images/partners/claude/claude2.png')`,
-            backgroundPosition: 'top center, top center',
-            backgroundRepeat: 'no-repeat, no-repeat',
-            backgroundSize: '100% auto, 100% auto',
+            height: '10%',
+            background:
+              'linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0.5) 100%)',
+            maskImage: 'linear-gradient(to top, transparent 0%, black 60%)',
+            WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 60%)',
           }}
         />
+        <div
+          className='w-full h-full relative'
+          style={{
+            backgroundImage: 'url("/images/partners/claude/claude2.png")',
+            backgroundPosition: 'center -450px',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% auto',
+          }}
+        >
+          {/* Vignette/blur overlay matching the top curve transition */}
+          <div
+            className='absolute inset-x-0 top-0 h-[20%] pointer-events-none'
+            style={{
+              background:
+                'radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0) 70%, rgba(255,255,255,0.3) 100%)',
+            }}
+          />
+        </div>
       </div>
 
       {/* Standard background for mobile view */}
@@ -65,7 +84,8 @@ const AgenticCapabilities = () => {
         <div
           className='w-full h-full'
           style={{
-            backgroundImage: `url('/images/partners/claude/claude3.png'), url('/images/partners/claude/claude2.png')`,
+            backgroundImage:
+              'url("/images/partners/claude/claude3.png"), url("/images/partners/claude/claude2.png")',
             backgroundPosition: 'top center, top center',
             backgroundRepeat: 'no-repeat, no-repeat',
             backgroundSize: '100% auto, 100% auto',
@@ -75,7 +95,7 @@ const AgenticCapabilities = () => {
 
       <div className='max-w-6xl mx-auto flex flex-col items-center relative z-10 w-full'>
         {/* Stats Pills */}
-        <div className='flex flex-wrap md:flex-nowrap gap-4 sm:gap-5 justify-center max-w-5xl px-2 w-full mb-8 sm:mb-12'>
+        <div className='flex flex-wrap md:flex-nowrap gap-4 sm:gap-5 justify-center max-w-5xl px-2 w-full mb-8 sm:mb-12 relative -mt-16 md:-mt-36 z-20'>
           {stats.map((stat, idx) => (
             <div
               key={idx}
@@ -98,8 +118,8 @@ const AgenticCapabilities = () => {
           ))}
         </div>
 
-        {/* Spacer: small on mobile to avoid gap, original height on tablet/desktop */}
-        <div className='w-full h-[60px] sm:h-[300px] md:h-[340px] mb-6 sm:mb-12 flex items-center justify-center pointer-events-none' />
+        {/* Dynamic spacer that preserves layout layout geometry */}
+        <div className='w-full h-[40px] sm:h-[180px] md:h-[20px] mb-6 sm:mb-12 flex items-center justify-center pointer-events-none' />
 
         {/* Section Heading */}
         <div className='flex items-center gap-2 mb-10 px-4 text-center justify-center flex-wrap z-10'>
