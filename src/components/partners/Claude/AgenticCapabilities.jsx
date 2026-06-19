@@ -2,6 +2,13 @@
 import Image from 'next/image';
 
 const AgenticCapabilities = () => {
+  const stats = [
+    { value: '50+', label: 'Agentic blueprints' },
+    { value: '03', label: 'Claude models' },
+    { value: '50+', label: 'Countries Served' },
+    { value: 'Certified', label: 'Claude team' },
+  ];
+
   const cards = [
     {
       category: 'AUTONOMOUS AGENTS',
@@ -45,7 +52,7 @@ const AgenticCapabilities = () => {
         <div
           className='w-full h-full'
           style={{
-            backgroundImage: `url('/images/partners/claude/claude3.png'), url('/images/partners/claude/claude2.png')`,
+            backgroundImage: `url('/images/partners/claude/claude2.png')`,
             backgroundPosition: 'top center, top center',
             backgroundRepeat: 'no-repeat, no-repeat',
             backgroundSize: '100% auto, 100% auto',
@@ -66,7 +73,31 @@ const AgenticCapabilities = () => {
         />
       </div>
 
-      <div className='max-w-6xl mx-auto flex flex-col items-center relative z-10'>
+      <div className='max-w-6xl mx-auto flex flex-col items-center relative z-10 w-full'>
+        {/* Stats Pills */}
+        <div className='flex flex-wrap md:flex-nowrap gap-4 sm:gap-5 justify-center max-w-5xl px-2 w-full mb-8 sm:mb-12'>
+          {stats.map((stat, idx) => (
+            <div
+              key={idx}
+              className='bg-white px-6 py-3 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-[#ECEAE6]/40 flex items-center gap-3 transition-transform duration-300 hover:scale-105 select-none'
+            >
+              <span
+                className='font-medium text-lg sm:text-xl tracking-tight'
+                style={{
+                  backgroundImage: 'linear-gradient(90deg, #6F2B8B 0%, #ED7200 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                {stat.value}
+              </span>
+              <span className='text-[#525252] text-xs sm:text-sm font-medium font-sans whitespace-nowrap'>
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
+
         {/* Spacer: small on mobile to avoid gap, original height on tablet/desktop */}
         <div className='w-full h-[60px] sm:h-[300px] md:h-[340px] mb-6 sm:mb-12 flex items-center justify-center pointer-events-none' />
 
