@@ -168,7 +168,7 @@ const HowWeDeliver = () => {
 
         {/* Interactive Steps Grid Layout - Sticky Scroll track applies ONLY here */}
         <div ref={containerRef} className='relative w-full lg:h-[200vh] mt-12 overflow-visible'>
-          <div className='lg:sticky lg:top-[120px] lg:h-[calc(100vh-160px)] flex items-start w-full'>
+          <div className='lg:sticky lg:top-[70px] lg:h-[calc(100vh-120px)] flex items-start w-full'>
             <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 w-full items-start'>
               {/* Left Column: Sticky Tabs */}
               <div className='lg:col-span-5 flex flex-col gap-4 py-2 w-full'>
@@ -249,9 +249,9 @@ const HowWeDeliver = () => {
                     {/* Points with unique SVGs (svg1 to svg4) */}
                     <div className='flex flex-col gap-4 mb-6'>
                       {activeData.points.map((point, pIdx) => (
-                        <div key={pIdx} className='flex items-start gap-4'>
+                        <div key={pIdx} className='flex items-center gap-4'>
                           <div
-                            className='w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl mt-0.5'
+                            className='w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl'
                             style={{ backgroundColor: 'rgba(112, 48, 177, 0.08)' }}
                           >
                             <img

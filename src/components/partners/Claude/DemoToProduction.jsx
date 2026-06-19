@@ -30,7 +30,7 @@ const DemoToProduction = () => {
           <div className='relative z-10 px-6'>
             {' '}
             {/* Left purple border line */}
-            <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-medium italic leading-relaxed text-[#404040] pl-4'>
+            <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-[36px] italic font-medium text-[#404040] pl-4'>
               Most AI pilots stop at proof of concept. <span className='text-[#ED7200]'>We</span>{' '}
               <span
                 style={{
@@ -45,7 +45,7 @@ const DemoToProduction = () => {
           </div>
 
           {/* Right Large Quote */}
-          <span className='absolute right-24 -bottom-16 text-[80px] sm:text-[100px] font-serif text-[#F0EAE5]/60 leading-none select-none pointer-events-none'>
+          <span className='absolute -right-4 -bottom-16 text-[80px] sm:text-[100px] font-serif text-[#F0EAE5]/60 leading-none select-none pointer-events-none'>
             ”
           </span>
         </div>

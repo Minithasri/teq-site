@@ -2,13 +2,6 @@
 import Image from 'next/image';
 
 const AgenticCapabilities = () => {
-  const stats = [
-    { value: '50+', label: 'Agentic blueprints' },
-    { value: '03', label: 'Claude models' },
-    { value: '50+', label: 'Countries Served' },
-    { value: 'Certified', label: 'Claude team' },
-  ];
-
   const cards = [
     {
       category: 'AUTONOMOUS AGENTS',
@@ -43,40 +36,21 @@ const AgenticCapabilities = () => {
   ];
 
   return (
-    <section className='relative w-full pt-32 sm:pt-48 pb-10 sm:pb-20 px-4 sm:px-6 md:px-8 bg-white overflow-visible'>
+    <section className='relative w-full pt-10 sm:pt-12 pb-10 sm:pb-20 px-4 sm:px-6 md:px-8 bg-white overflow-visible'>
       {/* Background Graphic with seamless top edge blur fading into the previous section */}
       <div
         className='absolute inset-0 pointer-events-none z-0 overflow-visible hidden md:block'
-        style={{ bottom: '-200px' }}
+        style={{ bottom: '-400px' }}
       >
-        <div
-          className='absolute top-0 left-0 right-0 pointer-events-none z-20'
-          style={{
-            height: '10%',
-            background:
-              'linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0.5) 100%)',
-            maskImage: 'linear-gradient(to top, transparent 0%, black 60%)',
-            WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 60%)',
-          }}
-        />
         <div
           className='w-full h-full relative'
           style={{
             backgroundImage: 'url("/images/partners/claude/claude2.png")',
-            backgroundPosition: 'center -450px',
+            backgroundPosition: 'bottom center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100% auto',
           }}
-        >
-          {/* Vignette/blur overlay matching the top curve transition */}
-          <div
-            className='absolute inset-x-0 top-0 h-[20%] pointer-events-none'
-            style={{
-              background:
-                'radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0) 70%, rgba(255,255,255,0.3) 100%)',
-            }}
-          />
-        </div>
+        ></div>
       </div>
 
       {/* Standard background for mobile view */}
@@ -84,8 +58,7 @@ const AgenticCapabilities = () => {
         <div
           className='w-full h-full'
           style={{
-            backgroundImage:
-              'url("/images/partners/claude/claude3.png"), url("/images/partners/claude/claude2.png")',
+            backgroundImage: 'url("/images/partners/claude/claude2.png")',
             backgroundPosition: 'top center, top center',
             backgroundRepeat: 'no-repeat, no-repeat',
             backgroundSize: '100% auto, 100% auto',
@@ -94,30 +67,6 @@ const AgenticCapabilities = () => {
       </div>
 
       <div className='max-w-6xl mx-auto flex flex-col items-center relative z-10 w-full'>
-        {/* Stats Pills */}
-        <div className='flex flex-wrap md:flex-nowrap gap-4 sm:gap-5 justify-center max-w-5xl px-2 w-full mb-8 sm:mb-12 relative -mt-16 md:-mt-36 z-20'>
-          {stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className='bg-white px-6 py-3 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-[#ECEAE6]/40 flex items-center gap-3 transition-transform duration-300 hover:scale-105 select-none'
-            >
-              <span
-                className='font-medium text-lg sm:text-xl tracking-tight'
-                style={{
-                  backgroundImage: 'linear-gradient(90deg, #6F2B8B 0%, #ED7200 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                {stat.value}
-              </span>
-              <span className='text-[#525252] text-xs sm:text-sm font-medium font-sans whitespace-nowrap'>
-                {stat.label}
-              </span>
-            </div>
-          ))}
-        </div>
-
         {/* Dynamic spacer that preserves layout layout geometry */}
         <div className='w-full h-[40px] sm:h-[180px] md:h-[20px] mb-6 sm:mb-12 flex items-center justify-center pointer-events-none' />
 
