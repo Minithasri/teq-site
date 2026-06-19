@@ -1,7 +1,7 @@
 export const dynamic = 'force-static';
 
-import HeroSection from '@/components/AgenticAI/HeroSection';
-import Videos from '@/components/AgenticAI/Videos';
+// import HeroSection from '@/components/AgenticAI/HeroSection';
+// import Videos from '@/components/AgenticAI/Videos';
 
 // import Challenges from '@/components/boomi-integration/Challenges';
 // import Frameworks from '@/components/boomi-integration/Frameworks';
@@ -16,8 +16,8 @@ import Videos from '@/components/AgenticAI/Videos';
 export default function BoomiIntegration() {
   return (
     <main>
-      <HeroSection />
-      <Videos />
+      {/* <HeroSection />
+      <Videos /> */}
     </main>
   );
 }
