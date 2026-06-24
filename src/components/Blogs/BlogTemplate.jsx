@@ -1,24 +1,25 @@
 // src/components/Blogs/BlogTemplate.jsx
 'use client';
 
-import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { FiArrowLeft } from 'react-icons/fi';
-import Breadcrumbs from './sections/Breadcrumbs';
-import BlogHeader from './sections/BlogHeader';
-import ExecutiveSummary from './sections/ExecutiveSummary';
-import BlogContent from './sections/BlogContent';
-import BlogImage from './sections/BlogImage';
+import AboutGwc from './sections/AboutGwc';
 import AnalysisSection from './sections/AnalysisSection';
+import BlogContent from './sections/BlogContent';
+import BlogHeader from './sections/BlogHeader';
+import BlogImage from './sections/BlogImage';
 import BlogTable from './sections/BlogTable';
+import Breadcrumbs from './sections/Breadcrumbs';
 import ComparisonTable from './sections/ComparisonTable';
 import DeploymentCards from './sections/DeploymentCards';
 import EnterpriseScenario from './sections/EnterpriseScenario';
+import ExecutiveSummary from './sections/ExecutiveSummary';
 import GovernanceImperative from './sections/GovernanceImperative';
-import ReadinessChecklist from './sections/ReadinessChecklist';
 import GwcPerspective from './sections/GwcPerspective';
+import InflectionPoint from './sections/InflectionPoint';
 import KeyTakeaways from './sections/KeyTakeaways';
-import AboutGwc from './sections/AboutGwc';
+import ReadinessChecklist from './sections/ReadinessChecklist';
 
 const BlogTemplate = ({ blog }) => {
   if (!blog) {
@@ -51,6 +52,9 @@ const BlogTemplate = ({ blog }) => {
         {/* Executive Summary (2nd section) */}
         <ExecutiveSummary summary={blog.executiveSummary} />
 
+        {/* SEO Metadata Table */}
+        {blog.seoTableData && <BlogTable tableData={blog.seoTableData} />}
+
         {/* Featured Image (3rd section) */}
         <BlogImage src={blog.image} alt={blog.title} />
       </div>
@@ -65,18 +69,38 @@ const BlogTemplate = ({ blog }) => {
 
         {/* Additional Image Section (6th section) */}
         {blog.additionalImage && (
-          <div className='w-full my-12 overflow-hidden rounded-2xl border border-gray-100 shadow-sm bg-gray-50'>
-            <img
+          <div className='w-full my-12 overflow-hidden rounded-2xl'>
+            <Image
               src={blog.additionalImage}
               alt='Additional blog details'
+              width={1200}
+              height={630}
               className='w-full h-auto object-cover'
             />
           </div>
         )}
       </div>
 
+      {/* 3.5. Inflection Point Section */}
+      <InflectionPoint sectionData={blog.inflectionSection} />
+
       {/* 4. Comparison Table Section - Background is full screen width bg-[#F8F7F5] */}
       <ComparisonTable tableData={blog.comparisonTableSection} />
+
+      {/* Post Comparison Image Section */}
+      {blog.postComparisonImage && (
+        <div className='max-w-7xl mx-auto px-4 md:px-6'>
+          <div className='w-full my-12 overflow-hidden rounded-2xl'>
+            <Image
+              src={blog.postComparisonImage}
+              alt='Post comparison details'
+              width={1200}
+              height={630}
+              className='w-full h-auto object-cover'
+            />
+          </div>
+        </div>
+      )}
 
       {/* 4.5. Deployment Cards Section (8th section) */}
       <DeploymentCards deploymentData={blog.deploymentCardsSection} />

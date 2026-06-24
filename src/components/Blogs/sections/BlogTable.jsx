@@ -49,14 +49,18 @@ export default function BlogTable({ tableData }) {
                 </td>
 
                 {/* Description Column */}
-                <td className='px-6 py-4 text-gray-600 leading-relaxed font-sans font-light'>
+                <td
+                  className={`px-6 py-4 text-gray-600 leading-relaxed font-sans font-light ${tableData.headers.length > 2 ? '' : 'w-[60%]'}`}
+                >
                   {row.description}
                 </td>
 
                 {/* Example Column (Italicised) */}
-                <td className='px-6 py-4 text-gray-500 italic leading-relaxed font-sans font-light'>
-                  {row.example}
-                </td>
+                {tableData.headers.length > 2 && (
+                  <td className='px-6 py-4 text-gray-500 italic leading-relaxed font-sans font-light'>
+                    {row.example}
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>

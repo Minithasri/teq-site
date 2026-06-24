@@ -31,7 +31,7 @@ export default function GwcPerspective({ perspectiveData }) {
           </h2>
 
           {/* Description */}
-          <p className='text-[#404040] font-sans font-regular text-base leading-relaxed mt-2'>
+          <p className='text-[#404040] font-sans font-regular text-base leading-relaxed mt-2 whitespace-pre-wrap'>
             {perspectiveData.description}
           </p>
         </div>

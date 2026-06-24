@@ -2,6 +2,7 @@
 'use client';
 
 import { blogsData } from '@/data/blogsData';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -52,14 +53,16 @@ export default function BlogsPage() {
           className='text-sm md:text-[18px] font-regular max-w-4xl leading-relaxed mb-10 text-center font-sans'
         >
           Read articles, guides, and expert opinions designed to help leaders, innovators, and teams
-          navigate today's rapidly evolving digital landscape with confidence and clarity.
+          navigate today&apos;s rapidly evolving digital landscape with confidence and clarity.
         </p>
 
         {/* Search Input */}
         <div className='relative w-full max-w-2xl shadow-[0_8px_30px_rgba(0,0,0,0.06)] rounded-full overflow-hidden bg-white border border-[#E5E7EB] flex items-center px-6 py-4 transition-all duration-300 focus-within:shadow-md focus-within:border-[#7030B1] mb-16'>
-          <img
+          <Image
             src='/images/blogs/blog10.svg'
             alt='Search Icon'
+            width={20}
+            height={20}
             className='w-5 h-5 mr-3 flex-shrink-0'
           />
           <input
@@ -73,19 +76,20 @@ export default function BlogsPage() {
 
         {/* Grid of Blog/Agent Cards */}
         {filteredBlogs.length > 0 ? (
-          <div className='flex flex-col gap-6 w-full max-w-[840px] mx-auto'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto'>
             {filteredBlogs.map(blog => (
               <Link
                 key={blog.slug}
                 href={`/blogs/${blog.slug}`}
-                className='group flex flex-col md:flex-row bg-white rounded-[24px] p-5 shadow-[0_8px_32px_rgba(0,0,0,0.03)] border border-[#ECEAE6] hover:shadow-xl hover:border-gray-300 transition-all duration-300 gap-6 items-stretch md:min-h-[220px]'
+                className='group flex flex-col bg-white rounded-[24px] p-5 shadow-[0_8px_32px_rgba(0,0,0,0.03)] border border-[#ECEAE6] hover:shadow-xl hover:border-gray-300 transition-all duration-300 gap-6 h-full'
               >
                 {/* Thumbnail Wrapper with Overlay */}
-                <div className='relative aspect-[16/10] w-full md:w-[300px] lg:w-[340px] shrink-0 overflow-hidden rounded-2xl bg-gray-50'>
-                  {/* Cards image is blog2.png */}
-                  <img
-                    src='/images/blogs/blog2.png'
+                <div className='relative aspect-video w-full overflow-hidden rounded-2xl bg-gray-50 shrink-0'>
+                  <Image
+                    src={blog.image}
                     alt={blog.title}
+                    width={640}
+                    height={360}
                     className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
                   />
                   {/* Overlay Gradient */}
@@ -136,9 +140,11 @@ export default function BlogsPage() {
                     >
                       Read More
                     </span>
-                    <img
+                    <Image
                       src='/images/blogs/blog11.svg'
                       alt='Arrow'
+                      width={10}
+                      height={10}
                       className='w-2.5 h-2.5 object-contain transition-transform duration-300 group-hover:translate-x-1'
                     />
                   </div>

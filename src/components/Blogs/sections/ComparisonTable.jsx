@@ -59,17 +59,23 @@ export default function ComparisonTable({ tableData }) {
                     </td>
 
                     {/* Traditional Automation Column */}
-                    <td className='px-6 py-4 text-gray-600 leading-relaxed font-sans font-light border-r border-[#ECEAE6] w-[26%]'>
+                    <td
+                      className={`px-6 py-4 text-gray-600 leading-relaxed font-sans font-light border-r border-[#ECEAE6] ${tableData.headers.length > 3 ? 'w-[26%]' : 'w-[40%]'}`}
+                    >
                       {row.traditional}
                     </td>
 
                     {/* Generative AI Column */}
-                    <td className='px-6 py-4 text-gray-600 leading-relaxed font-sans font-light border-r border-[#ECEAE6] w-[26%]'>
-                      {row.genai}
-                    </td>
+                    {tableData.headers.length > 3 && (
+                      <td className='px-6 py-4 text-gray-600 leading-relaxed font-sans font-light border-r border-[#ECEAE6] w-[26%]'>
+                        {row.genai}
+                      </td>
+                    )}
 
                     {/* Agentic AI Column (Bold) */}
-                    <td className='px-6 py-4 text-gray-900 leading-relaxed font-sans font-semibold w-[28%]'>
+                    <td
+                      className={`px-6 py-4 text-gray-900 leading-relaxed font-sans font-semibold ${tableData.headers.length > 3 ? 'w-[28%]' : 'w-[40%]'}`}
+                    >
                       {row.agentic}
                     </td>
                   </tr>

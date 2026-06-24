@@ -72,7 +72,7 @@ export default function EnterpriseScenario({ scenarioData }) {
                   ))}
                 </ul>
               ) : (
-                <p className='text-sm md:text-base text-[#737373] leading-relaxed font-sans font-regular'>
+                <p className='text-sm md:text-base text-[#737373] leading-relaxed font-sans font-regular whitespace-pre-wrap'>
                   {card.text}
                 </p>
               )}
