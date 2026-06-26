@@ -52,9 +52,6 @@ const BlogTemplate = ({ blog }) => {
         {/* Executive Summary (2nd section) */}
         <ExecutiveSummary summary={blog.executiveSummary} />
 
-        {/* SEO Metadata Table */}
-        {blog.seoTableData && <BlogTable tableData={blog.seoTableData} />}
-
         {/* Featured Image (3rd section) */}
         <BlogImage src={blog.image} alt={blog.title} />
       </div>

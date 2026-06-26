@@ -285,30 +285,6 @@ export const blogsData = [
     author: 'GWC DATA.AI',
     date: 'June 24, 2026',
     readTime: '10 min read',
-    seoTableData: {
-      title: 'SEO Metadata',
-      headers: ['Field', 'Value'],
-      rows: [
-        {
-          step: 'SEO Title',
-          description: 'Agentic AI vs Traditional Automation: What is Different in 2026',
-        },
-        {
-          step: 'Meta Description',
-          description:
-            'Agentic AI vs traditional automation in 2026: how reasoning agents differ from RPA, where each wins, and a practical adoption framework for leaders.',
-        },
-        {
-          step: 'URL Slug',
-          description: 'agentic-ai-vs-traditional-automation-2026',
-        },
-        {
-          step: 'Target Keywords',
-          description:
-            'agentic AI vs traditional automation, agentic AI vs RPA 2026, enterprise AI agents',
-        },
-      ],
-    },
     executiveSummary: [
       {
         label: 'The shift',
