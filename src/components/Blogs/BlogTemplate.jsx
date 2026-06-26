@@ -41,7 +41,7 @@ const BlogTemplate = ({ blog }) => {
 
   return (
     <article className='min-h-screen bg-[#FFFFFF] pb-20 pt-[120px]'>
-      {/* 1. Header Area: Breadcrumbs, Title, Summary, Featured Image */}
+      {/* 1. Breadcrumbs & Header Area */}
       <div className='max-w-7xl mx-auto px-4 md:px-6'>
         {/* Breadcrumbs */}
         <Breadcrumbs title={blog.breadcrumbTitle || blog.title} />
@@ -49,22 +49,22 @@ const BlogTemplate = ({ blog }) => {
         {/* Blog Title & Author Details */}
         <BlogHeader blog={blog} />
 
-        {/* Executive Summary (2nd section) */}
+        {/* 2. Executive Summary Section */}
         <ExecutiveSummary summary={blog.executiveSummary} />
 
-        {/* Featured Image (3rd section) */}
+        {/* 4. Featured Image Section */}
         <BlogImage src={blog.image} alt={blog.title} />
       </div>
 
-      {/* 2. Analysis Section - Background is full screen width */}
+      {/* 5. Analysis Section (Full Screen Width) */}
       <AnalysisSection analysis={blog.analysisSection} />
 
-      {/* 3. Mid Area: Table & Additional Image wrapped in max-w-7xl */}
+      {/* 6. Mid Area (Table & Optional Additional Image) */}
       <div className='max-w-7xl mx-auto px-4 md:px-6'>
-        {/* Table Section (5th section) */}
+        {/* Table Section */}
         <BlogTable tableData={blog.tableSection} />
 
-        {/* Additional Image Section (6th section) */}
+        {/* Additional Image Section */}
         {blog.additionalImage && (
           <div className='w-full my-12 overflow-hidden rounded-2xl'>
             <Image
@@ -78,13 +78,13 @@ const BlogTemplate = ({ blog }) => {
         )}
       </div>
 
-      {/* 3.5. Inflection Point Section */}
+      {/* 7. Inflection Point Section */}
       <InflectionPoint sectionData={blog.inflectionSection} />
 
-      {/* 4. Comparison Table Section - Background is full screen width bg-[#F8F7F5] */}
+      {/* 8. Comparison Table Section (Full Screen Width) */}
       <ComparisonTable tableData={blog.comparisonTableSection} />
 
-      {/* Post Comparison Image Section */}
+      {/* 9. Post Comparison Image Section */}
       {blog.postComparisonImage && (
         <div className='max-w-7xl mx-auto px-4 md:px-6'>
           <div className='w-full my-12 overflow-hidden rounded-2xl'>
@@ -99,30 +99,30 @@ const BlogTemplate = ({ blog }) => {
         </div>
       )}
 
-      {/* 4.5. Deployment Cards Section (8th section) */}
+      {/* 10. Deployment Cards Section */}
       <DeploymentCards deploymentData={blog.deploymentCardsSection} />
 
-      {/* 4.8. Enterprise Scenario Section (9th section) - Background is full screen width */}
+      {/* 11. Enterprise Scenario Section (Full Screen Width) */}
       <EnterpriseScenario scenarioData={blog.enterpriseScenarioSection} />
 
-      {/* 4.9. Governance Imperative Section (10th section) */}
+      {/* 12. Governance Imperative Section */}
       <GovernanceImperative governanceData={blog.governanceSection} />
 
-      {/* 4.95. Readiness Checklist Section (11th section) */}
+      {/* 13. Readiness Checklist Section */}
       <ReadinessChecklist checklistData={blog.readinessChecklist} />
 
-      {/* 4.98. GWC Perspective Section (12th section) */}
+      {/* 14. GWC Perspective Section */}
       <GwcPerspective perspectiveData={blog.gwcPerspective} />
 
-      {/* 4.99. Key Takeaways Section (13th section) - Background is full screen width */}
+      {/* 15. Key Takeaways Section (Full Screen Width) */}
       <KeyTakeaways takeawaysData={blog.keyTakeawaysSection} />
 
-      {/* 4.995. About GWC Section (14th section) */}
+      {/* 16. About GWC Section */}
       <AboutGwc aboutData={blog.aboutSection} />
 
-      {/* 5. Bottom Area: Text Content, Back Navigation */}
+      {/* 17. Bottom Area: Main Text Content & Navigation */}
       <div className='max-w-7xl mx-auto px-4 md:px-6'>
-        {/* Main Blog Content - wrapped in a readable container */}
+        {/* Main Blog Content */}
         <div className='mt-12 max-w-4xl mx-auto'>
           <BlogContent content={blog.content} />
         </div>
