@@ -44,9 +44,9 @@ export default function LocationsSection() {
     {
       id: 6,
       name: 'Hosur',
-      address: 'Kumudepalli, Moranapalli, Hosur, Tamil Nadu 635130',
+      address: 'Hosur IT Park, National Highway 207, Hosur, Tamil Nadu, 635109',
       image: '/images/ContactUs/hosur.webp',
-      mapLink: 'https://maps.app.goo.gl/i57obphBQjxg4FiXA?g_st=aw',
+      mapLink: 'https://maps.app.goo.gl/7LAjyoqr9xvG88Dz6',
     },
     {
       id: 7,
