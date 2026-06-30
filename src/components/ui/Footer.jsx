@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Business from '../../components/homePage/Business';
@@ -12,12 +13,14 @@ const Footer = () => {
     { name: 'About Us', href: '/company/about' },
     { name: 'Contact Us', href: '/contact' },
     { name: 'Case Studies', href: '/casestudy' },
+    { name: 'AI Assessment', href: '/ai-readiness-assessment' },
   ];
 
   const partners = [
     { name: 'DOMO', href: '/partners/domo' },
     { name: 'Snowflake', href: '/partners/snowflake' },
     { name: 'Boomi', href: '/partners/boomi' },
+    { name: 'Claude', href: '/partners/claude' },
     { name: 'Databricks', href: '/partners/databricks' },
     { name: 'Google Cloud', href: '/partners/google-cloud' },
   ];
@@ -54,9 +57,11 @@ const Footer = () => {
           {/* Col 1: Logo & Social Media */}
           <div className='flex flex-col justify-between lg:col-span-2'>
             <div>
-              <img
+              <Image
                 src='/images/Footer.png'
                 alt='GWC DATA.AI SOLUTION MATTERS'
+                width={240}
+                height={80}
                 className='w-[200px] md:w-[240px] h-auto object-contain'
               />
             </div>
@@ -69,9 +74,11 @@ const Footer = () => {
                   rel='noopener noreferrer'
                   className='w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-90 transition-opacity'
                 >
-                  <img
+                  <Image
                     src='/images/instagram_icon.svg'
                     alt='Instagram'
+                    width={20}
+                    height={20}
                     className='w-5 h-5 brightness-0'
                   />
                 </a>
@@ -81,9 +88,11 @@ const Footer = () => {
                   rel='noopener noreferrer'
                   className='w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-90 transition-opacity'
                 >
-                  <img
+                  <Image
                     src='/images/youtube_icon.svg'
                     alt='YouTube'
+                    width={20}
+                    height={20}
                     className='w-5 h-5 brightness-0'
                   />
                 </a>
@@ -93,9 +102,11 @@ const Footer = () => {
                   rel='noopener noreferrer'
                   className='w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-90 transition-opacity'
                 >
-                  <img
+                  <Image
                     src='/images/linkedin_icon.svg'
                     alt='LinkedIn'
+                    width={20}
+                    height={20}
                     className='w-5 h-5 brightness-0'
                   />
                 </a>
@@ -159,9 +170,11 @@ const Footer = () => {
             <h3 className='font-bold mb-6 text-sm uppercase tracking-wider'>CONTACT US</h3>
             <ul className='space-y-4'>
               <li className='flex items-start gap-3'>
-                <img
+                <Image
                   src='/images/footer1.svg'
                   alt='Location'
+                  width={20}
+                  height={20}
                   className='w-5 h-5 flex-shrink-0 mt-0.5'
                 />
                 <a
@@ -175,7 +188,13 @@ const Footer = () => {
                 </a>
               </li>
               <li className='flex items-center gap-3'>
-                <img src='/images/footer2.svg' alt='Email' className='w-5 h-5 flex-shrink-0' />
+                <Image
+                  src='/images/footer2.svg'
+                  alt='Email'
+                  width={20}
+                  height={20}
+                  className='w-5 h-5 flex-shrink-0'
+                />
                 <a
                   href='mailto:indiahr@gwcdata.ai'
                   className='text-sm opacity-90 hover:opacity-100'
@@ -184,9 +203,11 @@ const Footer = () => {
                 </a>
               </li>
               <li className='flex items-start gap-3'>
-                <img
+                <Image
                   src='/images/footer3.svg'
                   alt='Phone'
+                  width={20}
+                  height={20}
                   className='w-5 h-5 flex-shrink-0 mt-0.5'
                 />
                 <span className='text-sm opacity-90'>+91 95914 33122 | +91 99861 68512</span>

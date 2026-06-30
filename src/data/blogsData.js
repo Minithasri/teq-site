@@ -495,4 +495,274 @@ export const blogsData = [
       text: "GWC DATA.AI is a global Data, BI, and Agentic AI consulting and implementation company helping enterprises move from visibility to execution. We design and deploy production-ready autonomous agents, modernize business intelligence onto Domo, and build the modern data foundations that make AI trustworthy. As one of Domo's strongest global implementation and innovation partners, with deep expertise across Snowflake, Boomi, and Claude, GWC delivers measurable, ROI-first outcomes for Fortune 500 and enterprise clients across the US, APAC, EMEA, and India. Solution Matters. Learn more at www.gwcdata.ai.",
     },
   },
+  {
+    slug: 'multi-agent-systems-explained',
+    title: 'Multi-Agent Systems Explained: Why One AI Agent Is Never Enough',
+    breadcrumbTitle: 'Multi-Agent Systems Explained',
+    subtitle:
+      'How specialised, orchestrated agents move enterprises from single-assistant pilots to reliable, governed, production-grade automation.',
+    description:
+      'Explore why multi-agent systems are necessary for enterprise automation and how they coordinate specialised AI agents under an orchestration layer.',
+    image: '/images/blogs/blog15.png',
+    category: 'Agentic AI',
+    author: 'GWC DATA.AI',
+    date: 'June 29, 2026',
+    readTime: '12 min read',
+    executiveSummary: [
+      {
+        label: 'The core idea',
+        text: 'Multi-agent systems (MAS) coordinate several specialised AI agents, each owning a narrow task, under an orchestration layer that manages sequencing, context, approvals, and governance.',
+      },
+      {
+        label: 'The problem',
+        text: 'Single agents hit a ceiling in production: they overload on context, blur accountability, and become difficult to govern as scope grows. Most real enterprise work spans multiple systems and decisions.',
+      },
+      {
+        label: 'Business impact',
+        text: 'Enterprises report faster cycle times, materially higher accuracy on complex workflows, and meaningful cost and productivity gains once orchestration is in place.',
+      },
+      {
+        label: 'Technology trends',
+        text: 'Technology is maturing fast. Orchestrator-worker, supervisor/hierarchical, and swarm patterns now have proven track records, and open protocols such as MCP and A2A are standardising how agents access tools and collaborate.',
+      },
+      {
+        label: 'Governance',
+        text: 'Governance is the deciding factor. Without orchestration, organisations risk shadow AI sprawl: uncontrolled agents that create compliance exposure, technical debt, and unreliable results.',
+      },
+      {
+        label: 'Recommended action',
+        text: 'Treat agent design as an architecture decision, not a feature. Start with one high-value workflow, define human-in-the-loop approval gates, and build on a governed, data-ready foundation.',
+      },
+    ],
+    analysisSection: {
+      title: 'The Single-Agent Ceiling',
+      description:
+        "For two years, the enterprise conversation about AI agents focused on a single, capable assistant: one model, given tools and a prompt, expected to handle an entire process end to end. That framing was useful for early experiments, but it does not survive contact with real operations. The work that matters inside a large organisation rarely lives in one place. A purchase approval touches procurement, finance, and supplier records. A logistics exception spans carriers, inventory, and customer commitments. Asking one agent to reason across all of it, perfectly and reliably, is where pilots quietly stall.\n\nThe problem is structural, not a matter of picking a better model. As you widen a single agent's responsibilities, three failure modes appear.",
+      cardTitle: 'Three Failure Modes',
+      cardItems: [
+        {
+          label: 'Context overload',
+          text: 'Juggling too many instructions and data sources at once degrades accuracy.',
+        },
+        {
+          label: 'Blurs accountability',
+          text: 'When one agent does everything, it becomes hard to trace which step failed and why.',
+        },
+        {
+          label: 'Resists governance',
+          text: 'A monolithic agent is difficult to audit, constrain, or improve without risking the whole workflow.',
+        },
+      ],
+    },
+    tableSection: {
+      title: 'Single agent versus multi-agent: what changes',
+      headers: ['Dimension', 'Single Agent', 'Multi-Agent System'],
+      rows: [
+        {
+          step: 'Scope',
+          description: 'One agent handles everything',
+          example: 'Specialised agents per task',
+        },
+        {
+          step: 'Accuracy on complex work',
+          description: 'Degrades as scope grows',
+          example: 'Higher; each agent stays focused',
+        },
+        {
+          step: 'Accountability',
+          description: 'Hard to trace failures',
+          example: 'Clear ownership per step',
+        },
+        {
+          step: 'Governance',
+          description: 'Difficult to audit and constrain',
+          example: 'Policy applied at the orchestration layer',
+        },
+        {
+          step: 'Scaling',
+          description: 'Rewrite the prompt and hope',
+          example: 'Add or swap an agent',
+        },
+        {
+          step: 'Human oversight',
+          description: 'All-or-nothing',
+          example: 'Targeted approval gates per action',
+        },
+      ],
+    },
+    additionalImage: '/images/blogs/blog17.png',
+    agentMaturitySection: {
+      title: 'The Agent Maturity Model',
+      description:
+        'A multi-agent system replaces the lone generalist with a team of specialists. Each agent owns a narrow, well-defined responsibility, and an orchestration layer coordinates them toward a shared business goal.\n\nTo position investment honestly, it helps to know where you sit today. This four-stage model maps the journey from experimentation to autonomous, governed execution:',
+      cards: [
+        {
+          number: '1',
+          title: 'Assisted',
+          description:
+            'A single agent answers questions and drafts content under close supervision.',
+        },
+        {
+          number: '2',
+          title: 'Specialised',
+          description: 'Multiple agents handle distinct tasks but are still triggered manually.',
+        },
+        {
+          number: '3',
+          title: 'Orchestrated',
+          description:
+            'An orchestration layer sequences agents across a full workflow with approval gates.',
+        },
+        {
+          number: '4',
+          title: 'Autonomous',
+          description:
+            'Agents observe, reason, decide, request approval where needed, and execute.',
+        },
+      ],
+    },
+    content: [
+      {
+        type: 'heading',
+        level: 2,
+        text: 'How Agents Talk: Tools and Each Other',
+      },
+      {
+        type: 'paragraph',
+        text: 'Coordination only works if agents can reliably reach the tools they need and communicate with one another. Two open standards now anchor this layer:',
+      },
+      {
+        type: 'list',
+        items: [
+          'Model Context Protocol (MCP) handles the vertical connection: how an agent securely accesses tools, data sources, and enterprise systems.',
+          "Agent-to-Agent (A2A) handles the horizontal connection: how agents from different teams or vendors discover each other's capabilities and delegate work.",
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: "Standardised protocols reduce custom integration work, lower long-term maintenance cost, and keep your agent estate portable rather than locked to one vendor's framework.",
+      },
+    ],
+    comparisonTableSection: {
+      title: 'The Three Patterns That Run in Production',
+      headers: ['Pattern', 'How It Works', 'Best For'],
+      rows: [
+        {
+          dimension: 'Orchestrator-Worker',
+          traditional:
+            'A central orchestrator owns the goal, breaks it into steps, and dispatches specialist workers.',
+          agentic: 'Structured, multi-step processes such as order or invoice handling',
+        },
+        {
+          dimension: 'Supervisor / Hierarchical',
+          traditional:
+            'A supervisor classifies each request and routes it to the right specialist; larger systems add layers of delegation.',
+          agentic: 'Broad domains with many task types and routing logic',
+        },
+        {
+          dimension: 'Swarm',
+          traditional:
+            'Peer agents collaborate with no central controller, sharing context and self-organising.',
+          agentic: 'Open-ended exploration, research, and discovery tasks',
+        },
+      ],
+    },
+    postComparisonImage: '/images/blogs/blog16.png',
+    enterpriseScenarioSection: {
+      title: 'ENTERPRISE SCENARIO',
+      cards: [
+        {
+          type: 'challenge',
+          title: 'The Challenge',
+          text: 'A national retailer processed thousands of supplier invoices and procurement exceptions each week. A single AI assistant could read invoices but stalled whenever a price mismatch, missing approval, or contract discrepancy required cross-checking three different systems. Exceptions piled up and a team spent days clearing the backlog manually.',
+        },
+        {
+          type: 'solution',
+          title: 'The Solution',
+          text: 'A multi-agent system replaced the lone assistant. A document intelligence agent extracted invoice data, a validation agent reconciled it against purchase orders and contracts, an exception agent classified mismatches, and an orchestrator sequenced the flow. High-value or out-of-policy actions paused at a human-in-the-loop approval gate before anything was posted.',
+        },
+        {
+          type: 'outcome',
+          title: 'The Outcome',
+          bullets: [
+            { text: 'Routine exceptions that took days were ', highlight: 'resolved in hours' },
+            { text: 'Straight-through processing ', highlight: 'rose sharply' },
+            { text: 'Finance staff shifted to handling ', highlight: 'genuine judgement calls' },
+          ],
+        },
+      ],
+      quote:
+        '"Specialisation plus orchestration, with approval gates on the actions that matter, beats any single super-agent. The win came from the architecture and governance, not from a smarter model."',
+    },
+    readinessChecklist: {
+      title: 'Checklist: Before Building a Multi-Agent System',
+      items: [
+        {
+          label: 'High-Value Workflow',
+          text: 'We have identified one high-value workflow that spans multiple systems or decisions.',
+        },
+        {
+          label: 'Task Decomposition',
+          text: 'The workflow can be decomposed into distinct, specialised tasks with clear ownership.',
+        },
+        {
+          label: 'Data Governance',
+          text: 'Underlying data is governed, accessible, and trustworthy enough for agents to act on.',
+        },
+        {
+          label: 'Approval Gates',
+          text: 'We have defined where human approval is mandatory before an irreversible action.',
+        },
+        {
+          label: 'Orchestration Pattern',
+          text: 'We have chosen an orchestration pattern that matches the workflow, not the hype.',
+        },
+        {
+          label: 'Auditability',
+          text: 'We can audit and trace every agent decision for compliance and debugging.',
+        },
+      ],
+    },
+    gwcPerspective: {
+      tagline: 'THE GWC PERSPECTIVE',
+      title: 'Moving from visibility to autonomous execution.',
+      description:
+        'At GWC DATA.AI, we design agents as autonomous digital workers that observe, reason, decide, request human approval where needed, and execute business actions inside real enterprise systems. Our experience across retail, manufacturing, logistics, and financial services points to one consistent lesson: the value of agentic AI is unlocked by orchestration and governance, not by any single model. That is why our portfolio of 50-plus prebuilt enterprise agents is built to work as coordinated teams, with human-in-the-loop approval where the stakes demand it.\n\nWe also believe multi-agent ambition rests on a data and BI foundation. Agents are only as reliable as the data they act on and the governance around them. Building on platforms including Domo Agent Catalyst, Snowflake Cortex AI, and Claude AI for high-stakes reasoning, GWC takes organisations from visibility to execution: from dashboards that report the past to governed agent systems that act in the present. Solution Matters means we measure success in business outcomes, not demonstrations.',
+      card: {
+        title: 'Ready to Deploy?',
+        subtitle: 'Schedule a feasibility workshop with our engineering team.',
+        email: 'hello@gwcdata.ai',
+        buttonText: 'Contact Us',
+      },
+    },
+    keyTakeawaysSection: {
+      title: 'Key Takeaways',
+      items: [
+        {
+          num: '1.',
+          text: 'One agent rarely matches real enterprise work, which spans multiple systems and decisions.',
+        },
+        {
+          num: '2.',
+          text: 'Multi-agent systems win through specialisation plus an orchestration layer that governs the whole.',
+        },
+        {
+          num: '3.',
+          text: 'Orchestrator-worker, supervisor, and swarm patterns are proven; most production systems blend them.',
+        },
+        {
+          num: '4.',
+          text: 'Open protocols (MCP for tools, A2A for collaboration) keep your agent estate portable and lower integration cost.',
+        },
+        {
+          num: '5.',
+          text: 'Governance and human-in-the-loop approval gates are what make autonomy safe and auditable.',
+        },
+      ],
+    },
+    aboutSection: {
+      tagline: 'ABOUT GWC DATA.AI',
+      text: "GWC DATA.AI is a global Data, BI, and Agentic AI consulting and implementation company. We help enterprises move from visibility to execution through modern data engineering, BI modernisation and migration to Domo, and the design and deployment of production-grade AI agents. As Domo's strongest global implementation and innovation partner, with a portfolio of 50-plus prebuilt enterprise agents and deep specialisation in retail, GWC delivers measurable business outcomes built on partners including Domo, Snowflake, Boomi, and Claude AI. Solution Matters. Learn more at www.gwcdata.ai.",
+    },
+  },
 ];

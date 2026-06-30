@@ -121,7 +121,7 @@ export default function HeroSection({ data }) {
                   onClick={() => setIsOpen(true)}
                 >
                   <Image
-                    src='/images/thumbnail_agentic.png'
+                    src='/images/thumbnail_agentic.jpg'
                     alt='Agentic Ecosystem'
                     fill
                     className='object-cover'

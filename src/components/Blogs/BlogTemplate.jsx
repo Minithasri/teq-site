@@ -81,7 +81,16 @@ const BlogTemplate = ({ blog }) => {
       {/* 7. Inflection Point Section */}
       <InflectionPoint sectionData={blog.inflectionSection} />
 
-      {/* 8. Comparison Table Section (Full Screen Width) */}
+      {/* 8. Blog Content Section (e.g. How Agents Talk) */}
+      {blog.content && blog.content.length > 0 && (
+        <div className='max-w-7xl mx-auto px-4 md:px-6'>
+          <div className='mt-12 max-w-4xl mx-auto'>
+            <BlogContent content={blog.content} />
+          </div>
+        </div>
+      )}
+
+      {/* 9. Comparison Table Section (Full Screen Width) */}
       <ComparisonTable tableData={blog.comparisonTableSection} />
 
       {/* 9. Post Comparison Image Section */}
@@ -120,13 +129,8 @@ const BlogTemplate = ({ blog }) => {
       {/* 16. About GWC Section */}
       <AboutGwc aboutData={blog.aboutSection} />
 
-      {/* 17. Bottom Area: Main Text Content & Navigation */}
+      {/* 17. Bottom Area: Back Navigation */}
       <div className='max-w-7xl mx-auto px-4 md:px-6'>
-        {/* Main Blog Content */}
-        <div className='mt-12 max-w-4xl mx-auto'>
-          <BlogContent content={blog.content} />
-        </div>
-
         {/* Back Navigation */}
         <div className='mt-16 pt-8 border-t border-gray-100 max-w-4xl mx-auto flex justify-center'>
           <Link

@@ -124,7 +124,7 @@ export default function HeroSection({ data }) {
                 onClick={() => setIsOpen(true)}
               >
                 <Image
-                  src='/images/thumbnail_agentic.png'
+                  src='/images/thumbnail_agentic.jpg'
                   alt={videoLabel}
                   fill
                   className='object-cover'
