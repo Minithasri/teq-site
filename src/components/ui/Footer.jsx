@@ -13,7 +13,7 @@ const Footer = () => {
     { name: 'About Us', href: '/company/about' },
     { name: 'Contact Us', href: '/contact' },
     { name: 'Case Studies', href: '/casestudy' },
-    { name: 'AI Assessment', href: '/ai-readiness-assessment' },
+    // { name: 'AI Assessment', href: '/ai-readiness-assessment' },
   ];
 
   const partners = [
