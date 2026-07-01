@@ -5,7 +5,7 @@ import { FiArrowRight } from 'react-icons/fi';
 
 const OrbitIcon = ({ radius, size, duration, delay, direction = 1, children }) => (
   <div
-    className='gwc-orbit-icon'
+    className='gwc-orbit-arm'
     style={{
       '--radius': `${radius}%`,
       '--size': `${size}px`,
@@ -14,7 +14,28 @@ const OrbitIcon = ({ radius, size, duration, delay, direction = 1, children }) =
       '--direction': direction === 1 ? 'normal' : 'reverse',
     }}
   >
-    {children}
+    <div className='gwc-orbit-badge gwc-orbit-icon-badge'>{children}</div>
+  </div>
+);
+
+const OrbitDot = ({ radius, size = 8, duration, delay, direction = 1, color }) => (
+  <div
+    className='gwc-orbit-arm'
+    style={{
+      '--radius': `${radius}%`,
+      '--size': `${size}px`,
+      '--duration': `${duration}s`,
+      '--delay': `${delay}s`,
+      '--direction': direction === 1 ? 'normal' : 'reverse',
+    }}
+  >
+    <div
+      className='gwc-orbit-badge'
+      style={{
+        background: color,
+        boxShadow: `0 4px 4px 4px ${color}20`,
+      }}
+    />
   </div>
 );
 
@@ -191,8 +212,22 @@ const ClaudePartner = () => {
               </OrbitIcon>
 
               {/* tiny decorative dots */}
-              <span className='gwc-orbit-dot gwc-orbit-dot-purple' />
-              <span className='gwc-orbit-dot gwc-orbit-dot-orange' />
+              <OrbitDot
+                radius={46}
+                size={8}
+                duration={22}
+                delay={-4}
+                direction={1}
+                color='#7030B1'
+              />
+              <OrbitDot
+                radius={28}
+                size={8}
+                duration={16}
+                delay={-3}
+                direction={-1}
+                color='#ED7200'
+              />
             </div>
           </div>
         </div>
@@ -235,8 +270,21 @@ const ClaudePartner = () => {
 
         .gwc-orbit-wrap {
           position: relative;
-          width: clamp(180px, 26vw, 440px);
+          width: clamp(280px, 85vw, 360px);
           aspect-ratio: 1 / 1;
+          margin: 0 auto;
+        }
+
+        @media (min-width: 640px) {
+          .gwc-orbit-wrap {
+            width: clamp(340px, 55vw, 420px);
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .gwc-orbit-wrap {
+            width: clamp(380px, 28vw, 460px);
+          }
         }
 
         .gwc-orbit-glow {
@@ -293,10 +341,21 @@ const ClaudePartner = () => {
           padding: 14%;
         }
 
-        .gwc-orbit-icon {
+        .gwc-orbit-arm {
           position: absolute;
-          top: 0;
-          left: 0;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          animation: gwc-spin var(--duration) linear infinite;
+          animation-delay: var(--delay);
+          animation-direction: var(--direction);
+        }
+
+        .gwc-orbit-badge {
+          position: absolute;
+          top: 50%;
+          left: calc(50% + var(--radius));
           width: var(--size);
           height: var(--size);
           margin-top: calc(var(--size) / -2);
@@ -304,14 +363,14 @@ const ClaudePartner = () => {
           border-radius: 50%;
           overflow: hidden;
           box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-          offset-path: circle(var(--radius) at 50% 50%);
-          offset-rotate: 0deg;
-          animation: gwc-orbit-move var(--duration) linear infinite;
+          pointer-events: auto;
+          animation: gwc-spin-reverse var(--duration) linear infinite;
           animation-delay: var(--delay);
           animation-direction: var(--direction);
         }
+
         @media (max-width: 640px) {
-          .gwc-orbit-icon {
+          .gwc-orbit-icon-badge {
             --size: 32px !important;
           }
         }
@@ -319,52 +378,26 @@ const ClaudePartner = () => {
           object-fit: cover;
         }
 
-        @keyframes gwc-orbit-move {
-          from { offset-distance: 0%; }
-          to { offset-distance: 100%; }
+        @keyframes gwc-spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
         }
 
-        .gwc-orbit-dot {
-          position: absolute;
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          top: 0;
-          left: 0;
-          margin-top: -4px;
-          margin-left: -4px;
-        }
-        .gwc-orbit-dot-purple {
-          background: #7030B1;
-          box-shadow:
-            0 4px 4px 4px rgba(112,48,177,0.12);
-          offset-path: circle(46% at 50% 50%);
-          offset-rotate: 0deg;
-          animation: gwc-orbit-move 22s linear infinite;
-          animation-delay: -4s;
-        }
-        .gwc-orbit-dot-orange {
-          background: #ED7200;
-          box-shadow:
-            0 4px 4px 4px rgba(237,114,0,0.12);
-          offset-path: circle(28% at 50% 50%);
-          offset-rotate: 0deg;
-          animation: gwc-orbit-move 16s linear infinite reverse;
-          animation-delay: -3s;
+        @keyframes gwc-spin-reverse {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(-360deg); }
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .gwc-orbit-icon,
-          .gwc-orbit-dot-purple,
-          .gwc-orbit-dot-orange,
+          .gwc-orbit-arm,
+          .gwc-orbit-badge,
           .gwc-gradient-text {
             animation: none;
-            offset-distance: 0%;
           }
         }
 
         @media (min-width: 1536px) {
-          .gwc-orbit-wrap { width: clamp(360px, 24vw, 480px); }
+          .gwc-orbit-wrap { width: clamp(420px, 24vw, 480px); }
         }
       `}</style>
     </section>
