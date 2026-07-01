@@ -4,32 +4,32 @@ import Image from 'next/image';
 const AgenticCapabilities = () => {
   const cards = [
     {
-      category: 'AUTONOMOUS AGENTS',
+      category: 'Autonomous Agents',
       title: 'Multi-Agent Orchestration',
       desc: 'Agents that plan, delegate and act, with checkpoints where you need them.',
     },
     {
-      category: 'ENGINEERING',
+      category: 'Engineering',
       title: 'Claude Code',
       desc: 'We modernise and ship your codebase faster, without cutting corners.',
     },
     {
-      category: 'INTEGRATION',
+      category: 'Integration',
       title: 'MCP & Systems',
       desc: 'Claude wired into Domo, Snowflake, Databricks, Salesforce and Boomi.',
     },
     {
-      category: 'DOCUMENTS',
+      category: 'Documents',
       title: 'Document Intelligence',
       desc: 'Contracts, invoices and reports turned into structured data, instantly.',
     },
     {
-      category: 'COPILOTS',
+      category: 'Copilots',
       title: 'Knowledge Copilots',
       desc: 'Assistants grounded in your knowledge base, with answers you can trust.',
     },
     {
-      category: 'GOVERNANCE',
+      category: 'Governance',
       title: 'Responsible AI',
       desc: 'Guardrails, audit trails and access controls, built from day one.',
     },

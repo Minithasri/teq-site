@@ -447,7 +447,7 @@ const AIAgents = () => {
     <section className='py-12 bg-[#fafafa]'>
       <div className='max-w-7xl mx-auto px-4 sm:px-12 lg:px-20 relative'>
         {/* ── Title ── */}
-        <h2 className='text-3xl md:text-[30px] font-semibold text-center text-[#1A1A1A] leading-[1.3] mx-auto mb-8'>
+        <h2 className='text-[16px] sm:text-[30px] font-semibold text-center text-[#1A1A1A] leading-[1.3] mx-auto mb-8'>
           A Powerful Ecosystem of AI Agents Driving Efficiency and{' '}
           <br className='hidden md:block' /> Growth Across Industries
         </h2>

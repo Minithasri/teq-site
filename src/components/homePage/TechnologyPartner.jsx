@@ -14,13 +14,16 @@ const PartnerLogo = ({ partner }) => {
   return (
     <Link
       href={partner.path}
-      className='bg-white rounded-full flex items-center justify-center md:px-6 shadow-[0_2px_15px_rgba(0,0,0,0.04)] border border-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] h-[50px] md:h-[56px]'
+      className='bg-white rounded-full flex items-center justify-center w-full max-w-[160px] md:w-auto md:max-w-none px-4 md:px-6 shadow-[0_2px_15px_rgba(0,0,0,0.04)] border border-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] h-[50px] md:h-[56px]'
+      style={{
+        '--logo-height-mobile': `${parseInt(imgHeight) * 0.72}px`,
+        '--logo-height-desktop': imgHeight,
+      }}
     >
       <img
         src={partner.image}
         alt={partner.name}
-        className='object-contain'
-        style={{ height: imgHeight, width: 'auto' }}
+        className='object-contain w-auto h-[var(--logo-height-mobile)] md:h-[var(--logo-height-desktop)]'
         onError={e => (e.currentTarget.src = '/images/placeholder.png')}
       />
     </Link>

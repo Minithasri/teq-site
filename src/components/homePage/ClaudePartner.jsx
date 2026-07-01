@@ -76,10 +76,10 @@ const ClaudePartner = () => {
             </div>
             {/* Heading */}
             <h1 className='m-0 mb-4'>
-              <span className='block text-[#404040] text-3xl md:text-5xl font-bold leading-[1.0]'>
+              <span className='text-[#404040] text-xl md:text-5xl font-bold leading-[1.0]'>
                 We are now an Official
               </span>
-              <span className='gwc-gradient-text block text-2xl md:text-5xl font-bold leading-[1.0]'>
+              <span className='gwc-gradient-text block text-2xl md:text-5xl font-bold leading-[1.2]'>
                 Anthropic Claude Partner
               </span>
             </h1>
@@ -91,10 +91,10 @@ const ClaudePartner = () => {
             </p>
 
             {/* CTA */}
-            <div className='mb-6 flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 sm:mt-4'>
+            <div className='mb-6 flex flex-row items-center justify-start gap-2.5 sm:gap-4 mt-2 sm:mt-4 w-full flex-nowrap'>
               <Link
                 href='/partners/claude'
-                className='flex items-center justify-center gap-2 px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base text-white transition-all duration-300 hover:scale-105 hover:shadow-xl font-semibold'
+                className='flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-10 py-2 sm:py-4 text-[11px] sm:text-base text-white transition-all duration-300 hover:scale-105 hover:shadow-xl font-semibold whitespace-nowrap'
                 style={{
                   background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
                   boxShadow: 'inset 0px 0px 12px 0px #FFFFFF, 0px 0px 2px 0px rgba(0, 0, 0, 0.1)',
@@ -102,18 +102,18 @@ const ClaudePartner = () => {
                 }}
               >
                 Know More
-                <FiArrowRight className='text-base sm:text-lg' />
+                <FiArrowRight className='text-sm sm:text-lg' />
               </Link>
               <Link
                 href='/contact'
-                className='flex items-center justify-center border border-[#7030B1] gap-2 px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base text-[#6F2B8B] transition-all duration-300 hover:scale-105 hover:shadow-lg'
+                className='flex items-center justify-center border border-[#7030B1] gap-1.5 sm:gap-2 px-3 sm:px-10 py-2 sm:py-4 text-[11px] sm:text-base text-[#6F2B8B] transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap'
                 style={{
                   background: 'white',
                   borderRadius: '30px',
                 }}
               >
                 Build your agent
-                <FiArrowRight className='text-lg sm:text-xl' />
+                <FiArrowRight className='text-sm sm:text-xl' />
               </Link>
             </div>
           </div>
@@ -235,7 +235,7 @@ const ClaudePartner = () => {
 
         .gwc-orbit-wrap {
           position: relative;
-          width: clamp(240px, 26vw, 440px);
+          width: clamp(180px, 26vw, 440px);
           aspect-ratio: 1 / 1;
         }
 
@@ -309,6 +309,11 @@ const ClaudePartner = () => {
           animation: gwc-orbit-move var(--duration) linear infinite;
           animation-delay: var(--delay);
           animation-direction: var(--direction);
+        }
+        @media (max-width: 640px) {
+          .gwc-orbit-icon {
+            --size: 32px !important;
+          }
         }
         .gwc-orbit-img {
           object-fit: cover;

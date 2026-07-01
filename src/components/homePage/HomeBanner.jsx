@@ -20,7 +20,7 @@ function GradientHeading() {
   };
 
   return (
-    <div className='pt-[100px]' style={{ textAlign: 'center' }}>
+    <div className='pt-12 sm:pt-20' style={{ textAlign: 'center' }}>
       {lines.map((line, li) => (
         <div key={li}>
           <span
@@ -150,7 +150,7 @@ const HomeBanner = () => {
 
             {/* Description */}
             <p
-              className='text-[20px] mb-6 sm:text-base lg:text-[20px] max-w-2xl mx-auto mt-4 sm:mt-6 px-2'
+              className='text-[15px] mb-6 sm:text-base lg:text-[20px] max-w-2xl mx-auto mt-4 sm:mt-6 px-2'
               style={{ lineHeight: '1.5' }}
             >
               Elevate your business with AI agents that automate complexity and accelerate growth.
@@ -175,7 +175,7 @@ const HomeBanner = () => {
             <TechnologyPartner />
 
             {/* Cards Grid Section */}
-            <div className='mt-8 lg:mt-12 w-full max-w-[1600px] mx-auto'>
+            <div className='mt-8 lg:mt-12 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-0'>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
                 {/* Column 1: Small Info + Enterprise Stats */}
                 <div className='flex flex-col gap-2 lg:h-[460px]'>
@@ -208,7 +208,7 @@ const HomeBanner = () => {
                       backgroundPosition: 'center',
                     }}
                   >
-                    <h3 className='text-[40px] leading-none font-black text-gray-900 text-left'>
+                    <h3 className='text-[40px] leading-none font-bold md:font-black text-gray-900 text-left'>
                       {enterprise}+
                     </h3>
                     <p className='text-[15px] font-bold text-gray-900 text-left mt-3'>
@@ -246,7 +246,7 @@ const HomeBanner = () => {
                         backgroundPosition: 'center',
                       }}
                     >
-                      <h3 className='text-[44px] leading-none font-black text-gray-900 text-left'>
+                      <h3 className='text-[44px] leading-none font-bold md:font-black text-gray-900 text-left'>
                         {aiAgents}+
                       </h3>
                       <p className='text-[15px] font-bold text-gray-900 text-left mt-4'>
@@ -265,7 +265,7 @@ const HomeBanner = () => {
                         backgroundPosition: 'center',
                       }}
                     >
-                      <h3 className='text-[44px] leading-none font-black text-gray-900 text-left'>
+                      <h3 className='text-[44px] leading-none font-bold md:font-black text-gray-900 text-left'>
                         99.7%
                       </h3>
                       <p className='text-[15px] font-bold text-gray-900 text-left mt-4'>
@@ -279,18 +279,17 @@ const HomeBanner = () => {
 
                   {/* Card 5: DOMO Award */}
                   <div
-                    className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex-1 min-h-[280px] flex flex-col justify-center relative overflow-hidden'
+                    className='bg-white p-8 rounded-[32px] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex-1 min-h-[280px] flex flex-col justify-center relative overflow-hidden bg-[position:right_-50px_center] sm:bg-[position:right_center]'
                     style={{
                       backgroundImage: 'url("/images/dbg5.png")',
                       backgroundSize: 'cover',
-                      backgroundPosition: 'right center',
                     }}
                   >
                     <div className='z-10 text-left max-w-[65%]'>
                       <h3 className='text-3xl font-black mb-3 inline-block bg-clip-text text-transparent bg-gradient-to-r from-[#3688d6] to-[#693bb6] tracking-wide'>
                         DOMO
                       </h3>
-                      <p className='text-lg sm:text-[20px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#693bb6] to-[#3688d6] leading-snug inline-block'>
+                      <p className='text-lg sm:text-[20px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#693bb6] to-[#3688d6] leading-normal block'>
                         International Partner of the Year <br />
                         2025 – GWC Data.AI
                       </p>

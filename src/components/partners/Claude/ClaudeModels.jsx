@@ -6,19 +6,19 @@ import { FiArrowRight } from 'react-icons/fi';
 const ClaudeModels = () => {
   const cards = [
     {
-      category: 'FOR YOUR HARDEST PROBLEMS',
+      category: 'For your hardest problem',
       brand: 'Claude',
       model: 'Opus',
       desc: 'Deep reasoning for research, strategy and complex analysis.',
     },
     {
-      category: 'THE DAILY DRIVER',
+      category: 'The daily driver',
       brand: 'Claude',
       model: 'Sonnet',
       desc: 'Fast, smart and built for production agents.',
     },
     {
-      category: 'BUILT FOR SCALE',
+      category: 'Built for scale',
       brand: 'Claude',
       model: 'Haiku',
       desc: 'Instant responses for support, triage and real-time tasks.',
@@ -88,7 +88,7 @@ const ClaudeModels = () => {
             >
               {/* Category Header with line */}
               <div className='flex items-center gap-4 mb-6'>
-                <span className='text-[13px] font-bold text-[#737373] tracking-wider uppercase whitespace-nowrap'>
+                <span className='text-[13px] font-bold text-[#737373] tracking-wider whitespace-nowrap'>
                   {card.category}
                 </span>
                 <div className='h-[2px] flex-grow bg-[#ECEAE6]' />

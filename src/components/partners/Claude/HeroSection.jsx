@@ -13,7 +13,7 @@ const HeroSection = () => {
           <div
             className='relative inline-flex items-center gap-2.5 rounded-[38px] mb-6 select-none'
             style={{
-              width: '250px',
+              width: 'fit-content',
               height: '52px',
               padding: '11px 25px',
               background: '#FFFFFF33',
@@ -63,10 +63,10 @@ const HeroSection = () => {
 
           {/* Description */}
           <p
-            className='text-[#737373] text-base sm:text-lg lg:text-[18px] font-normal leading-[100%] max-w-[780px] mb-8'
-            style={{ fontFamily: 'Poppins, sans-serif' }}
+            className='text-[#737373] text-base sm:text-lg lg:text-[18px] font-normal max-w-[780px] mb-8'
+            style={{ fontFamily: 'Poppins, sans-serif', lineHeight: '1.6' }}
           >
-            This partnership strengthens our ability to help organizations build secure,scalable,
+            This partnership strengthens our ability to help organizations build secure, scalable,
             and enterprise-ready AI solutions powered by Claude.
           </p>
 
@@ -86,13 +86,13 @@ const HeroSection = () => {
 
         {/* Right column: hero image */}
         <div className='flex justify-center lg:justify-end w-full lg:w-auto shrink-0'>
-          <div className='relative w-[320px] sm:w-[480px] lg:w-[630px] h-[213px] sm:h-[320px] lg:h-[420px] top-4'>
+          <div className='relative w-full max-w-[450px] sm:max-w-[480px] lg:w-[630px] aspect-[1.5] lg:aspect-none lg:h-[420px] top-4'>
             <Image
               src='/images/partners/claude/hero.png'
               alt='GWC Data.AI - Claude Partner'
               fill
               priority
-              className='object-contain select-none pointer-events-none'
+              className='object-contain select-none pointer-events-none scale-[1.35] lg:scale-[1.25] origin-center'
             />
           </div>
         </div>
