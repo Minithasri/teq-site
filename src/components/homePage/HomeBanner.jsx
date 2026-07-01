@@ -104,9 +104,9 @@ const HomeBanner = () => {
       {/* Grid Background - Bottom Half Only */}
       {/* Grid Background - Positioned between text and cards */}
       <div
-        className='absolute left-0 right-0'
+        className='absolute left-0 right-0 top-[500px] lg:top-[580px]'
         style={{
-          height: '90%',
+          height: '650px',
           backgroundImage: `
             linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 2px),
             linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 2px)
@@ -126,19 +126,24 @@ const HomeBanner = () => {
         style={{
           zIndex: 2,
           minHeight: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
         }}
       >
-        <div className='w-full max-w-9xl mx-auto pb-8 sm:pb-10 lg:pb-12'>
+        <PartnerAnnouncementHero />
+
+        <div
+          className='w-full max-w-7xl mx-auto pb-8 sm:pb-10 lg:pb-12'
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+          }}
+        >
           <div className='text-center'>
             {/* Badge */}
             <div className='flex items-center justify-center'>
               {/* <div className='h-[20px]' /> */}
             </div>
-
-            <PartnerAnnouncementHero />
 
             {/* Heading */}
             <GradientHeading />
@@ -170,7 +175,7 @@ const HomeBanner = () => {
             <TechnologyPartner />
 
             {/* Cards Grid Section */}
-            <div className='mt-16 lg:mt-24 w-full max-w-[1600px] mx-auto'>
+            <div className='mt-8 lg:mt-12 w-full max-w-[1600px] mx-auto'>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
                 {/* Column 1: Small Info + Enterprise Stats */}
                 <div className='flex flex-col gap-2 lg:h-[460px]'>

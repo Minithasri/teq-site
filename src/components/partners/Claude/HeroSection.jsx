@@ -5,7 +5,7 @@ import { FiArrowRight } from 'react-icons/fi';
 
 const HeroSection = () => {
   return (
-    <section className='w-full px-0 md:px-12 pt-20 lg:pt-24 bg-white overflow-hidden'>
+    <section className='max-w-7xl mx-auto px-0 md:px-2 pt-20 lg:pt-24 bg-white overflow-hidden'>
       <div className='relative z-10 w-full max-w-9xl mx-auto p-6 sm:p-10 lg:p-[60px] flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-[42px]'>
         {/* Left column */}
         <div className='flex flex-col items-start text-left w-full'>
@@ -53,10 +53,10 @@ const HeroSection = () => {
 
           {/* Heading */}
           <div className='mb-6'>
-            <h1 className='text-[#404040] text-4xl sm:text-6xl lg:text-[73px] font-bold tracking-tight leading-[125%] m-0'>
+            <h1 className='text-[#404040] text-3xl sm:text-5xl lg:text-[64px] font-bold tracking-tight leading-[125%] m-0'>
               Agentic AI.
             </h1>
-            <h2 className='gwc-gradient-text text-4xl sm:text-6xl lg:text-[68px] font-bold tracking-tight leading-[125%] lg:leading-[67px] m-0 whitespace-nowrap'>
+            <h2 className='gwc-gradient-text text-3xl sm:text-5xl lg:text-[58px] font-bold tracking-tight leading-[125%] lg:leading-[67px] m-0 whitespace-nowrap'>
               Powered by Claude.
             </h2>
           </div>
@@ -86,7 +86,7 @@ const HeroSection = () => {
 
         {/* Right column: hero image */}
         <div className='flex justify-center lg:justify-end w-full lg:w-auto shrink-0'>
-          <div className='relative w-[280px] sm:w-[420px] lg:w-[540px] h-[187px] sm:h-[280px] lg:h-[360px] top-4'>
+          <div className='relative w-[320px] sm:w-[480px] lg:w-[630px] h-[213px] sm:h-[320px] lg:h-[420px] top-4'>
             <Image
               src='/images/partners/claude/hero.png'
               alt='GWC Data.AI - Claude Partner'

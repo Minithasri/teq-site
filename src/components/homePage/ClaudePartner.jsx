@@ -20,19 +20,17 @@ const OrbitIcon = ({ radius, size, duration, delay, direction = 1, children }) =
 
 const ClaudePartner = () => {
   return (
-    <section className='relative w-full max-w-9xl mx-auto overflow-hidden bg-white'>
+    <section className='relative w-full overflow-hidden bg-transparent'>
       {/* soft background wash */}
       <div
         className='absolute inset-0 pointer-events-none'
         style={{
           backgroundImage:
-            'linear-gradient(100deg, transparent 0%, rgba(255,255,255,0.85) 50%, transparent 80%), radial-gradient(170.76% 57% at 40% 40.71%, rgba(193, 148, 244, 0.3) 0%, #FFFFFF 100%), linear-gradient(258.43deg, rgba(245, 158, 66, 0.55) -63.71%, rgba(255, 165, 129, 0.3) -63.71%, #FFD1BE -18.65%, rgba(255, 255, 255, 0.65) 32.88%, rgba(193, 148, 244, 0.3) 91.29%, rgba(112, 48, 177, 0.3) 120.89%), linear-gradient(180.81deg, #FFFFFF 42.21%, rgba(255, 255, 255, 0) 44.36%, #FFFFFF 99.25%)',
-          backgroundSize: '300% 100%, auto, auto, auto',
-          backgroundPosition: '0% 0%, 0% 0%, 0% 0%, 0% 0%',
+            'radial-gradient(172.76% 80% at 50% 20%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 65%, #F8F9FA 100%), linear-gradient(258.43deg, rgba(229, 170, 102, 0.3) -63.71%, rgba(255, 165, 129, 0.3) -63.71%, #FFD1BE -18.65%, rgba(255, 255, 255, 0.65) 32.88%, rgba(193, 148, 244, 0.3) 91.29%, rgba(112, 48, 177, 0.3) 120.89%), linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, #F8F9FA 100%)',
         }}
       />
 
-      <div className='relative z-10 w-full max-w-7xl mx-auto rounded-xl px-6 md:px-10 py-40'>
+      <div className='relative z-10 w-full max-w-7xl mx-auto rounded-xl px-6 md:px-10 pt-[120px] sm:pt-[160px] pb-20 sm:pb-28'>
         <div className='flex flex-col lg:flex-row items-center gap-10 lg:gap-12'>
           {/* ---------------- Left column ---------------- */}
           <div className='flex flex-col items-start text-left w-full'>

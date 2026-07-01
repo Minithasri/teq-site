@@ -108,7 +108,7 @@ const AIVideos = () => {
 
   return (
     <section className='relative bg-[#FAFAFA] py-6 px-6 lg:px-20 overflow-hidden'>
-      <div className='max-w-7xl mx-auto'>
+      <div className='max-w-6xl mx-auto'>
         {/* ── Header ── */}
         <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 -mb-6'>
           <h2 className='text-3xl lg:text-5xl font-bold text-[#1a1a2e]'>
@@ -132,9 +132,9 @@ const AIVideos = () => {
         </div>
 
         {/* ── Main Display Area (Split Layout) ── */}
-        <div className='relative max-w-[1300px] mx-auto h-[400px] sm:h-[500px] lg:h-[550px] flex items-center justify-center'>
+        <div className='relative max-w-[1000px] mx-auto h-auto lg:h-[550px] flex flex-col lg:block gap-6 mt-16 lg:mt-0'>
           {/* Video Slider Area (Right side) */}
-          <div className='absolute right-0 w-full lg:w-[75%] h-full flex items-center justify-center lg:justify-end pr-0 lg:pr-5'>
+          <div className='relative lg:absolute lg:-right-24 w-full lg:w-[75%] aspect-[16/9] lg:h-full flex items-center justify-center lg:justify-end pr-0 lg:pr-5'>
             {slides.map((s, idx) => {
               const diff = idx - current;
               const isActive = idx === current;
@@ -189,7 +189,7 @@ const AIVideos = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 50 }}
               transition={{ duration: 0.5 }}
-              className='absolute left-4 lg:left-0 top-1/2 -translate-y-1/2 z-[20] flex flex-row items-center w-[95%] sm:w-[480px] lg:w-[580px] p-6 lg:p-[35px] pr-8 lg:pr-10'
+              className='relative lg:absolute left-0 lg:top-1/2 lg:-translate-y-1/2 z-[20] flex flex-row items-center w-full sm:w-[480px] lg:w-[580px] p-6 lg:p-[35px] pr-8 lg:pr-10'
               style={{
                 background: 'linear-gradient(270deg, #5A2A8A 0%, #242424 100%)',
                 borderRadius: '40px',
