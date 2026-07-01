@@ -5,127 +5,119 @@ import { FiArrowRight } from 'react-icons/fi';
 
 const HeroSection = () => {
   return (
-    <section className='relative w-full min-h-[410px] flex items-center justify-center pt-24 sm:pt-12 pb-4 px-4 sm:px-6 md:px-8 overflow-hidden bg-white'>
-      {/* Soft color gradient overlay to blend the background rays */}
-      <div
-        className='absolute inset-0 pointer-events-none'
-        style={{
-          background: `
-            /* Arching bottom mask to create the curved corner fade */
-            radial-gradient(100% 70% at 50% 100%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.9) 85%, #FFFFFF 100%),
-            radial-gradient(172.76% 57% at 50% 46.71%, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%),
-            linear-gradient(259.49deg, rgba(229, 170, 102, 0.3) -44.78%, rgba(255, 165, 129, 0.3) -44.78%, #FFD1BE -2.47%, rgba(255, 255, 255, 0.65) 44.67%, rgba(246, 185, 228, 0.3) 87.24%, rgba(112, 48, 177, 0.3) 132.49%),
-            linear-gradient(182.91deg, #FFFFFF -39.16%, rgba(255, 255, 255, 0) 37.67%, #FFFFFF 97.42%)
-          `,
-        }}
-      />
-      {/* Sunburst background image with opacity on top of gradients */}
-      <div
-        className='absolute inset-0 pointer-events-none'
-        style={{
-          backgroundImage: "url('/images/partners/claude/cbg.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-
-      <div className='max-w-6xl mx-auto flex flex-col items-center relative z-30 w-full'>
-        {/* Grid: Content left, Image right */}
-        <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full mb-0 lg:mb-[-50px]'>
-          {/* Left Column: Text content */}
-          <div className='lg:col-span-7 flex flex-col items-start text-left px-4 sm:px-0'>
-            <h1 className='text-[#404040] text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-2 leading-none'>
-              Agentic AI.
-            </h1>
-            <h2
-              className='text-3xl sm:text-5xl md:text-6xl font-medium italic tracking-tight mb-6 pb-2 pr-2'
-              style={{
-                backgroundImage: 'linear-gradient(90deg, #6F2B8B 0%, #ED7200 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                display: 'inline-block',
-              }}
-            >
-              Powered by Claude
-            </h2>
-
-            {/* Description */}
-            <p className='text-[#737373] text-sm sm:text-base md:text-[17px] font-medium leading-relaxed max-w-2xl mb-8'>
-              We build autonomous agents on Claude built by Anthropic that reason, code and operate
-              inside the systems you already run.
-            </p>
-
-            {/* CTA Button */}
-            <div>
-              <Link
-                href='/contact'
-                className='inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-white text-sm sm:text-base font-semibold transition-all duration-300 hover:opacity-90 shadow-lg hover:shadow-xl hover:gap-3'
-                style={{
-                  background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-                }}
-              >
-                Talk to our Expert
-                <FiArrowRight className='text-base sm:text-lg' />
-              </Link>
-            </div>
-          </div>
-
-          {/* Right Column: Perspective Orange Card Logo Image */}
-          <div className='lg:col-span-5 flex justify-center lg:justify-end w-full px-4 sm:px-0 relative lg:-mr-16'>
-            <div className='relative w-[340px] sm:w-[440px] md:w-[500px] lg:w-[680px] h-[300px] sm:h-[380px] md:h-[450px] lg:h-[580px] max-w-none'>
-              <Image
-                src='/images/partners/claude/heroside.png'
-                alt='Claude Agentic AI'
-                fill
-                priority
-                className='object-contain lg:object-right drop-shadow-2xl select-none pointer-events-none'
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Stats Pills */}
-        <div className='flex flex-wrap md:flex-nowrap gap-4 sm:gap-5 justify-center max-w-5xl px-2 w-full mt-4 sm:mt-8 mb-4 relative z-30'>
-          {[
-            { value: '50+', label: 'Agentic blueprints' },
-            { value: '03', label: 'Claude models' },
-            { value: '50+', label: 'Countries Served' },
-            { value: 'Certified', label: 'Claude team' },
-          ].map((stat, idx) => (
+    <section className='w-full px-0 md:px-12 pt-20 lg:pt-24 bg-white overflow-hidden'>
+      <div className='relative z-10 w-full max-w-9xl mx-auto p-6 sm:p-10 lg:p-[60px] flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-[42px]'>
+        {/* Left column */}
+        <div className='flex flex-col items-start text-left w-full'>
+          {/* Badge */}
+          <div
+            className='relative inline-flex items-center gap-2.5 rounded-[38px] mb-6 select-none'
+            style={{
+              width: '250px',
+              height: '52px',
+              padding: '11px 25px',
+              background: '#FFFFFF33',
+            }}
+          >
+            {/* Gradient Border using Mask */}
             <div
-              key={idx}
-              className='bg-white px-6 py-3 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-[#ECEAE6]/40 flex items-center gap-3 transition-transform duration-300 hover:scale-105 select-none'
-            >
+              className='absolute inset-0 rounded-[38px] pointer-events-none'
+              style={{
+                padding: '1px',
+                background: 'linear-gradient(90deg, #6F2B8B 0%, #ED7200 100%)',
+                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                WebkitMaskComposite: 'xor',
+                maskComposite: 'exclude',
+              }}
+            />
+            <Image
+              src='/images/partners/claude/star.png'
+              alt=''
+              width={18}
+              height={18}
+              className='shrink-0 relative z-10'
+            />
+            <span className='text-sm sm:text-base font-medium whitespace-nowrap relative z-10'>
               <span
-                className='font-medium text-lg sm:text-2xl tracking-tight'
                 style={{
-                  backgroundImage: 'linear-gradient(90deg, #6F2B8B 0%, #ED7200 100%)',
+                  backgroundImage: 'linear-gradient(90deg, #E5432E 0%, #ED7200 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-                {stat.value}
-              </span>
-              <span className='text-[#525252] text-xs sm:text-sm font-medium font-sans whitespace-nowrap'>
-                {stat.label}
-              </span>
-            </div>
-          ))}
+                160+
+              </span>{' '}
+              <span className='text-[#404040]'>Certified Experts</span>
+            </span>
+          </div>
+
+          {/* Heading */}
+          <div className='mb-6'>
+            <h1 className='text-[#404040] text-4xl sm:text-6xl lg:text-[73px] font-bold tracking-tight leading-[125%] m-0'>
+              Agentic AI.
+            </h1>
+            <h2 className='gwc-gradient-text text-4xl sm:text-6xl lg:text-[68px] font-bold tracking-tight leading-[125%] lg:leading-[67px] m-0 whitespace-nowrap'>
+              Powered by Claude.
+            </h2>
+          </div>
+
+          {/* Description */}
+          <p
+            className='text-[#737373] text-base sm:text-lg lg:text-[18px] font-normal leading-[100%] max-w-[780px] mb-8'
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+          >
+            This partnership strengthens our ability to help organizations build secure,scalable,
+            and enterprise-ready AI solutions powered by Claude.
+          </p>
+
+          {/* CTA Button */}
+          <Link
+            href='/contact'
+            className='inline-flex items-center gap-2.5 rounded-full text-white text-sm sm:text-base font-semibold transition-all duration-300 hover:opacity-90 shadow-lg hover:shadow-xl hover:gap-3'
+            style={{
+              padding: '12px 24px',
+              background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+            }}
+          >
+            Talk to our Expert
+            <FiArrowRight className='text-base sm:text-lg' />
+          </Link>
+        </div>
+
+        {/* Right column: hero image */}
+        <div className='flex justify-center lg:justify-end w-full lg:w-auto shrink-0'>
+          <div className='relative w-[280px] sm:w-[420px] lg:w-[540px] h-[187px] sm:h-[280px] lg:h-[360px] top-4'>
+            <Image
+              src='/images/partners/claude/hero.png'
+              alt='GWC Data.AI - Claude Partner'
+              fill
+              priority
+              className='object-contain select-none pointer-events-none'
+            />
+          </div>
         </div>
       </div>
-      {/* Bottom blur shade - 20% of section height */}
-      <div
-        className='absolute bottom-0 left-0 right-0 pointer-events-none z-20'
-        style={{
-          height: '20%',
-          background:
-            'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.92) 100%)',
-          backdropFilter: 'blur(6px)',
-          WebkitBackdropFilter: 'blur(6px)',
-          maskImage: 'linear-gradient(to bottom, transparent 0%, black 60%)',
-          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 60%)',
-        }}
-      />
+
+      <style>{`
+        .gwc-gradient-text {
+          display: inline-block;
+          background-image: linear-gradient(90deg, #6F2B8B 0%, #ED7200 50%, #6F2B8B 100%);
+          background-size: 200% auto;
+          background-position: 0% 50%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: transparent;
+          animation: gwc-gradient-shift 1s ease-in-out infinite alternate;
+          }
+          @keyframes gwc-gradient-shift {
+          0% { background-position: 0% 50%; }
+          100% { background-position: 100% 50%; }
+          }
+        @media (prefers-reduced-motion: reduce) {
+          .gwc-gradient-text { animation: none; }
+        }
+      `}</style>
     </section>
   );
 };

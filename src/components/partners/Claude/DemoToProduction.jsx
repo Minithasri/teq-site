@@ -42,6 +42,66 @@ const DemoToProduction = () => {
                 build systems ready for real world impact.
               </span>
             </h2>
+            {/* Stat cards */}
+            <div className='mt-8 sm:mt-10 flex flex-col sm:flex-row justify-center gap-4 sm:gap-5'>
+              <div className='flex items-start gap-3 sm:gap-4 bg-white rounded-2xl shadow-md px-4 sm:px-5 py-3 sm:py-4 w-full sm:w-auto sm:min-w-[240px]'>
+                <div className='shrink-0 border border-[rgba(229, 229, 229, 1)] w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white shadow-sm flex items-center justify-center'>
+                  <span className='text-xl sm:text-2xl' aria-hidden>
+                    <Image
+                      src='/images/partners/claude/agent.png'
+                      alt=''
+                      width={30}
+                      height={30}
+                      className='shrink-0 relative z-10'
+                    />
+                  </span>
+                </div>
+                <div className='text-left'>
+                  <p
+                    className='text-lg sm:text-xl font-bold leading-tight m-0'
+                    style={{
+                      backgroundImage: 'linear-gradient(90deg, #6F2B8B 0%, #ED7200 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
+                    50+
+                  </p>
+                  <p className='text-xs sm:text-sm text-[#737373] font-medium leading-snug m-0'>
+                    Agentic blueprints
+                  </p>
+                </div>
+              </div>
+
+              <div className='flex items-center gap-3 sm:gap-4 bg-white rounded-2xl shadow-md px-4 sm:px-5 py-3 sm:py-4 w-full sm:w-auto sm:min-w-[240px]'>
+                <div className='shrink-0 border border-[rgba(229, 229, 229, 1)] w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white shadow-sm flex items-center justify-center'>
+                  <span className='text-xl sm:text-2xl' aria-hidden>
+                    <Image
+                      src='/images/partners/claude/star.png'
+                      alt=''
+                      width={30}
+                      height={30}
+                      className='shrink-0 relative z-10'
+                    />
+                  </span>
+                </div>
+                <div className='text-start'>
+                  <p
+                    className='text-lg sm:text-xl font-bold leading-tight m-0'
+                    style={{
+                      backgroundImage: 'linear-gradient(90deg, #6F2B8B 0%, #ED7200 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
+                    160+
+                  </p>
+                  <p className='text-xs sm:text-sm text-[#737373] font-medium leading-snug m-0'>
+                    Certified CCA Experts
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right Large Quote */}

@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 const PartnerLogo = ({ partner }) => {
   let imgHeight = '30px';
@@ -11,7 +12,10 @@ const PartnerLogo = ({ partner }) => {
   else if (partner.name === 'Claude') imgHeight = '18px';
 
   return (
-    <div className='bg-white rounded-full flex items-center justify-center md:px-6 shadow-[0_2px_15px_rgba(0,0,0,0.04)] border border-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] h-[50px] md:h-[56px]'>
+    <Link
+      href={partner.path}
+      className='bg-white rounded-full flex items-center justify-center md:px-6 shadow-[0_2px_15px_rgba(0,0,0,0.04)] border border-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] h-[50px] md:h-[56px]'
+    >
       <img
         src={partner.image}
         alt={partner.name}
@@ -19,19 +23,19 @@ const PartnerLogo = ({ partner }) => {
         style={{ height: imgHeight, width: 'auto' }}
         onError={e => (e.currentTarget.src = '/images/placeholder.png')}
       />
-    </div>
+    </Link>
   );
 };
 
 const TechnologyPartner = () => {
   const partners = [
-    { name: 'Domo', image: '/images/Domo.png' },
-    { name: 'Claude', image: '/images/claudelogo.png' },
-    { name: 'GCP', image: '/images/GCP.png' },
-    { name: 'Databricks', image: '/images/Databricks.png' },
-    { name: 'Snowflake', image: '/images/Snowflake.png' },
-    { name: 'Boomi', image: '/images/Boomi.png' },
-    { name: 'Lyzr', image: '/images/HomePage/Lyzr.png' },
+    { name: 'Claude', image: '/images/claudelogo.png', path: '/partners/claude' },
+    { name: 'Domo', image: '/images/Domo.png', path: '/partners/domo' },
+    { name: 'GCP', image: '/images/GCP.png', path: '/partners/google-cloud' },
+    { name: 'Databricks', image: '/images/Databricks.png', path: '/partners/databricks' },
+    { name: 'Snowflake', image: '/images/Snowflake.png', path: '/partners/snowflake' },
+    { name: 'Boomi', image: '/images/Boomi.png', path: '/partners/boomi' },
+    { name: 'Lyzr', image: '/images/HomePage/Lyzr.png', path: '' },
   ];
 
   return (
@@ -52,7 +56,7 @@ const TechnologyPartner = () => {
       {/* Responsive Layout */}
       <div className='w-full max-w-9xl mx-auto'>
         {/* ≡ LARGE SCREENS: Single Row ≡ */}
-        <div className='hidden lg:flex justify-center items-center gap-4 xl:gap-8 flex-wrap'>
+        <div className='hidden lg:flex justify-center items-center gap-4 xl:gap-6 flex-wrap'>
           {partners.map((partner, index) => (
             <PartnerLogo key={index} partner={partner} />
           ))}

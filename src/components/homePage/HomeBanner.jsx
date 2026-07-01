@@ -2,6 +2,8 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
+import PartnerAnnouncementHero from './ClaudePartner';
+import TechnologyPartner from './TechnologyPartner';
 
 function GradientHeading() {
   const lines = ['We Build Intelligent Agents', 'that work for you'];
@@ -18,7 +20,7 @@ function GradientHeading() {
   };
 
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className='pt-[100px]' style={{ textAlign: 'center' }}>
       {lines.map((line, li) => (
         <div key={li}>
           <span
@@ -104,8 +106,7 @@ const HomeBanner = () => {
       <div
         className='absolute left-0 right-0'
         style={{
-          top: '32%',
-          height: '60%',
+          height: '90%',
           backgroundImage: `
             linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 2px),
             linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 2px)
@@ -121,7 +122,7 @@ const HomeBanner = () => {
 
       {/* Content - Full width on 1024px */}
       <div
-        className='relative w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-8'
+        className='relative w-full mx-auto'
         style={{
           zIndex: 2,
           minHeight: '100vh',
@@ -130,12 +131,14 @@ const HomeBanner = () => {
           justifyContent: 'center',
         }}
       >
-        <div className='w-full max-w-7xl mx-auto pt-32 sm:pt-40 lg:pt-24 pb-8 sm:pb-10 lg:pb-12 px-4'>
+        <div className='w-full max-w-9xl mx-auto pb-8 sm:pb-10 lg:pb-12'>
           <div className='text-center'>
             {/* Badge */}
-            <div className='flex items-center justify-center mb-6 sm:mb-16'>
-              <div className='h-[20px]' />
+            <div className='flex items-center justify-center'>
+              {/* <div className='h-[20px]' /> */}
             </div>
+
+            <PartnerAnnouncementHero />
 
             {/* Heading */}
             <GradientHeading />
@@ -159,21 +162,12 @@ const HomeBanner = () => {
                   borderRadius: '30px',
                 }}
               >
-                Build your agent
-                <FiArrowRight className='text-lg sm:text-xl' />
-              </Link>
-              <Link
-                href='/contact'
-                className='flex items-center justify-center border border-[#7030B1] gap-2 px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base text-[#6F2B8B] transition-all duration-300 hover:scale-105 hover:shadow-lg'
-                style={{
-                  background: 'white',
-                  borderRadius: '30px',
-                }}
-              >
                 Schedule a Call
                 <FiArrowRight className='text-lg sm:text-xl' />
               </Link>
             </div>
+
+            <TechnologyPartner />
 
             {/* Cards Grid Section */}
             <div className='mt-16 lg:mt-24 w-full max-w-[1600px] mx-auto'>

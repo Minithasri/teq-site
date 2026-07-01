@@ -36,7 +36,7 @@ const AgenticCapabilities = () => {
   ];
 
   return (
-    <section className='relative w-full pt-10 sm:pt-12 pb-10 sm:pb-20 px-4 sm:px-6 md:px-8 bg-white overflow-visible'>
+    <section className='relative w-full pb-10 sm:pb-20 px-4 sm:px-6 md:px-8 bg-white overflow-visible'>
       {/* Background Graphic with seamless top edge blur fading into the previous section */}
       <div
         className='absolute inset-0 pointer-events-none z-0 overflow-visible hidden md:block'

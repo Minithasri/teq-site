@@ -12,12 +12,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { FiMinus, FiPlus, FiArrowUpRight } from 'react-icons/fi';
 import { headerData } from './headerData';
-export default function Header({
-  animate = false,
-  onAnimationStart,
-  onAnimationComplete,
-  isBannerVisible,
-}) {
+export default function Header({ animate = false, onAnimationStart, onAnimationComplete }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [, setIsScrolled] = useState(false);
@@ -320,15 +315,13 @@ export default function Header({
                       </>
                     ) : item.megaMenu ? (
                       <DropdownMenu modal={false}>
-                        <DropdownMenuTrigger asChild>
-                          <button
-                            className={`relative flex items-center gap-0 text-[10px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap focus:outline-none ${indicatorOpen} ${
-                              isActive ? indicatorBase : 'hover:opacity-80'
-                            }`}
-                          >
-                            {item.label}
-                            <ChevronDown size={14} className='transition-transform duration-200' />
-                          </button>
+                        <DropdownMenuTrigger
+                          className={`relative flex items-center gap-0 text-[10px] xl:text-[14px] font-medium py-2 px-1 transition text-gray-800 whitespace-nowrap focus:outline-none ${indicatorOpen} ${
+                            isActive ? indicatorBase : 'hover:opacity-80'
+                          }`}
+                        >
+                          {item.label}
+                          <ChevronDown size={14} className='transition-transform duration-200' />
                         </DropdownMenuTrigger>
                         <DropdownMenuContent
                           align='center'

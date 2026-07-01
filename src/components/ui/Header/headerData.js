@@ -100,23 +100,23 @@ export const headerData = {
         href: '/partners/domo/join',
       },
       children: [
+        { label: 'Claude', href: '/partners/claude' },
         { label: 'Domo', href: '/partners/domo' },
         { label: 'Snowflake', href: '/partners/snowflake' },
         { label: 'Databricks', href: '/partners/databricks' },
         { label: 'Google Cloud', href: '/partners/google-cloud' },
         { label: 'Boomi', href: '/partners/boomi' },
-        { label: 'Claude', href: '/partners/claude' },
       ],
       megaMenuColumns: [
         {
           title: 'PARTNER TYPES',
           links: [
+            { label: 'Claude', href: '/partners/claude' },
             { label: 'Domo', href: '/partners/domo' },
             { label: 'Snowflake', href: '/partners/snowflake' },
             { label: 'Databricks', href: '/partners/databricks' },
             { label: 'Google Cloud', href: '/partners/google-cloud' },
             { label: 'Boomi', href: '/partners/boomi' },
-            { label: 'Claude', href: '/partners/claude' },
           ],
         },
       ],
@@ -136,7 +136,7 @@ export const headerData = {
       megaMenuColumns: [],
     },
     {
-      label: 'Agentic Domo',
+      label: 'Agentic AI',
       href: '/agentic-ai',
       megaMenu: false,
       agenticMegaMenu: true,
