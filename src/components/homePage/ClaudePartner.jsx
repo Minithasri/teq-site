@@ -56,44 +56,44 @@ const ClaudePartner = () => {
           {/* ---------------- Left column ---------------- */}
           <div className='flex flex-col items-start text-left w-full'>
             {/* Badge */}
+            {/* Gradient Border Wrapper */}
             <div
-              className='relative inline-flex items-center gap-2.5 rounded-[38px] mb-6 select-none'
+              className='relative inline-flex items-center justify-center rounded-[38px] mb-6 select-none'
               style={{
-                height: '52px',
-                padding: '11px 25px',
-                background: '#FFFFFF33',
+                background: 'linear-gradient(90deg, #6F2B8B 0%, #ED7200 100%)',
+                padding: '1px',
               }}
             >
-              {/* Gradient Border using Mask */}
+              {/* Inner Badge Content Container */}
               <div
-                className='absolute inset-0 rounded-[38px] pointer-events-none'
+                className='flex items-center gap-2.5 rounded-[37px]'
                 style={{
-                  padding: '1px',
-                  background: 'linear-gradient(90deg, #6F2B8B 0%, #ED7200 100%)',
-                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                  WebkitMaskComposite: 'xor',
-                  maskComposite: 'exclude',
+                  height: '50px',
+                  padding: '11px 24px',
+                  background: 'rgba(255, 255, 255, 0.44)',
+                  backdropFilter: 'blur(4px)',
                 }}
-              />
-              <Image
-                src='/images/partners/claude/star.png'
-                alt=''
-                width={18}
-                height={18}
-                className='shrink-0 relative z-10'
-              />
-              <span className='text-sm sm:text-base font-medium whitespace-nowrap relative z-10'>
-                <span
-                  style={{
-                    backgroundImage: 'linear-gradient(90deg, #E5432E 0%, #ED7200 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                  }}
-                >
-                  160+
-                </span>{' '}
-                <span className='text-[#404040]'>Certified Experts</span>
-              </span>
+              >
+                <Image
+                  src='/images/partners/claude/star.png'
+                  alt=''
+                  width={18}
+                  height={18}
+                  className='shrink-0 relative z-10'
+                />
+                <span className='text-sm sm:text-base font-medium whitespace-nowrap relative z-10'>
+                  <span
+                    style={{
+                      backgroundImage: 'linear-gradient(90deg, #E5432E 0%, #ED7200 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
+                    160+
+                  </span>{' '}
+                  <span className='text-[#404040]'>Certified Experts</span>
+                </span>
+              </div>
             </div>
             {/* Heading */}
             <h1 className='m-0 mb-4'>
