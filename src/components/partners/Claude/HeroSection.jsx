@@ -66,8 +66,9 @@ const HeroSection = () => {
             className='text-[#737373] text-base sm:text-lg lg:text-[18px] font-normal max-w-[780px] mb-8'
             style={{ fontFamily: 'Poppins, sans-serif', lineHeight: '1.6' }}
           >
-            This partnership strengthens our ability to help organizations build secure, scalable,
-            and enterprise-ready AI solutions powered by Claude.
+            As an official Anthropic Claude Partner, GWC Data.AI is strengthening its ability to
+            help organizations build secure, scalable, and enterprise-ready AI solutions powered by
+            Claude.
           </p>
 
           {/* CTA Button */}
