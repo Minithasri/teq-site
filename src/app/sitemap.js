@@ -24,7 +24,7 @@ export default async function sitemap() {
    * You can expand this list manually or pull routes dynamically.
    * Example: ['', '/about', '/services', '/contact', '/blog']
    */
-  const routes = ['', '/about', '/services', '/contact', '/blog'];
+  const routes = ['', '/about', '/services', '/contact', '/blog', '/partners', '/partners/claude'];
 
   /**
    * 🧮 Return sitemap entries
@@ -32,7 +32,7 @@ export default async function sitemap() {
    * - Full URL
    * - Last modification date (ISO format)
    */
-  return routes.map((route) => ({
+  return routes.map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString(),
   }));
