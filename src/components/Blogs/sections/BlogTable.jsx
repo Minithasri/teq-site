@@ -7,7 +7,7 @@ export default function BlogTable({ tableData }) {
   if (!tableData) return null;
 
   return (
-    <div className='w-full my-12 bg-[#FFFFFF] max-w-4xl mx-auto'>
+    <div className='w-full my-12 bg-[#FFFFFF]'>
       {/* Table Heading */}
       <h2 className='text-2xl md:text-3xl font-medium text-[#404040] mb-8 font-sans'>
         {tableData.title}

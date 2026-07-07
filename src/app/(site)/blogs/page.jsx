@@ -9,8 +9,8 @@ import { useState } from 'react';
 export default function BlogsPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Filter blogs based on search query matching title, subtitle, or category
-  const filteredBlogs = blogsData.filter(blog => {
+  const sortedBlogs = [...blogsData].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const filteredBlogs = sortedBlogs.filter(blog => {
     const query = searchQuery.toLowerCase();
     return (
       blog.title.toLowerCase().includes(query) ||

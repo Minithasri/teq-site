@@ -1,7 +1,7 @@
 // src/components/Blogs/sections/BlogContent.jsx
 'use client';
 
-import React from 'react';
+import Image from 'next/image';
 
 export default function BlogContent({ content }) {
   if (!content || content.length === 0) return null;
@@ -28,7 +28,7 @@ export default function BlogContent({ content }) {
             );
           case 'paragraph':
             return (
-              <p key={index} className='text-base md:text-lg text-[#404040] mb-6'>
+              <p key={index} className='text-base text-[#404040] mb-6'>
                 {block.text}
               </p>
             );
@@ -36,7 +36,7 @@ export default function BlogContent({ content }) {
             return (
               <ul
                 key={index}
-                className='list-disc pl-6 space-y-3 my-6 text-base md:text-lg text-[#404040]'
+                className='list-disc pl-6 space-y-3 my-6 text-base md:text-base text-[#404040]'
               >
                 {block.items.map((item, idx) => (
                   <li key={idx} className='pl-1'>
@@ -48,7 +48,13 @@ export default function BlogContent({ content }) {
           case 'image':
             return (
               <div key={index} className='my-8 rounded-xl overflow-hidden shadow-md'>
-                <img src={block.url} alt={block.caption || ''} className='w-full object-cover' />
+                <Image
+                  src={block.url}
+                  alt={block.caption || 'Blog image'}
+                  width={1200}
+                  height={675}
+                  className='w-full h-auto object-cover'
+                />
                 {block.caption && (
                   <p className='text-sm text-gray-500 text-center mt-2 italic'>{block.caption}</p>
                 )}

@@ -84,7 +84,7 @@ const BlogTemplate = ({ blog }) => {
       {/* 8. Blog Content Section (e.g. How Agents Talk) */}
       {blog.content && blog.content.length > 0 && (
         <div className='max-w-7xl mx-auto px-4 md:px-6'>
-          <div className='mt-12 max-w-4xl mx-auto'>
+          <div className='mt-12 max-w-full '>
             <BlogContent content={blog.content} />
           </div>
         </div>
