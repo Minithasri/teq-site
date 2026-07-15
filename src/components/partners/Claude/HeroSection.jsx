@@ -5,96 +5,104 @@ import { FiArrowRight } from 'react-icons/fi';
 
 const HeroSection = () => {
   return (
-    <section className='max-w-7xl mx-auto px-0 md:px-2 pt-20 lg:pt-24 bg-white overflow-hidden'>
-      <div className='relative z-10 w-full max-w-9xl mx-auto p-6 sm:p-10 lg:p-[60px] flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-[42px]'>
-        {/* Left column */}
-        <div className='flex flex-col items-start text-left w-full'>
-          {/* Badge */}
-          <div
-            className='relative inline-flex items-center gap-2.5 rounded-[38px] mb-6 select-none'
-            style={{
-              width: 'fit-content',
-              height: '52px',
-              padding: '11px 25px',
-              background: '#FFFFFF33',
-            }}
-          >
-            {/* Gradient Border using Mask */}
-            <div
-              className='absolute inset-0 rounded-[38px] pointer-events-none'
-              style={{
-                padding: '1px',
-                background: 'linear-gradient(90deg, #6F2B8B 0%, #ED7200 100%)',
-                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                WebkitMaskComposite: 'xor',
-                maskComposite: 'exclude',
-              }}
-            />
+    <section className='relative max-w-9xl mx-auto overflow-hidden flex flex-col justify-between items-center min-h-fit md:min-h-[100vh] pt-24 md:pt-0 pb-[100px] md:pb-10'>
+      {/* Background images and overlay */}
+      <div className='absolute inset-0 z-0 pointer-events-none'>
+        {/* Layer 1: Abstract colorful background */}
+        <div className='absolute inset-0 opacity-10'>
+          <Image
+            src='/images/partners/claude/claudehero2.jpg'
+            alt=''
+            fill
+            priority
+            className='object-cover object-center'
+          />
+        </div>
+
+        {/* Layer 2: Team photo (desktop only) */}
+        <div className='absolute inset-0 hidden lg:block'>
+          <Image
+            src='/images/partners/claude/claudehero1.png'
+            alt=''
+            fill
+            priority
+            className='object-cover object-center'
+          />
+        </div>
+
+        {/* Gradient Overlay to fade the background images */}
+        <div
+          className='absolute inset-0 w-full h-full'
+          style={{
+            background:
+              'linear-gradient(179.62deg, rgba(255, 255, 255, 0) 28.04%, rgba(255, 255, 255, 0.14) 60.84%, rgba(255, 255, 255, 0.630627) 70.54%, #FFFFFF 90.9%)',
+          }}
+        />
+      </div>
+
+      {/* Main container content */}
+      <div className='w-full flex flex-col justify-between items-center flex-1 relative z-10 px-4 sm:px-6 lg:px-8'>
+        {/* Top Content: Logos */}
+        <div className='relative z-10 hidden md:flex justify-center items-center w-full pt-28 lg:pt-0 lg:top-28'>
+          <div className='w-[320px] md:w-[480px] hidden lg:block h-[70px] md:h-[90px] relative'>
             <Image
-              src='/images/partners/claude/star.png'
-              alt=''
-              width={18}
-              height={18}
-              className='shrink-0 relative z-10'
+              src='/images/partners/claude/claudehero3.png'
+              alt='GWC Data.AI x Anthropic Claude'
+              fill
+              priority
+              className='object-contain'
             />
-            <span className='text-sm sm:text-base font-medium whitespace-nowrap relative z-10'>
-              <span
-                style={{
-                  backgroundImage: 'linear-gradient(90deg, #E5432E 0%, #ED7200 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                160+
-              </span>{' '}
-              <span className='text-[#404040]'>Certified Experts</span>
-            </span>
+          </div>
+        </div>
+
+        {/* Bottom Content: Text Box */}
+        <div
+          className='relative z-10 flex flex-col items-center text-center justify-center w-full max-w-[980px] mt-4 md:mt-12 lg:mt-0'
+          style={{
+            gap: '19px',
+          }}
+        >
+          {/* Team Photo card for mobile screen */}
+          <div className='block lg:hidden w-full mb-2 max-w-[650px] mx-auto'>
+            <div className='relative w-full aspect-[2.18] rounded-2xl overflow-hidden shadow-lg border border-neutral-200/50'>
+              <Image
+                src='/images/partners/claude/claudehero1.png'
+                alt='GWC Data.AI and Anthropic India team photo'
+                fill
+                priority
+                className='object-cover object-center'
+              />
+            </div>
           </div>
 
           {/* Heading */}
-          <div className='mb-6'>
-            <h1 className='text-[#404040] text-3xl sm:text-5xl lg:text-[64px] font-bold tracking-tight leading-[125%] m-0'>
-              Agentic AI.
-            </h1>
-            <h2 className='gwc-gradient-text text-3xl sm:text-5xl lg:text-[58px] font-bold tracking-tight leading-[125%] lg:leading-[67px] m-0 whitespace-nowrap'>
-              Powered by Claude.
-            </h2>
-          </div>
+          <h1 className='text-3xl sm:text-5xl lg:text-[56px] font-bold tracking-tight leading-[1.2] m-0'>
+            <span className='text-[#404040]'>Agentic AI. </span>
+            <span className='gwc-gradient-text'>Powered by Claude.</span>
+          </h1>
 
           {/* Description */}
           <p
-            className='text-[#737373] text-base sm:text-lg lg:text-[18px] font-normal max-w-[780px] mb-8'
-            style={{ fontFamily: 'Poppins, sans-serif', lineHeight: '1.6' }}
+            className='text-[#737373] text-sm sm:text-base lg:text-[18px] font-normal max-w-5xl m-0 leading-relaxed'
+            style={{ fontFamily: 'Poppins, sans-serif' }}
           >
-            As an official Anthropic Claude Partner, GWC Data.AI is strengthening its ability to
-            help organizations build secure, scalable, and enterprise-ready AI solutions powered by
-            Claude.
+            GWC Data.AI and Anthropic India teams come together, strengthening a partnership built
+            for enterprise AI.
           </p>
 
           {/* CTA Button */}
-          <Link
-            href='/contact'
-            className='inline-flex items-center gap-2.5 rounded-full text-white text-sm sm:text-base font-semibold transition-all duration-300 hover:opacity-90 shadow-lg hover:shadow-xl hover:gap-3'
-            style={{
-              padding: '12px 24px',
-              background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
-            }}
-          >
-            Talk to our Expert
-            <FiArrowRight className='text-base sm:text-lg' />
-          </Link>
-        </div>
-
-        {/* Right column: hero image */}
-        <div className='flex justify-center lg:justify-end w-full lg:w-auto shrink-0'>
-          <div className='relative w-full max-w-[450px] sm:max-w-[480px] lg:w-[630px] aspect-[1.5] lg:aspect-none lg:h-[420px] top-4'>
-            <Image
-              src='/images/partners/claude/hero.png'
-              alt='GWC Data.AI - Claude Partner'
-              fill
-              priority
-              className='object-contain select-none pointer-events-none scale-[1.35] lg:scale-[1.25] origin-center'
-            />
+          <div className='mt-2'>
+            <Link
+              href='/contact'
+              className='inline-flex items-center gap-2.5 rounded-full text-white text-sm sm:text-base font-semibold transition-all duration-300 hover:opacity-90 shadow-lg hover:shadow-xl hover:gap-3'
+              style={{
+                padding: '12px 24px',
+                background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
+              }}
+            >
+              Talk to our Experts
+              <FiArrowRight className='text-base sm:text-lg' />
+            </Link>
           </div>
         </div>
       </div>
