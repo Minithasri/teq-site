@@ -84,7 +84,7 @@ const ExperienceSection = () => {
             and experience it in action.
           </p>
           <p className='mt-2 text-sm md:text-medium text-gray-500'>
-            Through quick, hands-on sessions with our AI experts, we'll help you turn concepts into
+            Through quick, hands-on sessions with our AI experts, We'll help you turn concepts into
             practical, working solutions.
           </p>
         </div>

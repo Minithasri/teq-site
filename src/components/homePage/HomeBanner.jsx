@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import PartnerAnnouncementHero from './ClaudePartner';
 import TechnologyPartner from './TechnologyPartner';
+import AIReadinessSection from './AIReadinessSection';
 
 function GradientHeading() {
   const lines = ['We Build Intelligent Agents', 'that work for you'];
@@ -131,7 +132,7 @@ const HomeBanner = () => {
         <PartnerAnnouncementHero />
 
         <div
-          className='w-full max-w-7xl mx-auto pb-8 sm:pb-10 lg:pb-12'
+          className='w-full max-w-7xl mx-auto'
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -173,8 +174,21 @@ const HomeBanner = () => {
             </div>
 
             <TechnologyPartner />
+          </div>
+        </div>
+        <AIReadinessSection />
 
-            {/* Cards Grid Section */}
+        {/* Cards Grid Section */}
+        <div
+          className='w-full max-w-7xl mx-auto pb-8 sm:pb-10 lg:pb-12'
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+          }}
+        >
+          <div className='text-center'>
             <div className='mt-8 lg:mt-12 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-0'>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
                 {/* Column 1: Small Info + Enterprise Stats */}

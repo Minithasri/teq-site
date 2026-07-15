@@ -98,7 +98,7 @@ const bands = {
       {
         badge: 'call',
         label: 'Recommended Next Step',
-        text: "<strong>Get on a call with our AI team:</strong> we'll help you close your governance and scale gaps so your AI pilots make it to production",
+        text: "<strong>Get on a call with our AI team:</strong> We'll help you close your governance and scale gaps so your AI pilots make it to production",
       },
     ],
     strengths: [
@@ -131,7 +131,7 @@ const bands = {
       {
         badge: 'call',
         label: 'Recommended Next Step',
-        text: "<strong>Get on a call with our AI team:</strong> we'll help you close your governance and scale gaps so your AI pilots make it to production.",
+        text: "<strong>Get on a call with our AI team:</strong> We'll help you close your governance and scale gaps so your AI pilots make it to production.",
       },
     ],
     strengths: [
@@ -164,7 +164,7 @@ const bands = {
       {
         badge: 'call',
         label: 'Recommended Next Step',
-        text: "<strong>Get on a call with our AI team:</strong> we'll help you design and prioritize your next wave of agentic AI agents.",
+        text: "<strong>Get on a call with our AI team:</strong> We'll help you design and prioritize your next wave of agentic AI agents.",
       },
     ],
     strengths: [
@@ -1366,15 +1366,26 @@ function ResultsScreen({ answers, onRetake, formData }) {
             return (
               <div
                 key={idx}
-                className='relative w-full rounded-[28px] sm:rounded-[32px] overflow-hidden p-8 sm:p-12 md:p-14 flex flex-col items-center text-center shadow-[0_20px_60px_rgba(112,48,177,0.25)]'
+                className='relative w-full rounded-[28px] sm:rounded-[32px] overflow-hidden p-8 sm:p-12 md:p-14 flex flex-col items-center text-center'
                 style={{
-                  background: 'linear-gradient(180deg, #2E1848 0%, #4F2577 50%, #B56DD3 100%)',
+                  background: 'linear-gradient(180deg, #342640 0%, #F2A5FC 100%)',
+                  boxShadow: '0px 0px 0px 1px rgba(0, 0, 0, 0.05)',
                 }}
               >
-                {/* Decorative wireframe / sphere rings in background */}
-                <div className='absolute -bottom-36 left-1/2 -translate-x-1/2 w-[450px] h-[450px] sm:w-[600px] sm:h-[600px] rounded-full border border-white/10 pointer-events-none' />
-                <div className='absolute -bottom-52 left-1/2 -translate-x-1/2 w-[600px] h-[600px] sm:w-[780px] sm:h-[780px] rounded-full border border-white/10 pointer-events-none' />
-                <div className='absolute -bottom-68 left-1/2 -translate-x-1/2 w-[750px] h-[750px] sm:w-[960px] sm:h-[960px] rounded-full border border-white/10 pointer-events-none' />
+                {/* Decorative wireframe SVG background from Figma */}
+                <img
+                  src='/images/HomePage/ai solution/cta.svg'
+                  alt='Decorative background'
+                  className='absolute pointer-events-none'
+                  style={{
+                    width: '890.07px',
+                    height: '986.14px',
+                    top: '175px',
+                    left: '50%',
+                    transform: 'translateX(-50%) rotate(0.99deg)',
+                    opacity: 1,
+                  }}
+                />
 
                 {/* Pill badge */}
                 <span className='relative z-10 inline-block px-4 py-1.5 rounded-full text-[12px] sm:text-[13px] font-medium text-white/90 bg-white/15 backdrop-blur-md border border-white/20 mb-6 shadow-sm'>
@@ -1545,7 +1556,7 @@ export default function AIReadinessAssessmentPage() {
 
             {/* DESCRIPTION */}
             <p className='mt-8 max-w-3xl text-[18px] leading-[1.9] text-[#677085] md:text-[23px]'>
-              Answer 10 questions in under 5 minutes. Get a personalized AI readiness score and
+              Answer 10 questions in under 5 minutes. Get a personalized AI readiness score and an
               action plan benchmarked to your industry.
             </p>
 

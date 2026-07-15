@@ -1,7 +1,7 @@
 import AIMatters from '@/components//homePage/AIMatters';
 import AIAgents from '@/components/homePage/AIAgents';
 import AINative from '@/components/homePage/AINative';
-import AIReadinessSection from '@/components/homePage/AIReadinessSection';
+// import AIReadinessSection from '@/components/homePage/AIReadinessSection';
 import AISolutions from '@/components/homePage/AISolutions';
 import AIVideosWrapper from '@/components/homePage/AIVideosWrapper';
 import ConcepttoProduction from '@/components/homePage/ConcepttoProduction';
@@ -17,7 +17,7 @@ export default function HomePage() {
     <main>
       <HomeBanner />
       <ROI />
-      <AIReadinessSection />
+      {/* <AIReadinessSection /> */}
       <FullStackAgent />
       <AIVideosWrapper />
       <AINative />

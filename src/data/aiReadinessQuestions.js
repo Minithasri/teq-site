@@ -203,7 +203,7 @@ export const questions = [
     type: 'scored',
     options: [
       { pts: 1, label: 'Not a priority', sub: 'We are focused on other things right now' },
-      { pts: 2, label: 'On our radar', sub: 'Exploring possibilities for 12+ months from now' },
+      { pts: 2, label: 'Exploring', sub: 'Exploring possibilities for 12+ months from now' },
       { pts: 3, label: 'Actively planning', sub: 'Targeting solutions in the next 6-12 months' },
       { pts: 4, label: 'Top priority', sub: 'Pursuing this now and ready to move quickly' },
     ],

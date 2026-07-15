@@ -312,7 +312,7 @@ export default function AIReadinessSection() {
       className='relative mx-auto overflow-hidden w-full max-w-8xl'
       style={{
         minHeight: 'auto',
-        margin: '100px 0px auto',
+        margin: '100px 0px 60px auto',
         padding: 'clamp(60px, 10vw, 140px) clamp(24px, 6vw, 100px)',
         background: `
           linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
