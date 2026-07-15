@@ -1,8 +1,6 @@
 // src/components/Blogs/sections/BlogTable.jsx
 'use client';
 
-import React from 'react';
-
 export default function BlogTable({ tableData }) {
   if (!tableData) return null;
 
@@ -34,18 +32,24 @@ export default function BlogTable({ tableData }) {
           <tbody className='divide-y divide-gray-100 bg-[#FFFFFF]'>
             {tableData.rows.map((row, index) => (
               <tr key={index} className='hover:bg-gray-50/50 transition-colors duration-150'>
-                {/* Steps Column with dynamic gradient-filled text */}
-                <td className='px-6 py-4 font-bold'>
+                {/* Steps Column with dynamic gradient-filled text + optional light suffix */}
+                <td className='px-6 py-4'>
                   <span
                     style={{
                       background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
-                      display: 'inline-block',
+                      display: 'inline',
                     }}
+                    className='font-bold'
                   >
                     {row.step}
                   </span>
+                  {row.stepSuffix && (
+                    <span className='font-normal text-gray-600 font-sans ml-1'>
+                      {row.stepSuffix}
+                    </span>
+                  )}
                 </td>
 
                 {/* Description Column */}

@@ -12,7 +12,7 @@ import './globals.css';
 
 export default function RootLayout({ children }) {
   const [showSplash, setShowSplash] = useState(true);
-  const [isBannerClosed, setIsBannerClosed] = useState(false);
+  const [_isBannerClosed, setIsBannerClosed] = useState(false);
 
   const pathname = usePathname();
 

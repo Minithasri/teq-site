@@ -1030,4 +1030,250 @@ export const blogsData = [
       text: "GWC Data.ai is a global data, BI, and agentic AI consulting and implementation company guided by one principle: Solution Matters. GWC is Domo's strongest global implementation and innovation partner, with more than 120 certified professionals, and an implementation partner for Snowflake, Google Cloud Platform, Databricks, Boomi, and Microsoft Fabric. GWC's portfolio of 50-plus prebuilt enterprise AI agents, built on Domo Agent Catalyst, Claude AI, Snowflake Cortex AI, and Lyzr, helps Fortune 500 organizations move from visibility to execution, turning data and dashboards into autonomous, production-ready business action.",
     },
   },
+  {
+    slug: 'ai-agent-governance-in-2026',
+    title: 'AI Agent Governance in 2026: How to Deploy Autonomous Agents Without Losing Control',
+    breadcrumbTitle: 'AI Agent Governance in 2026',
+    subtitle:
+      'Agent autonomy is expanding faster than oversight in most enterprises. Here is the control model, the standards landscape, and the checklist that closes the gap before regulators or a bad decision close it for you.',
+    description:
+      'Explore how to deploy autonomous AI agents safely with enterprise governance covering authorization boundaries, identity and access, observability, human-in-the-loop approval gates, and compliance standards.',
+    image: '/images/blogs/blog5-1.png',
+    category: 'Agentic AI',
+    author: 'GWC DATA.AI',
+    date: 'July 13, 2026',
+    readTime: '11 min read',
+    executiveSummary: [
+      {
+        label: 'What it is',
+        text: 'AI agent governance is the set of controls, accountability structures, and monitoring practices that keep autonomous agents operating inside defined boundaries and accountable to human oversight. It goes beyond traditional model governance, which mainly checks accuracy and bias, because agents take actions in live systems, not just produce outputs.',
+      },
+      {
+        label: 'Why it matters now',
+        text: 'Autonomy is expanding faster than oversight. Recent enterprise research found that a large majority of organizations deploying AI agents have no formal governance framework in place, even though most of those same organizations plan to increase agent autonomy within the next year.',
+      },
+      {
+        label: 'Business implications',
+        text: "Concrete and dated: the EU AI Act's high-risk system obligations carry penalties up to 35 million euros or 7 percent of global annual revenue, and Singapore's IMDA has already published the first dedicated governance framework for agentic AI.",
+      },
+      {
+        label: 'Technology implications',
+        text: 'Governance has to be engineered into the agent stack itself, covering identity, access, observability, and human-in-the-loop approval gates, rather than added on after agents are already live.',
+      },
+      {
+        label: 'Standards convergence',
+        text: "Standards are converging on a practical stack: NIST AI RMF as the internal risk management operating model, ISO/IEC 42001 as the certifiable proof of governance maturity, and regional regulation such as the EU AI Act and Singapore's IMDA framework for legal compliance.",
+      },
+      {
+        label: 'Recommended executive action',
+        text: 'Fund the governance layer at the same time as the first agent deployment, not after autonomy has already scaled past the point where it is easy to correct.',
+      },
+    ],
+    analysisSection: {
+      title: 'What Is AI Agent Governance',
+      description:
+        "Traditional model governance asks whether an AI model is accurate, fair, and free of harmful bias. AI agent governance asks a different question: is this agent authorized to take the action it is about to take, and can the organization prove it afterward? Agents read enterprise data, make decisions, and execute actions in ERP, CRM, and BI systems. That shift from producing an output to taking an action is exactly why agent governance cannot be bolted onto existing data governance or model risk programs without significant rework.\n\nA working governance framework answers five questions for every agent in production: what is it authorized to do, what must it never do, how is every decision logged and made auditable, who is accountable when something goes wrong, and how does the system escalate from automated action to human review. Without clear answers to all five, autonomy scales faster than an organization's ability to explain or correct what its agents are doing.",
+      cardTitle: 'The Five Control Domains Governance Has to Cover',
+      cardItems: [
+        {
+          label: 'Policy articulation',
+          text: 'A written, specific statement of what each agent is authorized to decide alone, and what always requires a human.',
+        },
+        {
+          label: 'Identity and access',
+          text: 'Every agent carries a verifiable identity and operates under scoped permissions, so every action can be traced to an authorization.',
+        },
+        {
+          label: 'Observability',
+          text: 'Agent reasoning and decisions are logged in a form that can be reviewed after the fact, not just monitored for uptime.',
+        },
+        {
+          label: 'Human-in-the-loop approval gates',
+          text: 'Irreversible, high-value, or regulated actions route to a person before execution, with the approval itself timestamped and recorded.',
+        },
+        {
+          label: 'Incident response and drift monitoring',
+          text: 'A defined process for what happens when an agent behaves outside its authorized boundary, including who is notified and how the agent is paused.',
+        },
+      ],
+    },
+    tableSection: {
+      title: 'Why the Governance Gap Is Now an Executive Risk',
+      headers: ['Signal', 'What It Means for Executives'],
+      rows: [
+        {
+          step: 'Most enterprises deploying agents lack a formal governance framework',
+          description:
+            'Autonomy is scaling ahead of the controls needed to explain or correct agent decisions.',
+        },
+        {
+          step: 'Most of those same enterprises plan to expand agent autonomy within a year',
+          description: 'The gap is widening, not closing, without deliberate intervention.',
+        },
+        {
+          step: 'EU AI Act high-risk obligations carry penalties up to 35 million euros or 7% of global revenue',
+          description:
+            'Governance is now a board-level financial exposure question, not just an IT concern.',
+        },
+        {
+          step: "Singapore's IMDA has published the first dedicated agentic AI governance framework",
+          description:
+            'Regulators are moving from general AI guidance to agent-specific requirements.',
+        },
+      ],
+    },
+    additionalImage: '/images/blogs/blog5-2.png',
+    content: [
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Matching Guardrails to Risk: A Tiered Control Model',
+      },
+      {
+        type: 'paragraph',
+        text: 'Not every agent needs the same level of control. The practical approach is to tier agents by the consequence of a wrong decision, then apply guardrails that match.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Low: informational or advisory — An agent that summarizes reports or drafts a recommendation for a person to review. Required Controls: Basic logging, no approval gate required.',
+          'Medium: reversible operational actions — An agent that reorders inventory or reroutes a support ticket. Required Controls: Scoped permissions, full action logging, periodic sampling review.',
+          'High: financial, regulated, or irreversible actions — An agent that approves a credit decision, processes a payment, or deletes records. Required Controls: Human-in-the-loop approval gate, mandatory audit trail, defined escalation path.',
+        ],
+      },
+    ],
+    comparisonTableSection: {
+      title: 'The Standards Landscape: What Applies Where',
+      headers: ['Framework', 'Purpose', 'How Enterprises Use It'],
+      rows: [
+        {
+          dimension: 'NIST AI RMF',
+          traditional: 'Voluntary risk management model built on Govern, Map, Measure, Manage',
+          agentic: 'Internal operating model for identifying and managing agent risk',
+        },
+        {
+          dimension: 'ISO/IEC 42001',
+          traditional: 'Certifiable AI management system standard',
+          agentic: 'External, auditable proof of governance maturity for customers and partners',
+        },
+        {
+          dimension: 'EU AI Act',
+          traditional: 'Binding regulation with tiered obligations by risk level',
+          agentic: 'Legal compliance baseline for any agent touching EU markets or data',
+        },
+        {
+          dimension: 'Singapore IMDA Agentic AI Framework',
+          traditional:
+            'First framework built specifically for autonomous agents, including digital identity and authorization audit trails',
+          agentic: 'Reference model for agent-specific controls, even outside Singapore',
+        },
+      ],
+    },
+    postComparisonImage: '/images/blogs/blog5-3.png',
+    enterpriseScenarioSection: {
+      title: 'REAL-WORLD SCENARIO: LENDING DECISION AGENT',
+      cards: [
+        {
+          type: 'challenge',
+          title: 'Business Challenge',
+          text: "A regional lender's credit decisioning agent was approved for pilot use but had no formal authorization boundary. It began auto-approving certain loan modifications that technically fell inside its confidence threshold but outside what compliance had actually reviewed, with no single log showing who had authorized that scope.",
+        },
+        {
+          type: 'solution',
+          title: 'Proposed Solution',
+          text: "The lender introduced a three-part governance layer before expanding the agent's autonomy further: a written authorization boundary defining exactly which decisions the agent could make unsupervised, an identity and access layer so every agent action carried a traceable authorization record, and a human-in-the-loop approval gate on any modification above a defined dollar threshold or touching a protected class of borrower.",
+        },
+        {
+          type: 'outcome',
+          title: 'Measurable Outcomes',
+          bullets: [
+            {
+              text: 'Faster approvals on routine, low-risk decisions that ',
+              highlight: 'stayed inside the authorized boundary',
+            },
+            {
+              text: 'A documented audit trail for ',
+              highlight: 'every automated and human-approved decision',
+            },
+            {
+              text: 'Materially reduced compliance review burden focusing only on ',
+              highlight: 'flagged exceptions',
+            },
+          ],
+        },
+      ],
+      quote:
+        'Executive Lesson: The fix was not slowing the agent down. It was writing down, before scaling further, exactly what the agent was authorized to decide alone and building the logging and approval gates to prove it. Governance became the thing that let autonomy expand safely, not the thing that blocked it. Lesson: governance is what makes it safe to scale autonomy, not a brake on it.',
+    },
+    readinessChecklist: {
+      title: 'Checklist: Before Scaling Agent Autonomy',
+      items: [
+        {
+          label: 'Written Authorization Boundary',
+          text: 'Have you written down, in specific terms, what each agent is authorized to decide without a human, and what it must always escalate?',
+        },
+        {
+          label: 'Traceable Identity',
+          text: 'Does every agent carry a traceable identity so its actions can be tied back to a specific authorization?',
+        },
+        {
+          label: 'Decision Audit Logging',
+          text: 'Is there a full, reviewable log of agent decisions, not just system uptime and error monitoring?',
+        },
+        {
+          label: 'Human-in-the-Loop Gates',
+          text: 'Are human-in-the-loop approval gates configured on every irreversible, high-value, or regulated action?',
+        },
+        {
+          label: 'Accountable Ownership',
+          text: "Is there a named accountable owner for the agent's decisions, separate from the team that built it?",
+        },
+        {
+          label: 'Regulatory Mapping',
+          text: "Have you mapped which regulations apply, such as the EU AI Act, to each agent's use case and geography?",
+        },
+        {
+          label: 'Kill-Switch & Rollback',
+          text: 'Do you have a tested process for pausing or rolling back an agent that behaves outside its authorized boundary?',
+        },
+      ],
+    },
+    gwcPerspective: {
+      tagline: 'THE GWC PERSPECTIVE',
+      title: 'Building governance into autonomous agents from day one.',
+      description:
+        'GWC DATA.AI builds governance into its Agentic AI practice from day one, not as a compliance step added after agents go live. Working across Domo Agent Catalyst, Snowflake Cortex AI, Claude AI, and Lyzr, GWC designs each of its 50-plus prebuilt enterprise agents with a defined authorization boundary, human-in-the-loop approval workflow, and audit trail built into the deployment, so autonomous agents observe, reason, decide, request approval where needed, and execute business actions with accountability that stands up to review. In retail, manufacturing, and financial services engagements, this governance-first approach is what allows clients to expand agent autonomy with confidence rather than hesitation.',
+      card: {
+        title: 'Ready to Deploy Safely?',
+        subtitle: 'Schedule an AI Governance & Feasibility Workshop with our engineering team.',
+        email: 'hello@gwcdata.ai',
+        buttonText: 'Contact Us',
+      },
+    },
+    keyTakeawaysSection: {
+      title: 'Key Takeaways',
+      items: [
+        {
+          num: '1.',
+          text: 'Agent governance is a distinct discipline from model governance because agents take actions, not just produce outputs, and every action needs an authorization boundary and an audit trail.',
+        },
+        {
+          num: '2.',
+          text: 'The current enterprise risk is a widening gap: autonomy is expanding faster than formal governance in most organizations.',
+        },
+        {
+          num: '3.',
+          text: 'A practical governance program layers NIST AI RMF, ISO 42001, and applicable regulation such as the EU AI Act, matched to a risk-tiered control model rather than a single blanket policy.',
+        },
+        {
+          num: '4.',
+          text: 'Governance is what allows autonomy to scale safely. Organizations that build it in early move faster later, not slower.',
+        },
+      ],
+    },
+    aboutSection: {
+      tagline: 'ABOUT GWC DATA.AI',
+      text: "GWC DATA.AI is a global data, BI, and Agentic AI consulting and implementation company guided by one principle: Solution Matters. GWC is a leading Domo implementation and innovation partner with 120+ certified professionals, and also delivers Snowflake, Google Cloud, Databricks, Boomi, and Microsoft Fabric implementations. Its Agentic AI practice includes more than 50 prebuilt enterprise AI agents, built on Domo Agent Catalyst, Snowflake Cortex AI, Claude AI, and Lyzr, deployed across retail, manufacturing, healthcare, financial services, and logistics, each designed with governance and human-in-the-loop controls from the outset. GWC's Work From Hometown model builds data and AI talent from Tier-2 and Tier-3 cities across India, supporting delivery across the US, APAC, EMEA, and India.",
+    },
+  },
 ];
