@@ -47,7 +47,7 @@ export default function WhyClaudeWhyGwcSection() {
                 <span className='hidden lg:inline'>
                   <br />
                 </span>{' '}
-                why{' '}
+                Why{' '}
                 <span
                   style={{
                     fontStyle: 'italic',

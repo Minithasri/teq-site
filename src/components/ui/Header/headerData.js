@@ -100,7 +100,7 @@ export const headerData = {
         href: '/partners/domo/join',
       },
       children: [
-        { label: 'Claude', href: '/partners/claude/claudepage' },
+        { label: 'Claude', href: '/partners/claude/claudepartner' },
         { label: 'Domo', href: '/partners/domo' },
         { label: 'Snowflake', href: '/partners/snowflake' },
         { label: 'Databricks', href: '/partners/databricks' },
@@ -111,7 +111,7 @@ export const headerData = {
         {
           title: 'PARTNER TYPES',
           links: [
-            { label: 'Claude', href: '/partners/claude/claudepage' },
+            { label: 'Claude', href: '/partners/claude/claudepartner' },
             { label: 'Domo', href: '/partners/domo' },
             { label: 'Snowflake', href: '/partners/snowflake' },
             { label: 'Databricks', href: '/partners/databricks' },
@@ -130,18 +130,18 @@ export const headerData = {
     },
     {
       label: 'Claude',
-      href: '/partners/claude/claudepage',
+      href: '/partners/claude/claudepartner',
       megaMenu: true,
       children: [
-        { label: 'Claude page', href: '/partners/claude/claudepage' },
-        { label: 'Claude practice', href: '/partners/claude/claudepractice' },
+        { label: 'Claude Partner', href: '/partners/claude/claudepartner' },
+        { label: 'Claude Practice', href: '/partners/claude/claudepractice' },
       ],
       megaMenuColumns: [
         {
           title: 'CLAUDE',
           links: [
-            { label: 'Claude page', href: '/partners/claude/claudepage' },
-            { label: 'Claude practice', href: '/partners/claude/claudepractice' },
+            { label: 'Claude Partner', href: '/partners/claude/claudepartner' },
+            { label: 'Claude Practice', href: '/partners/claude/claudepractice' },
           ],
         },
       ],
