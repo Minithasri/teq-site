@@ -114,7 +114,7 @@ const ClaudePartner = () => {
             {/* CTA */}
             <div className='mb-6 flex flex-row items-center justify-start gap-2.5 sm:gap-4 mt-2 sm:mt-4 w-full flex-nowrap'>
               <Link
-                href='/partners/claude'
+                href='/partners/claude/claudepage'
                 className='flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-10 py-2 sm:py-4 text-[11px] sm:text-base text-white transition-all duration-300 hover:scale-105 hover:shadow-xl font-semibold whitespace-nowrap'
                 style={{
                   background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',

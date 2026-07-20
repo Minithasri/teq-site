@@ -105,8 +105,11 @@ export default function Header({ animate = false, onAnimationStart, onAnimationC
               {navItems.map(item => {
                 // Flatten all links from all columns into a single list
                 const allLinks = item.megaMenuColumns?.flatMap(column => column.links) || [];
-                // Check if this is Solutions or Partners section
-                const shouldOpenInNewTab = item.label === 'Solutions' || item.label === 'Partners';
+                // Check if this is Solutions, Partners, or Claude section
+                const shouldOpenInNewTab =
+                  item.label === 'Solutions' ||
+                  item.label === 'Partners' ||
+                  item.label === 'Claude';
                 const isClaudePath = pathname.startsWith('/partners/claude');
                 let isActive = false;
                 if (item.label === 'Claude') {
@@ -393,11 +396,14 @@ export default function Header({ animate = false, onAnimationStart, onAnimationC
           </div>
         </div>
         {open && (
-          <div className='lg:hidden border-b border-gray-200 bg-white'>
+          <div className='lg:hidden border-b border-gray-200 bg-white max-h-[calc(100vh-90px)] overflow-y-auto'>
             <div className='px-5 pb-5'>
               {navItems.map(item => {
                 const allLinks = item.megaMenuColumns?.flatMap(column => column.links) || [];
-                const shouldOpenInNewTab = item.label === 'Solutions' || item.label === 'Partners';
+                const shouldOpenInNewTab =
+                  item.label === 'Solutions' ||
+                  item.label === 'Partners' ||
+                  item.label === 'Claude';
                 const hasDropdown = allLinks.length > 0 || item.agenticMegaMenu;
 
                 return (

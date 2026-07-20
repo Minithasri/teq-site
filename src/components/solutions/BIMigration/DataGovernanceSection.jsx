@@ -245,7 +245,7 @@ export default function BIMigrationSection() {
               aria-hidden={i !== activeIndex}
             >
               <div
-                className={`bg-white rounded-3xl border-2 border-purple-400 shadow-xl p-6 md:p-8`}
+                className={'bg-white rounded-3xl border-2 border-purple-400 shadow-xl p-6 md:p-8'}
               >
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-start'>
                   <div className='space-y-4'>

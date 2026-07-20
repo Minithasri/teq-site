@@ -17,7 +17,7 @@ const Footer = () => {
   ];
 
   const partners = [
-    { name: 'Claude', href: '/partners/claude' },
+    { name: 'Claude', href: '/partners/claude/claudepage' },
     { name: 'DOMO', href: '/partners/domo' },
     { name: 'Snowflake', href: '/partners/snowflake' },
     { name: 'Boomi', href: '/partners/boomi' },

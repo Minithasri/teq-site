@@ -32,7 +32,7 @@ const PartnerLogo = ({ partner }) => {
 
 const TechnologyPartner = () => {
   const partners = [
-    { name: 'Claude', image: '/images/claudelogo.png', path: '/partners/claude' },
+    { name: 'Claude', image: '/images/claudelogo.png', path: '/partners/claude/claudepage' },
     { name: 'Domo', image: '/images/Domo.png', path: '/partners/domo' },
     { name: 'GCP', image: '/images/GCP.png', path: '/partners/google-cloud' },
     { name: 'Databricks', image: '/images/Databricks.png', path: '/partners/databricks' },
