@@ -120,13 +120,16 @@ const BlogTemplate = ({ blog }) => {
       {/* 13. Readiness Checklist Section */}
       <ReadinessChecklist checklistData={blog.readinessChecklist} />
 
-      {/* 14. GWC Perspective Section */}
+      {/* 14. Cost Breakdown Section (if present) */}
+      {blog.costBreakdownSection && <KeyTakeaways takeawaysData={blog.costBreakdownSection} />}
+
+      {/* 15. GWC Perspective Section */}
       <GwcPerspective perspectiveData={blog.gwcPerspective} />
 
-      {/* 15. Key Takeaways Section (Full Screen Width) */}
+      {/* 16. Key Takeaways Section */}
       <KeyTakeaways takeawaysData={blog.keyTakeawaysSection} />
 
-      {/* 16. About GWC Section */}
+      {/* 17. About GWC Section */}
       <AboutGwc aboutData={blog.aboutSection} />
 
       {/* 17. Bottom Area: Back Navigation */}

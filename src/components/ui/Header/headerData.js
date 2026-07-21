@@ -70,6 +70,7 @@ export const headerData = {
         },
         { label: 'BI Migration & Modernization', href: '/solutions/bi-migration-modernization' },
         { label: 'Cloud Transformation', href: '/solutions/cloud-transformation' },
+        { label: 'AI FinOps', href: '/solutions/ai-finops' },
       ],
       megaMenuColumns: [
         {
@@ -86,6 +87,7 @@ export const headerData = {
               href: '/solutions/bi-migration-modernization',
             },
             { label: 'Cloud Transformation', href: '/solutions/cloud-transformation' },
+            { label: 'AI FinOps', href: '/solutions/ai-finops' },
           ],
         },
       ],

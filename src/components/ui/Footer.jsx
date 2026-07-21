@@ -35,6 +35,7 @@ const Footer = () => {
     },
     { name: 'BI Migration & Modernization', href: '/solutions/bi-migration-modernization' },
     { name: 'Cloud Transformation', href: '/solutions/cloud-transformation' },
+    { name: 'AI FinOps', href: '/solutions/ai-finops' },
   ];
 
   return (

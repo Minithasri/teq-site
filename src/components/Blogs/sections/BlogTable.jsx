@@ -4,6 +4,8 @@
 export default function BlogTable({ tableData }) {
   if (!tableData) return null;
 
+  const isFourColumn = tableData.headers && tableData.headers.length === 4;
+
   return (
     <div className='w-full my-12 bg-[#FFFFFF]'>
       {/* Table Heading */}
@@ -13,7 +15,7 @@ export default function BlogTable({ tableData }) {
 
       {/* Styled Responsive Table container with 2px border */}
       <div className='overflow-x-auto rounded-xl border-2 border-gray-100 shadow-sm'>
-        <table className='w-full min-w-[600px] border-collapse text-left text-sm md:text-base text-gray-700'>
+        <table className='w-full min-w-[700px] border-collapse text-left text-sm md:text-base text-gray-700'>
           <thead>
             <tr
               style={{
@@ -32,8 +34,8 @@ export default function BlogTable({ tableData }) {
           <tbody className='divide-y divide-gray-100 bg-[#FFFFFF]'>
             {tableData.rows.map((row, index) => (
               <tr key={index} className='hover:bg-gray-50/50 transition-colors duration-150'>
-                {/* Steps Column with dynamic gradient-filled text + optional light suffix */}
-                <td className='px-6 py-4'>
+                {/* Column 1: Step / Phase */}
+                <td className='px-6 py-4 font-sans'>
                   <span
                     style={{
                       background: 'linear-gradient(180deg, #7030B1 0%, #B56DD3 100%)',
@@ -45,24 +47,33 @@ export default function BlogTable({ tableData }) {
                   >
                     {row.step}
                   </span>
-                  {row.stepSuffix && (
+                  {!isFourColumn && row.stepSuffix && (
                     <span className='font-normal text-gray-600 font-sans ml-1'>
                       {row.stepSuffix}
                     </span>
                   )}
                 </td>
 
-                {/* Description Column */}
+                {/* Column 2: Duration (if 4-col table) */}
+                {isFourColumn && (
+                  <td className='px-6 py-4 text-gray-600 font-sans font-medium whitespace-nowrap'>
+                    {row.duration || row.stepSuffix}
+                  </td>
+                )}
+
+                {/* Column 3: Description / What Happens */}
                 <td
-                  className={`px-6 py-4 text-gray-600 leading-relaxed font-sans font-light ${tableData.headers.length > 2 ? '' : 'w-[60%]'}`}
+                  className={`px-6 py-4 text-gray-600 leading-relaxed font-sans font-light ${
+                    !isFourColumn && tableData.headers.length === 2 ? 'w-[60%]' : ''
+                  }`}
                 >
                   {row.description}
                 </td>
 
-                {/* Example Column (Italicised) */}
+                {/* Column 4: Example / Exit Criteria */}
                 {tableData.headers.length > 2 && (
                   <td className='px-6 py-4 text-gray-500 italic leading-relaxed font-sans font-light'>
-                    {row.example}
+                    {row.exitCriteria || row.example}
                   </td>
                 )}
               </tr>

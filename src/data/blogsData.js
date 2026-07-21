@@ -1276,4 +1276,314 @@ export const blogsData = [
       text: "GWC DATA.AI is a global data, BI, and Agentic AI consulting and implementation company guided by one principle: Solution Matters. GWC is a leading Domo implementation and innovation partner with 120+ certified professionals, and also delivers Snowflake, Google Cloud, Databricks, Boomi, and Microsoft Fabric implementations. Its Agentic AI practice includes more than 50 prebuilt enterprise AI agents, built on Domo Agent Catalyst, Snowflake Cortex AI, Claude AI, and Lyzr, deployed across retail, manufacturing, healthcare, financial services, and logistics, each designed with governance and human-in-the-loop controls from the outset. GWC's Work From Hometown model builds data and AI talent from Tier-2 and Tier-3 cities across India, supporting delivery across the US, APAC, EMEA, and India.",
     },
   },
+  {
+    slug: 'build-enterprise-ai-agent-timeline',
+    title:
+      'From Concept to Production: How Long Does It Really Take to Build an Enterprise AI Agent?',
+    breadcrumbTitle: 'How Long Does It Take to Build an Enterprise AI Agent?',
+    subtitle:
+      'A realistic 2026 timeline, the readiness factors that actually control the clock, and why most pilots never make it to day one of production.',
+    description:
+      'A realistic 2026 timeline, the readiness factors that actually control the clock, and why most pilots never make it to day one of production.',
+    image: '/images/blogs/blog6-1.png',
+    additionalImage: '/images/blogs/blog6-3.png',
+    postComparisonImage: '/images/blogs/blog6-2.png',
+    category: 'Agentic AI',
+    author: 'GWC DATA.AI',
+    date: 'July 20, 2026',
+    readTime: '10 min read',
+    executiveSummary: [
+      {
+        label: 'Realistic Timelines',
+        text: 'Enterprise AI agent timelines run 8 to 16 weeks for a single, well-scoped agent, 4 to 9 months for multi-agent systems, and 6 to 12 months or more for full enterprise-grade rollouts with governance and monitoring built in.',
+      },
+      {
+        label: 'High Pilot Failure Rates',
+        text: 'Independent 2026 research from Gartner, Forrester, McKinsey, and MIT places the failure rate for agentic AI pilots between 77 percent and 95 percent, depending on industry and how production is defined.',
+      },
+      {
+        label: 'Real Bottlenecks',
+        text: 'Technology choice is rarely the bottleneck. Data readiness, integration complexity with legacy systems, compliance review cycles, and change management set the real timeline.',
+      },
+      {
+        label: 'Time to Value',
+        text: 'Median time to value for agents that reach production is about 5.1 months, and narrow single-function agents scale far more reliably than broad multi-function ones.',
+      },
+      {
+        label: 'Total Cost of Ownership',
+        text: 'Initial build cost is typically only 25 to 35 percent of the three-year total cost of ownership once evaluation, governance, and change management are included.',
+      },
+      {
+        label: 'Business Implication',
+        text: 'An agent scoped and budgeted like a quick software project stalls in pilot purgatory; one scoped and budgeted like an operational system reaches production and compounds value.',
+      },
+      {
+        label: 'Technology Implication',
+        text: 'Success depends on evaluation infrastructure, human-in-the-loop approval workflows, and a phased rollout plan, not on selecting a larger model.',
+      },
+      {
+        label: 'Recommended Executive Action',
+        text: 'Commission a readiness assessment before approving a build, require a named business owner and a single well-defined task for the first agent, and budget for the full three-year lifecycle up front.',
+      },
+    ],
+    analysisSection: {
+      title: 'The Question Every CIO Is Asking',
+      description:
+        '"How long will it take to get an AI agent into production?" has become a standard question in planning cycles for 2026, usually asked right after a vendor demo made the answer look like six weeks. The honest answer is more nuanced, and more useful. Across enterprise deployments tracked through the first half of 2026, a well-scoped single agent typically moves from architecture to production in 8 to 16 weeks. A multi-agent system that spans several connected processes takes 4 to 9 months. A full enterprise-grade rollout, complete with governance, monitoring, and organizational change management, runs 6 to 12 months or longer.\n\nNone of those numbers are primarily about the AI model. Gartner predicts 40 percent of enterprise applications will integrate task-specific AI agents by the end of 2026, up from less than 5 percent in 2025, which means most enterprises are entering this build cycle for the first time and calibrating expectations against demos rather than delivery history. This article lays out the realistic timeline, the four factors that actually control it, and a readiness framework for avoiding the single biggest risk in agentic AI today: building something that never leaves the pilot.',
+      cardTitle: 'Why Timelines Vary So Much',
+      cardItems: [
+        {
+          label: '1. Data readiness',
+          text: 'If enterprise data lives in siloed systems with inconsistent definitions, the agent inherits that inconsistency. Teams with a governed data foundation, clean lineage, and a single source of truth move through proof of concept in weeks; teams without one spend that time cleaning data instead.',
+        },
+        {
+          label: '2. Integration complexity',
+          text: 'An agent that only reads data moves fast. An agent that writes back into an ERP, ordering system, or CRM has to pass security review, API rate limits, and rollback testing, which routinely doubles the hardening phase.',
+        },
+        {
+          label: '3. Governance and compliance review cycles',
+          text: 'Regulated industries, and any process touching financial or customer data, require a compliance sign-off that runs on its own calendar, independent of engineering velocity.',
+        },
+        {
+          label: '4. Organizational change management',
+          text: 'An agent that changes how a team works needs a named owner, a training plan, and daily oversight for the first 30 days after launch. Skipping this step is the single most common reason a technically sound agent still fails to scale.',
+        },
+      ],
+    },
+    tableSection: {
+      title: 'The Real Timeline: Concept to Production',
+      headers: ['Phase', 'Typical Duration', 'What Happens', 'Exit Criteria'],
+      rows: [
+        {
+          step: 'Discovery & Scoping',
+          duration: '2 to 4 weeks',
+          description:
+            'Define the one business process the agent will own, map data sources, identify required approval points.',
+          exitCriteria: 'Business owner named, success metric defined, data access confirmed.',
+        },
+        {
+          step: 'Proof of Concept',
+          duration: '3 to 6 weeks',
+          description:
+            'Build a narrow prototype against real production data and test reasoning accuracy on known-answer queries.',
+          exitCriteria: 'Accuracy meets threshold on the evaluation set.',
+        },
+        {
+          step: 'Pilot',
+          duration: '6 to 10 weeks',
+          description:
+            'Run the agent in a limited environment with human review on every action, monitor edge cases and failure modes.',
+          exitCriteria: '30-plus consecutive days of stable performance.',
+        },
+        {
+          step: 'Production Hardening',
+          duration: '4 to 8 weeks',
+          description:
+            'Add monitoring, logging, rollback controls, security review, and integration with production systems.',
+          exitCriteria: 'Security and compliance sign-off, on-call ownership assigned.',
+        },
+        {
+          step: 'Scale & Expand',
+          duration: 'Ongoing (month 4 to 6+)',
+          description: 'Extend to adjacent processes, reduce human review as confidence grows.',
+          exitCriteria: '90-plus days of stable operation before scope expands.',
+        },
+      ],
+    },
+    comparisonTableSection: {
+      title: 'The Pilot-to-Production Gap: Top Scaling Blockers',
+      headers: ['Blocker', 'Share Citing It', 'What It Looks Like in Practice'],
+      rows: [
+        {
+          dimension: 'Evaluation gaps',
+          traditional: '64%',
+          agentic:
+            "No reliable way to measure whether the agent's answers or actions are actually correct at volume.",
+        },
+        {
+          dimension: 'Governance friction',
+          traditional: '57%',
+          agentic:
+            'No clear approval path for the agent to act, so every decision defaults back to a human anyway.',
+        },
+        {
+          dimension: 'Model reliability',
+          traditional: '51%',
+          agentic:
+            'Inconsistent output quality once the agent handles real-world edge cases beyond the demo scenarios.',
+        },
+        {
+          dimension: 'Integration complexity',
+          traditional: 'n/a',
+          agentic:
+            'Legacy systems that were never designed for programmatic, high-frequency agent access.',
+        },
+        {
+          dimension: 'Unclear ownership',
+          traditional: 'n/a',
+          agentic:
+            "No single business owner accountable for the agent's performance after launch day.",
+        },
+      ],
+    },
+    governanceSection: {
+      title: 'The GWC AI Agent Readiness Framework',
+      description:
+        'Enterprises that consistently reach production follow a stair-step progression rather than attempting a broad rollout on day one. GWC uses a four-stage maturity framework to assess and plan agent deployments:',
+      cards: [
+        {
+          number: '1',
+          title: 'Experiment (4-6 weeks)',
+          description:
+            'One narrow task, isolated environment, no production write access. Graduation Signal: Evaluation set shows acceptable accuracy on known-answer queries.',
+        },
+        {
+          number: '2',
+          title: 'Validate (6-10 weeks)',
+          description:
+            'Human-in-the-loop approval on every action, real production data. Graduation Signal: 30-plus days of stable performance with documented edge cases.',
+        },
+        {
+          number: '3',
+          title: 'Operationalize (4-8 weeks)',
+          description:
+            'Production monitoring, rollback controls, named business owner. Graduation Signal: Security and compliance sign-off, measurable ROI against baseline.',
+        },
+      ],
+    },
+    enterpriseScenarioSection: {
+      title: 'REAL-WORLD SCENARIO',
+      cards: [
+        {
+          type: 'challenge',
+          title: 'Procurement Exception Management',
+          text: "A mid-market manufacturer's procurement team was manually reviewing exception cases (price mismatches, quantity discrepancies, late supplier confirmations) across thousands of purchase orders a month, creating a multi-day backlog and delaying downstream production schedules.",
+        },
+        {
+          type: 'solution',
+          title: 'The Solution',
+          text: "GWC scoped a single, narrow agent focused only on triaging and routing procurement exceptions, built on the client's existing data platform with human approval required for any exception above a defined dollar threshold. The agent did not touch supplier negotiation or contract terms in phase one.",
+        },
+        {
+          type: 'outcome',
+          title: 'Measurable Outcomes',
+          bullets: [
+            { text: 'Time to Production: ', highlight: '11 weeks' },
+            { text: 'Exception resolution time ', highlight: '3.2 days → <6 hours' },
+            { text: 'Procurement time reallocated: ', highlight: '30%' },
+            { text: 'Focus shifted to ', highlight: 'higher-value supplier management' },
+          ],
+        },
+      ],
+      quote:
+        '"The win came from narrow scope and a named business owner, not from asking the agent to do more. Expansion to adjacent exception types only began after 90 days of stable performance."',
+    },
+    readinessChecklist: {
+      title: 'Checklist: Before You Build an Enterprise AI Agent',
+      items: [
+        {
+          label: 'Process Scope',
+          text: 'A single, well-defined business process is chosen, not a broad department-wide capability.',
+        },
+        {
+          label: 'Accountable Owner',
+          text: "A named business owner is accountable for the agent's performance after launch, not just IT.",
+        },
+        {
+          label: 'Data Foundations',
+          text: 'Underlying data sources are mapped, accessible, and reasonably clean.',
+        },
+        {
+          label: 'Evaluation Infrastructure',
+          text: 'An evaluation set of known-answer queries exists to measure accuracy before and after launch.',
+        },
+        {
+          label: 'Human-in-the-Loop Guardrails',
+          text: 'A human-in-the-loop approval workflow is defined for actions above a risk or dollar threshold.',
+        },
+        {
+          label: 'Compliance & Security',
+          text: 'Compliance and security review timelines are built into the project plan, not treated as an afterthought.',
+        },
+        {
+          label: 'Lifecycle Budgeting',
+          text: 'Budget covers the full three-year lifecycle, not just the initial build.',
+        },
+        {
+          label: 'Post-Launch Operations',
+          text: 'A 30-day post-launch daily management plan is staffed and scheduled before go-live.',
+        },
+        {
+          label: 'Success Metrics',
+          text: 'Success criteria are expressed as a measurable business outcome, not as a technical milestone.',
+        },
+      ],
+    },
+    costBreakdownSection: {
+      title: 'The Real Three-Year Cost of an Enterprise AI Agent',
+      items: [
+        {
+          num: '25-35%',
+          text: 'Initial Build: Architecture, integration, prompt and workflow engineering, initial testing.',
+        },
+        {
+          num: '20-25%',
+          text: 'Monitoring & Evaluation: Ongoing accuracy tracking, drift detection, evaluation set maintenance.',
+        },
+        {
+          num: '15-20%',
+          text: 'Governance & Compliance: Security review, audit trails, approval workflow maintenance, regulatory updates.',
+        },
+        {
+          num: '15-20%',
+          text: 'Change Management & Training: User training, process redesign, adoption support, ownership continuity.',
+        },
+        {
+          num: '10-15%',
+          text: 'Scaling & Iteration: Expansion to adjacent processes, model and workflow refinement.',
+        },
+      ],
+    },
+    gwcPerspective: {
+      tagline: 'THE GWC PERSPECTIVE',
+      title: 'Built to Scale, Engineered for Production',
+      description:
+        'GWC builds enterprise AI agents on Domo Agent Catalyst, Snowflake Cortex AI, Claude, and Lyzr, and our engagement model reflects the timeline realities described above rather than the demo-driven expectations that lead most pilots astray.\n\nEvery agent GWC deploys starts as a narrow, single-task system with human-in-the-loop approval, a named business owner, and an evaluation layer built before day one of the pilot. Our portfolio of more than 50 prebuilt enterprise AI agents, spanning procurement exception management, invoice processing, inventory replenishment, and supplier performance, exists precisely because narrow, production-proven building blocks scale more reliably than broad custom builds attempted from scratch. Solution matters more than speed of demo, and the fastest real path to value is the one that survives day 90.',
+      card: {
+        title: 'Ready to Deploy Enterprise Agents?',
+        subtitle:
+          'Schedule a readiness assessment to baseline your data, scope your first agent, and budget the full lifecycle.',
+        buttonText: 'Talk to an Expert',
+      },
+    },
+    keyTakeawaysSection: {
+      title: 'Key Takeaways',
+      items: [
+        {
+          num: '1.',
+          text: 'Budget 8 to 16 weeks for a single well-scoped agent, 4 to 9 months for multi-agent systems, and 6 to 12 months or more for full enterprise rollouts.',
+        },
+        {
+          num: '2.',
+          text: 'Data readiness, integration complexity, governance review, and change management control the timeline, not the choice of AI model.',
+        },
+        {
+          num: '3.',
+          text: 'Between 77 and 95 percent of agentic AI pilots fail to reach production; narrow scope and a named business owner are the strongest predictors of success.',
+        },
+        {
+          num: '4.',
+          text: 'Plan and budget for the full three-year lifecycle, since initial build cost is typically only 25 to 35 percent of total cost of ownership.',
+        },
+        {
+          num: '5.',
+          text: 'Stair-step from experiment to validate to operationalize to scale, requiring 90-plus days of stability before each scope expansion.',
+        },
+      ],
+    },
+    aboutSection: {
+      tagline: 'ABOUT GWC DATA.AI',
+      text: "GWC DATA.AI is a global data, BI, and agentic AI consulting and implementation partner founded in 2020, with delivery teams across the US, APAC, EMEA, and India. GWC is recognized as one of Domo's strongest global implementation and innovation partners, with more than 120 certified professionals, and works alongside Snowflake, Claude, Boomi, and Lyzr to move enterprises from reporting dashboards to autonomous, production-ready AI agents. With a portfolio of more than 50 prebuilt enterprise AI agents across retail, manufacturing, and other industries, GWC helps CIOs, CDOs, and data leaders turn agentic AI from a pilot into a measurable operational system. Solution matters.",
+    },
+  },
 ];

@@ -21,7 +21,7 @@ const cards = [
   {
     title: "WHO IT'S FOR",
     heading: 'Mid-market to enterprise',
-    text: 'Manufacturing, retail, BFSI, HR and All Industries.',
+    text: 'Manufacturing, Retail, HR, Marketing & CX.',
   },
 ];
 
@@ -93,7 +93,7 @@ export default function HeroSection() {
                 key={card.title}
                 className='rounded-2xl p-4  flex flex-col justify-between h-full min-h-[100px]'
               >
-                <div className='rounded-2xl border border-[#ECECEC] bg-white px-2 py-3 shadow-sm flex flex-col gap-2'>
+                <div className='rounded-2xl border border-[#ECECEC] bg-white px-4 py-3 shadow-sm flex flex-col gap-2'>
                   <div>
                     <p className='text-[12px] font-semibold tracking-widest uppercase text-[#444] font-poppins'>
                       {card.title}
