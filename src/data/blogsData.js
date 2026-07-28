@@ -1586,4 +1586,337 @@ export const blogsData = [
       text: "GWC DATA.AI is a global data, BI, and agentic AI consulting and implementation partner founded in 2020, with delivery teams across the US, APAC, EMEA, and India. GWC is recognized as one of Domo's strongest global implementation and innovation partners, with more than 120 certified professionals, and works alongside Snowflake, Claude, Boomi, and Lyzr to move enterprises from reporting dashboards to autonomous, production-ready AI agents. With a portfolio of more than 50 prebuilt enterprise AI agents across retail, manufacturing, and other industries, GWC helps CIOs, CDOs, and data leaders turn agentic AI from a pilot into a measurable operational system. Solution matters.",
     },
   },
+  {
+    slug: 'rag-pipelines-production',
+    title: 'RAG Pipelines in Production',
+    breadcrumbTitle: 'RAG Pipelines in Production',
+    subtitle: 'Grounding Your AI Agents in Proprietary Enterprise Data',
+    description:
+      "Retrieval augmented generation (RAG) is the architecture that lets an AI agent answer questions and take actions using an enterprise's own documents, records, and systems, rather than relying only on what a foundation model learned during training.",
+    image: '/images/blogs/blog7-1.png',
+    additionalImage: '/images/blogs/blog7-2.png',
+    postComparisonImage: '/images/blogs/blog7-3.png',
+    category: 'Agentic AI',
+    author: 'GWC DATA.AI',
+    date: 'July 27, 2026',
+    readTime: '12 min read',
+    executiveSummary: [
+      {
+        label: 'What it is',
+        text: "Retrieval augmented generation (RAG) is the architecture that lets an AI agent answer questions and take actions using an enterprise's own documents, records, and systems, rather than relying only on what a foundation model learned during training.",
+      },
+      {
+        label: 'Why it matters',
+        text: 'It matters because agentic AI is only as trustworthy as the data it can see: an agent that reasons well but retrieves the wrong policy, the wrong SKU, or a superseded contract clause will make confident, wrong decisions.',
+      },
+      {
+        label: 'Business implication',
+        text: 'RAG turns a general purpose AI agent into a working expert on your business, your products, your compliance rules, and your customer history, without retraining a model.',
+      },
+      {
+        label: 'Technology implication',
+        text: 'Production grade RAG is not a single vector database call. It is a multi stage pipeline covering ingestion, chunking, hybrid retrieval, reranking, generation, and continuous evaluation.',
+      },
+      {
+        label: 'Naive RAG reality',
+        text: 'Naive RAG implementations fail at retrieval roughly 40 percent of the time on real enterprise document sets, which is why many first generation RAG pilots stall before reaching production.',
+      },
+      {
+        label: 'Executive action',
+        text: 'Treat RAG as a governed data product with a named owner, defined evaluation metrics, and an audit trail, not a one time integration project handed to a single engineer.',
+      },
+      {
+        label: 'Recommended action',
+        text: 'Organizations getting RAG right in 2026 pair it with agentic patterns so the agent can judge whether retrieved context is sufficient before acting, and re-query or escalate when it is not.',
+      },
+    ],
+    analysisSection: {
+      title: "What RAG Actually Does (and Why 'Just Add a Vector Database' Falls Short)",
+      description:
+        "Retrieval augmented generation gives a language model access to information it was never trained on. Instead of relying purely on parametric memory, the model retrieves relevant passages from an external knowledge base at query time and uses them as grounding context before it generates a response. For an enterprise AI agent, that knowledge base is the company's own contracts, product catalogs, policy manuals, support tickets, ERP records, and operational data.\n\nThis distinction matters because the alternative, fine-tuning a model on proprietary data, is expensive, slow to update, and poorly suited to fast-changing enterprise content such as pricing, inventory, or compliance rules. RAG keeps the model general purpose while making the answers specific, current, and traceable to a source document. That traceability is what allows an agent's recommendation to be audited, not just trusted on faith.",
+      cardTitle: 'The Pitfall of Simple Integration',
+      cardItems: [
+        {
+          label: 'Naive Retrieval Failure',
+          text: 'The mistake many organizations make in 2026 is treating RAG as a single integration step: connect a vector database, embed the documents, and let the model retrieve. In practice, the retrieval step, not the generation step, is the primary point of failure in enterprise deployments.',
+        },
+        {
+          label: 'The 40% Accuracy Gap',
+          text: 'Naive RAG pipelines fail at retrieval on roughly 40 percent of queries when tested against real, messy enterprise document sets, according to recent industry benchmarking. That is the gap between a demo that impresses a steering committee and a system that a category manager or claims adjuster can actually rely on.',
+        },
+      ],
+    },
+    comparisonTableSection: {
+      title: 'Naive RAG vs. Production Grade RAG',
+      headers: ['Dimension', 'Naive RAG', 'Production Grade RAG'],
+      rows: [
+        {
+          dimension: 'Retrieval method',
+          traditional: 'Vector similarity only',
+          agentic: 'Hybrid: vector plus keyword (BM25), with reranking',
+        },
+        {
+          dimension: 'Chunking',
+          traditional: 'Fixed size splits, no context',
+          agentic: 'Semantic chunking with metadata: source, section, effective date',
+        },
+        {
+          dimension: 'Freshness',
+          traditional: 'Static index, rebuilt occasionally',
+          agentic: 'Continuous or scheduled re-indexing tied to document lifecycle',
+        },
+        {
+          dimension: 'Sufficiency check',
+          traditional: 'None, always generates an answer',
+          agentic: 'Agent assesses retrieval confidence before acting or answering',
+        },
+        {
+          dimension: 'Evaluation',
+          traditional: 'Manual spot checks',
+          agentic: 'Golden dataset testing, CI/CD quality gate, live monitoring',
+        },
+        {
+          dimension: 'Governance',
+          traditional: 'No audit trail',
+          agentic: 'Every answer traceable to index version and source document',
+        },
+      ],
+    },
+    tableSection: {
+      title: 'RAG Architecture Layers',
+      headers: ['Layer', 'Purpose', 'Production Requirement'],
+      rows: [
+        {
+          step: 'Ingestion',
+          description: 'Bring enterprise content into the pipeline',
+          example: 'Scoped connectors, access controls, change detection',
+        },
+        {
+          step: 'Chunking',
+          description: 'Prepare content for retrieval',
+          example: 'Semantic chunking, metadata tagging, version awareness',
+        },
+        {
+          step: 'Indexing',
+          description: 'Make content searchable',
+          example: 'Hybrid vector plus keyword index, scheduled refresh',
+        },
+        {
+          step: 'Retrieval',
+          description: 'Surface the right passages',
+          example: 'Reranking, relevance thresholds, confidence scoring',
+        },
+        {
+          step: 'Reasoning',
+          description: 'Decide sufficiency and next action',
+          example: 'Self-assessment, re-query logic, escalation paths',
+        },
+        {
+          step: 'Generation',
+          description: 'Produce grounded output',
+          example: 'Source citations, structured output for downstream systems',
+        },
+        {
+          step: 'Evaluation',
+          description: 'Verify quality before and after release',
+          example: 'Golden dataset tests, CI/CD gate, live monitoring dashboard',
+        },
+      ],
+    },
+    content: [
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Anatomy of a Production RAG Pipeline',
+      },
+      {
+        type: 'paragraph',
+        text: 'A production ready pipeline is best understood as a sequence of stages, each with its own failure modes and its own tuning levers. Skipping or under-investing in any one stage is usually where enterprise RAG deployments break down.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Ingestion and connectors: pull content from the systems that actually hold enterprise truth, such as document repositories, ERP tables, ticketing systems, and Domo datasets, with a clear scope of what is in and out of bounds for retrieval.',
+          'Chunking and metadata enrichment: break documents into semantically coherent units rather than arbitrary fixed-length blocks, and tag each chunk with source, section heading, page number, effective date, and status.',
+          'Embedding and hybrid indexing: generate vector embeddings for semantic search while maintaining a keyword index (BM25) for exact-match terms such as SKUs, contract numbers, or regulatory clause references.',
+          'Retrieval and reranking: run hybrid search at query time, then rerank candidates so the most relevant and most current passages surface first.',
+          'Agentic reasoning loop: the agent evaluates whether the retrieved context is sufficient to answer or act. If not, it re-queries, narrows the search, or escalates to a human rather than guessing.',
+          'Generation with citations: the model produces its answer or recommended action with explicit references back to the source chunks, so a reviewer can verify the basis for the decision.',
+          'Evaluation and monitoring: every deployment is measured against a golden test set before release and sampled continuously in production to catch drift, staleness, or regressions.',
+        ],
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'The Hidden Cost of Building RAG In-House',
+      },
+      {
+        type: 'paragraph',
+        text: 'A production agentic RAG system requires ongoing maintenance across several moving parts at once: the orchestration logic that runs the agentic loop, the embedding pipeline that keeps the index current, the vector and keyword stores themselves, the evaluation framework, and a monitoring stack that watches for drift. Engineering teams consistently underestimate this workload by a factor of two to three times when they scope it as a one time integration project rather than an ongoing operational commitment.',
+      },
+      {
+        type: 'paragraph',
+        text: 'The practical implication for a CIO or Head of Data is budgeting. A RAG pipeline is not a line item that closes at go-live. It needs a named owner, a recurring evaluation cadence, and a plan for re-indexing as source documents change. Enterprises that plan for this from the outset, whether they build in-house or bring in an implementation partner, avoid the common pattern of a promising pilot that quietly degrades in accuracy over the following two quarters as the underlying documents move on without the index.',
+      },
+    ],
+    enterpriseScenarioSection: {
+      title: 'ENTERPRISE SCENARIO',
+      cards: [
+        {
+          type: 'challenge',
+          title: 'Business Challenge',
+          text: "A global industrial parts manufacturer's procurement agent, built on Claude and connected to the supplier contract repository, was recommending suppliers based on outdated pricing terms. The vector-only retrieval layer had no concept of contract versioning, so superseded agreements ranked alongside active ones purely on semantic similarity.",
+        },
+        {
+          type: 'solution',
+          title: 'Proposed Solution',
+          text: 'GWC rebuilt the retrieval layer with hybrid search (BM25 plus vector embeddings), enriched every chunk with metadata including effective date, contract status, and supplier ID, and added a self-assessing retrieval step so the agent checks retrieval confidence before recommending a supplier. Low-confidence cases route to a category manager for approval rather than an autonomous decision.',
+        },
+        {
+          type: 'outcome',
+          title: 'Measurable Outcomes',
+          bullets: [
+            {
+              text: 'Contract citation accuracy rose from approximately ',
+              highlight: '62 percent to 96 percent',
+              suffix: ' within eight weeks.',
+            },
+            {
+              text: 'Manual procurement audit time dropped by roughly ',
+              highlight: '30 percent',
+              suffix: ' per month.',
+            },
+            {
+              text: 'Zero instances of ',
+              highlight: 'expired-contract recommendations',
+              suffix:
+                ' reached execution after the metadata and confidence gating were introduced.',
+            },
+          ],
+        },
+      ],
+      quote:
+        'Retrieval quality, not the choice of underlying model, was the actual constraint on trust. Governance and version awareness need to be designed into the pipeline from the start, not retrofitted once an agent is already making recommendations.',
+    },
+    governanceSection: {
+      title: 'Evaluation and Governance: Making RAG Auditable',
+      description:
+        'Evaluation is what separates a RAG pipeline that looks good in a demo from one that a business can depend on. A defensible evaluation approach has three layers. Treat the validation layer as part of the architecture from the start, not as a wrapper bolted on after launch.',
+      cards: [
+        {
+          number: '1',
+          title: 'Offline Golden Dataset',
+          description:
+            'An offline golden dataset of representative questions and known correct answers, scored for faithfulness, with a minimum threshold (commonly above 0.85) before a pipeline change ships.',
+        },
+        {
+          number: '2',
+          title: 'CI/CD Quality Gate',
+          description:
+            'A CI/CD quality gate that automatically blocks a deployment if evaluation scores regress.',
+        },
+        {
+          number: '3',
+          title: 'Production Monitoring',
+          description:
+            'Continuous production monitoring that samples a meaningful share of live queries, typically 5 to 10 percent, to catch drift that offline tests miss.',
+        },
+      ],
+    },
+    readinessChecklist: {
+      title: 'Checklist: Before Implementing RAG in Production',
+      items: [
+        {
+          label: 'Scope & Sources',
+          text: 'Have you identified which proprietary data sources actually need to be retrievable, and which should stay out of scope?',
+        },
+        {
+          label: 'Chunking & Metadata',
+          text: 'Do you have a chunking and metadata strategy tied to document lifecycle, including versioning, expiry, and effective dates?',
+        },
+        {
+          label: 'Hybrid Indexing',
+          text: 'Have you implemented hybrid search (vector plus keyword) rather than vector-only retrieval?',
+        },
+        {
+          label: 'Evaluation Framework',
+          text: 'Have you implemented an evaluation framework with a defined faithfulness threshold before production release?',
+        },
+        {
+          label: 'Audit Trail',
+          text: 'Is there an audit trail linking every agent answer to the specific index version and source document?',
+        },
+        {
+          label: 'Escalation Paths',
+          text: 'Have you defined escalation paths for low-confidence retrievals rather than letting the agent guess?',
+        },
+        {
+          label: 'Governance & Ownership',
+          text: 'Is there a named data or product owner accountable for pipeline quality after launch, not just at go-live?',
+        },
+      ],
+    },
+    costBreakdownSection: {
+      title: 'The RAG Maturity Framework',
+      items: [
+        {
+          num: 'Level 1',
+          text: 'Naive RAG: Vector-only search over static documents, no reranking. (Typical Outcome: Impressive demo, unreliable in production)',
+        },
+        {
+          num: 'Level 2',
+          text: 'Hybrid RAG: Vector plus keyword search, metadata tagging, reranking. (Typical Outcome: Usable for internal knowledge assistance)',
+        },
+        {
+          num: 'Level 3',
+          text: 'Agentic RAG: Agent assesses retrieval sufficiency, re-queries, uses multiple retrieval strategies. (Typical Outcome: Suitable for operational decision support)',
+        },
+        {
+          num: 'Level 4',
+          text: 'Governed Agentic RAG: Full audit trail, continuous evaluation, human-in-the-loop approval on low confidence. (Typical Outcome: Ready for consequential, autonomous execution)',
+        },
+      ],
+    },
+    gwcPerspective: {
+      tagline: 'THE GWC PERSPECTIVE',
+      title: 'Retrieval is the foundation of agentic AI trust.',
+      description:
+        "At GWC DATA.AI, RAG is not treated as a bolt-on feature. It is the grounding layer that makes an agent's reasoning trustworthy enough to act on. Our teams pair Claude's reasoning and document intelligence capabilities with governed retrieval layers built on Snowflake Cortex AI and Domo, so that agents recommending a supplier, flagging a compliance exception, or prioritizing inventory replenishment are grounded in the current, correct version of enterprise data, not a stale snapshot.\n\nEvery agent we deploy follows the same operating pattern: observe the retrieved context, reason over it, decide on an action, request human approval where the decision warrants it, and execute. That human-in-the-loop step is what allows retrieval confidence scoring to translate into real governance, not just a technical nicety. It is also why our engagements start with an AI readiness and data assessment rather than a model selection exercise: the retrieval foundation determines whether the agent layer built on top of it can be trusted.",
+      card: {
+        title: 'Ready to Deploy RAG?',
+        subtitle:
+          'Schedule a readiness assessment to baseline your data and design a production-grade RAG pipeline.',
+        buttonText: 'Talk to an Expert',
+      },
+    },
+    keyTakeawaysSection: {
+      title: 'Key Takeaways',
+      items: [
+        {
+          num: '1.',
+          text: 'Retrieval quality, not model choice, is the primary lever for RAG reliability in production.',
+        },
+        {
+          num: '2.',
+          text: 'Hybrid search (vector plus keyword) and semantic chunking with metadata are baseline requirements, not optional upgrades.',
+        },
+        {
+          num: '3.',
+          text: 'Agentic RAG patterns let agents judge retrieval sufficiency and escalate instead of guessing.',
+        },
+        {
+          num: '4.',
+          text: 'Evaluation and audit trails need to be designed in from the start, especially for consequential decisions.',
+        },
+        {
+          num: '5.',
+          text: 'Treat RAG as a governed data product with a named owner, not a one-time integration project.',
+        },
+      ],
+    },
+    aboutSection: {
+      tagline: 'ABOUT GWC DATA.AI',
+      text: "GWC DATA.AI is a global data, business intelligence, and agentic AI consulting and implementation company founded in 2020, with delivery teams across the US, APAC, EMEA, and India. GWC is Domo's strongest global implementation and innovation partner, with more than 120 certified professionals, and maintains implementation partnerships with Snowflake, Google Cloud Platform, Databricks, Boomi, and Microsoft Fabric. GWC uses Claude AI as a core reasoning engine for document intelligence, workflow orchestration, and human-in-the-loop decision systems across a portfolio of more than 50 prebuilt enterprise AI agents. Solution Matters.",
+    },
+  },
 ];
