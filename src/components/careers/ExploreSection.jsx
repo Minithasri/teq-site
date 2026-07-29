@@ -34,108 +34,93 @@ const ExploreSection = () => {
     };
   }, []);
 
-  // All job listings
-  const allJobs = [
-    {
-      id: 1,
-      title: 'Senior Product Manager',
-      location: 'Pan India, Pan India, India',
-      type: 'Full time',
-      date: '08/05/2025',
-      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414912/Senior-Product-Manager?source=CareerSite',
-    },
-    {
-      id: 2,
-      title: 'Associate Data Scientist',
-      location: 'Kolkata, West Bengal, India',
-      type: 'Full time',
-      date: '08/05/2025',
-      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414201/Associate-Data-Scientist?source=CareerSite',
-    },
-    {
-      id: 3,
-      title: 'Agentic AI Developer',
-      location: 'Kolkata, West Bengal, India',
-      type: 'Full time',
-      date: '08/05/2025',
-      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414170/Agentic-AI-Developer?source=CareerSite',
-    },
-    {
-      id: 4,
-      title: 'Senior UI/UX Designer',
-      location: 'Kolkata, West Bengal, India',
-      type: 'Full time',
-      date: '08/05/2025',
-      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414141/Senior-UI-UX-Designer?source=CareerSite',
-    },
-    {
-      id: 5,
-      title: 'Snowflake Architect',
-      location: 'Kolkata, West Bengal, India',
-      type: 'Full time',
-      date: '08/05/2025',
-      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414112/Snowflake-Architect?source=CareerSite',
-    },
-    {
-      id: 6,
-      title: 'Senior Full Stack Engineer',
-      location: 'Kolkata, West Bengal, India',
-      type: 'Full time',
-      date: '08/05/2025',
-      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414083/Senior-Full-Stack-Engineer?source=CareerSite',
-    },
-    {
-      id: 7,
-      title: 'PowerBI Architect',
-      location: 'Kolkata, West Bengal, India',
-      type: 'Full time',
-      date: '08/05/2025',
-      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000414040/PowerBI-Architect?source=CareerSite',
-    },
-    {
-      id: 8,
-      title: 'Sales Director (US Market)',
-      location: 'Kolkata, West Bengal, India',
-      type: 'Full time',
-      date: '08/08/2025',
-      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000453707/Sales-Director-US-Market?source=CareerSite',
-    },
-    {
-      id: 9,
-      title: 'Program Manager',
-      location: 'Salt Lake City, Utah, United States',
-      type: 'Full time',
-      date: '09/30/2025',
-      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000001271281/Program-Manager?source=CareerSite',
-    },
-    {
-      id: 10,
-      title: 'Senior AI Engineer',
-      location: 'Kolkata, West Bengal, India',
-      type: 'Full time',
-      date: '10/03/2025',
-      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000000403201/Senior-AI-Engineer?source=CareerSite',
-    },
-    {
-      id: 11,
-      title: 'Creative Digital Media Designer',
-      location: 'Hosur, Tamil Nadu, India',
-      type: 'Full time',
-      date: '10/08/2025',
-      link: 'https://gwcdata.zohorecruit.in/jobs/Careers/188285000001612075/Creative-Digital-Media-Designer?source=CareerSite',
-    },
-  ];
+  const [jobCareerData, setJobCareerData] = useState([]);
+
+  // Dynamically load Zoho Recruit embed script and scrape jobs from widget DOM
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src =
+      'https://static.zohocdn.com/recruit/embed_careers_site/javascript/v1.1/embed_jobs.js';
+    script.type = 'text/javascript';
+    script.onload = () => {
+      const initializeWidget = () => {
+        const targetDiv = document.getElementById('rec_job_listing_div');
+        if (!targetDiv) return;
+
+        if (window.rec_embed_js && window.rec_embed_js.load) {
+          window.rec_embed_js.load({
+            widget_id: 'rec_job_listing_div',
+            page_name: 'Careers',
+            source: 'CareerSite',
+            site: 'https://gwcdata.zohorecruit.in',
+            brand_color: '#350303ff',
+            empty_job_msg: 'No current Openings',
+          });
+
+          const observer = new MutationObserver(() => {
+            const jobContainer = document.querySelector('.rec_job_listing_div_jobs');
+            if (jobContainer) {
+              const jobElements = jobContainer.querySelectorAll('.rec-job-info');
+              const jobs = Array.from(jobElements).map((job, index) => {
+                const titleElement = job.querySelector('.rec-job-title a');
+                const title = titleElement?.innerText.trim() || 'Unknown Title';
+                const applyLink = titleElement?.href || '';
+                const location = job.querySelector('.zrsite_Location')?.innerText.trim() || '';
+                const description =
+                  job.querySelector('.zrsite_Job_Description')?.innerText.trim() || '';
+                const dateOpened =
+                  job.querySelector('span.zrsite_Date_Opened')?.innerText.trim() || '';
+                const jobType = job.querySelector('span.zrsite_Job_Type')?.innerText.trim() || '';
+
+                return {
+                  id: index + 1,
+                  title,
+                  link: applyLink,
+                  location,
+                  description,
+                  date: dateOpened,
+                  type: jobType,
+                };
+              });
+
+              setJobCareerData(jobs);
+              observer.disconnect();
+            }
+          });
+
+          const targetNode = document.getElementById('rec_job_listing_div');
+          if (targetNode) {
+            observer.observe(targetNode, {
+              childList: true,
+              subtree: true,
+            });
+          }
+
+          setTimeout(() => observer.disconnect(), 10000);
+        }
+      };
+
+      setTimeout(initializeWidget, 100);
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   // Filter jobs based on search criteria
-  const filteredJobs = allJobs.filter(job => {
+  const filteredJobs = jobCareerData.filter(job => {
     const matchesSearch =
       searchQuery === '' || job.title.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesLocation =
       location === '' || job.location.toLowerCase().includes(location.toLowerCase());
 
-    const matchesType =
-      jobType === '' || job.type.toLowerCase().replace(/\s+/g, '-') === jobType.toLowerCase();
+    const matchesType = jobType === '' || job.type.toLowerCase().includes(jobType.toLowerCase());
 
     return matchesSearch && matchesLocation && matchesType;
   });
@@ -169,6 +154,10 @@ const ExploreSection = () => {
       className='w-full py-16 lg:py-24'
       style={{ backgroundColor: '#3D194B' }}
     >
+      <div
+        id='rec_job_listing_div'
+        style={{ minHeight: '100px', visibility: 'hidden', display: 'none' }}
+      />
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='text-center mb-8 lg:mb-12'>
@@ -278,11 +267,13 @@ const ExploreSection = () => {
                 <div className='flex-1 space-y-3'>
                   <h3 className='text-white text-lg lg:text-[18px] font-medium'>{job.title}</h3>
                   <div className='flex flex-wrap items-center gap-2 text-sm text-white/70'>
-                    <span>{job.location}</span>
-                    <span className='text-white/40'>|</span>
-                    <span>{job.type}</span>
-                    <span className='text-white/40'>|</span>
-                    <span>Experience: 5-10 years</span>
+                    {job.location && <span>{job.location}</span>}
+                    {job.location && job.type && <span className='text-white/40'>|</span>}
+                    {job.type && <span>{job.type}</span>}
+                    {job.date && (job.location || job.type) && (
+                      <span className='text-white/40'>|</span>
+                    )}
+                    {job.date && <span>Posted: {job.date}</span>}
                   </div>
                   {/* <p className='text-white/60 text-sm'>Required Skills:</p> */}
                 </div>
