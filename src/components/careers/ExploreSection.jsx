@@ -109,18 +109,38 @@ const ExploreSection = () => {
     };
   }, []);
 
-  // Filter jobs based on search criteria
-  const filteredJobs = jobCareerData.filter(job => {
-    const matchesSearch =
-      searchQuery === '' || job.title.toLowerCase().includes(searchQuery.toLowerCase());
+  // Helper function to parse date strings (e.g. "08/05/2025" or "08-05-2025" or "2025/08/05")
+  const parseDate = dateStr => {
+    if (!dateStr) return 0;
+    const parts = dateStr.split(/[\/\-]/);
+    if (parts.length === 3) {
+      // If year is the last element (MM/DD/YYYY or DD/MM/YYYY)
+      if (parts[2].length === 4) {
+        return new Date(parts[2], parts[0] - 1, parts[1]).getTime();
+      }
+      // If year is the first element (YYYY/MM/DD)
+      if (parts[0].length === 4) {
+        return new Date(parts[0], parts[1] - 1, parts[2]).getTime();
+      }
+    }
+    const timestamp = Date.parse(dateStr);
+    return isNaN(timestamp) ? 0 : timestamp;
+  };
 
-    const matchesLocation =
-      location === '' || job.location.toLowerCase().includes(location.toLowerCase());
+  // Filter and sort jobs by date posted (most recent first)
+  const filteredJobs = jobCareerData
+    .filter(job => {
+      const matchesSearch =
+        searchQuery === '' || job.title.toLowerCase().includes(searchQuery.toLowerCase());
 
-    const matchesType = jobType === '' || job.type.toLowerCase().includes(jobType.toLowerCase());
+      const matchesLocation =
+        location === '' || job.location.toLowerCase().includes(location.toLowerCase());
 
-    return matchesSearch && matchesLocation && matchesType;
-  });
+      const matchesType = jobType === '' || job.type.toLowerCase().includes(jobType.toLowerCase());
+
+      return matchesSearch && matchesLocation && matchesType;
+    })
+    .sort((a, b) => parseDate(b.date) - parseDate(a.date));
 
   // Calculate pagination based on filtered jobs
   const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
