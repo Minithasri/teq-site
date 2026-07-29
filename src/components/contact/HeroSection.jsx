@@ -151,7 +151,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Side - Floating White Card */}
-          <div className='flex items-center justify-center lg:justify-end py-12 lg:py-20'>
+          <div className='flex items-center justify-center lg:justify-end py-12 lg:py-20 lg:pt-28'>
             <div className='bg-white rounded-[32px] shadow-2xl p-10 lg:p-14 w-full max-w-[600px]'>
               <h2 className='text-[#333333] text-[28px] lg:text-[32px] font-semibold text-center mb-4'>
                 How would you like to connect?
@@ -162,22 +162,36 @@ export default function HeroSection() {
               </p>
 
               {/* Buttons */}
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <div className='flex flex-col gap-4 justify-center w-full'>
+                <Link
+                  href='/schedule'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='flex items-center justify-center gap-2 text-white px-6 py-4 rounded-full font-medium text-[15px] hover:scale-[1.02] transition-all shadow-lg text-center'
+                  style={{
+                    background: 'linear-gradient(90deg, #7030B1 0%, #B56DD3 100%)',
+                  }}
+                >
+                  Schedule a Call with Expert
+                  <div className='bg-white/20 rounded-full p-0.5'>
+                    <FiArrowRight size={16} />
+                  </div>
+                </Link>
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className='flex items-center justify-center gap-2 bg-[#7030B1] text-white px-6 py-4 rounded-full font-medium text-[15px] hover:bg-[#5f2896] transition-colors shadow-lg flex-1 whitespace-nowrap'
+                  className='flex items-center justify-center gap-2 border-2 border-[#7030B1] text-[#7030B1] px-6 py-4 rounded-full font-medium text-[15px] hover:bg-[#7030B1]/5 transition-colors shadow-sm'
                 >
-                  For Business Enquiry
-                  <div className='bg-white/20 rounded-full p-0.5'>
+                  Send a Message (Business Enquiry)
+                  <div className='bg-[#7030B1]/10 rounded-full p-0.5'>
                     <FiArrowRight size={16} />
                   </div>
                 </button>
                 <Link
                   href='/careers'
-                  className='flex items-center justify-center gap-2 bg-[#7030B1] text-white px-6 py-4 rounded-full font-medium text-[15px] hover:bg-[#5f2896] transition-colors shadow-lg flex-1 whitespace-nowrap'
+                  className='flex items-center justify-center gap-2 border-2 border-gray-300 text-gray-700 px-6 py-4 rounded-full font-medium text-[15px] hover:bg-gray-50 transition-colors shadow-sm'
                 >
                   Apply for Job
-                  <div className='bg-white/20 rounded-full p-0.5'>
+                  <div className='bg-gray-100 rounded-full p-0.5'>
                     <FiArrowRight size={16} />
                   </div>
                 </Link>
