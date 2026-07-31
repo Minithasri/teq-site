@@ -88,7 +88,7 @@ export default function SupportSection() {
           style={{
             width: '50%',
             height: '100%',
-            backgroundColor: '#de8263',
+            backgroundColor: '#DE896A',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -183,7 +183,7 @@ export default function SupportSection() {
                   style={{
                     width: '32px',
                     height: '32px',
-                    border: '1.5px solid #de8263',
+                    border: '1.5px solid #DE896A',
                     borderRadius: '6px',
                     display: 'flex',
                     alignItems: 'center',
@@ -191,7 +191,7 @@ export default function SupportSection() {
                     flexShrink: 0,
                   }}
                 >
-                  <CheckSquare size={16} color='#de8263' />
+                  <CheckSquare size={16} color='#DE896A' />
                 </div>
                 <p style={{ fontSize: '15px', color: '#444', lineHeight: 1.5, maxWidth: '340px' }}>
                   {item}
@@ -203,7 +203,7 @@ export default function SupportSection() {
           <button
             style={{
               marginTop: '20px',
-              backgroundColor: '#de8263',
+              backgroundColor: '#DE896A',
               color: '#ffffff',
               padding: '16px 24px',
               borderRadius: '6px',

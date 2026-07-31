@@ -140,7 +140,7 @@ export default function Navbar() {
           left: 0,
           width: '100vw',
           height: '100vh',
-          backgroundColor: '#de8263', // coral full screen loader
+          backgroundColor: '#DE896A', // coral full screen loader
           zIndex: 99999, // extremely high to cover everything
           transform: 'scaleY(0)', // hidden initially
           pointerEvents: 'none',
@@ -285,7 +285,7 @@ export default function Navbar() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              backgroundColor: '#de8263',
+              backgroundColor: '#DE896A',
               color: '#ffffff',
               padding: '9px 24px',
               borderRadius: '999px',
@@ -300,7 +300,7 @@ export default function Navbar() {
               e.currentTarget.style.backgroundColor = '#cd7355';
             }}
             onMouseLeave={e => {
-              e.currentTarget.style.backgroundColor = '#de8263';
+              e.currentTarget.style.backgroundColor = '#DE896A';
             }}
           >
             <Phone size={14} />

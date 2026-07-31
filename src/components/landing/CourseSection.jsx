@@ -191,7 +191,7 @@ export default function CourseSection() {
           left: 0,
           width: '50vw',
           height: '100%',
-          backgroundColor: '#de8263',
+          backgroundColor: '#DE896A',
           zIndex: 2,
           willChange: 'transform',
         }}
@@ -228,7 +228,7 @@ export default function CourseSection() {
               marginBottom: '14px',
             }}
           >
-            <LayoutGrid size={12} color='#de8263' />
+            <LayoutGrid size={12} color='#DE896A' />
             WHAT IS TEQCERTIFY
           </div>
 
@@ -244,7 +244,7 @@ export default function CourseSection() {
               style={{
                 width: '40px',
                 height: '2px',
-                backgroundColor: '#de8263',
+                backgroundColor: '#DE896A',
               }}
             />
             <div
@@ -262,7 +262,7 @@ export default function CourseSection() {
             style={{
               fontSize: 'clamp(30px, 3.4vw, 48px)',
               fontWeight: 400,
-              color: '#de8263',
+              color: '#DE896A',
               lineHeight: 1.2,
               letterSpacing: '-0.02em',
               marginBottom: '20px',
@@ -334,13 +334,13 @@ export default function CourseSection() {
                 <div
                   style={{
                     width: isEven ? '180px' : '260px', // Staggers the internal boundary!
-                    backgroundColor: isEven ? '#ffffff' : '#de8263',
+                    backgroundColor: isEven ? '#ffffff' : '#DE896A',
                     padding: '24px 32px', // Uniform padding keeps left text vertically aligned
                     display: 'flex',
                     alignItems: 'center',
                     fontSize: '14px',
                     fontWeight: 600,
-                    color: isEven ? '#de8263' : '#111111',
+                    color: isEven ? '#DE896A' : '#111111',
                     flexShrink: 0,
                     letterSpacing: '0.02em',
                   }}
@@ -352,7 +352,7 @@ export default function CourseSection() {
                 <div
                   style={{
                     flex: 1, // Takes remaining width
-                    backgroundColor: isEven ? '#de8263' : '#ffffff',
+                    backgroundColor: isEven ? '#DE896A' : '#ffffff',
                     padding: '24px 32px', // Uniform padding keeps right text aligned relative to the internal boundary
                     display: 'flex',
                     alignItems: 'center',

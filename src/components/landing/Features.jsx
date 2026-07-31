@@ -162,7 +162,7 @@ export default function Features() {
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
               <button
                 style={{
-                  backgroundColor: '#de8263',
+                  backgroundColor: '#DE896A',
                   color: '#ffffff',
                   padding: '14px 28px',
                   borderRadius: '6px',
@@ -244,7 +244,7 @@ export default function Features() {
                     style={{
                       width: '40px',
                       height: '2px',
-                      backgroundColor: '#de8263',
+                      backgroundColor: '#DE896A',
                     }}
                   />
                   <div

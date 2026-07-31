@@ -103,7 +103,7 @@ export default function ReasonsSection() {
             style={{
               fontSize: 'clamp(40px, 4.5vw, 56px)',
               fontWeight: 600,
-              color: '#de8263',
+              color: '#DE896A',
               lineHeight: 1.1,
               letterSpacing: '-0.02em',
               marginBottom: '4px',
@@ -138,7 +138,7 @@ export default function ReasonsSection() {
                         style={{
                           width: '32px',
                           height: '32px',
-                          backgroundColor: '#de8263',
+                          backgroundColor: '#DE896A',
                           borderRadius: '8px',
                           display: 'flex',
                           alignItems: 'center',

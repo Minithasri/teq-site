@@ -46,20 +46,9 @@ export default function FooterCTA() {
           height: '100%',
           objectFit: 'cover',
           objectPosition: 'center',
-          opacity: 0.6,
+          opacity: 1,
           zIndex: 0,
           pointerEvents: 'none',
-        }}
-      />
-
-      {/* Overlay to soften the video */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background:
-            'radial-gradient(ellipse 85% 85% at 50% 50%, rgba(235,237,237,0.2) 0%, rgba(235,237,237,0.65) 100%)',
-          zIndex: 1,
         }}
       />
 
@@ -78,7 +67,7 @@ export default function FooterCTA() {
           style={{
             fontSize: '48px',
             fontWeight: 500,
-            color: '#de8263',
+            color: '#DE896A',
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
             marginBottom: '4px',
@@ -113,7 +102,7 @@ export default function FooterCTA() {
 
         <button
           style={{
-            backgroundColor: '#de8263',
+            backgroundColor: '#DE896A',
             color: '#ffffff',
             padding: '16px 32px',
             borderRadius: '100px', // pill shape

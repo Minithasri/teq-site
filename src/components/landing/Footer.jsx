@@ -5,7 +5,7 @@ export default function Footer() {
       style={{
         width: '100%',
         height: '100vh',
-        backgroundColor: '#de8263',
+        backgroundColor: '#DE896A',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

@@ -63,20 +63,8 @@ export default function Hero() {
           height: '100%',
           objectFit: 'cover',
           objectPosition: 'center',
-          opacity: 0.6,
+          opacity: 1,
           zIndex: 0,
-          pointerEvents: 'none',
-        }}
-      />
-
-      {/* Radial Gradient Overlay */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background:
-            'radial-gradient(ellipse 85% 85% at 50% 50%, rgba(235,237,237,0.2) 0%, rgba(235,237,237,0.65) 100%)',
-          zIndex: 1,
           pointerEvents: 'none',
         }}
       />
@@ -106,7 +94,7 @@ export default function Hero() {
               display: 'block',
               fontSize: 'clamp(52px, 6.5vw, 92px)',
               fontWeight: 500 /* Medium weight matching design */,
-              color: '#de8263' /* Coral brand tone */,
+              color: '#DE896A' /* Coral brand tone */,
               letterSpacing: '-0.025em',
             }}
           >
@@ -145,7 +133,7 @@ export default function Hero() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '10px',
-              backgroundColor: '#de8263',
+              backgroundColor: '#DE896A',
               color: '#ffffff',
               padding: '14px 28px',
               borderRadius: '999px',
@@ -162,7 +150,7 @@ export default function Hero() {
               e.currentTarget.style.transform = 'translateY(-2px)';
             }}
             onMouseLeave={e => {
-              e.currentTarget.style.backgroundColor = '#de8263';
+              e.currentTarget.style.backgroundColor = '#DE896A';
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
@@ -218,7 +206,7 @@ export default function Hero() {
             onClick={e => handleLinkClick(e, '#course')}
             aria-label='Scroll down'
             style={{
-              color: '#de8263',
+              color: '#DE896A',
               display: 'inline-flex',
               animation: 'bounceDown 2s ease-in-out infinite',
             }}

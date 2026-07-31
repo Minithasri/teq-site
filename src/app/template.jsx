@@ -26,7 +26,7 @@ export default function Template({ children }) {
           left: 0,
           width: '100vw',
           height: '100vh',
-          backgroundColor: '#de8263', // Brand coral color
+          backgroundColor: '#DE896A', // Brand coral color
           zIndex: 9999,
           pointerEvents: 'none',
           // Starts fully covering the screen from bottom-left

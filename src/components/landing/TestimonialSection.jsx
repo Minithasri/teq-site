@@ -72,7 +72,7 @@ export default function TestimonialSection() {
         position: 'relative',
         width: '100%',
         height: '100vh',
-        backgroundColor: '#de8263',
+        backgroundColor: '#DE896A',
         display: 'flex',
         fontFamily: "'Outfit', sans-serif",
         overflow: 'hidden', // prevent horizontal scrollbar

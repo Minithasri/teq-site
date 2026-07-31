@@ -65,7 +65,7 @@ export default function FaqSection() {
           left: '200px',
           width: '16px',
           height: '100%',
-          backgroundColor: '#de8263',
+          backgroundColor: '#DE896A',
           zIndex: 1,
         }}
       />
@@ -86,7 +86,7 @@ export default function FaqSection() {
             style={{
               fontSize: '32px',
               fontWeight: 600,
-              color: '#de8263',
+              color: '#DE896A',
               lineHeight: 1.2,
               letterSpacing: '-0.02em',
               marginBottom: '16px',
@@ -142,9 +142,9 @@ export default function FaqSection() {
                       {faq.q}
                     </span>
                     {isOpen ? (
-                      <Minus size={18} color='#de8263' />
+                      <Minus size={18} color='#DE896A' />
                     ) : (
-                      <Plus size={18} color='#de8263' />
+                      <Plus size={18} color='#DE896A' />
                     )}
                   </div>
                   {isOpen && (

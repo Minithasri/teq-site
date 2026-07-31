@@ -52,7 +52,7 @@ export default function ScheduleSection() {
           left: '200px',
           width: '16px',
           height: '100%',
-          backgroundColor: '#de8263',
+          backgroundColor: '#DE896A',
           zIndex: 1,
         }}
       />
@@ -85,7 +85,7 @@ export default function ScheduleSection() {
             style={{
               fontSize: '64px',
               fontWeight: 600,
-              color: '#de8263',
+              color: '#DE896A',
               lineHeight: 1,
               letterSpacing: '-0.02em',
               marginBottom: '32px',
@@ -121,7 +121,7 @@ export default function ScheduleSection() {
               style={{
                 width: '32px',
                 height: '32px',
-                backgroundColor: '#de8263',
+                backgroundColor: '#DE896A',
                 borderRadius: '8px',
                 display: 'flex',
                 alignItems: 'center',
@@ -182,7 +182,7 @@ export default function ScheduleSection() {
                       marginBottom: '8px',
                     }}
                   >
-                    <ChevronRight size={16} color='#de8263' strokeWidth={3} />
+                    <ChevronRight size={16} color='#DE896A' strokeWidth={3} />
                     <h3 style={{ fontSize: '18px', fontWeight: 600, color: '#1a1a1a' }}>
                       {course.title}
                     </h3>
@@ -199,7 +199,7 @@ export default function ScheduleSection() {
                     {course.desc}
                   </p>
                 </div>
-                <div style={{ fontSize: '12px', fontWeight: 600, color: '#de8263' }}>
+                <div style={{ fontSize: '12px', fontWeight: 600, color: '#DE896A' }}>
                   {course.levelLabel}
                 </div>
               </div>
