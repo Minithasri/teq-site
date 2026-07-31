@@ -51,7 +51,6 @@ export default function FooterCTA() {
           pointerEvents: 'none',
         }}
       />
-
       <div
         style={{
           position: 'relative',
