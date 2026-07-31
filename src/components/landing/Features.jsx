@@ -1,52 +1,293 @@
-import { Zap, Shield, BarChart } from 'lucide-react';
+'use client';
+
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { LayoutGrid, ExternalLink, ShieldCheck, Lock, Package, Settings } from 'lucide-react';
+
+const featuresList = [
+  {
+    icon: ShieldCheck,
+    title: 'Earn more',
+    desc: 'Anyone can use AI. High-value professionals solve real business problems by building reliable, repeatable AI workflows.',
+  },
+  {
+    icon: Lock,
+    title: 'Stand out',
+    desc: 'Anyone can claim "AI proficient." A graded assessment, recognized certification, and real portfolios prove your skills.',
+  },
+  {
+    icon: Package,
+    title: 'Build faster',
+    desc: 'Learn Claude Code, the Claude API, and Model Context Protocol to build AI powered tools, not just use them.',
+  },
+  {
+    icon: Settings,
+    title: 'Learn in a room',
+    desc: 'Videos teach concepts. Instructors improve your thinking with real feedback, correcting, and hands-on guidance.',
+  },
+];
 
 export default function Features() {
+  const sectionRef = useRef(null);
+  const featureRefs = useRef([]);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const scroller = document.getElementById('main-scroll-container');
+    if (!scroller) return;
+
+    ScrollTrigger.defaults({ scroller });
+
+    const TOTAL_SCROLL = 2000;
+
+    // Set initial states for features
+    featureRefs.current.forEach(feat => {
+      if (feat) gsap.set(feat, { opacity: 0, y: 30 });
+    });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top top',
+        end: `+=${TOTAL_SCROLL}`,
+        pin: true,
+        pinType: 'transform',
+        scrub: 1.6,
+        anticipatePin: 1,
+        pinSpacing: true,
+        invalidateOnRefresh: true,
+      },
+    });
+
+    // Stagger features in
+    featureRefs.current.forEach((feat, idx) => {
+      if (!feat) return;
+      tl.to(
+        feat,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: 'power2.out',
+        },
+        idx * 0.8
+      );
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach(t => t.kill());
+    };
+  }, []);
+
   return (
-    <section id='features' className='py-24 bg-white'>
-      <div className='max-w-7xl mx-auto px-8'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold text-slate-900 mb-4'>
-            Everything you need to succeed
+    <section
+      id='about'
+      ref={sectionRef}
+      style={{
+        position: 'relative',
+        width: '100%',
+        height: '100vh',
+        backgroundColor: '#ffffff',
+        display: 'flex',
+        fontFamily: "'Outfit', sans-serif",
+      }}
+    >
+      {/* ── Content Wrapper (starts after the 200px sidebar) ──────────────── */}
+      <div
+        style={{
+          position: 'relative',
+          width: 'calc(100% - 200px)',
+          height: '100%',
+          marginLeft: '200px',
+        }}
+      >
+        {/* ── Left column: text content ─────────────────────────────────────── */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '50%',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            paddingLeft: '80px',
+            paddingRight: '60px',
+            zIndex: 1,
+          }}
+        >
+          {/* Label */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              fontSize: '11px',
+              fontWeight: 600,
+              letterSpacing: '0.12em',
+              color: '#555',
+              textTransform: 'uppercase',
+              marginBottom: '20px',
+            }}
+          >
+            <LayoutGrid size={12} color='#555' />
+            SECURITY
+          </div>
+
+          {/* Heading */}
+          <h2
+            style={{
+              fontSize: 'clamp(40px, 4.5vw, 64px)',
+              fontWeight: 400,
+              color: '#1a1a1a',
+              lineHeight: 1.1,
+              letterSpacing: '-0.03em',
+              marginBottom: '40px',
+              maxWidth: '420px',
+            }}
+          >
+            Why Learn
+            <br />
+            Claude <span style={{ fontWeight: 600 }}>with</span>
+            <br />
+            <span style={{ fontWeight: 700 }}>TeqCertify?</span>
           </h2>
-          <p className='text-slate-600 max-w-2xl mx-auto text-lg'>
-            Powerful features designed to help you build, launch, and grow your business without the
-            friction.
-          </p>
+
+          {/* Buttons */}
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+            <button
+              style={{
+                backgroundColor: '#de8263',
+                color: '#ffffff',
+                padding: '14px 28px',
+                borderRadius: '6px',
+                fontSize: '11px',
+                fontWeight: 600,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 4px 12px rgba(222,130,99,0.3)',
+              }}
+            >
+              Get the course
+            </button>
+            <button
+              style={{
+                backgroundColor: '#b0b0b0',
+                color: '#ffffff',
+                width: '42px',
+                height: '42px',
+                borderRadius: '6px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+            >
+              <ExternalLink size={16} />
+            </button>
+          </div>
         </div>
 
-        <div className='grid md:grid-cols-3 gap-8'>
-          {/* Feature 1 */}
-          <div className='p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow'>
-            <div className='w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6'>
-              <Zap className='w-6 h-6' />
-            </div>
-            <h3 className='text-xl font-bold mb-3 text-slate-900'>Lightning Fast</h3>
-            <p className='text-slate-600 leading-relaxed'>
-              Experience uncompromised speed with our optimized global infrastructure network.
-            </p>
-          </div>
+        {/* ── Right panel: staggered features ───────────────────────────────── */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            width: '50%',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            padding: '40px 60px',
+            zIndex: 2,
+          }}
+        >
+          <div
+            style={{
+              width: '100%',
+              maxWidth: '480px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '24px',
+            }}
+          >
+            {featuresList.map((item, idx) => (
+              <div
+                key={item.title}
+                ref={el => {
+                  featureRefs.current[idx] = el;
+                }}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+              >
+                {/* Two-part Divider line */}
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    marginBottom: '16px',
+                  }}
+                >
+                  <div
+                    style={{
+                      width: '40px',
+                      height: '2px',
+                      backgroundColor: '#de8263',
+                    }}
+                  />
+                  <div
+                    style={{
+                      flex: 1,
+                      height: '1px',
+                      backgroundColor: 'rgba(0,0,0,0.06)',
+                    }}
+                  />
+                </div>
 
-          {/* Feature 2 */}
-          <div className='p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow'>
-            <div className='w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6'>
-              <Shield className='w-6 h-6' />
-            </div>
-            <h3 className='text-xl font-bold mb-3 text-slate-900'>Bank-grade Security</h3>
-            <p className='text-slate-600 leading-relaxed'>
-              Your data is protected by enterprise-level encryption and continuous security
-              monitoring.
-            </p>
-          </div>
-
-          {/* Feature 3 */}
-          <div className='p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow'>
-            <div className='w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-6'>
-              <BarChart className='w-6 h-6' />
-            </div>
-            <h3 className='text-xl font-bold mb-3 text-slate-900'>Advanced Analytics</h3>
-            <p className='text-slate-600 leading-relaxed'>
-              Gain powerful insights with our built-in real-time analytics and reporting dashboard.
-            </p>
+                {/* Feature Content */}
+                <div style={{ paddingLeft: '4px' }}>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      marginBottom: '8px',
+                    }}
+                  >
+                    <item.icon size={20} color='#666' strokeWidth={1.5} />
+                    <h3
+                      style={{
+                        fontSize: '16px',
+                        fontWeight: 600,
+                        color: '#1a1a1a',
+                        letterSpacing: '-0.01em',
+                      }}
+                    >
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p
+                    style={{
+                      fontSize: '13px',
+                      color: '#666',
+                      lineHeight: 1.6,
+                      paddingLeft: '32px', // indent to align with text
+                    }}
+                  >
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

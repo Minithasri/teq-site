@@ -1,36 +1,244 @@
-import { ArrowRight } from 'lucide-react';
+'use client';
+
+import { useEffect, useRef } from 'react';
+import { Monitor, ArrowDown } from 'lucide-react';
 
 export default function Hero() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.play().catch(error => {
+        console.warn('Auto-play prevented:', error);
+      });
+    }
+  }, []);
+
+  const handleLinkClick = (e, href) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target && window.lenis) {
+      // Auto-play through the full pinned animation and reveal content
+      const offset = href === '#course' ? 3000 : 0;
+      window.lenis.scrollTo(target, {
+        offset,
+        duration: 2.2,
+        easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      });
+    } else if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className='relative pt-20 pb-32 overflow-hidden'>
-      <div className='max-w-7xl mx-auto px-8 flex flex-col items-center text-center'>
-        <div className='inline-flex items-center space-x-2 bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium mb-8'>
-          <span className='flex h-2 w-2 rounded-full bg-indigo-600'></span>
-          <span>v2.0 is now live</span>
-        </div>
-        <h1 className='text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 max-w-4xl text-balance'>
-          Build your next big idea with{' '}
-          <span className='text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600'>
-            Teqcerty
+    <section
+      id='home'
+      style={{
+        position: 'relative',
+        minHeight: '100vh',
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        overflow: 'hidden',
+        backgroundColor: '#ffffff',
+      }}
+    >
+      {/* Background Video */}
+      <video
+        ref={videoRef}
+        src='/Video/landing_page_background.mp4'
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload='auto'
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'center',
+          opacity: 0.6,
+          zIndex: 0,
+          pointerEvents: 'none',
+        }}
+      />
+
+      {/* Radial Gradient Overlay */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background:
+            'radial-gradient(ellipse 85% 85% at 50% 50%, rgba(235,237,237,0.2) 0%, rgba(235,237,237,0.65) 100%)',
+          zIndex: 1,
+          pointerEvents: 'none',
+        }}
+      />
+
+      {/* Main Content Area */}
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 2,
+          paddingLeft: '240px' /* Left offset for vertical sidebar */,
+          paddingRight: '80px',
+          paddingTop: '100px' /* Top offset to clear header */,
+          paddingBottom: '40px',
+          maxWidth: '1350px',
+        }}
+      >
+        {/* Main Headline - Exact Font Weight & Sizing matching reference image */}
+        <h1
+          style={{
+            margin: 0,
+            lineHeight: 1.08,
+            fontFamily: "'Outfit', sans-serif",
+          }}
+        >
+          <span
+            style={{
+              display: 'block',
+              fontSize: 'clamp(52px, 6.5vw, 92px)',
+              fontWeight: 500 /* Medium weight matching design */,
+              color: '#de8263' /* Coral brand tone */,
+              letterSpacing: '-0.025em',
+            }}
+          >
+            Master Claude
+          </span>
+          <span
+            style={{
+              display: 'block',
+              fontSize: 'clamp(48px, 6vw, 86px)',
+              fontWeight: 400 /* Regular weight matching design */,
+              color: '#2a2d34' /* Dark charcoal tone */,
+              letterSpacing: '-0.025em',
+              marginTop: '2px',
+            }}
+          >
+            before your job demands it.
           </span>
         </h1>
-        <p className='text-lg md:text-xl text-slate-600 mb-10 max-w-2xl text-balance leading-relaxed'>
-          We provide the tools and infrastructure you need to launch faster, scale smarter, and
-          focus on what matters most—your product.
-        </p>
-        <div className='flex flex-col sm:flex-row gap-4 w-full justify-center'>
-          <button className='bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg shadow-indigo-200 flex items-center justify-center gap-2 group'>
-            Start for free
-            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-          </button>
-          <button className='bg-white hover:bg-slate-50 text-slate-900 border border-slate-200 px-8 py-4 rounded-full text-lg font-medium transition-all shadow-sm flex items-center justify-center'>
-            Book a demo
-          </button>
+
+        {/* Action Buttons - Matching Pill Styling */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '16px',
+            marginTop: '44px',
+            flexWrap: 'wrap',
+          }}
+        >
+          {/* Primary Coral Button */}
+          <a
+            href='#course'
+            onClick={e => handleLinkClick(e, '#course')}
+            id='hero-cta-levels'
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '10px',
+              backgroundColor: '#de8263',
+              color: '#ffffff',
+              padding: '14px 28px',
+              borderRadius: '999px',
+              fontSize: '15px',
+              fontWeight: 500,
+              textDecoration: 'none',
+              boxShadow: '0 4px 18px rgba(222, 130, 99, 0.35)',
+              transition: 'all 0.2s ease',
+              border: 'none',
+              fontFamily: "'Outfit', sans-serif",
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.backgroundColor = '#cd7355';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.backgroundColor = '#de8263';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            <Monitor size={18} strokeWidth={2} />
+            See the three levels
+          </a>
+
+          {/* Secondary Light Button */}
+          <a
+            href='#contact'
+            onClick={e => handleLinkClick(e, '#contact')}
+            id='hero-cta-talk'
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              backgroundColor: 'rgba(255, 255, 255, 0.75)',
+              backdropFilter: 'blur(8px)',
+              color: '#2d2d2d',
+              padding: '14px 28px',
+              borderRadius: '999px',
+              fontSize: '15px',
+              fontWeight: 500,
+              textDecoration: 'none',
+              border: '1px solid rgba(255, 255, 255, 0.8)',
+              boxShadow: '0 2px 10px rgba(0,0,0,0.03)',
+              transition: 'all 0.2s ease',
+              fontFamily: "'Outfit', sans-serif",
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.backgroundColor = '#ffffff';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.75)';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            Talk to Us
+          </a>
+        </div>
+
+        {/* Bouncing Arrow Indicator */}
+        <div
+          style={{
+            marginTop: '52px',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <a
+            href='#course'
+            onClick={e => handleLinkClick(e, '#course')}
+            aria-label='Scroll down'
+            style={{
+              color: '#de8263',
+              display: 'inline-flex',
+              animation: 'bounceDown 2s ease-in-out infinite',
+            }}
+          >
+            <ArrowDown size={28} strokeWidth={1.8} />
+          </a>
         </div>
       </div>
 
-      {/* Decorative background blur */}
-      <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-indigo-200 to-purple-200 rounded-full blur-3xl opacity-30 -z-10'></div>
+      <style jsx>{`
+        @keyframes bounceDown {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(8px);
+          }
+        }
+      `}</style>
     </section>
   );
 }

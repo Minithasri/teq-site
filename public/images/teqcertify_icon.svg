@@ -1,0 +1,22 @@
+<svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Coral Background Circle -->
+  <circle cx="50" cy="50" r="48" fill="#d97a5a" />
+  
+  <!-- Outer C-shaped Arc -->
+  <path
+    d="M 68,26 A 30,30 0 1 0 68,74 L 75,67 A 40,40 0 1 1 75,33 Z"
+    fill="#ffffff"
+  />
+  
+  <!-- Inner T Symbol -->
+  <path
+    d="M 36,36 H 64 V 44 H 54 V 67 H 46 V 44 H 36 Z"
+    fill="#ffffff"
+  />
+  
+  <!-- Right Notch / Arrow -->
+  <path
+    d="M 67,46 L 76,50 L 67,54 Z"
+    fill="#ffffff"
+  />
+</svg>
