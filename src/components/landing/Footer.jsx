@@ -4,7 +4,7 @@ export default function Footer() {
       id='landing-footer'
       style={{
         width: '100%',
-        height: '400px',
+        height: '100vh',
         backgroundColor: '#de8263',
         display: 'flex',
         alignItems: 'center',
