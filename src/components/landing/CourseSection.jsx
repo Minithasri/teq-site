@@ -9,7 +9,7 @@ const courseDetails = [
   { label: 'Program', value: 'The Claude Professional Program' },
   { label: 'Levels', value: 'Foundation, Applied, Architect' },
   { label: 'Format', value: 'In person, cohort based' },
-  { label: 'Location', value: 'Kurudepalli, Moranapalli, TN 635130' },
+  { label: 'Location', value: 'Kumudepalli, Moranapalli, TN 635130' },
 ];
 
 export default function CourseSection() {
@@ -18,6 +18,7 @@ export default function CourseSection() {
   const leftContentRef = useRef(null);
   const cardRefs = useRef([]);
   const tlRef = useRef(null);
+  const wipeRef = useRef(null);
   const clickedRef = useRef(false);
 
   useEffect(() => {
@@ -34,7 +35,7 @@ export default function CourseSection() {
     /*
      * SCROLL ANIMATION (matching Figma design):
      *
-     * Total scroll height pinned: 3000px
+     * Total scroll height pinned: 3500px
      *
      *  0  –  600px  → Coral slides in from LEFT to cover left column
      *  600 – 1200px → Coral slides RIGHT to right panel position (left text reveals)
@@ -42,11 +43,13 @@ export default function CourseSection() {
      *  1600 – 2000px → Card 2 (Levels) fades in
      *  2000 – 2400px → Card 3 (Format) fades in
      *  2400 – 3000px → Card 4 (Location) fades in
+     *  3000 – 3500px → White screen wipes from left to right covering everything
      */
 
-    const TOTAL_SCROLL = 3000;
+    const TOTAL_SCROLL = 3500;
 
     // Set initial states
+    gsap.set(wipeRef.current, { scaleX: 0, transformOrigin: 'left' });
     gsap.set(coralBlockRef.current, { x: '-100%' }); // hidden under sidebar
     gsap.set(leftContentRef.current, { opacity: 0, y: 30 }); // text hidden
     cardRefs.current.forEach(c => {
@@ -106,6 +109,13 @@ export default function CourseSection() {
         },
         cardTimes[idx]
       );
+    });
+
+    // --- Phase 5: White wipe from left to right covering the whole section
+    tl.to(wipeRef.current, {
+      scaleX: 1,
+      duration: 0.2,
+      ease: 'power2.inOut',
     });
 
     return () => {
@@ -278,7 +288,7 @@ export default function CourseSection() {
         </div>
       </div>
 
-      {/* ── Right panel: staggered cards ──────────────────────────────────── */}
+      {/* ── Right panel: exact design matching image ──────────────────────── */}
       {/* The coral block will glide exactly under this area */}
       <div
         style={{
@@ -290,17 +300,17 @@ export default function CourseSection() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          padding: '60px',
+          alignItems: 'center', // Centers the grid horizontally inside the right panel
+          padding: '0 16px',
           zIndex: 3, // above the coral block
         }}
       >
         <div
           style={{
             width: '100%',
-            maxWidth: '580px',
+            maxWidth: '620px', // Constrains the grid width so it sits nicely on the coral background
             display: 'flex',
-            flexDirection: 'column',
-            gap: '12px',
+            flexDirection: 'column', // coral gap between rows
           }}
         >
           {courseDetails.map((item, idx) => {
@@ -315,27 +325,24 @@ export default function CourseSection() {
                 style={{
                   display: 'flex',
                   alignItems: 'stretch',
-                  borderRadius: '8px',
-                  overflow: 'hidden',
-                  border: '1px solid rgba(255,255,255,0.7)',
-                  transform: isEven ? 'none' : 'translateX(-40px)',
-                  transition: 'transform 0.3s ease',
+                  border: '1px solid #ffffff', // white border around the content box
+                  backgroundColor: '#ffffff', // for the vertical white grid line
+                  // gap: '1px', // width of the vertical white grid line
                 }}
               >
                 {/* Label box */}
                 <div
                   style={{
-                    width: '140px',
+                    width: isEven ? '180px' : '260px', // Staggers the internal boundary!
                     backgroundColor: isEven ? '#ffffff' : '#de8263',
-                    padding: '16px 18px',
+                    padding: '24px 32px', // Uniform padding keeps left text vertically aligned
                     display: 'flex',
                     alignItems: 'center',
                     fontSize: '14px',
-                    fontWeight: 500,
+                    fontWeight: 600,
                     color: isEven ? '#de8263' : '#111111',
                     flexShrink: 0,
-                    letterSpacing: '0.01em',
-                    boxShadow: isEven ? '0 2px 12px rgba(0,0,0,0.07)' : 'none',
+                    letterSpacing: '0.02em',
                   }}
                 >
                   {item.label}
@@ -344,16 +351,15 @@ export default function CourseSection() {
                 {/* Value box */}
                 <div
                   style={{
-                    flex: 1,
-                    backgroundColor: isEven ? 'transparent' : '#ffffff',
-                    padding: '16px 22px',
+                    flex: 1, // Takes remaining width
+                    backgroundColor: isEven ? '#de8263' : '#ffffff',
+                    padding: '24px 32px', // Uniform padding keeps right text aligned relative to the internal boundary
                     display: 'flex',
                     alignItems: 'center',
                     fontSize: '14px',
-                    fontWeight: 400,
+                    fontWeight: 500,
                     color: '#111111',
                     letterSpacing: '0.01em',
-                    boxShadow: !isEven ? '0 2px 12px rgba(0,0,0,0.07)' : 'none',
                   }}
                 >
                   {item.value}
@@ -363,6 +369,22 @@ export default function CourseSection() {
           })}
         </div>
       </div>
+
+      {/* ── Final Wipe Screen ───────────────────────────────────────────── */}
+      {/* This wipes from left to right at the end of the pinned section, making a seamless transition to the next white section. */}
+      <div
+        ref={wipeRef}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100%',
+          backgroundColor: '#ffffff',
+          zIndex: 10,
+          willChange: 'transform',
+        }}
+      />
     </section>
   );
 }

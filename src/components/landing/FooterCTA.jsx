@@ -1,13 +1,29 @@
-import React from 'react';
+'use client';
+
+import React, { useRef, useEffect } from 'react';
 
 export default function FooterCTA() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.play().catch(error => {
+        console.error('Video autoplay failed:', error);
+      });
+    }
+  }, []);
+
   return (
     <section
+      id='footer-cta'
       style={{
         position: 'relative',
         width: '100%',
         height: '600px',
-        backgroundColor: '#f2f4f8',
+        backgroundColor: '#ffffff',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -15,34 +31,34 @@ export default function FooterCTA() {
         overflow: 'hidden',
       }}
     >
-      {/* CSS-based sunburst animation placeholder for the background */}
-      <div
+      {/* Background Video */}
+      <video
+        ref={videoRef}
+        src='/Video/landing_page_background.mp4'
+        autoPlay
+        loop
+        muted
+        playsInline
         style={{
           position: 'absolute',
-          top: '50%',
-          left: '50%',
-          width: '150%',
-          height: '150%',
-          transform: 'translate(-50%, -50%)',
-          background:
-            'repeating-conic-gradient(from 0deg, transparent 0deg 15deg, rgba(255,255,255,0.6) 15deg 30deg)',
-          animation: 'spin 60s linear infinite',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'center',
+          opacity: 0.6,
           zIndex: 0,
+          pointerEvents: 'none',
         }}
       />
-      <style>{`
-        @keyframes spin {
-          from { transform: translate(-50%, -50%) rotate(0deg); }
-          to { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-      `}</style>
 
-      {/* Overlay to soften the sunburst */}
+      {/* Overlay to soften the video */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'radial-gradient(circle, rgba(242,244,248,0.7) 0%, rgba(242,244,248,1) 100%)',
+          background:
+            'radial-gradient(ellipse 85% 85% at 50% 50%, rgba(235,237,237,0.2) 0%, rgba(235,237,237,0.65) 100%)',
           zIndex: 1,
         }}
       />

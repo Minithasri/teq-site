@@ -9,6 +9,7 @@ import TestimonialSection from '@/components/landing/TestimonialSection';
 import SupportSection from '@/components/landing/SupportSection';
 import FaqSection from '@/components/landing/FaqSection';
 import FooterCTA from '@/components/landing/FooterCTA';
+import Footer from '@/components/landing/Footer';
 import SmoothScroll from '@/components/SmoothScroll';
 
 export const metadata = {
@@ -93,6 +94,7 @@ export default function Home() {
                 <SupportSection />
                 <FaqSection />
                 <FooterCTA />
+                <Footer />
               </div>
             </div>
           </SmoothScroll>

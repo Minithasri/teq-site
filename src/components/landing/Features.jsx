@@ -30,6 +30,7 @@ const featuresList = [
 
 export default function Features() {
   const sectionRef = useRef(null);
+  const leftContentRef = useRef(null);
   const featureRefs = useRef([]);
 
   useEffect(() => {
@@ -40,9 +41,9 @@ export default function Features() {
 
     ScrollTrigger.defaults({ scroller });
 
-    const TOTAL_SCROLL = 2000;
+    const TOTAL_SCROLL = 2400; // Restore original scroll distance
 
-    // Set initial states for features
+    // Set initial states for features only
     featureRefs.current.forEach(feat => {
       if (feat) gsap.set(feat, { opacity: 0, y: 30 });
     });
@@ -61,7 +62,7 @@ export default function Features() {
       },
     });
 
-    // Stagger features in
+    // Stagger features in right side
     featureRefs.current.forEach((feat, idx) => {
       if (!feat) return;
       tl.to(
@@ -72,7 +73,7 @@ export default function Features() {
           duration: 1,
           ease: 'power2.out',
         },
-        idx * 0.8
+        idx === 0 ? '+=0.2' : '+=0.2'
       );
     });
 
@@ -119,78 +120,80 @@ export default function Features() {
             zIndex: 1,
           }}
         >
-          {/* Label */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              fontSize: '11px',
-              fontWeight: 600,
-              letterSpacing: '0.12em',
-              color: '#555',
-              textTransform: 'uppercase',
-              marginBottom: '20px',
-            }}
-          >
-            <LayoutGrid size={12} color='#555' />
-            SECURITY
-          </div>
-
-          {/* Heading */}
-          <h2
-            style={{
-              fontSize: 'clamp(40px, 4.5vw, 64px)',
-              fontWeight: 400,
-              color: '#1a1a1a',
-              lineHeight: 1.1,
-              letterSpacing: '-0.03em',
-              marginBottom: '40px',
-              maxWidth: '420px',
-            }}
-          >
-            Why Learn
-            <br />
-            Claude <span style={{ fontWeight: 600 }}>with</span>
-            <br />
-            <span style={{ fontWeight: 700 }}>TeqCertify?</span>
-          </h2>
-
-          {/* Buttons */}
-          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-            <button
+          <div ref={leftContentRef}>
+            {/* Label */}
+            <div
               style={{
-                backgroundColor: '#de8263',
-                color: '#ffffff',
-                padding: '14px 28px',
-                borderRadius: '6px',
-                fontSize: '11px',
-                fontWeight: 600,
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                border: 'none',
-                cursor: 'pointer',
-                boxShadow: '0 4px 12px rgba(222,130,99,0.3)',
-              }}
-            >
-              Get the course
-            </button>
-            <button
-              style={{
-                backgroundColor: '#b0b0b0',
-                color: '#ffffff',
-                width: '42px',
-                height: '42px',
-                borderRadius: '6px',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                border: 'none',
-                cursor: 'pointer',
+                gap: '8px',
+                fontSize: '11px',
+                fontWeight: 600,
+                letterSpacing: '0.12em',
+                color: '#555',
+                textTransform: 'uppercase',
+                marginBottom: '20px',
               }}
             >
-              <ExternalLink size={16} />
-            </button>
+              <LayoutGrid size={12} color='#555' />
+              SECURITY
+            </div>
+
+            {/* Heading */}
+            <h2
+              style={{
+                fontSize: 'clamp(40px, 4.5vw, 64px)',
+                fontWeight: 400,
+                color: '#1a1a1a',
+                lineHeight: 1.1,
+                letterSpacing: '-0.03em',
+                marginBottom: '40px',
+                maxWidth: '420px',
+              }}
+            >
+              Why Learn
+              <br />
+              Claude <span style={{ fontWeight: 600 }}>with</span>
+              <br />
+              <span style={{ fontWeight: 700 }}>TeqCertify?</span>
+            </h2>
+
+            {/* Buttons */}
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+              <button
+                style={{
+                  backgroundColor: '#de8263',
+                  color: '#ffffff',
+                  padding: '14px 28px',
+                  borderRadius: '6px',
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  border: 'none',
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 12px rgba(222,130,99,0.3)',
+                }}
+              >
+                Get the course
+              </button>
+              <button
+                style={{
+                  backgroundColor: '#b0b0b0',
+                  color: '#ffffff',
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '6px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+              >
+                <ExternalLink size={16} />
+              </button>
+            </div>
           </div>
         </div>
 

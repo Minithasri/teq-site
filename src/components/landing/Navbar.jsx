@@ -93,6 +93,7 @@ export default function Navbar() {
     const handleScroll = () => {
       const courseSection = document.getElementById('course');
       const aboutSection = document.getElementById('about');
+      const footerSection = document.getElementById('footer-cta');
 
       let nextActive = 'Home';
 
@@ -100,6 +101,15 @@ export default function Navbar() {
         const aboutRect = aboutSection.getBoundingClientRect();
         if (aboutRect.top <= 300) {
           nextActive = 'About us';
+        }
+      }
+
+      // Check if we are near the bottom of the page (FooterCTA)
+      if (footerSection) {
+        const footerRect = footerSection.getBoundingClientRect();
+        // If the footer is mostly visible
+        if (footerRect.top <= window.innerHeight - 300) {
+          nextActive = 'FooterCTA';
         }
       }
 
@@ -137,7 +147,7 @@ export default function Navbar() {
         }}
       />
 
-      {/* Dynamic sidebar background — transparent on Home/Course/About us, white on other sections */}
+      {/* Dynamic sidebar background — transparent on Home/Course/About us/FooterCTA, white on other sections */}
       <div
         style={{
           position: 'fixed',
@@ -145,10 +155,10 @@ export default function Navbar() {
           left: 0,
           width: '200px',
           height: '100vh',
-          backgroundColor: ['Home', 'Course', 'About us'].includes(activeLink)
+          backgroundColor: ['Home', 'Course', 'About us', 'FooterCTA'].includes(activeLink)
             ? 'transparent'
             : '#ffffff',
-          borderRight: ['Home', 'Course', 'About us'].includes(activeLink)
+          borderRight: ['Home', 'Course', 'About us', 'FooterCTA'].includes(activeLink)
             ? 'none'
             : '1px solid rgba(0,0,0,0.04)',
           transition: 'background-color 0.4s ease',
@@ -313,6 +323,9 @@ export default function Navbar() {
           zIndex: 50,
           gap: '20px',
           fontFamily: "'Outfit', sans-serif",
+          opacity: activeLink === 'FooterCTA' ? 0 : 1,
+          pointerEvents: activeLink === 'FooterCTA' ? 'none' : 'auto',
+          transition: 'opacity 0.4s ease',
         }}
       >
         {navLinks.map(link => {
