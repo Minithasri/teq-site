@@ -20,6 +20,17 @@ export default function Navbar() {
 
   const handleLinkClick = (e, href, label) => {
     e.preventDefault();
+
+    // Disable onClick action for Blog and Testimonial
+    if (
+      label === 'Blog' ||
+      label === 'Testimonial' ||
+      href === '#blog' ||
+      href === '#testimonial'
+    ) {
+      return;
+    }
+
     if (label) setActiveLink(label);
     else if (activeLinkRef.current !== href.replace('#', '')) {
       setActiveLink(href.replace('#', ''));
@@ -27,38 +38,36 @@ export default function Navbar() {
 
     const target = document.querySelector(href);
 
-    // GSAP Loader animation for all main sections
-    if (href === '#course' || href === '#about' || href === '#blog' || href === '#testimonial') {
+    // GSAP Loader animation for main sections (Home, Course, About us)
+    if (href === '#home' || href === '#course' || href === '#about') {
       const loader = document.getElementById('gsap-transition-loader');
-      if (loader && target && window.lenis) {
+      if (loader && window.lenis) {
         const tl = gsap.timeline();
 
         // 1. Slide loader down from top
         tl.set(loader, { transformOrigin: 'top', pointerEvents: 'auto' })
           .to(loader, {
             scaleY: 1,
-            duration: 0.7,
+            duration: 0.6,
             ease: 'power3.inOut',
           })
           .call(() => {
             // 2. Scroll instantly while screen is fully covered
-            let scrollOffset = 0;
-            if (href === '#course') scrollOffset = 3000;
-            if (href === '#about') scrollOffset = 2000;
-            if (href === '#blog') scrollOffset = 2400 + 2000; // It's after about
-            // Actually, we can just use the target's offsetTop or let lenis handle it if we just don't pass an offset?
-            // Wait, for pinned sections earlier in the page, the offsetTop might be shifted.
-            // The original logic had:
-            if (href === '#blog') scrollOffset = 2400;
-            if (href === '#testimonial') scrollOffset = 1500;
+            if (href === '#home') {
+              window.lenis.scrollTo(0, { immediate: true });
+            } else if (target) {
+              let scrollOffset = 0;
+              if (href === '#course') scrollOffset = 3000;
+              if (href === '#about') scrollOffset = 2000;
 
-            window.lenis.scrollTo(target, { offset: scrollOffset, immediate: true });
+              window.lenis.scrollTo(target, { offset: scrollOffset, immediate: true });
+            }
           })
-          // 3. Slide loader down to bottom to reveal
+          // 3. Slide loader down to bottom to reveal target section
           .set(loader, { transformOrigin: 'bottom' })
           .to(loader, {
             scaleY: 0,
-            duration: 0.7,
+            duration: 0.6,
             ease: 'power3.inOut',
             delay: 0.1, // tiny pause
           })
@@ -69,12 +78,19 @@ export default function Navbar() {
       }
     }
 
+    if (href === '#home') {
+      if (window.lenis) {
+        window.lenis.scrollTo(0, { duration: 1.5 });
+      } else {
+        const scroller = document.getElementById('main-scroll-container');
+        if (scroller) scroller.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      return;
+    }
+
     if (target && window.lenis) {
-      // For pinned sections, scroll past them to reveal all content
       let offset = 0;
       if (href === '#about') offset = 2000;
-      if (href === '#blog') offset = 2400; // ReasonsSection is pinned for 2400px
-      if (href === '#testimonial') offset = 1500; // TestimonialSection is pinned for 1500px
 
       window.lenis.scrollTo(target, {
         offset,
@@ -330,6 +346,79 @@ export default function Navbar() {
       >
         {navLinks.map(link => {
           const isActive = activeLink === link.label;
+
+          // If activeLink is 'Home', Home uses the White Capsule styling
+          if (isActive && activeLink === 'Home') {
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={e => handleLinkClick(e, link.href, link.label)}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '14px',
+                  fontWeight: '500',
+                  color: '#2d2d2d',
+                  textDecoration: 'none',
+                  backgroundColor: '#ffffff',
+                  padding: '10px 20px',
+                  borderRadius: '12px',
+                  border: '1px solid rgba(0, 0, 0, 0.04)',
+                  boxShadow: '0 4px 14px rgba(0, 0, 0, 0.04)',
+                  transition: 'all 0.25s ease',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                <span>Home •</span>
+              </a>
+            );
+          }
+
+          // If any other link is active (Course, About us, etc.), it uses the underline styling
+          if (isActive) {
+            return (
+              <div
+                key={link.label}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                }}
+              >
+                <a
+                  href={link.href}
+                  onClick={e => handleLinkClick(e, link.href, link.label)}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '14px',
+                    fontWeight: '500',
+                    color: '#2d2d2d',
+                    textDecoration: 'none',
+                    padding: '4px 8px',
+                    transition: 'all 0.2s ease',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  <span>{link.label} •</span>
+                </a>
+                <div
+                  style={{
+                    width: '48px',
+                    height: '1.5px',
+                    backgroundColor: '#DE896A',
+                    marginTop: '4px',
+                    marginLeft: '8px',
+                  }}
+                />
+              </div>
+            );
+          }
+
+          // Inactive links
           return (
             <a
               key={link.label}
@@ -340,24 +429,18 @@ export default function Navbar() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontSize: '14px',
-                fontWeight: isActive ? '500' : '400',
-                color: isActive ? '#2d2d2d' : '#444444',
+                fontWeight: '400',
+                color: '#444444',
                 textDecoration: 'none',
-                backgroundColor: isActive ? '#F9EAE1' : 'transparent',
-                backgroundImage: isActive
-                  ? 'linear-gradient(258.79deg, rgba(229, 170, 102, 0.3) -13.56%, rgba(255, 165, 129, 0.3) -13.56%, rgba(221, 161, 108, 0.3) 18.23%, rgba(230, 242, 246, 0.3) 53.64%, rgba(202, 185, 246, 0.3) 91.85%, rgba(112, 48, 177, 0.3) 119.62%)'
-                  : 'none',
-                padding: isActive ? '12px 24px' : '4px 8px',
-                borderRadius: '14px',
-                boxShadow: isActive ? '0 4px 18px rgba(0, 0, 0, 0.03)' : 'none',
+                padding: '4px 8px',
                 transition: 'all 0.2s ease',
                 whiteSpace: 'nowrap',
               }}
               onMouseEnter={e => {
-                if (!isActive) e.currentTarget.style.color = '#111111';
+                e.currentTarget.style.color = '#111111';
               }}
               onMouseLeave={e => {
-                if (!isActive) e.currentTarget.style.color = '#444444';
+                e.currentTarget.style.color = '#444444';
               }}
             >
               <span>{link.label}</span>

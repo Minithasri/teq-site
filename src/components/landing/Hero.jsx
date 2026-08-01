@@ -1,10 +1,31 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Monitor, ArrowDown } from 'lucide-react';
+
+/**
+ * Entrance animation variants — staggered reveal on initial page load.
+ * When prefers-reduced-motion is active, only opacity is animated.
+ */
+function getVariants(reducedMotion) {
+  return {
+    hidden: reducedMotion ? { opacity: 0 } : { opacity: 0, y: 36 },
+    visible: reducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 },
+  };
+}
+
+const STAGGER = 0.14; // seconds between each child element
+
+const transition = {
+  duration: 0.75,
+  ease: [0.25, 0.46, 0.45, 0.94], // smooth ease-out-quart
+};
 
 export default function Hero() {
   const videoRef = useRef(null);
+  const shouldReduceMotion = useReducedMotion();
+  const variants = getVariants(shouldReduceMotion);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -69,8 +90,11 @@ export default function Hero() {
         }}
       />
 
-      {/* Main Content Area */}
-      <div
+      {/* Main Content Area — orchestrated stagger entrance */}
+      <motion.div
+        initial='hidden'
+        animate='visible'
+        transition={{ staggerChildren: STAGGER, delayChildren: 0.1 }}
         style={{
           position: 'relative',
           zIndex: 2,
@@ -81,41 +105,45 @@ export default function Hero() {
           maxWidth: '1350px',
         }}
       >
-        {/* Main Headline - Exact Font Weight & Sizing matching reference image */}
-        <h1
-          style={{
-            margin: 0,
-            lineHeight: 1.08,
-            fontFamily: "'Outfit', sans-serif",
-          }}
+        {/* Main Headline */}
+        <motion.h1
+          variants={variants}
+          transition={transition}
+          style={{ margin: 0, lineHeight: 1.08, fontFamily: "'Outfit', sans-serif" }}
         >
-          <span
+          <motion.span
+            variants={variants}
+            transition={{ ...transition, duration: 0.8 }}
             style={{
               display: 'block',
               fontSize: 'clamp(52px, 6.5vw, 92px)',
-              fontWeight: 500 /* Medium weight matching design */,
-              color: '#DE896A' /* Coral brand tone */,
+              fontWeight: 500,
+              color: '#DE896A',
               letterSpacing: '-0.025em',
             }}
           >
             Master Claude
-          </span>
-          <span
+          </motion.span>
+          <motion.span
+            variants={variants}
+            transition={{ ...transition, duration: 0.8, delay: STAGGER }}
             style={{
               display: 'block',
               fontSize: 'clamp(48px, 6vw, 86px)',
-              fontWeight: 400 /* Regular weight matching design */,
-              color: '#2a2d34' /* Dark charcoal tone */,
+              fontWeight: 400,
+              color: '#2a2d34',
               letterSpacing: '-0.025em',
               marginTop: '2px',
             }}
           >
             before your job demands it.
-          </span>
-        </h1>
+          </motion.span>
+        </motion.h1>
 
-        {/* Action Buttons - Matching Pill Styling */}
-        <div
+        {/* Action Buttons */}
+        <motion.div
+          variants={variants}
+          transition={{ ...transition, delay: STAGGER * 2 }}
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -191,15 +219,13 @@ export default function Hero() {
           >
             Talk to Us
           </a>
-        </div>
+        </motion.div>
 
         {/* Bouncing Arrow Indicator */}
-        <div
-          style={{
-            marginTop: '52px',
-            display: 'flex',
-            alignItems: 'center',
-          }}
+        <motion.div
+          variants={variants}
+          transition={{ ...transition, delay: STAGGER * 3 }}
+          style={{ marginTop: '52px', display: 'flex', alignItems: 'center' }}
         >
           <a
             href='#course'
@@ -213,8 +239,8 @@ export default function Hero() {
           >
             <ArrowDown size={28} strokeWidth={1.8} />
           </a>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <style jsx>{`
         @keyframes bounceDown {

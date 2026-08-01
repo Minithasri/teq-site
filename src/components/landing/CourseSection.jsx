@@ -119,7 +119,10 @@ export default function CourseSection() {
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach(t => t.kill());
+      // Only kill this component's own ScrollTrigger — not all of them.
+      // Killing getAll() would destroy the HomeClient transition zone ST.
+      if (tl.scrollTrigger) tl.scrollTrigger.kill();
+      tl.kill();
       ScrollTrigger.defaults({ scroller: undefined, pinType: undefined });
     };
   }, []);
@@ -300,17 +303,15 @@ export default function CourseSection() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'center', // Centers the grid horizontally inside the right panel
-          padding: '0 16px',
+          paddingLeft: '15px', // Coral strip framing the left side of the grid
           zIndex: 3, // above the coral block
         }}
       >
         <div
           style={{
             width: '100%',
-            maxWidth: '620px', // Constrains the grid width so it sits nicely on the coral background
             display: 'flex',
-            flexDirection: 'column', // coral gap between rows
+            flexDirection: 'column',
           }}
         >
           {courseDetails.map((item, idx) => {
@@ -325,24 +326,25 @@ export default function CourseSection() {
                 style={{
                   display: 'flex',
                   alignItems: 'stretch',
-                  border: '1px solid #ffffff', // white border around the content box
-                  backgroundColor: '#ffffff', // for the vertical white grid line
-                  // gap: '1px', // width of the vertical white grid line
+                  width: '100%',
+                  borderTop: '1px solid #ffffff',
+                  borderBottom: idx === courseDetails.length - 1 ? '1px solid #ffffff' : 'none',
                 }}
               >
                 {/* Label box */}
                 <div
                   style={{
-                    width: isEven ? '180px' : '260px', // Staggers the internal boundary!
+                    width: isEven ? '200px' : '270px', // Staggers the internal vertical boundary
                     backgroundColor: isEven ? '#ffffff' : '#DE896A',
-                    padding: '24px 32px', // Uniform padding keeps left text vertically aligned
+                    padding: '22px 28px', // Uniform padding
                     display: 'flex',
                     alignItems: 'center',
-                    fontSize: '14px',
+                    fontSize: '15px',
                     fontWeight: 600,
                     color: isEven ? '#DE896A' : '#111111',
                     flexShrink: 0,
-                    letterSpacing: '0.02em',
+                    letterSpacing: '0.01em',
+                    borderRight: '1px solid #ffffff', // Crisp white vertical grid line
                   }}
                 >
                   {item.label}
@@ -351,12 +353,12 @@ export default function CourseSection() {
                 {/* Value box */}
                 <div
                   style={{
-                    flex: 1, // Takes remaining width
+                    flex: 1, // Takes remaining width to the end of screen
                     backgroundColor: isEven ? '#DE896A' : '#ffffff',
-                    padding: '24px 32px', // Uniform padding keeps right text aligned relative to the internal boundary
+                    padding: '22px 28px', // Uniform padding
                     display: 'flex',
                     alignItems: 'center',
-                    fontSize: '14px',
+                    fontSize: '15px',
                     fontWeight: 500,
                     color: '#111111',
                     letterSpacing: '0.01em',

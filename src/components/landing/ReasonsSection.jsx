@@ -5,10 +5,10 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const reasons = [
-  { num: '01', text: 'One course, taught fully' },
-  { num: '02', text: 'Assessed, not attended' },
-  { num: '03', text: 'Placed at your real level' },
-  { num: '04', text: 'Hiring is part of the job' },
+  { num: '01', text: 'Assessment' },
+  { num: '02', text: 'Get Trained' },
+  { num: '03', text: 'Get Certified' },
+  { num: '04', text: 'Placement Guarantee' },
 ];
 
 export default function ReasonsSection() {
@@ -34,8 +34,6 @@ export default function ReasonsSection() {
       pinSpacing: true,
       invalidateOnRefresh: true,
       onUpdate: self => {
-        // Calculate active index based on scroll progress (0 to 1)
-        // We have 4 items, so indices 0, 1, 2, 3
         const progress = self.progress;
         let index = Math.floor(progress * 4);
         if (index > 3) index = 3;
@@ -94,7 +92,7 @@ export default function ReasonsSection() {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            paddingLeft: '80px',
+            paddingLeft: '60px',
             paddingRight: '40px',
           }}
         >
@@ -152,7 +150,7 @@ export default function ReasonsSection() {
                       </div>
                       <span
                         style={{
-                          fontSize: '16px',
+                          fontSize: '18px',
                           fontWeight: 600,
                           color: '#1a1a1a',
                           transition: 'color 0.3s',
@@ -164,9 +162,9 @@ export default function ReasonsSection() {
                   ) : (
                     <span
                       style={{
-                        fontSize: '16px',
-                        fontWeight: 400,
-                        color: '#999999',
+                        fontSize: '18px',
+                        fontWeight: 500,
+                        color: '#b0b0b0',
                         transition: 'color 0.3s',
                         paddingLeft: '48px', // Align with text that has the 32px box + 16px gap
                       }}

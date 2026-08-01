@@ -78,7 +78,9 @@ export default function Features() {
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach(t => t.kill());
+      // Only kill this component's own ST, not all of them globally.
+      if (tl.scrollTrigger) tl.scrollTrigger.kill();
+      tl.kill();
     };
   }, []);
 
@@ -95,13 +97,27 @@ export default function Features() {
         fontFamily: "'Outfit', sans-serif",
       }}
     >
-      {/* ── Content Wrapper (starts after the 200px sidebar) ──────────────── */}
+      {/* ── Small section/strip after menu ───────────────────────────────── */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: '200px',
+          width: '80px',
+          height: '100%',
+          backgroundColor: '#F8F7F6',
+          borderRight: '1px solid rgba(0,0,0,0.04)',
+          zIndex: 1,
+        }}
+      />
+
+      {/* ── Main Content Wrapper (starts after 200px menu + 80px small section) ── */}
       <div
         style={{
           position: 'relative',
-          width: 'calc(100% - 200px)',
+          width: 'calc(100% - 280px)',
           height: '100%',
-          marginLeft: '200px',
+          marginLeft: '280px',
         }}
       >
         {/* ── Left column: text content ─────────────────────────────────────── */}
@@ -115,7 +131,7 @@ export default function Features() {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            paddingLeft: '80px',
+            paddingLeft: '60px',
             paddingRight: '60px',
             zIndex: 1,
           }}

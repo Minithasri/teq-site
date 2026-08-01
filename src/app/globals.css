@@ -164,3 +164,34 @@ body {
     opacity: 1;
   }
 }
+
+/* ======================================================
+   Scroll Transition — Performance & Accessibility
+====================================================== */
+
+/* GPU-compositing hint for scroll-driven motion elements */
+.scroll-exit-home,
+.scroll-enter-section2 {
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Honour prefers-reduced-motion — disable geometric transforms,
+   keep opacity crossfade for context continuity */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-exit-home,
+  .scroll-enter-section2 {
+    transform: none !important;
+    filter: none !important;
+    will-change: opacity;
+  }
+
+  /* Suppress bouncing arrow on motion-reduced devices */
+  @keyframes bounceDown {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
