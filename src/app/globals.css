@@ -195,3 +195,18 @@ body {
     }
   }
 }
+
+/* Hide Netlify Feedback/Drawer floating button */
+#netlify-drawer,
+.netlify-drawer,
+netlify-drawer,
+#netlify-feedback,
+netlify-feedback,
+[data-netlify-drawer],
+[id^='netlify-'],
+[class^='netlify-'],
+[class*='netlify-feedback'] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
