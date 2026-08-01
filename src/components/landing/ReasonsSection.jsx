@@ -189,22 +189,44 @@ export default function ReasonsSection() {
             justifyContent: 'center',
           }}
         >
-          {/* We will just change the color of the placeholder box based on activeIndex to simulate images */}
           <div
             style={{
+              position: 'relative',
               width: '400px',
               height: '400px',
-              backgroundColor:
-                activeIndex === 0
-                  ? '#e0e0e0'
-                  : activeIndex === 1
-                    ? '#a0a0a0'
-                    : activeIndex === 2
-                      ? '#606060'
-                      : '#303030',
-              transition: 'background-color 0.5s ease',
+              overflow: 'hidden',
+              borderRadius: '8px',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
             }}
-          />
+          >
+            {[
+              '/images/Teq/Assignment.png',
+              '/images/Teq/trained.png',
+              '/images/Teq/Certified.png',
+              '/images/Teq/placement.png',
+            ].map((src, idx) => {
+              const isActive = activeIndex === idx;
+              return (
+                <img
+                  key={src}
+                  src={src}
+                  alt={`Reason ${idx + 1}`}
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    opacity: isActive ? 1 : 0,
+                    transform: isActive ? 'scale(1)' : 'scale(0.96)',
+                    transition: 'opacity 0.5s ease, transform 0.5s ease',
+                    pointerEvents: isActive ? 'auto' : 'none',
+                  }}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
