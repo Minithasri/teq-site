@@ -128,41 +128,19 @@ export default function CourseSection() {
     };
   }, []);
 
-  // Called by nav link — always fully resets and reveals course content,
-  // regardless of where the scroll animation left things (wipe, coral, etc.)
+  // Called by nav link — snaps to the "fully revealed" state of the course section:
+  // coral on right panel, left text visible, all 4 cards visible, wipe not started.
+  // Uses timeline's own API so GSAP scrub remains fully intact for normal scrolling.
   const revealFromNav = useCallback(() => {
-    // Let any in-progress GSAP tweens on these elements finish cleanly first
-    gsap.killTweensOf([coralBlockRef.current, leftContentRef.current, wipeRef.current]);
-    cardRefs.current.forEach(c => c && gsap.killTweensOf(c));
-
-    // 1. Immediately hide the white wipe (so it doesn't cover everything)
-    gsap.set(wipeRef.current, { scaleX: 0, transformOrigin: 'left' });
-
-    // 2. Move coral to the right panel (revealed state)
-    gsap.set(coralBlockRef.current, { x: '100%' });
-
-    // 3. Reveal left text
-    gsap.to(leftContentRef.current, {
-      opacity: 1,
-      y: 0,
-      duration: 0.4,
-      ease: 'power2.out',
-      delay: 0.15,
-    });
-
-    // 4. Stagger in the detail cards
-    cardRefs.current.forEach((card, idx) => {
-      if (!card) return;
-      gsap.to(card, {
-        opacity: 1,
-        y: 0,
-        duration: 0.35,
-        ease: 'power2.out',
-        delay: 0.3 + idx * 0.08,
-      });
-    });
-
-    // Mark as revealed so click-handler won't fight us
+    const tl = tlRef.current;
+    if (tl) {
+      // 2800 / 3500 ≈ 0.8 → all content visible, white wipe hasn't fired yet
+      const TARGET_PROGRESS = 2800 / 3500;
+      // Snap timeline to this progress instantly (suppressEvents = true)
+      // GSAP scrub will see scroll position also at 80% and won't try to re-animate
+      tl.progress(TARGET_PROGRESS, true);
+    }
+    // Mark as revealed — click on the section itself won't re-run revealAll
     revealedRef.current = true;
     clickedRef.current = true;
   }, []);

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { LayoutGrid, Phone } from 'lucide-react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -76,21 +77,45 @@ export default function Navbar() {
       return;
     }
 
-    // ── Dispatch reveal events so sections show content immediately ──────
-    // CourseSection starts hidden and needs a signal to play its reveal animation.
+    // ── Course: special handling — getBoundingClientRect is unreliable for ─
+    // GSAP-pinned elements (returns 0 when section is currently pinned).    ─
+    // Instead we use ScrollTrigger.getAll() to read the accurate st.start   ─
+    // position, then scroll 2800px into the 3500px pin zone (≈80% progress). ─
     if (href === '#course') {
+      // Snap the timeline to fully-revealed state first (no scrub lag)
       window.dispatchEvent(new CustomEvent('course:reveal'));
+
+      const loader = document.getElementById('gsap-transition-loader');
+      const scroller = document.getElementById('main-scroll-container');
+      if (loader && window.lenis) {
+        const loaderTl = gsap.timeline();
+        loaderTl
+          .set(loader, { transformOrigin: 'top', pointerEvents: 'auto' })
+          .to(loader, { scaleY: 1, duration: 0.55, ease: 'power3.inOut' })
+          .call(() => {
+            // Find the course section's ScrollTrigger by its trigger element id
+            const courseST = ScrollTrigger.getAll().find(st => st.trigger?.id === 'course');
+            // st.start is the exact scroll position where the pin begins—always accurate
+            const targetScroll = courseST
+              ? courseST.start + 2800
+              : scroller
+                ? scroller.scrollTop
+                : 0;
+            window.lenis.scrollTo(targetScroll, { immediate: true });
+          })
+          .set(loader, { transformOrigin: 'bottom' })
+          .to(loader, { scaleY: 0, duration: 0.55, ease: 'power3.inOut', delay: 0.1 })
+          .set(loader, { pointerEvents: 'none', transformOrigin: 'top' });
+      }
+      return; // Course is fully handled above
     }
-    // Features (About us) feature cards start hidden — signal them to reveal.
+
+    // ── Features (About us) feature cards start hidden — signal them to reveal
     if (href === '#about') {
       window.dispatchEvent(new CustomEvent('about:reveal'));
     }
 
     // ── All other links: measure true position from DOM right now ────────
-    // Using getBoundingClientRect() + scrollTop gives a position that is
-    // always accurate, even after GSAP has pinned or unpinned sections,
-    // because it reflects the live state of the scroll container at the
-    // moment of the click — no hardcoded offsets needed.
     const target = document.querySelector(href);
     if (!target) return;
 
