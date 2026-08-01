@@ -20,6 +20,7 @@ export default function CourseSection() {
   const tlRef = useRef(null);
   const wipeRef = useRef(null);
   const clickedRef = useRef(false);
+  const revealedRef = useRef(false);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -127,11 +128,51 @@ export default function CourseSection() {
     };
   }, []);
 
-  const handleClick = useCallback(() => {
-    if (clickedRef.current) return;
+  // Called by nav link — always fully resets and reveals course content,
+  // regardless of where the scroll animation left things (wipe, coral, etc.)
+  const revealFromNav = useCallback(() => {
+    // Let any in-progress GSAP tweens on these elements finish cleanly first
+    gsap.killTweensOf([coralBlockRef.current, leftContentRef.current, wipeRef.current]);
+    cardRefs.current.forEach(c => c && gsap.killTweensOf(c));
+
+    // 1. Immediately hide the white wipe (so it doesn't cover everything)
+    gsap.set(wipeRef.current, { scaleX: 0, transformOrigin: 'left' });
+
+    // 2. Move coral to the right panel (revealed state)
+    gsap.set(coralBlockRef.current, { x: '100%' });
+
+    // 3. Reveal left text
+    gsap.to(leftContentRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 0.4,
+      ease: 'power2.out',
+      delay: 0.15,
+    });
+
+    // 4. Stagger in the detail cards
+    cardRefs.current.forEach((card, idx) => {
+      if (!card) return;
+      gsap.to(card, {
+        opacity: 1,
+        y: 0,
+        duration: 0.35,
+        ease: 'power2.out',
+        delay: 0.3 + idx * 0.08,
+      });
+    });
+
+    // Mark as revealed so click-handler won't fight us
+    revealedRef.current = true;
+    clickedRef.current = true;
+  }, []);
+
+  // Called on click — only runs once (first click)
+  const revealAll = useCallback(() => {
+    if (revealedRef.current) return;
+    revealedRef.current = true;
     clickedRef.current = true;
 
-    // Instantly reveal everything by animating directly (no scroll needed)
     gsap.to(coralBlockRef.current, { x: '100%', duration: 0.5, ease: 'power3.inOut' });
     gsap.to(leftContentRef.current, {
       opacity: 1,
@@ -151,6 +192,16 @@ export default function CourseSection() {
       });
     });
   }, []);
+
+  // Nav dispatches 'course:reveal' — use the always-run version
+  useEffect(() => {
+    window.addEventListener('course:reveal', revealFromNav);
+    return () => window.removeEventListener('course:reveal', revealFromNav);
+  }, [revealFromNav]);
+
+  const handleClick = useCallback(() => {
+    revealAll();
+  }, [revealAll]);
 
   return (
     <section
