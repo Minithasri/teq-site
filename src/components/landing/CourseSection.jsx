@@ -20,6 +20,7 @@ export default function CourseSection() {
   const tlRef = useRef(null);
   const wipeRef = useRef(null);
   const clickedRef = useRef(false);
+  const revealedRef = useRef(false);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -127,11 +128,29 @@ export default function CourseSection() {
     };
   }, []);
 
-  const handleClick = useCallback(() => {
-    if (clickedRef.current) return;
+  // Called by nav link — snaps to the "fully revealed" state of the course section:
+  // coral on right panel, left text visible, all 4 cards visible, wipe not started.
+  // Uses timeline's own API so GSAP scrub remains fully intact for normal scrolling.
+  const revealFromNav = useCallback(() => {
+    const tl = tlRef.current;
+    if (tl) {
+      // 2800 / 3500 ≈ 0.8 → all content visible, white wipe hasn't fired yet
+      const TARGET_PROGRESS = 2800 / 3500;
+      // Snap timeline to this progress instantly (suppressEvents = true)
+      // GSAP scrub will see scroll position also at 80% and won't try to re-animate
+      tl.progress(TARGET_PROGRESS, true);
+    }
+    // Mark as revealed — click on the section itself won't re-run revealAll
+    revealedRef.current = true;
+    clickedRef.current = true;
+  }, []);
+
+  // Called on click — only runs once (first click)
+  const revealAll = useCallback(() => {
+    if (revealedRef.current) return;
+    revealedRef.current = true;
     clickedRef.current = true;
 
-    // Instantly reveal everything by animating directly (no scroll needed)
     gsap.to(coralBlockRef.current, { x: '100%', duration: 0.5, ease: 'power3.inOut' });
     gsap.to(leftContentRef.current, {
       opacity: 1,
@@ -151,6 +170,16 @@ export default function CourseSection() {
       });
     });
   }, []);
+
+  // Nav dispatches 'course:reveal' — use the always-run version
+  useEffect(() => {
+    window.addEventListener('course:reveal', revealFromNav);
+    return () => window.removeEventListener('course:reveal', revealFromNav);
+  }, [revealFromNav]);
+
+  const handleClick = useCallback(() => {
+    revealAll();
+  }, [revealAll]);
 
   return (
     <section

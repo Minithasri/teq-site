@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { LayoutGrid, ExternalLink, ShieldCheck, Lock, Package, Settings } from 'lucide-react';
@@ -83,6 +83,20 @@ export default function Features() {
       tl.kill();
     };
   }, []);
+
+  // Instantly reveal all features — callable when navigating via nav link
+  const revealAll = useCallback(() => {
+    featureRefs.current.forEach(feat => {
+      if (feat) gsap.to(feat, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' });
+    });
+  }, []);
+
+  // Listen for the custom event dispatched by the Navbar when About us is clicked
+  useEffect(() => {
+    const handler = () => revealAll();
+    window.addEventListener('about:reveal', handler);
+    return () => window.removeEventListener('about:reveal', handler);
+  }, [revealAll]);
 
   return (
     <section

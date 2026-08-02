@@ -206,31 +206,23 @@ export default function ReasonsSection() {
             justifyContent: 'center',
           }}
         >
-          {/* Illustration frame — crossfades based on activeIndex */}
+          {/* We will just change the color of the placeholder box based on activeIndex to simulate images */}
           <div
             style={{
+              position: 'relative',
               width: '400px',
               height: '400px',
-              position: 'relative',
+              backgroundColor:
+                activeIndex === 0
+                  ? '#e0e0e0'
+                  : activeIndex === 1
+                    ? '#a0a0a0'
+                    : activeIndex === 2
+                      ? '#606060'
+                      : '#303030',
+              transition: 'background-color 0.5s ease',
             }}
-          >
-            {reasons.map((reason, idx) => (
-              <img
-                key={reason.num}
-                src={reason.frame}
-                alt={reason.text}
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain',
-                  opacity: activeIndex === idx ? 1 : 0,
-                  transition: 'opacity 0.5s ease',
-                }}
-              />
-            ))}
-          </div>
+          />
         </div>
       </div>
     </section>

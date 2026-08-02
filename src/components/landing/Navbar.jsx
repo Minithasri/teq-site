@@ -5,6 +5,7 @@ import { LayoutGrid, Phone } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -19,10 +20,44 @@ export default function Navbar() {
   const activeLinkRef = useRef('Home');
   activeLinkRef.current = activeLink;
 
+  // Helper: compute the absolute scroll position of an element inside the scroller.
+  // This is stable regardless of GSAP pin/unpin state because it uses live DOM measurements.
+  const getAbsoluteScrollTop = el => {
+    const scroller = document.getElementById('main-scroll-container');
+    if (!el || !scroller) return 0;
+    const elRect = el.getBoundingClientRect();
+    const scrollerRect = scroller.getBoundingClientRect();
+    return scroller.scrollTop + (elRect.top - scrollerRect.top);
+  };
+
+  const scrollToTarget = (absoluteTop, withLoader = false) => {
+    const loader = document.getElementById('gsap-transition-loader');
+    const scroller = document.getElementById('main-scroll-container');
+
+    if (withLoader && loader && window.lenis) {
+      const tl = gsap.timeline();
+      tl.set(loader, { transformOrigin: 'top', pointerEvents: 'auto' })
+        .to(loader, { scaleY: 1, duration: 0.55, ease: 'power3.inOut' })
+        .call(() => {
+          window.lenis.scrollTo(absoluteTop, { immediate: true });
+        })
+        .set(loader, { transformOrigin: 'bottom' })
+        .to(loader, { scaleY: 0, duration: 0.55, ease: 'power3.inOut', delay: 0.1 })
+        .set(loader, { pointerEvents: 'none', transformOrigin: 'top' });
+    } else if (window.lenis) {
+      window.lenis.scrollTo(absoluteTop, {
+        duration: 1.8,
+        easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      });
+    } else if (scroller) {
+      scroller.scrollTo({ top: absoluteTop, behavior: 'smooth' });
+    }
+  };
+
   const handleLinkClick = (e, href, label) => {
     e.preventDefault();
 
-    // Disable onClick action for Blog and Testimonial
+    // Disable onClick action for Blog and Testimonial (no scroll destination)
     if (
       label === 'Blog' ||
       label === 'Testimonial' ||
@@ -37,70 +72,56 @@ export default function Navbar() {
       setActiveLink(href.replace('#', ''));
     }
 
-    const target = document.querySelector(href);
-
-    // GSAP Loader animation for main sections (Home, Course, About us)
-    if (href === '#home' || href === '#course' || href === '#about') {
-      const loader = document.getElementById('gsap-transition-loader');
-      if (loader && window.lenis) {
-        const tl = gsap.timeline();
-
-        // 1. Slide loader down from top
-        tl.set(loader, { transformOrigin: 'top', pointerEvents: 'auto' })
-          .to(loader, {
-            scaleY: 1,
-            duration: 0.6,
-            ease: 'power3.inOut',
-          })
-          .call(() => {
-            // 2. Scroll instantly while screen is fully covered
-            if (href === '#home') {
-              window.lenis.scrollTo(0, { immediate: true });
-            } else if (target) {
-              let scrollOffset = 0;
-              if (href === '#course') scrollOffset = 3000;
-              if (href === '#about') scrollOffset = 2000;
-
-              window.lenis.scrollTo(target, { offset: scrollOffset, immediate: true });
-            }
-          })
-          // 3. Slide loader down to bottom to reveal target section
-          .set(loader, { transformOrigin: 'bottom' })
-          .to(loader, {
-            scaleY: 0,
-            duration: 0.6,
-            ease: 'power3.inOut',
-            delay: 0.1, // tiny pause
-          })
-          // Reset
-          .set(loader, { pointerEvents: 'none', transformOrigin: 'top' });
-
-        return; // Skip standard scroll
-      }
-    }
-
+    // ── Home: always jump to absolute top ───────────────────────────────
     if (href === '#home') {
-      if (window.lenis) {
-        window.lenis.scrollTo(0, { duration: 1.5 });
-      } else {
-        const scroller = document.getElementById('main-scroll-container');
-        if (scroller) scroller.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      scrollToTarget(0, true);
       return;
     }
 
-    if (target && window.lenis) {
-      let offset = 0;
-      if (href === '#about') offset = 2000;
+    // ── Course: special handling — getBoundingClientRect is unreliable for ─
+    // GSAP-pinned elements (returns 0 when section is currently pinned).    ─
+    // Instead we use ScrollTrigger.getAll() to read the accurate st.start   ─
+    // position, then scroll 2800px into the 3500px pin zone (≈80% progress). ─
+    if (href === '#course') {
+      // Snap the timeline to fully-revealed state first (no scrub lag)
+      window.dispatchEvent(new CustomEvent('course:reveal'));
 
-      window.lenis.scrollTo(target, {
-        offset,
-        duration: 2.2,
-        easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      });
-    } else if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      const loader = document.getElementById('gsap-transition-loader');
+      const scroller = document.getElementById('main-scroll-container');
+      if (loader && window.lenis) {
+        const loaderTl = gsap.timeline();
+        loaderTl
+          .set(loader, { transformOrigin: 'top', pointerEvents: 'auto' })
+          .to(loader, { scaleY: 1, duration: 0.55, ease: 'power3.inOut' })
+          .call(() => {
+            // Find the course section's ScrollTrigger by its trigger element id
+            const courseST = ScrollTrigger.getAll().find(st => st.trigger?.id === 'course');
+            // st.start is the exact scroll position where the pin begins—always accurate
+            const targetScroll = courseST
+              ? courseST.start + 2800
+              : scroller
+                ? scroller.scrollTop
+                : 0;
+            window.lenis.scrollTo(targetScroll, { immediate: true });
+          })
+          .set(loader, { transformOrigin: 'bottom' })
+          .to(loader, { scaleY: 0, duration: 0.55, ease: 'power3.inOut', delay: 0.1 })
+          .set(loader, { pointerEvents: 'none', transformOrigin: 'top' });
+      }
+      return; // Course is fully handled above
     }
+
+    // ── Features (About us) feature cards start hidden — signal them to reveal
+    if (href === '#about') {
+      window.dispatchEvent(new CustomEvent('about:reveal'));
+    }
+
+    // ── All other links: measure true position from DOM right now ────────
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    const absoluteTop = getAbsoluteScrollTop(target);
+    scrollToTarget(absoluteTop, true);
   };
 
   useEffect(() => {
