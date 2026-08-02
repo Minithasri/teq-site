@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { LayoutGrid, Phone } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { gsap } from 'gsap';
 
 const navLinks = [
@@ -269,9 +270,8 @@ export default function Navbar() {
             pointerEvents: activeLink === 'Home' ? 'auto' : 'none',
           }}
         >
-          <a
-            href='#course'
-            onClick={e => handleLinkClick(e, '#course', 'Course')}
+          <Link
+            href='/claude-course'
             style={{
               backgroundColor: '#ffffff',
               color: '#333333',
@@ -293,7 +293,7 @@ export default function Navbar() {
             }}
           >
             Claude Course
-          </a>
+          </Link>
           <a
             href='#contact'
             onClick={e => handleLinkClick(e, '#contact', null)}

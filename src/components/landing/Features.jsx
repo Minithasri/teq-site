@@ -45,7 +45,7 @@ export default function Features() {
 
     // Set initial states for features only
     featureRefs.current.forEach(feat => {
-      if (feat) gsap.set(feat, { opacity: 0, y: 30 });
+      if (feat) gsap.set(feat, { opacity: 0, x: -60 });
     });
 
     const tl = gsap.timeline({
@@ -69,7 +69,7 @@ export default function Features() {
         feat,
         {
           opacity: 1,
-          y: 0,
+          x: 0,
           duration: 1,
           ease: 'power2.out',
         },

@@ -60,35 +60,35 @@ export default function SupportSection() {
     offset: ['start end', 'start 0.1'],
   });
 
-  // Left graphic motion: scale 0.92 -> 1, Y shift 45px -> 0px -> -25px (parallax)
+  // Left graphic motion: scale 0.92 -> 1, X shift in from the left (parallax)
   const imageScale = useTransform(scrollYProgress, [0, 0.6], [0.92, 1]);
-  const imageY = useTransform(scrollYProgress, [0, 0.6, 1], ['45px', '0px', '-25px']);
+  const imageX = useTransform(scrollYProgress, [0, 0.6, 1], ['-45px', '0px', '-25px']);
   const imageOpacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
-  // Right content motions: progressive staggered reveal
-  // 1. Heading (opacity 0->1, Y 32px->0px, scale 0.96->1)
+  // Right content motions: progressive staggered reveal, sliding in from the left
+  // 1. Heading (opacity 0->1, X -32px->0px, scale 0.96->1)
   const headingOpacity = useTransform(scrollYProgress, [0.08, 0.35], [0, 1]);
-  const headingY = useTransform(scrollYProgress, [0.08, 0.35], ['32px', '0px']);
+  const headingX = useTransform(scrollYProgress, [0.08, 0.35], ['-32px', '0px']);
   const headingScale = useTransform(scrollYProgress, [0.08, 0.35], [0.96, 1]);
 
-  // 2. Paragraph (opacity 0->1, Y 24px->0px)
+  // 2. Paragraph (opacity 0->1, X -24px->0px)
   const paragraphOpacity = useTransform(scrollYProgress, [0.18, 0.45], [0, 1]);
-  const paragraphY = useTransform(scrollYProgress, [0.18, 0.45], ['24px', '0px']);
+  const paragraphX = useTransform(scrollYProgress, [0.18, 0.45], ['-24px', '0px']);
 
-  // 3. Checklist (opacity 0->1, Y 20px->0px)
+  // 3. Checklist (opacity 0->1, X -20px->0px)
   const checklistOpacity = useTransform(scrollYProgress, [0.28, 0.55], [0, 1]);
-  const checklistY = useTransform(scrollYProgress, [0.28, 0.55], ['20px', '0px']);
+  const checklistX = useTransform(scrollYProgress, [0.28, 0.55], ['-20px', '0px']);
 
-  // 4. Button (opacity 0->1, Y 16px->0px)
+  // 4. Button (opacity 0->1, X -16px->0px)
   const buttonOpacity = useTransform(scrollYProgress, [0.38, 0.65], [0, 1]);
-  const buttonY = useTransform(scrollYProgress, [0.38, 0.65], ['16px', '0px']);
+  const buttonX = useTransform(scrollYProgress, [0.38, 0.65], ['-16px', '0px']);
 
   // Computed styles respecting prefers-reduced-motion
   const leftStyle = shouldReduceMotion
     ? {}
     : {
         scale: imageScale,
-        y: imageY,
+        x: imageX,
         opacity: imageOpacity,
         willChange: 'transform, opacity',
       };
@@ -97,7 +97,7 @@ export default function SupportSection() {
     ? {}
     : {
         opacity: headingOpacity,
-        y: headingY,
+        x: headingX,
         scale: headingScale,
         willChange: 'transform, opacity',
       };
@@ -106,7 +106,7 @@ export default function SupportSection() {
     ? {}
     : {
         opacity: paragraphOpacity,
-        y: paragraphY,
+        x: paragraphX,
         willChange: 'transform, opacity',
       };
 
@@ -114,7 +114,7 @@ export default function SupportSection() {
     ? {}
     : {
         opacity: checklistOpacity,
-        y: checklistY,
+        x: checklistX,
         willChange: 'transform, opacity',
       };
 
@@ -122,7 +122,7 @@ export default function SupportSection() {
     ? {}
     : {
         opacity: buttonOpacity,
-        y: buttonY,
+        x: buttonX,
         willChange: 'transform, opacity',
       };
 

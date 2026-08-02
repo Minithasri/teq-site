@@ -1,9 +1,13 @@
 'use client';
 
 import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function FooterCTA() {
   const videoRef = useRef(null);
+  const sectionRef = useRef(null);
+  const contentRef = useRef(null);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -16,9 +20,30 @@ export default function FooterCTA() {
     }
   }, []);
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const scroller = document.getElementById('main-scroll-container');
+    if (!scroller) return;
+
+    ScrollTrigger.defaults({ scroller });
+
+    gsap.set(contentRef.current, { opacity: 0, x: -60 });
+
+    const st = ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: 'top 80%',
+      end: 'top 30%',
+      scrub: 1,
+      animation: gsap.to(contentRef.current, { opacity: 1, x: 0, ease: 'none' }),
+    });
+
+    return () => st.kill();
+  }, []);
+
   return (
     <section
       id='footer-cta'
+      ref={sectionRef}
       style={{
         position: 'relative',
         width: '100%',
@@ -52,6 +77,7 @@ export default function FooterCTA() {
         }}
       />
       <div
+        ref={contentRef}
         style={{
           position: 'relative',
           zIndex: 2,

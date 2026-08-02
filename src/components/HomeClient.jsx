@@ -1,14 +1,7 @@
 'use client';
 
 import { useRef, useEffect, useState } from 'react';
-import {
-  motion,
-  AnimatePresence,
-  useMotionValue,
-  useTransform,
-  useMotionTemplate,
-  useReducedMotion,
-} from 'framer-motion';
+import { AnimatePresence, useReducedMotion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from '@/components/landing/Navbar';
@@ -30,14 +23,16 @@ import AppLoader from '@/components/AppLoader';
  *
  * Architecture:
  *  1. A 250vh "transition zone" holds a sticky 100vh container.
- *     Inside it, the Home section exits cinematically and a Section 2
- *     backdrop rises from below — both driven by a shared scroll progress
- *     MotionValue (0 → 1 over the 150vh sticky window).
+ *     Inside it, the Home section slides out to the right and the
+ *     Section 2 panel slides in from the left — a single GSAP scrub
+ *     timeline drives both with `xPercent`, reversible on scroll-up.
  *  2. All existing content sections follow naturally after the transition
  *     zone, preserving every GSAP ScrollTrigger animation unchanged.
  *
- * Scroll progress is driven by GSAP ScrollTrigger (already integrated
- * with Lenis) and fed into Framer Motion via useMotionValue + useTransform.
+ * The slide is driven entirely by GSAP ScrollTrigger (scrub, already
+ * integrated with Lenis) acting directly on the DOM via refs — no
+ * React-state bridge — so it stays on the compositor (transform only,
+ * no blur/scale/border-radius) and tracks the scrollbar 1:1.
  */
 export default function HomeClient() {
   // ── Loader state (false = loader visible, true = loader done/unmounted) ──
@@ -59,103 +54,75 @@ export default function HomeClient() {
 
   // ── Refs ──────────────────────────────────────────────────────────────
   const transitionRef = useRef(null); // The 250vh transition zone wrapper
+  const homeRef = useRef(null); // Hero panel — slides out to the right
+  const s2Ref = useRef(null); // Section 2 panel — slides in from the left
 
   // ── Accessibility ─────────────────────────────────────────────────────
   const shouldReduceMotion = useReducedMotion();
 
-  // ── Shared scroll progress (0 → 1) driven by GSAP ScrollTrigger ──────
-  const progress = useMotionValue(0);
-
-  // ── Home section transforms ───────────────────────────────────────────
-  // Scale from 1 → 0.82 (card-shrink effect)
-  const homeScale = useTransform(progress, [0, 1], [1, 0.82]);
-  // Drift upward 0 → -10%
-  const homeY = useTransform(progress, [0, 1], ['0%', '-10%']);
-  // Fade: stay fully opaque until 40%, then vanish by 85%
-  const homeOpacity = useTransform(progress, [0, 0.4, 0.85], [1, 1, 0]);
-  // Progressive blur: none until 40%, max 10px by 100%
-  const homeBlurAmount = useTransform(progress, [0.4, 1], [0, 10]);
-  const homeFilter = useMotionTemplate`blur(${homeBlurAmount}px)`;
-  // Border radius rounds as it shrinks (card-exit feel)
-  const homeBorderRadius = useTransform(progress, [0, 0.8, 1], [0, 16, 28]);
-
-  // ── Section 2 overlay transforms ─────────────────────────────────────
-  // Rises from fully below (100%) to fully covering (0%)
-  const s2Y = useTransform(progress, [0, 1], ['100%', '0%']);
-  // Slight scale-in as it arrives
-  const s2Scale = useTransform(progress, [0, 1], [0.94, 1]);
-  // Fades in from 15% progress to 70%
-  const s2Opacity = useTransform(progress, [0.15, 0.7], [0, 1]);
-  // Top-corner radius eases away as it fully covers the screen
-  const s2TopRadius = useTransform(progress, [0, 0.7, 1], [28, 10, 0]);
-
-  // ── GSAP ScrollTrigger → drives progress ─────────────────────────────
+  // ── GSAP ScrollTrigger → drives the horizontal slide directly ─────────
+  // Home slides out to the right (xPercent 0 → 100) while Section 2 slides
+  // in from the left (xPercent -100 → 0), scrubbed 1:1 with scroll so it
+  // reverses cleanly on scroll-up. Only `transform` is touched (via
+  // xPercent), which stays on the compositor for a smooth 60fps slide.
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const scroller = document.getElementById('main-scroll-container');
-    if (!scroller || !transitionRef.current) return;
+    if (!scroller || !transitionRef.current || !homeRef.current || !s2Ref.current) return;
 
-    // This trigger spans the 250vh zone.
-    // Sticky duration = 250vh - 100vh = 150vh, so progress goes 0→1 over 150vh of actual scroll.
-    const st = ScrollTrigger.create({
-      trigger: transitionRef.current,
-      scroller,
-      start: 'top top',
-      end: 'bottom bottom',
-      onUpdate: self => {
-        progress.set(self.progress);
+    if (shouldReduceMotion) {
+      // Reduced motion: simple opacity crossfade, no movement.
+      const st = ScrollTrigger.create({
+        trigger: transitionRef.current,
+        scroller,
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true,
+        invalidateOnRefresh: true,
+        animation: gsap
+          .timeline()
+          .to(homeRef.current, { opacity: 0, ease: 'none' }, 0)
+          .fromTo(s2Ref.current, { opacity: 0 }, { opacity: 1, ease: 'none' }, 0),
+      });
+      return () => st.kill();
+    }
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: transitionRef.current,
+        scroller,
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true,
+        invalidateOnRefresh: true,
       },
-      invalidateOnRefresh: true,
     });
 
-    return () => st.kill();
-  }, [progress]);
+    tl.fromTo(homeRef.current, { xPercent: 0 }, { xPercent: 100, ease: 'none' }, 0).fromTo(
+      s2Ref.current,
+      { xPercent: -100 },
+      { xPercent: 0, ease: 'none' },
+      0
+    );
 
-  // ── Computed styles (respect prefers-reduced-motion) ──────────────────
-  const homeMotionStyle = shouldReduceMotion
-    ? {
-        position: 'absolute',
-        inset: 0,
-        opacity: homeOpacity, // keep opacity crossfade even with reduced motion
-        overflow: 'hidden',
-        willChange: 'opacity',
-      }
-    : {
-        position: 'absolute',
-        inset: 0,
-        scale: homeScale,
-        y: homeY,
-        opacity: homeOpacity,
-        filter: homeFilter,
-        borderRadius: homeBorderRadius,
-        transformOrigin: '50% 30%',
-        overflow: 'hidden',
-        willChange: 'transform, opacity, filter',
-      };
+    return () => tl.scrollTrigger?.kill();
+  }, [shouldReduceMotion]);
 
-  const s2MotionStyle = shouldReduceMotion
-    ? {
-        position: 'absolute',
-        inset: 0,
-        opacity: s2Opacity,
-        overflow: 'hidden',
-        backgroundColor: '#F8F7F6',
-        zIndex: 10,
-        willChange: 'opacity',
-      }
-    : {
-        position: 'absolute',
-        inset: 0,
-        y: s2Y,
-        scale: s2Scale,
-        opacity: s2Opacity,
-        borderTopLeftRadius: s2TopRadius,
-        borderTopRightRadius: s2TopRadius,
-        overflow: 'hidden',
-        backgroundColor: '#F8F7F6',
-        zIndex: 10,
-        willChange: 'transform, opacity',
-      };
+  const homeMotionStyle = {
+    position: 'absolute',
+    inset: 0,
+    overflow: 'hidden',
+    willChange: 'transform',
+  };
+
+  const s2MotionStyle = {
+    position: 'absolute',
+    inset: 0,
+    overflow: 'hidden',
+    backgroundColor: '#F8F7F6',
+    zIndex: 10,
+    willChange: 'transform',
+  };
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -220,13 +187,13 @@ export default function HomeClient() {
                     overflow: 'hidden',
                   }}
                 >
-                  {/* ── SECTION 1: Home exits ───────────────────────── */}
-                  <motion.div style={homeMotionStyle}>
+                  {/* ── SECTION 1: Home slides out right ─────────────── */}
+                  <div ref={homeRef} style={homeMotionStyle}>
                     <Hero />
-                  </motion.div>
+                  </div>
 
-                  {/* ── SECTION 2 backdrop: rises from below ─────────── */}
-                  <motion.div style={s2MotionStyle}>
+                  {/* ── SECTION 2 panel: slides in from the left ──────── */}
+                  <div ref={s2Ref} style={s2MotionStyle}>
                     {/*
                       This cream panel bridges visually to CourseSection
                       (same #F8F7F6 background). After the sticky zone ends,
@@ -251,7 +218,7 @@ export default function HomeClient() {
                         pointerEvents: 'none',
                       }}
                     />
-                  </motion.div>
+                  </div>
                 </div>
               </div>
               {/* ── END TRANSITION ZONE ─────────────────────────────────── */}

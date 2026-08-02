@@ -31,6 +31,7 @@ const testimonials = [
 export default function TestimonialSection() {
   const sectionRef = useRef(null);
   const carouselRef = useRef(null);
+  const leftRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -38,6 +39,16 @@ export default function TestimonialSection() {
     if (!scroller) return;
 
     ScrollTrigger.defaults({ scroller });
+
+    // Left text column slides in from the left before the carousel pins.
+    gsap.set(leftRef.current, { opacity: 0, x: -60 });
+    const introSt = ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: 'top 90%',
+      end: 'top top',
+      scrub: 1,
+      animation: gsap.to(leftRef.current, { opacity: 1, x: 0, ease: 'none' }),
+    });
 
     // The distance to scroll based on the width of the carousel minus the viewable area
     // A simple fixed value works well for 3 cards
@@ -60,6 +71,7 @@ export default function TestimonialSection() {
     });
 
     return () => {
+      introSt.kill();
       st.kill();
     };
   }, []);
@@ -104,7 +116,7 @@ export default function TestimonialSection() {
         }}
       >
         {/* ── Left column: Text ──────────────── */}
-        <div style={{ width: '40%', paddingRight: '40px', flexShrink: 0 }}>
+        <div ref={leftRef} style={{ width: '40%', paddingRight: '40px', flexShrink: 0 }}>
           <h2
             style={{
               fontSize: '32px',

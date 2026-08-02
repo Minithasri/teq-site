@@ -1,6 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
@@ -28,13 +30,50 @@ const faqs = [
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(null);
+  const sectionRef = useRef(null);
+  const leftRef = useRef(null);
+  const cardRefs = useRef([]);
 
   const toggle = idx => {
     setOpenIndex(openIndex === idx ? null : idx);
   };
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const scroller = document.getElementById('main-scroll-container');
+    if (!scroller) return;
+
+    ScrollTrigger.defaults({ scroller });
+
+    gsap.set(leftRef.current, { opacity: 0, x: -60 });
+    cardRefs.current.forEach(card => {
+      if (card) gsap.set(card, { opacity: 0, x: -40 });
+    });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 80%',
+        end: 'top 20%',
+        scrub: 1,
+      },
+    });
+
+    tl.to(leftRef.current, { opacity: 1, x: 0, ease: 'none' }, 0);
+    cardRefs.current.forEach((card, idx) => {
+      if (!card) return;
+      tl.to(card, { opacity: 1, x: 0, ease: 'none' }, idx * 0.1);
+    });
+
+    return () => {
+      if (tl.scrollTrigger) tl.scrollTrigger.kill();
+      tl.kill();
+    };
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       style={{
         position: 'relative',
         width: '100%',
@@ -81,7 +120,7 @@ export default function FaqSection() {
         }}
       >
         {/* ── Left column ──────────────── */}
-        <div style={{ width: '40%', paddingRight: '60px' }}>
+        <div ref={leftRef} style={{ width: '40%', paddingRight: '60px' }}>
           <h2
             style={{
               fontSize: '32px',
@@ -118,6 +157,7 @@ export default function FaqSection() {
               return (
                 <div
                   key={idx}
+                  ref={el => (cardRefs.current[idx] = el)}
                   onClick={() => toggle(idx)}
                   style={{
                     backgroundColor: '#ffffff',

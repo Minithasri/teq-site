@@ -5,14 +5,19 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const reasons = [
-  { num: '01', text: 'Assessment' },
-  { num: '02', text: 'Get Trained' },
-  { num: '03', text: 'Get Certified' },
-  { num: '04', text: 'Placement Guarantee' },
+  { num: '01', text: 'Assessment', frame: '/images/HomePage/landingPage/Frame 1566663920.png' },
+  { num: '02', text: 'Get Trained', frame: '/images/HomePage/landingPage/Frame 1566663913.png' },
+  { num: '03', text: 'Get Certified', frame: '/images/HomePage/landingPage/Frame 1566663914.png' },
+  {
+    num: '04',
+    text: 'Placement Guarantee',
+    frame: '/images/HomePage/landingPage/Frame 1566663864.png',
+  },
 ];
 
 export default function ReasonsSection() {
   const sectionRef = useRef(null);
+  const leftRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -21,6 +26,16 @@ export default function ReasonsSection() {
     if (!scroller) return;
 
     ScrollTrigger.defaults({ scroller });
+
+    // Left text column slides in from the left before the section pins.
+    gsap.set(leftRef.current, { opacity: 0, x: -60 });
+    const introSt = ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: 'top 90%',
+      end: 'top top',
+      scrub: 1,
+      animation: gsap.to(leftRef.current, { opacity: 1, x: 0, ease: 'none' }),
+    });
 
     const TOTAL_SCROLL = 2400; // 4 steps
 
@@ -42,6 +57,7 @@ export default function ReasonsSection() {
     });
 
     return () => {
+      introSt.kill();
       st.kill();
     };
   }, []);
@@ -85,6 +101,7 @@ export default function ReasonsSection() {
       >
         {/* ── Left column: text content ──────────────── */}
         <div
+          ref={leftRef}
           style={{
             width: '50%',
             height: '100%',
@@ -189,22 +206,31 @@ export default function ReasonsSection() {
             justifyContent: 'center',
           }}
         >
-          {/* We will just change the color of the placeholder box based on activeIndex to simulate images */}
+          {/* Illustration frame — crossfades based on activeIndex */}
           <div
             style={{
               width: '400px',
               height: '400px',
-              backgroundColor:
-                activeIndex === 0
-                  ? '#e0e0e0'
-                  : activeIndex === 1
-                    ? '#a0a0a0'
-                    : activeIndex === 2
-                      ? '#606060'
-                      : '#303030',
-              transition: 'background-color 0.5s ease',
+              position: 'relative',
             }}
-          />
+          >
+            {reasons.map((reason, idx) => (
+              <img
+                key={reason.num}
+                src={reason.frame}
+                alt={reason.text}
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  opacity: activeIndex === idx ? 1 : 0,
+                  transition: 'opacity 0.5s ease',
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,3 @@
-import Footer from '../components/ui/Footer';
-import Header from '../components/ui/Header/Header';
 import Providers from '../components/ui/Providers';
 import './globals.css';
 
@@ -11,9 +9,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className='flex flex-col min-h-screen'>
         <Providers>
-          <Header />
+          {/* <Header /> */}
           <main className='flex-grow pt-0'>{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </Providers>
       </body>
     </html>

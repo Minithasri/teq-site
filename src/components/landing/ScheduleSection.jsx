@@ -1,4 +1,8 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 
 const courses = [
@@ -20,8 +24,46 @@ const courses = [
 ];
 
 export default function ScheduleSection() {
+  const sectionRef = useRef(null);
+  const leftRef = useRef(null);
+  const rowRefs = useRef([]);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const scroller = document.getElementById('main-scroll-container');
+    if (!scroller) return;
+
+    ScrollTrigger.defaults({ scroller });
+
+    gsap.set(leftRef.current, { opacity: 0, x: -60 });
+    rowRefs.current.forEach(row => {
+      if (row) gsap.set(row, { opacity: 0, x: -40 });
+    });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 80%',
+        end: 'top 20%',
+        scrub: 1,
+      },
+    });
+
+    tl.to(leftRef.current, { opacity: 1, x: 0, ease: 'none' }, 0);
+    rowRefs.current.forEach((row, idx) => {
+      if (!row) return;
+      tl.to(row, { opacity: 1, x: 0, ease: 'none' }, idx * 0.15);
+    });
+
+    return () => {
+      if (tl.scrollTrigger) tl.scrollTrigger.kill();
+      tl.kill();
+    };
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       style={{
         position: 'relative',
         width: '100%',
@@ -68,7 +110,7 @@ export default function ScheduleSection() {
         }}
       >
         {/* ── Left column ──────────────── */}
-        <div style={{ width: '40%', paddingRight: '60px' }}>
+        <div ref={leftRef} style={{ width: '40%', paddingRight: '60px' }}>
           <h2
             style={{
               fontSize: '32px',
@@ -165,6 +207,7 @@ export default function ScheduleSection() {
             {courses.map((course, idx) => (
               <div
                 key={idx}
+                ref={el => (rowRefs.current[idx] = el)}
                 style={{
                   display: 'flex',
                   justifyContent: 'space-between',
