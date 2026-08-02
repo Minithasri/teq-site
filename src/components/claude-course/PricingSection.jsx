@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef } from 'react';
 
 export default function PricingSection() {
   const cardRef = useRef(null);
@@ -63,7 +63,6 @@ export default function PricingSection() {
         <div ref={cardRef} style={{ flex: '1', display: 'flex', justifyContent: 'center' }}>
           <div
             style={{
-              backgroundColor: '#FAFAFA',
               borderRadius: '12px',
               padding: '50px',
               maxWidth: '520px',

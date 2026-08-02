@@ -8,6 +8,9 @@ export default function PricingAndAssessmentSection() {
   const sectionRef = useRef(null);
   const wipeRef = useRef(null);
   const pricingContentRef = useRef(null);
+  const priceHeadingRef = useRef(null);
+  const priceAmountRef = useRef(null);
+  const priceParaRef = useRef(null);
   const assessmentContentRef = useRef(null);
   const stepRefs = useRef([]);
   stepRefs.current = [];
@@ -35,17 +38,33 @@ export default function PricingAndAssessmentSection() {
     });
 
     // Wipe background left to right (white -> orange, all the way to full cover)
+    // This must finish completely before any content crossfades, otherwise the
+    // white (unwiped) side of the section shows through behind the new content.
     tl.to(
       wipeRef.current,
       {
         scaleX: 1,
-        duration: 1.2,
+        duration: 1.0,
         ease: 'none',
       },
       0
     );
 
-    // Fade out Pricing
+    // As the wipe nears full orange coverage, turn the pricing text white so it
+    // stays readable — finishes exactly as the wipe completes at t=1.0.
+    tl.to(priceHeadingRef.current, { color: '#FFFFFF', duration: 0.3, ease: 'none' }, 0.7);
+    tl.to(
+      priceAmountRef.current,
+      { WebkitTextFillColor: '#FFFFFF', duration: 0.3, ease: 'none' },
+      0.7
+    );
+    tl.to(
+      priceParaRef.current,
+      { color: 'rgba(255, 255, 255, 0.85)', duration: 0.3, ease: 'none' },
+      0.7
+    );
+
+    // Fade out Pricing — starts only once the wipe has fully covered the section
     tl.to(
       pricingContentRef.current,
       {
@@ -54,8 +73,12 @@ export default function PricingAndAssessmentSection() {
         duration: 0.4,
         ease: 'power2.in',
       },
-      0.15
+      1.0
     );
+
+    // Make pricing unclickable after fade out, and assessment clickable
+    tl.set(pricingContentRef.current, { pointerEvents: 'none' }, 1.0);
+    tl.set(assessmentContentRef.current, { pointerEvents: 'auto' }, 1.0);
 
     // Fade in Assessment
     tl.to(
@@ -66,12 +89,8 @@ export default function PricingAndAssessmentSection() {
         duration: 0.4,
         ease: 'power2.out',
       },
-      0.65
+      1.2
     );
-
-    // Make pricing unclickable after fade out, and assessment clickable
-    tl.set(pricingContentRef.current, { pointerEvents: 'none' }, 0.55);
-    tl.set(assessmentContentRef.current, { pointerEvents: 'auto' }, 0.55);
 
     // The 4 assessment steps rise in one after another, bottom to top
     tl.to(
@@ -83,7 +102,7 @@ export default function PricingAndAssessmentSection() {
         stagger: 0.12,
         ease: 'power2.out',
       },
-      0.75
+      1.4
     );
 
     return () => {
@@ -275,6 +294,7 @@ export default function PricingAndAssessmentSection() {
           {/* Right Side: Text Content */}
           <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <h2
+              ref={priceHeadingRef}
               style={{
                 fontSize: '64px',
                 fontWeight: 600,
@@ -285,6 +305,7 @@ export default function PricingAndAssessmentSection() {
               }}
             >
               <span
+                ref={priceAmountRef}
                 style={{
                   background: 'linear-gradient(90deg, #F29E65 0%, #DE7B8C 50%, #D48DBD 100%)',
                   WebkitBackgroundClip: 'text',
@@ -304,6 +325,7 @@ export default function PricingAndAssessmentSection() {
             </h2>
 
             <p
+              ref={priceParaRef}
               style={{
                 color: '#6B7280',
                 fontSize: '16px',

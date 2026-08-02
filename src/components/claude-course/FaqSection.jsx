@@ -27,39 +27,37 @@ export default function FaqSection() {
     >
       <div
         style={{
-          display: 'flex',
-          alignItems: 'center',
+          display: 'grid',
+          gridTemplateColumns: '320px 1fr',
+          alignItems: 'start',
           maxWidth: '1200px',
           width: '100%',
-          gap: '80px',
+          gap: '40px',
         }}
       >
         {/* Left Side: Image */}
-        <div style={{ flex: '0 0 40%' }}>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <img
-              src={FAQ_IMAGE}
-              alt='FAQ Illustration'
-              style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
-            />
-          </div>
-        </div>
+        <img
+          src={FAQ_IMAGE}
+          alt='FAQ Illustration'
+          style={{
+            width: '100%',
+            height: 'auto',
+            objectFit: 'contain',
+            display: 'block',
+            marginTop: '12px',
+          }}
+        />
 
         {/* Right Side: Content */}
-        <div style={{ flex: '1', display: 'flex', flexDirection: 'column', paddingTop: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateRows: 'auto auto auto', rowGap: '24px' }}>
           <h2
             style={{
               fontSize: '48px',
               fontWeight: 600,
               color: '#de896a',
-              margin: '0 0 16px 0',
-              letterSpacing: '-1px',
+              margin: 0,
+              letterSpacing: '-1.5px',
+              lineHeight: 1,
             }}
           >
             Clearing doubts and concerns
@@ -69,7 +67,7 @@ export default function FaqSection() {
               fontSize: '16px',
               color: '#888888',
               lineHeight: '1.6',
-              margin: '0 0 48px 0',
+              margin: 0,
               fontWeight: 400,
             }}
           >
@@ -80,7 +78,13 @@ export default function FaqSection() {
           </p>
 
           {/* FAQ List */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateRows: `repeat(${faqs.length}, auto)`,
+              gap: '8px',
+            }}
+          >
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -88,8 +92,8 @@ export default function FaqSection() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  backgroundColor: '#FAFAFA', // Light grey background like screenshot
-                  padding: '24px 32px',
+                  backgroundColor: index % 2 !== 0 ? '#FCFCFC' : 'transparent',
+                  padding: '16px 24px',
                   borderRadius: '12px',
                   cursor: 'pointer',
                 }}

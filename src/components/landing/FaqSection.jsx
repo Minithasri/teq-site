@@ -116,27 +116,27 @@ export default function FaqSection() {
           width: 'calc(100% - 216px)',
           marginLeft: '216px',
           display: 'flex',
-          padding: '120px 80px',
+          alignItems: 'flex-start',
+          padding: '100px 80px',
         }}
       >
         {/* ── Left column ──────────────── */}
-        <div ref={leftRef} style={{ width: '40%', paddingRight: '60px' }}>
+        <div ref={leftRef} style={{ width: '40%', paddingRight: '40px' }}>
           <h2
             style={{
-              fontSize: '32px',
+              fontSize: '38px',
               fontWeight: 600,
               color: '#DE896A',
               lineHeight: 1.2,
               letterSpacing: '-0.02em',
-              marginBottom: '16px',
-              maxWidth: '300px',
+              margin: '0 0 16px 0',
             }}
           >
             Clearing doubts and concerns
           </h2>
           <p
             style={{
-              fontSize: '14px',
+              fontSize: '15px',
               fontWeight: 400,
               color: '#777',
               lineHeight: 1.6,
@@ -151,7 +151,7 @@ export default function FaqSection() {
 
         {/* ── Right column ──────────────── */}
         <div style={{ width: '60%' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
               return (
@@ -160,12 +160,11 @@ export default function FaqSection() {
                   ref={el => (cardRefs.current[idx] = el)}
                   onClick={() => toggle(idx)}
                   style={{
-                    backgroundColor: '#ffffff',
-                    borderRadius: '8px',
+                    backgroundColor: idx === 0 ? 'transparent' : '#F7F6F5',
+                    borderRadius: idx === 0 ? 0 : '10px',
+                    borderBottom: idx === 0 ? '1px solid rgba(0,0,0,0.08)' : 'none',
                     padding: '20px 24px',
                     cursor: 'pointer',
-                    boxShadow: '0 4px 12px rgba(0,0,0,0.03)',
-                    border: '1px solid rgba(0,0,0,0.02)',
                     display: 'flex',
                     flexDirection: 'column',
                     transition: 'all 0.3s ease',
@@ -178,13 +177,13 @@ export default function FaqSection() {
                       justifyContent: 'space-between',
                     }}
                   >
-                    <span style={{ fontSize: '14px', fontWeight: 500, color: '#444' }}>
+                    <span style={{ fontSize: '15px', fontWeight: 500, color: '#444' }}>
                       {faq.q}
                     </span>
                     {isOpen ? (
-                      <Minus size={18} color='#DE896A' />
+                      <Minus size={20} color='#DE896A' strokeWidth={1.5} />
                     ) : (
-                      <Plus size={18} color='#DE896A' />
+                      <Plus size={20} color='#DE896A' strokeWidth={1.5} />
                     )}
                   </div>
                   {isOpen && (

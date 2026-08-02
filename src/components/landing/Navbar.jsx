@@ -315,9 +315,8 @@ export default function Navbar() {
           >
             Claude Course
           </Link>
-          <a
-            href='#contact'
-            onClick={e => handleLinkClick(e, '#contact', null)}
+          <Link
+            href='/contact'
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -342,7 +341,7 @@ export default function Navbar() {
           >
             <Phone size={14} />
             Contact us
-          </a>
+          </Link>
         </div>
       </header>
 
