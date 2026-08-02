@@ -53,7 +53,7 @@ export default function FaqSection() {
           <h2
             style={{
               fontSize: '48px',
-              fontWeight: 600,
+              fontWeight: 590,
               color: '#de896a',
               margin: 0,
               letterSpacing: '-1.5px',
