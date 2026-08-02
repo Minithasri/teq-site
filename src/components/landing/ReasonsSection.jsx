@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -206,23 +207,27 @@ export default function ReasonsSection() {
             justifyContent: 'center',
           }}
         >
-          {/* We will just change the color of the placeholder box based on activeIndex to simulate images */}
           <div
             style={{
               position: 'relative',
               width: '400px',
               height: '400px',
-              backgroundColor:
-                activeIndex === 0
-                  ? '#e0e0e0'
-                  : activeIndex === 1
-                    ? '#a0a0a0'
-                    : activeIndex === 2
-                      ? '#606060'
-                      : '#303030',
-              transition: 'background-color 0.5s ease',
             }}
-          />
+          >
+            {reasons.map((reason, idx) => (
+              <Image
+                key={reason.num}
+                src={reason.frame}
+                alt={reason.text}
+                fill
+                style={{
+                  objectFit: 'contain',
+                  opacity: activeIndex === idx ? 1 : 0,
+                  transition: 'opacity 0.5s ease',
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
