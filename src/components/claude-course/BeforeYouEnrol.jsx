@@ -5,8 +5,8 @@ import 'aos/dist/aos.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
-const RIGHT_IMAGE_SRC = encodeURI('/images/ContactUs/Frame 1566663879.png');
-const LEFT_IMAGE_SRC = encodeURI('/images/ContactUs/image.png');
+const RIGHT_IMAGE_SRC = '/images/ContactUs/Frame%201566663879.png';
+const LEFT_IMAGE_SRC = '/images/ContactUs/image.png';
 
 const checklist = [
   {

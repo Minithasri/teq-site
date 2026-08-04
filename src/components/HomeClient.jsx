@@ -1,38 +1,31 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
-import { AnimatePresence, useReducedMotion } from 'framer-motion';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Navbar from '@/components/landing/Navbar';
-import Hero from '@/components/landing/Hero';
+import AppLoader from '@/components/AppLoader';
 import CourseSection from '@/components/landing/CourseSection';
-import Features from '@/components/landing/Features';
+import FaqSection from '@/components/landing/FaqSection';
+import Footer from '@/components/landing/Footer';
+import FooterCTA from '@/components/landing/FooterCTA';
+import Hero from '@/components/landing/Hero';
+import Navbar from '@/components/landing/Navbar';
 import ReasonsSection from '@/components/landing/ReasonsSection';
 import ScheduleSection from '@/components/landing/ScheduleSection';
-import TestimonialSection from '@/components/landing/TestimonialSection';
 import SupportSection from '@/components/landing/SupportSection';
-import FaqSection from '@/components/landing/FaqSection';
-import FooterCTA from '@/components/landing/FooterCTA';
-import Footer from '@/components/landing/Footer';
+import TestimonialSection from '@/components/landing/TestimonialSection';
 import SmoothScroll from '@/components/SmoothScroll';
-import AppLoader from '@/components/AppLoader';
+import { AnimatePresence } from 'framer-motion';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef, useState } from 'react';
 
 /**
  * HomeClient — orchestrates the Cusp AI-inspired two-section scroll experience.
  *
  * Architecture:
- *  1. A 250vh "transition zone" holds a sticky 100vh container.
- *     Inside it, the Home section slides out to the right and the
- *     Section 2 panel slides in from the left — a single GSAP scrub
- *     timeline drives both with `xPercent`, reversible on scroll-up.
- *  2. All existing content sections follow naturally after the transition
- *     zone, preserving every GSAP ScrollTrigger animation unchanged.
- *
- * The slide is driven entirely by GSAP ScrollTrigger (scrub, already
- * integrated with Lenis) acting directly on the DOM via refs — no
- * React-state bridge — so it stays on the compositor (transform only,
- * no blur/scale/border-radius) and tracks the scrollbar 1:1.
+ *  1. Hero renders as a normal (non-pinned) 100vh section — it scrolls away
+ *     naturally like any other section. Its own ScrollTrigger (see Hero.jsx)
+ *     swaps the headline text once the user has scrolled a short way in,
+ *     then Hero continues sliding up and out as scrolling continues.
+ *  2. All existing content sections follow naturally after Hero, preserving
+ *     every GSAP ScrollTrigger animation unchanged.
  */
 export default function HomeClient() {
   // ── Loader state (false = loader visible, true = loader done/unmounted) ──
@@ -52,77 +45,7 @@ export default function HomeClient() {
     return () => cancelAnimationFrame(id);
   }, [loaderDone]);
 
-  // ── Refs ──────────────────────────────────────────────────────────────
-  const transitionRef = useRef(null); // The 250vh transition zone wrapper
-  const homeRef = useRef(null); // Hero panel — slides out to the right
-  const s2Ref = useRef(null); // Section 2 panel — slides in from the left
-
-  // ── Accessibility ─────────────────────────────────────────────────────
-  const shouldReduceMotion = useReducedMotion();
-
-  // ── GSAP ScrollTrigger → drives the horizontal slide directly ─────────
-  // Home slides out to the right (xPercent 0 → 100) while Section 2 slides
-  // in from the left (xPercent -100 → 0), scrubbed 1:1 with scroll so it
-  // reverses cleanly on scroll-up. Only `transform` is touched (via
-  // xPercent), which stays on the compositor for a smooth 60fps slide.
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const scroller = document.getElementById('main-scroll-container');
-    if (!scroller || !transitionRef.current || !homeRef.current || !s2Ref.current) return;
-
-    if (shouldReduceMotion) {
-      // Reduced motion: simple opacity crossfade, no movement.
-      const st = ScrollTrigger.create({
-        trigger: transitionRef.current,
-        scroller,
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: true,
-        invalidateOnRefresh: true,
-        animation: gsap
-          .timeline()
-          .to(homeRef.current, { opacity: 0, ease: 'none' }, 0)
-          .fromTo(s2Ref.current, { opacity: 0 }, { opacity: 1, ease: 'none' }, 0),
-      });
-      return () => st.kill();
-    }
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: transitionRef.current,
-        scroller,
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: true,
-        invalidateOnRefresh: true,
-      },
-    });
-
-    tl.fromTo(homeRef.current, { xPercent: 0 }, { xPercent: 100, ease: 'none' }, 0).fromTo(
-      s2Ref.current,
-      { xPercent: -100 },
-      { xPercent: 0, ease: 'none' },
-      0
-    );
-
-    return () => tl.scrollTrigger?.kill();
-  }, [shouldReduceMotion]);
-
-  const homeMotionStyle = {
-    position: 'absolute',
-    inset: 0,
-    overflow: 'hidden',
-    willChange: 'transform',
-  };
-
-  const s2MotionStyle = {
-    position: 'absolute',
-    inset: 0,
-    overflow: 'hidden',
-    backgroundColor: '#F8F7F6',
-    zIndex: 10,
-    willChange: 'transform',
-  };
+  const heroRef = useRef(null);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -171,67 +94,30 @@ export default function HomeClient() {
         >
           <SmoothScroll>
             <div id='main-scroll-content' style={{ width: '100%' }}>
-              {/* ══════════════════════════════════════════════════════════
-                  TRANSITION ZONE  (250vh)
-                  ─ Sticky container inside gives 150vh of scroll time.
-                  ─ Home exits, Section 2 backdrop rises, from the same
-                    sticky window so both transforms are perfectly in sync.
-                  ══════════════════════════════════════════════════════════ */}
-              <div ref={transitionRef} style={{ height: '250vh', position: 'relative' }}>
-                {/* Sticky viewport — clips overflow so Section 2 hides below */}
-                <div
-                  style={{
-                    position: 'sticky',
-                    top: 0,
-                    height: '100vh',
-                    overflow: 'hidden',
-                  }}
-                >
-                  {/* ── SECTION 1: Home slides out right ─────────────── */}
-                  <div ref={homeRef} style={homeMotionStyle}>
-                    <Hero />
-                  </div>
-
-                  {/* ── SECTION 2 panel: slides in from the left ──────── */}
-                  <div ref={s2Ref} style={s2MotionStyle}>
-                    {/*
-                      This cream panel bridges visually to CourseSection
-                      (same #F8F7F6 background). After the sticky zone ends,
-                      CourseSection scrolls in seamlessly beneath it.
-                    */}
-                    <div
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                      }}
-                    />
-
-                    {/* Subtle bottom gradient so it blends into CourseSection */}
-                    <div
-                      style={{
-                        position: 'absolute',
-                        bottom: 0,
-                        left: 0,
-                        right: 0,
-                        height: '120px',
-                        background: 'linear-gradient(to bottom, transparent, #F8F7F6)',
-                        pointerEvents: 'none',
-                      }}
-                    />
-                  </div>
-                </div>
+              {/* ── Hero pin zone ─────────────────────────────────────────
+                  Hero is sticky so it stays perfectly static. It never
+                  moves upwards. The text swaps as the user scrolls.
+                  ──────────────────────────────────────────────────────── */}
+              <div
+                style={{
+                  position: 'sticky',
+                  top: 0,
+                  height: '100vh',
+                  overflow: 'hidden',
+                  zIndex: 0,
+                }}
+              >
+                <Hero />
               </div>
-              {/* ── END TRANSITION ZONE ─────────────────────────────────── */}
 
-              {/* ══════════════════════════════════════════════════════════
-                  SECTION 2: All existing content (unchanged, GSAP intact)
-                  ─ Starts immediately after the 250vh transition zone.
-                  ─ At scroll = 150vh (progress = 1), the viewport bottom
-                    is exactly at CourseSection's top → seamless handoff.
-                  ══════════════════════════════════════════════════════════ */}
-              <div style={{ position: 'relative', zIndex: 1, backgroundColor: '#ffffff' }}>
+              {/* ── Overlapping Content ───────────────────────────────────
+                  CourseSection starts EXACTLY on top of Hero (marginTop: -100vh).
+                  Because CourseSection is transparent initially, you see Hero.
+                  When you scroll, CourseSection pins immediately and does its
+                  left-to-right wipe OVER the static Hero. No bottom-to-top movement!
+                  ──────────────────────────────────────────────────────── */}
+              <div style={{ position: 'relative', zIndex: 1, marginTop: '-100vh' }}>
                 <CourseSection />
-                <Features />
                 <ReasonsSection />
                 <ScheduleSection />
                 <TestimonialSection />

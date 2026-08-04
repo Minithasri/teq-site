@@ -30,8 +30,10 @@ const testimonials = [
 
 export default function TestimonialSection() {
   const sectionRef = useRef(null);
+  const wrapperRef = useRef(null);
   const carouselRef = useRef(null);
   const leftRef = useRef(null);
+  const rightColRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -40,18 +42,23 @@ export default function TestimonialSection() {
 
     ScrollTrigger.defaults({ scroller });
 
-    // Left text column slides in from the left before the carousel pins.
+    // Wipe-in: wrapper slides from right, content fades in horizontally
+    gsap.set(wrapperRef.current, { x: '100%' });
     gsap.set(leftRef.current, { opacity: 0, x: -60 });
-    const introSt = ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: 'top 90%',
-      end: 'top top',
-      scrub: 1,
-      animation: gsap.to(leftRef.current, { opacity: 1, x: 0, ease: 'none' }),
-    });
+    gsap.set(rightColRef.current, { opacity: 0, x: 60 });
 
-    // The distance to scroll based on the width of the carousel minus the viewable area
-    // A simple fixed value works well for 3 cards
+    const entryTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 80%',
+        end: 'top 20%',
+        scrub: 0.8,
+      },
+    });
+    entryTl.to(wrapperRef.current, { x: '0%', ease: 'power3.inOut', duration: 0.4 }, 0);
+    entryTl.to(leftRef.current, { opacity: 1, x: 0, ease: 'power2.out', duration: 0.3 }, 0.3);
+    entryTl.to(rightColRef.current, { opacity: 1, x: 0, ease: 'power2.out', duration: 0.3 }, 0.4);
+
     const TOTAL_SCROLL = 1500;
 
     const st = ScrollTrigger.create({
@@ -64,14 +71,15 @@ export default function TestimonialSection() {
       pinSpacing: true,
       invalidateOnRefresh: true,
       animation: gsap.to(carouselRef.current, {
-        xPercent: -60, // Adjust based on how far we need to slide
+        xPercent: -60,
         ease: 'none',
       }),
       scrub: 1,
     });
 
     return () => {
-      introSt.kill();
+      if (entryTl.scrollTrigger) entryTl.scrollTrigger.kill();
+      entryTl.kill();
       st.kill();
     };
   }, []);
@@ -87,7 +95,7 @@ export default function TestimonialSection() {
         backgroundColor: '#DE896A',
         display: 'flex',
         fontFamily: "'Outfit', sans-serif",
-        overflow: 'hidden', // prevent horizontal scrollbar
+        overflow: 'hidden',
       }}
     >
       {/* Local Sidebar Background */}
@@ -99,13 +107,14 @@ export default function TestimonialSection() {
           width: '200px',
           height: '100%',
           backgroundColor: '#ffffff',
-          zIndex: 10, // above horizontal scroll
+          zIndex: 10,
           borderRight: '1px solid rgba(0,0,0,0.04)',
         }}
       />
 
-      {/* ── Content Wrapper ──────────────── */}
+      {/* ── Content Wrapper — wipes in from the right ── */}
       <div
+        ref={wrapperRef}
         style={{
           position: 'relative',
           width: 'calc(100% - 200px)',
@@ -113,6 +122,8 @@ export default function TestimonialSection() {
           marginLeft: '200px',
           display: 'flex',
           padding: '120px 80px',
+          backgroundColor: '#DE896A',
+          willChange: 'transform',
         }}
       >
         {/* ── Left column: Text ──────────────── */}
@@ -144,8 +155,8 @@ export default function TestimonialSection() {
           </p>
         </div>
 
-        {/* ── Right column: Horizontal Carousel ──────────────── */}
-        <div style={{ flex: 1, position: 'relative' }}>
+        {/* ── Right column: Horizontal Carousel ──────────── */}
+        <div ref={rightColRef} style={{ flex: 1, position: 'relative' }}>
           <div
             ref={carouselRef}
             style={{

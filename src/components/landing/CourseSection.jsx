@@ -1,9 +1,32 @@
 'use client';
 
-import React, { useEffect, useRef, useCallback } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { LayoutGrid } from 'lucide-react';
+import { ExternalLink, LayoutGrid, Lock, Package, Settings, ShieldCheck } from 'lucide-react';
+import { useCallback, useEffect, useRef } from 'react';
+
+const featuresList = [
+  {
+    icon: ShieldCheck,
+    title: 'Earn more',
+    desc: 'Anyone can use AI. High-value professionals solve real business problems by building reliable, repeatable AI workflows.',
+  },
+  {
+    icon: Lock,
+    title: 'Stand out',
+    desc: 'Anyone can claim "AI proficient." A graded assessment, recognized certification, and real portfolios prove your skills.',
+  },
+  {
+    icon: Package,
+    title: 'Build faster',
+    desc: 'Learn Claude Code, the Claude API, and Model Context Protocol to build AI powered tools, not just use them.',
+  },
+  {
+    icon: Settings,
+    title: 'Learn in a room',
+    desc: 'Videos teach concepts. Instructors improve your thinking with real feedback, correcting, and hands-on guidance.',
+  },
+];
 
 const courseDetails = [
   { label: 'Program', value: 'The Claude Professional Program' },
@@ -18,9 +41,17 @@ export default function CourseSection() {
   const leftContentRef = useRef(null);
   const cardRefs = useRef([]);
   const tlRef = useRef(null);
-  const wipeRef = useRef(null);
+  const featuresWrapperRef = useRef(null);
+  const featuresLeftContentRef = useRef(null);
+  const featuresLeftBgRef = useRef(null);
+  const featureItemRefs = useRef([]);
   const clickedRef = useRef(false);
   const revealedRef = useRef(false);
+
+  // Refs for the new wipe transition panels
+  const wipeWhiteRef = useRef(null);
+  const wipeOrangeRef = useRef(null);
+  const wipeGrayRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -44,18 +75,32 @@ export default function CourseSection() {
      *  1600 – 2000px → Card 2 (Levels) fades in
      *  2000 – 2400px → Card 3 (Format) fades in
      *  2400 – 3000px → Card 4 (Location) fades in
-     *  3000 – 3500px → White screen wipes from left to right covering everything
+     *  3000 – 3500px → Coral wipe sweeps in from the right, white wipe follows
+     *                   close behind it (also from the right), so a coral
+     *                   edge is visible leading the white cover just before
+     *                   Features appears
      */
 
-    const TOTAL_SCROLL = 3500;
+    const TOTAL_SCROLL = 5000;
+    const HERO_SCROLL_DELAY = 1500; // Wait 150vh before CourseSection animates so Hero text swaps
 
-    // Set initial states
-    gsap.set(wipeRef.current, { scaleX: 0, transformOrigin: 'left' });
-    gsap.set(coralBlockRef.current, { x: '-100%' }); // hidden under sidebar
-    gsap.set(leftContentRef.current, { opacity: 0, y: 30 }); // text hidden
-    cardRefs.current.forEach(c => {
-      if (c) gsap.set(c, { opacity: 0, y: 24 });
+    gsap.set(featuresWrapperRef.current, { clipPath: 'inset(0% 0% 0% 100%)', x: '0%' }); // White wipe off-screen right
+    gsap.set(featuresLeftContentRef.current, { opacity: 1, x: 0 });
+    featureItemRefs.current.forEach(feat => {
+      if (feat) gsap.set(feat, { opacity: 1, x: 0 });
     });
+    gsap.set([wipeWhiteRef.current, wipeOrangeRef.current, wipeGrayRef.current], {
+      clipPath: 'inset(0% 0% 0% 100%)',
+    });
+
+    gsap.set(coralBlockRef.current, { x: '-100%' }); // hidden under sidebar
+    gsap.set(leftContentRef.current, { opacity: 0 }); // text hidden, NO y offset
+    cardRefs.current.forEach(c => {
+      if (c) gsap.set(c, { opacity: 0 }); // fade only, no slide
+    });
+
+    const bgRef = featuresLeftBgRef; // Reusing a ref variable for the new full-width white bg
+    gsap.set(bgRef.current, { opacity: 0 });
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -64,7 +109,7 @@ export default function CourseSection() {
         end: `+=${TOTAL_SCROLL}`,
         pin: true,
         pinType: 'transform',
-        scrub: 1.6,
+        scrub: 0.8,
         anticipatePin: 1,
         pinSpacing: true,
         invalidateOnRefresh: true,
@@ -73,6 +118,9 @@ export default function CourseSection() {
 
     tlRef.current = tl;
 
+    // --- Phase 0: Dummy wait time so the fixed Hero section can do its text swap scroll
+    tl.to({}, { duration: 0.2 });
+
     // --- Phase 1: Coral slides in from left (from under sidebar to cover left half)
     tl.to(coralBlockRef.current, {
       x: '0%',
@@ -80,24 +128,27 @@ export default function CourseSection() {
       ease: 'power2.out',
     });
 
+    // Make background white instantly once coral covers left side
+    tl.to(bgRef.current, { opacity: 1, duration: 0 });
+
     // --- Phase 2: Coral glides to right half
+    // --- Phase 3: Left text reveals AT THE SAME TIME coral slides right — no blank gap!
     tl.to(coralBlockRef.current, {
-      x: '100%', // Moves by its own width (which will be 50% of the wrapper)
+      x: '100%',
       duration: 0.2,
       ease: 'power3.inOut',
     });
+    tl.to(
+      leftContentRef.current,
+      {
+        opacity: 1,
+        duration: 0.2,
+        ease: 'power2.out',
+      },
+      '<'
+    ); // '<' = starts at same time as coral slide right
 
-    // --- Phase 3: Reveal left text AFTER coral has moved to the right
-    tl.to(leftContentRef.current, {
-      opacity: 1,
-      y: 0,
-      duration: 0.15,
-      ease: 'power2.out',
-    });
-
-    // --- Phase 4: Cards appear one by one
-    const cardTimes = [0.65, 0.75, 0.85, 0.95]; // fractions of timeline
-
+    // --- Phase 4: Cards appear one by one immediately after text is visible
     cardRefs.current.forEach((card, idx) => {
       if (!card) return;
       tl.to(
@@ -108,16 +159,35 @@ export default function CourseSection() {
           duration: 0.1,
           ease: 'power2.out',
         },
-        cardTimes[idx]
+        idx === 0 ? '>-0.05' : '-=0.05' // stagger cards slightly
       );
     });
 
-    // --- Phase 5: White wipe from left to right covering the whole section
-    tl.to(wipeRef.current, {
-      scaleX: 1,
-      duration: 0.2,
-      ease: 'power2.inOut',
-    });
+    // --- Phase 5: Cinematic Wipe Transition
+    // The existing CourseSection gradually disappears naturally behind these moving panels.
+    const WIPE_DUR = 0.45;
+    const STAGGER = 0.08;
+
+    tl.to(
+      wipeWhiteRef.current,
+      { clipPath: 'inset(0% 0% 0% 0%)', duration: WIPE_DUR, ease: 'power2.inOut' },
+      'wipe'
+    );
+    tl.to(
+      wipeOrangeRef.current,
+      { clipPath: 'inset(0% 0% 0% 0%)', duration: WIPE_DUR, ease: 'power2.inOut' },
+      `wipe+=${STAGGER}`
+    );
+    tl.to(
+      wipeGrayRef.current,
+      { clipPath: 'inset(0% 0% 0% 0%)', duration: WIPE_DUR, ease: 'power2.inOut' },
+      `wipe+=${STAGGER * 2}`
+    );
+    tl.to(
+      featuresWrapperRef.current,
+      { clipPath: 'inset(0% 0% 0% 0%)', duration: WIPE_DUR, ease: 'power2.inOut' },
+      `wipe+=${STAGGER * 3}`
+    );
 
     return () => {
       // Only kill this component's own ScrollTrigger — not all of them.
@@ -191,28 +261,32 @@ export default function CourseSection() {
         width: '100%',
         height: '100vh',
         overflow: 'hidden',
-        backgroundColor: '#F8F7F6',
+        backgroundColor: 'transparent',
         fontFamily: "'Outfit', sans-serif",
         cursor: 'pointer',
       }}
     >
-      {/* ── Local Sidebar Background ──────────────────────────────────────── */}
-      {/* This provides the white background for the menu when the coral block is not covering it */}
+      {/* ── Main Background ──────────────────────────────────────── */}
+      {/* Starts transparent so we see the pinned Hero underneath. Fades in to #F8F7F6
+          behind the coral block once it slides in. */}
       <div
+        ref={featuresLeftBgRef} // Using existing ref for convenience
         style={{
           position: 'absolute',
           top: 0,
           left: 0,
-          width: '200px',
+          width: '100%',
           height: '100%',
-          backgroundColor: '#ffffff',
+          backgroundColor: '#F8F7F6',
           zIndex: 1,
-          borderRight: '1px solid rgba(0,0,0,0.04)',
         }}
-      />
+      >
+        {/* Ensures the 200px sidebar area stays completely white */}
+        <div style={{ width: '200px', height: '100%', backgroundColor: '#ffffff' }} />
+      </div>
 
       {/* ── Coral sliding block ───────────────────────────────────────────── */}
-      {/* Starts hidden at x: -50vw (off-screen left). 
+      {/* Starts hidden at x: -50vw (off-screen left).
           Slides in to x: 0% to cover the left 50vw (including the menu area).
           Glides to x: 50vw to cover the right 50vw. */}
       <div
@@ -401,21 +475,213 @@ export default function CourseSection() {
         </div>
       </div>
 
-      {/* ── Final Wipe Screen ───────────────────────────────────────────── */}
-      {/* This wipes from left to right at the end of the pinned section, making a seamless transition to the next white section. */}
+      {/* ── Features Component (Integrated to avoid scrolling) ──────────────────────── */}
       <div
-        ref={wipeRef}
+        ref={featuresWrapperRef}
         style={{
           position: 'absolute',
           top: 0,
           left: 0,
           width: '100vw',
           height: '100%',
-          backgroundColor: '#ffffff',
+          backgroundColor: '#F8F7F6', // The background color that comes right to left
           zIndex: 10,
           willChange: 'transform',
+          display: 'flex',
         }}
-      />
+      >
+        {/* Ensures the 200px sidebar area stays completely white */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '200px',
+            height: '100%',
+            backgroundColor: '#ffffff',
+            zIndex: 1,
+          }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: '200px',
+            width: '80px',
+            height: '100%',
+            backgroundColor: '#F8F7F6',
+            borderRight: '1px solid rgba(0,0,0,0.04)',
+            zIndex: 1,
+          }}
+        />
+        <div
+          style={{
+            position: 'relative',
+            width: 'calc(100% - 280px)',
+            height: '100%',
+            marginLeft: '280px',
+          }}
+        >
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '50%',
+              height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              paddingLeft: '60px',
+              paddingRight: '60px',
+              zIndex: 1,
+            }}
+          >
+            <div ref={featuresLeftContentRef}>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  letterSpacing: '0.12em',
+                  color: '#555',
+                  textTransform: 'uppercase',
+                  marginBottom: '20px',
+                }}
+              >
+                <LayoutGrid size={12} color='#555' />
+                SECURITY
+              </div>
+              <h2
+                style={{
+                  fontSize: 'clamp(40px, 4.5vw, 64px)',
+                  fontWeight: 400,
+                  color: '#1a1a1a',
+                  lineHeight: 1.1,
+                  letterSpacing: '-0.03em',
+                  marginBottom: '40px',
+                  maxWidth: '420px',
+                }}
+              >
+                Why Learn
+                <br />
+                Claude <span style={{ fontWeight: 600 }}>with</span>
+                <br />
+                <span style={{ fontWeight: 700 }}>TeqCertify?</span>
+              </h2>
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                <button
+                  style={{
+                    backgroundColor: '#DE896A',
+                    color: '#ffffff',
+                    padding: '14px 28px',
+                    borderRadius: '6px',
+                    fontSize: '11px',
+                    fontWeight: 600,
+                    letterSpacing: '0.08em',
+                    textTransform: 'uppercase',
+                    border: 'none',
+                    cursor: 'pointer',
+                    boxShadow: '0 4px 12px rgba(222,130,99,0.3)',
+                  }}
+                >
+                  Get the course
+                </button>
+                <button
+                  style={{
+                    backgroundColor: '#b0b0b0',
+                    color: '#ffffff',
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '6px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    border: 'none',
+                    cursor: 'pointer',
+                  }}
+                >
+                  <ExternalLink size={16} />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              right: 0,
+              width: '50%',
+              height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              padding: '40px 60px',
+              zIndex: 2,
+            }}
+          >
+            <div
+              style={{
+                width: '100%',
+                maxWidth: '480px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '24px',
+              }}
+            >
+              {featuresList.map((item, idx) => (
+                <div
+                  key={item.title}
+                  ref={el => {
+                    featureItemRefs.current[idx] = el;
+                  }}
+                  style={{ display: 'flex', flexDirection: 'column' }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+                    <div style={{ width: '40px', height: '2px', backgroundColor: '#DE896A' }} />
+                    <div style={{ flex: 1, height: '1px', backgroundColor: 'rgba(0,0,0,0.06)' }} />
+                  </div>
+                  <div style={{ paddingLeft: '4px' }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '12px',
+                        marginBottom: '8px',
+                      }}
+                    >
+                      <item.icon size={20} color='#666' strokeWidth={1.5} />
+                      <h3
+                        style={{
+                          fontSize: '16px',
+                          fontWeight: 600,
+                          color: '#1a1a1a',
+                          letterSpacing: '-0.01em',
+                        }}
+                      >
+                        {item.title}
+                      </h3>
+                    </div>
+                    <p
+                      style={{
+                        fontSize: '13px',
+                        color: '#666',
+                        lineHeight: 1.6,
+                        paddingLeft: '32px',
+                      }}
+                    >
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

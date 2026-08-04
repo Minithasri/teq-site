@@ -28,6 +28,9 @@ export default function ScheduleSection() {
   const leftRef = useRef(null);
   const rowRefs = useRef([]);
 
+  const wrapperRef = useRef(null);
+  const rightRef = useRef(null);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const scroller = document.getElementById('main-scroll-container');
@@ -35,25 +38,26 @@ export default function ScheduleSection() {
 
     ScrollTrigger.defaults({ scroller });
 
+    // Set initial states — whole wrapper wipes in from right, no y movement
+    gsap.set(wrapperRef.current, { x: '100%' });
     gsap.set(leftRef.current, { opacity: 0, x: -60 });
-    rowRefs.current.forEach(row => {
-      if (row) gsap.set(row, { opacity: 0, x: -40 });
-    });
+    gsap.set(rightRef.current, { opacity: 0, x: 60 });
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
         start: 'top 80%',
         end: 'top 20%',
-        scrub: 1,
+        scrub: 0.8,
       },
     });
 
-    tl.to(leftRef.current, { opacity: 1, x: 0, ease: 'none' }, 0);
-    rowRefs.current.forEach((row, idx) => {
-      if (!row) return;
-      tl.to(row, { opacity: 1, x: 0, ease: 'none' }, idx * 0.15);
-    });
+    // Wrapper wipes in from right
+    tl.to(wrapperRef.current, { x: '0%', ease: 'power3.inOut', duration: 0.4 }, 0);
+    // Left content slides from left
+    tl.to(leftRef.current, { opacity: 1, x: 0, ease: 'power2.out', duration: 0.3 }, 0.3);
+    // Right content slides from right
+    tl.to(rightRef.current, { opacity: 1, x: 0, ease: 'power2.out', duration: 0.3 }, 0.4);
 
     return () => {
       if (tl.scrollTrigger) tl.scrollTrigger.kill();
@@ -70,6 +74,7 @@ export default function ScheduleSection() {
         backgroundColor: '#ffffff',
         display: 'flex',
         fontFamily: "'Outfit', sans-serif",
+        overflow: 'hidden',
       }}
     >
       {/* Local Sidebar Background */}
@@ -81,7 +86,7 @@ export default function ScheduleSection() {
           width: '200px',
           height: '100%',
           backgroundColor: '#ffffff',
-          zIndex: 1,
+          zIndex: 2,
           borderRight: '1px solid rgba(0,0,0,0.04)',
         }}
       />
@@ -95,18 +100,21 @@ export default function ScheduleSection() {
           width: '16px',
           height: '100%',
           backgroundColor: '#DE896A',
-          zIndex: 1,
+          zIndex: 2,
         }}
       />
 
-      {/* ── Content Wrapper ──────────────── */}
+      {/* ── Content Wrapper — wipes in from the right ── */}
       <div
+        ref={wrapperRef}
         style={{
           position: 'relative',
           width: 'calc(100% - 216px)',
           marginLeft: '216px',
           display: 'flex',
           padding: '120px 80px',
+          backgroundColor: '#ffffff',
+          willChange: 'transform',
         }}
       >
         {/* ── Left column ──────────────── */}
@@ -179,7 +187,7 @@ export default function ScheduleSection() {
         </div>
 
         {/* ── Right column ──────────────── */}
-        <div style={{ width: '60%' }}>
+        <div ref={rightRef} style={{ width: '60%' }}>
           {/* Header Row */}
           <div
             style={{

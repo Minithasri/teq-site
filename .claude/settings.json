@@ -1,5 +1,12 @@
 {
   "permissions": {
-    "allow": ["Bash(git remote *)", "Bash(git push *)"]
+    "allow": [
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(curl -s -o /tmp/resp.html -w \"%{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -w \"\\\\nHTTP:%{http_code}\\\\n\" http://localhost:3000/claude-course)",
+      "Bash(powershell -Command \"Get-Process -Id 9880,3828 -ErrorAction SilentlyContinue | Select-Object Id,ProcessName,Path\")",
+      "Bash(curl -sL \"https://cusp.ai/\" -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/124.0 Safari/537.36\" -o /tmp/cusp.html)"
+    ]
   }
 }

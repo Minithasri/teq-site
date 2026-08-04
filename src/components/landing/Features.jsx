@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useEffect, useRef, useCallback } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { LayoutGrid, ExternalLink, ShieldCheck, Lock, Package, Settings } from 'lucide-react';
+import { ExternalLink, LayoutGrid, Lock, Package, Settings, ShieldCheck } from 'lucide-react';
+import { useCallback, useEffect, useRef } from 'react';
 
 const featuresList = [
   {
@@ -39,42 +39,30 @@ export default function Features() {
     const scroller = document.getElementById('main-scroll-container');
     if (!scroller) return;
 
-    ScrollTrigger.defaults({ scroller });
-
-    const TOTAL_SCROLL = 2400; // Restore original scroll distance
-
-    // Set initial states for features only
+    // Set initial states — text block and features both start off-screen left
+    gsap.set(leftContentRef.current, { opacity: 0, x: -60 });
     featureRefs.current.forEach(feat => {
       if (feat) gsap.set(feat, { opacity: 0, x: -60 });
     });
 
+    // Normal (non-pinned) scroll-in: once the section is ~75% into view,
+    // everything fades + slides in left-to-right, once, reversible on scroll-up.
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: 'top top',
-        end: `+=${TOTAL_SCROLL}`,
-        pin: true,
-        pinType: 'transform',
-        scrub: 1.6,
-        anticipatePin: 1,
-        pinSpacing: true,
+        scroller,
+        start: 'top 75%',
+        toggleActions: 'play none none reverse',
         invalidateOnRefresh: true,
       },
+      defaults: { duration: 0.8, ease: 'power2.out' },
     });
 
-    // Stagger features in right side
+    tl.to(leftContentRef.current, { opacity: 1, x: 0 });
+
     featureRefs.current.forEach((feat, idx) => {
       if (!feat) return;
-      tl.to(
-        feat,
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          ease: 'power2.out',
-        },
-        idx === 0 ? '+=0.2' : '+=0.2'
-      );
+      tl.to(feat, { opacity: 1, x: 0 }, idx === 0 ? '-=0.4' : '-=0.6');
     });
 
     return () => {
@@ -84,10 +72,11 @@ export default function Features() {
     };
   }, []);
 
-  // Instantly reveal all features — callable when navigating via nav link
+  // Instantly reveal all content — callable when navigating via nav link
   const revealAll = useCallback(() => {
+    gsap.to(leftContentRef.current, { opacity: 1, x: 0, duration: 0.35, ease: 'power2.out' });
     featureRefs.current.forEach(feat => {
-      if (feat) gsap.to(feat, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' });
+      if (feat) gsap.to(feat, { opacity: 1, x: 0, duration: 0.35, ease: 'power2.out' });
     });
   }, []);
 
@@ -106,11 +95,24 @@ export default function Features() {
         position: 'relative',
         width: '100%',
         height: '100vh',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#F8F7F6',
         display: 'flex',
         fontFamily: "'Outfit', sans-serif",
       }}
     >
+      {/* Ensures the 200px sidebar area stays completely white */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '200px',
+          height: '100%',
+          backgroundColor: '#ffffff',
+          zIndex: 1,
+        }}
+      />
+
       {/* ── Small section/strip after menu ───────────────────────────────── */}
       <div
         style={{

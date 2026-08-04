@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const FAQ_IMAGE = encodeURI('/images/ContactUs/Frame 1566663913.png');
+const FAQ_IMAGE = '/images/ContactUs/Frame%201566663913.png';
 
 export default function FaqSection() {
   const faqs = [
@@ -49,11 +49,11 @@ export default function FaqSection() {
         />
 
         {/* Right Side: Content */}
-        <div style={{ display: 'grid', gridTemplateRows: 'auto auto auto', rowGap: '24px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           <h2
             style={{
               fontSize: '48px',
-              fontWeight: 590,
+              fontWeight: 600,
               color: '#de896a',
               margin: 0,
               letterSpacing: '-1.5px',
@@ -80,8 +80,8 @@ export default function FaqSection() {
           {/* FAQ List */}
           <div
             style={{
-              display: 'grid',
-              gridTemplateRows: `repeat(${faqs.length}, auto)`,
+              display: 'flex',
+              flexDirection: 'column',
               gap: '8px',
             }}
           >
