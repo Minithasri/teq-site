@@ -475,6 +475,53 @@ export default function CourseSection() {
         </div>
       </div>
 
+      {/* ── Cinematic wipe panels (Phase 5) ─────────────────────────────────
+          These sweep in from the right, one after another, just before the
+          Features layer covers the section. GSAP animates their clipPath
+          from fully hidden to fully visible via refs set below. ──────────── */}
+      <div
+        ref={wipeWhiteRef}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100%',
+          backgroundColor: '#ffffff',
+          zIndex: 7,
+          clipPath: 'inset(0% 0% 0% 100%)',
+          willChange: 'clip-path',
+        }}
+      />
+      <div
+        ref={wipeOrangeRef}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100%',
+          backgroundColor: '#DE896A',
+          zIndex: 8,
+          clipPath: 'inset(0% 0% 0% 100%)',
+          willChange: 'clip-path',
+        }}
+      />
+      <div
+        ref={wipeGrayRef}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100%',
+          backgroundColor: '#8a8a8a',
+          zIndex: 9,
+          clipPath: 'inset(0% 0% 0% 100%)',
+          willChange: 'clip-path',
+        }}
+      />
+
       {/* ── Features Component (Integrated to avoid scrolling) ──────────────────────── */}
       <div
         ref={featuresWrapperRef}
